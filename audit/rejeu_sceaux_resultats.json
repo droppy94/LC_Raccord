@@ -1,0 +1,832 @@
+{
+ "diag_bounces.py": {
+  "date": "2026-07-21 19:26:34",
+  "duree_s": 5.7,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "804b7f9b",
+  "tail": "1.6365    3.5e-38  1.10\n   1e-03    1.25         1         0    1.8283    8.3e-38  1.32\n   1e-04    1.47         1         0    2.0174    7.7e-38  1.54\n   1e-05    1.70         1         0    2.2146    8.4e-37  1.76\n   1e-06    1.92         1         0    2.4206    3.5e-35  1.99\n\nLecture :\n - Si pics|³S| et révers.v CROISSENT avec la profondeur ⟹ la cascade EST capturée\n   par l'intégration directe ⟹ on peut faire l'ensemble en direct (Radau).\n - Si ça reste ~1 ⟹ le germe de radiation halte avant la cascade ⟹ il FAUT l'oracle\n   BKL/Gauss (jump analytique à travers les rebonds, germe→0).",
+  "timeout_s": 900,
+  "zone": "LIVE"
+ },
+ "verif_A2_numerique.py": {
+  "date": "2026-07-21 19:26:29",
+  "duree_s": 1.0,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "76e9257c",
+  "tail": "en→0 via la déduction scellée. PASS conditionnel.\n   • Firewall MORDANT : cascade, charge divergente, seuil exact CASSENT ; limites G₂\n          (non-cascade) et billard (zéro spike) REPRODUITES.\n SANS SURCLASSEMENT (§6.4) : OA (générique 3D) PERSISTE ; soutien mésoscopique ≠ théorème.\n   A2★ : décision ouverte, MIEUX SITUÉE ; OC adressé, gap re-nommé (additivité ⟸ 3D NR).\n   {A4 ; A2★ ; N} INCHANGÉ ; C7 non levée ; D1 non clos ; CCC non démontrée.\n================================================================================\nOK — 22 assertions. Firewall mordant (m1/m2/m3 + c1/c2). EXIT 0.",
+  "timeout_s": 900,
+  "zone": "LIVE"
+ },
+ "verif_A3_D1_passerelle.py": {
+  "date": "2026-07-21 19:27:28",
+  "duree_s": 0.8,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "08f2d4e9",
+  "tail": "rtographiée.\n       [4] Écart A3/A4 = deux-point <g3g3> ~ k^3 (SPECTRE-K3), irréductible, ≠ ferme D1.\n   • NON SCELLÉ : la généralisation NON-LINÉAIRE de la coïncidence un-point\n     (au-delà du mode TT perturbatif) reste `décision ouverte` (WEYL-BD §6).\n     A3 et A4 NE fusionnent PAS tout court (l'écart k^3 persiste). D1 NON clos.\n   • EFFET : le contenu UN-POINT de A3 est redondant dès qu'on tient A4 -> un postulat\n     indépendant de moins au un-point. Réduction d'hypothèse, PAS démonstration de la CCC.\n     « Le bang gagne » (P6 B) intact ; aucune touche à l'algèbre des chaînons amont.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_A4_QW.py": {
+  "date": "2026-07-21 19:02:52",
+  "duree_s": 2.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "a4637a2c",
+  "tail": "pendantes du potentiel de courbure\nPASS [F1] mutation m1 : q=0 imposé ⟹ contrainte du vide violée (−1/3 ≠ 0) — la circularité EST détectée\nPASS [F2] mutation m2 : lim(nu) = 0 ET g₃(générique) = −2 ≠ 0 — blanchir nu→rescalé CASSERAIT [04]\nPASS [F3] mutation m6 : sous Ω^{−1}, limite = 0 pour toutes données (artefact) — l’exposant FG est porteur\nPASS [F4] mutation m3 : courbure mutée ⟹ g₂ ≠ (5/16, −3/16, −3/16) — l’assert [07] MORD\n\nSCEAU verif_A4_QW : 14/14 PASS — VERDICT W2 (résidu-cassant) SCELLÉ.\n§6.4 : délimitation, aucune réduction ; {A4 ; A2★ ; N} INCHANGÉ ; CCC non démontrée NI réfutée.",
+  "timeout_s": 300,
+  "zone": "LIVE"
+ },
+ "verif_A4_QW_typeI_succ.py": {
+  "date": "2026-07-21 19:02:53",
+  "duree_s": 1.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "79f09a8c",
+  "tail": "e (shear=0) mais ρ=3/sinh²(3t)>0 (NON vide)\n  OK  [05p-c] time-shift : q^eff=q·e^{−3c} ⟹ lim_{c→+∞} 𝓔(q^eff)=0 (de Sitter = limite shear→0)\n  OK  [05p-d] 𝓔=(3/2H)diag(−4q_i)= −6q_i : ≠0 dès q≠0 (toute la famille ANISOTROPE) ; ∂𝓔/∂q=−6≠0\n  OK  [F05'-1] mutation : \"𝓔≠0 à de Sitter\" ⟹ FAUX (𝓔(0)=0) — le sur-grade EST détecté\n  OK  [F05'-2] mutation : \"q=0 (sinh^{1/3}) est vide\" ⟹ FAUX (ρ>0) — le mauvais point EST détecté\n\nSCEAU SUCCESSEUR [05'] : EXIT 0 — 8/8 (6 asserts porteurs + 2 firewalls mordants).\nW2 PRÉSERVÉ (générique/anisotrope) ; universalité RETIRÉE ; a4637a2c INTACT ; §6.4 terminal.",
+  "timeout_s": 300,
+  "zone": "LIVE"
+ },
+ "verif_D1_atlas.py": {
+  "date": "2026-07-21 19:27:28",
+  "duree_s": 0.1,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "9ec5bc60",
+  "tail": "=2.2500\n    éon 5: m=1.5000 λ=1.5000  mλ=2.2500\n    éon 6: m=1.5000 λ=1.5000  mλ=2.2500\n  perturbé (mλ=2.40):\n    éon 0: m=1.6000 λ=1.5000  mλ=2.4000\n    éon 1: m=1.5000 λ=1.6000  mλ=2.4000\n    éon 2: m=1.4062 λ=1.7067  mλ=2.4000\n    éon 3: m=1.3184 λ=1.8204  mλ=2.4000\n    éon 4: m=1.2360 λ=1.9418  mλ=2.4000\n    éon 5: m=1.1587 λ=2.0713  mλ=2.4000\n    éon 6: m=1.0863 λ=2.2093  mλ=2.4000\n  => hors accord fin : m->0, λ->inf (bifurcation instable). VERROU D1 a des dents.\n========================================================================\nEXIT 0 (F1: 4 assertions D1.atlas/runaway verifiees)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D1_bianchiA.py": {
+  "date": "2026-07-21 19:27:33",
+  "duree_s": 5.2,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "8b46efb0",
+  "tail": "ion A3⟸A4 NON acquise : la CCC requiert un mécanisme\n     d'isotropisation du â_ij de 𝓘 (ou A3 reste un postulat séparé). Réfutation\n     partielle de la conjecture de consolidation, à consigner honnêtement.\n\n DISCIPLINE D'AUDIT (LC-AUDIT-VERDICT §6.4) : ces `établi` valident L'ALGÈBRE\n   (le mécanisme de sourcing de Tod est exact, [S4] tombe quantitativement),\n   JAMAIS « la physique de la CCC est établie ». Le seul point qui RESTE ouvert\n   est dynamique : WCH/régularité force-t-il â_ij de 𝓘 à être Einstein 3D ?\n==============================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D1_bianchiIX_domain.py": {
+  "date": "2026-07-21 19:27:34",
+  "duree_s": 1.2,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "8bfa323b",
+  "tail": "─────┘\n        [ρ_r0, courbure : fixés par les données de bang de Tod / normalisation Yamabe.]\n   (Q2) STIFFNESS : raide en temps cosmique (plage a~e^N), NON raide en temps e-fold\n        (valeurs propres {−2,−3,−4}, ratio 2). Variable N=ln a + RK explicite.\n        Coût : ~15-20 e-folds. Bang (Mixmaster) exclu au 1er tour -> pas de raideur extrême.\n\n   => GO VERROUILLÉ : démarrer dans l'ère de radiation, Λ confortablement > 9/(64ρ_r0),\n      variables expansion-normalisées. Le 1er pas du cadrage est sûr et borné.\n==============================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D1_einstein3d.py": {
+  "date": "2026-07-21 19:27:39",
+  "duree_s": 5.1,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "3a864d9e",
+  "tail": "1} de l'anisotropie\n   de 𝓘 d'éon en éon attire-t-elle vers ε=0 ? (analogue anisotrope du runaway (m,λ)\n   de l'atlas FLRW, porte ii). Cela exige de propager â À TRAVERS tout l'éon futur\n   jusqu'à son propre 𝓘 — au-delà des DEUX premiers ordres post-bang de Tod (éq.33).\n   NON calculable avec la machinerie actuelle : prochain chantier, hors de ce sceau.\n\n DISCIPLINE D'AUDIT (§6.4) : cet `établi` valide L'ALGÈBRE (la hiérarchie des\n   conditions et leurs implications), JAMAIS « la physique de la CCC est établie ».\n==============================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D1_facteur.py": {
+  "date": "2026-07-21 19:27:40",
+  "duree_s": 0.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "fed811ea",
+  "tail": "=======================================================\n[D1.bg] réciprocité Ω̂Ω̌=-1 : dS (passé, Λ) -> ǧ=H²η²(-dη²+dx²+dy²+dz²)\n   R(ǧ) = 0  (=0 => trace nulle => radiation)\n   G_00 = 3/eta**2  (>0 => densité positive) ; trace G^a_a = 0\n   => BACKGROUND : Λ-dominé -> radiation-dominé (Big Bang). FIXÉ par la réciprocité.\n   MAIS : la donnée dynamique (g₃ = Weyl rescalé, cf. LC-A) n'est PAS fixée par\n          la réciprocité (1 relation scalaire) => verrou D1 (prescription requise).\n======================================================================\nEXIT 0 (F1: 3 assertions D1.bg verifiees)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D1_stabilite.py": {
+  "date": "2026-07-21 19:27:40",
+  "duree_s": 0.5,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "41509a9f",
+  "tail": "Weyl C_txtx : FLRW vs Kasner\n  FLRW radiation : C_txtx = 0   (=0 : Weyl nul, indép. de m,λ)\n  Kasner aniso.  : C_txtx = 2/(9*t**(2/3))   (≠0 : Weyl sourcé par l'anisotropie)\n======================================================================\nVERDICT : #5 contraint (relation mλ=9k²/4, k≠0) mais ne FERME PAS D1 ;\n  Weyl≡0 en FLRW => D3 vacant dans le secteur symétrique ; pont #5->D3 non tenu ici.\n  Fermeture de D1 => secteur inhomogène (g₃), domaine propre de D3 (Weyl).\n======================================================================\nEXIT 0 (F1: 4 assertions stabilite/Weyl verifiees)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D1c3_genericite.py": {
+  "date": "2026-07-21 19:27:41",
+  "duree_s": 0.5,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "b615d6b4",
+  "tail": "pas â Einstein-3D, ni en\n      homogène-anisotrope (Bianchi A) ni en INHOMOGÈNE (mode TT). PAS un artefact.\n   (Couche programme — levée condition (ii) du verdict d'axe — HORS sceau :\n    voir LC-WORK-AMENDEMENT-R7-D1-AXE-II-LEVEE.)\n\n DISCIPLINE (§6.4) : `établi` valide L'ALGÈBRE (linéarisation exacte du 3-Ricci),\n   JAMAIS une conclusion physique. {A4 ; A2★ ; N} INCHANGÉ ; D1 non clos ;\n   N non fixé (≡Λ) ; CCC non démontrée NI réfutée.\n==============================================================================\nEXIT 0 (G1: S=½k²H, ∝k², σ̌≠0, lim_{k→0}=0 ; G2: mode libre ; assertions OK)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D1c3_regularite.py": {
+  "date": "2026-07-21 19:27:45",
+  "duree_s": 4.0,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "3fc462fe",
+  "tail": "pour la\n      régularité naturelle) ; D3-régularité NE SÉLECTIONNE PAS la prescription ;\n      la marée = donnée libre ⟹ D1 NON fermé par cette voie. Converge avec\n      LC-D-IRREDUCTIBILITE-MOYENS.\n\n DISCIPLINE (§6.4) : ces `établi` valident L'ALGÈBRE (Cotton/Ricci exacts ;\n   contre-exemples explicites), JAMAIS une conclusion physique. {A4 ; A2★ ; N}\n   INCHANGÉ ; D1 non clos ; N non fixé (≡Λ) ; CCC non démontrée NI réfutée.\n==============================================================================\nEXIT 0 (R1: σ̌∝ε², σ̌≠0 hors isotropie, raccord à 0 ; R2: Cotton=0 ∧ Ricci sans-trace≠0)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_A_horizon.py": {
+  "date": "2026-07-21 19:28:13",
+  "duree_s": 27.7,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "c363c0c4",
+  "tail": "e + isolement des rebonds, déjà\n      partiellement outillé par diag_bounces) puis C (famille {ε, ε+δ},\n      découplage vs χ_PH). Cf. §5/§7 de LC-WORK-C7-POC-SILENCE.\n\n   RÉSERVE (LC-AUDIT-VERDICT §6.4). Outil HOMOGÈNE : ce PASS est une SIGNATURE\n   NÉCESSAIRE du silence (horizon clos), PAS une preuve du silence inhomogène\n   (aucun E_i^a spatial testé ici). C7 ne sera levée que sous preuve conjointe :\n   silence ∧ sélection WCH pointwise (C7-a) ∧ spikes négligeables (C7-b).\n================================================================================\nEXIT 0 (F1: assertion PASS verifiee)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_B_curvature.py": {
+  "date": "2026-07-21 19:28:27",
+  "duree_s": 14.1,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "e52965c8",
+  "tail": "nostic C (famille {ε, ε+δ} : deux points\n      voisins se découplent-ils, séparation vs χ_PH ?). Cf. §5/§7.\n\n   RÉSERVE (LC-AUDIT-VERDICT §6.4). Outil HOMOGÈNE : ce PASS atteste la\n   STRUCTURE (Kasner + rebonds isolés) qui, SOUS silence (E_i^a→0), donne\n   Mixmaster pointwise — il ne PROUVE pas le découplage spatial lui-même\n   (objet inhomogène / diag A+C). C7 ne sera levée que sous preuve conjointe :\n   silence ∧ sélection WCH pointwise (C7-a) ∧ spikes négligeables (C7-b).\n================================================================================\nEXIT 0 (F1: assertion PASS verifiee)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_C7b_A1_superhorizon.py": {
+  "date": "2026-07-21 19:28:28",
+  "duree_s": 1.2,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "f52d7c16",
+  "tail": "que n_s^gen) : la seule breche au\n  scaling 1/ell est une CASCADE (C_F=C_F(tau) divergent par regeneration\n  sous-horizon), qui est precisement la question A2 — `a inventer`, hors A1.\n  C7-b reste PASS substantiel ; le residu generique-mesure reste `decision\n  ouverte`. « Le bang gagne » (P6 B) intact.\n\n==========================================================================\n\n/home/claude/LC_Raccord/instruments/archives-scelees/verif_D3_C7b_A1_superhorizon.py:129: SyntaxWarning: invalid escape sequence '\\i'\n  \"\"\"I(L) = \\int (d_X[F(X/L)])^2 dX  par quadrature directe (pas de forme close).\"\"\"",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_C7b_A2_reduction.py": {
+  "date": "2026-07-21 19:28:30",
+  "duree_s": 2.1,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "ee03c385",
+  "tail": "queue lourde des ères longues bornée (coût τ proportionnel).\n   • NON SCELLÉ : la conjecture A2★ (« Q(τ) sous-exponentielle / pas de cascade de spikes »).\n     A.4 montre le SEUIL : une cascade Q~e^{|w|τ} casserait R→0 (réfutation R2). Que la\n     dynamique générique évite cette cascade reste `à inventer` / `hors de portée`.\n   • EFFET : toute la chaîne de C7-b est `formalisable` SAUF la conjecture A2★, isolée.\n     Le verrou C7 est réduit à un UNIQUE postulat nommé et falsifiable. C7 NON levée.\n     « Le bang gagne » (P6 B) intact ; aucune touche à l'algèbre des chaînons amont.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_C7b_gradient.py": {
+  "date": "2026-07-21 19:28:31",
+  "duree_s": 1.2,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "d993d972",
+  "tail": "gerait une proliferation EXPONENTIELLE de spikes, non supportee.\n  ==> Pour le profil exact (G2/Gowdy, un gradient spatial) : C7-b GRADIENT BORNE.\n  PHYSIQUE : super-horizon (eq.43) => a l'echelle de l'horizon le champ varie\n  peu => gradient Hubble-normalise doux ; l'integrale ne le compense pas.\nRESERVE (§6.4) : sceau SEMI-ANALYTIQUE sur la solution EXACTE (un gradient).\n  Le cas pleinement generique (sans symetrie, gradients multiples) n'est pas\n  prouve ici : il reste `decision ouverte` (voie 2 / hors de portee).\n\n==========================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_C7b_spikes.py": {
+  "date": "2026-07-21 19:29:08",
+  "duree_s": 36.8,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "f68fcf75",
+  "tail": "ste `formalisable\n      (borné)` ; (A) physique conditionnel au secteur non-local + C7-a + CCC.\n\n   RÉSERVE (LC-AUDIT-VERDICT §6.4). Sceau STATISTIQUE/ALGÉBRIQUE : il borne α_s et\n   la statistique (spike≡bulk), il ne PROUVE pas C7-b — le secteur non-local reste\n   ouvert. C7 ne sera levée que sous preuve conjointe : silence ∧ WCH pointwise\n   (C7-a) ∧ spikes négligeables (C7-b = amplitude bornée ✓ + statistique=bulk ✓ +\n   gradient non-local négligeable [à prouver, voie 2]).\n================================================================================\nEXIT 0 (F1: assertion PASS verifiee)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_C_decoupling.py": {
+  "date": "2026-07-21 19:29:17",
+  "duree_s": 9.0,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "e5d45c1e",
+  "tail": "ée ; (A) reste `formalisable`,\n      conditionnel au SEUL A2 (+ C7-a pointwise, WCH/A3-A4, CCC). PAS `établi`.\n\n   RÉSERVE (LC-AUDIT-VERDICT §6.4). Proxy HOMOGÈNE : confirme la déconnexion\n   causale (χ_PH≪L) et un découplage lisse dans le régime capturé ; il ne PROUVE\n   pas le silence inhomogène et NE PEUT PAS quantifier les spikes (C7-b). C7 ne\n   sera levée que sous preuve conjointe : silence ∧ WCH pointwise (C7-a) ∧ spikes\n   négligeables (C7-b, à PROUVER, pas postuler).\n================================================================================\nEXIT 0 (F1: assertion PASS verifiee)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_P6_poc_specA.py": {
+  "date": "2026-07-21 19:29:24",
+  "duree_s": 6.8,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "74b015af",
+  "tail": "reste rangé pour ce régime.\n   (ii) ENJEU pour (B) RELEVÉ : ε_out est dominé par √Ω_σ, pas par κ·ε. Si le bang\n        profond porte Ω_σ=O(1), la forme gelée serait O(1) — ce qui MENACERAIT\n        l'isotropisation ∏κ_n→0 (qui suppose σ(0)=0). C'est la vraie question de (B).\n\n   RÉSERVE (discipline §6.4) : `établi` = l'algèbre (réduction exacte ; quiescence et\n   loi √Ω_σ en (A)). Ceci ne clôt PAS P6 : (B) deep-bang (Kasner entre-murs, Ω_σ→1)\n   reste à faire, et le POC montre qu'il est DÉCISIF, pas une formalité.\n==============================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_P6_specB_oracle.py": {
+  "date": "2026-07-21 19:26:28",
+  "duree_s": 111.8,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "162696c1",
+  "tail": ", noyau forward\n   validé Radau≡DOP853, distribution). (i) Type IX (Heinzle-Uggla) BORNE le générique\n   inhomogène. (ii) Ω_σ→1 = bang GÉNÉRIQUE ; si la GWE Meissner-Penrose (2503.24263) IMPOSE\n   un Ω_σ petit (crossover conforme régulier = contenu de la WCH), on retombe en régime (A)\n   et ε_out↓. (iii) Une fois ε_out>0.48, on QUITTE le régime petit-ε de ∏κ_n→0 (³R change\n   de signe) : un seul bang générique suffit à invalider la prémisse linéarisée du §5.1.\n================================================================================\nEXIT 0 (F1: 2 assertions oracle+bang_wins verifiees)",
+  "timeout_s": 900,
+  "zone": "LIVE"
+ },
+ "verif_D3_P6_specB_poc.py": {
+  "date": "2026-07-21 19:29:33",
+  "duree_s": 9.6,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "66c745c8",
+  "tail": "n'est PAS annulée par les rebonds ⟹ tendance 'LE BANG GAGNE' (réfutation de\n      ∏κ_n→0 hors σ(0)=0). [POC modéré : tendance, pas encore le verdict Ω_σ→1 final]\n\n   RÉSERVE (discipline §6.4 + Heinzle-Uggla) : `établi` = l'algèbre (réduction, résidu,\n   isotropisation atteinte). Type IX (3 const. de structure de même signe) BORNE le\n   générique inhomogène. Ω_σ→1 strict (cascade pleine) peut requérir l'oracle DHN si\n   les rebonds se multiplient. Ce POC FIXE LA TENDANCE à Ω_σ modéré, pas le verdict final.\n================================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_P6_specB_supp.py": {
+  "date": "2026-07-21 19:29:53",
+  "duree_s": 19.3,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "8a0e2e49",
+  "tail": "1     2.8e-36   True\n     1e-03    1.82833       1     2.4e-36   True\n     1e-04    2.01745       1     7.6e-37   True\n     1e-05    2.21464       1     5.3e-36   True\n\n==============================================================================\n (c) ε_out moyenné sur l'axe BKL u et permutations (à Ω_σ=0.99) — enveloppe\n==============================================================================\n   ε_out sur 21 (u,axe) : min=0.438  médiane=1.685  max=3.018  moy=1.692\n   => même la plus FAVORABLE des orientations donne ε_out=0.438 (ε_in=0.05).\nEXIT 0 (F1: assertion eps_out fige verifiee)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_WCH_GWE.py": {
+  "date": "2026-07-21 19:29:54",
+  "duree_s": 1.1,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "664660ee",
+  "tail": "L'ORDRE DOMINANT.\n\n  VERROU RESTANT (decision ouverte, non tranchee par l'algebre) -- DEPLACE par l'audit C5 :\n      ce n'est PLUS le spectre M-P (rendu moot par le mode exact [6bis]), mais la\n      RETRO-ACTION INHOMOGENE (C7, hors de portee) : selection WCH pointwise + retro-action\n      des spikes sur le budget de cisaillement homogene. Renvoi Heinzle-Uggla = MARQUEUR de\n      cette reserve, pas un appui.\n\n  DISCIPLINE (LC-AUDIT-VERDICT 6.4) : `etabli` ici = l'algebre du pont et la reproduction\n  des cibles. Ce n'est PAS « la physique de la CCC est etablie ».\n\nTous les assert sont passes.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_backreaction.py": {
+  "date": "2026-07-21 19:29:56",
+  "duree_s": 1.8,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "665e6ca0",
+  "tail": "enormalise le FOND (Λ, (m,λ))\n   = source de l'itération de l'atlas §4-bis -> question du runaway = (a3).\n   [UV de ρ ~ ∫dk k³ -> coupure holographique N (LC-E) : ρ ~ énergie du vide.]\n RÉSERVES (décision ouverte) :\n   - le résultat est CONDITIONNEL à l'isotropie (dS-invariance) de l'état ;\n     un état de raccordement ANISOTROPE (a1: Bianchi A ; dS/CFT non unitaire)\n     donnerait ⟨k̂k̂⟩ ≠ (1/3)δ -> ⟨g₃^(2)⟩ ≠ 0 : c'est LA porte d'une marée.\n   - 2-points ⟨g₃g₃⟩~k³ inchangée (spectre primordial) : WCH reste un-point.\n--------------------------------------------------------------------------",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_bunchdavies.py": {
+  "date": "2026-07-21 19:29:56",
+  "duree_s": 0.8,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "7f269735",
+  "tail": "ectre primordial invariant d'échelle : contact avec [E]/CMB.\n\n------------------------------------------------------------------------\n VERDICT (perturbatif, formalisable) :\n   D3 (C->0)  <=>  Bunch-Davies   AU NIVEAU UN-POINT  : OUI (coïncidence).\n   Lien Weyl<->g₃ désormais DÉRIVÉ : E_ij = (d/2H) g₃_ij (d=3).\n   Caveat (décision ouverte jusqu'au non-linéaire) : état de RACCORDEMENT\n   (deux éons recollés) vs vide de bord ; dS/CFT non unitaire ;\n   fluctuations k³ irréductibles -> WCH = condition un-point, non stricte.\n------------------------------------------------------------------------",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_cancellation.py": {
+  "date": "2026-07-21 19:29:58",
+  "duree_s": 1.6,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "45f755b6",
+  "tail": "pas une\n       perte d'amplitude. Une cancellation a besoin d'une symétrie : d'où A3 pivot.\n\n ANALOGIE BAO ↔ horizon `[résonance structurelle, non dérivée]` :\n   moyenne qui se lave (⟨δ⟩=0)         ↔  [C3] ⟨g₃⟩=0 (cancellation) ;\n   bosse BAO dans le deux-points       ↔  [C4] ⟨g₃g₃⟩~k³ (empreinte) ;\n   surface de dernière diffusion       ↔  crossover 𝒞 / 𝓘 ;\n   empreinte inter-éon candidate       ↔  cercles de Gurzadyan-Penrose (réel, CONTESTÉ).\n   [Garde-fou audit §6.5 : pont de VOCABULAIRE, non une dérivation.]\n==============================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_crossover_attracteur.py": {
+  "date": "2026-07-21 19:29:58",
+  "duree_s": 0.1,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "66b856a6",
+  "tail": "lection P=9k²/4 RESTE POSÉE : la porte (ii) MINIMALE ne promeut pas la WCH en attracteur.\n    A4 demeure un SOCLE. (A) reste 'formalisable' conditionnel à A2 — INCHANGÉ.\n    Un attracteur exigerait de quitter le SOMMET du triangle de stabilité (tr=2, det=1) en\n    déformant DEUX invariants (BR dissipative sur m' ET frein sur λ', §[3b]) : DEUX ingrédients\n    'à inventer / hors de portée' (circularité N de LC-E non brisée). Résultat HONNÊTE et publiable.\n\n======================================================================================\nEXIT 0 (F1: 2 assertions baseline+verdict verifiees)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_crossover_attracteur_stress.py": {
+  "date": "2026-07-21 19:29:58",
+  "duree_s": 0.1,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "2ea50c84",
+  "tail": "================================================\n    det J*≡1 sur grille : ✓\n    aucun attracteur (S2 balayage) : ✓\n    aucun attracteur (S3 formes)   : ✓\n\n    ⟹ VERDICT 'jamais attracteur' ROBUSTE : CONFIRMÉ ✓\n    Le verdict neutre/répulseur de la porte (ii) minimale tient sur tout l'espace des\n    paramètres ET des formes de closure : c'est une obstruction STRUCTURELLE (det=1),\n    pas un accident de paramétrage. (Discipline §6.4 : signature numérique, pas preuve.)\n======================================================================================\nEXIT 0 (F1: assertion robuste verifiee)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_crossover_matching.py": {
+  "date": "2026-07-21 19:29:59",
+  "duree_s": 1.1,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "1a40baa3",
+  "tail": "La liberté c₁ de l'atlas ne change que le FACTEUR (tides ≠0) -> (a3).\n RÉSERVES (décision ouverte, NON couvert ici) :\n   - O(h²) : back-réaction des fluctuations k³ (peut briser l'homogénéité) -> (a2).\n   - stabilité/unicité du point fixe ; couplage au runaway (m,λ) atlas §4-bis -> (a3).\n   - fond ANISOTROPE (Bianchi A) : le cisaillement fournit une structure TT\n     -> la carte peut devenir inhomogène (source) -> atlas inhomogène.\n   - état de raccordement non-unitaire (dS/CFT) : source non-locale possible -> (a2).\n--------------------------------------------------------------------------",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_crossover_stabilite.py": {
+  "date": "2026-07-21 19:30:00",
+  "duree_s": 0.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "5dc65037",
+  "tail": "rme les deux.\n PORTÉE HONNÊTE (pas de surclassement) :\n   - SÉLECTION, pas attracteur : P étant conservé, rien ne DRIVE vers P* si on\n     démarre ailleurs -> le fine-tuning m̂λ̂=9k²/4 SUBSISTE (mais désormais unifié).\n   - question dynamique OUVERTE : la back-réaction (a2), qui renormalise λ (~H⁴~λ²),\n     peut-elle DRIVER P vers P* (attracteur dynamique) ? -> nécessite la coupure\n     holographique N (LC-E) ; statut : à inventer / hors de portée.\n   - FLRW : level-set exacte ; cas inhomogène (Bianchi A) non couvert.\n--------------------------------------------------------------------------",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_interaeon_convergence.py": {
+  "date": "2026-07-21 19:30:10",
+  "duree_s": 10.0,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "349177c3",
+  "tail": "le front (a) se ferme vers une\n   ISOTROPISATION TOTALE dynamique (∏κ_n→0). Ce n'est PAS une dérivation d'A3 à éon fini :\n   attraction multi-éon, lente. Et même hors Penrose, AUCUNE des deux branches runaway ne\n   produit de résiduel dans le domaine valide (l'une sort via P6, l'autre sature κ<1).\n   Discipline : `établi` = l'algèbre (κ<1 robuste, ∏κ_n→0) ; complétude hors-GO et valeur\n   de κ pour bang réaliste restent `à inventer` (P6) / `établi lent` (κ→1).\n==============================================================================\nEXIT 0 (F1: assertion κ(ref)=0.8158 in (0,1) verifiee)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_interaeon_kappa.py": {
+  "date": "2026-07-21 19:30:12",
+  "duree_s": 2.5,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "3905e4f6",
+  "tail": "— A3 est approchée sur plusieurs éons,\n     faiblement, par la courbure S³. Ni issue forte (pas d'entraînement fini),\n     ni issue faible pure (il y a une attraction). MILIEU nuancé.\n\n   RÉSERVES (registre du cadrage) : ordre dominant seulement — P6 (bang/Mixmaster)\n   et P7 (matière CCC exacte σ̌/phantom/DM) EXCLUS. κ est l'estimation d'ordre\n   dominant ; sa valeur définitive (et la complétude de l'isotropisation multi-éon)\n   exigent P7 et la vraie suite (ρ0,Λ). Discipline d'audit §6.4 : `établi` = l'algèbre.\n==============================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_interaeon_matiere.py": {
+  "date": "2026-07-21 19:30:43",
+  "duree_s": 31.0,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "06fbc400",
+  "tail": "retourner κ est le stress anisotrope σ̌,\n   et seulement dans la conjonction (signe opposé à ³S) ∧ (redshift lent). φ et DM ne\n   peuvent pas le faire seuls. La question décisive du front (a) se réduit donc à DEUX\n   paramètres physiques précis et bornés (signe de σ̌, exposant p), désormais localisés.\n   Discipline d'audit : `établi` = l'algèbre (σ̌=−4³S, contrainte conservée, rôle isotrope\n   de φ, réduction à 2 paramètres) ; le signe et p restent `décision ouverte`.\n==============================================================================\nEXIT 0 (F1: assertion seed σ̌=128ε² verifiee)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_interaeon_poc.py": {
+  "date": "2026-07-21 19:30:44",
+  "duree_s": 0.9,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "42943791",
+  "tail": "formalisable ;\n     (ii) BACK-RÉACTION cisaillement+courbure sur le fond — ODE couplées, formalisable ;\n     (iii) dynamique près du BANG (Mixmaster IX) — formalisable mais lourd/chaotique ;\n     (iv) matière CCC EXACTE (σ̌, phantom, DM) au-delà des 2 ordres de Tod — `à inventer`.\n\n   => CADRAGE : (i)-(iii) = `formalisable` (extension Wainwright-Ellis + Tod) ;\n      seul (iv) est `à inventer`. La carte κ est ACCESSIBLE en approx. (i)-(iii),\n      ce qui SUFFIT à trancher qualitativement l'isotropisation inter-éon.\n==============================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D3_spectre_k3.py": {
+  "date": "2026-07-21 19:30:45",
+  "duree_s": 1.0,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "706e97cc",
+  "tail": "=3).\n   [2] VARIANCE    : C(x_UV) ~ (1/6) ln x_UV + 0.045   (LOG, pas quartique).\n   [3] CONTRASTE   : la divergence (x_UV)^4 du §8 WCH-GWE est un ARTEFACT (C5).\n   [4] CUTOFF N    : C(√(N/π)) ≈ 23.5  =>  Omega_sigma^tot ≈ 23.5 A_T << 0.5 si A_T<<1.\n   ==> SPECTRE k^3 CONTRÔLÉ, conditionnel à A_T<<1 (H sous-Planckien) et au cadre CCC.\n   Décision ouverte / à inventer : normalisation A_T ; fixation de N (circularité LC-E).\n   Discipline §6.4 : 'spectre contrôlé cond. A_T<<1' != 'spectre dérivé'.\n------------------------------------------------------------------------\n\nTOUS LES ASSERT PASSENT.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D_CT_ATN.py": {
+  "date": "2026-07-21 19:30:46",
+  "duree_s": 0.6,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "73bc2e8d",
+  "tail": "RGE avec [A] (même ⟨|h|^2⟩) ; C_T ∝ N\n                     (verrouillage) ; A_T·(coeff⟨TT⟩)=1/(2π^2) ; A_T·N=16.\n   ==> CANDIDAT-ÉGALITÉ A_T = 16/N CONFIRMÉ par les deux routes (convention standard).\n   À INVENTER : valeur/réalité exacte de C_T en dS (terme divergent réel = phase ;\n     'i' du terme fini = non-unitarité) ; survie au crossover CCC ; fixation de N\n     (circularité LC-E, NON brisée). NE ferme PAS D1.\n   Discipline §6.4 : 'A_T·N=16 reproduit (algèbre)' != 'D1 fermé / CCC établie'.\n------------------------------------------------------------------------\n\nTOUS LES ASSERT PASSENT.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D_CT_constructif.py": {
+  "date": "2026-07-21 19:30:46",
+  "duree_s": 0.7,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "ca246879",
+  "tail": "r PASS.\n      Ce facteur a ete DIFFERE en P2.3 (flague 'a confirmer'). Verdict :\n        - N_action = 1/4  ==>  CONVERGENCE (etabli, algebre, coherence de coefficients) ;\n        - N_action = 1    ==>  NO-GO net (facteur 4 physique) ;\n        - actuellement : DECISION OUVERTE (non resolu sans deriver N_action).\n      AUCUN rattrapage par convention applique (le facteur 4 N'EST PAS pose a 1/4).\n\n  SANS SURCLASSEMENT : aucune affirmation 'D1 ferme / N fixe / CCC demontree'.\n  Compte {A4 ; A2* ; N} INCHANGE.\n\nSceau R1 : asserts [B] (S1,S2) + [D] passent. Test [C] = DECISION OUVERTE (facteur 4).",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D_CT_dual.py": {
+  "date": "2026-07-21 19:30:47",
+  "duree_s": 0.7,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "3df20802",
+  "tail": "sign(W) — la dualite AdS\n      ne flippe PAS C_T ; tout flip viendra de la continuation dS et/ou de S²=-1 (S2).\n  [C] dictionnaire C_T↔ℓ²/κ²↔N reproduit ; C_T/N nombre pur (verrouillage) ; facteur de\n      convention deHaro/programme = 4, fige et NON cache.\nNON couvert / `a inventer` (S2) : continuation dS de la dualite ; le secteur magnetique/dual\n  livre-t-il sign(C_T)<0 en d=3 INDEPENDAMMENT, et S²=-1 porte-t-il le i² structurellement ?\n  Quelle CFT (Dirichlet vs duale) joue 'raccordement' ? — TOUT cela reste ouvert.\nNE PROUVE PAS : seconde route au signe ; D1 ferme ; CCC. S1 est en AdS.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D_CT_dual_dS.py": {
+  "date": "2026-07-21 19:30:48",
+  "duree_s": 0.5,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "a96561c9",
+  "tail": "este ouvert APRES ce GO) :\n  (ii) persistance de la compensation (-2) du garde-fou S1 (C̃_T=+C_T en AdS via\n       ⟨T̃⟩=-2δW̃/δh̃) sous continuation dS — SEUL vrai calcul ouvert, seul point\n       pouvant faire basculer le pronostic de consolidation (cadrage §3/§4-etape3) ;\n  l'identite tensorielle COMPLETE eq.44 (□^{3/2}, epsilon, i^{d-1}) en dS.\n\nNE PROUVE PAS : seconde route INDEPENDANTE au signe de C_T ; D1 ferme ; CCC.\n  Le squelette de la dualite referme en dS (GO) ; cela ouvre §2-§3, ne les clot pas.\n  Perimetre {A4 ; A2★ ; N} INCHANGE. (A) physique conditionnel au seul A2★ inchange.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D_CT_gardefou_dS.py": {
+  "date": "2026-07-21 19:30:48",
+  "duree_s": 0.3,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "f83f001b",
+  "tail": "egendre (eq.66) se continue-t-elle sans injecter de ℓ-dependance dans le `-2`/\n  le `-` relatif ? Aucune indication de break ; mais ce n'est pas scelle.\n\nCOHERENCE : aucune contradiction avec REALITE (C_T(d=3)=-N/(32π²) reel negatif) ni\n  avec LECTURE-EQ65 (branche 2 ∝ℓ^{-2} -> i^{-2}=-1, aussi reel negatif, non\n  independante). Les deux branches retombent sur la source unique du signe.\n\nNE PROUVE PAS : seconde route INDEPENDANTE ; D1 ferme ; CCC. Perimetre {A4 ; A2★ ; N}\n  INCHANGE. (A) physique conditionnel au seul A2★ inchange. Le pronostic §3\n  (consolidation) est CONFIRME, pas dementi.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D_CT_realite.py": {
+  "date": "2026-07-21 19:30:48",
+  "duree_s": 0.5,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "140bc8f3",
+  "tail": "C_T se RABAT sur l'item 'CFT de raccordement' (consolidation).\n   ==> Les `établi (algèbre)` amont (A_T·N=16, verrouillage en magnitude, convergence\n       des routes) sont ROBUSTES au verdict de réalité, quel qu'il soit.\n   À INVENTER : nature (obstruction de fond vs bénin) du C_T<0 = item raccordement ;\n       survie au crossover ; fixation de N (circularité LC-E, NON brisée). Ne ferme PAS D1.\n   Discipline §6.4 : 'report nul + C_T<0 (algèbre)' != 'D1 fermé / CCC établie'.\n------------------------------------------------------------------------\n\nTOUS LES ASSERT PASSENT.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D_g3.py": {
+  "date": "2026-07-21 19:30:49",
+  "duree_s": 0.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "cb2d6e1c",
+  "tail": "=source/jauge conforme=D1) , r=3 (g₃=⟨T⟩ libre=Weyl rescalé)\n[B] comptage TT d=3 : sym 3×3 = 6 − trace 1 − transverse 3 = 2 polarisations (g₃ = 2 fonctions libres)\n[C] dS pur planaire ds²=(1/H²z²)(−dz²+δ dx²) : g_ij(z)=δ constant => g₃=0 (vide)\n    => g₃ mesure l'écart au vide de Sitter.\n[Dict] ⟨T_ij⟩=(d/16πG) g₃ (d=3, pas d'anomalie).\n       D1 reformulé : fixer g₃ = choisir l'ÉTAT de la CFT céleste ;\n       candidat = état dS-invariant (Bunch-Davies/Hartle-Hawking) -> g₃ unique.\n======================================================================\nEXIT 0 (F1: 3 assertions g3/FG verifiees)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D_nongauss_4pt.py": {
+  "date": "2026-07-21 19:30:49",
+  "duree_s": 0.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "a46e4f6a",
+  "tail": "onnalité que tout l'édifice\n     holographique. Boucles / non-perturbatif / parité-impaire restent HORS périmètre.\n\n DISCIPLINE (§6.4) : B4-a PROLONGE l'absorption dans N (réduit la liberté de D1),\n   mais NE RÉDUIT PAS le cœur {A4 ; A2★ ; N} (N demeure ; amplitude absorbée DANS N).\n   D1 non clos ; N non fixé (≡Λ) ; A4 non réduit ; A2★ non tranché ;\n   CCC non démontrée NI réfutée. Clôture R-53 conditionnelle (Einstein ; ≤4-pt arbre).\n==============================================================================\nEXIT 0 (4-pt : B4-a rattaché-N ; prédictions figées confirmées ; firewall mord)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D_nongauss_4pt_phase1.py": {
+  "date": "2026-07-21 19:30:50",
+  "duree_s": 0.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "1aa3f051",
+  "tail": "connexe = 512π⁶/N³ (exposant N = 3)\n     • structure Einstein arbre = contact quartique + échange (à confronter)\n   NON TRANCHÉ ICI : trichotomie B4-a/b/c (exige comptage <TTTT> d=3 +\n     amplitude Einstein, fetchés en Phase 2 AVEUGLE).\n\n DISCIPLINE (§6.4) : Phase 1 fige des prédictions ; ne scelle pas le verdict,\n   ne ferme pas D1, ne fixe pas N. {A4 ; A2★ ; N} INCHANGÉ ; D1 non clos ;\n   N non fixé (≡Λ) ; CCC non démontrée NI réfutée.\n==============================================================================\nEXIT 0 (Phase 1 : scission OK, gamma_4=16, scaling figé N^-3, firewall mord)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D_nongauss_TTT.py": {
+  "date": "2026-07-21 19:30:50",
+  "duree_s": 0.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "c06f6f51",
+  "tail": "que = coefficient W³\n    ~(LH)⁴ (nulle sous Einstein pur — même conditionnalité que l'édifice) ;\n    lecture CFT-Ward numérique (étalon OP, forensique ε·ε*=4 vs 2) = passage\n    lourd ; secteur non-gaussien COMPLET (quatre-point, boucles, non-pert.)\n    HORS périmètre (S1).\n\n  SANS SURCLASSEMENT : « trois-point reproduit » = cohérence de coefficients.\n  JAMAIS « secteur non-gaussien fermé / D1 fermé / N fixé / CCC démontrée ».\n  Compte {A4 ; A2★ ; N} INCHANGÉ. D1 NON clos. Circularité LC-E intacte.\n\nTOUS LES ASSERT PASSENT — 28 assertions. Convergence (passage léger) + consolidation. EXIT 0.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D_nongauss_TTT_lourd.py": {
+  "date": "2026-07-21 19:30:51",
+  "duree_s": 0.8,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "2cb93432",
+  "tail": "re-dérivée. R-4 du léger SOLDÉE.\n  PL-C TENUE (phase 1) ; PL-D TENUE (phase 1, par représentation).\nSANS SURCLASSEMENT (LC-AUDIT-VERDICT §6.4) :\n  « ancrage Ward numérique reproduit + forensique tranchée » =\n  établi (algèbre), conditionnel aux entrées amont scellées\n  (A_T·N=16, n=2, relation BD, convention nue, κ) et à Einstein.\n  JAMAIS « secteur non-gaussien fermé / D1 clos / N fixé / CCC démontrée ».\n  Liberté W³ ~ (LH)⁴ [décision ouverte] ; quatre-point HORS périmètre (S1).\n  Compte {A4 ; A2★ ; N} INCHANGÉ.\n==============================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D_nongauss_TTT_lourd_phase1.py": {
+  "date": "2026-07-21 19:30:51",
+  "duree_s": 0.6,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "e494c8c6",
+  "tail": "ASSENT — 15 assertions. EXIT 0.\nGEL DE PHASE (R-10) : ce fichier est déposé tel quel ; les asserts\n01-15 devront être BYTE-IDENTIQUES dans le sceau final.\nPROCHAINE ÉTAPE : phase 2 (fetch tracé) — [C] étalon Ward OP numérique\n(PL-A telle-qu'écrite) ; [D] forensique ε·ε* (PL-B, p.6 MP extensible\nalors) ; [E] anti-numérologie ; [F] firewall.\nSANS SURCLASSEMENT (§6.4) : phase 1 = algèbre interne + squelettes.\n  JAMAIS « secteur non-gaussien fermé / D1 clos / N fixé / CCC démontrée ».\n  Compte {A4 ; A2★ ; N} INCHANGÉ.\n==============================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_D_w3_gpy.py": {
+  "date": "2026-07-21 19:30:52",
+  "duree_s": 0.0,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "b01432de",
+  "tail": "une\nroute externe indépendante (invariants conformes 3d, GPY) ; T1/T3 tenues\ntelles qu'imprimées ; T2 tenue sur le compte, nuance consignée (impaire =\nstructure des théories violant la parité, HORS périmètre S2).\nAUCUNE réduction de comptage. Décisions ouvertes INCHANGÉES :\n  coefficient W³ ~ (LH)⁴ ; (a,b,c) propres / CFT de raccordement.\n§6.4 : « établi (algèbre) » = algèbre correcte + cibles reproduites —\n  JAMAIS « secteur non-gaussien fermé / D1 clos / N fixé / CCC démontrée ».\nCompte {A4 ; A2★ ; N} INCHANGÉ.\n==============================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_E_N_crosscheck.py": {
+  "date": "2026-07-21 19:30:52",
+  "duree_s": 0.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "63407a12",
+  "tail": "beta (cross-check empirique) est une CONSOLIDATION (les\n  determinations ne sont pas independantes), assortie d'UN acquis falsifiable\n  NEGATIF (le germe inter-eon de vide n'est pas le spectre observe). Le falsifiable\n  POSITIF (coefficients 16, 1/(32 pi^2)) vit dans le pont CONSTRUCTIF (dS/CFT\n  travaille), ou A_T/C_T et N sont accessibles independamment.\n\nNE PROUVE PAS : que N est fixe (LU sur Lambda) ; qu'un mecanisme energetique est requis\n  (interpretation physique, decision ouverte) ; D1 ferme ; CCC. Perimetre\n  {A4 ; A2* ; N} INCHANGE ; (A) physique conditionnel au seul A2* inchange.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_E_planck.py": {
+  "date": "2026-07-21 19:30:52",
+  "duree_s": 0.1,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "0934497c",
+  "tail": "dS=3π/(Λℓ_P²)=3.279e+122 (~10^122) ; ℓ_P=√(3π/ΛN)=1.616e-35 (cohérent, circulaire)\n[C] (i) φ-ticks d'expansion (a_n=φ^n) pour facteur 1e+61 : n=292  -> SÉRIEL ~10^2 (log)\n    (ii) ticks de Planck / temps de Hubble : N_time=ℓ_dS/ℓ_P=1.022e+61 (~10^61)\n    (iii) cellules d'horizon (aire) : S_dS=3.279e+122 (~10^122)\n    relation S_dS/(π N_time²)=1.000  => N(aire)=π·N_time²\n[VERDICT] de Sitter éternel => compte temporel diverge ; seul l'horizon (aire) est fini.\n  N est HOLOGRAPHIQUE (module D), PAS sériel (φ-tick ~10^2). Circularité non brisée.\nEXIT 0 (F1: 3 assertions Planck-residuel verifiees)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_F1_spn.py": {
+  "date": "2026-07-21 19:30:52",
+  "duree_s": 0.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "19a4931e",
+  "tail": "OK — 20 assertions. F1/Sp(N) : STRUCTURE concordante (signe<0, ∝N, holographique) ; COEFFICIENT NON concordant (écart π²/8 = O1, Einstein≠scalaires). Falsifiable positif NON branché par Sp(N). {A4 ; A2★ ; N} INCHANGÉ. Firewall actif. EXIT 0.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_F4_principiel.py": {
+  "date": "2026-07-21 19:30:53",
+  "duree_s": 0.5,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "9947b8ed",
+  "tail": "lation stricte sur-contraint.\n   G2 : O₂ clos (mécanisme négatif) + a3 sélection-pas-attracteur ⟹ basse entropie\n        initiale NON dérivée ⟹ DÉPLACEMENT (Past Hypothesis, G2-c) / mieux située (G2-b).\n   ⟹ F4 = DÉLIMITATION. Meilleur socle principiel d'A4 = STABILITÉ (non l'entropie,\n       circulaire) ; A4 mieux argumenté, NON dérivé ; postulat possiblement déplacé.\n SANS SURCLASSEMENT (§6.4) : {A4 ; A2★ ; N} INCHANGÉ ; A4 non réduit ; D1 non clos ;\n   N non fixé ; CCC non démontrée.\n==============================================================================\nOK — 25 assertions. EXIT 0.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_F5_scaling.py": {
+  "date": "2026-07-21 19:30:53",
+  "duree_s": 0.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "a959f137",
+  "tail": "'aire PARTAGE\n  A_T*C_T (R1) = c_CT*c_dim  (sans echelle, coeff. indetermine)\n------------------------------------------------------------------------\nOK — 19 assertions. A_T ~ N^-1 : IDENTITE pour TOUT d (socle loi d'aire partage).\n    Routes independantes EN CONTENU (R2 = 1/raideur holographique) mais\n    NON independantes au niveau de l'EXPOSANT (accord adosse au socle d'aire).\n    COEFFICIENT O(1) NON fixe (a inventer, requiert O2). N NON fixe.\n    Sans surclassement : {A4 ; A2*  ; N} INCHANGÉ ; D1 non clos. EXIT 0.\n========================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_F6_memoire_cisaillement.py": {
+  "date": "2026-07-21 19:30:54",
+  "duree_s": 0.5,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "23a7d264",
+  "tail": "ue (pseudo, Cotton/B) => AUCUN datum neuf.\n  G2 : aspect de charge de supertranslation = <T> = (3/16πG) g3 => Q[f] linéaire en g3\n       = secteur C_T (CONSOLIDATION).\n  NON tranché (= G3, différé) : flux-balance Λ-BMS / saut net entre vides en dS spacelike-I+.\n  COEFFICIENT / niveau : représentation + dictionnaire (relations amont scellées).\n  SANS SURCLASSEMENT (§6.4) : réduction de datum + consolidation ≠ D1 clos / N fixé /\n  signature CCC établie / CCC démontrée ; {A4 ; A2★ ; N} INCHANGÉ ; D1 non clos. EXIT 0.\n==============================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_G3_adm_imports.py": {
+  "date": "2026-07-21 19:30:55",
+  "duree_s": 1.6,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "a0b962c8",
+  "tail": "variante lorentzienne dS-FG\n  produit le MÊME polynôme indiciel s(s−d) (bloc C) — le signe de Λ n'entre que dans le\n  terme sous-dominant ±k²z². CE SCEAU NE TESTE DONC PAS le pas genuine-dS : le m4-chaînon\n  de LC-D-G3-ADMISSIBILITE RESTE VACANT ; le bien-posé genuine-dS lorentzien (existence,\n  unicité, correspondance de scattering au 𝓘⁺) RESTE l'import Leimbacher 2605.03481,\n  NON dérivé ici. Ce sceau atteste l'ALGÈBRE, jamais un verdict physique (§6.4) :\n  {A4 ; A2★ ; N} INCHANGÉ ; G3-TRANSPORT reste T-b ; O₂ non construit ; D1 non clos ;\n  N non fixé (≡Λ) ; CCC non démontrée NI réfutée.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_G3_admissibilite.py": {
+  "date": "2026-07-21 19:30:56",
+  "duree_s": 0.6,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "010a0562",
+  "tail": "3) : obstruction transmission = implication, PAS derivation de I3\n  TN-3 : marginalite Δ_+=d=3 DERIVEE ; absence contre-termes = IMPORT (DELTA-C T2b)\n  firewall TN-R : m1=True m2=True m3=True m4=True m5=True  (5/5)\n--- VERDICT ---\n  T-c CONDITIONNEL aux imports {I1: Δ_-=0 (SFG-1), I3: transmission, I4: DELTA-C T2b}\n  verrou propre = False  -> Phase 1 FETCH requise pour trancher (lever I1/I3/I4)\n  GRADE : etabli (arithmetique), CONDITIONNEL ; TN-2/TN-3 = imports, non etablis par le code.\n  §6.4 : delimite les MOYENS sous imports ; NE reduit PAS A4 ; {A4;A2★;N} inchange.\nALL ASSERTIONS PASSED.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_G3_m4_chainon.py": {
+  "date": "2026-07-21 19:31:18",
+  "duree_s": 22.3,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "9486b7b2",
+  "tail": "tion 𝓘⁺) sort de l'espace figé §4 ⟹ RÉSIDU RE-NOMMÉ hors ce lot,\n      routable vers un cadrage neuf (NON tranché ici).\n  FRICTION : §4.3 associait à tort « statut symétrique ⟹ m4 vacant » ;\n             ici statut symétrique ET m4 non vacant (cas taux≠/statut=).\n\n  EFFET R-53 : G3-TRANSPORT reste T-b ; G3-ADMISSIBILITE v1.4 : le m4-chaînon\n  cesse d'être vacant (genuine-dS désormais testé) mais NE fournit PAS de verrou\n  propre ; direction T-c ni convertie ni infirmée. §6.4 : rien réduit, rien\n  construit ; {A4;A2★;N} inchangé ; CCC non démontrée NI réfutée.\n\nRÉSULTAT SCEAU : 19/19 — EXIT 0",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_O2_P1.py": {
+  "date": "2026-07-21 19:31:19",
+  "duree_s": 0.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "6b23b2ae",
+  "tail": "sensible\n  ✓ casse comme attendu : (m2) carré forcé +𝟙/−𝟙 indépendant de s ⟹ P1-G2 sensible (P²=s·𝟙)\n  ✓ casse comme attendu : (m3) swap absent (map diagonale) ⟹ P1-G1 sensible\n\n==============================================================================\nOK — 20 assertions. P1 RÉDUITE à un signe s=(−1)^w (décision ouverte) ;\nSWAP établi, −𝟙 NON fourni par la réciprocité conforme nue ; (C-O2) forte NON établie.\nSANS SURCLASSEMENT : {A4 ; A2★ ; N} INCHANGÉ ; A4 non réduit ; D1 non clos ; CCC non démontrée. EXIT 0.\n==============================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_O2_P1b_soperation.py": {
+  "date": "2026-07-21 19:31:19",
+  "duree_s": 0.5,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "57905430",
+  "tail": "V1 PASS  S∘S = Id sur (C,W)  [spin-1 éq.2.4 et spin-2 éq.2.18 : même carte]\nV2 PASS  C>0 ⟹ S(C)>0  [garde-fou m4 : C~_T=+C_T, zéro friction]\nV3 PASS  S:(C,W) ≡ tau→-1/tau ; S_mat²=-Id ⟹ Möbius(=deux-points) = Id\n         [le -1 central vit dans ker(SL(2,Z)→PSL(2,Z)) : indétectable au 2-pt]\n\nSCEAU: 3/3 PASS — établi (algèbre). Aucune conclusion physique.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_O2_P2.py": {
+  "date": "2026-07-21 19:31:20",
+  "duree_s": 0.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "f2b110e8",
+  "tail": "CASSE ✓\n  → 3/3 mutations cassantes confirmées, orthogonales à l'état.\n\n==============================================================================\nOK — 28 assertions. VERDICT P2 = DISCORDANCE / NÉGATIF PROPRE (G1-c ∧ G2-c) ;\nfirewall 3/3 (m1 d / m2 signe Λ / m3 S²). La sélection de +i est un choix d'état\npar cette voie ; non dérivée ; non contrainte au raccord ; HH-S⁴ indisponible (①↔④).\nSANS SURCLASSEMENT (§6.4) : {A4 ; A2★ ; N} INCHANGÉ ; D1 non clos ; N non fixé ;\nA4 non réduit ; CCC non démontrée. EXIT 0.\n==============================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_O2_bprime.py": {
+  "date": "2026-07-21 19:31:20",
+  "duree_s": 0.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "4c8d186c",
+  "tail": "/3 mutations cassent comme attendu.\n\n==============================================================================\nOK — 21 assertions. (b′) : w = Δ_+−Δ_- = d ⟹ s = (−1)^d.\n  Descente du signe via le GAP (poids global simplifié) ; réciprocité NÉGATIVE de Penrose.\n  d=3 (CCC, impair) ⟹ s=−1 ⟹ P=S, P²=−𝟙=S² ⟹ (C-O2) forte ÉTABLIE au niveau P1 (gate franchie).\n  SANS SURCLASSEMENT (§6.4) : franchit la SEULE gate P1 ; P2 reste `à inventer` ;\n  A4 NON réduit ; D1 non clos ; N non fixé ; {A4 ; A2★ ; N} INCHANGÉ. EXIT 0.\n==============================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_O2_bprime_AUDIT.py": {
+  "date": "2026-07-21 19:31:20",
+  "duree_s": 0.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "95c51287",
+  "tail": "OK (copie d'audit, positif seul) — 12 assertions. s=(−1)^d ; d=3 ⟹ s=−1 ⟹ P=S.\nAUDITEUR : replayez, vérifiez chaque pas indépendamment, PUIS concevez vos propres\nmutations cassantes (le firewall du pilote n'est pas fourni).",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_O2_coin_transmission_ac.py": {
+  "date": "2026-07-21 19:31:21",
+  "duree_s": 0.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "0acf575d",
+  "tail": "rection conforme = 0 ET Hayward (c=2) reapparait\n  [OK ] C5 m1 : coin retire => residu 2 dbeta != 0 ; coin present => annule\n  [OK ] C6 anomalie conforme indep. de k (Gustavsson) et de p ; R-48 refutee\n----------------------------------------------------------------\nTOUS LES CONTROLES STRUCTURELS PASSENT (6/6).\nLecture : p = b est LIBRE ; finitude et bonne-position tiennent ∀p ;\naucun p* isole => C1-b (verdict TC-b). Support de raisonnement, PAS un sceau.\nN'atteste PAS : fixation de p, TC-a, construction de alpha, fermeture de D1,\nfixation de N, demonstration de CCC. {A4 ; A2* ; N} INCHANGE.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_O2_coin_transmission_fetch.py": {
+  "date": "2026-07-21 19:31:21",
+  "duree_s": 0.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "7539188d",
+  "tail": "===\n  C1 résidu face N = δω (échelle libre)        : OK\n  C2 δC_mixte = η-part(D) + κ(p)Φ·δω-part(N)    : OK\n  C3 bonne-position ⟹ S_TC(p), p NON fixé       : OK\n  C4 firewall m2 (same-type → η nu)             : MORD\n  C5 firewall m1 (retrait → résidu réapparaît)  : MORD\n  C6 gate TC-G2/TC-G3 = anomalie A_c(p), source NON armée : gate CONFIRMÉ\n\n  VERDICT SUPPORTÉ = TC-b (consolidation, mieux situé) — AUCUN sceau, α reste C1-b.\n  SANS SURCLASSEMENT (§6.4) : structurer/dériver la forme ≠ calculer A_c(p) ≠ fixer p ≠\n  exhiber TC-a ≠ construire α ≠ construire O₂ (β≡G3 reste) ≠ fermer D1.\n\nEXIT 0",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_O2_hodge.py": {
+  "date": "2026-07-21 19:31:22",
+  "duree_s": 0.3,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "421d5f29",
+  "tail": "--------------------------------------------------\n  VERDICT = DISCORDANCE : la jonction transporte l'ÉCHANGE mais NON le −1 du Hodge.\n  (C-O2) forte NON établie par cette voie ; O₂ reste à inventer.\n  Firewall : 3/3 mutations cassantes confirmées (m1 s=−1 / m2 diagonale / m3 garde-fou off).\n------------------------------------------------------------------------------\n  SANS SURCLASSEMENT (§6.4) : {A4 ; A2★ ; N} INCHANGÉ ; A4 non réduit ;\n  D1 non clos ; N non fixé ; CCC non démontrée.\nOK — 28 assertions. EXIT 0.\n==============================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_cartographie_v11_nonregression.py": {
+  "date": "2026-07-21 19:31:22",
+  "duree_s": 0.0,
+  "issue": "INEXECUTABLE-ICI (env: mnt/project)",
+  "rc": 1,
+  "sha8": "81e1914b",
+  "tail": "-> REJET (attendu REJET)\n  [firewall] FW4 maj v1.0 non préservée       -> REJET (attendu REJET)\n  [firewall] FW5 statut changé                -> REJET (attendu REJET)\n  [firewall] FW6 corps: ligne modifiée        -> REJET (attendu REJET)\n  [firewall] FW7 version non bumpée           -> REJET (attendu REJET)\n\n== NON-RÉGRESSION ADDITIVE v1.0 -> v1.1 ==\n  v1.0 (mount, R-54) : /mnt/project/LC-WORK-CARTOGRAPHIE-PRIORITES.md\n  v1.1 (candidat)    : LC-WORK-CARTOGRAPHIE-PRIORITES.md\n  ERREUR lecture v1.0 : [Errno 2] No such file or directory: '/mnt/project/LC-WORK-CARTOGRAPHIE-PRIORITES.md'",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_cb_weyl_magnetique.py": {
+  "date": "2026-07-21 19:31:23",
+  "duree_s": 1.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "e1bef559",
+  "tail": "coping\n  R-11 (unités de dualité) est LEVÉ PAR DÉRIVATION, pas par suppression.\n  Refermeture dH (49)/(50) via map fixe pure : slack nul. Promesse C2pt-4\n  du cadrage 2PT FERMÉE (la \"seule constante non explicite en KB\" l'est).\n\n  SANS SURCLASSEMENT : ceci est un épinglage d'UNITÉS et une refermeture.\n  JAMAIS « D1 clos / N fixé / CCC démontrée ». L'amplitude A_T~1/N reste la\n  décision ouverte ; conditionnel à BD ; spécifique d=3.\n  Compte {A4 ; A2★ ; N} INCHANGÉ.\n\nTOUS LES ASSERT PASSENT — 26 assertions. EXIT 0.\n==============================================================================",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_gamma_nstar_ads4.py": {
+  "date": "2026-07-21 19:31:24",
+  "duree_s": 0.5,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "367d2ddb",
+  "tail": "VEV est r^3 (eq.20), pas r^2 — pas d'import dS errone\n  [OK] mut2 rattrapee : avec la VRAIE fenetre (+1), m^2=0 est exclu -> caveat tient\n  [OK] mut3 rattrapee : d=0 degenere les exposants -> N* mal-defini (mgamma-4) ; d=3 garde {0,3} net\n\n  firewall : 3/3 mutations cassantes rattrapees\n\nRESULTAT : 12 verifications OK + firewall 3/3.\nVERDICT case G-3 = NA-✓ (etalon AdS4 etabli) ; etabli (algebre) SOUS AXIOMES AdS4 ;\nFINDING F-gamma-1 : label gele 'mode lent (sous-dominant)' ambigu (slow fall-off r^0\n  != sous-dominant r^3) -> amendement R-7 date recommande. SANS SURCLASSEMENT (§6.4).\nEXIT 0",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_manifeste_v2122_consignation.py": {
+  "date": "2026-07-21 19:31:24",
+  "duree_s": 0.0,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "5349ad47",
+  "tail": "[--compute-only]\n                                             [--emit-baseline]\n                                             [--verify-baseline] [--patch]\n                                             [--dry-run] [--selftest]\n\noptions:\n  -h, --help            show this help message and exit\n  --kb-root KB_ROOT\n  --manifest MANIFEST\n  --lot [LOT ...]\n  --cur-version CUR_VERSION\n  --new-version NEW_VERSION\n  --prior-pkgsha PRIOR_PKGSHA\n  --out OUT\n  --map-out MAP_OUT\n  --map-in MAP_IN\n  --compute-only\n  --emit-baseline\n  --verify-baseline\n  --patch\n  --dry-run\n  --selftest",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_moduleA_scri.py": {
+  "date": "2026-07-21 19:31:25",
+  "duree_s": 1.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "690eb4c7",
+  "tail": "======================================================================\n[A.dS.1] de Sitter (tranchage fermé)\n   R = 12*H**2  (= 12H² = 4Λ)\n   R_ab = 3H² g_ab : True  => Λ = 3H²\n======================================================================\n[A.dS.2] caractère causal de 𝓘\n   Ω=cos(η) ; g̃=Ω²g=H^{-2}(-dη²+dΩ₃²) régulière en η=±π/2\n   N(η)=g̃^{ηη}(∂_ηΩ)² = -H**2*sin(eta)**2   ;  N|_𝓘⁺ = -H**2 = -Λ/3 < 0\n   => normale temporelle => 𝓘⁺ SPACELIKE ; signe(N)|_𝓘 = -signe(Λ)\n======================================================================\nEXIT 0 (F1: 3 assertions dS/scri verifiees)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_naction_alpha.py": {
+  "date": "2026-07-21 19:31:25",
+  "duree_s": 0.5,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "80005547",
+  "tail": "facteur de convention deHaro/programme\n      =4 catalogue (LC-D-CT-DUAL), DERIVE (et non pose) : f_Pi=1, f_W=4 via les\n      prescriptions eq 63 vs |Im F|. R-2 (map <TT>~F) est CLOS au passage.\n      etabli (ALGEBRE) CONDITIONNEL aux prescriptions exhibees (eq 63 ; |Im F| ancre\n      sur le spectre).\n  SANS SURCLASSEMENT : le PRODUIT =4 de DUAL est inchange ; correction additive de son\n      attribution (part Pi = 1). AUCUNE reduction de {A4 ; A2* ; N} ; D1 NON clos ;\n      N NON fixe ; CCC NON demontree.\n\nTOUS LES ASSERT PASSENT — 23 assertions. f_Pi=1, f_W=4 derives, N_action=1/4. EXIT 0.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_naction_aveugle.py": {
+  "date": "2026-07-21 19:31:26",
+  "duree_s": 0.5,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "1468672c",
+  "tail": "─────────────────────┐\n  │   C_T^prog (Osborn-Petkos)  =  c · ℓ_dS²/G                           │\n  │                                                                      │\n  │        c  =  3 / (4 π³)   ≈  0.0241886508                    │\n  └────────────────────────────────────────────────────────────────────┘\n\n  Hypothèse de convention unique (laissée à §4) : la 2-pts vaut Re(ψ₂)·Π\n  sans facteur 2 additionnel ; SIGNE et facteur de continuation i^(d-1)=−1\n  (ℓ_AdS→iℓ_dS) NON appliqués ici — réservés à la réconciliation §4.\n\nOK — 17 assertions. c scellé. AUCUNE réconciliation faite. EXIT 0.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_naction_firewall.py": {
+  "date": "2026-07-21 19:31:26",
+  "duree_s": 0.5,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "d985390d",
+  "tail": "─┘\n\n  CONDITIONNEL (réserves exhibées, NON levées par algèbre) :\n    · convention de polarisation Σ_s ε^s ε^s = Π (block A) ;\n    · map opérateur dS/CFT ⟨TT⟩ ∝ F sans −2 additionnel, ANCRÉE sur le spectre\n      vérifié du programme (block C) ;\n    · valeur c établie (ALGÈBRE) SOUS ces conventions ; GRADE modéré-élevé.\n\n  §6.4 : « c=3/(4π³) en OP (algèbre, sous conventions) » ≠ « D1 fermé / N fixé /\n  CCC démontrée ». Compte {A4 ; A2★ ; N} INCHANGÉ. Verrouillage C_T∝N et\n  cancellation A_T·N=16 INTACTS (κ nombre pur). Observable 𝒫 INTACTE.\n\nOK — 23 assertions. Statut impulsion DÉRIVÉ. EXIT 0.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_naction_gamma_dHSS.py": {
+  "date": "2026-07-21 19:31:27",
+  "duree_s": 0.4,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "d318ffe0",
+  "tail": "à libeller comme telle (§AF branche 2).            |\n  |                                                                     |\n  |  Firewall : gamma=4 = UNIQUE valeur reproduisant éq.90 (SENSIBLE).  |\n  +---------------------------------------------------------------------+\n\n  §6.4 : « gamma=4 (canonique) / gamma=1 (convention nue) » (algèbre)\n  != « D1 fermé / N fixé / CCC démontrée ». PAS de NO-GO ; aucune\n  contradiction. {A4 ; A2★ ; N} INCHANGÉ ; D1 non clos ; N non fixé ;\n  CCC non démontrée.\n\nTOUS LES ASSERT PASSENT — 18 assertions. gamma_canon=4 FORCÉ ; gamma=1 CONVENTIONNEL. EXIT 0.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_nonlin_cotton.py": {
+  "date": "2026-07-21 19:32:28",
+  "duree_s": 60.9,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "b218f974",
+  "tail": "let).\n   • EFFET : sub-Q1 PASS. Le contenu un-point du Weyl complet se réduit au secteur\n       ÉLECTRIQUE E ∝ g3 (=> sub-Q2 : absence d'admixture de singlet dans g3 ;\n       sub-Q3 : parité). Le magnétique n'a PAS besoin de l'argument de représentation.\n   • NON SCELLÉ / portée : résultat UN-POINT (le 2e ordre <δC>~<δg δg> = deux-point k^3\n       irréductible, SPECTRE-K3) ; spécifique d=3 (B = Cotton = courbure conforme) ;\n       conditionnel à A3 ; D1 NON clos ; A3/A4 NON fusionnés tout court. PAS la CCC.\n     « Le bang gagne » (P6 B) intact ; aucune touche à l'algèbre des chaînons amont.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_nonlin_deuxpoint.py": {
+  "date": "2026-07-21 19:32:34",
+  "duree_s": 6.0,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "1e40f5e8",
+  "tail": "passe de\n  `établi perturbatif TT` (relation d'état BD) à `établi` PAR INVARIANCE\n  (représentation, secteur de Weyl complet, deux parités) — l'analogue\n  rang 2 de NONLIN-VERROU.\n\n  SANS SURCLASSEMENT : « forme verrouillée » = comptage de représentation.\n  JAMAIS « A3 dérivé / deux-point dérivé / D1 clos / N fixé / CCC démontrée ».\n  Le k³ RESTE la donnée de Cauchy irréductible, pendue à N seul.\n  Compte {A4 ; A2★ ; N} INCHANGÉ. Circularité LC-E intacte.\n\nTOUS LES ASSERT PASSENT — 41 assertions (27 phase 1 + 14 phase 2). Verrou rang 2 : convergence interne + confirmation comparanda. EXIT 0.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_nonlin_parity.py": {
+  "date": "2026-07-21 19:24:36",
+  "duree_s": 125.9,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "9df8e53e",
+  "tail": "et\n       <B>=0 (Cotton, sub-Q1, secteur IMPAIR) couvrent les DEUX parités, disjointement,\n       sans recourir à la parité-invariance de l'état => le un-point du Weyl COMPLET\n       s'annule sous A3, NON-perturbativement => A4 => A3-un-point devient `établi`\n       (au un-point), au-delà du TT perturbatif.\n   • NON SCELLÉ / portée : un-point seulement (DEUX-POINT <g3 g3>~k^3 libre, SPECTRE-K3,\n       irréductible — A3/A4 NON fusionnés) ; conditionnel à A3 ; spécifique d=3 ;\n       D1 NON clos. PAS la CCC.\n     « Le bang gagne » (P6 B) intact ; aucune touche à l'algèbre des chaînons amont.",
+  "timeout_s": 900,
+  "zone": "LIVE"
+ },
+ "verif_nonlin_repr.py": {
+  "date": "2026-07-21 19:32:34",
+  "duree_s": 0.7,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "98f34c75",
+  "tail": "TURBATIF de verif_A3_D1_passerelle [2].\n       Combiné à sub-Q1 (magnétique clos), le contenu UN-POINT du Weyl complet s'annule\n       sous A3, non-perturbativement => A4 => A3-un-point passe de `établi perturbatif`\n       à `établi` (au un-point), MODULO sub-Q3 (parité).\n   • NON SCELLÉ / portée : un-point seulement (le DEUX-POINT <g3 g3>~k^3 reste libre,\n       SPECTRE-K3, irréductible — A3/A4 NON fusionnés) ; conditionnel à A3 ; D1 NON clos ;\n       trace ∝ g_ij = singlet hors donnée de Weyl. PAS la CCC.\n     « Le bang gagne » (P6 B) intact ; aucune touche à l'algèbre des chaînons amont.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_paquet_propre.py": {
+  "date": "2026-07-21 19:02:49",
+  "duree_s": 0.3,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "051e2833",
+  "tail": "OK — 13 assertions. Paquet PROPRE (froid + aveugle), pare-feu actif. Aucune valeur cible, aucun indice. EXIT 0.",
+  "timeout_s": 300,
+  "zone": "LIVE"
+ },
+ "verif_phi_seals.py": {
+  "date": "2026-07-21 19:33:15",
+  "duree_s": 40.8,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "5a1d16a2",
+  "tail": "==========================\n[KMB] extensivité ⟨K⟩,S_rel ∝ k ; σ(K) ∝ √k ; S_rel=Hessienne Kubo-Mori ; additivité\n  k | Δ⟨K⟩(lin) | S_rel(lin) | σ(K)(√k)\n  1 | 0.23969  | 0.23220   | 0.63648\n  2 | 0.47937  | 0.46440   | 0.90011\n  3 | 0.71906  | 0.69661   | 1.10241\n  4 | 0.95875  | 0.92881   | 1.27295\n  5 | 1.19844  | 1.16101   | 1.42321\n  S_rel(ω+tA‖ω)/((t²/2)gKMB) = 1.0015  (=1 : S_rel=Hessienne KMB)\n  S((ρ1⊗ρ2)‖(ω⊗ω))/(S1+S2) = 1.000000  (=1 : additivité exacte)\n====================================================================\nEXIT 0 (F1: 7 assertions phi/Leslie/branchement/KMB verifiees)",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ },
+ "verif_spn.py": {
+  "date": "2026-07-21 19:33:16",
+  "duree_s": 0.3,
+  "issue": "RC0",
+  "rc": 0,
+  "sha8": "d34031f0",
+  "tail": "-C_T^O(N) < 0, ∝ -N en d=3 — COHERENT avec le firewall i^(d-1).\n  Cibles gelees T-B1..4 : 4/4 CONCORDANTES, 0 amendement (R-7).\n  Convergence vs consolidation : signe AHS (N->-N) et i^(d-1) partagent\n    l'origine dS ⟹ UNE chaine ancree (consolidation), PAS deux routes.\n  Mapping : ⟨TTT⟩_Sp = -⟨TTT⟩_O(libre) ; 0 structure paire neuve ;\n    n'introduit AUCUN (a,b,c) et NE FIXE PAS les (a,b,c) propres.\nSANS SURCLASSEMENT (§6.4) : higher-spin != Einstein ⟹ (a,b,c) propres NON\n  fixes. JAMAIS « CFT de raccordement identifiee / D1 clos / N fixe /\n  CCC demontree ». Compte {A4 ; A2* ; N} INCHANGE.",
+  "timeout_s": 120,
+  "zone": "ARCHIVE"
+ }
+}
