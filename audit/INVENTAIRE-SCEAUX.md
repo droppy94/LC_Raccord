@@ -2,7 +2,7 @@
 
 Généré par `instruments/inventaire_sceaux.py` le 2026-07-21 — rejouable.
 
-**Bilan** : 83 sceaux au total — 6 LIVE · 72 ARCHIVE (pinnés-clos, non rejoués) · 5 ABSENTS.
+**Bilan** : 83 sceaux au total — 6 LIVE · 76 ARCHIVE (pinnés-clos, non rejoués) · 1 ABSENTS.
 
 §6.4 : un statut LIVE/ARCHIVE atteste des octets, jamais un EXIT 0 ni une conclusion physique.
 
@@ -53,7 +53,7 @@ Généré par `instruments/inventaire_sceaux.py` le 2026-07-21 — rejouable.
 | `verif_D_CT_realite.py` | ARCHIVE | `140bc8f3409a3e1b` | 11 |
 | `verif_D_g3.py` | ARCHIVE | `cb2d6e1c8414410b` | 10 |
 | `verif_D_nongauss_4pt.py` | ARCHIVE | `a46e4f6ae1b3910c` | 4 |
-| `verif_D_nongauss_4pt_phase1.py` | ABSENT | `—` | 1 |
+| `verif_D_nongauss_4pt_phase1.py` | ARCHIVE | `1aa3f0513e531ce8` | 1 |
 | `verif_D_nongauss_TTT.py` | ARCHIVE | `c06f6f514076cd03` | 11 |
 | `verif_D_nongauss_TTT_lourd.py` | ARCHIVE | `2cb9343235d34d06` | 8 |
 | `verif_D_nongauss_TTT_lourd_phase1.py` | ARCHIVE | `e494c8c62510dd83` | 5 |
@@ -65,7 +65,7 @@ Généré par `instruments/inventaire_sceaux.py` le 2026-07-21 — rejouable.
 | `verif_F5_scaling.py` | ARCHIVE | `a959f13750dc18c9` | 9 |
 | `verif_F6_memoire_cisaillement.py` | ARCHIVE | `23a7d264e70ee845` | 12 |
 | `verif_G3_adm_imports.py` | ARCHIVE | `a0b962c8c6d48715` | 4 |
-| `verif_G3_admissibilite.py` | ABSENT | `—` | 3 |
+| `verif_G3_admissibilite.py` | ARCHIVE | `010a0562e01ef7da` | 3 |
 | `verif_G3_m4_chainon.py` | ARCHIVE | `9486b7b28bd79886` | 3 |
 | `verif_O2_P1.py` | ARCHIVE | `6b23b2ae2b3c6f1c` | 9 |
 | `verif_O2_P1b_soperation.py` | ARCHIVE | `5790543049a05842` | 2 |
@@ -75,10 +75,10 @@ Généré par `instruments/inventaire_sceaux.py` le 2026-07-21 — rejouable.
 | `verif_O2_coin_transmission_ac.py` | ARCHIVE | `0acf575d8fb9abf0` | 3 |
 | `verif_O2_coin_transmission_fetch.py` | ARCHIVE | `7539188d8f384c40` | 4 |
 | `verif_O2_hodge.py` | ARCHIVE | `421d5f29a9ee83fc` | 9 |
-| `verif_cartographie_v11_nonregression.py` | ABSENT | `—` | 1 |
+| `verif_cartographie_v11_nonregression.py` | ARCHIVE | `81e1914b49b0fc17` | 1 |
 | `verif_cb_weyl_magnetique.py` | ARCHIVE | `e1bef559bb10c115` | 7 |
 | `verif_gamma_nstar_ads4.py` | ARCHIVE | `367d2ddb6e902b93` | 6 |
-| `verif_manifeste_v2122_consignation.py` | ABSENT | `—` | 1 |
+| `verif_manifeste_v2122_consignation.py` | ARCHIVE | `5349ad47e2865c99` | 1 |
 | `verif_moduleA_scri.py` | ARCHIVE | `690eb4c7f25acbe5` | 1 |
 | `verif_naction_alpha.py` | ARCHIVE | `800055477c5f553c` | 7 |
 | `verif_naction_aveugle.py` | ARCHIVE | `1468672cce76b45f` | 12 |

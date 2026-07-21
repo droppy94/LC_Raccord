@@ -16,15 +16,30 @@ sceaux sont des archives *pinnées-closes* : ils ne sont **pas rejoués** ici et
 ne portent aucune charge de sceau LIVE tant qu'un rejeu (Silo G-3) n'a pas été
 exécuté et consigné. Les sceaux LIVE restent ceux de `instruments/` racine.
 
-**Écart résiduel après ré-import** (cités en KB, toujours absents) :
-- `verif_D3_P6_bang.py` — vrai manquant, à retrouver ou requalifier ;
-- `verif_D_nongauss_4pt_phase1.py` — vrai manquant (le `verif_D_nongauss_4pt.py`
-  ré-importé n'est pas la phase 1) ;
-- `verif_G3_admissibilite.py` — vrai manquant (`verif_G3_adm_imports.py`
-  ré-importé est un autre sceau) ;
-- `verif_cartographie_v11_nonregression.py` et
-  `verif_manifeste_v2122_consignation.py` — **retenus hors-KB par décision
-  consignée** (manifeste v2.122, capacité >100 %, R-55) : absence conforme ;
+**Sceaux retrouvés — apport opérateur du 2026-07-21** (hors INDEX-DECHARGE-72,
+gate d'intégrité : sha256 vérifié post-copie ; rejeu consigné, sans surclassement) :
+- `verif_D_nongauss_4pt_phase1.py` (`1aa3f051`) — rejoué **EXIT 0** ;
+- `verif_G3_admissibilite.py` (`010a0562`, v2 DURCI post-audit froid, fourni
+  suffixé `__4_`) — rejoué **ALL ASSERTIONS PASSED** ;
+- `verif_cartographie_v11_nonregression.py` (`81e1914b`) — `--selftest`
+  **FIREWALL OK 7/7** (l'exécution pleine confronte v1.0 mount ↔ v1.1) ;
+- `verif_manifeste_v2122_consignation.py` (`5349ad47`) — `--selftest`
+  **FIREWALL OK** (l'exécution pleine requiert le mount R-54). Ces deux
+  derniers étaient *retenus hors-KB* au mount (v2.122, capacité, R-55) ;
+  leur dépôt **git** ne modifie pas cette décision côté mount.
+Un rejeu ici atteste une exécution du 2026-07-21 sur ce clone ; il ne
+requalifie aucun grade et ne rejoue aucune gate.
+
+**Doublons consignés (même apport, 0 dépôt)** : `verif_D3_P6_poc_specA__1_`,
+`verif_D3_P6_specB_poc`, `verif_D3_P6_specB_supp__1_` = byte-identiques aux
+archives ; `verif_D3_P6_specB_oracle__2_` = byte-identique au sceau **LIVE**
+(`162696c1`, conforme au sha8 du manifeste).
+
+**Écart résiduel** (cité en KB, toujours absent) :
+- `verif_D3_P6_bang.py` — 1 citation ; **recherche opérateur négative
+  (2026-07-21)** : introuvable en archive. À requalifier au lot R-8 du
+  lotissement (réécriture sous protocole §2.0, ou requalification de la
+  citation si la tête ne l'exige plus) ;
 - `verif_nonlin_deuxpoint__1_.py` — citation suffixée ; le canon
   `verif_nonlin_deuxpoint.py` est présent : **pas un manquant**.
 
