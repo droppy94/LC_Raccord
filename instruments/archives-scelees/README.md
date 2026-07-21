@@ -36,10 +36,17 @@ archives ; `verif_D3_P6_specB_oracle__2_` = byte-identique au sceau **LIVE**
 (`162696c1`, conforme au sha8 du manifeste).
 
 **Écart résiduel** (cité en KB, toujours absent) :
-- `verif_D3_P6_bang.py` — 1 citation ; **recherche opérateur négative
-  (2026-07-21)** : introuvable en archive. À requalifier au lot R-8 du
-  lotissement (réécriture sous protocole §2.0, ou requalification de la
-  citation si la tête ne l'exige plus) ;
+- `verif_D3_P6_bang.py` — 1 citation (`LC-WORK-P6-SPEC-NEARBANG`, formulations
+  prospectives : « avant d'écrire… », « qui suivra… ») ; recherche opérateur
+  négative (2026-07-21). **REQUALIFIÉ sur GO opérateur (2026-07-21) :
+  « annoncé, jamais écrit, remplacé par la chaîne specA/specB »**
+  (`verif_D3_P6_poc_specA` · `specB_poc` · `specB_supp` · `specB_oracle`,
+  toutes présentes). Ce n'est pas un fichier perdu : c'est une tête qui
+  annonçait un instrument futur, porté ensuite par la chaîne specA/specB.
+  L'inventaire G-0 continue de le compter ABSENT (il mesure les citations,
+  pas les requalifications) ; la présente note fait foi de la requalification.
+  §6.4 : requalifier une citation ne scelle, ne réduit, ne compte, ne
+  démontre rien ;
 - `verif_nonlin_deuxpoint__1_.py` — citation suffixée ; le canon
   `verif_nonlin_deuxpoint.py` est présent : **pas un manquant**.
 
