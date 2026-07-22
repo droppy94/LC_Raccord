@@ -1,0 +1,34 @@
+hors-KB/B/ — REIMPORT.txt
+==========================================================
+Branche : [B] — objet géométrique sur S² (géométrie de Cartan conforme)
+État    : TRANCHÉ — B-PAUVRE au sens strict, résidu = Weyl rescalé g₍₃₎.
+          {A4 ; A2★ ; N} INCHANGÉ. Déportée le 2026-07-18.
+----------------------------------------------------------
+
+RÉIMPORT MINIMAL (les seuls fichiers à recharger pour reprendre) :
+  - LC-PAQUET-B-OBJET-S2        (reformulation Cartan + critère de réfutation)
+  - LC-A-SURVIE-CONFORME        (interface amont [A] : sceau N|ℐ⁺ = −Λ/3 < 0)
+  - LC-RESULTAT-B-TRACTEUR      (calcul mené + verdict — ajouté à la clôture v1.0)
+
+Compagnon de vérification (dans ce dossier, re-exécutable, EXIT 0) :
+  - verif_B_tracteur.py
+
+----------------------------------------------------------
+DÉCLENCHEUR DE RÉOUVERTURE :
+  [B] est close sur son critère actuel. Ne rouvrir que si :
+  (a) on raffine le libellé du critère dans LC-PAQUET-B §4 pour distinguer
+      « connexion plate » de « connexion sans champ propre mais organisatrice
+      de donnée libre » (le cas réellement trouvé) ; ou
+  (b) on veut durcir le grade borné → reproduit : calcul de Ω^𝒯
+      composante-à-composante sur un dS perturbé portant g₍₃₎ (TODO §7).
+
+  La charge dynamique a basculé vers [C] (B-PAUVRE) : pour la suite du programme,
+  c'est LC-PAQUET-C-COHERENCE-QUANTIQUE qu'on réimporte, pas [B].
+
+Contenu du dossier froid hors-KB/B/ :
+  - LC-PAQUET-B-OBJET-S2.md
+  - LC-RESULTAT-B-TRACTEUR.md
+  - verif_B_tracteur.py
+  - REIMPORT.txt   (ce fichier)
+  (LC-A-SURVIE-CONFORME reste dans hors-KB/A/ ; réimport partagé.)
+==========================================================
