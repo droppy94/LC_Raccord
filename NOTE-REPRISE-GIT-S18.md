@@ -1,16 +1,16 @@
 ---
-id: NOTE-REPRISE-GIT-S17
-titre: "Note de reprise UNIQUE et autoportante — CLÔTURE de S17 (2026-07-25). Consolide et REMPLACE NOTE-REPRISE-GIT-S16 et son AMENDEMENT 1 ; les notes S9–S16 vivent dans l'historique git. ACQUIS S17, ET LE PREMIER EST UN MOUVEMENT DE POSITIONNEMENT : S-B1 RENDU sur les sept lignes, C-i 0 · C-ii 0 · C-iii 6 · C-iv 1, S-B2 NON ARMÉ, chantier refermé sur une DÉLIMITATION À CONTENU NOMMÉ dont le levier falsifiable est écrit en quatre qualificatifs. Le mount MESURÉ et sa nature réelle établie : canal de LECTURE fidèle, canal de HACHAGE nul. SIX ARBITRAGES opérateur. Paquet β SOLDÉ, journal V94 byte-confronté. Cinq corps d'assaut en PREMIÈRE MESURE. Norme de nommage ADOPTÉE. AUCUNE gate ouverte, AUCUN verdict touché."
+id: NOTE-REPRISE-GIT-S18
+titre: "Note de reprise UNIQUE et autoportante — CLÔTURE de S18 (2026-07-25). Consolide et REMPLACE NOTE-REPRISE-GIT-S17 ; les notes S9-S17 vivent dans l'historique git. ABSORBE PAR REPORT AUDITÉ le contenu de kb/NOTE-REPRISE-V96.md (arbitrage opérateur, voie gamma), laquelle reste BYTE-INTACTE en kb/ et au manifeste v2.124. ACQUIS S18 : sept arbitrages de gouvernance rendus et déposés ; LC-00-INDEX déposé, renvoi pendant de 68 pièces résolu mais NON rendu traçable ; voie (i) de F5 OUVERTE et ARRÊTÉE à sa première cible sur une PRÉMISSE FAUSSE ; DEUX D5 et TROIS W3 mesurés. AUCUNE gate ouverte, AUCUN verdict touché."
 codename: LC-RACCORD
 type: "note de reprise — HORS base scellée. Elle ne scelle rien, ne compte rien, ne démontre rien (§6.4)."
 version: 1.0
 langue: fr
 date: 2026-07-25
-role: "FICHIER DE REPRISE UNIQUE. Remplace NOTE-REPRISE-GIT-S16.md ET NOTE-REPRISE-GIT-S16-AMENDEMENT-1.md, retirées de la racine au même commit, après AUDIT DE REPORT item par item (§10)."
-piege_R36: "Cette note NE PORTE NI son propre sha NI le commit qui la dépose. Attendu à l'ouverture d'une session neuve : HEAD = le commit dont le message commence par « Reprise S17 », À VÉRIFIER PAR `git log`, JAMAIS par cette note — ET SANS PRÉSUMER QU'IL EST HEAD : un commit postérieur peut s'être intercalé, c'est arrivé en S17 (voir §7.1 nº1). Ses parents remontent par 7dbee86 (S-B1 rendu), 2ff65f9 (pièce de nommage S17), b79e3de (amendement S16), aedc9a2 (Reprise S16), 11e924e, 5f9874c, 20290b1, 1c90daf."
-regle_unicite: "Il ne doit exister QU'UN SEUL fichier de reprise, au git comme au mount. Un amendement daté n'est pas une seconde note. ÉCART S16 §0.4 RÉSOLU : NOTE-REPRISE-GIT-S13.md a été RETIRÉE DU MOUNT par l'opérateur, constaté PAR MESURE — 0 note de reprise au mount, 28 → 27 fichiers."
+role: "FICHIER DE REPRISE UNIQUE. Remplace NOTE-REPRISE-GIT-S17.md, retirée de la racine au même commit que le retrait de PROMPT-OUVERTURE-S18.md, après AUDIT DE REPORT item par item (§10bis)."
+piege_R36: "Cette note NE PORTE NI son propre sha NI le commit qui la dépose. Attendu à l'ouverture d'une session neuve : HEAD = le commit dont le message commence par « Reprise S18 », À VÉRIFIER PAR `git log`, JAMAIS par cette note — ET SANS PRÉSUMER QU'IL EST HEAD (précédent S17 nº1 ; en S18 la chaîne annoncée DÉMARRAIT bien à HEAD, ce qui ne prouve rien pour S19). Ses parents remontent par 602c828 (sept pièces d'arbitrage S18), dc8ca29 (Reprise S17), 7dbee86 (S-B1 rendu), 2ff65f9, b79e3de, aedc9a2, 11e924e, 5f9874c, 20290b1."
+regle_unicite: "UN SEUL fichier de reprise DE LA SÉRIE GIT-S<n>, au git comme au mount. Un amendement daté n'est pas une seconde note. ÉCART S18 NOMMÉ ET FERMÉ PAR ABSORPTION : le dépôt portait DEUX notes de reprise de DEUX SÉRIES DISTINCTES — GIT-S<n> à la racine et NOTE-REPRISE-V<N> dans kb/ (V96, 6 116 o, citée 2 fois au manifeste v2.124). Arbitrage opérateur : voie gamma — le CONTENU de V96 est absorbé ici par report audité (§10bis C) ; ses OCTETS restent INTACTS. La règle d'unicité est donc BORNÉE À LA SÉRIE GIT-S<n>, et cette borne est ÉCRITE, non supposée."
 autorite: "RÉGIME G-4, portée PROSPECTIVE, CLOS. Le MOUNT est l'espace vivant ; le GIT est l'espace de consignation, accompagné du matériel permettant à un tiers de REPRODUIRE. L'EXISTANT RESTE EN PLACE. R-54 reste debout. Pour les pièces de GOUVERNANCE, le dépôt git fait foi."
-supersede: "Points où S17 corrige S16 : §0 audit/ 50 → 55 ; racine 5 → 4 fichiers ; piège R-36 (« Reprise S16 » → « Reprise S17 », ET avertissement de position) ; §0.4 écart de surface NON RÉSOLU → RÉSOLU par retrait opérateur ; §3.4 « le mount ne sert pas les octets » → canal de LECTURE fidèle et de HACHAGE nul, archives OUVERTES ; §2.4 limite NON ARBITRÉE → RÉSERVE PERMANENTE ; §4.2 journal V94 seul trou → BYTE-CONFRONTÉ, paquet SOLDÉ ; §6.1 S-B1 à faire → RENDU ; §6.3 paquet β non arbitré → ARCHIVE ; norme de nommage non arbitrée → ADOPTÉE ; sha des cinq corps NON MESURÉS → PREMIÈRES MESURES."
+supersede: "Points où S18 corrige S17 : §0 audit/ 55 → 62 ; RÉGIME D'IMPRESSION du §0-lite institué (voie (i)) ; sources/ ET manifest/ ASSUMÉS hors compte par écrit — l'item S15 était écrit trop large, la dérive de CONTENU des 3 PDF EST détectée, c'est le CARDINAL qui ne l'est pas ; G-5b LC-00-INDEX ABSENT → DÉPOSÉ en audit/ sous réserve écrite ; colonne de version du registre §3 → DEUX colonnes, dont NON DÉTERMINABLE ; largeur de C-iii → amendement PROSPECTIF déposé, S-B1 NON rejugé ; sort de R-23 → voie (i) OUVERTE et arrêtée à G-i-1, cible CORRIGÉE en R-23 AU FOND ; règle d'unicité → bornée à la série GIT-S<n>."
 ---
 
 # Note de reprise S17 (consolidée, CLÔTURE) — état, acquis, prochain geste
@@ -25,7 +25,7 @@ supersede: "Points où S17 corrige S16 : §0 audit/ 50 → 55 ; racine 5 → 4 f
 
     instruments/*.py                    34
     instruments/archives-scelees/*.py   76
-    audit/                              55     (RECALÉ : 50 + 5 pièces S17)
+    audit/                              62     (RECALÉ : 55 + 7 pièces S18)
     audit/beta-paquet-gouvernance/       8     pièces LC-BETA-*
     kb/*.md                            215
     hors-KB/B/                           4
@@ -329,6 +329,95 @@ de TYPE fermé** par la voie que la norme prescrit, **régularisant deux pièces
 aucune**. **Défaut nommé, non corrigé** : la norme ne satisfait pas sa propre grammaire §1 —
 type devant, sujet derrière. Corps : `audit/LC-NORME-NOMMAGE-AMENDEMENT-1.md`.
 
+
+## 5ter. S18 — ACQUIS, ET LE PROCHAIN GESTE EST NOMMÉ
+
+### 5ter.1 Sept arbitrages rendus et déposés à `602c828`
+
+`audit/00_index.md` (**`LC-00-INDEX` v1.78, 236 461 o**, byte-intact) · `INDEX-VERSIONS-RESERVE`
+· `S0LITE-IMPRESSION-INSTRUCTION` · `SOURCES-MANIFEST-RESERVE` ·
+`LC-WORK-REGISTRE-CORPUS-AMENDEMENT-2` · `GRILLE-BETA-CIII-INSTRUCTION` ·
+`F5-VOIE-I-CIBLES-GELEES`. **7/7 confrontés au bit près sur clone neuf** ; token vérifié à 0
+dans l'arbre, `.git/config`, les messages de commit et **tous les blobs** (622 objets balayés).
+
+### 5ter.2 `LC-00-INDEX` — le renvoi pendant est RÉSOLU, il n'est pas rendu TRAÇABLE
+
+**68 pièces `kb/` sur 215 (32 %) le référençaient ; il n'existait nulle part au dépôt.**
+Mesuré : `kb/` porte exactement 215 `.md` = le §0 du manifeste v2.124 ⟹ **l'index n'a JAMAIS
+fait partie de l'ensemble scellé** ; son absence était une **exclusion de construction**, pas
+une perte. Déposé en `audit/` sur arbitrage : `kb/` intact, manifeste intact.
+**RÉSERVE, qui se recopie** : 3 pièces seulement nomment une version, **max v1.64** ; la pièce
+déposée est **v1.78** — **quatorze versions d'écart**, 65 pièces sans version.
+**On ne sait pas quelle version chacune des 68 a lue.** C'est la classe de défaut du registre
+§3, rencontrée à un deuxième endroit.
+
+### 5ter.3 Le §0-lite a été RECADRÉ, pas allégé
+
+Mesuré : sortie intégrale des 12 scripts = **543 lignes / 68 966 caractères ≈ 17 000 tokens**,
+contre ≈ 1 500 en restitution compressée. **Facteur 11, à exécution identique.**
+Fait porté : **271/271 INCHANGÉ depuis S9 — les redémonstrations n'ont JAMAIS détecté une
+dérive du corpus.** Elles ont détecté **quatre erreurs d'instrument du pilote** (S16 : 115 au
+lieu de 101 · S17 : `grep -c` compte des lignes · S18 : quatre scripts impriment SANS
+crochets, et `rc` lu après un pipe). **Le §0-lite est un banc de calibration du pilote autant
+qu'un contrôle de reproductibilité.** Les 12 scripts restent TOUS exécutés intégralement ;
+seule la RESTITUTION est compressée, avec **clause de dépliement** sur écart —
+corps : `audit/S0LITE-IMPRESSION-INSTRUCTION.md`.
+
+### 5ter.4 F5 voie (i) — OUVERTE, et ARRÊTÉE à sa première cible
+
+L'ordre gelé a opéré, comme le gel `[D5]` l'avait fait avant lui (résolu en 2 pas sur 4).
+
+- **`[D5]` : 0 occurrence dans `kb/`**, 0 dans le corps de F5. Il vit **exclusivement dans
+  `audit/`**, sur 6 pièces.
+- **`[D5]` est LEVÉ** — verdict **`W3` — PAS DE RÉFÉRENT**, tranché **NÉGATIVEMENT par
+  absence** (S11, 2026-07-24) : « 900 ± 700 » et « σ = O(500) » ne sont pas la même quantité.
+  Rendu sous `GEL-V1BIS-D5`, **byte-intact vérifié** (`bd0b40c8c7f72bee` = la valeur annoncée
+  au gel). Le gel prescrivait lui-même que `[D5]` se tranche **« sans jamais ouvrir F5 »**.
+- **La prémisse du GO ne tenait donc pas** : `[D5]` n'est pas un objet du corps de F5, et son
+  « levé » n'est ni établi par ce corps ni importé au sens ordinaire — il est établi
+  **ailleurs, sous son propre gel, par une voie qui excluait F5 par construction**.
+- **L'adjudication écrit elle-même ce qui exige la voie (i)**, et ce n'est pas `[D5]` :
+  *« Maintien, amendement ou retrait de **R-23** relèvent d'un GO séparé et supposent
+  l'ouverture du corps de F5, voie (i). »* Le côté R-23 **n'a jamais été ouvert**.
+- **Le corps de F5 n'a PAS été lu en substance** — seulement compté (`R-23` 9 occurrences,
+  `W³` 31). Aucune gate tirée, aucun verdict touché, aucun sceau rejoué.
+
+### 5ter.5 DEUX `D5`, TROIS `W3` — collision de nomenclature, MESURÉE
+
+| écriture | objet | où | occurrences |
+|---|---|---|---|
+| `[D5]` | consignation S10 : « 900 ± 700 » ≟ « σ = O(500) » de R-23 | `audit/` seul | **0 dans `kb/`** |
+| `D5` | **cinquième discriminant** des séries `D1-D5` de plusieurs cadrages gelés | `kb/` | 81 |
+| `W3` | **classe de verdict** de l'adjudication `[D5]` (vocabulaire `W1`..`W5`) | `audit/` | 31 |
+| `W3` | **chaînon/front `LC-D-W3-GPY`** (GPY 1104.4317, sceau `verif_D_w3_gpy.py`) | `kb/` | 103 |
+| `W³` | **opérateur de Weyl parité-paire** (Table III, falsifiabilité) | `kb/` 334 · `audit/` 45 | |
+
+**Les crochets sont le seul désambiguïsateur de `D5`, et ils n'existent que dans `audit/`.**
+Le pilote S18 a failli rendre un faux négatif (« 0 `D5` dans `kb/` ») : c'est le contrôle
+anti-faux-négatif, et lui seul, qui a trouvé les 81.
+
+**DÉSAMBIGUÏSATION OPÉRATEUR, S18, OPPOSABLE** : dans « `[D5]` levé / W3 intact »,
+**`W3` désigne le chaînon/front `LC-D-W3-GPY`** — ni la classe de verdict, ni `W³`.
+
+### 5ter.6 PROCHAIN GESTE — nommé, cadré, NON ARMÉ
+
+**Cible corrigée par l'opérateur : c'est `R-23` AU FOND qui est à ré-instruire**, par
+l'ouverture du corps de F5, voie (i). Ce n'est PAS `[D5]`, levé et non reconduit.
+
+**`audit/F5-VOIE-I-CIBLES-GELEES.md` (déposée, byte-intacte, `aecd7ad3…`) EST DÉFECTUEUSE** :
+ses trois issues pré-déclarées présupposaient toutes que `[D5]` était un objet du corps de F5.
+**Aucune ne pouvait être vraie.** Elle n'est ni modifiée ni retirée. **Un cadrage gelé NEUF
+est requis avant toute ouverture**, portant sur `R-23` AU FOND, avec `W3 = LC-D-W3-GPY` en
+attendu, rédigé **avant** toute lecture du corps, et déposé **avant** cette lecture.
+
+**Ce qui est déjà connu du pilote et ne peut PAS être rendu comme découverte** — contamination
+déclarée en S18, un `grep` non borné ayant importé le front-matter de
+`kb/LC-D-F5-ETAT-RACCORD.md` et des blocs `[TRAITÉ]` de la branche : F5 = sélection d'état /
+CFT de raccordement ; les quatre obstructions s'effondrent sur `O₂` ; `A_T ~ 1/C_T ~ 1/N`
+forcé, coefficient O(1) libre ; voie (i) déclarée FAITE en v0.3, Table III classée
+`inconfrontable`, **R-23 déclarée SOLDÉE**. **Toute coïncidence avec ces cinq points se rend
+en CONFIRMATION D'ANTICIPATION, jamais en découverte.**
+
 ## 6. PROCHAIN GESTE ET RESTE À FAIRE
 
 ### 6.1 Ordre de travail — chacun sur GO séparé, jamais d'office
@@ -379,6 +468,28 @@ cadrage figé `37bc85e5` / gel amont `b5276e68` · caveat de Haro / fenêtre BF 
 gap résiduel `R1″ ∧ R2″ ∧ R4″`.
 
 ## 7. Discipline et précédents opposables — PORTÉS INTÉGRALEMENT
+
+### 7.0 Précédents S18 — opposables
+
+- **UN OBJET LEVÉ SOUS SON PROPRE GEL NE SE RÉ-INSTRUIT PAS PAR UNE VOIE QUE CE GEL
+  EXCLUAIT.** `[D5]` a été tranché sans ouvrir F5, parce que son gel le prescrivait.
+- **DEUX OBJETS DE MÊME ÉCRITURE NE SONT PAS UN OBJET.** Trois `W3`, deux `D5`, mesurés.
+- **UN CADRAGE PEUT ÊTRE DÉFECTUEUX SANS ÊTRE FAUX** : si sa prémisse est fausse, TOUTES ses
+  issues pré-déclarées le sont. Il se nomme, il ne se corrige pas en place.
+- **UN COMPTE N'EST VRAI QUE SOUS SON INSTRUMENT.** `audit/ = 55` n'était vrai que sous
+  `ls audit/` (54 fichiers + 1 répertoire) ; `find -type f` en rendait 62, `-maxdepth 1` 54.
+- **UNE GARDE INUTILE N'EST PAS UNE GARDE FAUSSE.** La déclaration de contamination de S18
+  n'a servi à rien sur ce résultat-là ; elle reste due au geste suivant.
+- **UN ITEM DE RESTE-À-FAIRE PEUT ÊTRE ÉCRIT TROP LARGE.** « la dérive de `sources/` n'est pas
+  détectée » était faux : le §0.3 la détecte au sha. C'est le CARDINAL qui échappe.
+- **UNE PIÈCE ABSENTE PEUT ÊTRE ABSENTE PAR CONSTRUCTION.** `LC-00-INDEX` n'a jamais été dans
+  les 215 scellés ; 68 renvois pendants ne prouvaient pas une perte.
+- **RÉSOUDRE UN RENVOI N'EST PAS LE RENDRE TRAÇABLE.** v1.78 déposée, v1.64 max citée.
+- **UNE CLASSE QUI ABSORBE NE CLASSE PAS.** `C-iii` est logiquement complète et sans
+  recouvrement ; son défaut est de RÉSOLUTION. On ne la retouche pas après mesure.
+- **LES MOTIFS SE BORNENT.** Un `grep -rn` non borné sur une base à front-matter kilométrique
+  coûte plus que la question ne vaut — écart S18 imputable au pilote, commis une minute après
+  avoir mesuré et rendu ce coût exact à l'opérateur.
 
 ### 7.1 Précédents S17
 
@@ -546,7 +657,7 @@ soldé une **vérification**, pas ouvert un dépôt. **G-4 est clos.**
 | Cinq corps d'assaut | sha NON MESURÉS | **PREMIÈRES MESURES ; versions non confrontables** |
 | Norme de nommage | PROPOSITION non arbitrée | **ADOPTÉE ; `DEFAUTS-DAGE` au vocabulaire** |
 
-## 10. AUDIT DE REPORT — ce qui a été recopié AVANT retrait
+## 10. AUDIT DE REPORT — S17 (porté intégralement, historique) — ce qui a été recopié AVANT retrait
 
 Vérifié par recherche dans les pièces **effectivement déposées**, non par déclaration.
 **Trois pièces retirées de la racine au même commit** : `NOTE-REPRISE-GIT-S16.md`,
@@ -590,6 +701,84 @@ trouvé non reporté.**
    mesures en S16, **ne sont sur aucune surface**. Leurs sha sont des empreintes sans
    contrepartie mesurable.
 6. **Défauts d'âge du prompt S17**, quatre, nommés à `audit/LC-PROMPT-S17-DEFAUTS-DAGE.md`.
+
+## 10bis. AUDIT DE REPORT — S18, item par item, AVANT retrait
+
+### A. `NOTE-REPRISE-GIT-S17.md` — RETIRÉE de la racine, conservée dans l'historique git
+
+Reporté ici, intégralement : §0 et ses recalages · §0.1 les 12 redémonstrations et leur
+décomposition · §0.2 les cinq rejeux · §0.3 les intrants · §0.4 surfaces et nature du mount ·
+§0.5 leçons d'environnement · §1 historique S9-S17 · §2 P-0 et la réserve écrite à cinq
+points · §2.4 la réserve permanente · §3 S-B1 et ses arbitrages · §4 paquet β soldé · §5
+P-8/P-9 · §5bis norme de nommage · §6 restes à faire · §7 précédents S8-S17 et procédure
+R-55 · §8 régime G-4 · §9 supersession · §10 audit de report S17.
+**Aucun item écarté sans être recopié.**
+
+### B. `PROMPT-OUVERTURE-S18.md` — RETIRÉ de la racine au même commit
+
+Ses §3, §5, §6, §7, §8, §9 et §10 sont portés par la présente note ou par
+`PROMPT-OUVERTURE-S19.md`. **DÉFAUT D'ÂGE DU PROMPT S18, NOMMÉ, NON CORRIGÉ** : son §6 ITEM 2
+écrivait « sort de R-23 », alors que R-23 est SOLDÉE par F5 et que l'objet réel était
+l'ouverture du corps de F5. **Le nom de l'item ne décrivait pas son contenu** — et c'est cette
+imprécision qui a produit le GO à prémisse fausse de S18.
+
+### C. `kb/NOTE-REPRISE-V96.md` — ABSORBÉE PAR REPORT, ses OCTETS RESTENT INTACTS
+
+**Arbitrage opérateur S18, voie gamma.** La pièce n'est ni modifiée, ni retirée, ni renommée :
+elle reste en `kb/` (6 116 o) et citée 2 fois au **manifeste v2.124**, dont le §0 est gelé à
+« 228 = 215 `.md` + 13 `.py` ». **Le gel n'est pas touché.** Est reporté ici son CONTENU :
+
+- **§0 discipline de boot** : R-54 (mount autoritaire) · R-55 (rien de non déposé n'est
+  « livré ») · **R-36 (aucun fichier haché n'embarque son propre PKG ni le PKG de clôture)** ·
+  §6.4 (mesurer ≠ réduire).
+- **§1 protocole de démarrage V97, opposable** : présenter la note en prompt · **recomputer le
+  PKG de la KB active** (`LC-WORK-BOOT-SESSION*.py`) · relire la valeur de clôture déclarée au
+  **manifeste v2.124** · **continuité OK ⟺ PKG recomputé == PKG déclaré** ; écart non nommé
+  ⟹ **STOP** (mount dérivé ou dépôt hors-séquence).
+- **§2 état de clôture V96** : **P-8 SOLDÉ** (générateur `LC-WORK-GEN-PAQUET-CSE2` v2.0→v2.1,
+  swap net-zéro, livraison séquencée instrumentée) · **front `p_Q` matérialisé**
+  (délimitation, 4 fichiers) · cartographie v1.1→v1.2, **gate §A levée sur la SEULE condition
+  (i)**, (ii) proxy porteur et (iii) question sharp `d=3` **NON levées** ⟹ **NON PRIORISÉ** ·
+  GLO v1.74→v1.75, **fork glossaire RÉSOLU côté KB** · contamination `verre_fraicheur_3d.jpg`
+  débusquée par le §0-lite (N_autre 0→1→0) et **retirée** · consignation v2.124 en dernier
+  geste, PKG recomputé une seule fois.
+- **§3 invariants** : `{ A4 ; A2★ ; N }` INCHANGÉ · R-53 **0/4** · `O₂` non construit ·
+  β **`T-b`, SEUL facteur d'`O₂` ouvert, DÉBLOQUÉ par P-8** · α = **C1-b** (délimitation
+  conditionnelle au paramètre `p`) · D1 non clos.
+- **§4 ouvert pour V97 — À PORTER** : **substance β DÉBLOQUÉE** par P-8, prête à être engagée ·
+  promotion `p_Q` en nº1 conditionnée à (ii) proxy porteur non forcé et (iii) question sharp
+  `d=3` énoncée, **non levées** · **copie opérateur hors-KB `03_glossaire` v1.70 STALE**
+  (manque l'axe γ v1.70-v1.74), à re-sync du mount v1.75 · **D-01 / D-08 non mesurés (P-9)**,
+  à mesurer à la prochaine gate par un fait vérifiable · **Q A/B** (γ-2 §0ter) non tranchée ·
+  **§9.4 append-only rouvert** · **bump boot v1.3→v1.4 DIFFÉRÉ** : l'ATTENDU imprimé dit
+  encore « instruments_exclus 4 » alors que le réel est **6** — cosmétique, non bloquant,
+  **défaut d'âge nommé** · registre de sortie (sha pour authentifier un ré-import).
+- **§5 règle de séquence, opposable** : la consignation est le **DERNIER** geste de la
+  discussion · le PKG de clôture se calcule **UNE seule fois**, après **tous** les dépôts
+  hachés, y compris le swap de note · **rien de haché** n'est déposé après la consignation ·
+  le PKG est porté par le **MANIFESTE**, jamais par la reprise (hachée ⟹ circularité
+  interdite) · tout fichier sorti de KB active voit son sha256 consigné au manifeste.
+
+**Ce que l'absorption NE fait PAS** : elle ne recompute aucun PKG, ne rejoue aucun boot, ne
+vérifie pas la continuité V96→V97, et **ne fusionne pas les deux lignées**. La série
+`NOTE-REPRISE-V<N>` reste vivante en `kb/` sous son autorité propre ; la présente note est de
+la série `GIT-S<n>` et, sous G-4, **pour les pièces de gouvernance le dépôt git fait foi**.
+
+### D. Écarts S18 imputables au pilote — trois, portés
+
+1. **Ordre d'ouverture inversé** : le prompt a été lu avant que HEAD ne soit mesuré, la garde
+   anti-ancrage n'a pas été armée. Sans effet mesurable sur le résultat ; écart quand même.
+2. **Deux instruments faux au premier jet, rattrapés avant rendu** : motif `[PASS]` aveugle
+   à quatre scripts qui impriment sans crochets ; `rc` lu après un pipe.
+3. **`grep -rn` non borné** rendant ~15 000 tokens pour une question de trois lignes — commis
+   une minute après avoir mesuré et rendu ce coût exact à l'opérateur.
+
+### E. Écart S18 non imputable au pilote
+
+Le **libellé « sort de R-23 »** du prompt S18 désignait autre chose que son nom, et c'est de là
+qu'est venu le GO à prémisse fausse. Conséquence portée :
+**`audit/F5-VOIE-I-CIBLES-GELEES.md` est défectueuse par prémisse fausse.** Elle est déposée,
+byte-intacte, et **le reste** : nommée ici, jamais corrigée en place.
 
 ## 11. PÉRIMÈTRE — INCHANGÉ
 
