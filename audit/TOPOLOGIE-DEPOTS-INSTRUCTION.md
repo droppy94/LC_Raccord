@@ -1,10 +1,11 @@
 ---
 id: TOPOLOGIE-DEPOTS-INSTRUCTION
-titre: "Topologie des dépôts — CINQ et non quatre. Le git y entre. R-54 est BORNÉ AUX INTRANTS. La KB active ne porte plus aucune pièce de kb/, mesuré. Le §2 de LC-CONST-V1 est NOMMÉ PÉRIMÉ et NON TOUCHÉ, la pièce étant scellée. Arbitrage opérateur S19, correctif nº6."
+titre: "Topologie des dépôts — CINQ et non quatre. Le git y entre. SIX au recalage S22, le Drive nommé et déclaré en voie d'abandon. R-54 est BORNÉ AUX INTRANTS. La KB active ne porte plus aucune pièce de kb/, mesuré. Le §2 de LC-CONST-V1 est NOMMÉ PÉRIMÉ et NON TOUCHÉ, la pièce étant scellée. Arbitrage opérateur S19, correctif nº6."
 codename: LC-RACCORD
 type: "instruction de gouvernance — HORS base scellée. Elle ne scelle rien, ne compte rien, ne démontre rien (§6.4)."
-version: 1.0
+version: 1.1
 langue: fr
+maj: "2026-07-26 — v1.1 (S22) : ABSORPTION DES RÉGIMES DE SURFACE. Les règles 4 et 5 du §4 de la pièce de reprise portaient une SECONDE taxonomie (trois surfaces) qui ne citait pas la présente instruction et n'en était pas citée. Arbitrage opérateur S22, option B-1 : les surfaces et leurs régimes vivent ICI ; la pièce de reprise les porte par RENVOI MESURÉ (règle 3) et perd deux règles pour un renvoi — solde négatif. Le Drive est NOMMÉ à la table (sixième dépôt) et déclaré EN VOIE D'ABANDON, avec sa condition de retrait. Identité déclarée : KB active /mnt/project ≡ mount. Réserve §1ter NOMMÉE NON LEVÉE (bcaaaee dégrade l'instrument version:). Substance ⟹ version: avance ; le champ recalages: reste réservé aux recalages de métadonnée (règle 2). §6.4 : articuler deux taxonomies ne scelle, ne réduit, ne compte, ne démontre rien."
 date: 2026-07-26
 session: S19
 perimetre_liant: "audit/ , instruments/ , hors-KB/ , racine, et la SURFACE /mnt/project. kb/ EXCLU — sous gel du manifeste v2.124."
@@ -45,7 +46,7 @@ perimetre_liant: "audit/ , instruments/ , hors-KB/ , racine, et la SURFACE /mnt/
    l'écart au manifeste n'est pas nommé. Dette **OUVERTE**, désormais **mesurable**. Rien n'est
    conclu de son issue.
 
-## §1. La table — CINQ dépôts
+## §1. La table — SIX dépôts (CINQ jusqu'au recalage S22 ; le Drive nommé, cf. §1bis)
 
 | dépôt | autorité | contenu | ce qu'on y perd |
 |---|---|---|---|
@@ -54,6 +55,59 @@ perimetre_liant: "audit/ , instruments/ , hors-KB/ , racine, et la SURFACE /mnt/
 | **KB active** `/mnt/project` | **INTRANTS SEULS** (§2) | ce que le pare-feu interdit de déposer, et **rien d'autre** | ni version, ni sha propre, ni historique |
 | **prompt projet** | la constitution | ~200 lignes plafond | **vieillit sans pouvoir être recalé** (scellé) |
 | **discussion** | **aucune** | brouillon, exploration, calcul jetable | tout, à la fermeture |
+| **Drive** | **EN VOIE D'ABANDON** — arbitrage opérateur S22 | ses dettes non encore déposées ; rien d'autre ne doit y aller | ni sha, ni historique ; **son échec est silencieux** |
+
+## §1bis. Régimes de surface — absorbés du §4 de la pièce de reprise (S22)
+
+**Le fait mesuré.** Deux taxonomies coexistaient au même jour sans s'articuler : la
+présente instruction dénombrait **cinq** dépôts, la règle nº 4 du §4 de la pièce de
+reprise en dénombrait **trois**. Mesuré sur clone neuf : `Drive` n'avait qu'**un seul
+porteur** dans tout le dépôt — la pièce de reprise elle-même ; `KB active /mnt/project`
+et `mount` nommaient **la même surface** sans que l'identité fût déclarée ; `prompt
+projet` et `discussion` étaient absents des règles. Aucune des deux pièces ne citait
+l'autre, aucune ne se donnait pour remplaçante. **C'est la pathologie que le §0.2
+diagnostiquait sur `LC-CONST-V1`, reproduite une session plus tard — à ceci près qu'ici
+les deux pièces sont éditables.**
+
+**Arbitrage opérateur S22, option B-1.** Les surfaces et leurs régimes vivent **ici**.
+Le §4 de la pièce de reprise les porte désormais par **renvoi mesuré** (règle 3), non
+par recopie : une taxonomie ne se re-transcrit pas à chaque ouverture.
+
+**Identité déclarée.** `KB active /mnt/project` **≡** le `mount`. Un seul objet, deux
+noms en usage ; le nom opposable est **`KB active /mnt/project`**.
+
+**Les trois régimes, repris tels quels.**
+
+- **`git` porte l'identité** — c'est la seule surface où un `sha` vaut quelque chose.
+- **Le mount est un canal de LECTURE.** Il refabrique ce qu'il sert (les `.pdf` y sont
+  des ZIP d'images, `mtime` 1980) : **aucun sha n'y est attendu, et c'est définitif**.
+  On y vérifie **par lecture du champ `version:`** — sous la réserve du §1ter.
+- **Le Drive est prohibé pendant une période de gel** — **interdiction, non barrière** :
+  son échec est silencieux.
+
+**Versions sur le Drive, le temps qu'il vive** : `modifiedTime` fait foi ; l'indice
+`(1)`, `(2)` est le raccourci lisible. **Taille identique au précédent = redépôt, pas
+version.**
+
+**Fin de vie du Drive — condition de retrait, opposable.** L'abandon est arbitré ; il
+n'est pas consommé. Le Drive reste à la table tant que les dettes qu'il détient ne sont
+pas soldées : `NOTE-BORD-EON-01…05`, `LC-WORK-REPRISE-POST-G3T-1…4`, et les copies
+divergentes sous un même numéro de version. **Retrait de la table = ces dettes déposées
+sur `git`, ou déclarées perdues, datées.** Tant que la condition n'est pas remplie, le
+Drive n'est pas une surface morte et ne se traite pas comme telle.
+
+## §1ter. Réserve mesurée sur l'instrument du mount — NOMMÉE, NON LEVÉE
+
+Le régime ci-dessus fait vérifier le mount **par lecture du champ `version:`**. Mesuré
+en S22 : le commit `bcaaaee` a fait avancer **quatre** `version:` — `02_programme`
+1.29→1.30, `04_references` 1.30→1.31, `AUD` 1.72→1.73, `IDX` 2.12→2.13 — pour un
+**déménagement de journal**, sans qu'une ligne de substance bouge, et **sans employer
+`recalages:`** (champ que quatre fichiers seulement portent dans tout le dépôt).
+
+**Un `version:` qui avance sur recalage dégrade l'instrument que ce régime institue.**
+La règle 2 et le régime de lecture du mount se contredisent donc en pratique. La réserve
+est **nommée et non levée** : elle relève d'un arbitrage distinct, et le présent recalage
+ne le rend pas.
 
 ## §2. ARBITRAGE — R-54 est BORNÉ AUX INTRANTS
 

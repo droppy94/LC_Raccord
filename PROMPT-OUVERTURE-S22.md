@@ -91,7 +91,7 @@ exécutés, restitution compressée, dépliement au premier écart) et
 **412 802 caractères** de journal de versions ne se rechargent plus à l'ouverture.
 Aucun octet scellé touché. Tous les dépôts confrontés sur clone neuf, sha à sha.
 
-# §4. RÈGLES ARBITRÉES EN S21 — opposables
+# §4. RÈGLES ARBITRÉES EN S21–S22 — opposables
 
 1. **Amont seul, aval calculé.** Une pièce déclare `depend_de:`, jamais ce qui
    dépend d'elle. Clé = `id:`. Détail : `audit/CONVENTION-DEPENDANCES.md`.
@@ -99,18 +99,17 @@ Aucun octet scellé touché. Tous les dépôts confrontés sur clone neuf, sha �
    au champ `recalages:`, daté et motivé.
 3. **Renvoi mesuré** plutôt que recopie pour les précédents antérieurs, à
    condition que la coordonnée résolve — vérifiée à chaque reprise.
-4. **Trois surfaces, trois régimes.** `git` porte l'identité — c'est la seule où
-   un sha vaut quelque chose. Le **mount** est un canal de **lecture** : il
-   refabrique ce qu'il sert (les `.pdf` y sont des ZIP d'images, `mtime` 1980),
-   **aucun sha n'y est attendu, et c'est définitif** ; on y vérifie **par lecture**
-   du champ `version:`. Le **Drive** est prohibé pendant une période de gel —
-   **interdiction, non barrière** : son échec est silencieux.
-5. **Drive, versions** : `modifiedTime` fait foi, l'indice `(1)`, `(2)` est le
-   raccourci lisible. **Taille identique au précédent = redépôt, pas version.**
-6. **Un gel se prouve par le push**, horodaté côté serveur — ni la date du
+4. **Surfaces et régimes** : `audit/TOPOLOGIE-DEPOTS-INSTRUCTION` v1.1, §1 et
+   §1bis. **Renvoi mesuré, non recopie** (règle 3) : une taxonomie ne se
+   re-transcrit pas à chaque ouverture. Elle y porte les six dépôts, les trois
+   régimes, l'identité `KB active /mnt/project ≡ mount`, la fin de vie arbitrée du
+   Drive et sa condition de retrait, et la réserve §1ter sur l'instrument `version:`.
+5. **Un gel se prouve par le push**, horodaté côté serveur — ni la date du
    fichier ni celle du commit, que le rédacteur choisit. Les données sous test ne
    sont pas dans le mount pendant qu'on gèle un critère sur elles.
-7. **Solde nul** : ajouter une règle exige d'en retirer ou d'en fusionner une.
+6. **Solde nul** : ajouter une règle exige d'en retirer ou d'en fusionner une.
+   **Appliqué en S22** : deux règles retirées (ex-4 surfaces, ex-5 Drive) pour un
+   renvoi — **solde négatif**, sept règles à six.
 
 # §5. PROCHAIN GESTE, puis le reste
 
