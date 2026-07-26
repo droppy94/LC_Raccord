@@ -3,8 +3,9 @@ id: S0LITE-INSTRUMENTS-INSTRUCTION
 titre: "Tout attendu du §0-lite porte sa COMMANDE LITTÉRALE. Un nombre sans son instrument n'est pas opposable. Arbitrage opérateur S19, correctif nº4. Complète S0LITE-IMPRESSION-INSTRUCTION sans la remplacer."
 codename: LC-RACCORD
 type: "instruction de conduite de session — HORS base scellée. Elle ne scelle rien, ne compte rien, ne démontre rien (§6.4)."
-version: 1.0
+version: 1.1
 langue: fr
+recalages: "2026-07-26 — v1.1 (S21) : §1, table de référence — `ls audit/` recalé 62 → 77 (76 fichiers + 1 répertoire), défaut d'âge nommé au §5 du prompt S21 et confirmé par mesure. §2 inchangé : ses valeurs S18/S19 sont des faits datés."
 date: 2026-07-26
 session: S19
 ---
@@ -34,14 +35,15 @@ sans reprise. La présente instruction achève ce qui a marché.
 > Un nombre présenté sans sa commande n'est PAS opposable, et le pilote doit le dire au lieu de
 > le confirmer.**
 
-Table de référence, **mesurée en S19 sur clone neuf**, à recopier telle quelle dans chaque
-prompt d'ouverture :
+Table de référence, **remesurée en S21 sur clone neuf**, à recopier telle quelle dans chaque
+prompt d'ouverture. Le §2 ci-dessous conserve les mesures S18/S19 : ce sont des faits datés,
+ils ne se recalent pas.
 
 | attendu | commande littérale |
 |---|---|
 | `34` | `ls instruments/*.py \| wc -l` |
 | `76` | `ls instruments/archives-scelees/*.py \| wc -l` |
-| `62` | `ls audit/ \| wc -l` — **61 fichiers + 1 répertoire** |
+| `77` | `ls audit/ \| wc -l` — **76 fichiers + 1 répertoire** |
 | `215` | `ls kb/*.md \| wc -l` |
 | `4` | `ls hors-KB/B/ \| wc -l` |
 | `4` | `ls -p \| grep -v /` (racine, fichiers seuls) |
