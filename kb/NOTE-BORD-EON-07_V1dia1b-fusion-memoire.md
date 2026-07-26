@@ -1,5 +1,7 @@
 ---
-id: "à assigner — proposé : HKB-08 « V1.d.i.α.1.b : mémoire = horloge CLPW, fusion des chantiers »"
+id: LC-BORD-EON-07-FUSION-MEMOIRE
+coordonnee: "V1.d.i.α.1.b"
+recalages: "2026-07-26 (S21) : `id:` assigné. Le champ portait un PLACEHOLDER, non un identifiant : « à assigner — proposé : HKB-08 « V1.d.i.α.1.b : mémoire = horloge CLPW, fusion des chantiers » ». Motif : `HKB-` désigne le fonds bibliographique du programme (12 occurrences de HKB-01, toutes en référence de source), jamais une pièce ; 218 des 240 `id:` du dépôt sont en `LC-`. La coordonnée du placeholder est conservée au champ `coordonnee:`. `version:` inchangée : un recalage de métadonnée ne fait pas avancer la version de la substance. Corps NON touché."
 titre: "L'observable de mémoire d'horizon et l'observateur du produit croisé sont le même objet — fusion du chantier bord et du chantier III₁→II"
 programme: LC-RACCORD
 parent: NOTE-BORD-EON-06 (§6, §8-V1.d.i.α.1.b)

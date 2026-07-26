@@ -192,7 +192,7 @@ def rapport(r, complet=False):
 CAS = {
     'a_valide.md':        '---\nid: LC-A-VALIDE\nversion: 1.0\n---\n\ncorps\n',
     'b_sans_id.md':       '---\ntitre: "rien"\nversion: 1.0\n---\n\ncorps\n',
-    'c_placeholder.md':   '---\nid: "à assigner — proposé : HKB-07"\n---\n\ncorps\n',
+    'c_placeholder.md':   '---\nid: "à assigner — proposé : ZZZ-00"\n---\n\ncorps\n',
     'd_collision_1.md':   '---\nid: LC-DOUBLON\nversion: 1.0\n---\n\ncorps\n',
     'd_collision_2.md':   '---\nid: LC-DOUBLON\nversion: 2.0\n---\n\ncorps\n',
     'e_non_clos.md':      '---\nid: LC-NON-CLOS\nversion: 1.0\n\ncorps sans fermeture\n',

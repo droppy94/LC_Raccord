@@ -1,5 +1,7 @@
 ---
-id: "à assigner — proposé : HKB-07 « V1.d.i.α.1 : Weyl linéarisé, verdict, pont mémoire »"
+id: LC-BORD-EON-06-WEYL-VERDICT
+coordonnee: "V1.d.i.α.1"
+recalages: "2026-07-26 (S21) : `id:` assigné. Le champ portait un PLACEHOLDER, non un identifiant : « à assigner — proposé : HKB-07 « V1.d.i.α.1 : Weyl linéarisé, verdict, pont mémoire » ». Motif : `HKB-` désigne le fonds bibliographique du programme (12 occurrences de HKB-01, toutes en référence de source), jamais une pièce ; 218 des 240 `id:` du dépôt sont en `LC-`. La coordonnée du placeholder est conservée au champ `coordonnee:`. `version:` inchangée : un recalage de métadonnée ne fait pas avancer la version de la substance. Corps NON touché."
 titre: "Weyl électrique linéarisé du graviton au bord — verdict à deux niveaux et raccord bord↔horizon par l'observable de mémoire"
 programme: LC-RACCORD
 parent: NOTE-BORD-EON-05 (§6, §10-V1.d.i.α.1)
