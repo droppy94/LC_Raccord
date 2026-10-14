@@ -1,0 +1,8 @@
+a = 0.2  N = 2.5  quad = (-0.5253640652 + 1.681829787j)  Gamma(4-N)(a+2i eta)^{N-4} = (-0.5253640652 + 1.681829787j)  ecart = 1.89e-21
+a = 0.2  N = 3.0  quad = (0.5 + 1.5j)  Gamma(4-N)(a+2i eta)^{N-4} = (0.5 + 1.5j)  ecart = 8.47e-22
+a = 0.2  N = 3.5  quad = (1.808050118 + 1.303168793j)  Gamma(4-N)(a+2i eta)^{N-4} = (1.808050118 + 1.303168793j)  ecart = 1.06e-12
+a = 0.05  N = 2.5  quad = (-1.164101808 + 1.497804948j)  Gamma(4-N)(a+2i eta)^{N-4} = (-1.164101808 + 1.497804948j)  ecart = 0.0
+a = 0.05  N = 3.0  quad = (0.1379310345 + 1.655172414j)  Gamma(4-N)(a+2i eta)^{N-4} = (0.1379310345 + 1.655172414j)  ecart = 0.0
+a = 0.05  N = 3.5  quad = (1.680955757 + 1.546702664j)  Gamma(4-N)(a+2i eta)^{N-4} = (1.680955757 + 1.546702664j)  ecart = 2.42e-12
+limite a -> 0+, N = 3, eta = -0.3 : 1/(2 i eta) = (0.0 + 1.666666667j)  = -i/(2 eta) : module 1/(2|eta|)
+N = 3, F reel : Re[1/(2 i eta)] = 0 ; le 1/eta n'apparait que via une phase (Im F != 0), cf. e^{i phi} du script

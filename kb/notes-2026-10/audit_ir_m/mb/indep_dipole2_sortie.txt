@@ -1,0 +1,9 @@
+boule r in [0.05, 7] : 0.0018936575  ; coquille [7,13] : 21.44229555  ; reliquat [13, inf) : 0.0024166401
+reliquat statique pur (1/5)(4 pi/3)/13^3 : 0.00038131909
+coquille, partie rayonnee seule : 21.44270452
+prediction exacte (4/5) 4 pi * 4/(15 w^3) = 21.44660585
+int m''^2 : quadrature sans point de rupture (comme ir_i.py, dps=20) : 2.1243187  ; avec rupture en u=-D : 2.1333333  ; exact 32/15 = 2.1333333
+boule 0.00189365753085465516841655345432
+coquille 21.442295550846511851735217115  rad 21.4427045240844890980657254623
+reliquat 0.00241664012895533433467849471877
+coquille sur 4 sous-intervalles 21.4462247536664213924778116245

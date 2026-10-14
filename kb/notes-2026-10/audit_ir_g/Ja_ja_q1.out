@@ -1,0 +1,15 @@
+u1 (premiers termes) = -c*k**2*s**3*log(s)/3 + c*k**2*s**3/9 + 2*c*s*log(s) - k**2*s**2*u0
+residu O(beta) jusqu a s^4 : 0
+
+Champs a scri : E_y = c cos(kx), B_z = -k u0 sin(kx)
+E_y(s) ordre s^0, coefficient de beta ln s : 2*c (x c)
+X^M_ss : [s^2 beta ln s] = -(-c*cos(k*x) + k*u0*sin(k*x))*(c*cos(k*x) + k*u0*sin(k*x))/e**2   = (-B**2 + E**2)/e**2
+      (ordre beta^0, s^2 : (B**2 + E**2)/(2*e**2) )
+X^M_sx : [s^2 beta ln s] = 0   = 0
+      (ordre beta^0, s^2 : B*E/e**2 )
+X^M_xx : [s^2 beta ln s] = -(-c*cos(k*x) + k*u0*sin(k*x))*(c*cos(k*x) + k*u0*sin(k*x))/e**2   = (-B**2 + E**2)/e**2
+      (ordre beta^0, s^2 : (B**2 + E**2)/(2*e**2) )
+X^M_yy : [s^2 beta ln s] = -(c**2*cos(k*x)**2 + k**2*u0**2*sin(k*x)**2)/e**2   = (-B**2 - E**2)/e**2
+      (ordre beta^0, s^2 : (B**2 - E**2)/(2*e**2) )
+X^M_zz : [s^2 beta ln s] = (c**2*cos(k*x)**2 + k**2*u0**2*sin(k*x)**2)/e**2   = (B**2 + E**2)/e**2
+      (ordre beta^0, s^2 : (-B**2 + E**2)/(2*e**2) )

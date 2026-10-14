@@ -1,0 +1,173 @@
+"""
+cb_coherent.py -- NOTE-BORD-EON-98, sous le gel de NOTE-97.
+
+Champ magnetique uniforme coherent (F_xy = B0) en de Sitter fixe hat-g = Omega^-2 eta, Omega = -tau,
+avec le couplage anomal de S2 (arXiv:1808.08237, eq. 3.12-3.13) : I^2 = e^-2 [1 + 2 beta ln a], a = 1/Omega (a* = 1).
+Secteur Maxwell : X^M = I^2 (F F hat-g^-1 - 1/4 hat-g F.F) ; trace anomale par variation de Weyl de S_B (2.11) ;
+fermeture C-iso : reste X^R homogene isotrope portant la trace et retablissant la conservation.
+Objet : R_{rho nu lam} = 2 Omega^-1 hat-nabla_[nu hat-L_lam] rho, hat-L = kappa/2 (hat-T - hat-T hat-g/3).
+Budget : contrainte anisotrope Pi(tau) diag(0,1,1,-2) ajoutee au secteur non Maxwell.
+Conventions : signature (-+++), T_mu nu = -2/sqrt(g) dS/dg^{mu nu}, donc sqrt(g) T = dS/d(sigma) sous g -> e^{2 sigma} g.
+"""
+import sympy as sp
+
+t = sp.symbols('tau', negative=True)
+x, y, z = sp.symbols('x y z', real=True)
+B0, e, beta, kap, C = sp.symbols('B0 e beta kappa C', positive=True)
+L = sp.symbols('L')
+X = [t, x, y, z]
+n = 4
+Om = -t
+a = 1/Om
+eta = sp.diag(-1, 1, 1, 1)
+gh = eta/Om**2
+gi = gh.inv()
+G = [[[sp.simplify(sum(gi[l, s]*(sp.diff(gh[s, m], X[q]) + sp.diff(gh[s, q], X[m]) - sp.diff(gh[m, q], X[s])) for s in range(n))/2)
+       for q in range(n)] for m in range(n)] for l in range(n)]
+
+def D(T):
+    return {(r, m, q): sp.diff(T[m, q], X[r]) - sum(G[s][r][m]*T[s, q] + G[s][r][q]*T[m, s] for s in range(n))
+            for r in range(n) for m in range(n) for q in range(n)}
+
+def div(T):
+    DT = D(T)
+    return [sp.simplify(sum(gi[m, r]*DT[(r, m, nu)] for m in range(n) for r in range(n))) for nu in range(n)]
+
+def tr(T):
+    return sp.simplify(sum(gi[i, j]*T[i, j] for i in range(n) for j in range(n)))
+
+def tolog(ex):
+    ex = sp.expand(sp.simplify(ex))
+    ex = ex.subs(sp.log(-t), L)
+    return sp.expand(ex)
+
+# --- champ et equation de Maxwell avec couplage ---
+F = sp.zeros(4, 4); F[1, 2] = B0; F[2, 1] = -B0
+I2 = (1 + 2*beta*sp.log(a))/e**2
+Fup_eta = eta*F*eta
+maxwell = [sp.simplify(sum(sp.diff(I2*Fup_eta[m, nu], X[m]) for m in range(n))) for nu in range(n)]
+print("1. Maxwell d_mu(I^2 F^{mu nu}) (indices plats) :", maxwell)
+assert all(v == 0 for v in maxwell)
+
+# --- secteur Maxwell ---
+FFg = F*gi*F.T                         # F_{mu a} F_{nu b} g^{ab}
+F2g = sum(gi[i, k]*gi[j, l]*F[i, j]*F[k, l] for i in range(n) for j in range(n) for k in range(n) for l in range(n))
+XM = sp.simplify(I2*(FFg - sp.Rational(1, 4)*gh*F2g))
+print("2. X^M (diag) :", [tolog(XM[i, i]) for i in range(4)], "; trace :", tr(XM))
+assert tr(XM) == 0
+divM = div(XM)
+print("   divergence de X^M :", divM)
+
+# --- trace anomale : sqrt(g) T = dS_B/dOmega_S, S_B = -(beta/2e^2) int Omega_S F.F|eta ---
+F2eta = sum(eta[i, k]*eta[j, l]*F[i, j]*F[k, l] for i in range(n) for j in range(n) for k in range(n) for l in range(n))
+sqrtg = Om**-4
+That = sp.simplify((-(beta/(2*e**2))*F2eta)/sqrtg)
+A = sp.simplify(That/Om**4)
+print("3. trace anomale hat-T =", That, " ; A = hat-T/Omega^4 =", A)
+
+# --- controle independant de la trace : variation de Weyl de l'action I^2 F^2 au sens de S2 ---
+# S2 : I^2 = e^-2 (1 + 2 beta Omega_S) ; dS/dOmega_S a metrique plate fixee = -1/4 * (2 beta/e^2) * F.F|eta
+chk = sp.simplify(-sp.Rational(1, 4)*(2*beta/e**2)*F2eta/sqrtg - That)
+print("   controle trace (doit etre 0) :", chk)
+assert chk == 0
+
+# --- fermeture C-iso ---
+r0 = sp.Function('r0')(t)
+r1 = (r0 + A*t**2)/3                   # -r0 + 3 r1 = A tau^2  (trace: Omega^2(-r0+3r1) = A Omega^4)
+XR = sp.diag(r0, r1, r1, r1)
+assert sp.simplify(tr(XR) - That) == 0
+cons0 = sp.simplify(div(XM + XR)[0])
+sol = sp.dsolve(sp.Eq(cons0, 0), r0)
+r0s = sp.simplify(sol.rhs.subs(sp.Symbol('C1'), C))
+XRs = XR.subs(r0, r0s).doit()
+XRs = sp.simplify(XRs)
+tot = sp.simplify(XM + XRs)
+print("4. C-iso : r0 =", tolog(r0s))
+print("   conservation totale :", [sp.simplify(v) for v in div(tot)])
+assert all(sp.simplify(v) == 0 for v in div(tot))
+assert sp.simplify(tr(tot) - That) == 0
+
+# --- second membre de (2.17) ---
+def Rcomp(T):
+    Lh = kap/2*(T - sp.Rational(1, 3)*tr(T)*gh)
+    DL = D(Lh)
+    out = {}
+    for rho in range(n):
+        for nu in range(n):
+            for lam in range(nu+1, n):
+                Cc = (DL[(nu, lam, rho)] - DL[(lam, nu, rho)])/2
+                v = tolog(2*Cc/Om)
+                if v != 0:
+                    out[(rho, nu, lam)] = v
+    return out
+
+def nonsmooth(v):
+    v = sp.expand(v)
+    bad = []
+    P = sp.Poly(v, L)
+    for (p,), cf in P.terms():
+        cf = sp.expand(cf)
+        for term in sp.Add.make_args(cf):
+            ex = sp.degree(sp.together(term*t**20).as_numer_denom()[0], t) - 20 - sp.degree(sp.together(term*t**20).as_numer_denom()[1], t)
+            if p > 0 or ex < 0:
+                bad.append((p, ex, term))
+    return bad
+
+print("\n5. R sous C-iso (composantes non nulles) :")
+RC = Rcomp(tot)
+for kkey, v in RC.items():
+    print("  ", kkey, ":", v)
+badC = {kk: nonsmooth(v) for kk, v in RC.items() if nonsmooth(v)}
+print("   termes non lisses :", badC)
+
+print("\n6. Controle beta = 0 (Maxwell conforme pur, meme fermeture) :")
+R0 = {kk: sp.simplify(v.subs(beta, 0)) for kk, v in RC.items()}
+print("  ", R0)
+bad0 = {kk: nonsmooth(v) for kk, v in R0.items() if v != 0 and nonsmooth(v)}
+print("   termes non lisses a beta = 0 :", bad0)
+assert not bad0
+
+# --- budget anisotrope ---
+Pi = sp.Function('Pi')(t)
+XP = sp.diag(0, Pi, Pi, -2*Pi)
+assert tr(XP) == 0
+print("\n7. divergence de Pi diag(0,1,1,-2) :", [sp.simplify(v) for v in div(XP)])
+assert all(sp.simplify(v) == 0 for v in div(XP))
+RP = Rcomp(tot + XP)
+for kkey, v in RP.items():
+    print("  ", kkey, ":", sp.simplify(v))
+# ansatz polyhomogene pour Pi
+p0, p1, p2, q2, p3, q3 = sp.symbols('p0 p1 p2 q2 p3 q3')
+Pians = p0 + p1*t + (p2 + q2*sp.log(-t))*t**2 + (p3 + q3*sp.log(-t))*t**3
+conds = set()
+for kkey, v in RP.items():
+    vv = tolog(sp.simplify(v.subs(Pi, Pians).doit()))
+    for (p, ex, term) in nonsmooth(vv):
+        conds.add(sp.expand(term/(t**ex*L**p) if p else term/t**ex))
+eqs = []
+for cnd in conds:
+    eqs.append(cnd)
+# regrouper par monome (puissance de tau, puissance de L)
+mon = {}
+for kkey, v in RP.items():
+    vv = tolog(sp.simplify(v.subs(Pi, Pians).doit()))
+    P = sp.Poly(vv, L)
+    for (p,), cf in P.terms():
+        cf = sp.expand(cf*t**20)
+        Q = sp.Poly(cf, t)
+        for (m,), c2 in Q.terms():
+            ex = m - 20
+            if p > 0 or ex < 0:
+                mon.setdefault((kkey, p, ex), 0)
+                mon[(kkey, p, ex)] += c2
+sys_ = [sp.expand(v) for v in mon.values() if sp.expand(v) != 0]
+print("\n   conditions de regularite sur Pi :", sys_)
+solP = sp.solve(sys_, [p0, p1, p2, q2, p3, q3], dict=True)
+print("   solution :", solP)
+
+logM = sp.expand(sp.diff(tolog(XM[1, 1]), L))      # coefficient de L dans X^M_xx
+logMz = sp.expand(sp.diff(tolog(XM[3, 3]), L))
+print("\n8. partie logarithmique du secteur Maxwell : X^M_xx ~", logM, "* L ; X^M_zz ~", logMz, "* L")
+aniso = sp.simplify((logM - logMz)/3)               # partie spatiale sans trace en diag(1,1,-2) : coefficient
+print("   sa partie anisotrope s'ecrit  Pi_M(L) = ", aniso, "* L * diag(0,1,1,-2)")
+print("\nEXIT 0")

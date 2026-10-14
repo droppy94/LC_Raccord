@@ -1,0 +1,5 @@
+   (1, 0, 1) : coef ln s a s^0 (X^M seul) = -kappa*(-c*cos(k*x) + k*u0*sin(k*x))*(c*cos(k*x) + k*u0*sin(k*x))/e**2  ; ecart a la loi : 0
+   (2, 0, 2) : coef ln s a s^0 (X^M seul) = -kappa*(-2*c**2*sin(k*x)**2 + 2*c**2 + k**2*u0**2*sin(k*x)**2)/e**2  ; ecart a la loi : 0
+   (3, 0, 3) : coef ln s a s^0 (X^M seul) = kappa*(-c**2*sin(k*x)**2 + c**2 + 2*k**2*u0**2*sin(k*x)**2)/e**2  ; ecart a la loi : 0
+loi R_ln = (3 beta kappa/e^2) Q_tf(x) retrouvee avec X^M seul, sans secteur non Maxwell : True
+EXIT 0

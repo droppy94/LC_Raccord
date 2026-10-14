@@ -1,0 +1,12 @@
+== plus_oblique k=(3,4)
+   trace = 0 ; divergence = [0, 0, 0, 0] ; ln s dans That : False
+   residu R_isj = 8 b kappa W_E,ij(scri) pour tous i,j : True  ; autres composantes polaires : []
+   W_E(scri) = [-1000*B1*cos(3*x + 4*y), 750*B1*cos(3*x + 4*y), 0, -1125*B1*cos(3*x + 4*y)/2, 0, 3125*B1*cos(3*x + 4*y)/2]
+== croix_oblique k=(3,4)
+   trace = 0 ; divergence = [0, 0, 0, 0] ; ln s dans That : False
+   residu R_isj = 8 b kappa W_E,ij(scri) pour tous i,j : True  ; autres composantes polaires : []
+   W_E(scri) = [0, 0, 250*B1*cos(3*x + 4*y), 0, -375*B1*cos(3*x + 4*y)/2, 0]
+== superposition
+   trace = 0 ; divergence = [0, 0, 0, 0] ; ln s dans That : False
+   residu R_isj = 8 b kappa W_E,ij(scri) pour tous i,j : True  ; autres composantes polaires : []
+   W_E(scri) = [0, 0, 250*B2*cos(3*x + 4*y), -B1*k**5*cos(k*x)/2, -375*B2*cos(3*x + 4*y)/2, B1*k**5*cos(k*x)/2]

@@ -1,0 +1,4 @@
+SCEAU NOTE-159 (execution IR-ad) ; horodatage 2026-10-13T11:17:22Z
+f57ef1c5c401fc1d5d14a37fab4ece3f8e89bf170582b1c3890179c489d9c963  NOTE-BORD-EON-159-IR-ad-PASSE-ADIABATIQUE-EXECUTION.md
+3d5d52115b2839dffdb7ca2ff41071ec604cdf1bd9b50ebb981a528f90b7e46b  irad_kernel.py
+dca0db64a2f0fdd3dbbb67eade706d33221fe75bac64f874887a162e89174da1  irad_kernel_sortie.txt

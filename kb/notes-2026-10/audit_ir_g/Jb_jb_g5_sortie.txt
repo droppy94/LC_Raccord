@@ -1,0 +1,63 @@
+##### onde progressive POLARISEE LINEAIREMENT (E = B en module)
+
+=== cas T6_progressive_lineaire ===
+G1 (non moyenne, s^2) : accord -2(T_B - T_E) : True  ; pas de log aux ordres s^0,s^1 : True  ; log dans X_{s i} a l'ordre s^2 : [0, 0, 0]
+Poynting moyen <X_{s i}> : [-s**2*(2*beta*lambda + 2*beta + 1)/(2*e**2), 0, 0]
+div X^M spatiale (doit etre 0 a l'ordre tronque) : [0, 0, 0]
+conservation totale (tronquee) : [0, 0, 0, 0]  ; r0 = C_r*s**2
+   R (2, 0, 2) ln-coef = -3*kappa/(2*e**2)
+   R (3, 0, 3) ln-coef = 3*kappa/(2*e**2)
+termes log singuliers (puissances negatives de s) a l'ordre beta : []
+Q = [[0, 0, 0], [0, -1/2, 0], [0, 0, 1/2]]
+G2 tensoriel R_{i s j}|ln = (3 beta kappa/e^2) Qtf_ij, autres composantes sans log : True
+symboles dans les coefficients ln : {kappa, e}  ; lambda ou C_r present : False
+##### onde progressive POLARISEE CIRCULAIREMENT (E = B, coherente, polarisee)
+
+=== cas T7_progressive_circulaire ===
+G1 (non moyenne, s^2) : accord -2(T_B - T_E) : True  ; pas de log aux ordres s^0,s^1 : True  ; log dans X_{s i} a l'ordre s^2 : [0, 0, 0]
+Poynting moyen <X_{s i}> : [-s**2*(2*beta*lambda + 2*beta + 1)/e**2, 0, 0]
+div X^M spatiale (doit etre 0 a l'ordre tronque) : [0, 0, 0]
+conservation totale (tronquee) : [0, 0, 0, 0]  ; r0 = C_r*s**2
+termes log singuliers (puissances negatives de s) a l'ordre beta : []
+Q = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+G2 tensoriel R_{i s j}|ln = (3 beta kappa/e^2) Qtf_ij, autres composantes sans log : True
+symboles dans les coefficients ln : set()  ; lambda ou C_r present : False
+##### onde progressive elliptique (ay=2, az=1)
+
+=== cas T8_progressive_elliptique ===
+G1 (non moyenne, s^2) : accord -2(T_B - T_E) : True  ; pas de log aux ordres s^0,s^1 : True  ; log dans X_{s i} a l'ordre s^2 : [0, 0, 0]
+Poynting moyen <X_{s i}> : [-5*s**2*(2*beta*lambda + 2*beta + 1)/(2*e**2), 0, 0]
+div X^M spatiale (doit etre 0 a l'ordre tronque) : [0, 0, 0]
+conservation totale (tronquee) : [0, 0, 0, 0]  ; r0 = C_r*s**2
+   R (2, 0, 2) ln-coef = -9*kappa/(2*e**2)
+   R (3, 0, 3) ln-coef = 9*kappa/(2*e**2)
+termes log singuliers (puissances negatives de s) a l'ordre beta : []
+Q = [[0, 0, 0], [0, -3/2, 0], [0, 0, 3/2]]
+G2 tensoriel R_{i s j}|ln = (3 beta kappa/e^2) Qtf_ij, autres composantes sans log : True
+symboles dans les coefficients ln : {kappa, e}  ; lambda ou C_r present : False
+##### onde stationnaire helicoidale a Q = 0 (cas T4 avec a2=b1=1, a1=b2=1)
+
+=== cas T9_stationnaire_helicoidale_Q0 ===
+G1 (non moyenne, s^2) : accord -2(T_B - T_E) : True  ; pas de log aux ordres s^0,s^1 : True  ; log dans X_{s i} a l'ordre s^2 : [0, 0, 0]
+Poynting moyen <X_{s i}> : [0, 0, 0]
+div X^M spatiale (doit etre 0 a l'ordre tronque) : [0, 0, 0]
+conservation totale (tronquee) : [0, 0, 0, 0]  ; r0 = C_r*s**2
+termes log singuliers (puissances negatives de s) a l'ordre beta : []
+Q = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+G2 tensoriel R_{i s j}|ln = (3 beta kappa/e^2) Qtf_ij, autres composantes sans log : True
+symboles dans les coefficients ln : set()  ; lambda ou C_r present : False
+##### faisceau non polarise anisotrope : deux polarisations lineaires incoherentes (k differents, meme direction), E = B
+
+=== cas T10_faisceau_non_polarise ===
+G1 (non moyenne, s^2) : accord -2(T_B - T_E) : True  ; pas de log aux ordres s^0,s^1 : True  ; log dans X_{s i} a l'ordre s^2 : [0, 0, 0]
+Poynting moyen <X_{s i}> : [-5*s**2*(2*beta*lambda + 2*beta + 1)/(2*e**2), 0, 0]
+div X^M spatiale (doit etre 0 a l'ordre tronque) : [0, 0, 0]
+conservation totale (tronquee) : [0, 0, 0, 0]  ; r0 = C_r*s**2
+   R (2, 0, 2) ln-coef = 9*kappa/(2*e**2)
+   R (3, 0, 3) ln-coef = -9*kappa/(2*e**2)
+termes log singuliers (puissances negatives de s) a l'ordre beta : []
+Q = [[0, 0, 0], [0, 3/2, 0], [0, 0, -3/2]]
+G2 tensoriel R_{i s j}|ln = (3 beta kappa/e^2) Qtf_ij, autres composantes sans log : True
+symboles dans les coefficients ln : {kappa, e}  ; lambda ou C_r present : False
+
+EXIT 0

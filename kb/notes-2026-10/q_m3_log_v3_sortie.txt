@@ -1,0 +1,85 @@
+controle conservation (4 composantes) : [0, 0, 0, 0]
+controle trace hat-T : A*tau**4
+
+b = L**2*e1*k*tau**2/2 + L**2*f2*k*tau**3 + L**2*f3*k*tau**4/2 + L*c1*k*tau**2 - L*e0*k*tau + L*e2*k*tau**3 + L*e3*k*tau**4/2 - 2*L*f2*k*tau**3 - L*f3*k*tau**4/2 + beta*tau**2 - c0*k*tau + c2*k*tau**3 + c3*k*tau**4/2 - e0*k*tau - e2*k*tau**3 - e3*k*tau**4/4 + 2*f2*k*tau**3 + f3*k*tau**4/4
+a = A*L*tau**2 + L**2*e0*k**2*tau**2/2 - L**2*e1*k**2*tau**3/2 - L**2*f2*k**2*tau**4/2 - L**2*f3*k**2*tau**5/6 + L*c0*k**2*tau**2 - L*c1*k**2*tau**3 + L*e0*k**2*tau**2 + L*e1*k**2*tau**3 - L*e2*k**2*tau**4/2 - L*e3*k**2*tau**5/6 + 3*L*f2*k**2*tau**4/2 + 5*L*f3*k**2*tau**5/18 + alpha*tau**2 - beta*k*tau**3 + c1*k**2*tau**3 - c2*k**2*tau**4/2 - c3*k**2*tau**5/6 - e1*k**2*tau**3 + 3*e2*k**2*tau**4/4 + 5*e3*k**2*tau**5/36 - 7*f2*k**2*tau**4/4 - 19*f3*k**2*tau**5/108
+d = A*L*tau**2/2 + A*tau**2/2 + L**2*e0*k**2*tau**2/4 - L**2*e1*k**2*tau**3/4 - L**2*f2*k**2*tau**4/4 - L**2*f2*tau**2/2 - L**2*f3*k**2*tau**5/12 - L**2*f3*tau**3/2 + L*c0*k**2*tau**2/2 - L*c1*k**2*tau**3/2 + L*e0*k**2*tau**2/2 - L*e0/2 + L*e1*k**2*tau**3/2 - L*e1*tau/2 - L*e2*k**2*tau**4/4 - L*e2*tau**2/2 - L*e3*k**2*tau**5/12 - L*e3*tau**3/2 + 3*L*f2*k**2*tau**4/4 + 5*L*f3*k**2*tau**5/36 + alpha*tau**2/2 - beta*k*tau**3/2 - c0/2 + c1*k**2*tau**3/2 - c1*tau/2 - c2*k**2*tau**4/4 - c2*tau**2/2 - c3*k**2*tau**5/12 - c3*tau**3/2 - e1*k**2*tau**3/2 + 3*e2*k**2*tau**4/8 + 5*e3*k**2*tau**5/72 - 7*f2*k**2*tau**4/8 - 19*f3*k**2*tau**5/216
+
+Second membre de (2.17), composantes R_{rho nu lam} (L = ln Omega) :
+  (0, 0, 1):
+     L^2 : tau^0: -I*e1*k*kappa/2, tau^1: I*k*kappa*(e0*k**2 - 6*f2)/4, tau^2: -I*k*kappa*(e1*k**2 + 4*f3)/4, tau^3: -I*f2*k**3*kappa/4, tau^4: -I*f3*k**3*kappa/12
+     L^1 : tau^-1: I*e0*k*kappa/2, tau^0: -I*k*kappa*(2*c1 + e1)/2, tau^1: I*k*kappa*(A + c0*k**2 + e0*k**2 - 3*e2 + 4*f2)/2, tau^2: -I*k*kappa*(c1*k**2 - e1*k**2 + 2*e3 - f3)/2, tau^3: -I*k**3*kappa*(e2 - 3*f2)/4, tau^4: -I*k**3*kappa*(3*e3 - 5*f3)/36
+     L^0 : tau^-1: I*k*kappa*(c0 + 2*e0)/2, tau^0: -I*kappa*(2*beta + c1*k)/2, tau^1: -I*k*kappa*(-A - 3*alpha + 9*c2 - 6*e2 + 12*f2)/6, tau^2: I*k*kappa*(-2*beta*k + 2*c1*k**2 - 4*c3 - 2*e1*k**2 + e3 - f3)/4, tau^3: -I*k**3*kappa*(2*c2 - 3*e2 + 7*f2)/8, tau^4: -I*k**3*kappa*(18*c3 - 15*e3 + 19*f3)/216
+  (1, 0, 1):
+     L^2 : tau^0: kappa*(e0*k**2 - 6*f2)/4, tau^1: -kappa*(e1*k**2 + 4*f3)/2, tau^2: -3*f2*k**2*kappa/4, tau^3: -f3*k**2*kappa/3
+     L^1 : tau^-2: -e0*kappa/2, tau^-1: -e1*kappa, tau^0: kappa*(A + c0*k**2 + 2*e0*k**2 - 3*e2 - 2*f2)/2, tau^1: -kappa*(2*c1*k**2 - e1*k**2 + 4*e3 + 2*f3)/2, tau^2: -k**2*kappa*(3*e2 - 7*f2)/4, tau^3: -k**2*kappa*(6*e3 - 7*f3)/18
+     L^0 : tau^-2: -kappa*(c0 + e0)/2, tau^-1: -kappa*(2*c1 + e1)/2, tau^0: kappa*(4*A + 3*alpha + 3*c0*k**2 - 9*c2 + 3*e0*k**2 - 3*e2)/6, tau^1: kappa*(-2*beta*k + c1*k**2 - 4*c3 - e1*k**2 - e3)/2, tau^2: -k**2*kappa*(6*c2 - 7*e2 + 15*f2)/8, tau^3: -k**2*kappa*(36*c3 - 21*e3 + 23*f3)/108
+  (2, 0, 2):
+     L^2 : tau^0: -kappa*(e0*k**2 - 6*f2)/8, tau^1: kappa*(e1*k**2 + 4*f3)/4, tau^2: 3*f2*k**2*kappa/8, tau^3: f3*k**2*kappa/6
+     L^1 : tau^-2: e0*kappa/4, tau^-1: e1*kappa/2, tau^0: -kappa*(A + c0*k**2 + 2*e0*k**2 - 3*e2 - 2*f2)/4, tau^1: kappa*(2*c1*k**2 - e1*k**2 + 4*e3 + 2*f3)/4, tau^2: k**2*kappa*(3*e2 - 7*f2)/8, tau^3: k**2*kappa*(6*e3 - 7*f3)/36
+     L^0 : tau^-2: kappa*(c0 + e0)/4, tau^-1: kappa*(2*c1 + e1)/4, tau^0: -kappa*(4*A + 3*alpha + 3*c0*k**2 - 9*c2 + 3*e0*k**2 - 3*e2)/12, tau^1: -kappa*(-2*beta*k + c1*k**2 - 4*c3 - e1*k**2 - e3)/4, tau^2: k**2*kappa*(6*c2 - 7*e2 + 15*f2)/16, tau^3: k**2*kappa*(36*c3 - 21*e3 + 23*f3)/216
+  (2, 1, 2):
+     L^2 : tau^0: I*e1*k*kappa/4, tau^1: -I*k*kappa*(e0*k**2 - 6*f2)/8, tau^2: I*k*kappa*(e1*k**2 + 4*f3)/8, tau^3: I*f2*k**3*kappa/8, tau^4: I*f3*k**3*kappa/24
+     L^1 : tau^-1: -I*e0*k*kappa/4, tau^0: I*k*kappa*(2*c1 + e1)/4, tau^1: -I*k*kappa*(A + c0*k**2 + e0*k**2 - 3*e2 + 4*f2)/4, tau^2: I*k*kappa*(c1*k**2 - e1*k**2 + 2*e3 - f3)/4, tau^3: I*k**3*kappa*(e2 - 3*f2)/8, tau^4: I*k**3*kappa*(3*e3 - 5*f3)/72
+     L^0 : tau^-1: -I*k*kappa*(c0 + 2*e0)/4, tau^0: I*kappa*(2*beta + c1*k)/4, tau^1: I*k*kappa*(-A - 3*alpha + 9*c2 - 6*e2 + 12*f2)/12, tau^2: -I*k*kappa*(-2*beta*k + 2*c1*k**2 - 4*c3 - 2*e1*k**2 + e3 - f3)/8, tau^3: I*k**3*kappa*(2*c2 - 3*e2 + 7*f2)/16, tau^4: I*k**3*kappa*(18*c3 - 15*e3 + 19*f3)/432
+  (0, 2, 2):
+     L^0 : tau^-10: 0
+  (1, 2, 2):
+     L^0 : tau^-10: 0
+
+Termes non lisses (puissance negative de tau, ou facteur ln) :
+  (0, 0, 1): L^2 tau^4 : -I*f3*k**3*kappa/12
+  (0, 0, 1): L^2 tau^3 : -I*f2*k**3*kappa/4
+  (0, 0, 1): L^2 tau^2 : -I*k*kappa*(e1*k**2 + 4*f3)/4
+  (0, 0, 1): L^2 tau^1 : I*k*kappa*(e0*k**2 - 6*f2)/4
+  (0, 0, 1): L^2 tau^0 : -I*e1*k*kappa/2
+  (0, 0, 1): L^1 tau^4 : -I*k**3*kappa*(3*e3 - 5*f3)/36
+  (0, 0, 1): L^1 tau^3 : -I*k**3*kappa*(e2 - 3*f2)/4
+  (0, 0, 1): L^1 tau^2 : -I*k*kappa*(c1*k**2 - e1*k**2 + 2*e3 - f3)/2
+  (0, 0, 1): L^1 tau^1 : I*k*kappa*(A + c0*k**2 + e0*k**2 - 3*e2 + 4*f2)/2
+  (0, 0, 1): L^1 tau^0 : -I*k*kappa*(2*c1 + e1)/2
+  (0, 0, 1): L^1 tau^-1 : I*e0*k*kappa/2
+  (0, 0, 1): L^0 tau^-1 : I*k*kappa*(c0 + 2*e0)/2
+  (1, 0, 1): L^2 tau^3 : -f3*k**2*kappa/3
+  (1, 0, 1): L^2 tau^2 : -3*f2*k**2*kappa/4
+  (1, 0, 1): L^2 tau^1 : -kappa*(e1*k**2 + 4*f3)/2
+  (1, 0, 1): L^2 tau^0 : kappa*(e0*k**2 - 6*f2)/4
+  (1, 0, 1): L^1 tau^3 : -k**2*kappa*(6*e3 - 7*f3)/18
+  (1, 0, 1): L^1 tau^2 : -k**2*kappa*(3*e2 - 7*f2)/4
+  (1, 0, 1): L^1 tau^1 : -kappa*(2*c1*k**2 - e1*k**2 + 4*e3 + 2*f3)/2
+  (1, 0, 1): L^1 tau^0 : kappa*(A + c0*k**2 + 2*e0*k**2 - 3*e2 - 2*f2)/2
+  (1, 0, 1): L^1 tau^-1 : -e1*kappa
+  (1, 0, 1): L^1 tau^-2 : -e0*kappa/2
+  (1, 0, 1): L^0 tau^-1 : -kappa*(2*c1 + e1)/2
+  (1, 0, 1): L^0 tau^-2 : -kappa*(c0 + e0)/2
+  (2, 0, 2): L^2 tau^3 : f3*k**2*kappa/6
+  (2, 0, 2): L^2 tau^2 : 3*f2*k**2*kappa/8
+  (2, 0, 2): L^2 tau^1 : kappa*(e1*k**2 + 4*f3)/4
+  (2, 0, 2): L^2 tau^0 : -kappa*(e0*k**2 - 6*f2)/8
+  (2, 0, 2): L^1 tau^3 : k**2*kappa*(6*e3 - 7*f3)/36
+  (2, 0, 2): L^1 tau^2 : k**2*kappa*(3*e2 - 7*f2)/8
+  (2, 0, 2): L^1 tau^1 : kappa*(2*c1*k**2 - e1*k**2 + 4*e3 + 2*f3)/4
+  (2, 0, 2): L^1 tau^0 : -kappa*(A + c0*k**2 + 2*e0*k**2 - 3*e2 - 2*f2)/4
+  (2, 0, 2): L^1 tau^-1 : e1*kappa/2
+  (2, 0, 2): L^1 tau^-2 : e0*kappa/4
+  (2, 0, 2): L^0 tau^-1 : kappa*(2*c1 + e1)/4
+  (2, 0, 2): L^0 tau^-2 : kappa*(c0 + e0)/4
+  (2, 1, 2): L^2 tau^4 : I*f3*k**3*kappa/24
+  (2, 1, 2): L^2 tau^3 : I*f2*k**3*kappa/8
+  (2, 1, 2): L^2 tau^2 : I*k*kappa*(e1*k**2 + 4*f3)/8
+  (2, 1, 2): L^2 tau^1 : -I*k*kappa*(e0*k**2 - 6*f2)/8
+  (2, 1, 2): L^2 tau^0 : I*e1*k*kappa/4
+  (2, 1, 2): L^1 tau^4 : I*k**3*kappa*(3*e3 - 5*f3)/72
+  (2, 1, 2): L^1 tau^3 : I*k**3*kappa*(e2 - 3*f2)/8
+  (2, 1, 2): L^1 tau^2 : I*k*kappa*(c1*k**2 - e1*k**2 + 2*e3 - f3)/4
+  (2, 1, 2): L^1 tau^1 : -I*k*kappa*(A + c0*k**2 + e0*k**2 - 3*e2 + 4*f2)/4
+  (2, 1, 2): L^1 tau^0 : I*k*kappa*(2*c1 + e1)/4
+  (2, 1, 2): L^1 tau^-1 : -I*e0*k*kappa/4
+  (2, 1, 2): L^0 tau^-1 : -I*k*kappa*(c0 + 2*e0)/4
+  (0, 2, 2): L^0 tau^-10 : 0
+  (1, 2, 2): L^0 tau^-10 : 0
+
+Coefficients devant s'annuler pour un R lisse : {0, -I*k*kappa*(c0 + 2*e0)/4, -I*f2*k**3*kappa/4, -f3*k**2*kappa/3, I*f3*k**3*kappa/24, -I*k*kappa*(e0*k**2 - 6*f2)/8, -I*k*kappa*(A + c0*k**2 + e0*k**2 - 3*e2 + 4*f2)/4, I*k*kappa*(2*c1 + e1)/4, -I*k**3*kappa*(3*e3 - 5*f3)/36, e1*kappa/2, kappa*(e1*k**2 + 4*f3)/4, -I*e0*k*kappa/4, kappa*(2*c1*k**2 - e1*k**2 + 4*e3 + 2*f3)/4, I*e1*k*kappa/4, kappa*(2*c1 + e1)/4, k**2*kappa*(3*e2 - 7*f2)/8, I*k*kappa*(c1*k**2 - e1*k**2 + 2*e3 - f3)/4, -kappa*(c0 + e0)/2, -k**2*kappa*(6*e3 - 7*f3)/18, -e1*kappa, -I*f3*k**3*kappa/12, kappa*(A + c0*k**2 + 2*e0*k**2 - 3*e2 - 2*f2)/2, I*k*kappa*(e1*k**2 + 4*f3)/8, -I*k*kappa*(e1*k**2 + 4*f3)/4, 3*f2*k**2*kappa/8, -e0*kappa/2, I*k*kappa*(e0*k**2 - 6*f2)/4, kappa*(c0 + e0)/4, I*f2*k**3*kappa/8, -kappa*(e1*k**2 + 4*f3)/2, -I*k*kappa*(2*c1 + e1)/2, I*e0*k*kappa/2, -I*e1*k*kappa/2, -kappa*(e0*k**2 - 6*f2)/8, -I*k**3*kappa*(e2 - 3*f2)/4, -kappa*(2*c1*k**2 - e1*k**2 + 4*e3 + 2*f3)/2, I*k**3*kappa*(3*e3 - 5*f3)/72, f3*k**2*kappa/6, I*k*kappa*(A + c0*k**2 + e0*k**2 - 3*e2 + 4*f2)/2, -k**2*kappa*(3*e2 - 7*f2)/4, I*k**3*kappa*(e2 - 3*f2)/8, -kappa*(2*c1 + e1)/2, -3*f2*k**2*kappa/4, k**2*kappa*(6*e3 - 7*f3)/36, kappa*(e0*k**2 - 6*f2)/4, I*k*kappa*(c0 + 2*e0)/2, -kappa*(A + c0*k**2 + 2*e0*k**2 - 3*e2 - 2*f2)/4, e0*kappa/4, -I*k*kappa*(c1*k**2 - e1*k**2 + 2*e3 - f3)/2}
+Solutions (donnee d'etat et constantes) : []
+
+EXIT 0

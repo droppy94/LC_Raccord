@@ -1,0 +1,79 @@
+
+=== cas T1_script ===
+G1 (non moyenne, s^2) : accord -2(T_B - T_E) : True  ; pas de log aux ordres s^0,s^1 : True  ; log dans X_{s i} a l'ordre s^2 : [0, 0, 0]
+Poynting moyen <X_{s i}> : [0, 0, 0]
+div X^M spatiale (doit etre 0 a l'ordre tronque) : [0, 0, 0]
+conservation totale (tronquee) : [0, 0, 0, 0]  ; r0 = s**2*(C_r*e**2 - beta*c**2*s**4 + beta*s**4*u0**2)/(12*e**2)
+   R (1, 0, 1) ln-coef = -kappa*(-c + u0)*(c + u0)/(2*e**2)
+   R (2, 0, 2) ln-coef = -kappa*(2*c**2 + u0**2)/(2*e**2)
+   R (3, 0, 3) ln-coef = kappa*(c**2 + 2*u0**2)/(2*e**2)
+termes log singuliers (puissances negatives de s) a l'ordre beta : []
+Q = [[0, 0, 0], [0, -c**2/2, 0], [0, 0, u0**2/2]]
+G2 tensoriel R_{i s j}|ln = (3 beta kappa/e^2) Qtf_ij, autres composantes sans log : True
+symboles dans les coefficients ln : {u0, e, c, kappa}  ; lambda ou C_r present : False
+
+=== cas T2_oblique ===
+G1 (non moyenne, s^2) : accord -2(T_B - T_E) : True  ; pas de log aux ordres s^0,s^1 : True  ; log dans X_{s i} a l'ordre s^2 : [0, 0, 0]
+Poynting moyen <X_{s i}> : [0, 0, 0]
+div X^M spatiale (doit etre 0 a l'ordre tronque) : [0, 0, 0]
+conservation totale (tronquee) : [0, 0, 0, 0]  ; r0 = s**2*(C_r*e**2 + 2*a1**2*beta*s**4 - b1**2*beta*s**4)/e**2
+   R (1, 0, 1) ln-coef = -3*a1**2*kappa/(2*e**2)
+   R (1, 0, 2) ln-coef = -3*kappa*(a1 - b1)*(a1 + b1)/(2*e**2)
+   R (1, 0, 3) ln-coef = -3*kappa*(2*a1**2 + b1**2)/(2*e**2)
+   R (2, 0, 1) ln-coef = -3*kappa*(a1 - b1)*(a1 + b1)/(2*e**2)
+   R (2, 0, 2) ln-coef = -3*a1**2*kappa/(2*e**2)
+   R (2, 0, 3) ln-coef = 3*kappa*(2*a1**2 + b1**2)/(2*e**2)
+   R (3, 0, 1) ln-coef = -3*kappa*(2*a1**2 + b1**2)/(2*e**2)
+   R (3, 0, 2) ln-coef = 3*kappa*(2*a1**2 + b1**2)/(2*e**2)
+   R (3, 0, 3) ln-coef = 3*a1**2*kappa/e**2
+termes log singuliers (puissances negatives de s) a l'ordre beta : []
+Q = [[(a1 - b1)*(a1 + b1)/2, -(a1 - b1)*(a1 + b1)/2, -(2*a1**2 + b1**2)/2], [-(a1 - b1)*(a1 + b1)/2, (a1 - b1)*(a1 + b1)/2, (2*a1**2 + b1**2)/2], [-(2*a1**2 + b1**2)/2, (2*a1**2 + b1**2)/2, (2*a1 - b1)*(2*a1 + b1)/2]]
+G2 tensoriel R_{i s j}|ln = (3 beta kappa/e^2) Qtf_ij, autres composantes sans log : True
+symboles dans les coefficients ln : {e, kappa, a1, b1}  ; lambda ou C_r present : False
+
+=== cas T3_deux_modes ===
+G1 (non moyenne, s^2) : accord -2(T_B - T_E) : True  ; pas de log aux ordres s^0,s^1 : True  ; log dans X_{s i} a l'ordre s^2 : [0, 0, 0]
+Poynting moyen <X_{s i}> : [0, 0, 0]
+div X^M spatiale (doit etre 0 a l'ordre tronque) : [0, 0, 0]
+conservation totale (tronquee) : [0, 0, 0, 0]  ; r0 = s**2*(C_r*e**2 + 2*a1**2*beta*s**4 + 5*a2**2*beta*s**4 - 2*b1**2*beta*s**4 - 5*b2**2*beta*s**4)/(12*e**2)
+   R (1, 0, 1) ln-coef = -kappa*(2*a1**2 - 7*a2**2 - 2*b1**2 - 2*b2**2)/(2*e**2)
+   R (1, 0, 3) ln-coef = -3*kappa*(a2**2 + b2**2)/e**2
+   R (2, 0, 2) ln-coef = kappa*(a1**2 - 5*a2**2 - b1**2 + 5*b2**2)/(2*e**2)
+   R (2, 0, 3) ln-coef = -3*kappa*(a1**2 + b1**2)/(2*e**2)
+   R (3, 0, 1) ln-coef = -3*kappa*(a2**2 + b2**2)/e**2
+   R (3, 0, 2) ln-coef = -3*kappa*(a1**2 + b1**2)/(2*e**2)
+   R (3, 0, 3) ln-coef = kappa*(a1**2 - 2*a2**2 - b1**2 - 7*b2**2)/(2*e**2)
+termes log singuliers (puissances negatives de s) a l'ordre beta : []
+Q = [[(2*a2 - b2)*(2*a2 + b2)/2, 0, -a2**2 - b2**2], [0, (a1 - b1)*(a1 + b1)/2, -(a1**2 + b1**2)/2], [-a2**2 - b2**2, -(a1**2 + b1**2)/2, (a1**2 + a2**2 - b1**2 - 4*b2**2)/2]]
+G2 tensoriel R_{i s j}|ln = (3 beta kappa/e^2) Qtf_ij, autres composantes sans log : True
+symboles dans les coefficients ln : {a2, a1, b2, b1, e, kappa}  ; lambda ou C_r present : False
+
+=== cas T4_helicoidal ===
+G1 (non moyenne, s^2) : accord -2(T_B - T_E) : True  ; pas de log aux ordres s^0,s^1 : True  ; log dans X_{s i} a l'ordre s^2 : [0, 0, 0]
+Poynting moyen <X_{s i}> : [0, 0, 0]
+div X^M spatiale (doit etre 0 a l'ordre tronque) : [0, 0, 0]
+conservation totale (tronquee) : [0, 0, 0, 0]  ; r0 = s**2*(C_r*e**2 + a1**2*beta*s**4 + a2**2*beta*s**4 - b1**2*beta*s**4 - b2**2*beta*s**4)/(12*e**2)
+   R (1, 0, 1) ln-coef = -kappa*(a1**2 + a2**2 - b1**2 - b2**2)/(2*e**2)
+   R (2, 0, 2) ln-coef = -kappa*(a1**2 - 2*a2**2 + 2*b1**2 - b2**2)/(2*e**2)
+   R (3, 0, 3) ln-coef = kappa*(2*a1**2 - a2**2 + b1**2 - 2*b2**2)/(2*e**2)
+termes log singuliers (puissances negatives de s) a l'ordre beta : []
+Q = [[0, 0, 0], [0, (a2 - b1)*(a2 + b1)/2, 0], [0, 0, (a1 - b2)*(a1 + b2)/2]]
+G2 tensoriel R_{i s j}|ln = (3 beta kappa/e^2) Qtf_ij, autres composantes sans log : True
+symboles dans les coefficients ln : {a2, a1, b2, b1, e, kappa}  ; lambda ou C_r present : False
+
+=== cas T5_meme_k_secteurs_croises ===
+G1 (non moyenne, s^2) : accord -2(T_B - T_E) : True  ; pas de log aux ordres s^0,s^1 : True  ; log dans X_{s i} a l'ordre s^2 : [0, 0, 0]
+Poynting moyen <X_{s i}> : [0, 0, 0]
+div X^M spatiale (doit etre 0 a l'ordre tronque) : [0, 0, 0]
+conservation totale (tronquee) : [0, 0, 0, 0]  ; r0 = s**2*(C_r*e**2 + 2*a1**2*beta*s**4 + 4*a2**2*beta*s**4 - b1**2*beta*s**4 - 2*b2**2*beta*s**4)/(3*e**2)
+   R (1, 0, 1) ln-coef = -kappa*(a1**2 - 4*a2**2 + b1**2 - b2**2)/e**2
+   R (2, 0, 2) ln-coef = kappa*(a1**2 - 4*a2**2 + b1**2 - b2**2)/(2*e**2)
+   R (2, 0, 3) ln-coef = -3*kappa*(a1 - b2)*(a1 + b2)/(2*e**2)
+   R (3, 0, 2) ln-coef = -3*kappa*(a1 - b2)*(a1 + b2)/(2*e**2)
+   R (3, 0, 3) ln-coef = kappa*(a1**2 - 4*a2**2 + b1**2 - b2**2)/(2*e**2)
+termes log singuliers (puissances negatives de s) a l'ordre beta : []
+Q = [[(2*a2 - b1)*(2*a2 + b1)/2, 0, 0], [0, (a1 - b2)*(a1 + b2)/2, -(a1 - b2)*(a1 + b2)/2], [0, -(a1 - b2)*(a1 + b2)/2, (a1 - b2)*(a1 + b2)/2]]
+G2 tensoriel R_{i s j}|ln = (3 beta kappa/e^2) Qtf_ij, autres composantes sans log : True
+symboles dans les coefficients ln : {a2, a1, b1, b2, e, kappa}  ; lambda ou C_r present : False
+
+EXIT 0

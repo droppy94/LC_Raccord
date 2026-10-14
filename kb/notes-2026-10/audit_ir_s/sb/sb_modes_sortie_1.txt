@@ -1,0 +1,13 @@
+== plus_x (reproduction)
+   trace = 0 ; divergence = [0, 0, 0, 0] ; ln s dans That : False
+   residu R_isj = 8 b kappa W_E,ij(scri) pour tous i,j : True  ; autres composantes polaires : []
+   W_E(scri) = [0, 0, 0, -B1*k**5*cos(k*x)/2, 0, B1*k**5*cos(k*x)/2]
+   That_yy (s^1,s^2) = 4*A1*b*k**6*s**2*cos(k*x) - 4*B1*b*k**5*s*cos(k*x)
+   That_zz (s^1,s^2) = -4*A1*b*k**6*s**2*cos(k*x) + 4*B1*b*k**5*s*cos(k*x)
+   R_ysy = 6*A1*b*k**6*kappa*cos(k*x) + 4*B1*b*k**7*kappa*s*cos(k*x) - 4*B1*b*k**5*kappa*cos(k*x)/s
+   R_zsz = -6*A1*b*k**6*kappa*cos(k*x) - 4*B1*b*k**7*kappa*s*cos(k*x) + 4*B1*b*k**5*kappa*cos(k*x)/s
+   R_yxy = -2*A1*b*k**7*kappa*s*sin(k*x) + 2*B1*b*k**6*kappa*sin(k*x)
+== croix_x (h_yz)
+   trace = 0 ; divergence = [0, 0, 0, 0] ; ln s dans That : False
+   residu R_isj = 8 b kappa W_E,ij(scri) pour tous i,j : True  ; autres composantes polaires : []
+   W_E(scri) = [0, 0, 0, 0, -B1*k**4*cos(k*x)/2, 0]

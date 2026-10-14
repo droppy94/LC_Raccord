@@ -1,0 +1,46 @@
+== Tache 4 : Int_0^inf dk sin(2 k eta) e^{-a k} ==
+forme fermee sympy  Int sin(2k eta) e^{-ak} dk = 2*eta/(a**2 + 4*eta**2)
+forme fermee sympy  Int cos(2k eta) e^{-ak} dk = a/(a**2 + 4*eta**2)
+eta * Int sin : limite a -> 0+ (eta != 0) = 1/2
+Int e^{-2ik eta} e^{-ak} dk = Int cos - i Int sin = 1/(a + 2*I*eta)  = 1/(a + 2 i eta)
+  => limite a->0 : 1/(2 i eta) = -i/(2 eta) ; partie imaginaire -1/(2 eta) = -Int sin ; eta * Int sin = +1/2
+  eta = -0.1  eta*Int (quad par morceaux) = 0.499987501068  forme fermee = 0.499987500312
+  eta = -0.05  eta*Int (quad par morceaux) = 0.499950005369  forme fermee = 0.499950005
+  eta = -0.02  eta*Int (quad par morceaux) = 0.499687695629  forme fermee = 0.499687695191
+  eta = 0.05  eta*Int (quad par morceaux) = 0.499950005369  forme fermee = 0.499950005
+Conclusion : la quantite imprimee par le script tend vers +1/2 (quel que soit le signe de eta) ; l'annotation « attendu -1/2 » est fausse (signe).
+
+== Formule Gamma(4-N) (2 i eta)^{N-4} (regularisation d'Abel e^{-ak}, a->0+) ==
+Int_0^inf k^{3-N} e^{-(a + 2i eta)k} dk = Gamma(4-N) (a + 2 i eta)^{N-4}  [derive : transformee de Laplace, Re a > 0, N < 4]
+  N = 2.5  quad (a=1e-4) = (-13.77158018 - 68.20848175j)  Gamma(4-N)(2 i eta)^{N-4} = (-1.348351328 + 1.348351328j)
+  N = 3.0  quad (a=1e-4) = (-0.1963851485 + 0.5669122523j)  Gamma(4-N)(2 i eta)^{N-4} = (0.0 + 1.666666667j)
+  N = 3.5  quad (a=1e-4) = (1.615043276 + 1.600498749j)  Gamma(4-N)(2 i eta)^{N-4} = (1.618021594 + 1.618021594j)
+  N = 4 : Int_K0^inf dk k^{-1} e^{-2ik eta} = E_1(2 i eta K0) ~ -gamma_E - log(2 i eta K0) + ... : log|eta|, coupure IR K0 necessaire
+  N >= 5 : Int_0 dk k^{3-N} diverge en k -> 0 pour tout eta : coupure IR necessaire, pas de loi en eta sans elle
+
+== Gaussienne : I(eta) = Int_0^inf k^3 e^{-k^2/L^2} e^{-2ik eta} dk, controle numerique de l'expression sympy du script ==
+  eta = -0.7  quad = (-0.699154499909 + 0.676122086244j)  expression du script = (-0.6991544999093309+0.6761220862442325j)
+  eta = -0.05  quad = (1.40401769192 + 0.245054726067j)  expression du script = (1.4040176919222795+0.2450547260666874j)
+  eta = 0.0  quad = (1.42805 + 0.0j)  expression du script = (1.4280500000000003+0j)
+  borne uniforme : |I(eta)| <= Int k^3 e^{-k^2/L^2} dk = L^4/2 pour tout eta reel  [derive]
+
+== Tache 5 : borne generale ==
+  T^tf_ij(eta) = (2 pi)^{-3} Int dk k^3 Re[ e^{-2ik eta} M_ij(k) ],  M_ij(k) = Int dOmega F(k,Omega) (n_i n_j - delta_ij/3)
+  |M_ij(k)| <= (2/3) Int dOmega |F(k,Omega)|  =>  |T^tf_ij(eta)| <= (2/3)(2pi)^{-3} Int d^3k k |F(k)|  pour tout eta  [derive]
+  Si F decroit rapidement (uniformement en direction), le membre de droite est fini : T^tf borne, continu (Riemann-Lebesgue),
+  meme C^infini si tous les moments existent. Un comportement en 1/eta est donc impossible. La dependance angulaire n'y change rien.
+  Le 1/eta du cas N=3 provient de la queue k -> infini (k ~ 1/|eta|), pas de l'infrarouge.
+
+== Tache 5 : cas limite, decroissance rapide direction par direction mais NON uniforme ==
+  F(k,theta) = i exp(-k^2 theta^{4/3}) (theta = angle polaire) : gaussien pour chaque theta > 0, mais F = i sur l'axe theta = 0.
+  k = 5  k^3 M_zz(k) = 2.7021308   (limite theorique c = 2.784164 )
+  k = 20  k^3 M_zz(k) = 2.7828554   (limite theorique c = 2.784164 )
+  k = 80  k^3 M_zz(k) = 2.7841435   (limite theorique c = 2.784164 )
+  k = 320  k^3 M_zz(k) = 2.7841637   (limite theorique c = 2.784164 )
+  => k^3 M_zz(k) -> c != 0 : le moment angulaire se comporte comme k^{-3}, i.e. N = 3 effectif, donc
+     T^tf_zz(eta) = (2pi)^{-3} Int dk k^3 M_zz(k) sin(2 k eta) ~ c/(2 eta) (2pi)^{-3} quand eta -> 0 :
+  eta = -0.2  eta * Int dk k^3 M_zz sin(2k eta) e^{-ak} = 0.92475222   (c/2 = 1.392082 )
+  eta = -0.1  eta * Int dk k^3 M_zz sin(2k eta) e^{-ak} = 1.2487365   (c/2 = 1.392082 )
+  eta = -0.05  eta * Int dk k^3 M_zz sin(2k eta) e^{-ak} = 1.3524719   (c/2 = 1.392082 )
+  Ce cas n'est PAS un contre-exemple au sens strict : F n'est pas a decroissance rapide sur R^3 (pas de decroissance sur l'axe),
+  donc l'etat n'est pas Hadamard (singularite du cone reflechi conservee dans la direction de l'axe).

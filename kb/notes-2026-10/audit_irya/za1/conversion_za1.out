@@ -1,0 +1,5 @@
+kappa^2 / kappa_P^2 = 2
+Dirac             : coefficient de kappa_P^2 H^2 = 1/(40*pi**2) ; b = 1/(320*pi**2) ; n = 8
+scalaire conf.    : coefficient de kappa_P^2 H^2 = 1/(240*pi**2) ; b = 1/(1920*pi**2) ; n = 8
+photon (derive)   : coefficient de kappa_P^2 H^2 = 1/(20*pi**2) ; b = 1/(160*pi**2) ; n = 8
+Tous les n egaux : True ; n = {8}

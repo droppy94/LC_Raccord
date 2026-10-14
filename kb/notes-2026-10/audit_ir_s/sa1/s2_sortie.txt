@@ -1,0 +1,35 @@
+[calcule] mode eq u_ss-(2/s)u_s+k^2u = 0
+[calcule] Ric[ghat]-3 ghat (ordre eps) = Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])
+[calcule] C[g] nul a eps^0 : True
+[calcule] Bach lineaire de g (doit etre 0 : ghat Einstein, Bach conformement covariant) = Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])
+[calcule] T^_ab / eps, composantes non nulles :
+  T^_22 = 4*b*k**3*s*(-A*sin(k*s) + B*cos(k*s))*cos(k*x)
+     serie s->0 : 4*B*b*k**3*s*cos(k*x) - 2*B*b*k**5*s**3*cos(k*x) - 4*A*b*k**4*s**2*cos(k*x) + O(s**4)
+  T^_33 = 4*b*k**3*s*(A*sin(k*s) - B*cos(k*s))*cos(k*x)
+     serie s->0 : -4*B*b*k**3*s*cos(k*x) + 2*B*b*k**5*s**3*cos(k*x) + 4*A*b*k**4*s**2*cos(k*x) + O(s**4)
+[calcule] contient log(s) : False
+[calcule] trace eta^ab T^_ab = 0
+[calcule] conservation nabla^a T^_ab = [0, 0, 0, 0]
+[calcule] R_{rho nu lambda} (coefficient de eps), nu<lambda, non nuls :
+  R_202 = 2*b*k**3*kappa*(-2*A*sin(k*s) + 2*B*cos(k*s) - k*s*(A*cos(k*s) + B*sin(k*s)))*cos(k*x)/s
+     serie : 4*B*b*k**3*kappa*cos(k*x)/s - 4*B*b*k**5*kappa*s*cos(k*x) - 6*A*b*k**4*kappa*cos(k*x) + O(s**2)
+  R_212 = 2*b*k**4*kappa*(A*sin(k*s) - B*cos(k*s))*sin(k*x)
+     serie : -2*B*b*k**4*kappa*sin(k*x) + 2*A*b*k**5*kappa*s*sin(k*x) + O(s**2)
+  R_303 = 2*b*k**3*kappa*(2*A*sin(k*s) - 2*B*cos(k*s) + k*s*(A*cos(k*s) + B*sin(k*s)))*cos(k*x)/s
+     serie : -4*B*b*k**3*kappa*cos(k*x)/s + 4*B*b*k**5*kappa*s*cos(k*x) + 6*A*b*k**4*kappa*cos(k*x) + O(s**2)
+  R_313 = 2*b*k**4*kappa*(-A*sin(k*s) + B*cos(k*s))*sin(k*x)
+     serie : 2*B*b*k**4*kappa*sin(k*x) - 2*A*b*k**5*kappa*s*sin(k*x) + O(s**2)
+[calcule] composantes electriques C_sisj / eps et W = C/s :
+  C_s2s2 = k**3*s*(A*sin(k*s) - B*cos(k*s))*cos(k*x)/2  ; serie : -B*k**3*s*cos(k*x)/2 + B*k**5*s**3*cos(k*x)/4 + A*k**4*s**2*cos(k*x)/2 + O(s**4)
+  W_s2s2=C/s serie : -B*k**3*cos(k*x)/2 + B*k**5*s**2*cos(k*x)/4 + A*k**4*s*cos(k*x)/2 + O(s**3)
+  C_s3s3 = k**3*s*(-A*sin(k*s) + B*cos(k*s))*cos(k*x)/2  ; serie : B*k**3*s*cos(k*x)/2 - B*k**5*s**3*cos(k*x)/4 - A*k**4*s**2*cos(k*x)/2 + O(s**4)
+  W_s3s3=C/s serie : B*k**3*cos(k*x)/2 - B*k**5*s**2*cos(k*x)/4 - A*k**4*s*cos(k*x)/2 + O(s**3)
+[calcule] composantes magnetiques (C_sijk) non nulles :
+  C_s212 = k**3*s*(A*cos(k*s) + B*sin(k*s))*sin(k*x)/2  ; serie : B*k**4*s*sin(k*x)/2 + A*k**3*sin(k*x)/2 + O(s**2)
+  C_s313 = -k**3*s*(A*cos(k*s) + B*sin(k*s))*sin(k*x)/2  ; serie : -B*k**4*s*sin(k*x)/2 - A*k**3*sin(k*x)/2 + O(s**2)
+[calcule] rapports R / (W electrique) au premier ordre en s :
+  R_(2, 0, 2) terme singulier : 4*B*b*k**3*kappa*cos(k*x)/s
+  R_(2, 1, 2) terme singulier : 0
+  R_(3, 0, 3) terme singulier : -4*B*b*k**3*kappa*cos(k*x)/s
+  R_(3, 1, 3) terme singulier : 0
+[calcule] W_sisj a scri : {(2, 2): -B*k**3*cos(k*x)/2, (3, 3): B*k**3*cos(k*x)/2}

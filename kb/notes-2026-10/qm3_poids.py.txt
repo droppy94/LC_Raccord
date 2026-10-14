@@ -1,0 +1,136 @@
+"""
+qm3_poids.py  --  NOTE-BORD-EON-90 (chantier Q-M3), script de verification.
+
+Objet : evaluer, pour des sources homogenes test en de Sitter, le second membre
+de l'equation (2.17) de Friedrich, arXiv:1311.0700v2 :
+
+    nabla_mu W^mu_{rho nu lambda} = 2 Omega^{-1} hat-nabla_[nu hat-L_lambda] rho
+
+avec hat-L_{mu nu} = (kappa/2)(hat-T_{mu nu} - (1/3) hat-T hat-g_{mu nu}) + (lambda/6) hat-g_{mu nu}
+(sous (2.17) et preuve du thm 3.1), et le comparer au critere du corpus
+(ordre de la trace rescalee Omega^{-4} hat-T, reprise route kappa 2026-08-24 §2).
+
+Conventions (Friedrich = corpus a la notation pres) :
+  g = Omega^2 hat-g, hat-g physique, g plat (Minkowski) ici, Omega = -H eta -> 0+ quand eta -> 0-.
+  hat-g = a^2 (-d eta^2 + dx^2), a = -1/(H eta) = 1/Omega.
+  Les composantes coordonnees en (eta, x, y, z) sont g-orthonormees.
+Source test (ordre 1 en kappa, fond dS fixe) : fluide parfait homogene rho(eta), p(eta).
+
+Partie A : identite d'indices (constat prealable de NOTE-89 §1).
+Partie B : ordres en Omega du second membre de (2.17) pour
+   B1 rayonnement (trace nulle, rho ~ a^-4)      [controle : doit etre regulier]
+   B2 poussiere (rho ~ a^-3)                     [matiere massive generique]
+   B3 'trace pure conservee' de type anomalie : hat-T = A a^-4 impose par la
+      conservation rho = (B - A ln a) a^-4      [canal de jauge sous C-M1, modele homogene]
+   B4 fluide de trace hat-T = A a^-2 (meme loi que le scalaire de Friedrich m^2 = 2 lambda/3)
+"""
+import sympy as sp
+
+eta = sp.symbols('eta', negative=True)
+H, A, B = sp.symbols('H A B', positive=True)
+kap, lam = sp.symbols('kappa lambda', positive=True)
+X = [eta] + list(sp.symbols('x y z', real=True))
+n = 4
+
+# ---------------- Partie A ----------------
+Om = sp.symbols('Omega', positive=True)
+Tmix = sp.symbols('Tmix')  # hat-T^mu_nu (physique, une composante)
+# g_{mu a} = Om^2 hat-g_{mu a} ; T_rescale^mu_nu := Om^-4 hat-T^mu_nu (corpus)
+# abaissement avec g : T_rescale_{mu nu} = g_{mu a} T^a_nu = Om^2 hat-g Om^-4 hat-T^a_nu = Om^-2 hat-T_{mu nu}
+poids_cov = sp.simplify(Om**2 * Om**-4)
+print("A. poids covariant du tenseur rescale du corpus :", poids_cov, "(attendu Omega^-2)")
+assert poids_cov == Om**-2
+# trace avec g : g^{mu nu} T_{mu nu}(rescale) = Om^-2 hat-g^{..} * Om^-2 hat-T_.. = Om^-4 hat-T
+print("A. trace (metrique g) du tenseur rescale       :", sp.simplify(Om**-2*Om**-2), "x hat-T")
+print("A. scalaire T* de Friedrich (3.7)              : Omega^-2 x hat-T  -> objet DIFFERENT de la trace rescalee du corpus (facteur Omega^2)")
+
+# ---------------- Partie B ----------------
+a = -1/(H*eta)
+Omega = 1/a                      # = -H eta
+ghat = sp.diag(-a**2, a**2, a**2, a**2)
+ginv = ghat.inv()
+
+def christoffel(gm, gi):
+    G = [[[0]*n for _ in range(n)] for _ in range(n)]
+    for l in range(n):
+        for m in range(n):
+            for k in range(n):
+                G[l][m][k] = sp.simplify(sum(gi[l, s]*(sp.diff(gm[s, m], X[k]) + sp.diff(gm[s, k], X[m]) - sp.diff(gm[m, k], X[s])) for s in range(n))/2)
+    return G
+Gam = christoffel(ghat, ginv)
+
+def cov_deriv_2tensor(Tm):
+    # (hat-nabla_r T)_{m n} = d_r T_mn - Gam^s_{r m} T_sn - Gam^s_{r n} T_ms
+    D = {}
+    for r in range(n):
+        for m in range(n):
+            for k in range(n):
+                D[(r, m, k)] = sp.diff(Tm[m, k], X[r]) - sum(Gam[s][r][m]*Tm[s, k] + Gam[s][r][k]*Tm[m, s] for s in range(n))
+    return D
+
+def rhs_217(rho, p, label):
+    u = sp.Matrix([-a, 0, 0, 0])            # u_mu (covariant), u^0 = 1/a
+    T = sp.zeros(4, 4)
+    for i in range(4):
+        for j in range(4):
+            T[i, j] = (rho + p)*u[i]*u[j] + p*ghat[i, j]
+    trT = sp.simplify(sum(ginv[i, j]*T[i, j] for i in range(4) for j in range(4)))
+    # conservation hat-nabla^mu T_mu0 = 0
+    DT = cov_deriv_2tensor(T)
+    cons = sp.simplify(sum(ginv[m, r]*DT[(r, m, 0)] for m in range(4) for r in range(4)))
+    L = kap/2*(T - sp.Rational(1, 3)*trT*ghat) + lam/6*ghat
+    DL = cov_deriv_2tensor(L)
+    res = {}
+    for (r, m, k) in [(1, 0, 1), (0, 1, 1)]:   # composantes non nulles representatives, antisym en (r,m)
+        C = sp.simplify((DL[(r, m, k)] - DL[(m, r, k)])/2)
+        res[(r, m, k)] = sp.simplify(2*C/Omega)
+    # ordres en Omega : Omega = -H eta
+    w = sp.symbols('w', positive=True)    # w = Omega
+    sub = {eta: -w/H}
+    corpus_trace = sp.simplify((trT/Omega**4).subs(sub))
+    print(f"\n{label}")
+    print("   conservation (doit valoir 0)   :", sp.simplify(cons))
+    print("   trace physique hat-T           :", sp.simplify(trT.subs(sub)))
+    print("   trace rescalee corpus O^-4 T   :", corpus_trace)
+    print("   T* Friedrich = O^-2 T          :", sp.simplify((trT/Omega**2).subs(sub)))
+    out = {}
+    for key, v in res.items():
+        vv = sp.simplify(sp.expand(v.subs(sub)))
+        out[key] = vv
+        print(f"   RHS (2.17) composante {key} :", vv)
+    return cons, out
+
+w = sp.symbols('w', positive=True)
+
+# B1 rayonnement
+c1, o1 = rhs_217(B*a**-4, B*a**-4/3, "B1 rayonnement : rho = B a^-4, p = rho/3")
+assert sp.simplify(c1) == 0
+for v in o1.values():
+    assert sp.limit(v, w, 0) == 0 or sp.limit(v, w, 0).is_finite
+
+# B2 poussiere
+c2, o2 = rhs_217(B*a**-3, 0, "B2 poussiere : rho = B a^-3, p = 0")
+assert sp.simplify(c2) == 0
+sing2 = any(sp.limit(sp.Abs(v), w, 0) == sp.oo for v in o2.values())
+print("   -> singulier a I+ :", sing2)
+
+# B3 anomalie homogene : hat-T = -rho + 3p = A a^-4 ; conservation -> rho = (B - A ln a) a^-4
+rho3 = (B - A*sp.log(a))*a**-4
+p3 = (rho3 + A*a**-4)/3
+c3, o3 = rhs_217(rho3, p3, "B3 trace imposee hat-T = A a^-4 (type anomalie), rho = (B - A ln a) a^-4")
+assert sp.simplify(c3) == 0
+for k, v in o3.items():
+    print(f"   limite Omega->0 de {k} :", sp.limit(v, w, 0))
+
+# B4 trace hat-T = A a^-2 (loi du scalaire de Friedrich), fluide conserve
+r4 = sp.Function('r')
+# -rho + 3p = A a^-2 ; rho' + 3 (a'/a)(rho + p) = 0  ->  rho' + (a'/a)(4 rho + A a^-2) = 0
+sol = sp.dsolve(sp.Eq(sp.diff(r4(eta), eta) + sp.diff(a, eta)/a*(4*r4(eta) + A*a**-2), 0), r4(eta))
+rho4 = sp.simplify(sol.rhs.subs(sp.Symbol('C1'), 0))
+p4 = (rho4 + A*a**-2)/3
+c4, o4 = rhs_217(rho4, p4, f"B4 trace imposee hat-T = A a^-2, rho = {rho4}")
+assert sp.simplify(c4) == 0
+sing4 = any(sp.limit(sp.Abs(v), w, 0) == sp.oo for v in o4.values())
+print("   -> singulier a I+ :", sing4)
+
+print("\nEXIT 0")

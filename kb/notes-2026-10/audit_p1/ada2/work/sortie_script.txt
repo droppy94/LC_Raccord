@@ -1,0 +1,40 @@
+== ad-1 : Bach linearise et identite de de Sitter ==
+B_yy / (box^2 h_yy) = -1/4    (attendu -1/4)
+B_tt, B_tx, B_xx : 0 0 0   B_zz = -B_yy : True
+mode A : equation de de Sitter residu = 0  ; (d^2+k^2) u = 2*k**2*cos(k*tau)  ; (d^2+k^2)^2 u = 0
+mode B : equation de de Sitter residu = 0  ; (d^2+k^2) u = 2*k**2*sin(k*tau)  ; (d^2+k^2)^2 u = 0
+
+== ad-2 : noyau retarde K_k(T) de ln((k^2 - (omega + i0)^2)/mu^2) ==
+  ln(k^2 - (omega+i0)^2) = ln(k - omega - i0) + ln(k + omega + i0).
+  TF inverse (convention f(T) = Int domega/(2pi) e^{-i omega T} f~(omega)) de ln(a - omega - i0) : -[theta(T) e^{-iaT}/T]_+ - (gamma_E + ln mu) delta(T)  (d/dT de -i theta(T) e^{-iaT}... : voir controle)
+  Somme des deux branches : K_k(T) = -2 [theta(T) cos(kT)/T]_+ + c(mu,k) delta(T) ; support dans T >= 0 (retarde) ; decroissance en 1/T.
+  controle Frullani : Int_0^inf (cos aT - cos bT)/T dT = 1.09861228866811   ln(b/a) = 1.09861228866811
+
+== ad-3 : histoire adiabatique u_eps = e^{eps tau} u_0, B_eps = (d^2+k^2)^2 u_eps ==
+  mode A : e^(-eps tau) B_eps = -8*epsilon*k**3*sin(k*tau)  + O(eps^2)
+  mode B : e^(-eps tau) B_eps = 8*epsilon*k**3*cos(k*tau)  + O(eps^2)
+  reponse retardee R_eps(tau0) (partie non locale, mode A, k = 1), regularisation de Hadamard [.]_+ a l'echelle 1 :
+    tau0 = 0.0, eps = 0.1 : R_eps = -1.23143421314365   R_eps/(eps ln(1/eps)) = -5.34805083595158
+    tau0 = 0.0, eps = 0.01 : R_eps = -0.127253503976727   R_eps/(eps ln(1/eps)) = -2.76327472899731
+    tau0 = 0.0, eps = 0.001 : R_eps = -0.0126006887864328   R_eps/(eps ln(1/eps)) = -1.82413653604265
+    tau0 = -1.0, eps = 0.1 : R_eps = -0.719564986148345   R_eps/(eps ln(1/eps)) = -3.12503102855016
+    tau0 = -1.0, eps = 0.01 : R_eps = -0.248042537614933   R_eps/(eps ln(1/eps)) = -5.38617526817226
+    tau0 = -1.0, eps = 0.001 : R_eps = -0.0406615917414598   R_eps/(eps ln(1/eps)) = -5.88636830623962
+
+== ad-4 : histoire brusque lissee : u = S(tau) u_0, S = 0 pour tau < tau0, S = 1 pour tau > tau0 + delta, raccord C^inf (fonction de transition en e^{-1/t}) ==
+  B[h] est a support dans [tau0, tau0+delta] = [-6, -4] ; reponse R(tau) = Int K(tau - tau') B(tau') dtau' pour tau > -4 : K lisse sur le support (T >= 2)
+  B sur le support (tau, B) : [(-5.75, -343.9142), (-5.5, 279.8707), (-5.25, -16.1459), (-5.0, 3.6751), (-4.75, 75.4447), (-4.5, -296.0089), (-4.25, 287.2143)]
+    tau = -2.0 : R(tau) = -3.32115065133116
+    tau = -1.0 : R(tau) = -1.22505678296147
+    tau = -0.5 : R(tau) = -0.319628143620471
+    tau = -0.1 : R(tau) = 0.280574327017049
+    tau = -0.01 : R(tau) = 0.396002274108695
+    tau = 0.0 : R(tau) = 0.408340577156179
+  R est lisse en tau = 0 (convolution d'un noyau C^inf pour T >= 2 avec une source C^inf a support compact) ; valeur finie non nulle ; depend de tau0 et du raccord.
+
+== ad-5 : T-hat_Gamma = s^2 R(tau = -s) avec R lisse en 0 => T-hat ~ s^2 R(0) + ... : aucun terme s^1 ; pas de pole. ==
+  condition de convergence : Int_{-inf}^{tau} |B(tau')| / (1 + |tau - tau'|) dtau' < inf ; satisfaite si B est integrable a poids 1/|tau'| dans le passe (B = 0 hors d'un compact : trivial ; adiabatique : B = O(eps) e^{eps tau'}, integrale O(eps ln 1/eps) -> 0).
+
+real	0m19.800s
+user	0m19.410s
+sys	0m0.063s

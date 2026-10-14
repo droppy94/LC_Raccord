@@ -1,0 +1,15 @@
+# Prompt ABA-1 : lecture aveugle de deux sources et conversion (aveugle au travail anterieur)
+
+Tu es un auditeur froid. Tu ne connais pas le travail anterieur. Ne lis aucun fichier du disque en dehors de /home/claude/audit_p1/aba1/ (rien sous /mnt/user-data/, /home/claude/work/, ni dans d'autres dossiers audit_*). Lis les sources via les outils alphaXiv (get_paper_content avec fullText true, answer_pdf_queries). Reponds en francais, sans tirets longs. Etiquettes : [extrait] (citation verbatim avec numero d'equation ou de section), [calcule], [derive].
+
+## Sources
+S8 : arXiv:2412.11022 (Foraci, Woodard, decembre 2024). S27 : arXiv:2405.01024 (Miao, Tsamis, Woodard, 2024).
+
+## Taches
+1. Pour chaque source : titre, auteurs, date, type (prepublication ou publie, avec reference de revue si elle figure), resume.
+2. S8 : releve avec numero d'equation la correction a une boucle du Weyl electrique C_0i0j des ondes gravitationnelles sur de Sitter induite par la boucle de photon, la convention de kappa, et la forme resommee finale (section 6). Releve ce que dit S8 de la contribution NON LOCALE du self-energy au mode graviton (section 4 : que devient-elle sur le mode de de Sitter u_0, et par quelle identite). Releve les deux « sources » de logarithmes seculaires distinguees par S8 (section 1), laquelle s'applique au photon, et la relation (equation numerotee) entre mu et a qui motive le procede.
+3. S27 : releve la formule de la renormalisation de champ delta Z en fonction de c_1, c_2, kappa, H, D (numero d'equation), la valeur de gamma pour le scalaire MMC, l'equation de Callan-Symanzik utilisee, et la justification du remplacement de d/d ln mu par d/d ln a. Releve verbatim les phrases qui (a) decrivent comment les contre-termes sont « dissected » ou attribues a une renormalisation de champ plutot que de G, (b) introduisent la sommation en puissance (section 5, autour de l'eq. 93) avec toute reserve formulee (par exemple sur la course de G), (c) disent si la validite de la variante du groupe de renormalisation est prouvee, verifiee a un ordre superieur, ou seulement comparee a des resultats perturbatifs (section 2, modeles sigma, Table 1).
+4. Les deux sources discutent-elles l'independance de jauge gravitationnelle des logarithmes induits par les boucles de matiere ? Dis explicitement ce qu'elles NE discutent PAS parmi : jauge, limite a -> infini, nombre maximal d'e-folds, verification a deux boucles. Releve ce que S8 dit de « late time ».
+5. Conversion [calcule] en sympy dans /home/claude/audit_p1/aba1/work/ : en posant kappa_P^2 = 8 pi G et b = (N_S + 6 N_F + 12 N_V)/(120 (4 pi)^2), exprime le coefficient du ln a de S8 pour le photon sous la forme n x b kappa_P^2 H^2 et donne n ; recalcule gamma de S8 a partir de c_2 (eq. 56 de S8) et verifie que l'exposant resomme vaut -2 gamma ; recalcule gamma de S27 a partir de c_1, c_2 (eq. 85-86) et compare a sa valeur affichee.
+
+Rends un rapport structure dans /home/claude/audit_p1/aba1/RAPPORT-ABA1.md ; sauvegarde les extraits verbatim dans /home/claude/audit_p1/aba1/work/ avec leurs empreintes sha256.

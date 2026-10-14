@@ -1,0 +1,13 @@
+(a) Christoffels conforme == metrique : True
+    non nuls : {(0, 0, 0): -1/s, (0, 1, 1): -1/s, (0, 2, 2): -1/s, (0, 3, 3): -1/s, (1, 0, 1): -1/s, (1, 1, 0): -1/s, (2, 0, 2): -1/s, (2, 2, 0): -1/s, (3, 0, 3): -1/s, (3, 3, 0): -1/s}
+electrique <X^M> diag : [c**2*s**2*(2*b1*beta + 2*beta*lambda + 2*beta*log(s) + 4*beta + 1)/(4*e**2), c**2*s**2*(2*b1*beta + 2*beta*lambda + 2*beta*log(s) + 4*beta + 1)/(4*e**2), c**2*s**2*(-2*b1*beta + 4*beta*k**2*s**2*log(s) - 2*beta*lambda - 2*beta*log(s) - 4*beta - 1)/(4*e**2), -c**2*s**2*(-2*b1*beta + 4*beta*k**2*s**2*log(s) - 2*beta*lambda - 2*beta*log(s) - 4*beta - 1)/(4*e**2)]
+  R elec (1, 0, 1) : b1*beta*c**2*kappa/(2*e**2) + beta*c**2*kappa*lambda/(2*e**2) + beta*c**2*kappa*log(s)/(2*e**2) + 7*beta*c**2*kappa/(6*e**2) + c**2*kappa/(4*e**2)
+  R elec (2, 0, 2) : -b1*beta*c**2*kappa/e**2 - beta*c**2*kappa*lambda/e**2 - beta*c**2*kappa*log(s)/e**2 - 7*beta*c**2*kappa/(3*e**2) - c**2*kappa/(2*e**2)
+  R elec (3, 0, 3) : b1*beta*c**2*kappa/(2*e**2) + beta*c**2*kappa*lambda/(2*e**2) + beta*c**2*kappa*log(s)/(2*e**2) + 7*beta*c**2*kappa/(6*e**2) + c**2*kappa/(4*e**2)
+somme de poids egaux (c = k u0) :
+  R tot (1, 0, 1) : b1*beta*k**2*kappa*u0**2/(2*e**2) + beta*k**2*kappa*lambda*u0**2/e**2 + beta*k**2*kappa*u0**2/e**2 + k**2*kappa*u0**2/(2*e**2)
+  R tot (2, 0, 2) : -b1*beta*k**2*kappa*u0**2/e**2 - beta*k**2*kappa*lambda*u0**2/(2*e**2) - 3*beta*k**2*kappa*u0**2*log(s)/(2*e**2) - 5*beta*k**2*kappa*u0**2/(2*e**2) - k**2*kappa*u0**2/(4*e**2)
+  R tot (3, 0, 3) : b1*beta*k**2*kappa*u0**2/(2*e**2) - beta*k**2*kappa*lambda*u0**2/(2*e**2) + 3*beta*k**2*kappa*u0**2*log(s)/(2*e**2) + 3*beta*k**2*kappa*u0**2/(2*e**2) - k**2*kappa*u0**2/(4*e**2)
+  <X^M> tot diag : [b1*beta*k**2*s**2*u0**2/(2*e**2) + beta*k**2*lambda*s**2*u0**2/e**2 + beta*k**2*s**2*u0**2/e**2 + k**2*s**2*u0**2/(2*e**2), b1*beta*k**2*s**2*u0**2/(2*e**2) + beta*k**2*lambda*s**2*u0**2/e**2 + beta*k**2*s**2*u0**2/e**2 + k**2*s**2*u0**2/(2*e**2), -b1*beta*k**2*s**2*u0**2/(2*e**2) - beta*k**2*s**2*u0**2/e**2 + (2*beta*k**4*s**4*u0**2/e**2 - beta*k**2*s**2*u0**2/e**2)*log(s), b1*beta*k**2*s**2*u0**2/(2*e**2) + beta*k**2*s**2*u0**2/e**2 + (-2*beta*k**4*s**4*u0**2/e**2 + beta*k**2*s**2*u0**2/e**2)*log(s)]
+  apres isotropisation : T_ss = b1*beta*k**2*s**2*u0**2/(2*e**2) + beta*k**2*lambda*s**2*u0**2/e**2 + beta*k**2*s**2*u0**2/e**2 + k**2*s**2*u0**2/(2*e**2) ; T_ii (chaque) = b1*beta*k**2*s**2*u0**2/(6*e**2) + beta*k**2*lambda*s**2*u0**2/(3*e**2) + beta*k**2*s**2*u0**2/(3*e**2) + k**2*s**2*u0**2/(6*e**2)
+EXIT 0

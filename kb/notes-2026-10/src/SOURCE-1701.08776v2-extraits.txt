@@ -1,0 +1,7 @@
+Dvali, Gomez, Zell, "Quantum Break-Time of de Sitter", JCAP (2017), arXiv:1701.08776v2.
+Lu via alphaXiv, 2026-10-12 (reexamen de la convention lisse, NOTE-138 ; lecture hors gel, declaree). Extraits verbatim.
+[resume] "They violate the de Sitter symmetry and lead to a finite quantum break-time of the de Sitter state equal to the de Sitter radius times N. We also point out that the quantum-break time is inversely proportional to the number of particle species in the theory."
+[p.41, eq. 86-87] "t_q ~ Gamma^-1 N ~ N/sqrt(Lambda)" ; "t_q ~ M_P^2 / Lambda^(3/2)".
+[p.43, eq. 90] "t_q ~ (1/sqrt(Lambda)) (1/N_sp) (M_P^2/Lambda)".
+[p.47] "The classical description of an inflationary universe with Hubble parameter H and number of species N_sp can only be trusted for a number of e-foldings not exceeding (1/N_sp) M_P^2/H^2."
+[p.42] "we should expect that after t_q, de Sitter evolves into an intrinsically-quantum state with no description in form of a solution of classical general relativity."

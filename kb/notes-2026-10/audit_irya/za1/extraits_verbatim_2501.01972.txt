@@ -1,0 +1,62 @@
+SOURCE : arXiv:2501.01972v1 [gr-qc] 27 Dec 2024, UFIFT-QG-24-09
+"Resumming Fermion Loops for Inflationary Gravity", A. J. Foraci and R. P. Woodard, Department of Physics, University of Florida.
+Texte recupere via alphaXiv get_paper_content (fullText) et answer_pdf_queries le 2026-10-12. Numeros de page = pagination PDF alphaXiv (page 1 = page de titre ; les numeros imprimes du papier valent page PDF - 1).
+
+=== E01 (p.1, resume) ===
+We compute the 1-loop contribution to the graviton self-energy from a loop of massless fermions on a general cosmological background. The result is used to quantum-correct the linearized Einstein equation on de Sitter background and work out 1-loop corrections to gravitational radiation and to the response to a point mass. The renormalization group is employed to sum these to all orders for as long as the de Sitter phase persists.
+
+=== E02 (p.2, eq. 2, convention kappa) ===
+g_{μν}(x) ≡ a^2 g̃_{μν} ≡ a^2 [η_{μν} + κ h_{μν}(x)] , κ^2 ≡ 16πG . (2)
+
+=== E03 (p.3, eq. 7, contre-termes) ===
+∆L_Einstein = c_1 R^2 √−g + c_2 C_{αβγδ} C^{αβγδ} √−g . (7)
+
+=== E04 (p.5, eq. 26-27, c_2 et self-energie renormalisee) ===
+c_2 = μ^{D−4} / (64 π^{D/2}) × Γ(D/2) / ((D+1)(D−3)^2 (D−4)) . (26)
+−i[^{μν}Σ^{ρσ}_ren] = κ^2 / (2^8·5·π^4) C^{αβγδμν} × C'^{ρσ}_{αβγδ} { 4π^2 ln(aa') iδ^4(x−x') + ∂^2 [ ln(μ^2 ∆x^2)/∆x^2 ] } . (27)
+
+=== E05 (p.6, in-in) ===
+Employing the in-out self-energy (27) in this equation would be inappropriate because it is neither real nor causal. Both of these difficulties can be avoided by employing the in-in, or Schwinger-Keldysh, formalism [22–24].
+
+=== E06 (p.6, de Sitter) ===
+Our result (32) is valid for an arbitrary cosmological background (1). To facilitate actually solving equation (28) we will specialize to de Sitter, whose scale factor is a = e^{Ht} = −(Hη)^{−1}, with Hubble constant H.
+
+=== E07 (p.7, Dirac = 1/2 EM, eq. 35) ===
+Because the massless Dirac contribution (32) is 1/2 times the contribution from electromagnetism [6], we can read off the 1-loop solutions for Dirac from those for Maxwell. Hence the 1-loop correction to the electric components of the Weyl tensor for plane wave gravitational radiation is [8],
+C_{0i0j}(x) −→ C^{tree}_{0i0j}(x) { 1 + κ^2 H^2/(80π^2) ln(a) + . . . } . (35)
+
+=== E08 (p.7, eq. 36-37, potentiel newtonien et slip) ===
+Ψ(t, r) = GM/(ar) { 1 + κ^2/(120π^2 a^2 r^2) + κ^2 H^2/(80π^2) ln(aHr) + . . . } , (36)
+Ψ(t, r) + Φ(t, r) = GM/(ar) { 0 + κ^2/(240π^2 a^2 r^2) − κ^2 H^2/(80π^2) + . . . } . (37)
+The fractional κ^2/a^2 r^2 corrections are de Sitter descendants of old effects on flat space background [9]; the terms proportional to κ^2 H^2 are new.
+
+=== E09 (p.7, introduction de la resommation) ===
+During a prolonged period of de Sitter inflation, the secular 1-loop corrections in (35) and (36) must eventually overwhelm the tree order result. At this point perturbation theory breaks down and one must invoke a nonperturbative resummation scheme to work out what happens. The renormalized self-energy (27) shows the close connection between the renormalization scale μ and the cosmological scale factor,
+4π^2 ln(aa') iδ^4(x−x') + ∂^2 [ ln(μ^2 ∆x^2)/∆x^2 ] = 4π^2 ln(μ^2 aa') iδ^4(x−x') + ∂^2 [ ln(∆x^2)/∆x^2 ] . (38)
+This suggests that the secular logarithms can be resummed using a variant of the renormalization group. Because the same two counterterms (7) suffice to renormalize any single matter loop correction to gravity, a general analysis is possible. In a study of the massless, minimally coupled scalar loop correction to gravity it was shown that a particular combination can be considered as a field strength renormalization for the graviton [27],
+δZ = D [ 2(D−1) c_1 − c_2 ] κ^2 H^2 . (39)
+The same combination works as well for electromagnetism [8]. Dirac fermions have c_1 = 0 and c_2 given by expression (26), which implies the gamma function,
+γ ≡ ∂ ln(1+δZ) / ∂ ln(μ^2) = − κ^2 H^2/(160π^2) . (40)
+
+=== E10 (p.8, Callan-Symanzik et conclusion de la resommation, eq. 41-43) ===
+One can consider both the Weyl tensor (35) and the Newtonian potential (36) to be 2-point Green's functions. Hence the Callan-Symanzik equation implies,
+[ ∂/∂ ln(μ) + β_G ∂/∂G + 2γ ] G^{(2)} = 0 . (41)
+The beta function vanishes to the order we are working, and the connection (38) between μ and a means that we can replace the derivative with respect to ln(μ) in equation (41) by a derivative with respect to ln(a). At this point one sees that the renormalization group explains the secular factors in expressions (35) and (36) and even permits their resummation,
+C_{0i0j}(x) −→ C^{tree}_{0i0j}(x) × [a(t)]^{κ^2 H^2/(80π^2)} , (42)
+Ψ(t, r) −→ GM/(a(t) r) × [a(t)Hr]^{κ^2 H^2/(80π^2)} . (43)
+
+=== E11 (p.8, conclusions, mots de la resommation) ===
+And we were able to resum the results using a variant of the renormalization group (42-43).
+
+=== E12 (p.8, photon) ===
+We could not assume that the primitive contribution from photons would be the same as in flat space because electromagnetism is only conformally invariant for D = 4 dimensions. This shows up in the photon propagator on de Sitter background depending on the scale factor and the Hubble constant for general D [28].
+
+=== E13 (p.9, scalaire conformement couple, eq. 45-47) ===
+The Schwinger-Keldysh result is 1/12 times that of electromagnetism [30],
+[^{μν}Σ^{ρσ}_MCC](x; x') = − κ^2/(2^{10}·3·5·π^3) C^{αβγδμν} × C'^{ρσ}_{αβγδ} [ 8π ln(aa') δ^4(x−x') + f_B(x−x') ] . (45)
+In the same way we can solve the linearized Einstein equation (28) and resum the results using the renormalization group,
+C_{0i0j} = C^{tree}_{0i0j} { 1 + κ^2 H^2/(480π^2) ln(a) + . . . } −→ C^{tree}_{0i0j} × [a(t)]^{κ^2 H^2/(480π^2)} , (46)
+Ψ = GM/(ar) { 1 + κ^2/(720π^2 a^2 r^2) + κ^2 H^2/(480π^2) ln(aHr) + . . . } −→ GM/(ar) × [a(t)Hr]^{κ^2 H^2/(480π^2)} . (47)
+
+=== E14 (p.3, jauge de Lorentz locale) ===
+If the local Lorentz gauge is fixed by requiring the vierbein to be symmetric e_{μa} = e_{aμ} there are no local Lorentz ghosts and one can regard the vierbein as a function of the graviton field [10],

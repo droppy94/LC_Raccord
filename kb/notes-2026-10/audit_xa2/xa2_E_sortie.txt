@@ -1,0 +1,17 @@
+controle trace Weyl nulle : True
+controle convention : signe R_{xyxy} de la courbure de h vs script audite (formule lineaire) -> 0
+== (3) contre-exemple (c) ==
+   int dxi /((x-xi)^2+q) = pi/sqrt(q)  => ligne de ln sigma : 2 pi sqrt(rho^2-s^2) + const ; ligne de 1/sigma : pi/sqrt(rho^2-s^2)
+   plan de 1/sigma (PV, coupure Lambda) : pi ln(Lambda^2+q) - pi ln|q|, q = z^2 - s^2
+   box^2 sqrt(rho^2-s^2) = 0 ; box (1/sqrt(rho^2-s^2)) = 0 ; box ln(z^2-s^2) = 0
+   ligne 1/sigma poids exp(-xi^2), controle q=7/10 : 1.78998129596744 3.75492141844528*exp(7/10)*erfc(sqrt(70)/10)
+   sur l'axe rho = 0 (q = -s^2, ici e = s) : Re = -2*sqrt(pi) + O(e**2)  ; Im = -pi/e + O(e)
+   plan poids exp(-xi^2) : pi e^q E1(q), developpement q->0+ : -EulerGamma*pi - pi*log(q) + O(q*log(q))
+   R pour phi = ln(s^2 - z^2) (plan des sommets z=0) :
+   (c) plan, sur z=0, ordre en s : ordres dominants {'ssx': -1, 'xsx': -1, 'ysy': -1, 'yxy': -1, 'zsz': -1, 'zxz': 0} ; min = -1
+   (c) plan, z=1/2, ordre en s : ordres dominants {'ssx': 1, 'ssz': 0, 'sxz': 1, 'xsx': 1, 'xsz': 0, 'xxz': 0, 'ysy': 1, 'yxy': 1, 'yyz': 0, 'zsx': 0, 'zsz': 1, 'zxz': 1} ; min = 0
+  t = 26.0
+   (c) ligne ln-sigma, rho>0, ordre en s : ordres dominants {'ssx': 1, 'ssy': 0, 'ssz': 0, 'sxy': 1, 'sxz': 1, 'syz': 1, 'xsx': 1, 'xsy': 0, 'xsz': 0, 'xxy': 0, 'xxz': 0, 'xyz': 1, 'ysx': 0, 'ysy': 1, 'ysz': 1, 'yxy': 1, 'yxz': 1, 'yyz': 0, 'zsx': 0, 'zsy': 1, 'zsz': 1, 'zxy': 1, 'zxz': 1, 'zyz': 0} ; min = 0
+   (c) ligne 1/sigma (partie Im, 1/s), sur l'axe, ordre en s : ordres dominants {'ysy': -2, 'yxy': -2, 'zsz': -2, 'zxz': -2} ; min = -2
+  t = 59.7
+EXIT 0

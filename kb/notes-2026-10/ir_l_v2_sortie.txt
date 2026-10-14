@@ -1,0 +1,19 @@
+A. a (Green) = -0.376427910603  ; a (formule) = (-0.376427910603 + 0.0j)
+   b = -dA/dt (Green) = 0.800359009706  ; b (formule) = (0.800359009706 + 0.0j)
+
+B1. Re(R M R^T - M) + 2 L(M) = Matrix([[0, 0], [0, 0]])
+    Re(R C R^T + C) - tr(C) 1 = Matrix([[0, 0], [0, 0]])
+B2. Q_k (plan transverse) - [-1/2 L(J+J+^dag + J-J-^dag) - 1/2 Re(J+.J-^*) 1] = Matrix([[0, 0], [0, 0]])
+
+C1. dipole magnetique lineaire : <L> = Matrix([[-4*m_x**2/15 + 2*m_y**2/15 + 2*m_z**2/15, -2*m_x*m_y/5, -2*m_x*m_z/5], [-2*m_x*m_y/5, 2*m_x**2/15 - 4*m_y**2/15 + 2*m_z**2/15, -2*m_y*m_z/5], [-2*m_x*m_z/5, -2*m_y*m_z/5, 2*m_x**2/15 + 2*m_y**2/15 - 4*m_z**2/15]])  ; -(2/5)(mm - m^2/3) ?  True
+    dipole electrique lineaire : <L> = Matrix([[4*m_x**2/15 - 2*m_y**2/15 - 2*m_z**2/15, 2*m_x*m_y/5, 2*m_x*m_z/5], [2*m_x*m_y/5, -2*m_x**2/15 + 4*m_y**2/15 - 2*m_z**2/15, 2*m_y*m_z/5], [2*m_x*m_z/5, 2*m_y*m_z/5, -2*m_x**2/15 - 2*m_y**2/15 + 4*m_z**2/15]])  ; +(2/5)(pp - p^2/3) ?  True
+C2. dipole magnetique tournant (x - i y) : <L> = Matrix([[-2/15, 0, 0], [0, -2/15, 0], [0, 0, 4/15]])
+C3. dipole chiral (p = z, m = -i z) : L par direction = Matrix([[0, 0, nx*nz*(nx**2 + ny**2 + nz**2 - 1)], [0, 0, ny*nz*(nx**2 + ny**2 + nz**2 - 1)], [nx*nz*(nx**2 + ny**2 + nz**2 - 1), ny*nz*(nx**2 + ny**2 + nz**2 - 1), 0]])  ; <L> = Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
+    helicite opposee (m = +i z) : L par direction = Matrix([[0, 0, nx*nz*(nx**2 + ny**2 + nz**2 - 1)], [0, 0, ny*nz*(nx**2 + ny**2 + nz**2 - 1)], [nx*nz*(nx**2 + ny**2 + nz**2 - 1), ny*nz*(nx**2 + ny**2 + nz**2 - 1), 0]])
+C4. ensemble isotrope d'orientations : Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
+C5. motif E pur l = 2 : <L_E> = Matrix([[2/5, 4/5, 0], [4/5, -6/5, 2/5], [0, 2/5, 4/5]])  ; motif B pur l = 2 : <L_B> = Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
+C6. combinaison generique (p, m, quadrupole) : <L> = Matrix([[-29/70, 911/210, 97/105], [911/210, 9/7, 428/105], [97/105, 428/105, -61/70]])  ; nul ?  False
+
+D1. pulse en t0 : J+ . J-^* ∝ exp(2 i k t0) ; Re -> cos(2 k t0) ; moyenne sur une bande k in [k1, k1 + dk] : Piecewise(((-sin(2*k1*t0) + sin(2*t0*(dk + k1)))/(2*dk*t0), (t0 > 0) | (t0 < 0)), (1, True))
+
+EXIT 0

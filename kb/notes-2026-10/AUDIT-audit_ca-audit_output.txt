@@ -1,0 +1,33 @@
+Q1 EOM: [0, 0, 0, 0]
+F2_hat= 2*B0**2*s**4
+XM= Matrix([[B0**2*s**2*(-beta*log(s) + 1/2)/e**2, 0, 0, 0], [0, B0**2*s**2*(-beta*log(s) + 1/2)/e**2, 0, 0], [0, 0, B0**2*s**2*(-beta*log(s) + 1/2)/e**2, 0], [0, 0, 0, B0**2*s**2*(beta*log(s) - 1/2)/e**2]])
+tr XM= 0
+div XM= [B0**2*beta*s**3/e**2, 0, 0, 0]
+check -1/4 dI2 F2: B0**2*beta*s**3/e**2
+trace anomaly = -B0**2*beta*s**4/e**2  = -(beta/2e^2) F2_hat ? 0
+div XR= [s*(-s*Derivative(r0(s), s) + r0(s) + 3*r1(s)), 0, 0, 0]
+r0 sol: Eq(r0(s), C1*s**2)
+r0= C1*s**2  r1= -B0**2*beta*s**2/(3*e**2) + C1*s**2/3
+div total = [0, 0, 0, 0] trace total= -B0**2*beta*s**4/e**2
+Q5 R total:
+(1, 0, 1) -B0**2*beta*kappa*log(s)/e**2 - B0**2*beta*kappa/(3*e**2) + B0**2*kappa/(2*e**2)
+(2, 0, 2) -B0**2*beta*kappa*log(s)/e**2 - B0**2*beta*kappa/(3*e**2) + B0**2*kappa/(2*e**2)
+(3, 0, 3) 2*B0**2*beta*kappa*log(s)/e**2 + 2*B0**2*beta*kappa/(3*e**2) - B0**2*kappa/e**2
+Q5 R Maxwell only:
+(1, 0, 1) -B0**2*beta*kappa*log(s)/e**2 - B0**2*beta*kappa/(2*e**2) + B0**2*kappa/(2*e**2)
+(2, 0, 2) -B0**2*beta*kappa*log(s)/e**2 - B0**2*beta*kappa/(2*e**2) + B0**2*kappa/(2*e**2)
+(3, 0, 3) 2*B0**2*beta*kappa*log(s)/e**2 + B0**2*beta*kappa/(2*e**2) - B0**2*kappa/e**2
+Q5 R XR only:
+(1, 0, 1) B0**2*beta*kappa/(6*e**2)
+(2, 0, 2) B0**2*beta*kappa/(6*e**2)
+(3, 0, 3) B0**2*beta*kappa/(6*e**2)
+beta=0 total: {(1, 0, 1): B0**2*kappa/(2*e**2), (2, 0, 2): B0**2*kappa/(2*e**2), (3, 0, 3): -B0**2*kappa/e**2}
+div Pi-term: [0, 0, 0, 0] trace: 0
+R Pi alone:
+(1, 0, 1) kappa*(s*Derivative(Pi(s), s) + Pi(s))/(2*s**2)
+(2, 0, 2) kappa*(s*Derivative(Pi(s), s) + Pi(s))/(2*s**2)
+(3, 0, 3) -kappa*(s*Derivative(Pi(s), s) + Pi(s))/s**2
+R total+Pi:
+(1, 0, 1) -B0**2*beta*kappa*log(s)/e**2 - B0**2*beta*kappa/(3*e**2) + B0**2*kappa/(2*e**2) + kappa*Derivative(Pi(s), s)/(2*s) + kappa*Pi(s)/(2*s**2)
+(2, 0, 2) -B0**2*beta*kappa*log(s)/e**2 - B0**2*beta*kappa/(3*e**2) + B0**2*kappa/(2*e**2) + kappa*Derivative(Pi(s), s)/(2*s) + kappa*Pi(s)/(2*s**2)
+(3, 0, 3) 2*B0**2*beta*kappa*log(s)/e**2 + 2*B0**2*beta*kappa/(3*e**2) - B0**2*kappa/e**2 - kappa*Derivative(Pi(s), s)/s - kappa*Pi(s)/s**2

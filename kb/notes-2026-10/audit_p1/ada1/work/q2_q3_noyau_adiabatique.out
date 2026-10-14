@@ -1,0 +1,24 @@
+Q2 : test numerique du noyau K_k(T) (k = mu = 1, T0 = 1, C_delta = -1.1544313298)
+     omega complexe         L exact                        L reconstruit depuis K          |diff|
+     (0.0 + 1.0j)           (0.69314718056 + 0.0j)         (0.69314718056 + 0.0j)         9.53e-29
+     (0.0 + 0.5j)           (0.223143551314 + 0.0j)        (0.223143551314 + 0.0j)        1.93e-29
+     (0.5 + 0.3j)           (-0.114329366001 - 0.343023940421j) (-0.114329366001 - 0.343023940421j) 1.03e-28
+     (2.0 + 0.3j)           (1.14667630222 - 2.75046720662j) (1.14667630222 - 2.75046720662j) 3.92e-29
+     (3.0 + 0.1j)           (2.08100238416 - 3.06663946425j) (2.08100238416 - 3.06663946425j) 1.08e-29
+     (-3.0 + 0.1j)          (2.08100238416 + 3.06663946425j) (2.08100238416 + 3.06663946425j) 1.08e-29
+     (0.3 + 0.05j)          (-0.0910270462829 - 0.0328648747641j) (-0.0910270462829 - 0.0328648747641j) 5.24e-30
+     T0 = 0.5 : L reconstruit = (1.14667630222 - 2.75046720662j) (exact (1.14667630222 - 2.75046720662j))
+     T0 = 2.0 : L reconstruit = (1.14667630222 - 2.75046720662j) (exact (1.14667630222 - 2.75046720662j))
+     T0 = 5.0 : L reconstruit = (1.14667630222 - 2.75046720662j) (exact (1.14667630222 - 2.75046720662j))
+     omega = 3 + 0.1 i : Im L exact = -3.0666395, Im L depuis K = -3.0666395 (attendu -> -pi = -3.1415927)
+     omega = 3 + 0.02 i : Im L exact = -3.126593, Im L depuis K = -3.126593 (attendu -> -pi = -3.1415927)
+
+Q3 : R_eps(0) = Int_0^inf K(T) B_eps(-T) dT, k = mu = 1, Pf de Hadamard a l'echelle T0 = 1
+     B_eps(tau) = epsilon*(epsilon**3*k*tau*sin(k*tau) + epsilon**3*cos(k*tau) + 4*epsilon**2*k**2*tau*cos(k*tau) - 4*epsilon*k**3*tau*sin(k*tau) + 8*epsilon*k**2*cos(k*tau) - 8*k**3*sin(k*tau))*exp(epsilon*tau)
+     eps        R_eps(0) numerique (T0=1)      R_eps(0) numerique (T0=3)      forme fermee                 -4 pi k^3 eps         R/eps
+     0.1      -1.2854863215924               -1.2854863215924               -1.2854863215924             -1.256637061         -12.85486322
+     0.01     -0.12779335700145              -0.12779335700145              -0.12779335700145            -0.1256637061        -12.7793357
+     0.001    -0.012606087484694             -0.012606087484694             -0.012606087484694           -0.01256637061       -12.60608748
+     developpement de la forme fermee en eps (k = mu = 1) :
+     R_eps(0) = -4*pi*epsilon + epsilon**2*(8*log(epsilon) + 8*log(2) + 10) + epsilon**4*log(epsilon) + O(epsilon**4)
+     sup_{1e-10<=eps<=0.56} |R_eps(0)|/eps = 12.98731 ; sup |R_eps(0)+4 pi eps|/(eps^2 |ln eps|) (eps<0.5) = 7.3248815

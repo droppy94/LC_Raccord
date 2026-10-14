@@ -1,0 +1,2 @@
+dS/dg_ab = -4 d_c d_d(phi C^acbd) pour les 10 composantes : True
+=> T^ab = 2 dS/dg_ab donne c0 = -8 ; T_ab = 2 dS/dg^ab (= -2 dS/dg_ab) donne c0 = +8

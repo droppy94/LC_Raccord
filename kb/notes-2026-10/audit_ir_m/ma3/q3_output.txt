@@ -1,0 +1,29 @@
+[calcule] u1 (serie, a0,a1 libres = homogene) = L*(-c*k**6*s**7/2520 + c*k**4*s**5/60 - c*k**2*s**3/3 + 2*c*s) + a0*k**8*s**8/40320 - a0*k**6*s**6/720 + a0*k**4*s**4/24 - a0*k**2*s**2/2 + a0 - a1*k**6*s**7/5040 + a1*k**4*s**5/120 - a1*k**2*s**3/6 + a1*s + 71*c*k**6*s**7/264600 - 2*c*k**4*s**5/225 + c*k**2*s**3/9 + 11*k**8*s**8*u0/132300 - 23*k**6*s**6*u0/5400 + k**4*s**4*u0/9 - k**2*s**2*u0
+[calcule] parametres libres restants dans u1 : [a0, a1]
+[calcule] tr_g X^M = 0
+
+=== R_{i s j} : structure en (puissance de s, puissance de ln s) a l ordre beta^1 ===
+R_xsx : termes en ln s (s^p ln^q s, p<=2) : {(0, 1): kappa*(c**2*cos(k*x)**2 - k**2*u0**2*sin(k*x)**2)/e**2, (2, 1): -k**2*kappa*(c**2 + k**2*u0**2)*cos(2*k*x)/e**2}
+     coeff beta ln s a s^0 = kappa*(c**2*cos(k*x)**2 - k**2*u0**2*sin(k*x)**2)/e**2  ; cible = kappa*(c**2*cos(k*x)**2 - k**2*u0**2*sin(k*x)**2)/e**2  ; ecart = 0
+R_xsy : termes en ln s (s^p ln^q s, p<=2) : {}
+     coeff beta ln s a s^0 = 0  ; cible = 0  ; ecart = 0
+R_xsz : termes en ln s (s^p ln^q s, p<=2) : {}
+     coeff beta ln s a s^0 = 0  ; cible = 0  ; ecart = 0
+R_ysx : termes en ln s (s^p ln^q s, p<=2) : {}
+     coeff beta ln s a s^0 = 0  ; cible = 0  ; ecart = 0
+R_ysy : termes en ln s (s^p ln^q s, p<=2) : {(0, 1): kappa*(-2*c**2*cos(k*x)**2 - k**2*u0**2*sin(k*x)**2)/e**2, (2, 1): k**2*kappa*(c**2*cos(k*x)**2 + 2*c**2 + k**2*u0**2*cos(k*x)**2 + 2*k**2*u0**2)/e**2}
+     coeff beta ln s a s^0 = -kappa*(2*c**2*cos(k*x)**2 + k**2*u0**2*sin(k*x)**2)/e**2  ; cible = -kappa*(2*c**2*cos(k*x)**2 + k**2*u0**2*sin(k*x)**2)/e**2  ; ecart = 0
+R_ysz : termes en ln s (s^p ln^q s, p<=2) : {}
+     coeff beta ln s a s^0 = 0  ; cible = 0  ; ecart = 0
+R_zsx : termes en ln s (s^p ln^q s, p<=2) : {}
+     coeff beta ln s a s^0 = 0  ; cible = 0  ; ecart = 0
+R_zsy : termes en ln s (s^p ln^q s, p<=2) : {}
+     coeff beta ln s a s^0 = 0  ; cible = 0  ; ecart = 0
+R_zsz : termes en ln s (s^p ln^q s, p<=2) : {(0, 1): kappa*(c**2*cos(k*x)**2 + 2*k**2*u0**2*sin(k*x)**2)/e**2, (2, 1): k**2*kappa*(c**2*cos(k*x)**2 - 3*c**2 + k**2*u0**2*cos(k*x)**2 - 3*k**2*u0**2)/e**2}
+     coeff beta ln s a s^0 = kappa*(c**2*cos(k*x)**2 + 2*k**2*u0**2*sin(k*x)**2)/e**2  ; cible = kappa*(c**2*cos(k*x)**2 + 2*k**2*u0**2*sin(k*x)**2)/e**2  ; ecart = 0
+
+=== Autres composantes R_{rho nu lambda} : presence de ln s aux ordres s^p, p<=1 ===
+R_ssx : {(1, 1): k*kappa*(-c**2 - k**2*u0**2)*sin(2*k*x)/e**2}
+R_yxy : {(1, 1): c**2*k*kappa*sin(2*k*x)/e**2}
+R_zxz : {(1, 1): k**3*kappa*u0**2*sin(2*k*x)/e**2}
+[fin]

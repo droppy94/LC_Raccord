@@ -1,0 +1,14 @@
+1) T_yy[C] chaine non lineaire - forme fermee c0=-8 : 0
+   T_yy^(1)[E] * s^4 / cos kx = -4*k**2*s**2*(A*k*s*sin(k*s) + A*cos(k*s) - B*k*s*cos(k*s) + B*sin(k*s))
+   T_yy^(1)[R] * s^4 / cos kx = 8*(A*k*s*sin(k*s) + A*cos(k*s) - B*k*s*cos(k*s) + B*sin(k*s))
+   T_yy^(1)[D] * s^4 / cos kx = 2*(2*k**2*s**2 - 1)*(A*k*s*sin(k*s) + A*cos(k*s) - B*k*s*cos(k*s) + B*sin(k*s))
+   fond [E] : T^ss = 0, T^yy = 0
+   fond [R] : T^ss = 0, T^yy = 8/s**4
+   fond [D] : T^ss = -6/s**4, T^yy = -2/s**4
+2) combinaison w_E E + w_R(-2/3 sig boxR) + w_D(2 sig Delta4 sig) : fond T^ss + T^yy (nul ssi fond ~ eta) = 8*(-w_D + w_R)/s**4
+   T'_yy (partie non ~ g) = 4*k**2*(w_D - w_E)*(A*k*s*sin(k*s) + A*cos(k*s) - B*k*s*cos(k*s) + B*sin(k*s))*cos(k*x)/s**2
+   residu polaire de R_ysy (partie a) : oo*sign(A*k**2*kappa*w_D*cos(k*x) - A*k**2*kappa*w_E*cos(k*x))
+   WZ integrable (1,1,1) : T'_yy = 0 ; fond T^ss+T^yy = 0 ; residu polaire = nan
+   variante -1/2 phi Delta4 phi (1,1,-1/4) : T'_yy = -5*k**2*(A*k*s*sin(k*s) + A*cos(k*s) - B*k*s*cos(k*s) + B*sin(k*s))*cos(k*x)/s**2 ; fond T^ss+T^yy = 10/s**4 ; residu polaire = -oo*sign(A*k**2*kappa*cos(k*x))
+   E seul (1,0,0) : T'_yy = -4*k**2*(A*k*s*sin(k*s) + A*cos(k*s) - B*k*s*cos(k*s) + B*sin(k*s))*cos(k*x)/s**2 ; fond T^ss+T^yy = 0 ; residu polaire = -oo*sign(A*k**2*kappa*cos(k*x))
+3) partie C : residu polaire R_ysy = -4*B*b*k**3*kappa*cos(k*x)  ; W_E,yy(scri) = -B k^3 cos(kx)/2 => residu/(8 b kappa W_E) = 1

@@ -1,0 +1,49 @@
+"""
+ctrl2_ansatz_Pi.py -- generalite de l'ansatz pour Pi (point A7).
+Entree (verifiee independamment dans ctrl1 et dans le script audite) : sous C-iso + Pi,
+  R_(1,0,1) = kappa B0^2 (3 - 2 beta - 6 beta L)/(6 e^2) + kappa (s Pi)'/(2 s^2),  L = ln s,
+  R_(3,0,3) = -2 R_(1,0,1).
+1) ansatz polyhomogene etendu : s^k L^j, k = -3..4, j = 0..3 ;
+2) solution generale exacte de la condition de regularite (EDO du premier ordre).
+"""
+import sympy as sp
+s = sp.symbols('s', positive=True)
+B0, e, beta, kap = sp.symbols('B0 e beta kappa', positive=True)
+L = sp.log(s)
+
+def R101(Pi):
+    return kap*B0**2*(3 - 2*beta - 6*beta*L)/(6*e**2) + kap*sp.diff(s*Pi, s)/(2*s**2)
+
+# 1) ansatz etendu
+cs = {}
+Pi = 0
+for k in range(-3, 5):
+    for j in range(0, 4):
+        c = sp.Symbol(f'c_{k}_{j}'.replace('-', 'm'))
+        cs[(k, j)] = c
+        Pi += c*s**k*L**j
+Lsym = sp.Symbol('Lsym')
+expr = sp.expand(sp.expand_log(R101(Pi), force=True)).subs(sp.log(s), Lsym)
+expr = sp.expand(expr*s**10)
+P = sp.Poly(expr, s, Lsym)
+conds = []
+for (m, j), c in P.terms():
+    k = m - 10
+    if j > 0 or k < 0:          # non lisse : log present ou puissance negative
+        conds.append(c)
+sol = sp.solve(conds, list(cs.values()), dict=True)
+print("conditions :", len(conds), " ; solution :", sol)
+free = [cs[kj] for kj in cs if cs[kj] not in sol[0]]
+print("coefficients libres (n'affectent pas la regularite) :", [str(f) for f in free])
+
+# 2) solution generale : (s Pi)' = s^2 [ 2 beta B0^2 L / e^2 + h(s) ],  h lisse arbitraire
+h = sp.Function('h')
+u = sp.symbols('u', positive=True)
+c0 = sp.Symbol('c0')
+Pi_gen = (sp.integrate(u**2*2*beta*B0**2*sp.log(u)/e**2, (u, 0, s)) + sp.Integral(u**2*h(u), (u, 0, s)) + c0)/s
+print("\nPi general =", sp.simplify(Pi_gen))
+chk = sp.simplify(R101(Pi_gen).doit())
+print("R_(1,0,1) avec Pi general :", chk, " -> lisse (h lisse), libre de c0 et de L")
+PiM_log = -2*B0**2*beta*s**2*L/(3*e**2)
+print("partie en s^2 L de Pi general + partie anisotrope log du secteur Maxwell :",
+      sp.simplify(sp.expand(Pi_gen.subs(h(u), 0).doit()).coeff(L) + PiM_log.coeff(L)))

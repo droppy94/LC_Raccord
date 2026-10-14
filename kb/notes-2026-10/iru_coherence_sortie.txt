@@ -1,0 +1,6 @@
+trace That = 0
+R_ysy : residu de 1/s = 4*B*b*k**3*kappa*cos(k*x) ; en unites de b kappa W0 : -8
+R_zsz : residu de 1/s = -4*B*b*k**3*kappa*cos(k*x) ; en unites de b kappa W0 : 8
+C_syxy (partie magnetique, controle) = k**3*s*(A*cos(k*s) + B*sin(k*s))*sin(k*x)/2
+s d/ds [8 b kappa W0 ln s] = -4*B*b*k**3*kappa*cos(k*x) = 8 b kappa W0
+EXIT 0

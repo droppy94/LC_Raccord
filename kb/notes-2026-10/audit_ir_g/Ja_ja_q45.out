@@ -1,0 +1,24 @@
+== Q4 ==
+ u(s) = a*cos(k*(D - s))
+ u0 = u(0) = a*cos(D*k)  ; c = u_s(0) = a*k*sin(D*k)
+ mode k||x eps||y : B_z = -k u0 sin kx = -a*k*cos(D*k) * sin(kx) ; E_y = c cos kx = a*k*sin(D*k) * cos(kx)
+ Q = [[0, 0, 0], [0, a**2*k**2*cos(2*D*k)/4 - a**2*k**2/4, 0], [0, 0, a**2*k**2*cos(2*D*k)/4 + a**2*k**2/4]]
+ partie independante de D : [[0, 0, 0], [0, -a**2*k**2/4, 0], [0, 0, a**2*k**2/4]]  trace = 0
+ partie en cos(2kD) (coefficient) : [[0, 0, 0], [0, a**2*k**2/4, 0], [0, 0, a**2*k**2/4]]  trace = a**2*k**2/2
+  -> partie independante = (k^2 a^2/4) (eB eB - eE eE), eB = k^ x eps = z, eE = y
+ <cos 2kD>_{n=2} = -(3*x**2 - 1)/(x**2 + 1)**3  ; x = 2 k* D
+  verif Re (1 - i x)^-3 : 0
+  developpement x grand : 10/x**6 - 3/x**4 + O(x**(-8), (x, oo))
+   x=1 : -0.250000
+   x=3 : -0.0260000
+   x=10 : -0.000290206
+   x=30 : -3.69002e-6
+   x=100 : -2.99900e-8
+ (variante n=4, si le facteur k^2 de Q est inclus dans le poids) <cos 2kD> = (5*x**4 - 10*x**2 + 1)/(x**2 + 1)**5 ~ 5/x**6
+
+== Q5 ==
+ < eB eB - eE eE >_k = [[8*m1**2/15 - 4*m2**2/15 - 4*m3**2/15, 4*m1*m2/5, 4*m1*m3/5], [4*m1*m2/5, -4*m1**2/15 + 8*m2**2/15 - 4*m3**2/15, 4*m2*m3/5], [4*m1*m3/5, 4*m2*m3/5, -4*m1**2/15 - 4*m2**2/15 + 8*m3**2/15]]
+  - (4/15)(3 m m - |m|^2 delta) = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]  ; trace = 0
+  verif |eB|^2 = |eE|^2 : 0
+ < . >_{k, m isotrope} = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+ separement <eB eB>_k = [[8*m1**2/15 + m2**2/15 + m3**2/15, 7*m1*m2/15, 7*m1*m3/15], [7*m1*m2/15, m1**2/15 + 8*m2**2/15 + m3**2/15, 7*m2*m3/15], [7*m1*m3/15, 7*m2*m3/15, m1**2/15 + m2**2/15 + 8*m3**2/15]]

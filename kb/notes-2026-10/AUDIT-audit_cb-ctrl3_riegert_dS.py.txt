@@ -1,0 +1,28 @@
+"""
+ctrl3_riegert_dS.py -- point (B) : la completion de Riegert (BDK eq. 2.13-2.16) sur le fond de Sitter.
+Verifie : Delta_4[g] Omega = F_4/4 pour Omega = -ln s (facteur de Weyl, H = 1), et liste les
+solutions homogenes de Delta_4 (ambiguite de condition aux limites / d'etat dans G_4).
+"""
+import sympy as sp
+s = sp.symbols('s', positive=True)
+x, y, z = sp.symbols('x y z', real=True)
+X = [s, x, y, z]; n = 4
+eta = sp.diag(-1, 1, 1, 1)
+g = eta/s**2; gi = g.inv(); sq = s**-4
+
+def box(f):
+    return sp.simplify(sum(sp.diff(sq*gi[m, nn]*sp.diff(f, X[nn]), X[m]) for m in range(n) for nn in range(n))/sq)
+
+# courbures de dS (H = 1) : R_{mu nu rho sigma} = g g - g g, R_{mu nu} = 3 g, R = 12
+R = 12
+E4 = 24            # Riem^2 - 4 Ric^2 + R^2 = 24 - 144 + 144
+F4 = E4 - sp.Rational(2, 3)*0     # box R = 0
+def Delta4(f):
+    # (box)^2 + 2 R^{mu nu} nabla_mu nabla_nu + (1/3) (nabla R) nabla - (2/3) R box ; R^{mu nu} = 3 g^{mu nu}
+    return sp.simplify(box(box(f)) + 2*3*box(f) - sp.Rational(2, 3)*R*box(f))
+Om = -sp.log(s)
+print("Delta_4(-ln s) =", Delta4(Om), " ; F_4/4 =", F4/4)
+print("verification conforme : sqrt(g) Delta_4 = box_eta^2 ?",
+      sp.simplify(sq*Delta4(sp.Function('f')(s, x)) - (sp.diff(sp.Function('f')(s, x), s, 4) - 2*sp.diff(sp.Function('f')(s, x), s, 2, x, 2) + sp.diff(sp.Function('f')(s, x), x, 4))))
+for h in [1, s, s**2, s**3, x**2 - z**2, x*s, (x**2+y**2+z**2+3*s**2)]:
+    print("  Delta_4(", h, ") =", Delta4(h))

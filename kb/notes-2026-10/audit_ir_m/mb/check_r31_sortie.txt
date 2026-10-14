@@ -1,0 +1,6 @@
+div (r31 seul) : [-a*s**4*(log(s) + 1), 0, 0, 0]
+(1, 0, 1) : L*a*kappa*s/6 + a*kappa*s/6
+(2, 0, 2) : L*a*kappa*s/6 + a*kappa*s/6
+(0, 0, 1) : 0
+series(.,s,0,1) de R_(1,0,1) : a*kappa*s*log(s)/6 + O(s)
+series(.,s,0,3) : s*(a*kappa*log(s)/6 + a*kappa/6)

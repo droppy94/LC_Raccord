@@ -1,0 +1,49 @@
+S1 = arXiv:2606.17963v1 (Foraci, Litos, Woodard, "Sensing the Inflationary Production of Scalars", 16 Jun 2026)
+Source: alphaXiv get_paper_content(fullText=true), lu le 2026-10-12. Transcription linearisee de l'extraction texte du PDF
+(indices/exposants remis en ligne ; aucun mot modifie). Pagination : p.imp = numero imprime ; PDF = imp+1.
+
+[S1-E1] Abstract (PDF p.1)
+"A Green's function method is employed to obtain exact 1-loop corrections to the plane wave mode functions of gravitational radiation, subject to the usual ambiguity in the initial state. Conformally coupled matter, which does not experience inflationary particle production, makes only a logarithmic enhancement of the rate at which the imaginary part of the mode function goes to zero after horizon crossing. These corrections can be understood, and even summed up, using a variant of the renormalization group."
+
+[S1-E2] Eq. (5), p.imp 2
+"Defining the graviton field h_{mu nu}(x) for cosmology consists of subtracting away the background from the conformally rescaled metric tensor,
+g_{mu nu}(x) == a^2 [eta_{mu nu} + kappa h_{mu nu}(x)] == a^2 g~_{mu nu}(x) , kappa^2 == 16 pi G . (5)"
+
+[S1-E3] Eqs. (11)-(12), p.imp 3
+"[mu nu Sigma rho sigma](x;x') = - kappa^2/(q pi^3) C_{alpha beta gamma delta mu nu} x C'_{rho sigma}^{alpha beta gamma delta} [ 8 pi ln(a a') delta^4(x-x') + f_B(x-x') ] , (11)
+where q depends on the field involved in the loop correction,
+q = 2^10 . 3 . 5 , MCC scalars ; 2^9 . 5 , fermions ; 2^8 . 5 , photons (12)"
+
+[S1-E4] Eq. (14), p.imp 3
+"the tensor differential operator C_{mu nu}^{alpha beta gamma delta} can be read off from the linearized, conformally rescaled Weyl tensor,
+C~_{alpha beta gamma delta} = C_{alpha beta gamma delta}^{mu nu} x kappa h_{mu nu} + O(h^2) . (14)"
+
+[S1-E5] Eq. (19), p.imp 4
+"In what follows, we shall study the secular effects induced by fields on a background de Sitter cosmology. In that case, for Bunch-Davies initial conditions the tree order result takes the following form,
+u^tree(t,k) = H/sqrt(2k^3) [1 - ik/(aH)] exp[ik/(aH)] . (19)"
+
+[S1-E6] Eq. (25), p.imp 5
+"alpha(t,k) == i int_0^t dt' a^3(t') u*^tree(t',k) S(t') , beta(t,k) == -i int_0^t dt' a^3(t') u^tree(t',k) S(t') . (25)"
+
+[S1-E7] Eqs. (26)-(27), p.imp 5
+"kappa^2 u_1 = kappa^2 H^2/pi^2 x H/sqrt(2k^3) x [ A + B x (k/aH)^2 + iC x ln(a) x (k/aH)^3 + O(k/aH)^5 ] . (26)
+... the "electric" part of the Weyl tensor is,
+C_{0i0j} = eps_{ij} e^{i k.x} x -1/4 (d_0^2 - k^2) u(t,k)
+= - i sqrt(2k^3)/(4a) eps_{ij} e^{i k.x} x { 1 - i kappa^2 H^2/pi^2 (B - A/2)(aH/k) + 3 kappa^2 H^2/pi^2 C ln(a) + ... }
+== C^tree_{0i0j} x { 1 - i kappa^2 H^2/pi^2 (B - A/2)(aH/k) + 3 kappa^2 H^2/pi^2 C ln(a) + ... } (27)
+The correction proportional to C arises from renormalization [12], as we have discussed."
+
+[S1-E8] Eq. (31), p.imp 6
+"B_q = A_q/2 , C_q = 32/(3q) . (31)
+The relation between A_q and B_q demonstrates that the correction in Eq. (27) vanishes. The secular growth implied by C_q has been studied before and can be summed up using a variant of the renormalization group [12, 15]."
+
+[S1-E9] Eqs. (36)-(37), p.imp 6
+"B_MMC = [A_MMC/2 - 1/96] , C_MMC = - 1/160 . (36)
+C_{0i0j} = C^tree_{0i0j} x { 1 + i kappa^2 H^2/(96 pi^2) aH/k - 3 kappa^2 H^2/(160 pi^2) ln(a) + ... } (37)
+... the logarithmic term appearing in Eq. (37) would correspond to q = -2^10 . 5/3 were this a conformally coupled field."
+
+[S1-E10] Epilogue, p.imp 7
+"Recent work suggests that the leading logarithm corrections can be captured by a combining a variant of Starobinsky's stochastic formalism with a variant of the renormalization group [12]. Matter loop corrections provide an especially simple venue because they are gauge independent."
+
+[S1-E11] p.imp 3
+"thus (11) is valid on any cosmological background for these two fields." (MCC scalaires et fermions ; le photon n'est conformement invariant qu'en D = 4)

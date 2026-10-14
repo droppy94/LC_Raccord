@@ -1,0 +1,31 @@
+(1) B aux 7 points du script : exact (sympy, 30 chiffres) vs differences finies imbriquees (dps 15) vs mdiff ordre 4 direct
+  tau = -5.75 : exact = -343.914168901 ; FD script = -343.914168901 ; ecart rel = 1.01e-17 ; mdiff ordre 4 (dps30) = -343.914168901
+  tau = -5.5 : exact = 279.870733481 ; FD script = 279.870733481 ; ecart rel = 3.55e-17 ; mdiff ordre 4 (dps30) = 279.870733481
+  tau = -5.25 : exact = -16.1458514693 ; FD script = -16.1458514693 ; ecart rel = 6.77e-17 ; mdiff ordre 4 (dps30) = -16.1458514693
+  tau = -5.0 : exact = 3.67509322122 ; FD script = 3.67509322122 ; ecart rel = 4.47e-17 ; mdiff ordre 4 (dps30) = 3.67509322122
+  tau = -4.75 : exact = 75.4447368385 ; FD script = 75.4447368385 ; ecart rel = 2.33e-17 ; mdiff ordre 4 (dps30) = 75.4447368385
+  tau = -4.5 : exact = -296.00894762 ; FD script = -296.00894762 ; ecart rel = 4.15e-17 ; mdiff ordre 4 (dps30) = -296.00894762
+  tau = -4.25 : exact = 287.214280665 ; FD script = 287.214280665 ; ecart rel = 6.4e-17 ; mdiff ordre 4 (dps30) = 287.214280665
+  Bords :
+  tau = -5.95 : exact = -3.635450376e-6 ; FD script = -3.635450376e-6
+  tau = -5.9 : exact = -6.72357715 ; FD script = -6.72357715
+  tau = -4.1 : exact = 18.70187637 ; FD script = 18.70187637
+  tau = -4.05 : exact = 1.34401958e-5 ; FD script = 1.34401958e-5
+(2) Controle integral de B exact
+  Int B = -3.25930469892865 ; u0'''(-4) + 2 u0'(-4) + Int S u0 = -3.25930469892865
+(3) R(tau) : script (FD) vs direct (B exact) vs integration par parties
+  tau = -2.0 : R direct = -3.3211506513312 ; par parties = -3.3211506513312 ; ecart = 3.94e-31
+  tau = -1.0 : R direct = -1.2250567829615 ; par parties = -1.2250567829615 ; ecart = 3.94e-31
+  tau = -0.5 : R direct = -0.31962814362047 ; par parties = -0.31962814362047 ; ecart = -5.42e-31
+  tau = -0.1 : R direct = 0.28057432701705 ; par parties = 0.28057432701705 ; ecart = 1.48e-31
+  tau = -0.01 : R direct = 0.39600227410869 ; par parties = 0.39600227410869 ; ecart = -3.94e-31
+  tau = 0.0 : R direct = 0.40834057715618 ; par parties = 0.40834057715618 ; ecart = 2.96e-31
+  tau = 0.5 : R direct = 0.89205638370901 ; par parties = 0.89205638370901 ; ecart = -9.86e-32
+  tau = 1.0 : R direct = 1.1013251612017 ; par parties = 1.1013251612017 ; ecart = 1.97e-31
+(4) Derivees de R en tau = 0 (lissite) : R^(n)(tau) = Int K^(n)(tau - tau') B(tau') dtau', K^(n) symbolique
+  R^(1)(0) = 1.22888741054
+  R^(2)(0) = -0.989980121076
+  R^(3)(0) = -0.418807779969
+  R^(4)(0) = 0.631407722717
+  controle (R(h)-R(-h))/(2h), h=1e-3 : 1.228887341
+  s^2 R(-s) = R(0) s^2 - R'(0) s^3 + ... : aucun terme s^0 ni s^1 par construction (R bornee), R(0) = 0.408340577156

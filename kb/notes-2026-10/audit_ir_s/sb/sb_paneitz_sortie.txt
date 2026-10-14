@@ -1,0 +1,2 @@
+C^2 de e^{2sig} eta : 0
+sqrt(g)(E - 2/3 box R) - 4 box^2 sig = 0

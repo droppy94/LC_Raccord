@@ -1,0 +1,45 @@
+1. Maxwell d_mu(I^2 F^{mu nu}) (indices plats) : [0, 0, 0, 0]
+2. X^M (diag) : [B0**2*beta*tau**2*log(-1/tau)/e**2 + B0**2*tau**2/(2*e**2), B0**2*beta*tau**2*log(-1/tau)/e**2 + B0**2*tau**2/(2*e**2), B0**2*beta*tau**2*log(-1/tau)/e**2 + B0**2*tau**2/(2*e**2), -B0**2*beta*tau**2*log(-1/tau)/e**2 - B0**2*tau**2/(2*e**2)] ; trace : 0
+   divergence de X^M : [B0**2*beta*tau**3/e**2, 0, 0, 0]
+3. trace anomale hat-T = -B0**2*beta*tau**4/e**2  ; A = hat-T/Omega^4 = -B0**2*beta/e**2
+   controle trace (doit etre 0) : 0
+4. C-iso : r0 = C*tau**2
+   conservation totale : [0, 0, 0, 0]
+
+5. R sous C-iso (composantes non nulles) :
+   (1, 0, 1) : -B0**2*beta*kappa*log(-1/tau)/e**2 + B0**2*beta*kappa/(3*e**2) - B0**2*kappa/(2*e**2)
+   (2, 0, 2) : -B0**2*beta*kappa*log(-1/tau)/e**2 + B0**2*beta*kappa/(3*e**2) - B0**2*kappa/(2*e**2)
+   (3, 0, 3) : 2*B0**2*beta*kappa*log(-1/tau)/e**2 - 2*B0**2*beta*kappa/(3*e**2) + B0**2*kappa/e**2
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polyutils.py", line 231, in _parallel_dict_from_expr_if_gens
+    monom[indices[base]] = exp
+          ~~~~~~~^^^^^^
+KeyError: log(-1/tau)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/claude/n97/cb_coherent.py", line 120, in <module>
+    badC = {kk: nonsmooth(v) for kk, v in RC.items() if nonsmooth(v)}
+                                                        ~~~~~~~~~^^^
+  File "/home/claude/n97/cb_coherent.py", line 111, in nonsmooth
+    ex = sp.degree(sp.together(term*t**20).as_numer_denom()[0], t) - 20 - sp.degree(sp.together(term*t**20).as_numer_denom()[1], t)
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polytools.py", line 4832, in degree
+    p, _ = poly_from_expr(f, gen)
+           ~~~~~~~~~~~~~~^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polytools.py", line 4640, in poly_from_expr
+    return _poly_from_expr(expr, opt)
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polytools.py", line 4662, in _poly_from_expr
+    rep, opt = _dict_from_expr(expr, opt)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polyutils.py", line 388, in _dict_from_expr
+    rep, gens = _dict_from_expr_if_gens(expr, opt)
+                ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polyutils.py", line 327, in _dict_from_expr_if_gens
+    (poly,), gens = _parallel_dict_from_expr_if_gens((expr,), opt)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polyutils.py", line 236, in _parallel_dict_from_expr_if_gens
+    raise PolynomialError("%s contains an element of "
+                          "the set of generators." % factor)
+sympy.polys.polyerrors.PolynomialError: log(-1/tau) contains an element of the set of generators.

@@ -1,0 +1,11 @@
+SCEAU NOTE-BORD-EON-102 (execution OP-IR, verdict IR-V1 qualifie IR-V3, [conv])
+date: 2026-10-10T16:12:28Z
+gel: NOTE-BORD-EON-101 e4c36854d2d29bb49837ff9baa18684356b02c52bce47481856c9f7f06c578b5
+ea774ca54e2e5c032bb97cc931a8bb8265f75b743d1ac0d1ddd1d2caa75dda3c  NOTE-BORD-EON-102-OP-IR-EXECUTION.md
+824357b3afacb0f41a755e7ab1692d0fe778e04c21ff58e36d1d1eef2ad70448  op_ir.py
+22d99d0c1805ec729c26c6bbe4b032495731a8c308169b4123f6f0dc356a6d77  op_ir_v1_sortie.txt
+77620a4161cedaab8a0e3172d4f5eee5ab5bb98df8ac421f2c81ab3c34396fb5  op_ir_v2.py
+46628dbd65249fb3b36e7e131cc4ea3dc60dc8c85626b019e6601c0aa073ab93  op_ir_v2_sortie.txt
+1b24fd9de15a29467a14acc1155bedf66ff48f3732918cb1d334dd1e485c4fbe  op_ir_v2_ctrl.py
+92e33e8054cadda21f27719e5139b49ec35eb467875ffef9f03a8e3e7e96b573  op_ir_v2_ctrl_sortie.txt
+7a3b5906afeb909ad10fac7c8a7dbcf797ea6788c76719c34a0adfd8eea61f2b  REGISTRE-v102-emis.md

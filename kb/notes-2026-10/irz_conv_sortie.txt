@@ -1,0 +1,4 @@
+Dirac (eq. 35/42)              FW = G/(5*pi)   8 b kappa = G/(5*pi)   egal : True
+scalaire conforme (eq. 46)     FW = G/(30*pi)   8 b kappa = G/(30*pi)   egal : True
+photon (= 2 x Dirac, p. 6)     FW = 2*G/(5*pi)   8 b kappa = 2*G/(5*pi)   egal : True
+exposant (42) = -2 gamma(40) : True

@@ -1,0 +1,41 @@
+A. poids covariant du tenseur rescale du corpus : Omega**(-2) (attendu Omega^-2)
+A. trace (metrique g) du tenseur rescale       : Omega**(-4) x hat-T
+A. scalaire T* de Friedrich (3.7)              : Omega^-2 x hat-T  -> objet DIFFERENT de la trace rescalee du corpus (facteur Omega^2)
+
+B1 rayonnement : rho = B a^-4, p = rho/3
+   conservation (doit valoir 0)   : 0
+   trace physique hat-T           : 0
+   trace rescalee corpus O^-4 T   : 0
+   T* Friedrich = O^-2 T          : 0
+   RHS (2.17) composante (1, 0, 1) : 0
+   RHS (2.17) composante (0, 1, 1) : 0
+
+B2 poussiere : rho = B a^-3, p = 0
+   conservation (doit valoir 0)   : 0
+   trace physique hat-T           : -B*w**3
+   trace rescalee corpus O^-4 T   : -B/w
+   T* Friedrich = O^-2 T          : -B*w
+   RHS (2.17) composante (1, 0, 1) : 0
+   RHS (2.17) composante (0, 1, 1) : 0
+   -> singulier a I+ : False
+
+B3 trace imposee hat-T = A a^-4 (type anomalie), rho = (B - A ln a) a^-4
+   conservation (doit valoir 0)   : 0
+   trace physique hat-T           : A*w**4
+   trace rescalee corpus O^-4 T   : A
+   T* Friedrich = O^-2 T          : A*w**2
+   RHS (2.17) composante (1, 0, 1) : 0
+   RHS (2.17) composante (0, 1, 1) : 0
+   limite Omega->0 de (1, 0, 1) : 0
+   limite Omega->0 de (0, 1, 1) : 0
+
+B4 trace imposee hat-T = A a^-2, rho = -A*H**2*eta**2/2
+   conservation (doit valoir 0)   : 0
+   trace physique hat-T           : A*w**2
+   trace rescalee corpus O^-4 T   : A/w**2
+   T* Friedrich = O^-2 T          : A
+   RHS (2.17) composante (1, 0, 1) : 0
+   RHS (2.17) composante (0, 1, 1) : 0
+   -> singulier a I+ : False
+
+EXIT 0

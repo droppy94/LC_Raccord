@@ -1,0 +1,20 @@
+Partie 0 : facteur lambda tel que T_closed_ii = lambda * EL_i : [-1/4]
+   forme fermee = lambda * Euler-Lagrange brut, composantes 1,2,3 : True
+   c0 retenu (T_ab = c0 * d^c d^d (phi C_acbd)) : -8  ; le coefficient b multiplie l'ensemble
+Partie 1 : trace ghat^ab That_ab = 0
+   divergence nabla_hat^a That_ab (u quelconque) : [0, 0, 0, 0]
+   controle : u_sol solution de l'equation de mode : 0
+   That (u = mode de de Sitter), developpement en s :
+     That_ss = 0
+     That_sx = 0
+     That_xx = 0
+     That_yy = 4*A*b*k**4*s**2*cos(k*x) - 4*B*b*k**3*s*cos(k*x)
+     That_zz = -4*A*b*k**4*s**2*cos(k*x) + 4*B*b*k**3*s*cos(k*x)
+     That_sy = 0
+     That_xy = 0
+   R de (2.17), developpement en s (termes jusqu'a s^1) :
+     R_ysy = 6*A*b*k**4*kappa*cos(k*x) + 4*B*b*k**5*kappa*s*cos(k*x) - 4*B*b*k**3*kappa*cos(k*x)/s
+     R_yxy = -2*A*b*k**5*kappa*s*sin(k*x) + 2*B*b*k**4*kappa*sin(k*x)
+     R_zsz = -6*A*b*k**4*kappa*cos(k*x) - 4*B*b*k**5*kappa*s*cos(k*x) + 4*B*b*k**3*kappa*cos(k*x)/s
+     R_zxz = 2*A*b*k**5*kappa*s*sin(k*x) - 2*B*b*k**4*kappa*sin(k*x)
+EXIT 0

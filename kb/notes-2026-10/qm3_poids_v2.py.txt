@@ -1,0 +1,59 @@
+"""
+qm3_poids_v2.py -- NOTE-BORD-EON-90 (Q-M3). Successeur de qm3_poids.py (v1 conservee avec sa sortie).
+La v1, partie B, evaluait le second membre de (2.17) de Friedrich sur des sources HOMOGENES :
+il est identiquement nul (FLRW conformement plat => Cotton nul). Controle de symetrie, NON informatif.
+
+v2 teste ce qui est testable sans inventer de modele de matiere :
+ A. identite de poids : trace rescalee du corpus (Omega^-4 hat-T) contre scalaire T* = Omega^-2 hat-T (Friedrich 3.7).
+ C. le scalaire REGULIER de Friedrich (m^2 = 2 lambda/3) : trace rescalee du corpus a I+.
+    Entrees [extrait] 1311.0700 : hat-T = Omega^2 T* (3.7) ; T* = (lambda/3 - 2 m^2) psi^2 + O(Omega) (3.9) ;
+    psi_0 donnee libre sur J (prop. 4.1).
+ D. canal de jauge sous C-M1, partie TRACE : T* = Omega^-2 (beta/2e) hat-F^2 = Omega^2 (beta/2e) F^2_[g]
+    (poids F~^2 = Omega^4 F^2_[g], [calcule] verif_S21/S23). Termes ou T* entre dans (2.13), (2.15), (3.15).
+ E. partie SANS TRACE imposee par la conservation (modele homogene) : rho = (B - A ln a) a^-4 ;
+    composantes g-orthonormees de la partie sans trace : Omega^-2 x (composantes physiques orthonormees).
+"""
+import sympy as sp
+W, lam, m, psi0, beta_e, F2g, A, B, kap = sp.symbols('Omega lambda m psi0 beta_e F2g A B kappa', positive=True)
+
+# A
+print("A. trace rescalee corpus / T* Friedrich =", sp.simplify((W**-4)/(W**-2)), "(facteur Omega^-2 : objets differents)")
+
+# C
+Tstar_J = (lam/3 - 2*m**2)*psi0**2
+Tstar_reg = sp.simplify(Tstar_J.subs(m**2, 2*lam/3))
+That = W**2*Tstar_reg
+corpus = sp.simplify(That/W**4)
+print("C. scalaire regulier : T*|_J =", Tstar_reg, " ; trace rescalee corpus =", corpus)
+assert sp.simplify(Tstar_reg + lam*psi0**2) == 0
+assert sp.limit(sp.Abs(corpus), W, 0) == sp.oo
+print("   -> le critere du corpus (trace rescalee bornee) DECLARE divergent un cas que Friedrich declare regulier")
+
+# D
+Tstar_gauge = W**2*beta_e*F2g
+terms = {
+ "(2.13)  kappa/4 hat-T = kappa/4 Omega^2 T*": kap/4*W**2*Tstar_gauge,
+ "(2.15)  kappa/24 Omega^-1 d(Omega^2 T*) ~ Omega^-1 * Omega^3 (ordre)": kap/24*W**-1*W**3*beta_e*F2g,
+ "(3.15)  -1/6 Omega^-1 T* dOmega": -sp.Rational(1,6)*W**-1*Tstar_gauge,
+ "(3.15)  -1/12 d T* ~ Omega (ordre)": -sp.Rational(1,12)*W*beta_e*F2g,
+}
+for k, v in terms.items():
+    lim = sp.limit(v, W, 0)
+    print("D.", k, "->", sp.simplify(v), "; limite", lim)
+    assert lim == 0
+print("   -> par les canaux ou la TRACE entre, le canal de jauge a l'ordre Omega^0 (corpus) est regulier, si F_[g] est une inconnue reguliere (H-1)")
+
+# E
+a = 1/W
+rho = (B - A*sp.log(a))*a**-4
+p = (rho + A*a**-4)/3
+# partie sans trace physique, composante temps-temps orthonormee : rho - (1/4)(-hat-T)... T*_00 = rho + hat-T/4 (signature -+++, hat-T = -rho+3p)
+hatT = -rho + 3*p
+T00_tf_phys = sp.simplify(rho + hatT/4)
+T00_tf_g = sp.simplify(W**-2 * T00_tf_phys)          # composante g-orthonormee
+print("E. hat-T =", sp.simplify(hatT), " ; T*_00 (g-orthonorme) =", sp.expand(T00_tf_g))
+assert sp.simplify(hatT - A*W**4) == 0
+assert sp.simplify(T00_tf_g - W**2*(B + A*sp.log(W) + A/4)) == 0
+print("   -> la partie sans trace porte Omega^2 ln Omega : continue, NON lisse en Omega (polyhomogene) des que A != 0")
+print("   -> Omega^-1 * d(Omega T*_mn) dans (3.15) contient ln Omega : non borne. Effet sur (2.17) NON evalue (homogene = nul par symetrie)")
+print("\nEXIT 0")

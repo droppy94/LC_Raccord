@@ -1,0 +1,37 @@
+[calcule] (a) div B = 0
+[calcule] (a) div E = 0
+[calcule] (a) rot E + dB/dt = Matrix([[0], [0], [0]])
+[calcule] (a) rot B - dE/dt = Matrix([[0], [0], [0]])
+[calcule] (a) B - forme fermee = Matrix([[0, 0, 0]]) ; E - forme fermee = Matrix([[0, 0, 0]])
+
+[calcule] (b) carte de Qtf(x) a t=0, D=80, w=2 (composantes zz, xx, xz) ; |Qtf| = norme de Frobenius
+  r=  20.00  th=0.00: zz= 1.278e-57 xz=-0.000e+00 |Q|=1.565e-57 | th=0.79: zz= 5.252e-56 xz=-4.277e-56 |Q|=1.230e-55 | th=1.57: zz= 1.730e-55 xz=-9.478e-72 |Q|=2.447e-55
+  r=  40.00  th=0.00: zz= 1.880e-41 xz=-0.000e+00 |Q|=2.303e-41 | th=0.79: zz= 2.958e-39 xz=-2.674e-39 |Q|=7.593e-39 | th=1.57: zz= 1.072e-38 xz=-6.229e-55 |Q|=1.517e-38
+  r=  68.00  th=0.00: zz= 4.571e-18 xz=-0.000e+00 |Q|=5.598e-18 | th=0.79: zz= 2.099e-15 xz=-1.981e-15 |Q|=5.608e-15 | th=1.57: zz= 7.928e-15 xz=-4.712e-31 |Q|=1.121e-14
+  r=  76.00  th=0.00: zz= 2.427e-11 xz=-0.000e+00 |Q|=2.973e-11 | th=0.79: zz= 1.288e-08 xz=-1.220e-08 |Q|=3.455e-08 | th=1.57: zz= 4.885e-08 xz=-2.910e-24 |Q|=6.908e-08
+  r=  80.00  th=0.00: zz= 3.868e-09 xz=-0.000e+00 |Q|=4.737e-09 | th=0.79: zz=-5.918e-10 xz= 1.088e-09 |Q|=3.317e-09 | th=1.57: zz= 1.476e-09 xz=-2.665e-25 |Q|=2.105e-09
+  r=  84.00  th=0.00: zz= 1.910e-12 xz= 0.000e+00 |Q|=2.340e-12 | th=0.79: zz= 1.030e-08 xz=-1.036e-08 |Q|=2.954e-08 | th=1.57: zz= 4.166e-08 xz=-2.558e-24 |Q|=5.908e-08
+  r=  92.00  th=0.00: zz= 4.393e-12 xz= 0.000e+00 |Q|=5.380e-12 | th=0.79: zz=-8.884e-13 xz= 1.277e-12 |Q|=3.295e-12 | th=1.57: zz= 9.884e-13 xz=-2.819e-28 |Q|=1.211e-12
+  r= 120.00  th=0.00: zz= 8.931e-13 xz= 0.000e+00 |Q|=1.094e-12 | th=0.79: zz=-1.954e-13 xz= 2.512e-13 |Q|=6.836e-13 | th=1.57: zz= 2.233e-13 xz=-6.152e-29 |Q|=2.734e-13
+  r= 240.00  th=0.00: zz= 1.395e-14 xz= 0.000e+00 |Q|=1.709e-14 | th=0.79: zz=-3.052e-15 xz= 3.925e-15 |Q|=1.068e-14 | th=1.57: zz= 3.489e-15 xz=-9.612e-31 |Q|=4.273e-15
+
+[calcule] (c) moyennes angulaires : <Qtf> = a(r) (zz - 1/3 Id) ; controle structure et analytique
+  r= 100.00  a_num= 1.999972e-13  a_analytique= 1.999972e-13  ecart_structure=8.8e-29
+  r= 160.00  a_num= 1.192093e-14  a_analytique= 1.192093e-14  ecart_structure=9.5e-30
+  r=  80.00  a_num= 7.987340e-10  a_analytique= 7.987340e-10  ecart_structure=1.1e-23
+  r=  79.00  a_num= 1.029801e-06  a_analytique= 1.029801e-06  ecart_structure=1.1e-21
+  r=  81.00  a_num= 1.033718e-06  a_analytique= 1.033718e-06  ecart_structure=2.6e-21
+  statique r=2D : a*r^6/m0^2 = 0.200000 (attendu 1/5 = 0.2)
+  rayonne r=D : a/(m0^2 f''(t_r)^2/r^2) a r=D+w = 0.812718 (attendu 4/5 a O(w/D))
+
+[calcule] (c) integrales radiales J = int a(r) r^2 dr (unites m0 = 1)
+  r < D-10w      J = 1.671175e-18  (err 2.0e-18)
+  |r-D| <= 10w   J = 2.666660e-02  (err 6.2e-14)
+  r > D+10w      J = 6.666664e-08  (err 2.4e-10)
+  coquille, J avec moyenne angulaire numerique = 2.666660e-02
+[calcule] attendus analytiques :
+  statique  r > D+10w : m0^2/(15 (D+10w)^3) = 6.666667e-08
+  rayonne   coquille  : (4/5) m0^2 int f''^2 dt = (4/5)(4/15) m0^2/w^3 = 16/(75 w^3) = 2.666667e-02
+  interieur r < D-10w : ~ exp(-20) x (puissances), nul a precision machine pres pour une marche a support compact
+  controle : (4/5) int f''(t_r)^2 dr sur la coquille = 2.666667e-02
+[calcule] figure : /home/claude/audit_ma1/q2_profil_a_r.png

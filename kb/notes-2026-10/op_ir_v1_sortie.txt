@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/claude/n101/op_ir.py", line 41, in <module>
+    solm = sp.solve([q for q in sp.Poly(sp.expand(sp.diff(U1m, s, 2) + k**2*U1m - src_m), s).coeffs()], aa[2:], dict=True)[0]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range

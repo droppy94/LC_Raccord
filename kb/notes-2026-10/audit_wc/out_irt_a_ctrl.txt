@@ -1,0 +1,9 @@
+densite construite ; termes : 3
+verification : EL ordre e^0 (doit etre 0) : 0
+sgn=1 : That_yy fond = 17/(2*s**2) ; attendu 6*ghat_yy = 6/s**2
+   That_yy ordre e = (17*A*cos(k*s) + 17*B*sin(k*s) + 10*k**2*s**2*(-A*k*s*sin(k*s) - A*cos(k*s) + B*k*s*cos(k*s) - B*sin(k*s)) + 17*k*s*(A*sin(k*s) - B*cos(k*s)))*cos(k*x)/(2*s**2)
+   That_yy ordre e - 6*delta ghat_yy = 5*(-2*A*k**3*s**3*sin(k*s) - 2*A*k**2*s**2*cos(k*s) + A*k*s*sin(k*s) + A*cos(k*s) + 2*B*k**3*s**3*cos(k*s) - 2*B*k**2*s**2*sin(k*s) - B*k*s*cos(k*s) + B*sin(k*s))*cos(k*x)/(2*s**2)
+sgn=-1 : That_yy fond = -17/(2*s**2) ; attendu 6*ghat_yy = 6/s**2
+   That_yy ordre e = -(17*A*cos(k*s) + 17*B*sin(k*s) - 10*k**2*s**2*(A*k*s*sin(k*s) + A*cos(k*s) - B*k*s*cos(k*s) + B*sin(k*s)) + 17*k*s*(A*sin(k*s) - B*cos(k*s)))*cos(k*x)/(2*s**2)
+   That_yy ordre e - 6*delta ghat_yy = (10*A*k**3*s**3*sin(k*s) + 10*A*k**2*s**2*cos(k*s) - 29*A*k*s*sin(k*s) - 29*A*cos(k*s) - 10*B*k**3*s**3*cos(k*s) + 10*B*k**2*s**2*sin(k*s) + 29*B*k*s*cos(k*s) - 29*B*sin(k*s))*cos(k*x)/(2*s**2)
+EXIT 0

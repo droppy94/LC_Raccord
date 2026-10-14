@@ -1,0 +1,4 @@
+W_E,yy = C_sysy/s = A*k**4*s*cos(k*x)/2 - B*k**3*cos(k*x)/2
+W_E,zz = C_szsz/s = -A*k**4*s*cos(k*x)/2 + B*k**3*cos(k*x)/2
+W_E,xx = C_sxsx/s = 0
+EXIT 0

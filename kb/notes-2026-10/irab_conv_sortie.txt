@@ -1,0 +1,17 @@
+== ab-1 : coefficient du logarithme, photon, [8] eq. (53) ==
+[8] eq.53 : 2*G*H**2/(5*pi)    programme 8 b kappa H^2 (N_V=1) : 2*G*H**2/(5*pi)    egaux : True
+[8] eq.60 (hbar=c=1) : 2 G H^2/(5 pi) = True
+rapport photon/Dirac (Dirac = G H^2/(5 pi), NOTE-148) : 2
+
+== ab-2 : gamma de [8] eq. (58) a partir de c_2 eq. (56), c_1 = 0 ==
+gamma (D->4) = -G*H**2/(5*pi)    source : -kappa_W^2 H^2/(80 pi^2) = -G*H**2/(5*pi)    egaux : True
+exposant resomme = -2 gamma = 2*G*H**2/(5*pi)  = coefficient du log (53) : True
+
+== ab-2 bis : [27] eq. (91), scalaire MMC, c_1 et c_2 eq. (85)-(86) ==
+gamma_MMC (D->4) = 3*G*H**2/(20*pi)    source : 3 G H^2/(20 pi) ; egaux : True
+exposant -2 gamma_MMC = -3*G*H**2/(10*pi)  ; [27] eq. (93) : -3 G H^2/(10 pi)
+
+== structure : champ conforme => c_1 = 0 => delta Z = -D c_2 kappa_W^2 H^2 ; exposant fixe par le seul contre-terme de Weyl (NOTE-137) ==
+residu de c_2 (photon) = 1/(320*pi**2)    b_V (programme) = 1/(160*pi**2)    egaux : False
+8 b kappa = 4 kappa_W^2 b : True
+d c_2/d ln mu (photon) = 1/(160*pi**2)    = b_V : True    (la lecture 'c_2 = b' de NOTE-137 vaut pour la derivee en ln mu ; en ln mu^2 c'est b/2)

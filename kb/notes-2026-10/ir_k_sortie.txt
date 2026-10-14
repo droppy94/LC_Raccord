@@ -1,0 +1,22 @@
+A. divergence de X^M + (1/4) d_nu(I^2) F^2 (premier ordre, ordre tronque) et log dans div X^M :
+   nu = 0 : residu = 0  ; coefficient de L dans div X^M = 0
+   nu = 1 : residu = 0  ; coefficient de L dans div X^M = 0
+   nu = 2 : residu = 0  ; coefficient de L dans div X^M = 0
+   nu = 3 : residu = 0  ; coefficient de L dans div X^M = 0
+   (temps 50 s)
+B0. Christoffel ( 50 s)
+B1. Riemann ( 51 s)
+B2. courbures ( 52 s)
+B3. Delta4 phi et F4 ( 55 s)
+    fond : Delta4(-ln s) - F4/4 = 0  ; F4 fond = 24
+B4. densite au premier ordre construite ( 55 s), nombre de termes : 8
+B5. Euler-Lagrange ( 55 s)
+   T_1 contient log(s) : False ; nombre de termes : 2
+   T_2 contient log(s) : False ; nombre de termes : 3
+   T_3 contient log(s) : False ; nombre de termes : 3
+   T_2 - T_3 = 0
+B6. T_1 (x) avec psi lisse : plus basse puissance de s = 0 ; coefficient : (-12*a4(x) + Derivative(a2(x), (x, 2)))/3
+B6. T_2 (y) avec psi lisse : plus basse puissance de s = 0 ; coefficient : -(24*a4(x) + Derivative(a0(x), (x, 4)) - 4*Derivative(a2(x), (x, 2)))/6
+B7. anisotropie T_1 - T_2 : plus basse puissance de s = 0 ; coefficient : (Derivative(a0(x), (x, 4)) - 2*Derivative(a2(x), (x, 2)))/6
+
+EXIT 0 ( 55 s)

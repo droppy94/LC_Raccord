@@ -1,0 +1,27 @@
+A0. equations de conservation (ordres s^p, p <= 3 ) : 52  ; inconnues : 108
+    solution trouvee ; coefficients libres : 60
+A1. coefficient de ln s a s^0 dans R_{rho nu la} (local) ; reference (3 beta kappa/e^2) Q_tf pour (i,s,i) :
+    (0, 0, 1) : coef ln s a s^0 = 0  ; termes negatifs en s : -2*c**2*k*kappa*s*sin(k*x)*cos(k*x)/e**2 - 2*k**3*kappa*s*u0**2*sin(k*x)*cos(k*x)/e**2
+    (1, 0, 1) : coef = -kappa*(-c*cos(k*x) + k*u0*sin(k*x))*(c*cos(k*x) + k*u0*sin(k*x))/e**2  ; ecart a +ref : 0  ; a -ref : 2*kappa*(c**2*cos(k*x)**2 - k**2*u0**2*sin(k*x)**2)/e**2
+    (2, 0, 2) : coef = -kappa*(-2*c**2*sin(k*x)**2 + 2*c**2 + k**2*u0**2*sin(k*x)**2)/e**2  ; ecart a +ref : 0  ; a -ref : 2*kappa*(-2*c**2*cos(k*x)**2 - k**2*u0**2*sin(k*x)**2)/e**2
+    (2, 1, 2) : coef ln s a s^0 = 0  ; termes negatifs en s : 2*c**2*k*kappa*s*sin(k*x)*cos(k*x)/e**2
+    (3, 0, 3) : coef = kappa*(-c**2*sin(k*x)**2 + c**2 + 2*k**2*u0**2*sin(k*x)**2)/e**2  ; ecart a +ref : 0  ; a -ref : 2*kappa*(c**2*cos(k*x)**2 + 2*k**2*u0**2*sin(k*x)**2)/e**2
+    (3, 1, 3) : coef ln s a s^0 = 0  ; termes negatifs en s : 2*k**3*kappa*s*u0**2*sin(k*x)*cos(k*x)/e**2
+   loi locale verifiee (diagonales (i,s,i)) et aucun autre ln a s^0 : False
+   coefficients libres de la fermeture presents dans un coefficient de ln : aucun
+A2. coefficient de ln s dans R_(1,0,1) jusqu'a s^2 (structure des corrections) : -c**2*kappa*sin(k*x)**2/e**2 + c**2*kappa/e**2 + s**2*(2*c**2*k**2*kappa*sin(k*x)**2/e**2 - c**2*k**2*kappa/e**2 + 2*k**4*kappa*u0**2*sin(k*x)**2/e**2 - k**4*kappa*u0**2/e**2) - k**2*kappa*u0**2*sin(k*x)**2/e**2
+
+B0. controle Maxwell en un point generique (D=10, w=1/2) : div B = 0  ; |rot E + dB/dt| = 0  ; |rot B - dE/dt| = 0
+B1. carte de Q_tf a scri+ (t = 0), D = 10, w = 1/2, m0 = 1 :
+   r=3 (boule deja traversee) : |B| = 2.441E-12, |E| = 2.390E-12, B.E = 0, norme de Q_tf = 8.254E-24
+   r=10 (coquille) : |B| = 0.01502, |E| = 0.007071, B.E = 0, norme de Q_tf = 0.0002077
+   r=10, equateur : |B| = 0.009500, |E| = 0.01000, B.E = 0, norme de Q_tf = 0.0001346
+   r=20 (reliquat statique) : |B| = 0.0001976, |E| = 2.433E-18, B.E = 0, norme de Q_tf = 3.189E-8
+B2. forme radiale controlee en un point generique : |B - forme| = 2.23508491418266e-76  ; |E - forme| = 3.23860713368729e-78
+B3. moyennes angulaires (parties sans trace, en unites de diag(-1/3,-1/3,2/3)) : <SaSa> = 1/5 , <SgSg> = 7/15 , <SaSg+SgSa> = 2/15 , <SeSe> = -1/3
+B4. integrale de Q_tf (composante zz, unites de 2/3) par region : boule r<D-3w : 1.17155e-8  ; coquille |r-D|<3w : 21.4462  ; reliquat r>D+3w : 0.000381083
+    reliquat, prediction statique pure cA * 4 pi/(3 r_min^3) : 0.000381319
+    coquille, prediction rayonnee (4/5)*... : 4 pi * <(eB eB - eE eE)>_zz * int mdd^2 ; <SgSg - SeSe> zz/(2/3) = 4/5  ; 4 pi (cG - cE) int mdd^2 = 21.356
+B5. domaine : |B| r^2 au reliquat (r=20) = 0.07906  (doit etre << 1 : ici m0/r ; condition r >> m0)
+
+EXIT 0

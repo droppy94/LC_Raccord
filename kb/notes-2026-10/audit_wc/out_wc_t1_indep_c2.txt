@@ -1,0 +1,6 @@
+c4=2 comp yy: T_hat fond = 6/s**2 ; (T_hat - 6 ghat) ordre e^0 = 0 ; ordre e^1 = 0
+c4=2 comp zz: T_hat fond = 6/s**2 ; (T_hat - 6 ghat) ordre e^0 = 0 ; ordre e^1 = 0
+c4=2 comp ss: T_hat fond = -6/s**2 ; (T_hat - 6 ghat) ordre e^0 = 0 ; ordre e^1 = 0
+c4=2 comp xx: T_hat fond = 6/s**2 ; (T_hat - 6 ghat) ordre e^0 = 0 ; ordre e^1 = 0
+c4=2 comp sx: T_hat fond = 0 ; (T_hat - 6 ghat) ordre e^0 = 0 ; ordre e^1 = 0
+EXIT 0

@@ -1,0 +1,30 @@
+1. Maxwell d_mu(I^2 F^{mu nu}) (indices plats) : [0, 0, 0, 0]
+2. X^M (diag) : [-B0**2*L*beta*s**2/e**2 + B0**2*s**2/(2*e**2), -B0**2*L*beta*s**2/e**2 + B0**2*s**2/(2*e**2), -B0**2*L*beta*s**2/e**2 + B0**2*s**2/(2*e**2), B0**2*L*beta*s**2/e**2 - B0**2*s**2/(2*e**2)] ; trace : 0
+   divergence de X^M : [B0**2*beta*s**3/e**2, 0, 0, 0]
+3. trace anomale hat-T = -B0**2*beta*s**4/e**2  ; A = hat-T/Omega^4 = -B0**2*beta/e**2
+   controle trace (doit etre 0) : 0
+4. C-iso : r0 = C*s**2
+   conservation totale : [0, 0, 0, 0]
+
+5. R sous C-iso (composantes non nulles) :
+   (1, 0, 1) : -B0**2*L*beta*kappa/e**2 - B0**2*beta*kappa/(3*e**2) + B0**2*kappa/(2*e**2)
+   (2, 0, 2) : -B0**2*L*beta*kappa/e**2 - B0**2*beta*kappa/(3*e**2) + B0**2*kappa/(2*e**2)
+   (3, 0, 3) : 2*B0**2*L*beta*kappa/e**2 + 2*B0**2*beta*kappa/(3*e**2) - B0**2*kappa/e**2
+   termes non lisses : {(1, 0, 1): [(1, 0, -B0**2*beta*kappa/e**2)], (2, 0, 2): [(1, 0, -B0**2*beta*kappa/e**2)], (3, 0, 3): [(1, 0, 2*B0**2*beta*kappa/e**2)]}
+
+6. Controle beta = 0 (Maxwell conforme pur, meme fermeture) :
+   {(1, 0, 1): B0**2*kappa/(2*e**2), (2, 0, 2): B0**2*kappa/(2*e**2), (3, 0, 3): -B0**2*kappa/e**2}
+   termes non lisses a beta = 0 : {}
+
+7. divergence de Pi diag(0,1,1,-2) : [0, 0, 0, 0]
+   (1, 0, 1) : kappa*(B0**2*s**2*(-6*L*beta - 2*beta + 3) + 3*e**2*s*Derivative(Pi(s), s) + 3*e**2*Pi(s))/(6*e**2*s**2)
+   (2, 0, 2) : kappa*(B0**2*s**2*(-6*L*beta - 2*beta + 3) + 3*e**2*s*Derivative(Pi(s), s) + 3*e**2*Pi(s))/(6*e**2*s**2)
+   (3, 0, 3) : kappa*(B0**2*s**2*(6*L*beta + 2*beta - 3) - 3*e**2*s*Derivative(Pi(s), s) - 3*e**2*Pi(s))/(3*e**2*s**2)
+
+   conditions de regularite sur Pi : [2*kappa*q3, -B0**2*beta*kappa/e**2 + 3*kappa*q2/2, kappa*p1, kappa*p0/2, 2*kappa*q3, -B0**2*beta*kappa/e**2 + 3*kappa*q2/2, kappa*p1, kappa*p0/2, -4*kappa*q3, 2*B0**2*beta*kappa/e**2 - 3*kappa*q2, -2*kappa*p1, -kappa*p0]
+   solution : [{p0: 0, p1: 0, q2: 2*B0**2*beta/(3*e**2), q3: 0}]
+
+8. partie logarithmique du secteur Maxwell : X^M_xx ~ -B0**2*beta*s**2/e**2 * L ; X^M_zz ~ B0**2*beta*s**2/e**2 * L
+   sa partie anisotrope s'ecrit  Pi_M(L) =  -2*B0**2*beta*s**2/(3*e**2) * L * diag(0,1,1,-2)
+
+EXIT 0

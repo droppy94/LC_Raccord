@@ -1,0 +1,4 @@
+bornes du script (D -+ 6w) : boule 1.17155e-8 ; coquille 21.4462248 (rayonne seul 21.4466058) ; reliquat 0.000381083 (statique pur 0.000381319)
+bornes D -+ 3w : boule 0.00189366 ; coquille 21.4422956 (rayonne seul 21.4427045) ; reliquat 0.00241664 (statique pur 0.00055084)
+prediction rayonnee exacte : 21.4466058  ; ecart relatif coquille (bornes du script) : -1.78e-5
+total toutes regions : 21.4466058

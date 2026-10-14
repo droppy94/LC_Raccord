@@ -1,0 +1,16 @@
+controle trace Weyl nulle : True
+controle convention : signe R_{xyxy} de la courbure de h vs script audite (formule lineaire) -> 0
+== (1) ordre dominant en s hors cone (x-2 : est-ce O(1) ou mieux ?) ==
+   ln sigma, pt (1,1/2,2/3) : ordres dominants {'ssx': 1, 'ssy': 0, 'ssz': 0, 'sxy': 1, 'sxz': 1, 'syz': 1, 'xsx': 1, 'xsy': 0, 'xsz': 0, 'xxy': 0, 'xxz': 0, 'xyz': 1, 'ysx': 0, 'ysy': 0, 'ysz': 1, 'yxy': 1, 'yxz': 1, 'yyz': 0, 'zsx': 0, 'zsy': 1, 'zsz': 0, 'zxy': 1, 'zxz': 1, 'zyz': 0} ; min = 0
+  t = 45.8
+== (2) contre-exemple (a), s0 = 1 ==
+   (a) r>s0, ordre en s : ordres dominants {'ssx': 1, 'ssy': 0, 'sxy': 1, 'xsx': 1, 'xsy': 0, 'xxy': 0, 'ysx': 0, 'ysy': 0, 'yxy': 1, 'zsz': 0, 'zxz': 1, 'zyz': 0} ; min = 0
+   (a) r = s0 + 3 s, s -> 0 : ordres dominants {'ssx': -1, 'ssy': -1, 'ssz': -1, 'sxy': -1, 'sxz': -1, 'syz': -1, 'xsx': -1, 'xsy': -1, 'xsz': -1, 'xxy': -1, 'xxz': -1, 'xyz': -1, 'ysx': -1, 'ysy': -1, 'ysz': -1, 'yxy': -1, 'yxz': -1, 'yyz': -1, 'zsx': -1, 'zsy': -1, 'zsz': -1, 'zxy': -1, 'zxz': -1, 'zyz': -1} ; min = -1
+  t = 185.2
+   (a) r = s0 + 0 s, s -> 0 : ordres dominants {'ssx': -1, 'ssy': -1, 'ssz': -1, 'sxy': -1, 'sxz': -1, 'syz': -1, 'xsx': -1, 'xsy': -1, 'xsz': -1, 'xxy': -1, 'xxz': -1, 'xyz': -1, 'ysx': -1, 'ysy': -1, 'ysz': -1, 'yxy': -1, 'yxz': -1, 'yyz': -1, 'zsx': -1, 'zsy': -1, 'zsz': -1, 'zxy': -1, 'zxz': -1, 'zyz': -1} ; min = -1
+  t = 235.5
+   (a) r = s0 + 1/2 s, s -> 0 : ordres dominants {'ssx': -1, 'ssy': -1, 'ssz': -1, 'sxy': -1, 'sxz': -1, 'syz': -1, 'xsx': -1, 'xsy': -1, 'xsz': -1, 'xxy': -1, 'xxz': -1, 'xyz': -1, 'ysx': -1, 'ysy': -1, 'ysz': -1, 'yxy': -1, 'yxz': -1, 'yyz': -1, 'zsx': -1, 'zsy': -1, 'zsz': -1, 'zxy': -1, 'zxz': -1, 'zyz': -1} ; min = -1
+  t = 329.2
+   (a) s=1/4, r = s0+s+e, ordre en e : ordres dominants {'ssx': -3, 'ssy': -3, 'ssz': -3, 'sxy': -3, 'sxz': -3, 'syz': -3, 'xsx': -3, 'xsy': -3, 'xsz': -3, 'xxy': -3, 'xxz': -3, 'xyz': -3, 'ysx': -3, 'ysy': -3, 'ysz': -3, 'yxy': -3, 'yxz': -3, 'yyz': -3, 'zsx': -3, 'zsy': -3, 'zsz': -3, 'zxy': -3, 'zxz': -3, 'zyz': -3} ; min = -3
+  t = 408.6
+EXIT 0 (contre-exemple (c) dans xa2_E)

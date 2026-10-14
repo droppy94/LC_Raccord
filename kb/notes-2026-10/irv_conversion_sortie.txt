@@ -1,0 +1,4 @@
+scalaire MCC       exposant Woodard (a^p) : G/(30*pi) ; 8 b kappa : G/(30*pi) ; rapport : 1 ; d'ou W_E ∝ Omega^(-G/(30*pi))
+fermion de Dirac   exposant Woodard (a^p) : G/(5*pi) ; 8 b kappa : G/(5*pi) ; rapport : 1 ; d'ou W_E ∝ Omega^(-G/(5*pi))
+photon             exposant Woodard (a^p) : 2*G/(5*pi) ; 8 b kappa : 2*G/(5*pi) ; rapport : 1 ; d'ou W_E ∝ Omega^(-2*G/(5*pi))
+EXIT 0

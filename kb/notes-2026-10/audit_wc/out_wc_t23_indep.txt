@@ -1,0 +1,122 @@
+##### t-2 reproduction
+== p=1, y generique : trace = 0 ; div = [0, 0, 0, 0]
+   R_ysy : lim s*R = kappa*y0*cos(k*x)
+   R_yxy : lim s*R = 0 ; lim R = -k*kappa*y0*sin(k*x)/2
+   R_zsz : lim s*R = -kappa*y0*cos(k*x)
+   R_zxz : lim s*R = 0 ; lim R = k*kappa*y0*sin(k*x)/2
+   pole 1/s (ou pire) : True
+== p=2, y generique : trace = 0 ; div = [0, 0, 0, 0]
+   R_ysy : lim s*R = 0 ; lim R = 3*kappa*y0*cos(k*x)/2
+   R_yxy : lim s*R = 0 ; lim R = 0
+   R_zsz : lim s*R = 0 ; lim R = -3*kappa*y0*cos(k*x)/2
+   R_zxz : lim s*R = 0 ; lim R = 0
+   pole 1/s (ou pire) : False
+##### t-2 contre-exemples
+== p=1, y0 = 0 : trace = 0 ; div = [0, 0, 0, 0]
+   R_ysy : lim s*R = 0 ; lim R = 3*kappa*y1*cos(k*x)/2
+   R_yxy : lim s*R = 0 ; lim R = 0
+   R_zsz : lim s*R = 0 ; lim R = -3*kappa*y1*cos(k*x)/2
+   R_zxz : lim s*R = 0 ; lim R = 0
+   pole 1/s (ou pire) : False
+== p=2, Y_ss seul (trace non nulle, non conserve) : trace = s**4*(-f0 - f1*s)*cos(k*x) ; div = [s**3*(-f0 - 2*f1*s)*cos(k*x), 0, 0, 0]
+   R_ssx : lim s*R = 0 ; lim R = 0
+   R_xsx : lim s*R = 0 ; lim R = f0*kappa*cos(k*x)/6
+   R_ysy : lim s*R = 0 ; lim R = f0*kappa*cos(k*x)/6
+   R_yxy : lim s*R = 0 ; lim R = 0
+   R_zsz : lim s*R = 0 ; lim R = f0*kappa*cos(k*x)/6
+   R_zxz : lim s*R = 0 ; lim R = 0
+   pole 1/s (ou pire) : False
+== p=2, Y_sx seul (sans trace, non conserve) : trace = 0 ; div = [-k*s**4*(f0 + f1*s)*sin(k*x), -f1*s**4*cos(k*x), 0, 0]
+   R_ssx : lim s*R = 0 ; lim R = f0*kappa*cos(k*x)
+   R_xsx : lim s*R = 0 ; lim R = 0
+   R_yxy : lim s*R = 0 ; lim R = -f0*kappa*cos(k*x)/2
+   R_zxz : lim s*R = 0 ; lim R = -f0*kappa*cos(k*x)/2
+   pole 1/s (ou pire) : False
+== p=2, Y_yy = Y_zz (trace, non conserve) : trace = 2*s**4*(f0 + f1*s)*cos(k*x) ; div = [2*s**3*(f0 + f1*s)*cos(k*x), 0, 0, 0]
+   R_ssx : lim s*R = 0 ; lim R = 0
+   R_xsx : lim s*R = 0 ; lim R = -4*f0*kappa*cos(k*x)/3
+   R_ysy : lim s*R = 0 ; lim R = f0*kappa*cos(k*x)/6
+   R_yxy : lim s*R = 0 ; lim R = 0
+   R_zsz : lim s*R = 0 ; lim R = f0*kappa*cos(k*x)/6
+   R_zxz : lim s*R = 0 ; lim R = 0
+   pole 1/s (ou pire) : False
+== p=2, Y = w eta (pure trace) : trace = 4*s**4*(s*w1 + w0)*cos(k*x) ; div = [s**3*(5*s*w1 + 4*w0)*cos(k*x), -k*s**4*(s*w1 + w0)*sin(k*x), 0, 0]
+   R_ssx : lim s*R = 0 ; lim R = 0
+   R_xsx : lim s*R = 0 ; lim R = -2*kappa*w0*cos(k*x)/3
+   R_ysy : lim s*R = 0 ; lim R = -2*kappa*w0*cos(k*x)/3
+   R_yxy : lim s*R = 0 ; lim R = 0
+   R_zsz : lim s*R = 0 ; lim R = -2*kappa*w0*cos(k*x)/3
+   R_zxz : lim s*R = 0 ; lim R = 0
+   pole 1/s (ou pire) : False
+== p=2 mais Y non lisse : y = y0 ln s : trace = 0 ; div = [0, 0, 0, 0]
+   R_ysy : lim s*R = 0 ; lim R = -oo*y0*cos(k*x)/Abs(y0*cos(k*x))
+   R_yxy : lim s*R = 0 ; lim R = 0
+   R_zsz : lim s*R = 0 ; lim R = oo*sign(y0*cos(k*x))
+   R_zxz : lim s*R = 0 ; lim R = 0
+   pole 1/s (ou pire) : False
+== p=3/2 (non entier) : trace = 0 ; div = [0, 0, 0, 0]
+   R_ysy : lim s*R = 0 ; lim R = oo*sign(y0*cos(k*x))
+   R_yxy : lim s*R = 0 ; lim R = 0
+   R_zsz : lim s*R = 0 ; lim R = -oo*y0*cos(k*x)/Abs(y0*cos(k*x))
+   R_zxz : lim s*R = 0 ; lim R = 0
+   pole 1/s (ou pire) : False
+##### p=1, Y0 constant symetrique general : solutions de 'pas de pole' : [{Y1: 0, Y2: 0, Y3: 0, Y4: 0, Y5: 0, Y6: 0, Y7: 0, Y8: 0, Y9: 0}]
+      trace(s*Y0) = s**3*(-Y0 + Y4 + Y7 + Y9) ; div = [s**2*(Y4 + Y7 + Y9), Y1*s**2, Y2*s**2, Y3*s**2]
+##### t-3 (a)
+box^2 ln s = -6/s**4  (4D, ne depend que de s : True )
+##### t-3 contre-exemples : box^2 de candidats non lisses
+   box^2(s**2*log(s)) = -2/s**2
+   box^2(s**3*log(s)) = 6/s
+   box^2(s*log(s)) = 2/s**3
+   box^2(log(s)) = -6/s**4
+   box^2(1/s) = 24/s**5
+   box^2(s**(-2)) = 120/s**6
+   solutions de box^2 f(s) = 0 : Eq(f(s), C1 + C2*s + C3*s**2 + C4*s**3)
+   solutions de box^2 [f(s) cos(q x)] = 0 : Eq(f(s), (C1 + C2*s)*sin(q*s) + (C3 + C4*s)*cos(q*s))
+   box^2(s^alpha cos qx)/(s^(alpha-4) cos qx) = alpha**4 - 6*alpha**3 + 2*alpha**2*q**2*s**2 + 11*alpha**2 - 2*alpha*q**2*s**2 - 6*alpha + q**4*s**4  -> nul pour tout s ssi q=0 et alpha in {0,1,2,3}
+##### t-3 (b) reproduction, phi_h plus general que le polynome, et phi singuliers
+   Weyl sans trace : True
+   -- phi = polynome du script (c1 s + c2 s^2 + c3 s^3 + c4(x^2+s^2)) : box^2 phi = 0
+== T_hat(phi = polynome du script (c1 s + c2 s^2 + c3 s^3 + c4(x^2+s^2))) : trace = 0 ; div = [0, 0, 0, 0]
+   R_ysy : lim s*R = 0 ; lim R = -12*b*k**3*kappa*(2*A*c4*x*sin(k*x) + B*c1*cos(k*x))
+   R_yxy : lim s*R = 0 ; lim R = 0
+   R_zsz : lim s*R = 0 ; lim R = 12*b*k**3*kappa*(2*A*c4*x*sin(k*x) + B*c1*cos(k*x))
+   R_zxz : lim s*R = 0 ; lim R = 0
+   pole 1/s (ou pire) : False
+   -- phi = onde [(c1+c2 s)cos qs + (c3+c4 s) sin qs] cos qy : box^2 phi = 0
+== T_hat(phi = onde [(c1+c2 s)cos qs + (c3+c4 s) sin qs] cos qy) : trace = 0 ; div = [0, 0, 0, 0]
+   R_ssx : lim s*R = 0 ; lim R = 0
+   R_ssy : lim s*R = 0 ; lim R = 4*B*b*c1*k**3*kappa*q*sin(q*y)*cos(k*x)
+   R_sxy : lim s*R = 0 ; lim R = 0
+   R_xsx : lim s*R = 0 ; lim R = 0
+   R_xsy : lim s*R = 0 ; lim R = -6*A*b*c1*k**3*kappa*q*sin(k*x)*sin(q*y)
+   R_xxy : lim s*R = 0 ; lim R = 2*B*b*c1*k**3*kappa*q*sin(q*y)*cos(k*x)
+   R_ysx : lim s*R = 0 ; lim R = -6*A*b*c1*k**3*kappa*q*sin(k*x)*sin(q*y)
+   R_ysy : lim s*R = 0 ; lim R = 12*B*b*k**3*kappa*(-c2 - c3*q)*cos(k*x)*cos(q*y)
+   R_yxy : lim s*R = 0 ; lim R = 0
+   R_zsz : lim s*R = 0 ; lim R = 12*B*b*k**3*kappa*(c2 + c3*q)*cos(k*x)*cos(q*y)
+   R_zxz : lim s*R = 0 ; lim R = 0
+   R_zyz : lim s*R = 0 ; lim R = -2*B*b*c1*k**3*kappa*q*sin(q*y)*cos(k*x)
+   pole 1/s (ou pire) : False
+   -- phi = s^2 ln s (non solution) : box^2 phi = -2/s**2
+== T_hat(phi = s^2 ln s (non solution)) : trace = 0 ; div = [0, 0, 0, 0]
+   R_ysy : lim s*R = 0 ; lim R = 0
+   R_yxy : lim s*R = 0 ; lim R = 0
+   R_zsz : lim s*R = 0 ; lim R = 0
+   R_zxz : lim s*R = 0 ; lim R = 0
+   pole 1/s (ou pire) : False
+   -- phi = s^3 ln s (non solution) : box^2 phi = 6/s
+== T_hat(phi = s^3 ln s (non solution)) : trace = 0 ; div = [0, 0, 0, 0]
+   R_ysy : lim s*R = 0 ; lim R = 0
+   R_yxy : lim s*R = 0 ; lim R = 0
+   R_zsz : lim s*R = 0 ; lim R = 0
+   R_zxz : lim s*R = 0 ; lim R = 0
+   pole 1/s (ou pire) : False
+   -- phi = ln s (= -sigma, non solution) : box^2 phi = -6/s**4
+== T_hat(phi = ln s (= -sigma, non solution)) : trace = 0 ; div = [0, 0, 0, 0]
+   R_ysy : lim s*R = -4*B*b*k**3*kappa*cos(k*x)
+   R_yxy : lim s*R = 0 ; lim R = 2*B*b*k**4*kappa*sin(k*x)
+   R_zsz : lim s*R = 4*B*b*k**3*kappa*cos(k*x)
+   R_zxz : lim s*R = 0 ; lim R = -2*B*b*k**4*kappa*sin(k*x)
+   pole 1/s (ou pire) : True
+EXIT 0

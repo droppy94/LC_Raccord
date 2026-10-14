@@ -1,0 +1,4 @@
+scalaire MCC       Woodard : G/(30*pi) ; IR-u (c0=+8) : -G/(30*pi) ; IR-u (c0=-8) : G/(30*pi) ; rapport Woodard/IR-u(c0=-8) = 1
+fermion de Dirac   Woodard : G/(5*pi) ; IR-u (c0=+8) : -G/(5*pi) ; IR-u (c0=-8) : G/(5*pi) ; rapport Woodard/IR-u(c0=-8) = 1
+photon             Woodard : 2*G/(5*pi) ; IR-u (c0=+8) : -2*G/(5*pi) ; IR-u (c0=-8) : 2*G/(5*pi) ; rapport Woodard/IR-u(c0=-8) = 1
+EXIT 0

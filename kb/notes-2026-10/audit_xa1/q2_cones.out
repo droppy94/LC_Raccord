@@ -1,0 +1,31 @@
+box sigma = 8
+eta(dsigma,dsigma) - 4 sigma = 0
+ln sigma: box = 4/(-s**2 + x**2 + y**2 + z**2) ; box^2 = 0
+1/sigma: box = 0 ; box^2 = 0
+s/sigma: box = -4*s/(-s**2 + x**2 + y**2 + z**2)**2 ; box^2 = 0
+
+--- Regularisation sigma -> sigma + i eps (identites exactes en eps) ---
+ln(sigma+ie): box = 4*(2*I*epsilon - s**2 + x**2 + y**2 + z**2)/(I*epsilon - s**2 + x**2 + y**2 + z**2)**2 ; box^2 = 96*epsilon**2/(I*epsilon - s**2 + x**2 + y**2 + z**2)**4
+1/(sigma+ie): box = -8*I*epsilon/(I*epsilon - s**2 + x**2 + y**2 + z**2)**3 ; box^2 = -192*I*epsilon*(-I*epsilon - s**2 + x**2 + y**2 + z**2)/(I*epsilon - s**2 + x**2 + y**2 + z**2)**5
+s/(sigma+ie): box = -4*s*(3*I*epsilon - s**2 + x**2 + y**2 + z**2)/(I*epsilon - s**2 + x**2 + y**2 + z**2)**3 ; box^2 = -384*epsilon**2*s/(I*epsilon - s**2 + x**2 + y**2 + z**2)**5
+
+--- Cone de sommet (0,0): restriction a la droite r=0 ---
+ln|sigma| sur r=0 : log(s**2) (= 2 ln s pour s>0)
+
+--- Lissite D'-valuee : F(s) = int_0^R r^2 ln|r^2-s^2| dr, 0<s<R ---
+F(s) = R**3*log(R**2 - s**2)/3 - 2*R**3/9 - 2*R*s**2/3 - s**3*log(R - s)/3 + s**3*log(R + s)/3
+serie de F en s=0 (ordre 8) : 2*R**3*log(R)/3 - 2*R**3/9 - R*s**2 + s**4/(2*R) + s**6/(9*R**3)
+contient log(s) ?  False
+poids (R^2-r^2)^2 : serie contient log(s) ? False
+partie imaginaire (r<s) : int_0^s r^2 dr = s**3/3
+
+--- Cone decale : sigma' = r^2 - (s+s0)^2, sommet s=-s0 ---
+sigma' a s=0 : (rho - s_0)*(rho + s_0)  -> zero sur la sphere rho = s0
+ln|sigma'| sur rho=s0 : -s*(s + 2*s_0)  = -s(s+2 s0)
+donc ln|sigma'| = ln s + ln(s+2 s0) sur la sphere (comportement ponctuel en ln s)
+hors sphere, rho != s0 : sigma'(0) = (rho - s_0)*(rho + s_0) != 0 -> analytique en s pres de 0
+normale : d sigma' en (s=0, rho=s0) = (d_s, d_rho) = (-2*s_0, 2*s_0)  (covecteur nul, transverse a {s=0} car composante d_rho non nulle)
+G(t), t = s+s0 : R**3*log(R**2 - t**2)/3 - 2*R**3/9 - 2*R*t**2/3 - t**3*log(R - t)/3 + t**3*log(R + t)/3  -> analytique en t pour 0<t<R, donc en s pres de 0
+
+--- Solution fondamentale retardee de box^2 (convention P = d_s^2 - Delta, box^2 = P^2) ---
+P[theta(s-r)/(8 pi)] = DiracDelta(r - s)/(4*pi*r)  (attendu delta(s-r)/(4 pi r), noyau retarde de P)

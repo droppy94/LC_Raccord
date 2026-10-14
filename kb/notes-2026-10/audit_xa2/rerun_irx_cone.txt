@@ -1,0 +1,49 @@
+x-1 :
+   box^2(ln sigma) = 0
+   box^2(1/sigma) = 0
+   box^2(s/sigma) = 0
+   box^2(controle ln s) = -6/s**4
+x-2 :
+   trace T_hat (simplifiee) = 0
+   R_ssx en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_ssy en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_ssz en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_sxy en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_sxz en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_syz en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_xsx en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_xsy en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_xsz en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_xxy en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_xxz en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_xyz en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_ysx en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_ysy en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_ysz en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_yxy en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_yxz en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_yyz en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_zsx en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_zsy en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_zsz en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_zxy en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_zxz en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   R_zyz en (x,y,z) = (3/2,1/2,0) : coefficient de 1/s = 0
+   pole en un point de scri+ distinct du sommet : False
+   R_ysy pres du cone (x = s + e) : terme dominant ~ e^-3
+   R_yxy pres du cone (x = s + e) : terme dominant ~ e^-3
+   R_zsz pres du cone (x = s + e) : terme dominant ~ e^-3
+   R_zxz pres du cone (x = s + e) : terme dominant ~ e^-3
+x-3 :
+   ordre s^-4 : c0 = 0
+   ordre s^-3 : c1 = 0
+   ordre s^-2 : c2 = 0
+   ordre s^-1 : c3 = 0
+   ordre s^0 ln s : c4 = 0
+   ordre s^1 ln s : c5 = 0
+   ordre s^2 ln s : c6 = 0
+   ordre s^3 ln s : c7 = 0
+   conclusion : c0..c4 forces a zero -> True
+x-4 :
+   box^2 f(s) = Derivative(f(s), (s, 4))  ; solution generale : Eq(f(s), C1 + C2*s + C3*s**2 + C4*s**3)
+EXIT 0

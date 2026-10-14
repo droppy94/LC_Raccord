@@ -1,0 +1,4 @@
+T^(C)_1 contient log(s) : True ; coefficient de ln s : -2*Derivative(h1(s, x), (s, 4))/3 + Derivative(h2(s, x), (s, 4))/3 + Derivative(h3(s, x), (s, 4))/3 - Derivative(h2(s, x), (s, 2), (x, 2))/3 - Derivative(h3(s, x), (s, 2), (x, 2))/3
+T^(C)_2 contient log(s) : True ; coefficient de ln s : Derivative(h1(s, x), (s, 4))/3 - 2*Derivative(h2(s, x), (s, 4))/3 - 2*Derivative(h2(s, x), (x, 4))/3 + Derivative(h3(s, x), (s, 4))/3 + Derivative(h3(s, x), (x, 4))/3 - Derivative(h1(s, x), (s, 2), (x, 2))/3 + 4*Derivative(h2(s, x), (s, 2), (x, 2))/3 - 2*Derivative(h3(s, x), (s, 2), (x, 2))/3
+T^(C)_3 contient log(s) : True ; coefficient de ln s : Derivative(h1(s, x), (s, 4))/3 + Derivative(h2(s, x), (s, 4))/3 + Derivative(h2(s, x), (x, 4))/3 - 2*Derivative(h3(s, x), (s, 4))/3 - 2*Derivative(h3(s, x), (x, 4))/3 - Derivative(h1(s, x), (s, 2), (x, 2))/3 - 2*Derivative(h2(s, x), (s, 2), (x, 2))/3 + 4*Derivative(h3(s, x), (s, 2), (x, 2))/3
+EXIT 0

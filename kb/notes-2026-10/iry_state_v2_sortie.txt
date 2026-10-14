@@ -1,0 +1,38 @@
+== y-1 : terme d'etat en coincidence, I_m(eta) = int_0^inf dk k^m f(k) cos(2 k eta), eta < 0
+   w(x,x) a besoin de m = 1 (mesure d^3k/(2k)), T^w (deux derivees) de m = 3.
+   (a) f = exp(-k^2/L^2) : I_1 = I*sqrt(pi)*L**3*eta*exp(-L**2*eta**2)*erf(I*L*eta)/2 + L**2/2
+       I_3 = L**4*(-I*(2*L**2*eta**2 - 3)*(sqrt(pi)*L*eta*erf(I*L*eta) - I*exp(L**2*eta**2)) - exp(L**2*eta**2))*exp(-L**2*eta**2)/4
+       -> fonctions entieres de eta (erf et gaussienne) : lisses a travers eta = 0. [calcule]
+   (b) f = k^(-N) : int_0^inf dk k^(m-N) cos(2 k eta) = Gamma(m-N+1) cos(pi (m-N+1)/2) / (2|eta|)^(m-N+1)  (valeur regularisee)
+       m=1, N=1 : ~ |eta|^(-1) x 0  (coefficient nul : puissance entiere paire, remplacer par le terme suivant / log)
+       m=1, N=2 : ~ -ln|eta| (divergence logarithmique)
+       m=1, N=3 : ~ |eta|^(1) + regulier : C^0 en eta = 0, non C^inf
+       m=1, N=4 : ~ |eta|^(2) + regulier : C^1 en eta = 0, non C^inf
+       m=1, N=5 : ~ |eta|^(3) + regulier : C^2 en eta = 0, non C^inf
+       m=1, N=6 : ~ |eta|^(4) + regulier : C^3 en eta = 0, non C^inf
+       m=3, N=1 : ~ |eta|^(-3) x 0  (coefficient nul : puissance entiere paire, remplacer par le terme suivant / log)
+       m=3, N=2 : ~ |eta|^(-2) x -1
+       m=3, N=3 : ~ |eta|^(-1) x 0  (coefficient nul : puissance entiere paire, remplacer par le terme suivant / log)
+       m=3, N=4 : ~ -ln|eta| (divergence logarithmique)
+       m=3, N=5 : ~ |eta|^(1) + regulier : C^0 en eta = 0, non C^inf
+       m=3, N=6 : ~ |eta|^(2) + regulier : C^1 en eta = 0, non C^inf
+   -> T^w ~ |eta|^(N-4) : T_plat ~ 1/eta exige N = 3 ; N = 4 donne ln|eta| ; N >= 5 : borne mais non lisse. [calcule]
+   controle numerique N=3, m=3 (coupure e^{-k/1000}) de la partie sin : eta x int dk sin(2 k eta) pour eta = -0.1, -0.05, -0.02 : ['0.499988', '0.49995', '0.499688']  (attendu -> -1/2 : T^w ~ -1/(2 eta))
+   avec une phase, alpha beta* = k^(-N) e^{i phi} : partie en sin(2 k eta) : int dk k^(m-N) sin(2k eta) = Gamma(m-N+1) sin(pi (m-N+1)/2)/(2|eta|)^(m-N+1) sgn(eta)
+   m=3, N=3 : sin-partie ~ -1/(2 eta) : T^w ~ 1/eta effectivement pour N = 3 avec phase generique. [calcule]
+
+== y-2 : support singulier du terme alpha beta* de w(x,x'), pour alpha beta* = 1 (non decroissant)
+   int d^3k/(2k(2pi)^3) e^{-ik(eta+eta')} e^{ik.(x-x')} = fonction de Wightman de Minkowski entre x et le point reflechi (-eta', x')
+   = 1/(4 pi^2) / ( |x-x'|^2 - (eta+eta')^2 ) (avec i0) : singulier sur le cone reflechi (eta+eta')^2 = |x-x'|^2.
+   exemple : eta = eta' = -1, |x-x'| = 2 : eta+eta' = -2, cone reflechi atteint dans le domaine eta, eta' < 0. [calcule : (-2)^2 = 4 = 2^2]
+   decroissance k^(-N) : convolution par la transformee de k^(-N), qui est |.|^(N-4) : la singularite du cone reflechi devient d'ordre fini (C^(N-?)), jamais C^inf.
+   decroissance rapide (Schwartz) : convolution par une fonction lisse : w entiere, lisse partout, y compris a travers eta = 0.
+   (sympy, N=1, mesure k dk, regularisation e^{-ak}, a->0) : int dk sin(k r) cos(k T) = r/(-T**2 + r**2)  -> singulier en r = T (cone reflechi), pour N = 1. [calcule]
+
+== y-4 : comptage
+   T-hat = s^2 T_plat ; T_plat ~ s^(N-4)  =>  T-hat ~ s^(N-2) ; pole de (2.17) ssi exposant = 1 (NOTE-131 t-2) ssi N = 3.
+   N = 3 : alpha beta* ~ k^(-3) : non Hadamard (y-2, cone reflechi d'ordre fini). Etat Hadamard (rapide) : T-hat ~ s^2 x entier : pas de pole. [calcule + derive]
+
+== y-5 : parallele IR-x
+   NOTE-140 : compensation par phi_h exige une solution singuliere sur un cone nul du volume (non Hadamard).
+   IR-y    : compensation par Gamma[g] exige un etat singulier sur le cone reflechi, hypersurface nulle du volume (non Hadamard).

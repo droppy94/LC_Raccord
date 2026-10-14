@@ -1,0 +1,6 @@
+[calcule] Maxwell sur couche (doit etre 0,0,0,0): [0, 0, 0, 0]
+[calcule] F^2 = 2*s**4*(k**2*u(s)**2*sin(k*x)**2 - cos(k*x)**2*Derivative(u(s), s)**2)
+[calcule] div X^M - (-1/4 d(I2) F^2), composantes s,x,y,z (I2 generique): [0, 0, 0, 0]
+[calcule] -1/4 d_s(I2) F^2 = beta*s**3*(k**2*u(s)**2*sin(k*x)**2 - cos(k*x)**2*Derivative(u(s), s)**2)/e**2
+[calcule] contient log(s) ? False
+[calcule] composante s, ordre beta^1 : s**3*(k**2*u(s)**2*sin(k*x)**2 - cos(k*x)**2*Derivative(u(s), s)**2)/e**2

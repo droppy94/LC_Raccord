@@ -1,0 +1,38 @@
+== x-1 : box^2 hors cone ==
+  box(ln sigma) = 4/(-s**2 + x**2 + y**2 + z**2) ; box^2 = 0
+  box(1/sigma) = 0 ; box^2 = 0
+  box(s/sigma) = -4*s/(-s**2 + x**2 + y**2 + z**2)**2 ; box^2 = 0
+  formule box sigma^p / sigma^(p-1) : 4*p*(p + 1)
+== verif. comportement de .coeff(s,0) en presence de log(s) (point technique du script audite) ==
+  (3+5 ln s+7 s).coeff(s,0) = 3
+== x-3 : recurrence exacte pour tout n (implementation differente : action terme a terme) ==
+  d_s^4(s^n ln s)/s^(n-4) = 4*n**3 - 18*n**2 + 22*n + (n**4 - 6*n**3 + 11*n**2 - 6*n)*log(s) - 6
+  P(n) = n*(n - 3)*(n - 2)*(n - 1) ; P'(n) = 2*(2*n - 3)*(n**2 - 3*n + 1) ; P'(0..3) = [-6, 2, -2, 6]
+  d_s^2(s^n ln s)/s^(n-2) = 2*n + (n**2 - n)*log(s) - 1
+  Ordre s^(m-4) ln s : P(m) c_m - 2 (m-2)(m-3) Delta c_(m-2) + Delta^2 c_(m-4) = 0 (les a_n ne produisent jamais ln s)
+  Ordre s^(m-4)     : P'(m) c_m - 2 (2m-5) Delta c_(m-2) + [termes a_n, presents seulement pour m>=4] = 0
+  m=0 (s^-4)      : eq = -6*c0(x, y, z) -> c0 = 0
+  m=1 (s^-3)      : eq = 2*c1(x, y, z) -> c1 = 0
+  m=2 (s^-2)      : eq = -2*c2(x, y, z) -> c2 = 0
+  m=3 (s^-1)      : eq = 6*c3(x, y, z) -> c3 = 0
+  m=4 (s^0 ln s) : eq = 24*c4(x, y, z) -> c4 = 0
+  m=5 (s^1 ln s) : eq = 120*c5(x, y, z) -> c5 = 0
+  m=6 (s^2 ln s) : eq = 360*c6(x, y, z) -> c6 = 0
+  m=7 (s^3 ln s) : eq = 840*c7(x, y, z) -> c7 = 0
+  m=8 (s^4 ln s) : eq = 1680*c8(x, y, z) -> c8 = 0
+  m=9 (s^5 ln s) : eq = 3024*c9(x, y, z) -> c9 = 0
+  m=10 (s^6 ln s) : eq = 5040*c10(x, y, z) -> c10 = 0
+  m=11 (s^7 ln s) : eq = 7920*c11(x, y, z) -> c11 = 0
+  c_0..c_11 tous nuls : True
+  degres en L presents : [0, 1]
+== contre-exemple (b) : alpha(x) ln s + correcteurs s^mu ln^j s ==
+  d_s^4(s^mu ln^1 s)/s^(mu-4) = L*(mu**4 - 6*mu**3 + 11*mu**2 - 6*mu) + 4*mu**3 - 18*mu**2 + 22*mu - 6
+  d_s^4(s^mu ln^2 s)/s^(mu-4) = L**2*(mu**4 - 6*mu**3 + 11*mu**2 - 6*mu) + L*(8*mu**3 - 36*mu**2 + 44*mu - 12) + 12*mu**2 - 36*mu + 22
+  d_s^4(s^mu ln^3 s)/s^(mu-4) = L**3*(mu**4 - 6*mu**3 + 11*mu**2 - 6*mu) + L**2*(12*mu**3 - 54*mu**2 + 66*mu - 18) + L*(36*mu**2 - 108*mu + 66) + 24*mu - 36
+  => terme dominant (Re mu minimal, puissance de log J maximale) : coefficient de s^(mu-4) ln^J = P(mu)a ; puis ln^(J-1) : J P'(mu) a.
+     Les termes Delta d_s^2 et Delta^2 deplacent l'exposant de +2, +4 : ils ne peuvent pas compenser l'ordre dominant.
+     P(mu)=0 impose mu in {0,1,2,3} ; racines simples => J P'(mu) != 0 => J = 0. Recurrence sur les reseaux mu0 + 2N.
+  alpha ln s + beta ln^2 s + gamma s^2 ln^2 s : coefficients s^0 L^j : {(0, 0): -2*(3*alpha(x) - 11*beta(x)), (0, 1): -12*beta(x)}
+== x-4 ==
+  box^2 f(s) - f'''' = 0 ; Eq(f(s), C1 + C2*s + C3*s**2 + C4*s**3)
+EXIT 0

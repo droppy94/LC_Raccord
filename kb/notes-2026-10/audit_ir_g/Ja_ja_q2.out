@@ -1,0 +1,16 @@
+== mode unique k||x eps||y
+ checks: trace-That (<=s^5) = 0 ; div O(beta^0,beta^1) (<=s^4) = [(0, 0), (0, 0), (0, 0), (0, 0)] ; inconnues libres X^R : {q6, q16, q18, q20, q15, q19, q17}
+ X^R_ss = C_rad*s**2 + beta*q6*s**2
+  R_xsx : [beta s^0 ln s] = -kappa*(-c + k*u0)*(c + k*u0)/(2*e**2)  
+  R_ysy : [beta s^0 ln s] = -kappa*(2*c**2 + k**2*u0**2)/(2*e**2)  
+  R_zsz : [beta s^0 ln s] = kappa*(c**2 + 2*k**2*u0**2)/(2*e**2)  
+  ln s a beta^0 dans R : {0}
+ Q = [[0, 0, 0], [0, -c**2/2, 0], [0, 0, k**2*u0**2/2]]  trQ = -c**2/2 + k**2*u0**2/2
+ Q sans trace = [[c**2/6 - k**2*u0**2/6, 0, 0], [0, -c**2/3 - k**2*u0**2/6, 0], [0, 0, c**2/6 + k**2*u0**2/3]]
+  <X^M_xx> [s^2 beta ln s] = -(-c + k*u0)*(c + k*u0)/(2*e**2)  vs (2Q - d trQ)/e^2 = -(-c + k*u0)*(c + k*u0)/(2*e**2)
+  <X^M_yy> [s^2 beta ln s] = -(c**2 + k**2*u0**2)/(2*e**2)  vs (2Q - d trQ)/e^2 = -(c**2 + k**2*u0**2)/(2*e**2)
+  <X^M_zz> [s^2 beta ln s] = (c**2 + k**2*u0**2)/(2*e**2)  vs (2Q - d trQ)/e^2 = (c**2 + k**2*u0**2)/(2*e**2)
+  <X^M_ss> [s^2 beta ln s] = -(-c + k*u0)*(c + k*u0)/(2*e**2)  vs -trQ/e^2 = -(-c + k*u0)*(c + k*u0)/(2*e**2)
+ Ajustement loi :
+  R_{i s j}: [{alpha: 3, gamma: 0}]
+  composantes non nulles : [(1, 0, 1), (2, 0, 2), (3, 0, 3)]

@@ -1,0 +1,45 @@
+======================================================================
+Formule generale : int_mu^inf k^{3-N} e^{-a k} dk = a^{N-4} Gamma(4-N, a mu),  a = 2 i eta = -2 i s
+Pour mu -> 0 et N < 4 : a^{N-4} Gamma(4-N) ; definie par continuation analytique (Abel : a -> a + epsilon).
+
+N = 3 : I_3 =  I/(2*s)   = i/(2 s) : |I_3| ~ s^{-1}
+N = 3 avec coupure mu : I_3 = e^{-a mu}/a = I/(2*s) - mu - I*mu**2*s + O(s**2)
+
+N = 4 : I_4 = E_1(a mu), developpement : I*pi/2 - EulerGamma - log(2) - log(s) - log(mu) - 2*I*mu*s + O(s**2)
+   -> terme dominant : -ln(s) (log(a mu) = ln(2 s mu) - i pi/2)
+
+N = 5 : I_5 = a Gamma(-1, a mu), developpement : (mu*(-s*(I*log(4*mu**2*s**2) + pi - 2*I + 2*EulerGamma*I) + O(s**2)) + 1)/mu
+   -> constante IR 1/mu, puis terme en s ln s et terme lineaire en s ; pas de terme singulier.
+
+Gaussien : I_G = -Lambda**2*(-I*(2*Lambda**2*s**2 - 3)*(2*sqrt(pi)*Lambda**3*s**3*(erfc(I*Lambda*s) - 2) + I*(2*Lambda**2*s**2 + 1)*exp(Lambda**2*s**2)) + 3*exp(Lambda**2*s**2))*exp(-Lambda**2*s**2)/(8*s**2)
+  developpement en s : Lambda**4/2 + 3*I*sqrt(pi)*Lambda**5*s/4 - 2*Lambda**6*s**2 + O(s**3)
+  valeur en s=0 (limite) : Lambda**4/2   (= Lambda^4/2)
+  => fonction entiere de s : regulier, pas de singularite en s -> 0.
+
+Loi generale (mu -> 0, N < 4 non entier, ou partie singuliere pour N >= 4) : I_N ~ Gamma(4-N) (-2 i s)^{N-4}
+  N=3 : s^{-1} ; N=4 : ln s ; N=5 : s ln s (apres soustraction de la constante IR 1/mu).
+
+======================================================================
+Controle numerique N = 3 : int_0^inf e^{2 i k s} dk  (eta = -s)
+s = 0.1: exact i/(2s) = (0.0 + 5.0j)
+   quadosc : Re = -2.39954030341e-37, Im = 5.0
+   Abel eps=1e-2 s : (0.0249993750156 + 4.99987500312j) ; eps=1e-4 s : (0.000249999999375 + 4.9999999875j)
+   s * Im(I_3) = 0.5  (attendu 0.5)
+s = 0.01: exact i/(2s) = (0.0 + 50.0j)
+   quadosc : Re = 4.43323518618e-36, Im = 50.0
+   Abel eps=1e-2 s : (0.249993750156 + 49.9987500312j) ; eps=1e-4 s : (0.00249999999375 + 49.999999875j)
+   s * Im(I_3) = 0.5  (attendu 0.5)
+s = 0.001: exact i/(2s) = (0.0 + 500.0j)
+   quadosc : Re = 9.55790070447e-35, Im = 500.0
+   Abel eps=1e-2 s : (2.49993750156 + 499.987500312j) ; eps=1e-4 s : (0.0249999999375 + 499.99999875j)
+   s * Im(I_3) = 0.5  (attendu 0.5)
+
+Controle numerique N = 4, 5 avec coupure IR mu = 1 (quadosc)
+  N=4, s=0.1: forme fermee (1.042205596 + 1.371240238j) ; quadrature (1.042205596 + 1.371240238j)
+  N=4, s=0.01: forme fermee (3.334907339 + 1.550796771j) ; quadrature (3.334907339 + 1.550796771j)
+  N=5, s=0.1: forme fermee (0.7058185302 + 0.4071104499j) ; quadrature (0.7058185302 + 0.4071104499j)
+  N=5, s=0.01: forme fermee (0.9687840712 + 0.08669681347j) ; quadrature (0.9687840712 + 0.08669681347j)
+
+Controle numerique gaussien (Lambda = 1)
+  s=0.5: forme fermee (0.109727260311 + 0.431371389701j) ; quadrature (0.109727260311 + 0.431371389701j)
+  s=0.05: forme fermee (0.495012483348 + 0.0661905576312j) ; quadrature (0.495012483348 + 0.0661905576312j)

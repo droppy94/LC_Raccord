@@ -1,0 +1,23 @@
+e^(-eps tau) B_eps = epsilon**4*(k*tau*sin(k*tau) + cos(k*tau)) + 4*epsilon**3*k**2*tau*cos(k*tau) + epsilon**2*(-4*k**3*tau*sin(k*tau) + 8*k**2*cos(k*tau)) - 8*epsilon*k**3*sin(k*tau)
+
+(1) Reproduction, Hadamard echelle 1 (a comparer au script) :
+  tau0 = 0.0, eps = 0.1 : R = -1.23143421314 ; R/eps = -12.314342 ; R/(eps ln 1/eps) = -5.3480508 ; terme dominant 8 eps sin(tau0) E1(eps) = 0.0 ; B_eps(tau0) = 0.0801
+  tau0 = 0.0, eps = 0.01 : R = -0.127253503977 ; R/eps = -12.72535 ; R/(eps ln 1/eps) = -2.7632747 ; terme dominant 8 eps sin(tau0) E1(eps) = 0.0 ; B_eps(tau0) = 0.00080001
+  tau0 = 0.0, eps = 0.001 : R = -0.0126006890213 ; R/eps = -12.600689 ; R/(eps ln 1/eps) = -1.8241366 ; terme dominant 8 eps sin(tau0) E1(eps) = 0.0 ; B_eps(tau0) = 8.000001e-6
+  tau0 = -1.0, eps = 0.1 : R = -0.719564986148 ; R/eps = -7.1956499 ; R/(eps ln 1/eps) = -3.125031 ; terme dominant 8 eps sin(tau0) E1(eps) = -1.2271501 ; B_eps(tau0) = 0.61594011
+  tau0 = -1.0, eps = 0.01 : R = -0.248042537615 ; R/eps = -24.804254 ; R/(eps ln 1/eps) = -5.3861753 ; terme dominant 8 eps sin(tau0) E1(eps) = -0.27182405 ; B_eps(tau0) = 0.066740432
+  tau0 = -1.0, eps = 0.001 : R = -0.0406616480274 ; R/eps = -40.661648 ; R/(eps ln 1/eps) = -5.8863765 ; terme dominant 8 eps sin(tau0) E1(eps) = -0.042622453 ; B_eps(tau0) = 0.0067259929
+
+(2) Dependance en l'echelle L et autre regularisation ; prediction : R(L) - R(1) = 2 B_eps(tau0) [Ci(kL) - Ci(k)]
+  tau0 = 0.0, eps = 0.1 : R(L=1) = -1.231434213 | L=0.1: R = -1.562290837, ecart = -0.330857, predit = -0.330857 | L=10.0: R = -1.292768442, ecart = -0.0613342, predit = -0.0613342 | L=100.0: R = -1.286311163, ecart = -0.054877, predit = -0.054877 | lisse(L=1): R = -1.341007411, ecart = -0.109573
+  tau0 = 0.0, eps = 0.01 : R(L=1) = -0.127253504 | L=0.1: R = -0.130557981, ecart = -0.00330448, predit = -0.00330448 | L=10.0: R = -0.1278660882, ecart = -0.000612584, predit = -0.000612584 | L=100.0: R = -0.1278015952, ecart = -0.000548091, predit = -0.000548091 | lisse(L=1): R = -0.1283478817, ecart = -0.00109438
+  tau0 = 0.0, eps = 0.001 : R(L=1) = -0.01260068902 | L=0.1: R = -0.01263373338, ecart = -3.30444e-5, predit = -3.30444e-5 | L=10.0: R = -0.01260681479, ecart = -6.12577e-6, predit = -6.12577e-6 | L=100.0: R = -0.01260616987, ecart = -5.48084e-6, predit = -5.48084e-6 | lisse(L=1): R = -0.01261163266, ecart = -1.09436e-5
+  tau0 = -1.0, eps = 0.1 : R(L=1) = -0.7195649861 | L=0.1: R = -3.263733109, ecart = -2.54417, predit = -2.54417 | L=10.0: R = -1.191203089, ecart = -0.471638, predit = -0.471638 | L=100.0: R = -1.141548943, ecart = -0.421984, predit = -0.421984 | lisse(L=1): R = -1.562143361, ecart = -0.842578
+  tau0 = -1.0, eps = 0.01 : R(L=1) = -0.2480425376 | L=0.1: R = -0.5237168713, ecart = -0.275674, predit = -0.275674 | L=10.0: R = -0.299147069, ecart = -0.0511045, predit = -0.0511045 | L=100.0: R = -0.2937667746, ecart = -0.0457242, predit = -0.0457242 | lisse(L=1): R = -0.3393404475, ecart = -0.0912979
+  tau0 = -1.0, eps = 0.001 : R(L=1) = -0.04066164803 | L=0.1: R = -0.06844366179, ecart = -0.027782, predit = -0.027782 | L=10.0: R = -0.0458118801, ecart = -0.00515023, predit = -0.00515023 | L=100.0: R = -0.04526966273, ecart = -0.00460801, predit = -0.00460801 | lisse(L=1): R = -0.04986250382, ecart = -0.00920086
+
+(3) Petits eps supplementaires (Hadamard L = 1) pour la tendance :
+  tau0 = 0.0, eps = 0.0001 : R = -0.001257164452 ; R/eps = -12.571645 ; R/(eps ln 1/eps) = -1.364949 ; 8 sin(tau0) E1(eps) = 0.0
+  tau0 = 0.0, eps = 0.00001 : R = -0.0001256708221 ; R/eps = -12.567082 ; R/(eps ln 1/eps) = -1.0915629 ; 8 sin(tau0) E1(eps) = 0.0
+  tau0 = -1.0, eps = 0.0001 : R = -0.005621006443 ; R/eps = -56.210064 ; R/(eps ln 1/eps) = -6.1029302 ; 8 sin(tau0) E1(eps) = -58.116865
+  tau0 = -1.0, eps = 0.00001 : R = -0.0007171652736 ; R/eps = -71.716527 ; R/(eps ln 1/eps) = -6.2292184 ; 8 sin(tau0) E1(eps) = -73.616727

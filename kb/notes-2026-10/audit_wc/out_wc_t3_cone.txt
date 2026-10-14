@@ -1,0 +1,5 @@
+1/(-s**2 + x**2 + y**2 + z**2) : box = 0 ; box^2 = 0
+s/(-s**2 + x**2 + y**2 + z**2) : box = -4*s/(-s**2 + x**2 + y**2 + z**2)**2 ; box^2 = 0
+log(-s**2 + x**2 + y**2 + z**2) : box = 4/(-s**2 + x**2 + y**2 + z**2) ; box^2 = 0
+restriction a r=0 de log(r^2-s^2) : log(-s**2) (comportement ln s sur l'axe seulement)
+EXIT 0

@@ -1,0 +1,72 @@
+import sympy as sp
+s,x,y,z=sp.symbols('s x y z',positive=True)
+B0,e,beta,kap=sp.symbols('B0 e beta kappa',positive=True)
+X=[s,x,y,z]; eta=sp.diag(-1,1,1,1); Om=s
+g=eta/Om**2; gi=g.inv()
+I2=(1+2*beta*sp.log(1/s))/e**2
+Gam=[[[sp.simplify(sum(gi[a,d]*(sp.diff(g[d,b],X[c])+sp.diff(g[d,c],X[b])-sp.diff(g[b,c],X[d])) for d in range(4))/2) for c in range(4)] for b in range(4)] for a in range(4)]
+F=sp.zeros(4); F[1,2]=B0; F[2,1]=-B0
+# Q1: d_mu( I2 * eta^{mu a} eta^{nu b} F_ab ) (sqrt g g g = eta eta in 4D)
+Fup_eta=eta*F*eta
+print("Q1 EOM:",[sp.simplify(sum(sp.diff(I2*Fup_eta[m,n],X[m]) for m in range(4))) for n in range(4)])
+def cov_div(T):  # nabla^mu T_{mu nu}
+    out=[]
+    for n in range(4):
+        v=0
+        for m in range(4):
+            for a in range(4):
+                dT=sp.diff(T[m,n],X[a])-sum(Gam[l][a][m]*T[l,n]+Gam[l][a][n]*T[m,l] for l in range(4))
+                v+=gi[m,a]*dT
+        out.append(sp.simplify(v))
+    return out
+def trace(T): return sp.simplify(sum(gi[m,n]*T[m,n] for m in range(4) for n in range(4)))
+F2=sp.simplify(sum(F[a,b]*F[c,d]*gi[a,c]*gi[b,d] for a in range(4) for b in range(4) for c in range(4) for d in range(4)))
+XM=sp.zeros(4)
+for m in range(4):
+    for n in range(4):
+        XM[m,n]=sp.simplify(I2*(sum(F[m,a]*F[n,b]*gi[a,b] for a in range(4) for b in range(4))-g[m,n]*F2/4))
+print("F2_hat=",F2); print("XM=",XM); print("tr XM=",trace(XM)); print("div XM=",cov_div(XM))
+print("check -1/4 dI2 F2:",sp.simplify(-sp.diff(I2,s)*F2/4))
+# Q3 trace anomaly: sqrt|g| g^{mn}T_mn = dS_B/dsigma = -(beta/(2e^2)) F_eta^2
+Feta2=sum(F[a,b]*F[c,d]*eta[a,c]*eta[b,d] for a in range(4) for b in range(4) for c in range(4) for d in range(4))
+sqrtg=Om**-4
+trA=sp.simplify(-(beta/(2*e**2))*Feta2/sqrtg); print("trace anomaly =",trA, " = -(beta/2e^2) F2_hat ?",sp.simplify(trA+beta*F2/(2*e**2)))
+# Q4
+r0,r1,Pi=[sp.Function(n)(s) for n in ('r0','r1','Pi')]
+XR=sp.diag(r0,r1,r1,r1)
+divR=cov_div(XR); print("div XR=",divR)
+r1sol=sp.solve(sp.Eq(trace(XR),trA),r1)[0]
+eq=sp.Eq((divR[0]).subs(r1,r1sol).doit()+cov_div(XM)[0],0)
+C1=sp.Symbol('C1')
+sol=sp.dsolve(eq,r0); print("r0 sol:",sol)
+r0s=sp.simplify(sol.rhs); r1s=sp.simplify(r1sol.subs(r0,r0s))
+print("r0=",sp.expand(r0s)," r1=",sp.expand(r1s))
+def Rtensor(T):
+    tr=trace(T); L=sp.simplify(kap/2*(T-tr*g/3))
+    def nabL(n,l,r): return sp.diff(L[l,r],X[n])-sum(Gam[k][n][l]*L[k,r]+Gam[k][n][r]*L[l,k] for k in range(4))
+    R={}
+    for r in range(4):
+        for n in range(4):
+            for l in range(n+1,4):
+                v=sp.expand(sp.simplify((nabL(n,l,r)-nabL(l,n,r))/Om))
+                if v!=0: R[(r,n,l)]=v
+    return R
+Cs=sorted(sol.free_symbols-{s},key=str)
+XRs=sp.diag(r0s,r1s,r1s,r1s)
+tot=XM+XRs
+print("div total =",[sp.simplify(v) for v in cov_div(tot)], "trace total=",trace(tot))
+print("Q5 R total:")
+for k,v in Rtensor(tot).items(): print(k,sp.collect(v,[sp.log(s)]))
+print("Q5 R Maxwell only:"); 
+for k,v in Rtensor(XM).items(): print(k,v)
+print("Q5 R XR only:")
+for k,v in Rtensor(XRs).items(): print(k,v)
+print("beta=0 total:",{k:sp.simplify(v.subs(beta,0)) for k,v in Rtensor(tot).items()})
+# Q6
+P=Pi*sp.diag(0,1,1,-2)
+print("div Pi-term:",cov_div(P),"trace:",trace(P))
+print("R Pi alone:")
+for k,v in Rtensor(P).items(): print(k,sp.factor(v))
+print("R total+Pi:")
+RT=Rtensor(tot+P)
+for k,v in RT.items(): print(k,sp.collect(sp.expand(v),[sp.log(s)]))

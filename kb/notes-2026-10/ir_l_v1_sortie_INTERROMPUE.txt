@@ -1,0 +1,6 @@
+A. a (Green) = -0.376427910603  ; a (formule) = (-0.376427910603 + 0.0j)
+   b = -dA/dt (Green) = 0.800359009706  ; b (formule) = (0.800359009706 + 0.0j)
+
+B1. Re(R M R^T - M) + 2 L(M) = Matrix([[0, -m12 - conjugate(m12) + 2*re(m12)], [-m12 - conjugate(m12) + 2*re(m12), 0]])
+    Re(R C R^T + C) - tr(C) 1 = Matrix([[0, 0], [0, 0]])
+B2. Q_k (plan transverse) - [-1/2 L(J+J+^dag + J-J-^dag) - 1/2 Re(J+.J-^*) 1] = Matrix([[0, 0], [0, 0]])

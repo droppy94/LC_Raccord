@@ -1,0 +1,19 @@
+A. Weyl electrique de g (coefficient de eps), composantes xx, yy, zz :
+    -3*tau**2*log(tau) - 7*tau**2/4
+    -3*tau**2*log(tau) - 7*tau**2/4
+    6*tau**2*log(tau) + 7*tau**2/2
+   W = C/Omega : [-3*tau*log(tau) - 7*tau/4, -3*tau*log(tau) - 7*tau/4, 6*tau*log(tau) + 7*tau/2]
+   dW/dtau (doit porter ln tau, comme R de (2.17)) : [-3*log(tau) - 19/4, -3*log(tau) - 19/4, 6*log(tau) + 19/2]
+   W en tau -> 0 : [0, 0, 0]  ; dW en tau -> 0 : [oo, oo, -oo]
+B. regularite de g en tau = 0 : derivees de f = tau^4 ln tau
+   d^1f/dtau^1 ->  0
+   d^2f/dtau^2 ->  0
+   d^3f/dtau^3 ->  0
+   d^4f/dtau^4 ->  -oo
+   d^5f/dtau^5 ->  oo
+C. Einstein de l'eon suivant (repere orthonorme, en temps propre T), Tod : rho = -G_00, p_i = -G_ii (conventions de signe a lire avec prudence) :
+   G_00 : fond = -3/(4*T**2) ; perturbation (coef eps) = 0
+   G_xx : fond = 1/(4*T**2) ; perturbation (coef eps) = log(32*T**5) + 9/2
+   G_yy : fond = 1/(4*T**2) ; perturbation (coef eps) = log(32*T**5) + 9/2
+   G_zz : fond = 1/(4*T**2) ; perturbation (coef eps) = -log(1024*T**10) - 9
+EXIT 0

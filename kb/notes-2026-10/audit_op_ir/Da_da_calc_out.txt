@@ -1,0 +1,73 @@
+=== Q1 : equation de mode, ordre beta ===
+f = 1+2b(lam - ln s); (f u')' + k^2 f u = 0 -> u1'' + k^2 u1 = (2/s) u0'
+[calcule] branche (a) magnetique, u1 (a0=a1=0) = -23*k**6*s**6*u0/5400 + k**4*s**4*u0/9 - k**2*s**2*u0
+[calcule] branche (b) electrique, u1 (a0=a1=0) = 2*L*c*s + s**5*(L*c*k**4/60 - 2*c*k**4/225) + s**3*(-L*c*k**2/3 + c*k**2/9)
+   verif residu branche a : 0
+   verif eq. complete ordre beta^1 : 0
+   verif residu branche b : -L*c*k**8*s**7/2520
+   verif eq. complete ordre beta^1 : 0
+
+=== Q2 : <X^M> diagonale ===
+-- branche a_magnetique
+   hors-diagonal nuls : True
+   trace g^{mn}X_mn = 0
+   X_ss ~ s^2 * [ k**2*u0**2/(4*e**2) ] * (1 + beta*( 2*lambda + (-2) ln s ))
+   X_xx ~ s^2 * [ k**2*u0**2/(4*e**2) ] * (1 + beta*( 2*lambda + (-2) ln s ))
+   X_yy ~ s^2 * [ k**2*u0**2/(4*e**2) ] * (1 + beta*( 2*lambda + (-2) ln s ))
+   X_zz ~ s^2 * [ -k**2*u0**2/(4*e**2) ] * (1 + beta*( 2*lambda + (-2) ln s ))
+-- branche b_electrique
+   hors-diagonal nuls : True
+   trace g^{mn}X_mn = 0
+   X_ss ~ s^2 * [ c**2/(4*e**2) ] * (1 + beta*( 2*lambda + 4 + (2) ln s ))
+   X_xx ~ s^2 * [ c**2/(4*e**2) ] * (1 + beta*( 2*lambda + 4 + (2) ln s ))
+   X_yy ~ s^2 * [ -c**2/(4*e**2) ] * (1 + beta*( 2*lambda + 4 + (2) ln s ))
+   X_zz ~ s^2 * [ c**2/(4*e**2) ] * (1 + beta*( 2*lambda + 4 + (2) ln s ))
+
+=== Q3 : branche magnetique, fermeture C-iso ===
+   T_hat (mag) = beta*k**4*s**6*u0**2/e**2 - beta*k**2*s**4*u0**2/(2*e**2)
+-- mode magnetique : constantes libres dans r0 : [al10, al11, al12, al2, al8, al9, bl10, bl11, bl12, bl8, bl9]
+   verif conservation (ordres < s^6) : [0, 0, 0, 0]
+   verif trace - That : 0
+   r0 = al2*s**2
+   r1 = -beta*k**6*s**6*u0**2/(9*e**2) + beta*k**4*s**4*u0**2/(3*e**2) + s**2*(al2/3 - beta*k**2*u0**2/(6*e**2))
+   R_xsx ~ s^0 * [beta*(-L*k**2*kappa*u0**2/(2*e**2) + k**2*kappa*lambda*u0**2/(2*e**2) - k**2*kappa*u0**2/(6*e**2)) + k**2*kappa*u0**2/(4*e**2)]
+      ordre suivant : s^2 * [5*beta*k**4*kappa*u0**2/(6*e**2)]
+   R_ysy ~ s^0 * [beta*(-L*k**2*kappa*u0**2/(2*e**2) + k**2*kappa*lambda*u0**2/(2*e**2) - k**2*kappa*u0**2/(6*e**2)) + k**2*kappa*u0**2/(4*e**2)]
+      ordre suivant : s^2 * [beta*(5*L*k**4*kappa*u0**2/(2*e**2) - 5*k**4*kappa*lambda*u0**2/(2*e**2) - 11*k**4*kappa*u0**2/(3*e**2)) - 5*k**4*kappa*u0**2/(4*e**2)]
+   R_zsz ~ s^0 * [beta*(L*k**2*kappa*u0**2/e**2 - k**2*kappa*lambda*u0**2/e**2 + k**2*kappa*u0**2/(3*e**2)) - k**2*kappa*u0**2/(2*e**2)]
+      ordre suivant : s^2 * [beta*(-5*L*k**4*kappa*u0**2/(2*e**2) + 5*k**4*kappa*lambda*u0**2/(2*e**2) + 17*k**4*kappa*u0**2/(6*e**2)) + 5*k**4*kappa*u0**2/(4*e**2)]
+
+--- champ uniforme F_xy = B0 ---
+   X^M uniforme diag : [-B0**2*s**2*(2*L*beta - 2*beta*lambda - 1)/(2*e**2), -B0**2*s**2*(2*L*beta - 2*beta*lambda - 1)/(2*e**2), -B0**2*s**2*(2*L*beta - 2*beta*lambda - 1)/(2*e**2), B0**2*s**2*(2*L*beta - 2*beta*lambda - 1)/(2*e**2)]
+   T_hat (unif) = -B0**2*beta*s**4/e**2
+-- uniforme : constantes libres dans r0 : [al10, al11, al12, al2, al8, al9, bl10, bl11, bl12, bl8, bl9]
+   verif conservation (ordres < s^6) : [0, 0, 0, 0]
+   verif trace - That : 0
+   r0 = al2*s**2
+   r1 = s**2*(-B0**2*beta/(3*e**2) + al2/3)
+   R_xsx ~ s^0 * [B0**2*kappa/(2*e**2) + beta*(-B0**2*L*kappa/e**2 + B0**2*kappa*lambda/e**2 - B0**2*kappa/(3*e**2))]
+      ordre suivant : s^6 * [L*bl8*kappa + al8*kappa + bl8*kappa/6]
+   R_ysy ~ s^0 * [B0**2*kappa/(2*e**2) + beta*(-B0**2*L*kappa/e**2 + B0**2*kappa*lambda/e**2 - B0**2*kappa/(3*e**2))]
+      ordre suivant : s^6 * [L*bl8*kappa + al8*kappa + bl8*kappa/6]
+   R_zsz ~ s^0 * [-B0**2*kappa/e**2 + beta*(2*B0**2*L*kappa/e**2 - 2*B0**2*kappa*lambda/e**2 + 2*B0**2*kappa/(3*e**2))]
+      ordre suivant : s^6 * [L*bl8*kappa + al8*kappa + bl8*kappa/6]
+
+--- comparaison terme a terme, B0^2 -> <B^2> = k^2 u0^2/2 ---
+   (constantes d'integration identifiees : coefficient de s^2 libre dans r0)
+   R_xsx ordre suivant : mode s^2 [5*beta*k**4*kappa*u0**2/(6*e**2)] | unif s^6 [L*bl8*kappa + al8*kappa + bl8*kappa/6]
+   R_xsx: mode s^0 [beta*(-L*k**2*kappa*u0**2/(2*e**2) + k**2*kappa*lambda*u0**2/(2*e**2) - k**2*kappa*u0**2/(6*e**2)) + k**2*kappa*u0**2/(4*e**2)] | unif s^0 [beta*(-L*k**2*kappa*u0**2/(2*e**2) + k**2*kappa*lambda*u0**2/(2*e**2) - k**2*kappa*u0**2/(6*e**2)) + k**2*kappa*u0**2/(4*e**2)] | diff(meme puissance) = 0
+   R_ysy ordre suivant : mode s^2 [beta*(5*L*k**4*kappa*u0**2/(2*e**2) - 5*k**4*kappa*lambda*u0**2/(2*e**2) - 11*k**4*kappa*u0**2/(3*e**2)) - 5*k**4*kappa*u0**2/(4*e**2)] | unif s^6 [L*bl8*kappa + al8*kappa + bl8*kappa/6]
+   R_ysy: mode s^0 [beta*(-L*k**2*kappa*u0**2/(2*e**2) + k**2*kappa*lambda*u0**2/(2*e**2) - k**2*kappa*u0**2/(6*e**2)) + k**2*kappa*u0**2/(4*e**2)] | unif s^0 [beta*(-L*k**2*kappa*u0**2/(2*e**2) + k**2*kappa*lambda*u0**2/(2*e**2) - k**2*kappa*u0**2/(6*e**2)) + k**2*kappa*u0**2/(4*e**2)] | diff(meme puissance) = 0
+   R_zsz ordre suivant : mode s^2 [beta*(-5*L*k**4*kappa*u0**2/(2*e**2) + 5*k**4*kappa*lambda*u0**2/(2*e**2) + 17*k**4*kappa*u0**2/(6*e**2)) + 5*k**4*kappa*u0**2/(4*e**2)] | unif s^6 [L*bl8*kappa + al8*kappa + bl8*kappa/6]
+   R_zsz: mode s^0 [beta*(L*k**2*kappa*u0**2/e**2 - k**2*kappa*lambda*u0**2/e**2 + k**2*kappa*u0**2/(3*e**2)) - k**2*kappa*u0**2/(2*e**2)] | unif s^0 [beta*(L*k**2*kappa*u0**2/e**2 - k**2*kappa*lambda*u0**2/e**2 + k**2*kappa*u0**2/(3*e**2)) - k**2*kappa*u0**2/(2*e**2)] | diff(meme puissance) = 0
+
+=== Q4 : operateurs sur le mode libre (beta=0, branche magnetique) ===
+[calcule] (i) (d_s^2 - d_x^2) A_y = 0
+[calcule] (ii) delta F = [0, 0, 0, 0]
+   dF = 0 : True
+   laplacien de Hodge (d delta + delta d) F = d(delta F) = True
+[calcule] (iii) Box F_xy / F_xy = 4
+[calcule] (iii) Box F_sy / F_sy = 4
+   autres composantes de Box F nulles : True
+[calcule] uniforme : delta F = [0, 0, 0, 0] ; Box F_xy / F_xy = 4
+   courbure : Ric =  0 (voir weitzenbock : Delta_H = -Box + p(n-p)H^2, p=2,n=4 -> 4)

@@ -1,0 +1,49 @@
+controle conservation (4 composantes) : [0, 0, 0, 0]
+controle trace hat-T : A*tau**4
+
+b = L*c1*k*tau**2 + beta*tau**2 - c0*k*tau + c2*k*tau**3 + c3*k*tau**4/2
+a = A*L*tau**2 + L*c0*k**2*tau**2 - L*c1*k**2*tau**3 + alpha*tau**2 - beta*k*tau**3 + c1*k**2*tau**3 - c2*k**2*tau**4/2 - c3*k**2*tau**5/6
+d = A*L*tau**2/2 + A*tau**2/2 + L*c0*k**2*tau**2/2 - L*c1*k**2*tau**3/2 + alpha*tau**2/2 - beta*k*tau**3/2 - c0/2 + c1*k**2*tau**3/2 - c1*tau/2 - c2*k**2*tau**4/4 - c2*tau**2/2 - c3*k**2*tau**5/12 - c3*tau**3/2
+
+Second membre de (2.17), composantes R_{rho nu lam} (L = ln Omega) :
+  (0, 0, 1):
+     L^1 : tau^0: -I*c1*k*kappa, tau^1: I*k*kappa*(A + c0*k**2)/2, tau^2: -I*c1*k**3*kappa/2
+     L^0 : tau^-1: I*c0*k*kappa/2, tau^0: -I*kappa*(2*beta + c1*k)/2, tau^1: -I*k*kappa*(-A - 3*alpha + 9*c2)/6, tau^2: I*k*kappa*(-beta*k + c1*k**2 - 2*c3)/2, tau^3: -I*c2*k**3*kappa/4, tau^4: -I*c3*k**3*kappa/12
+  (1, 0, 1):
+     L^1 : tau^0: kappa*(A + c0*k**2)/2, tau^1: -c1*k**2*kappa
+     L^0 : tau^-2: -c0*kappa/2, tau^-1: -c1*kappa, tau^0: kappa*(4*A + 3*alpha + 3*c0*k**2 - 9*c2)/6, tau^1: kappa*(-2*beta*k + c1*k**2 - 4*c3)/2, tau^2: -3*c2*k**2*kappa/4, tau^3: -c3*k**2*kappa/3
+  (2, 0, 2):
+     L^1 : tau^0: -kappa*(A + c0*k**2)/4, tau^1: c1*k**2*kappa/2
+     L^0 : tau^-2: c0*kappa/4, tau^-1: c1*kappa/2, tau^0: -kappa*(4*A + 3*alpha + 3*c0*k**2 - 9*c2)/12, tau^1: -kappa*(-2*beta*k + c1*k**2 - 4*c3)/4, tau^2: 3*c2*k**2*kappa/8, tau^3: c3*k**2*kappa/6
+  (2, 1, 2):
+     L^1 : tau^0: I*c1*k*kappa/2, tau^1: -I*k*kappa*(A + c0*k**2)/4, tau^2: I*c1*k**3*kappa/4
+     L^0 : tau^-1: -I*c0*k*kappa/4, tau^0: I*kappa*(2*beta + c1*k)/4, tau^1: I*k*kappa*(-A - 3*alpha + 9*c2)/12, tau^2: -I*k*kappa*(-beta*k + c1*k**2 - 2*c3)/4, tau^3: I*c2*k**3*kappa/8, tau^4: I*c3*k**3*kappa/24
+  (0, 2, 2):
+     L^0 : tau^-10: 0
+  (1, 2, 2):
+     L^0 : tau^-10: 0
+
+Termes non lisses (puissance negative de tau, ou facteur ln) :
+  (0, 0, 1): L^1 tau^2 : -I*c1*k**3*kappa/2
+  (0, 0, 1): L^1 tau^1 : I*k*kappa*(A + c0*k**2)/2
+  (0, 0, 1): L^1 tau^0 : -I*c1*k*kappa
+  (0, 0, 1): L^0 tau^-1 : I*c0*k*kappa/2
+  (1, 0, 1): L^1 tau^1 : -c1*k**2*kappa
+  (1, 0, 1): L^1 tau^0 : kappa*(A + c0*k**2)/2
+  (1, 0, 1): L^0 tau^-1 : -c1*kappa
+  (1, 0, 1): L^0 tau^-2 : -c0*kappa/2
+  (2, 0, 2): L^1 tau^1 : c1*k**2*kappa/2
+  (2, 0, 2): L^1 tau^0 : -kappa*(A + c0*k**2)/4
+  (2, 0, 2): L^0 tau^-1 : c1*kappa/2
+  (2, 0, 2): L^0 tau^-2 : c0*kappa/4
+  (2, 1, 2): L^1 tau^2 : I*c1*k**3*kappa/4
+  (2, 1, 2): L^1 tau^1 : -I*k*kappa*(A + c0*k**2)/4
+  (2, 1, 2): L^1 tau^0 : I*c1*k*kappa/2
+  (2, 1, 2): L^0 tau^-1 : -I*c0*k*kappa/4
+  (0, 2, 2): L^0 tau^-10 : 0
+  (1, 2, 2): L^0 tau^-10 : 0
+
+Coefficients devant s'annuler pour un R lisse : {0, I*c1*k*kappa/2, c1*k**2*kappa/2, -c0*kappa/2, c0*kappa/4, I*c1*k**3*kappa/4, -c1*k**2*kappa, c1*kappa/2, I*k*kappa*(A + c0*k**2)/2, kappa*(A + c0*k**2)/2, -kappa*(A + c0*k**2)/4, -I*k*kappa*(A + c0*k**2)/4, -I*c0*k*kappa/4, -I*c1*k*kappa, -c1*kappa, I*c0*k*kappa/2, -I*c1*k**3*kappa/2}
+Solutions (donnee d'etat et constantes) : []
+
+EXIT 0

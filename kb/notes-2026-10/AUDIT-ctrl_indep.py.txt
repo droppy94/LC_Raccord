@@ -1,0 +1,84 @@
+"""Controle independant de q_m3_log_v5.py.
+Variable s = Omega = -tau > 0 (pas de log de quantite negative). Christoffels conformes codes a la main.
+Usage : python3 -I ctrl_indep.py N PMAX [extra]
+  N    : ordre max de c en s (c = sum_{j<=N} sum_{p<=PMAX} C[j,p] s^j ln(s)^p)
+  PMAX : puissance max de ln dans c
+"""
+import sys, itertools
+import sympy as sp
+N = int(sys.argv[1]); PMAX = int(sys.argv[2])
+s = sp.symbols('s', positive=True)
+x, y, z = sp.symbols('x y z', real=True)
+k, A, kap = sp.symbols('k A kappa', positive=True)
+al, be = sp.symbols('alpha beta')
+Ls = sp.symbols('L')
+lg = sp.log(s)
+X = [s, x, y, z]       # coordonnee 0 = s ; dtau = -ds, donc g_{tau tau} = g_{ss}, g_{tau x} = -g_{s x}
+eta = sp.diag(-1, 1, 1, 1)
+g = eta/s**2; gi = eta*s**2
+# Christoffel de g = e^{2w} eta, w = -ln s : Gam^l_{mq} = d^l_m w_q + d^l_q w_m - eta_mq eta^{ls} w_s
+w = [-1/s, 0, 0, 0]
+def Gam(l, m, q):
+    return (int(l==m)*w[q] + int(l==q)*w[m] - eta[m,q]*sum(eta[l,r]*w[r] for r in range(4)))
+# controle croise par la formule generale
+for l,m,q in itertools.product(range(4), repeat=3):
+    ref = sum(gi[l,r]*(sp.diff(g[r,m],X[q])+sp.diff(g[r,q],X[m])-sp.diff(g[m,q],X[r])) for r in range(4))/2
+    assert sp.simplify(ref - Gam(l,m,q)) == 0
+def nab(T):   # nab[(r,m,q)] = nabla_r T_{mq}
+    return {(r,m,q): sp.diff(T[m,q], X[r]) - sum(Gam(p,r,m)*T[p,q] + Gam(p,r,q)*T[m,p] for p in range(4))
+            for r,m,q in itertools.product(range(4), repeat=3)}
+
+Cc = {(j,p): sp.Symbol(f'C{j}_{p}') for j in range(N+1) for p in range(PMAX+1)}
+cfun = sum(Cc[j,p]*s**j*lg**p for (j,p) in Cc)
+# composantes en coordonnees s : T_ss = a, T_sx = -i b (car dtau = -ds), T_xx = c, T_yy = T_zz = d
+af, bf = sp.Function('a')(s), sp.Function('b')(s)
+E = sp.exp(sp.I*k*x)
+def Tmat(a_, b_, c_, d_):
+    return sp.Matrix([[a_, -sp.I*b_, 0, 0], [-sp.I*b_, c_, 0, 0], [0,0,d_,0],[0,0,0,d_]])*E
+# trace : g^{ij}T_ij = s^2(-a+c+2d) = A s^4
+dexpr = lambda a_, c_: (a_ + A*s**2 - c_)/2
+T = Tmat(af, bf, cfun, dexpr(af, cfun))
+DT = nab(T)
+cons = [sp.expand(sp.simplify(sum(gi[m,r]*DT[(r,m,nu)] for m in range(4) for r in range(4))/E)) for nu in range(4)]
+assert cons[2] == 0 and cons[3] == 0
+# resolution : cons[1] lineaire en b', cons[0] en a'
+db = sp.solve(cons[1], sp.diff(bf, s))[0]
+# db = F(s, b, c) ; resolution par facteur integrant via dsolve
+solb = sp.dsolve(sp.Eq(sp.diff(bf,s), db), bf)
+bsol = sp.expand(solb.rhs.subs(sp.Symbol('C1'), be))
+da = sp.solve(cons[0].subs(bf, bsol).doit(), sp.diff(af, s))[0]
+sola = sp.dsolve(sp.Eq(sp.diff(af,s), da), af)
+asol = sp.expand(sola.rhs.subs(sp.Symbol('C1'), al))
+csol = sp.expand(cfun); dsol = sp.expand(dexpr(asol, csol))
+Tf = Tmat(asol, bsol, csol, dsol)
+DTf = nab(Tf)
+chk = [sp.simplify(sum(gi[m,r]*DTf[(r,m,nu)] for m in range(4) for r in range(4))/E) for nu in range(4)]
+assert all(c_ == 0 for c_ in chk), chk
+assert sp.simplify(sum(gi[i,j]*Tf[i,j] for i in range(4) for j in range(4))/E - A*s**4) == 0
+print("conservation + trace : OK")
+print("a =", sp.collect(asol.subs(lg, Ls), Ls)); print("b =", sp.collect(bsol.subs(lg, Ls), Ls))
+Lh = kap/2*(Tf - sp.Rational(1,3)*A*s**4*E*g)
+DL = nab(Lh)
+R = {}
+for rho in range(4):
+    for nu in range(4):
+        for lam in range(nu+1, 4):
+            e = sp.expand(sp.simplify(2*(DL[(nu,lam,rho)] - DL[(lam,nu,rho)])/2/s/E))
+            e = sp.expand(sp.expand_log(e, force=True).subs(lg, Ls))
+            assert not e.has(sp.log), e
+            if e != 0:
+                R[(rho,nu,lam)] = e
+print("composantes non nulles (rho;nu<lam) :", list(R))
+# decomposition en s^m L^p
+def terms(e):
+    out = {}
+    for tm in sp.Add.make_args(e):
+        cf, rest = tm.as_independent(s, Ls)
+        pw = sp.Poly(rest*s**50, s, Ls) if rest != 1 else None
+        if pw is None:
+            mm, pp = 0, 0
+        else:
+            (mm, pp), = pw.monoms(); mm -= 50
+        out[(mm, pp)] = out.get((mm, pp), 0) + cf*(1 if pw is None else pw.coeffs()[0])
+    return {kk: sp.factor(v) for kk, v in out.items() if sp.expand(v) != 0}
+TR = {key: terms(e) for key, e in R.items()}

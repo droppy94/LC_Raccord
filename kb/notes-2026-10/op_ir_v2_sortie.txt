@@ -1,0 +1,33 @@
+A1. branche magnetique : U1 = k**4*s**4*u0/9 - k**2*s**2*u0
+    residu O(beta) (doit etre ~0 jusqu'a l'ordre tronque) : 0
+A2. branche electrique : U1 = -L*c*k**2*s**3/3 + 2*L*c*s - 4*c*k**2*s**3/35 + 142*c*s/105
+    residu O(beta) : 0
+
+B. branche magnetique : <X^M> ordre 0 (diag, s,x,y,z) : [k**2*s**2*u0**2/(4*e**2), k**2*s**2*u0**2/(4*e**2), k**2*s**2*u0**2/(4*e**2), -k**2*s**2*u0**2/(4*e**2)]
+   coefficient de beta*L dans <X^M> : [-k**2*s**2*u0**2/(2*e**2), -k**2*s**2*u0**2/(2*e**2), -k**2*s**2*u0**2*(2*k**4*s**4 - 6*k**2*s**2 + 3)/(6*e**2), k**2*s**2*u0**2*(2*k**4*s**4 - 6*k**2*s**2 + 3)/(6*e**2)]
+   composante 0: rapport (coef. beta L)/(ordre 0) a s -> 0 : -2
+   composante 1: rapport (coef. beta L)/(ordre 0) a s -> 0 : -2
+   composante 2: rapport (coef. beta L)/(ordre 0) a s -> 0 : -2
+   composante 3: rapport (coef. beta L)/(ordre 0) a s -> 0 : -2
+
+B. branche electrique : <X^M> ordre 0 (diag, s,x,y,z) : [c**2*s**2/(4*e**2), c**2*s**2/(4*e**2), -c**2*s**2/(4*e**2), c**2*s**2/(4*e**2)]
+   coefficient de beta*L dans <X^M> : [c**2*s**2/(2*e**2), c**2*s**2/(2*e**2), -c**2*s**2*(2*k**4*s**4 - 6*k**2*s**2 + 3)/(6*e**2), c**2*s**2*(2*k**4*s**4 - 6*k**2*s**2 + 3)/(6*e**2)]
+   composante 0: rapport (coef. beta L)/(ordre 0) a s -> 0 : 2
+   composante 1: rapport (coef. beta L)/(ordre 0) a s -> 0 : 2
+   composante 2: rapport (coef. beta L)/(ordre 0) a s -> 0 : 2
+   composante 3: rapport (coef. beta L)/(ordre 0) a s -> 0 : 2
+
+C. conservation totale (ordre tronque) : [0, 0, 0, 0]
+   R (2.17), composantes non nulles, premier ordre en beta, s -> 0 :
+     (1, 0, 1) : -L*beta*k**2*kappa*u0**2/(2*e**2) + beta*k**2*kappa*lambda*u0**2/(2*e**2) - beta*k**2*kappa*u0**2/(6*e**2) + k**2*kappa*u0**2/(4*e**2)
+     (2, 0, 2) : L*(5*beta*k**4*kappa*s**2*u0**2/(2*e**2) - beta*k**2*kappa*u0**2/(2*e**2)) + beta*k**2*kappa*lambda*u0**2/(2*e**2) - beta*k**2*kappa*u0**2/(6*e**2) + k**2*kappa*u0**2/(4*e**2)
+     (3, 0, 3) : L*(-5*beta*k**4*kappa*s**2*u0**2/(2*e**2) + beta*k**2*kappa*u0**2/e**2) - beta*k**2*kappa*lambda*u0**2/e**2 + beta*k**2*kappa*u0**2/(3*e**2) - k**2*kappa*u0**2/(2*e**2)
+
+D1. residu S2 : -beta log((k^2 - k0^2)/k^2) evalue a k0 = 0 (partie statique) : 0
+    condition (3.16) : rapport beta/(1 + 2 beta ln(aM/k)) avec a = 1/s : 0
+D2. Bochner -Box F, champ uniforme F_xy = B0 : (-Box F)_xy = -4*B0  ; rapport a F_xy : -4
+    mode k : (-Box F)_xy / F_xy = -4  ; (-Box F)_sy / F_sy = -4
+    de Sitter : R = 12  ; physique : k_phys^2 = k^2 Omega^2 = k**2*s**2
+D3. forme exacte S2 sur la partie statique : -d^2_eta e^{-2 Omega_S} -> k^2 * s^2 = k_phys^2 (pas de terme en H)
+
+EXIT 0

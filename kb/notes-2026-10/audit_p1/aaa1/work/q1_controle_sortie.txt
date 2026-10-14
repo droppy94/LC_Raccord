@@ -1,0 +1,36 @@
+======================================================================
+xi = 1/6
+--- structure |beta|^2
+T_00 = k/(8*pi**3)  T_0i = [0, 0, 0]
+T_ij (composantes 11, 12, 22) = (k**2 - k2**2 - k3**2)/(8*pi**3*k) | k1*k2/(8*pi**3*k) | k2**2/(8*pi**3*k)
+trace = 0
+trace spatiale T_ii = k/(8*pi**3)
+--- structure alpha beta*
+T_00 = 0  T_0i = [0, 0, 0]
+T_ij (composantes 11, 12, 22) = (k**2/24 - k2**2/16 - k3**2/16)*exp(-2*I*eta*k)/(pi**3*k) | k1*k2*exp(-2*I*eta*k)/(16*pi**3*k) | (-k**2 + 3*k2**2)*exp(-2*I*eta*k)/(48*pi**3*k)
+trace = 0
+trace spatiale T_ii = 0
+--- structure alpha* beta
+T_00 = 0  T_0i = [0, 0, 0]
+T_ij (composantes 11, 12, 22) = (k**2/24 - k2**2/16 - k3**2/16)*exp(2*I*eta*k)/(pi**3*k) | k1*k2*exp(2*I*eta*k)/(16*pi**3*k) | (-k**2 + 3*k2**2)*exp(2*I*eta*k)/(48*pi**3*k)
+trace = 0
+trace spatiale T_ii = 0
+reste (doit etre nul) : Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])
+======================================================================
+xi = 0
+--- structure |beta|^2
+T_00 = k/(8*pi**3)  T_0i = [0, 0, 0]
+T_ij (composantes 11, 12, 22) = (k**2 - k2**2 - k3**2)/(8*pi**3*k) | k1*k2/(8*pi**3*k) | k2**2/(8*pi**3*k)
+trace = 0
+trace spatiale T_ii = k/(8*pi**3)
+--- structure alpha beta*
+T_00 = 0  T_0i = [0, 0, 0]
+T_ij (composantes 11, 12, 22) = (-k2**2 - k3**2)*exp(-2*I*eta*k)/(16*pi**3*k) | k1*k2*exp(-2*I*eta*k)/(16*pi**3*k) | (-k**2 + k2**2)*exp(-2*I*eta*k)/(16*pi**3*k)
+trace = -k*exp(-2*I*eta*k)/(8*pi**3)
+trace spatiale T_ii = -k*exp(-2*I*eta*k)/(8*pi**3)
+--- structure alpha* beta
+T_00 = 0  T_0i = [0, 0, 0]
+T_ij (composantes 11, 12, 22) = (-k2**2 - k3**2)*exp(2*I*eta*k)/(16*pi**3*k) | k1*k2*exp(2*I*eta*k)/(16*pi**3*k) | (-k**2 + k2**2)*exp(2*I*eta*k)/(16*pi**3*k)
+trace = -k*exp(2*I*eta*k)/(8*pi**3)
+trace spatiale T_ii = -k*exp(2*I*eta*k)/(8*pi**3)
+reste (doit etre nul) : Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])

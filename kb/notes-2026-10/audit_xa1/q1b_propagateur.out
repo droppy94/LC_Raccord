@@ -1,0 +1,7 @@
+(d_s^2+k^2)^2 Khat = 0
+Khat(0), Khat'(0), Khat''(0), Khat'''(0) = [0, 0, 0, 1]
+serie de Khat en s (entiere, pas de log) : s**3/6 - k**2*s**5/60 + k**4*s**7/1680 + O(s**9)
+FT[ theta(s-r)/(8 pi) ](k) = (-k*s*cos(k*s) + sin(k*s))/(2*k**3)
+egal a Khat(s) pour s>0 : True
+solution generale de (d_s^2+k^2)^2 v = 0 verifiee : True
+polynome indiciel : n*(n - 3)*(n - 2)*(n - 1) -> racines 0,1,2,3 simples, aucune racine double : pas de log force

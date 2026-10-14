@@ -1,0 +1,9 @@
+Christoffel 0 s
+Riemann 1 s
+invariants 3 s ; R fond = 12  ; Riem2 fond = 24
+Delta4, F4 4 s ; F4 fond = 24
+densite sqrt(g)(Delta4 phi - F4/4) : ordre 0 = 0  ; ordre 1 contient log(s) : False
+ecart densite ordre 1 - (1/6) box_eta R1[H] : 0
+   (temps 4 s)
+(c) T_1 - formule du bloc K : 0  ; T_2 - formule : 0  ; T_3 - T_2 : 0
+EXIT 0

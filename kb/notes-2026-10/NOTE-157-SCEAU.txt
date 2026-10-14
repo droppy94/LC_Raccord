@@ -1,0 +1,6 @@
+SCEAU NOTE-157 (execution IR-aa) ; horodatage 2026-10-13T11:14:41Z
+e13eb218248924834630c683eceb294f5e392ea504ef4ffc264ec033d2925ff5  NOTE-BORD-EON-157-IR-aa-EXECUTION.md
+f4ca1ff8eda56362ab830bc7b01363afeb126ec5ffec52ebc95ae26f0dccbf26  iraa_aniso.py
+cd58a18584bba0f5a778f1d5e221900a74a0f6fc69eeaf5c96a788d85dc04cd4  iraa_aniso_sortie.txt
+c3a30a362ea2d7f2b1bee80ae292b5507123e2471892a287e1de8c3811fc32a1  iraa_aniso_v2.py
+8afe1323b87207816e49ab874747a2ac96d334d7870a653c5da597b2d7e1d420  iraa_aniso_v2_sortie.txt

@@ -1,0 +1,31 @@
+(a) Christoffels conforme == metrique : True
+    non nuls : {(0, 0, 0): -1/s, (0, 1, 1): -1/s, (0, 2, 2): -1/s, (0, 3, 3): -1/s, (1, 0, 1): -1/s, (1, 1, 0): -1/s, (2, 0, 2): -1/s, (2, 2, 0): -1/s, (3, 0, 3): -1/s, (3, 3, 0): -1/s}
+(b) equation d'ordre beta (coef. de 1 + 2 beta(lam - ln s) factorise) : k**2*U1(s) + Derivative(U1(s), (s, 2)) - 2*Derivative(U0(s), s)/s
+    magnetique U1 (Green) = 11*k**8*s**8*u0/132300 - 23*k**6*s**6*u0/5400 + k**4*s**4*u0/9 - k**2*s**2*u0
+    electrique : source (2/s)U0' = 2*c*cos(k*s)/s  ; ordre principal U1 ~ 2c s ln s : verif 0
+    resomme electrique : I^2 (u_s)^2 avec u_s = c e^2... /I^2 ->  proportionnel a 1/I^2 = e**2/(2*beta*(lambda - log(s)) + 1)
+(c) magnetique ordre 0, T^mu_nu = [-k**2*s**4*u0**2/(4*e**2), k**2*s**4*u0**2/(4*e**2), k**2*s**4*u0**2*cos(2*k*s)/(4*e**2), -k**2*s**4*u0**2*cos(2*k*s)/(4*e**2)]  trace = 0
+    covariant T_mu_nu = [k**2*s**2*u0**2/(4*e**2), k**2*s**2*u0**2/(4*e**2), k**2*s**2*u0**2*cos(2*k*s)/(4*e**2), -k**2*s**2*u0**2*cos(2*k*s)/(4*e**2)]
+    comp 0: ordre0 = k**2*s**2*u0**2/(4*e**2) ; coef beta*ln s = -k**2*s**2*u0**2/(2*e**2) ; coef beta (hors ln) = k**2*lambda*s**2*u0**2/(2*e**2)
+    comp 1: ordre0 = k**2*s**2*u0**2/(4*e**2) ; coef beta*ln s = -k**2*s**2*u0**2/(2*e**2) ; coef beta (hors ln) = k**2*lambda*s**2*u0**2/(2*e**2)
+    comp 2: ordre0 = k**2*s**2*u0**2/(4*e**2) ; coef beta*ln s = k**2*s**2*u0**2*(2*k**2*s**2 - 1)/(2*e**2) ; coef beta (hors ln) = k**2*lambda*s**2*u0**2/(2*e**2)
+    comp 3: ordre0 = -k**2*s**2*u0**2/(4*e**2) ; coef beta*ln s = -k**2*s**2*u0**2*(2*k**2*s**2 - 1)/(2*e**2) ; coef beta (hors ln) = -k**2*lambda*s**2*u0**2/(2*e**2)
+    elec comp 0: ordre0 = c**2*s**2/(4*e**2) ; coef beta ln s = c**2*s**2/(2*e**2)
+    elec comp 1: ordre0 = c**2*s**2/(4*e**2) ; coef beta ln s = c**2*s**2/(2*e**2)
+    elec comp 2: ordre0 = -c**2*s**2/(4*e**2) ; coef beta ln s = -c**2*s**2/(2*e**2)
+    elec comp 3: ordre0 = c**2*s**2/(4*e**2) ; coef beta ln s = c**2*s**2/(2*e**2)
+
+(d) uniforme : r0 = C_r*s**2  ; div = [0, 0, 0, 0]
+    R uniforme (1, 0, 1) : B0**2*beta*kappa*lamU/e**2 - B0**2*beta*kappa*log(s)/e**2 - B0**2*beta*kappa/(3*e**2) + B0**2*kappa/(2*e**2)
+    R uniforme (2, 0, 2) : B0**2*beta*kappa*lamU/e**2 - B0**2*beta*kappa*log(s)/e**2 - B0**2*beta*kappa/(3*e**2) + B0**2*kappa/(2*e**2)
+    R uniforme (3, 0, 3) : -2*B0**2*beta*kappa*lamU/e**2 + 2*B0**2*beta*kappa*log(s)/e**2 + 2*B0**2*beta*kappa/(3*e**2) - B0**2*kappa/e**2
+(d) mode : div (tronque) = [0, 0, 0, 0]
+    R mode (1, 0, 1) : beta*k**2*kappa*lambda*u0**2/(2*e**2) - beta*k**2*kappa*u0**2*log(s)/(2*e**2) - beta*k**2*kappa*u0**2/(6*e**2) + k**2*kappa*u0**2/(4*e**2)  ; contient C_r ? False
+    R mode (2, 0, 2) : beta*k**2*kappa*lambda*u0**2/(2*e**2) - beta*k**2*kappa*u0**2*log(s)/(2*e**2) - beta*k**2*kappa*u0**2/(6*e**2) + k**2*kappa*u0**2/(4*e**2)  ; contient C_r ? False
+    R mode (3, 0, 3) : -beta*k**2*kappa*lambda*u0**2/e**2 + beta*k**2*kappa*u0**2*log(s)/e**2 + beta*k**2*kappa*u0**2/(3*e**2) - k**2*kappa*u0**2/(2*e**2)  ; contient C_r ? False
+    C_r dans R uniforme ? False
+(f) uniforme: dF=0 ? True ; Delta_Hodge F = 0 ? True ; (-Box F)/F = {(1, 2): -4, (2, 1): -4}
+(f) mode: dF=0 ? True ; Delta_Hodge F = 0 ? True ; (-Box F)/F = {(0, 2): -4, (1, 2): -4, (2, 0): -4, (2, 1): -4}
+    Weitzenbock generique composante (1, 2) : Delta F - (-Box F + 4F) = 0
+    Weitzenbock generique composante (0, 2) : Delta F - (-Box F + 4F) = 0
+EXIT 0

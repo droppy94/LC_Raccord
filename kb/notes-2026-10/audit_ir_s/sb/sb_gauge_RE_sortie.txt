@@ -1,0 +1,8 @@
+1) Weyl lineaire de (d xi + d xi + f eta) identiquement nul : True
+2) residu polaire de R_ysy du terme -b Int ln(theta) C^2 : 0
+3) Bach lineaire de g, composante yy (u generique) : -(k**4*U(s) + 2*k**2*Derivative(U(s), (s, 2)) + Derivative(U(s), (s, 4)))*cos(k*x)/4
+   Bach_yy + (1/4)(2S'/s + S'' + k^2 S) cos kx (S = u''-2u'/s+k^2u) : 0
+   coefficient de ln s dans That_yy : -2*b*s**2*(k**4*U(s) + 2*k**2*Derivative(U(s), (s, 2)) + Derivative(U(s), (s, 4)))*cos(k*x)  = -c0 b s^2 Bach_yy ? True
+   exemple u = mode_B + gamma s^4 : S = gamma*s**2*(k**2*s**2 + 4)
+     That_yy = -4*B*b*k**3*s*cos(k*x) - 48*b*gamma*s**2*log(s)*cos(k*x) - 72*b*gamma*s**2*cos(k*x)
+     R_ysy  = -4*B*b*k**3*kappa*cos(k*x)/s - 72*b*gamma*kappa*log(s)*cos(k*x) - 132*b*gamma*kappa*cos(k*x)

@@ -1,0 +1,13 @@
+controle fond (G+3g)_yy ordre 0 : 0
+L[u] (ordre eps de (G+3g)_yy) = (k**2*s*u(s) + s*Derivative(u(s), (s, 2)) - 2*Derivative(u(s), s))*cos(k*x)/(2*s)
+That_yy[u] (u general) = 2*b*(k**4*s**2*u(s)*log(s) + 2*k**2*s**2*log(s)*Derivative(u(s), (s, 2)) + 2*k**2*s*Derivative(u(s), s) + k**2*u(s) + s**2*log(s)*Derivative(u(s), (s, 4)) + 2*s*Derivative(u(s), (s, 3)) - Derivative(u(s), (s, 2)))*cos(k*x)
+C_sysy[u] = (k**2*u(s) - Derivative(u(s), (s, 2)))*cos(k*x)/4
+controle : L[u0] = 0
+source That_yy[u0]/b = 4*k**3*s*(-A*sin(k*s) + B*cos(k*s))*cos(k*x)
+nombre de solutions : 1
+u1 (serie, termes libres = modes homogenes) : 4*A*k**4*s**4/3 - 40*A*k**2*s**2/3 - 80*A/3 - 32*B*k**3*s**3/15 + a5*s**5 - 10*a5*s**3/k**2 + a6*s**6 - 18*a6*s**4/k**2 + 72*a6*s**2/k**4 + 144*a6/k**6 + a7*s**7 + (-4*B*k**5*s**5/15 + 8*B*k**3*s**3/3 + c7*s**7)*log(s)
+W_E,yy(s) a l'ordre s^0 : -22*A*b*k**4*kappa*s/3 + A*k**4*s/2 - 2*B*b*k**3*kappa/15 - B*k**3/2 + 15*a5*b*kappa/k**2 + 72*a6*b*kappa*s/k**2 + (2*B*b*k**5*kappa*s**2 - 4*B*b*k**3*kappa)*log(s)
+W_E,yy sans correction (b = 0) en s = 0 : -B*k**3/2
+coefficient de ln s dans W_E,yy a s^0 : -4*B*b*k**3*kappa
+gamma (W_E ~ W0 (1 + gamma b kappa ln s)) : 8
+EXIT 0

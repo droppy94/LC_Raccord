@@ -1,0 +1,19 @@
+== terme alpha beta* ==
+T_00 = 0
+T_0i = [0, 0, 0]
+T_ij - (k_i k_j - k^2 delta_ij/3) e^{-2ik eta} = Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
+trace 4D g^{mn} T_mn = 0  ; trace spatiale T_ii = 0
+partie isotrope de T_ij (T_ii/3) = 0
+
+== terme |beta|^2 (phase e^{ik(eta-eta')}) ==
+T_00 = k1**2 + k2**2 + k3**2  T_0i = [k1*sqrt(k1**2 + k2**2 + k3**2), k2*sqrt(k1**2 + k2**2 + k3**2), k3*sqrt(k1**2 + k2**2 + k3**2)]
+T_ij - k_i k_j = Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
+trace 4D = 0
+
+== structure P1 (e^{-ik(eta-eta')}), coefficient |alpha|^2 - 1 = |beta|^2 ==
+T_00 = k1**2 + k2**2 + k3**2  T_0i = [-k1*sqrt(k1**2 + k2**2 + k3**2), -k2*sqrt(k1**2 + k2**2 + k3**2), -k3*sqrt(k1**2 + k2**2 + k3**2)]
+T_ij - k_i k_j = Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
+essai 0  k = ['-0.704669', '-1.3966', '0.603738']  eta = -0.934807  ecart max |T_num - T_theorique| = 1.01e-12
+essai 1  k = ['0.0297429', '-1.85002', '-0.265417']  eta = -0.93713  ecart max |T_num - T_theorique| = 2.6297e-12
+essai 2  k = ['-1.50479', '-1.10704', '0.509733']  eta = -0.147062  ecart max |T_num - T_theorique| = 1.3742e-12
+ecart max global (differences finies, h=1e-6) : 2.6297e-12

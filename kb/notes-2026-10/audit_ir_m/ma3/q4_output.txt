@@ -1,0 +1,6 @@
+[calcule] J0(s) = -c**2*cos(2*k*s) + 2*c*k*u0*sin(2*k*s) + k**2*u0**2*cos(2*k*s)
+[calcule] J2(s) = -c**2 - k**2*u0**2
+[calcule] reconstruction J - J0 - J2 cos2kx = 0
+[calcule] psi0 general = C1 + C2*s + C3*s**2 + C4*s**3 + c**2*cos(2*k*s)/(16*k**4) - c*u0*sin(2*k*s)/(8*k**3) - u0**2*cos(2*k*s)/(16*k**2)
+[calcule] psi2 general = (c**2 + 16*k**4*((C1 + C2*s)*sin(2*k*s) + (C3 + C4*s)*cos(2*k*s)) + k**2*u0**2)/(16*k**4)
+[calcule] ln s present ? False

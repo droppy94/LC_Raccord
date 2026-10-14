@@ -1,0 +1,6 @@
+Weyl de dS plat nul (ordre 0) : True
+sqrt(-ghat)Chat^2 - sqrt(-g)C^2 (ordre eps^2) : 0
+T^_yy(direct sur ghat) - s^2 T_yy[g] : 0
+rapport T_yy / (b d^c d^d(sigma C_ycyd)) = -8
+T^_yy / cos kx = b*(-2*k**4*s**2*u(s)*log(s) - 4*k**2*s**2*log(s)*Derivative(u(s), (s, 2)) - 4*k**2*s*Derivative(u(s), s) - 2*k**2*u(s) - 2*s**2*log(s)*Derivative(u(s), (s, 4)) - 4*s*Derivative(u(s), (s, 3)) + 2*Derivative(u(s), (s, 2)))
+C_sysy[eta+eps h]/(eps cos kx) = k**2*u(s)/4 - Derivative(u(s), (s, 2))/4

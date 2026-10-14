@@ -1,0 +1,1 @@
+divergence: [0, 0, 0, 0] trace: 0 R tous nuls: True

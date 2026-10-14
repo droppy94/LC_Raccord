@@ -1,0 +1,18 @@
+Ricci lin. trace = 0
+trace h = 0  ; div h = [0, 0, 0, 0]
+Ric_yy + 1/2 box h_yy = 0
+B_yy = -(k**4*u(tau) + 2*k**2*Derivative(u(tau), (tau, 2)) + Derivative(u(tau), (tau, 4)))*cos(k*x)/4
+box^2 h_yy = (k**4*u(tau) + 2*k**2*Derivative(u(tau), (tau, 2)) + Derivative(u(tau), (tau, 4)))*cos(k*x)
+rapport B_yy / box^2 h_yy = -1/4
+trace Weyl C^a_bad (doit etre 0) : 0 0
+box^2 h_yy / cos(kx) - (d^2+k^2)^2 u = 0
+B_tt, B_tx, B_xx, B_yz, B_yy+B_zz : 0 0 0 0 0
+dsolve : Eq(U(tau), tau**(3/2)*(C1*besselj(3/2, k*tau) + C2*bessely(3/2, k*tau)))
+(d^2+k^2) u_gen = 2*sqrt(2)*sqrt(k)*(C1*sin(k*tau) - C2*cos(k*tau))/sqrt(pi)
+(d^2+k^2)^2 u_gen = 0
+mode A : ODE residu = 0  ; (d^2+k^2)u = 2*k**2*cos(k*tau)  ; (d^2+k^2)^2 u = 0
+mode B : ODE residu = 0  ; (d^2+k^2)u = 2*k**2*sin(k*tau)  ; (d^2+k^2)^2 u = 0
+mode A : [exact - (0 + 4 eps d(d^2+k^2)u)]/eps^2 = epsilon**2*k*tau*sin(k*tau) + epsilon**2*cos(k*tau) + 4*epsilon*k**2*tau*cos(k*tau) - 4*k**3*tau*sin(k*tau) + 8*k**2*cos(k*tau)  ; terme O(eps) = -8*epsilon*k**3*sin(k*tau)
+   e^(-eps t) B_eps exact (collect eps) = epsilon**4*(k*tau*sin(k*tau) + cos(k*tau)) + 4*epsilon**3*k**2*tau*cos(k*tau) + epsilon**2*(-4*k**3*tau*sin(k*tau) + 8*k**2*cos(k*tau)) - 8*epsilon*k**3*sin(k*tau)
+mode B : [exact - (0 + 4 eps d(d^2+k^2)u)]/eps^2 = -epsilon**2*k*tau*cos(k*tau) + epsilon**2*sin(k*tau) + 4*epsilon*k**2*tau*sin(k*tau) + 4*k**3*tau*cos(k*tau) + 8*k**2*sin(k*tau)  ; terme O(eps) = 8*epsilon*k**3*cos(k*tau)
+   e^(-eps t) B_eps exact (collect eps) = epsilon**4*(-k*tau*cos(k*tau) + sin(k*tau)) + 4*epsilon**3*k**2*tau*sin(k*tau) + epsilon**2*(4*k**3*tau*cos(k*tau) + 8*k**2*sin(k*tau)) + 8*epsilon*k**3*cos(k*tau)

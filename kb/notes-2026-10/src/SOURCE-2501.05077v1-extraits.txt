@@ -1,0 +1,14 @@
+R. P. Woodard, "Resummations for Inflationary Quantum Gravity", arXiv:2501.05077v1 [gr-qc], 9 janvier 2025 (Int. J. Mod. Phys. D 34 (2025) 2542002).
+Lu via alphaXiv (answer_pdf_queries), 2026-10-12, apres le sceau de NOTE-134 (12:43:56Z). Extraits verbatim.
+[p.1, resume] "Resummation can be accomplished by combining a variant of Starobinsky's stochastic formalism with a variant of the renormalization group."
+[p.2] "kappa^2 = 16 pi G is used in place of Newton's constant. The two sources of large loop corrections are 'tail' terms of propagators and the mismatch between primitive divergences and the counterterms which absorb them."
+[p.12, eq. 65] (photons) "C_0i0j = C^tree_0i0j {1 + kappa^2 H^2/(40 pi^2) ln[a] + ...}".
+[p.24, §4] "a variant of the renormalization group in which certain combinations of BPHZ counterterms are regarded as curvature-dependent renormalizations of parameters in the bare Lagrangian."
+[p.26, eq. 143] "The Weyl tensor for gravitational radiation and the potentials can be viewed as 2-point Green's functions for which the Callan-Symanzik equation implies, [d/d ln(mu) + 2 gamma] G^(2) = 0. The renormalization scale ln(mu) only enters in the form ln(mu a) through relation (9) so one can replace derivatives with respect to ln(mu) by derivatives with respect to ln(a). The only thing that changes from one matter theory to another is what the coefficients c1 and c2 are."
+[p.26, §4.2.1, MMC] "These results can even be resumed as long as the de Sitter phase persists, C_0i0j -> C^tree_0i0j x [a(t)]^(-3 kappa^2 H^2/160 pi^2) (145)".
+[p.26, §4.2.2, MCC] "c1 = 0, c2 = 1/(2^7*3*5*pi^2) x mu^(D-4)/(D-4) => gamma = -kappa^2 H^2/(960 pi^2). The renormalization group explains (44-45). It also implies fully resummed results [70], C_0i0j -> C^tree_0i0j x [a(t)]^(kappa^2 H^2/480 pi^2) (148)".
+[p.27, §4.2.3, Dirac] "c2 = 1/(2^6*5*pi^2) ... gamma = -kappa^2 H^2/(160 pi^2) ... C_0i0j -> C^tree_0i0j x [a(t)]^(kappa^2 H^2/80 pi^2) (151)".
+[p.27, §4.2.4, Maxwell] "c2 = 1/(2^2*5*pi^2) ... gamma = -kappa^2 H^2/(80 pi^2) ... C_0i0j -> C^tree_0i0j x [a(t)]^(kappa^2 H^2/40 pi^2) (154)".
+[p.32] "these renormalization groups effects can induce at most a single large logarithm at 1-loop order."
+[p.32, §5] "The numerous matter loop corrections to gravity reported in expressions (32-35), (44-46), (56-58) and (65-67) involve no graviton propagators and are completely gauge independent."
+[ref. 70] A. J. Foraci and R. P. Woodard, arXiv:2501.01972 (source des resommations 148, 151, 154 ; non lu).

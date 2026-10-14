@@ -1,0 +1,20 @@
+t-2 : T_hat = s^p * Y, Y_yy = -Y_zz = y(s) cos kx
+  p = 1 : trace = 0 ; divergence = [0, 0, 0, 0]
+     R_ysy : plus basse puissance de s = -1 ; terme en 1/s = kappa*y0*cos(k*x)
+     R_yxy : plus basse puissance de s = 0 ; terme en 1/s = 0
+     R_zsz : plus basse puissance de s = -1 ; terme en 1/s = -kappa*y0*cos(k*x)
+     R_zxz : plus basse puissance de s = 0 ; terme en 1/s = 0
+  p = 2 : trace = 0 ; divergence = [0, 0, 0, 0]
+     R_ysy : plus basse puissance de s = 0 ; terme en 1/s = 0
+     R_yxy : plus basse puissance de s = 1 ; terme en 1/s = 0
+     R_zsz : plus basse puissance de s = 0 ; terme en 1/s = 0
+     R_zxz : plus basse puissance de s = 1 ; terme en 1/s = 0
+t-3 (a) : box_eta^2 de ln s (repere plat, box = -d_s^2 + d_x^2) : -6/s**4
+t-3 (b) : box^2 phi_h = 0  (phi_h lisse en s = 0)
+   T_hat(phi_h) : trace = 0
+     R_ysy : coefficient de 1/s = 0
+     R_yxy : coefficient de 1/s = 0
+     R_zsz : coefficient de 1/s = 0
+     R_zxz : coefficient de 1/s = 0
+   pole produit par phi_h lisse : False
+EXIT 0

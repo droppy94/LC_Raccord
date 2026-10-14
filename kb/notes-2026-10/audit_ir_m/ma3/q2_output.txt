@@ -1,0 +1,18 @@
+[calcule] fond : Delta4(-ln s) = 6
+[calcule] fond : F4 = 24  E = 24  R = 12  C2 = 0
+[calcule] fond : sqrt(g)(Delta4 phi - F4/4) = 0
+[calcule] ordre eps : depend de b (terme C^2) ? False
+[calcule] ordre eps : contient log(s) ? False
+[calcule] identite ponctuelle eps-coeff == (1/6) box_eta R^(1)[h] : True
+[calcule] dS_b/dh_1 = -Derivative(psi(s, x), (s, 4))/6 + Derivative(psi(s, x), (s, 2), (x, 2))/6
+          contient log(s) ? False ; facteur s explicite (hors derivees de psi) ? False
+[calcule] dS_b/dh_2 = -Derivative(psi(s, x), (s, 4))/6 - Derivative(psi(s, x), (x, 4))/6 + Derivative(psi(s, x), (s, 2), (x, 2))/3
+          contient log(s) ? False ; facteur s explicite (hors derivees de psi) ? False
+[calcule] dS_b/dh_3 = -Derivative(psi(s, x), (s, 4))/6 - Derivative(psi(s, x), (x, 4))/6 + Derivative(psi(s, x), (s, 2), (x, 2))/3
+          contient log(s) ? False ; facteur s explicite (hors derivees de psi) ? False
+[calcule] ecart a la prediction covariante, i=1 : 0
+[calcule] ecart a la prediction covariante, i=2 : 0
+[calcule] ecart a la prediction covariante, i=3 : 0
+[calcule] T_y - T_z = 0
+[calcule] dS_b/dh_2 + (1/6) box_eta^2 psi = 0  (donc dS_b/dh_y = dS_b/dh_z = J/6 sur couche box^2 psi = -J)
+[derive] T^(b)_ii (coord.) = 2 s^2 dS_b/dh_i  =>  plus basse puissance s^2 pour psi lisse generique

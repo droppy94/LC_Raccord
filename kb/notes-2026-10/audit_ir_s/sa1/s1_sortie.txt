@@ -1,0 +1,2 @@
+lam = {lam: 8}
+[calcule] T_brute == lam*b*d^c d^d(phi C_acbd) pour toutes composantes, h et phi generiques : True

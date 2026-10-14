@@ -1,0 +1,12 @@
+u1 exact = 16*pi*b*(-(k*s*sin(k*s) + cos(k*s))*(2*A*log(s) + A*cos(2*k*s) - 2*A*Ci(2*k*s) + A + 2*B*k*s + B*sin(2*k*s) - 2*B*Si(2*k*s)) - (k*s*cos(k*s) - sin(k*s))*(2*A*k*s - A*sin(2*k*s) + 2*A*Si(2*k*s) - 2*B*log(s) + B*cos(2*k*s) - 2*B*Ci(2*k*s) + B))
+residu exact : 0
+W_E0 exact = k**3*(A*sin(k*s) - B*cos(k*s))/2
+W_E1 exact = 16*pi*b*k**3*(-A*k*s*cos(k*s) + A*sin(k*s)*Ci(2*k*s) - A*sin(k*s) - A*cos(k*s)*Si(2*k*s) - B*k*s*sin(k*s) + B*sin(k*s)*Si(2*k*s) + B*cos(k*s)*Ci(2*k*s) + log(s**(-A*sin(k*s) + B*cos(k*s))))
+A=1,B=0 : W_E0 serie = k**4*s/2 - k**6*s**3/12 + O(s**4)
+           W_E1 serie (L=ln s) = -8*pi*b*k**6*s**3*log(k)/3 - 8*pi*b*k**6*s**3*log(2)/3 - 8*EulerGamma*pi*b*k**6*s**3/3 + 160*pi*b*k**6*s**3/9 + 16*pi*b*k**4*s*log(k) - 64*pi*b*k**4*s + 16*EulerGamma*pi*b*k**4*s + 16*pi*b*k**4*s*log(2)
+A=0,B=1 : W_E0 serie = -k**3/2 + k**5*s**2/4 + O(s**4)
+           W_E1 serie (L=ln s) = L*(-16*pi*b*k**5*s**2 + 32*pi*b*k**3) - 8*pi*b*k**5*s**2*log(k) - 8*pi*b*k**5*s**2*log(2) - 8*EulerGamma*pi*b*k**5*s**2 + 16*pi*b*k**3*log(k) + 16*EulerGamma*pi*b*k**3 + 16*pi*b*k**3*log(2)
+coefficient exact de ln s dans W_E1 = 32*pi*B*b*k**3*cos(k*s)
+coefL / W_E0|_{A=0} = -64*pi*b
+W0 = -B*k**3/2  ; Gamma = 64*pi*G*b
+Gamma (scalaire conforme) = G/(30*pi) = 0.0106103295395 G

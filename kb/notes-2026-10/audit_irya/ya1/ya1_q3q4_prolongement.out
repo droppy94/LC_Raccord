@@ -1,0 +1,29 @@
+=== YA1 Q3/Q4 : prolongement de w a travers eta = 0 ===
+[calcule] classe (a) : w_{ab*}(s,r) = k_c**2*(k_c*s*sin(phi) + (k_c**2*r**2 - k_c**2*s**2 + 1)*cos(phi)/2)/(pi**2*(4*k_c**2*s**2 + (k_c**2*r**2 - k_c**2*s**2 + 1)**2))
+[calcule] Box w_{ab*} (classe a) = 0
+[calcule] w_{ab*}(s, r->0) (limite de coincidence spatiale), classe (a) : k_c**2*(-k_c**2*s**2*cos(phi) + 2*k_c*s*sin(phi) + cos(phi))/(2*pi**2*(k_c**4*s**4 + 2*k_c**2*s**2 + 1))
+[calcule] denominateur de w_{ab*} (classe a) : 2*pi**2*(k_c**2*r**2 - 2*k_c**2*r*s + k_c**2*s**2 + 1)*(k_c**2*r**2 + 2*k_c**2*r*s + k_c**2*s**2 + 1)
+[derive]  il ne s'annule pour aucun (s,r) reel (somme de carres), w_{ab*} est reelle-analytique sur R x R_+ et au sommet s=0, r=0.
+[calcule] classe (b) : Box [sin(kr) cos(ks-phi)/r] = 0  (chaque mode est une bisolution, donc la superposition aussi)
+[calcule] Kirchhoff : u(t,x) = 3*t**2*x1*x3 + 2*t**2 + t*x1*x2 + t*x3 + x1**2 + x1*x3**3 + x2**2   (t = eta - tau)
+[calcule] Box u = 0  ; u(0,x) - f0 = 0  ; u_t(0,x) - f1 = 0
+[derive]  u est un polynome en (t,x) : lisse pour tout t, de part et d'autre de la surface de Cauchy, en particulier a travers eta = 0 lorsque tau < 0 < tau + t.
+          La formule de Kirchhoff u = d_t[t M_t f0] + t M_t f1 est valable pour t de signe quelconque et depend de maniere C^inf de tout parametre dont f0, f1 dependent de maniere C^inf.
+
+[calcule] etat Hadamard homogene explicite (beta = 0.5 e^{-k}, phi = pi/3) : T^w_{eta eta'}(eta) = partie stationnaire - J(eta)
+   partie stationnaire (1/2pi^2) int k^3 |beta|^2 dk = 0.004749430483
+   eta=   -0.5 : J= -0.01881482949   T^w_eta eta' = 0.02356425997
+   eta=   -0.1 : J=     0.13604267   T^w_eta eta' = -0.1312932395
+   eta=  -0.01 : J=  0.08631760678   T^w_eta eta' = -0.0815681763
+   eta= -0.001 : J=  0.07715767553   T^w_eta eta' = -0.07240824505
+   eta=      0 : J=    0.076107237   T^w_eta eta' = -0.07135780652
+   eta=  0.001 : J=  0.07505071825   T^w_eta eta' = -0.07030128777
+   eta=   0.01 : J=  0.06528968647   T^w_eta eta' = -0.06054025599
+   eta=    0.1 : J= -0.03687720127   T^w_eta eta' = 0.04162663176
+   eta=    0.5 : J= -0.01912861037   T^w_eta eta' = 0.02387804085
+[derive]  T^w est continu, borne et C^inf a travers eta = 0 : aucune divergence pour un etat Hadamard (classe a decroissance rapide).
+
+[calcule] etat de classe (b), N=3, phi = pi/2 (alpha beta^* = i k^{-3} pour k >= 1) : -J(eta) = -sin(phi-2eta)/(4 pi^2 eta)
+   eta=   -0.1 : -J =    0.2482537643   eta*(-J) = -0.024825376  (-> -1/(4 pi^2) = -0.025330296)
+   eta=  -0.01 : -J =     2.532523002   eta*(-J) = -0.02532523  (-> -1/(4 pi^2) = -0.025330296)
+   eta= -0.001 : -J =     25.33024525   eta*(-J) = -0.025330245  (-> -1/(4 pi^2) = -0.025330296)

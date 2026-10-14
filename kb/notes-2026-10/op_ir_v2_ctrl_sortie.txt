@@ -1,0 +1,4 @@
+(i) (-d^2_eta) A_y / A_y = 0
+(ii) delta F (Maxwell libre covariant) = [0, 0, 0, 0]  ; dF = 0 car F = dA => Hodge Delta F = (d delta + delta d) F = 0
+(iii) 2 beta (lam - ln s) quand s -> 0+ : oo  (I^2 est lineaire en ln s exactement dans l'action simplifiee de S2)
+EXIT 0

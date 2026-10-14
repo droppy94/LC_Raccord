@@ -1,0 +1,21 @@
+=== 1. Coefficient du ln a de S8 pour le photon (eq. 53), forme n b kappa_P^2 H^2 ===
+coef (eq.53) = kappa^2 H^2/(40 pi^2) = 2*G*H**2/(5*pi)  ; egal a (eq.60) 2 G H^2/(5 pi) : True
+b(photon, N_V=1) = 1/(160*pi**2)
+n = 8
+
+=== 2. gamma de S8 a partir de c_2 (eq. 56), c_1 = 0, deltaZ (eq. 57) ===
+gamma_S8 (calcule) = -G*H**2/(5*pi)
+gamma_S8 (affiche, eq. 58) = -kappa^2 H^2/(80 pi^2) = -G*H**2/(5*pi)
+accord : True
+-2 gamma_S8 = 2*G*H**2/(5*pi)  ; exposant resomme eq. (60) = 2 G H^2/(5 pi) : True
+Verification : coefficient du ln a en (53) = -2 gamma : True
+
+=== 3. gamma de S27 a partir de c_1, c_2 (eq. 85-86), deltaZ (eq. 91) ===
+gamma_S27 (calcule) = 3*G*H**2/(20*pi)
+gamma_S27 (affiche, eq. 91) = 3 G H^2/(20 pi)
+accord : True
+-2 gamma_S27 = -3*G*H**2/(10*pi)  ; exposant eq. (93) = -3 G H^2/(10 pi) : True
+part c_1 : G*H**2/(6*pi)  ; part c_2 : -G*H**2/(60*pi)  ; somme : 3*G*H**2/(20*pi)
+
+=== 4. Coefficient scalaire MMC de S27 en forme n b kappa_P^2 H^2 (complement) ===
+b(scalaire, N_S=1) = 1/(1920*pi**2)  ; |coef (eq.80)| = 3 G H^2/(10 pi) = n b kappa_P^2 H^2 avec n = 72  (signe : negatif en (80))

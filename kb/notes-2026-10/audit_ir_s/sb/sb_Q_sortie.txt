@@ -1,0 +1,18 @@
+[Q, modele de l'audite] f = tau**4*log(tau)
+   C_titi (coef eps) : [-3*tau**2*log(tau) - 7*tau**2/4, -3*tau**2*log(tau) - 7*tau**2/4, 6*tau**2*log(tau) + 7*tau**2/2]  ; attendu -f''/4 * d : [True, True, True]
+   W = [-3*tau*log(tau) - 7*tau/4, -3*tau*log(tau) - 7*tau/4, 6*tau*log(tau) + 7*tau/2] 
+   dW/dtau = [-3*log(tau) - 19/4, -3*log(tau) - 19/4, 6*log(tau) + 19/2]
+   limites W, dW en 0+ : [0, 0, 0] [oo, oo, -oo]
+   limites f^(k)(0+), k=1..5 : [0, 0, 0, -oo, oo]
+   G^a_a (mixte) : fond = [-3/(4*T**2), 1/(4*T**2), 1/(4*T**2), 1/(4*T**2)] ; coef eps = [0, log(32*T**5) + 9/2, log(32*T**5) + 9/2, -log(1024*T**10) - 9]
+   G_(aa) (repere orthonorme) : fond = [3/(4*T**2), 1/(4*T**2), 1/(4*T**2), 1/(4*T**2)] ; coef eps = [0, log(32*T**5) + 9/2, log(32*T**5) + 9/2, -log(1024*T**10) - 9]
+   composantes hors diagonale nulles : True
+[variante : source R ~ 1/Omega (cf. R-C)] f = tau**3*log(tau)
+   C_titi (coef eps) : [-3*tau*log(tau)/2 - 5*tau/4, -3*tau*log(tau)/2 - 5*tau/4, 3*tau*log(tau) + 5*tau/2]  ; attendu -f''/4 * d : [True, True, True]
+   W = [-3*log(tau)/2 - 5/4, -3*log(tau)/2 - 5/4, 3*log(tau) + 5/2] 
+   dW/dtau = [-3/(2*tau), -3/(2*tau), 3/tau]
+   limites W, dW en 0+ : [oo, oo, -oo] [-oo, -oo, oo]
+   limites f^(k)(0+), k=1..5 : [0, 0, -oo, oo, -oo]
+   G^a_a (mixte) : fond = [-3/(4*T**2), 1/(4*T**2), 1/(4*T**2), 1/(4*T**2)] ; coef eps = [0, sqrt(2)*(log(64*T**6) + 7)/(4*sqrt(T)), sqrt(2)*(log(64*T**6) + 7)/(4*sqrt(T)), sqrt(2)*(-log(64*T**6) - 7)/(2*sqrt(T))]
+   G_(aa) (repere orthonorme) : fond = [3/(4*T**2), 1/(4*T**2), 1/(4*T**2), 1/(4*T**2)] ; coef eps = [0, sqrt(2)*(log(64*T**6) + 7)/(4*sqrt(T)), sqrt(2)*(log(64*T**6) + 7)/(4*sqrt(T)), sqrt(2)*(-log(64*T**6) - 7)/(2*sqrt(T))]
+   composantes hors diagonale nulles : True

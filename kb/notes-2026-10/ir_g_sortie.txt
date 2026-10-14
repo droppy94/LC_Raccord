@@ -1,0 +1,29 @@
+A0. residu de l'equation de mode, ordre beta, jusqu'a s^2 : 0
+A1. coefficient de beta ln s dans X^M (ordre dominant s^2) compare a -2 (T_B - T_E) :
+    (0, 0) : log = -(-c*cos(k*x) + k*u0*sin(k*x))*(c*cos(k*x) + k*u0*sin(k*x))/e**2  ; -2(TB-TE) = -(-c*cos(k*x) + k*u0*sin(k*x))*(c*cos(k*x) + k*u0*sin(k*x))/e**2  ; ecart 0
+    (1, 1) : log = -(-c*cos(k*x) + k*u0*sin(k*x))*(c*cos(k*x) + k*u0*sin(k*x))/e**2  ; -2(TB-TE) = -(-c*cos(k*x) + k*u0*sin(k*x))*(c*cos(k*x) + k*u0*sin(k*x))/e**2  ; ecart 0
+    (2, 2) : log = -(-c**2*sin(k*x)**2 + c**2 + k**2*u0**2*sin(k*x)**2)/e**2  ; -2(TB-TE) = -(-c**2*sin(k*x)**2 + c**2 + k**2*u0**2*sin(k*x)**2)/e**2  ; ecart 0
+    (3, 3) : log = (-c**2*sin(k*x)**2 + c**2 + k**2*u0**2*sin(k*x)**2)/e**2  ; -2(TB-TE) = (-c**2*sin(k*x)**2 + c**2 + k**2*u0**2*sin(k*x)**2)/e**2  ; ecart 0
+   accord sur toutes les composantes : True  (composante (0,1) = Poynting)
+
+B0. conservation totale (ordre tronque) : [0, 0, 0, 0]
+B1. coefficient de ln s dans R_{i s i} (s -> 0) compare a (3 beta kappa/e^2) Q_sans_trace_ii :
+   i = 1 : coef ln s = -kappa*(-c + k*u0)*(c + k*u0)/(2*e**2)  ; reference = -kappa*(-c + k*u0)*(c + k*u0)/(2*e**2)  ; ecart 0
+   i = 2 : coef ln s = -kappa*(2*c**2 + k**2*u0**2)/(2*e**2)  ; reference = -kappa*(2*c**2 + k**2*u0**2)/(2*e**2)  ; ecart 0
+   i = 3 : coef ln s = kappa*(c**2 + 2*k**2*u0**2)/(2*e**2)  ; reference = kappa*(c**2 + 2*k**2*u0**2)/(2*e**2)  ; ecart 0
+   accord : True
+   trace : coefficient de ln s dans la partie isotrope de R : 0
+
+C1. a eta = 0 : amplitude B = a*k*cos(D*k)  ; amplitude E = a*k*sin(D*k)  ; B^2 - E^2 = a**2*k**2*cos(2*D*k)
+    partie (eB eB - eE eE) : (B^2+E^2)/2 = a**2*k**2/2  (independante de D)
+    partie (eB eB + eE eE) : (B^2-E^2)/2 = a**2*k**2*cos(2*D*k)/2
+C2. n = 2 : <cos 2kD> spectral = (1 - 3*x**2)/(x**2 + 1)**3 ; x = 2 k* D ; x^(n+1) * <cos 2kD> -> 0 ; valeur a x = 0 : 1
+C2. n = 4 : <cos 2kD> spectral = (5*x**4 - 10*x**2 + 1)/(x**10 + 5*x**8 + 10*x**6 + 10*x**4 + 5*x**2 + 1) ; x = 2 k* D ; x^(n+1) * <cos 2kD> -> 0 ; valeur a x = 0 : 1
+C2. n = 5 : <cos 2kD> spectral = (-x**6 + 15*x**4 - 15*x**2 + 1)/((x**2 + 1)**3*(x**6 + 3*x**4 + 3*x**2 + 1)) ; x = 2 k* D ; x^(n+1) * <cos 2kD> -> -1 ; valeur a x = 0 : 1
+
+D1. dipole magnetique : <eB eB - eE eE>_angles = Matrix([[8*m_x**2/15 - 4*m_y**2/15 - 4*m_z**2/15, 4*m_x*m_y/5, 4*m_x*m_z/5], [4*m_x*m_y/5, -4*m_x**2/15 + 8*m_y**2/15 - 4*m_z**2/15, 4*m_y*m_z/5], [4*m_x*m_z/5, 4*m_y*m_z/5, -4*m_x**2/15 - 4*m_y**2/15 + 8*m_z**2/15]])
+    attendu (4/5)(m m - m^2 1/3) : True
+    <eB eB + eE eE>_angles = Matrix([[8*m_x**2/15 + 2*m_y**2/5 + 2*m_z**2/5, 2*m_x*m_y/15, 2*m_x*m_z/15], [2*m_x*m_y/15, 2*m_x**2/5 + 8*m_y**2/15 + 2*m_z**2/5, 2*m_y*m_z/15], [2*m_x*m_z/15, 2*m_y*m_z/15, 2*m_x**2/5 + 2*m_y**2/5 + 8*m_z**2/15]])
+D2. ensemble isotrope d'orientations (|m| = 1) : <(4/5)(m m - 1/3)> = Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
+
+EXIT 0

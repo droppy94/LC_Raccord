@@ -1,0 +1,45 @@
+A0. equations de conservation (ordres s^p, p <= 3 ) : 52  ; inconnues : 108
+libres: ['q20_0', 'q20_c', 'q20_s', 'q30_0', 'q30_c', 'q30_s', 'q31_0', 'q31_c', 'q31_s', 'q32_0', 'q32_c', 'q32_s', 'q40_0', 'q40_c', 'q40_s', 'q41_0', 'q41_c', 'q41_s', 'q42_0', 'q42_c', 'q42_s', 'q50_0', 'q50_c', 'q50_s', 'q51_0', 'q51_c', 'q51_s', 'q52_0', 'q52_c', 'q52_s', 'r20_0', 'r20_c', 'r20_s', 'r30_0', 'r30_c', 'r30_s', 'r31_0', 'r31_c', 'r31_s', 'r32_0', 'r32_c', 'r32_s', 'r40_0', 'r40_c', 'r40_s', 'r41_0', 'r41_c', 'r41_s', 'r42_0', 'r42_c', 'r42_s', 'r50_0', 'r50_c', 'r50_s', 'r51_0', 'r51_c', 'r51_s', 'r52_0', 'r52_c', 'r52_s']
+r20_0 -> LIBRE
+r20_c -> LIBRE
+r20_s -> LIBRE
+r21_0 -> 0
+r21_c -> 0
+r21_s -> 0
+r22_0 -> 0
+r22_c -> 0
+r22_s -> 0
+r30_0 -> LIBRE
+r30_c -> LIBRE
+r30_s -> LIBRE
+r31_0 -> LIBRE
+r31_c -> LIBRE
+r31_s -> LIBRE
+r32_0 -> LIBRE
+r32_c -> LIBRE
+r32_s -> LIBRE
+q10_0 -> 0
+q10_c -> 0
+q10_s -> 0
+q11_0 -> 0
+q11_c -> 0
+q11_s -> 0
+q12_0 -> 0
+q12_c -> 0
+q12_s -> 0
+q20_0 -> LIBRE
+q20_c -> LIBRE
+q20_s -> LIBRE
+q21_0 -> 0
+q21_c -> 0
+q21_s -> 0
+q22_0 -> 0
+q22_c -> 0
+q22_s -> 0
+q30_0 -> LIBRE
+q30_c -> LIBRE
+q30_s -> LIBRE
+q31_0 -> LIBRE
+q31_c -> LIBRE
+q31_s -> LIBRE
+div XM_0 + That/s, ordre s^3 (premier ordre beta) : 0

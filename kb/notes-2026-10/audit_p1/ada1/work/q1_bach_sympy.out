@@ -1,0 +1,25 @@
+(a) h_yy = -h_zz = u(tau) cos(kx) : divergence d^b h_ab = [0, 0, 0, 0] ; trace = 0
+    R_ab + (1/2) box h_ab = Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]) ; R = 0
+    B_ab + (1/4) box^2 h_ab = Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])  (doit etre la matrice nulle)
+    B_yy = -(k**4*u(tau) + 2*k**2*Derivative(u(tau), (tau, 2)) + Derivative(u(tau), (tau, 4)))*cos(k*x)/4
+    box^2 h_yy = (k**4*u(tau) + 2*k**2*Derivative(u(tau), (tau, 2)) + Derivative(u(tau), (tau, 4)))*cos(k*x)
+    (d_tau^2+k^2)^2 u * cos(kx) - box^2 h_yy = 0
+(b) onde plane TT generique : solution des contraintes TT = [{e00: (-2*e12*p1*p2 - 2*e13*p1*p3 + e22*p1**2 - e22*p2**2 - 2*e23*p2*p3 + e33*p1**2 - e33*p3**2)/(-omega**2 + p1**2), e01: (e12*omega**2*p2 + e12*p1**2*p2 + e13*omega**2*p3 + e13*p1**2*p3 - e22*omega**2*p1 + e22*p1*p2**2 + 2*e23*p1*p2*p3 - e33*omega**2*p1 + e33*p1*p3**2)/(-omega**3 + omega*p1**2), e02: (-e12*p1 - e22*p2 - e23*p3)/omega, e03: (-e13*p1 - e23*p2 - e33*p3)/omega, e11: (-2*e12*p1*p2 - 2*e13*p1*p3 + e22*omega**2 - e22*p2**2 - 2*e23*p2*p3 + e33*omega**2 - e33*p3**2)/(-omega**2 + p1**2)}]
+    (B_ab + (1/4) box^2 h_ab)/phase apres contraintes TT = Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]) (doit etre nul)
+    box^2 h_ab = (p^2)^2 h_ab avec p^2 = -omega**2 + p1**2 + p2**2 + p3**2
+(c) dsolve : Eq(u(tau), tau**(3/2)*(C1*besselj(3/2, k*tau) + C2*bessely(3/2, k*tau)))
+    u_A = k*tau*sin(k*tau) + cos(k*tau) ; residu de l'EDO = 0
+    (d^2+k^2) u_A = 2*k**2*cos(k*tau)
+    (d^2+k^2)^2 u_A = 0
+    u_B = -k*tau*cos(k*tau) + sin(k*tau) ; residu de l'EDO = 0
+    (d^2+k^2) u_B = 2*k**2*sin(k*tau)
+    (d^2+k^2)^2 u_B = 0
+    Wronskien W(u_A,u_B) = k**3*tau**2 (non nul pour tau != 0 : solutions independantes)
+    (1 - i k tau) e^{i k tau} = k*tau*sin(k*tau) - I*k*tau*cos(k*tau) + I*sin(k*tau) + cos(k*tau)
+    comportement tau -> 0 : u_A -> 1 + k**2*tau**2/2 + O(tau**4), u_B -> k**3*tau**3/3 + O(tau**5)
+(d) B_eps(tau) e^{-eps tau} = epsilon**4*(k*tau*sin(k*tau) + cos(k*tau)) + 4*epsilon**3*k**2*tau*cos(k*tau) + epsilon**2*(-4*k**3*tau*sin(k*tau) + 8*k**2*cos(k*tau)) - 8*epsilon*k**3*sin(k*tau)
+    coefficient de eps^0 : 0
+    coefficient de eps^1 : -8*k**3*sin(k*tau)
+    coefficient de eps^2 : 4*k**2*(-k*tau*sin(k*tau) + 2*cos(k*tau))
+    coefficient de eps^3 : 4*k**2*tau*cos(k*tau)
+    coefficient de eps^4 : k*tau*sin(k*tau) + cos(k*tau)

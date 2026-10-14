@@ -1,0 +1,6 @@
+equation du mode : u'' - (2/s) u' + k^2 u = 0
+C(s=0) = 0 pour toutes composantes : True
+  C_sysy ~ k**3*s*(A*k*s - B)*cos(k*x)/2
+  C_syxy ~ k**3*s*(A + B*k*s)*sin(k*x)/2
+  C_xyxy ~ k**3*s*(A*k*s - B)*cos(k*x)/2
+  C_yzyz ~ 0

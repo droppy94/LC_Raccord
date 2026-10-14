@@ -1,0 +1,7 @@
+Hawking, Hertog, Reall, "Trace anomaly driven inflation", Phys. Rev. D 63 (2001) 083504, arXiv:hep-th/0010232v4.
+Lu via alphaXiv, 2026-10-12. Extraits verbatim (resume, sections 1, 2.2, 3.5-3.6, 4.1, 5.2, 6.2, 8).
+[resume] "The AdS/CFT correspondence is used to calculate the correlation function for scalar and tensor metric perturbations during the ensuing de Sitter phase. ... Quantum loops of matter fields are shown to strongly suppress short scale metric perturbations".
+[eq. 2.3, 2.7] g^ij <T_ij> = c F - a G + d nabla^2 R ; F = C_ijkl C^ijkl ; c = (N_S + 6 N_F + 12 N_V)/(120 (4 pi)^2).
+[p.5] "The Weyl-squared counterterm does not affect the trace anomaly but it can contribute to suppression of tensor perturbations. The effects of this term were neglected by Starobinsky and Vilenkin."
+[p.29] "At large p' the tensor propagator behaves like (p'^4 log p')^-1".
+Calcul euclidien sur S^4 puis continuation ; pas d'etude de la croissance tardive (ln a) du Weyl electrique.

@@ -1,0 +1,31 @@
+1. L-A en 3D, 200 tirages : max |Q_k - formule| = 3.3306690738754696e-15
+   Green : a = -41.299334790472855  formule : -41.29933479047286  ; -dA/dt = 1.3515979560561904  formule : 1.3515979560561895
+
+2. dipole magnetique lineaire : |<L> + (2/5) tf(mm)| = 2.0539125955565396e-15
+   dipole electrique lineaire : |<L> - (2/5) tf(pp)| = 2.886579864025407e-15
+   magnetique tournant x - i y : <L> = [-0.13333333 -0.13333333  0.26666667]  (attendu -2/15,-2/15,4/15)
+   chiral (p = z, m = -i z) : max_n |L(n)| = 2.220446049250313e-16
+   E pur l=2 : |<L_E> - (2/5)A| = 7.382983113757291e-15  ; B pur l=2 : |<L_B>| = 2.4351244321495474e-16
+   ensemble isotrope : |<L>| = 1.6611264772557754e-15
+
+3. dipoles p // m, |p| = |m| = 1 (axe z), phase relative phi :
+   phi = 0.0000 : |<L>| = 6.08e-17 ; max_n |L(n)| (polarisation lineaire locale) = 0.996
+   phi = 0.7854 : |<L>| = 4.75e-17 ; max_n |L(n)| (polarisation lineaire locale) = 0.704
+   phi = 1.5708 : |<L>| = 7.92e-18 ; max_n |L(n)| (polarisation lineaire locale) = 0.000
+   phi = 3.1416 : |<L>| = 6.15e-17 ; max_n |L(n)| (polarisation lineaire locale) = 0.996
+   loi generale des dipoles (p, m complexes aleatoires) :
+     |<L> - (2/5)[tf Re pp^dag - tf Re mm^dag]| = 5.995204332975845e-15
+     |<L> - (2/5)[tf Re pp^dag - tf Re mm^dag]| = 8.104628079763643e-15
+     |<L> - (2/5)[tf Re pp^dag - tf Re mm^dag]| = 7.993605777301127e-15
+   p = x, m = y (source de Huygens) : <L> diag = [ 0.4 -0.4 -0. ]
+   p = x + i y (tournant electrique), m = x - i y (tournant magnetique oppose) : |<L>| = 1.38e-16  ; max_n |L(n)| = 1.995
+
+4. rapport interference/intensite  R = int k^4 Re(J+.J-^*) dk / int k^4 |J+|^2 dk  (J reel : J- = conj(J+)) :
+   enveloppe gaussienne sigma = 2, t0 = -10, w0 = 3 : R = -1.63e-19  (estimation exp(-2 t0^2/sigma^2) = 1.93e-22)
+   enveloppe gaussienne sigma = 2, t0 = -20, w0 = 3 : R = -7.9e-20  (estimation exp(-2 t0^2/sigma^2) = 1.38e-87)
+   enveloppe gaussienne sigma = 5, t0 = -10, w0 = 3 : R = 0.000197  (estimation exp(-2 t0^2/sigma^2) = 0.000335)
+   enveloppe gaussienne sigma = 10, t0 = -10, w0 = 3 : R = 0.132  (estimation exp(-2 t0^2/sigma^2) = 0.135)
+   aimant eteint (marche tanh, w = 1/2, allume depuis -inf), t0 = -2 : R = 4.05e-5
+   aimant eteint (marche tanh, w = 1/2, allume depuis -inf), t0 = -5 : R = 6.33e-15
+   aimant eteint (marche tanh, w = 1/2, allume depuis -inf), t0 = -10 : R = -5.4e-13
+EXIT 0

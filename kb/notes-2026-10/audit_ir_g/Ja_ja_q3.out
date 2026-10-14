@@ -1,0 +1,58 @@
+== (a) un mode, k||x, eps oblique (0,cos th, sin th)
+ checks: trace-That (<=s^5) = 0 ; div O(beta^0,beta^1) (<=s^4) = [(0, 0), (0, 0), (0, 0), (0, 0)] ; inconnues libres X^R : {q6, q19, q18, q15, q17, q16, q20}
+ X^R_ss = C_rad*s**2 + beta*q6*s**2
+  R_xsx : [beta s^0 ln s] = -kappa*(-c + k*u0)*(c + k*u0)/(2*e**2)  
+  R_ysy : [beta s^0 ln s] = -kappa*(3*c**2*cos(theta)**2 - c**2 + 3*k**2*u0**2*cos(theta)**2 - 2*k**2*u0**2)/(2*e**2)  
+  R_ysz : [beta s^0 ln s] = -3*kappa*(c**2 + k**2*u0**2)*sin(2*theta)/(4*e**2)  
+  R_zsy : [beta s^0 ln s] = -3*kappa*(c**2 + k**2*u0**2)*sin(2*theta)/(4*e**2)  
+  R_zsz : [beta s^0 ln s] = -kappa*(3*c**2*sin(theta)**2 - c**2 + 3*k**2*u0**2*sin(theta)**2 - 2*k**2*u0**2)/(2*e**2)  
+  ln s a beta^0 dans R : {0}
+ Q = [[0, 0, 0], [0, -c**2*cos(theta)**2/2 + k**2*u0**2*sin(theta)**2/2, -(c**2 + k**2*u0**2)*sin(2*theta)/4], [0, -(c**2 + k**2*u0**2)*sin(2*theta)/4, -c**2*sin(theta)**2/2 + k**2*u0**2*cos(theta)**2/2]]
+ ecart a la loi 3 kappa/e^2 Q^TF : AUCUN ; autres composantes avec ln : {}
+ ecart <X^M>_ln a (2Q - d trQ)/e^2 : AUCUN
+== (b) deux modes k1||x eps1||y, k2||y eps2=(1,0,1)/sqrt2
+ checks: trace-That (<=s^5) = 0 ; div O(beta^0,beta^1) (<=s^4) = [(0, 0), (0, 0), (0, 0), (0, 0)] ; inconnues libres X^R : {q6, q19, q18, q15, q17, q16, q20}
+ X^R_ss = C_rad*s**2 + beta*q6*s**2
+  R_xsx : [beta s^0 ln s] = kappa*(2*c**2 - d**2 - 2*k**2*u0**2 + q**2*v0**2)/(4*e**2)  
+  R_xsz : [beta s^0 ln s] = -3*kappa*(d**2 + q**2*v0**2)/(4*e**2)  
+  R_ysy : [beta s^0 ln s] = -kappa*(2*c**2 - d**2 + k**2*u0**2 + q**2*v0**2)/(2*e**2)  
+  R_zsx : [beta s^0 ln s] = -3*kappa*(d**2 + q**2*v0**2)/(4*e**2)  
+  R_zsz : [beta s^0 ln s] = kappa*(2*c**2 - d**2 + 4*k**2*u0**2 + q**2*v0**2)/(4*e**2)  
+  ln s a beta^0 dans R : {0}
+ Q = [[-d**2/4 + q**2*v0**2/4, 0, -d**2/4 - q**2*v0**2/4], [0, -c**2/2, 0], [-d**2/4 - q**2*v0**2/4, 0, -d**2/4 + k**2*u0**2/2 + q**2*v0**2/4]]
+ ecart a la loi 3 kappa/e^2 Q^TF : AUCUN ; autres composantes avec ln : {}
+ ecart <X^M>_ln a (2Q - d trQ)/e^2 : AUCUN
+== (c) deux modes meme k||x, eps y et (0,3/5,4/5), croises inclus
+ checks: trace-That (<=s^5) = 0 ; div O(beta^0,beta^1) (<=s^4) = [(0, 0), (0, 0), (0, 0), (0, 0)] ; inconnues libres X^R : {q6, q19, q18, q15, q17, q16, q20}
+ X^R_ss = C_rad*s**2 + beta*q6*s**2
+  R_xsx : [beta s^0 ln s] = -kappa*(-5*c**2 - 6*c*d - 5*d**2 + 5*k**2*u0**2 + 6*k**2*u0*v0 + 5*k**2*v0**2)/(10*e**2)  
+  R_ysy : [beta s^0 ln s] = -kappa*(50*c**2 + 60*c*d + 2*d**2 + 25*k**2*u0**2 + 30*k**2*u0*v0 - 23*k**2*v0**2)/(50*e**2)  
+  R_ysz : [beta s^0 ln s] = -6*kappa*(5*c*d + 3*d**2 + 5*k**2*u0*v0 + 3*k**2*v0**2)/(25*e**2)  
+  R_zsy : [beta s^0 ln s] = -6*kappa*(5*c*d + 3*d**2 + 5*k**2*u0*v0 + 3*k**2*v0**2)/(25*e**2)  
+  R_zsz : [beta s^0 ln s] = kappa*(25*c**2 + 30*c*d - 23*d**2 + 50*k**2*u0**2 + 60*k**2*u0*v0 + 2*k**2*v0**2)/(50*e**2)  
+  ln s a beta^0 dans R : {0}
+ Q = [[0, 0, 0], [0, -c**2/2 - 3*c*d/5 - 9*d**2/50 + 8*k**2*v0**2/25, -2*c*d/5 - 6*d**2/25 - 2*k**2*u0*v0/5 - 6*k**2*v0**2/25], [0, -2*c*d/5 - 6*d**2/25 - 2*k**2*u0*v0/5 - 6*k**2*v0**2/25, -8*d**2/25 + k**2*u0**2/2 + 3*k**2*u0*v0/5 + 9*k**2*v0**2/50]]
+ ecart a la loi 3 kappa/e^2 Q^TF : AUCUN ; autres composantes avec ln : {}
+ ecart <X^M>_ln a (2Q - d trQ)/e^2 : AUCUN
+== (d) k1=(k,0,0) eps y ; k2=(k,k,0) eps z
+ checks: trace-That (<=s^5) = 0 ; div O(beta^0,beta^1) (<=s^4) = [(0, 0), (0, 0), (0, 0), (0, 0)] ; inconnues libres X^R : {q6, q19, q18, q15, q17, q16, q20}
+ X^R_ss = C_rad*s**2 + beta*q6*s**2
+  R_xsx : [beta s^0 ln s] = -kappa*(-c**2 - d**2 + k**2*u0**2 - k**2*v0**2)/(2*e**2)  
+  R_xsy : [beta s^0 ln s] = -3*k**2*kappa*v0**2/(2*e**2)  
+  R_ysx : [beta s^0 ln s] = -3*k**2*kappa*v0**2/(2*e**2)  
+  R_ysy : [beta s^0 ln s] = -kappa*(2*c**2 - d**2 + k**2*u0**2 - k**2*v0**2)/(2*e**2)  
+  R_zsz : [beta s^0 ln s] = kappa*(c**2 - 2*d**2 + 2*k**2*u0**2 - 2*k**2*v0**2)/(2*e**2)  
+  ln s a beta^0 dans R : {0}
+ Q = [[k**2*v0**2/2, -k**2*v0**2/2, 0], [-k**2*v0**2/2, -c**2/2 + k**2*v0**2/2, 0], [0, 0, -d**2/2 + k**2*u0**2/2]]
+ ecart a la loi 3 kappa/e^2 Q^TF : AUCUN ; autres composantes avec ln : {}
+ ecart <X^M>_ln a (2Q - d trQ)/e^2 : AUCUN
+
+== Verification directe (cas b) par integration spatiale, k=1, q=2 ==
+ X^M_ss : terme croise local non nul ? True ; <.> integre = (c**2 + d**2 - u0**2 - 4*v0**2)/(2*e**2) ; formule moyenne = (c**2 + d**2 - u0**2 - 4*v0**2)/(2*e**2) ; <beta^0 s^2> = (c**2 + d**2 + u0**2 + 4*v0**2)/(4*e**2)
+ X^M_sx : terme croise local non nul ? False ; <.> integre = 0 ; formule moyenne = 0 ; <beta^0 s^2> = 0
+ X^M_sz : terme croise local non nul ? False ; <.> integre = 0 ; formule moyenne = 0 ; <beta^0 s^2> = 0
+ X^M_xx : terme croise local non nul ? True ; <.> integre = (c**2 - u0**2)/(2*e**2) ; formule moyenne = (c**2 - u0**2)/(2*e**2) ; <beta^0 s^2> = (c**2 + u0**2)/(4*e**2)
+ X^M_xz : terme croise local non nul ? True ; <.> integre = (-d**2 - 4*v0**2)/(2*e**2) ; formule moyenne = (-d**2 - 4*v0**2)/(2*e**2) ; <beta^0 s^2> = (-d**2/4 + v0**2)/e**2
+ X^M_yy : terme croise local non nul ? True ; <.> integre = (-c**2 + d**2 - u0**2 - 4*v0**2)/(2*e**2) ; formule moyenne = (-c**2 + d**2 - u0**2 - 4*v0**2)/(2*e**2) ; <beta^0 s^2> = (-c**2 + d**2 + u0**2 + 4*v0**2)/(4*e**2)
+ X^M_zz : terme croise local non nul ? True ; <.> integre = (c**2 + u0**2)/(2*e**2) ; formule moyenne = (c**2 + u0**2)/(2*e**2) ; <beta^0 s^2> = (c**2 - u0**2)/(4*e**2)
+ X^M_xy : terme croise local non nul ? True ; <.> integre = 0 ; formule moyenne = 0 ; <beta^0 s^2> = 0

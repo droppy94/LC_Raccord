@@ -1,0 +1,184 @@
+# Audit froid independant : source de Friedrich (2.17) pour un T test conserve, trace imposee,
+# sur de Sitter plat hat-g = Omega^-2 eta, Omega = -tau. Un mode e^{ikx}, secteur scalaire.
+import sympy as sp
+
+tau = sp.Symbol('tau', negative=True)
+k = sp.Symbol('k', positive=True)
+A, kap = sp.symbols('A kappa')
+Lg = sp.Symbol('Lg')          # Lg := ln(-tau) = ln(Omega)
+I = sp.I
+Om = -tau
+
+def Dt(e):
+    """d/dtau sur l'algebre polyhomogene en (tau, Lg), d Lg/dtau = 1/tau."""
+    return sp.expand(sp.diff(e, tau) + sp.diff(e, Lg)/tau)
+
+# ---------- geometrie ----------
+eta = sp.diag(-1, 1, 1, 1)
+g = Om**-2*eta
+gi = Om**2*eta
+# derivations sur un mode e^{ikx} : d_mu -> (Dt, ik, 0, 0) appliquees aux amplitudes
+def d(mu, e):
+    return [Dt(e), I*k*e, 0, 0][mu]
+# Christoffel (dependance en tau seulement, sans log) calcules directement
+Gam = [[[sp.simplify(sum(gi[l, s]*(sp.diff(g[s, m], tau)*int(n == 0) + sp.diff(g[s, n], tau)*int(m == 0)
+                                    - sp.diff(g[m, n], tau)*int(s == 0)) for s in range(4))/2)
+         for n in range(4)] for m in range(4)] for l in range(4)]
+
+def cov(T):
+    """nabla_a T_{bc} (amplitudes), indices (a,b,c)."""
+    return [[[sp.expand(d(a, T[b, c]) - sum(Gam[s][a][b]*T[s, c] + Gam[s][a][c]*T[b, s] for s in range(4)))
+              for c in range(4)] for b in range(4)] for a in range(4)]
+
+def build_Y(Y00, Y0x, Yxx, Yyy):
+    Y = sp.zeros(4, 4)
+    Y[0, 0] = Y00; Y[0, 1] = Y[1, 0] = Y0x; Y[1, 1] = Yxx; Y[2, 2] = Y[3, 3] = Yyy
+    return Y
+
+def conservation(Y):
+    nT = cov(Y)
+    return [sp.expand(sum(gi[m, a]*nT[a][m][n] for m in range(4) for a in range(4))) for n in range(4)]
+
+def trace(Y):
+    return sp.expand(sum(gi[m, n]*Y[m, n] for m in range(4) for n in range(4)))
+
+def Rsrc(Y):
+    trT = trace(Y)
+    Lt = (kap/2)*(Y - sp.Rational(1, 3)*trT*g)
+    Lt = Lt.applyfunc(sp.expand)
+    nL = cov(Lt)   # nL[a][b][c] = nabla_a L_{bc}
+    R = {}
+    for r in range(4):
+        for n in range(4):
+            for l in range(n+1, 4):
+                R[(r, n, l)] = sp.expand(Om**-1*(nL[n][l][r] - nL[l][n][r]))
+    return R
+
+# ---------- 1. equations generiques ----------
+F = [sp.Function(nm)(tau) for nm in ('Y00', 'Y0x', 'Yxx', 'Yyy')]
+Yg = build_Y(*F)
+# pour les fonctions generiques on utilise diff ordinaire (pas de Lg)
+cons_g = conservation(Yg)
+print("== conservation (amplitudes, nu=0..3) ==")
+for n, c in enumerate(cons_g):
+    print(n, sp.simplify(c))
+print("== trace ==", sp.simplify(trace(Yg)), " = A*Omega^4")
+
+# ---------- 2. solution generale, parametree par h = Y00 ----------
+def sol_from_h(h):
+    Y0x = sp.expand((Dt(h) - 2*h/tau - A*tau)/(I*k))
+    Yxx = sp.expand((Dt(Y0x) - 2*Y0x/tau)/(I*k))
+    Yyy = sp.expand((A*tau**2 + h - Yxx)/2)
+    return build_Y(h, Y0x, Yxx, Yyy)
+
+hf = sp.Function('h')(tau)
+Yh = sol_from_h(hf)
+print("== controle exact (h fonction generique) : conservation ==",
+      [sp.simplify(c) for c in conservation(Yh)], " trace-AOm^4:", sp.simplify(trace(Yh) - A*Om**4))
+
+# ---------- 3. ansatz polyhomogene ----------
+NMIN, NMAX, JMAX = -4, 6, 2
+a = {(n, j): sp.Symbol(f'a_{n}_{j}'.replace('-', 'm')) for n in range(NMIN, NMAX+1) for j in range(JMAX+1)}
+h = sum(a[(n, j)]*tau**n*Lg**j for (n, j) in a)
+Ys = sol_from_h(h)
+cs = conservation(Ys); tr = sp.expand(trace(Ys) - A*Om**4)
+print("== controle exact (ansatz) :", all(sp.expand(c) == 0 for c in cs), sp.expand(tr) == 0)
+
+R = Rsrc(Ys)
+
+def coeffs(e):
+    """dictionnaire (m,j) -> coeff de tau^m Lg^j."""
+    out = {}
+    e = sp.expand(e)
+    for term in sp.Add.make_args(e):
+        pw = sp.Poly(term*tau**20, tau, Lg) if False else None
+        c, rest = term.as_independent(tau, Lg)
+        m = sp.degree(rest.subs(Lg, 1)*tau**30, tau) - 30 if rest.has(tau) else 0
+        j = sp.degree(rest, Lg) if rest.has(Lg) else 0
+        out[(m, j)] = out.get((m, j), 0) + c
+    return {kk: sp.expand(v) for kk, v in out.items() if sp.expand(v) != 0}
+
+# ordres controles : coeff de tau^m dans R ne depend que de a_n avec m+1 <= n <= m+4
+# (verifie ci-dessous) ; avec NMAX=6 tout m <= 2 est exact, on n'exige que m <= 1.
+dep = {}
+for key, e in R.items():
+    for (m, j), c in coeffs(e).items():
+        ns = sorted({n for (n, jj) in a if c.has(a[(n, jj)])})
+        if ns:
+            dep.setdefault(m, set()).update(ns)
+print("== dependances ordre m de R -> indices n de h ==")
+for m in sorted(dep):
+    if m <= 3:
+        print(m, sorted(dep[m]))
+
+conds = []
+for key, e in R.items():
+    for (m, j), c in coeffs(e).items():
+        if m < 0 or (m <= 1 and j >= 1):
+            conds.append(c)
+conds = list({sp.expand(c) for c in conds})
+sol = sp.solve(conds, list(a.values()), dict=True)
+print("== nb conditions", len(conds), " solutions:", len(sol))
+S = sol[0]
+free = [v for v in a.values() if v not in S]
+print("contraintes non triviales:")
+for v, val in S.items():
+    if val != 0:
+        print("  ", v, "=", val)
+print("annules:", sorted([str(v) for v, val in S.items() if val == 0]))
+
+Yreg = Ys.subs(S).applyfunc(sp.expand)
+print("== Y sur l'ensemble admissible (ordres bas) ==")
+for nm, (i, j) in [('Y00', (0, 0)), ('Y0x', (0, 1)), ('Yxx', (1, 1)), ('Yyy', (2, 2))]:
+    cc = coeffs(Yreg[i, j])
+    print(nm, {kk: v for kk, v in sorted(cc.items()) if kk[0] <= 3})
+Rreg = Rsrc(Yreg)
+print("== R sur l'ensemble admissible, termes m<=1 ==")
+for key, e in Rreg.items():
+    cc = {kk: v for kk, v in coeffs(e).items() if kk[0] <= 1}
+    if cc:
+        print(key, cc)
+
+# ---------- cas A = 0 ----------
+S0 = sp.solve([c.subs(A, 0) for c in conds], list(a.values()), dict=True)[0]
+print("== A=0 : contraintes non triviales:", {v: val for v, val in S0.items() if val != 0})
+
+# ---------- 5. parametrisation f = Yxx sans log ----------
+# Y0x = tau^2 (c1 + ik int f/tau^2), Y00 = tau^2 (c0 + A Lg + ik int Y0x/tau^2)
+c0, c1 = sp.symbols('c0 c1')
+fco = {n: sp.Symbol(f'f_{n}'.replace('-', 'm')) for n in range(-2, 6)}
+f = sum(fco[n]*tau**n for n in fco)
+def integ(e):  # primitive polyhomogene terme a terme (Lg degre <=1 en entree suffit ici)
+    out = 0
+    for term in sp.Add.make_args(sp.expand(e)):
+        c, rest = term.as_independent(tau, Lg)
+        m = sp.degree(rest.subs(Lg, 1)*tau**30, tau) - 30 if rest.has(tau) else 0
+        j = sp.degree(rest, Lg) if rest.has(Lg) else 0
+        if j == 0:
+            out += c*(Lg if m == -1 else tau**(m+1)/(m+1))
+        elif j == 1:
+            out += c*(Lg**2/2 if m == -1 else tau**(m+1)*Lg/(m+1) - tau**(m+1)/(m+1)**2)
+        else:
+            raise ValueError
+    return sp.expand(out)
+Y0x_f = sp.expand(tau**2*(c1 + I*k*integ(f/tau**2)))
+Y00_f = sp.expand(tau**2*(c0 + A*Lg + I*k*integ(Y0x_f/tau**2)))
+Yyy_f = sp.expand((A*tau**2 + Y00_f - f)/2)
+Yf = build_Y(Y00_f, Y0x_f, f, Yyy_f)
+print("== controle param f : conservation", [sp.expand(c) for c in conservation(Yf)],
+      " trace", sp.expand(trace(Yf) - A*Om**4))
+print("Y00 (f) logs:", {kk: v for kk, v in coeffs(Y00_f).items() if kk[1] > 0})
+print("Y0x (f) logs:", {kk: v for kk, v in coeffs(Y0x_f).items() if kk[1] > 0})
+Rf = Rsrc(Yf)
+print("== R (param f, sans log dans f) : termes en Lg ==")
+for key, e in Rf.items():
+    cc = {kk: sp.factor(v) for kk, v in coeffs(e).items() if kk[1] > 0}
+    if cc:
+        print(key, cc)
+# version f regulier (f_n=0 pour n<0) + test negatifs
+sub_reg = {fco[-2]: 0, fco[-1]: 0}
+print("== R (f regulier) : puissances negatives ==")
+for key, e in Rf.items():
+    cc = {kk: sp.factor(v) for kk, v in coeffs(e.subs(sub_reg)).items() if kk[0] < 0}
+    if cc:
+        print(key, cc)

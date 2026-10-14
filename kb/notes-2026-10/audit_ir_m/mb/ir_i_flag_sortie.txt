@@ -1,0 +1,15 @@
+A0. equations de conservation (ordres s^p, p <= 3 ) : 52  ; inconnues : 108
+    solution trouvee ; coefficients libres : 60
+A1. coefficient de ln s a s^0 dans R_{rho nu la} (local) ; reference (3 beta kappa/e^2) Q_tf pour (i,s,i) :
+    [audit] puissances de s dans neg : [(1,)]
+    (0, 0, 1) : coef ln s a s^0 = 0  ; termes negatifs en s : -2*c**2*k*kappa*s*sin(k*x)*cos(k*x)/e**2 - 2*k**3*kappa*s*u0**2*sin(k*x)*cos(k*x)/e**2
+    (1, 0, 1) : coef = -kappa*(-c*cos(k*x) + k*u0*sin(k*x))*(c*cos(k*x) + k*u0*sin(k*x))/e**2  ; ecart a +ref : 0  ; a -ref : 2*kappa*(c**2*cos(k*x)**2 - k**2*u0**2*sin(k*x)**2)/e**2
+    (2, 0, 2) : coef = -kappa*(-2*c**2*sin(k*x)**2 + 2*c**2 + k**2*u0**2*sin(k*x)**2)/e**2  ; ecart a +ref : 0  ; a -ref : 2*kappa*(-2*c**2*cos(k*x)**2 - k**2*u0**2*sin(k*x)**2)/e**2
+    [audit] puissances de s dans neg : [(1,)]
+    (2, 1, 2) : coef ln s a s^0 = 0  ; termes negatifs en s : 2*c**2*k*kappa*s*sin(k*x)*cos(k*x)/e**2
+    (3, 0, 3) : coef = kappa*(-c**2*sin(k*x)**2 + c**2 + 2*k**2*u0**2*sin(k*x)**2)/e**2  ; ecart a +ref : 0  ; a -ref : 2*kappa*(c**2*cos(k*x)**2 + 2*k**2*u0**2*sin(k*x)**2)/e**2
+    [audit] puissances de s dans neg : [(1,)]
+    (3, 1, 3) : coef ln s a s^0 = 0  ; termes negatifs en s : 2*k**3*kappa*s*u0**2*sin(k*x)*cos(k*x)/e**2
+   loi locale verifiee (diagonales (i,s,i)) et aucun autre ln a s^0 : False
+   coefficients libres de la fermeture presents dans un coefficient de ln : aucun
+[audit] drapeau corrige (ln a s^0 seulement, signe + impose) : True

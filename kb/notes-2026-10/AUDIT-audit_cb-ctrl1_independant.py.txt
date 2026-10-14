@@ -1,0 +1,132 @@
+"""
+ctrl1_independant.py -- audit froid de cb_coherent_v3.py.
+Recalcul independant : coordonnee tau < 0 (pas de s = -tau), Christoffels par la formule
+conforme Gamma = d_mu sigma delta + d_nu sigma delta - eta eta^{..} d sigma, tenseur des
+contraintes obtenu par VRAIE variation metrique (16 composantes symboliques de g^{mu nu}),
+pour deux completions : (i) couplage I^2(Omega) a Omega exterieur (secteur Maxwell seul),
+(ii) completion locale Euler-Heisenberg Omega_F = -(1/4) ln(F.F/M^4) (depend de F).
+Controle de trace independant : trace de (ii) obtenue par differentiation metrique, comparee
+a -(beta/2e^2) F.F|eta / sqrt(g).
+"""
+import sympy as sp
+
+tau = sp.symbols('tau', negative=True)
+x, y, z = sp.symbols('x y z', real=True)
+B0, e, beta, kap, M, C = sp.symbols('B0 e beta kappa M C', positive=True)
+Ls = sp.symbols('L')              # L = ln(Omega) = ln(-tau) = -ln a
+X = [tau, x, y, z]
+n = 4
+eta = sp.diag(-1, 1, 1, 1)
+# facteur conforme GENERIQUE sigma(tau) ; specialisation de Sitter sigma = -ln(-tau) seulement a la fin
+sig = sp.Function('S')(tau)       # g = e^{2 sigma} eta, sigma = ln a
+Om = sp.exp(-sig)
+w = sp.symbols('w', positive=True)   # w = -tau = Omega en de Sitter
+def dS_sub(ex):
+    reps = {}
+    for k in range(6, 0, -1):
+        dk = sp.diff(-sp.log(-tau), tau, k)
+        ex = ex.subs(sp.Derivative(sig, (tau, k)), dk)
+    ex = ex.subs(sig, -sp.log(w)).subs(tau, -w)
+    return ex
+g = sp.exp(2*sig)*eta
+g = g.applyfunc(sp.simplify)
+gi = g.inv().applyfunc(sp.simplify)
+dsig = [sp.diff(sig, X[m]) for m in range(n)]
+# Christoffel conforme (formule fermee, independante de celle du script)
+Gam = [[[sp.simplify((1 if l == m else 0)*dsig[q] + (1 if l == q else 0)*dsig[m]
+          - eta[m, q]*sum(eta.inv()[l, r]*dsig[r] for r in range(n)))
+         for q in range(n)] for m in range(n)] for l in range(n)]
+
+def nab(T, r, m, q):
+    return sp.diff(T[m, q], X[r]) - sum(Gam[s][r][m]*T[s, q] + Gam[s][r][q]*T[m, s] for s in range(n))
+
+def divv(T):
+    return [sp.simplify(sum(gi[m, r]*nab(T, r, m, nu) for m in range(n) for r in range(n))) for nu in range(n)]
+
+def trace(T):
+    return sp.simplify(sum(gi[i, j]*T[i, j] for i in range(n) for j in range(n)))
+
+def logform(ex):
+    ex = dS_sub(ex)
+    ex = sp.expand(sp.expand_log(sp.simplify(ex), force=True))
+    return sp.expand(ex.subs(sp.log(w), Ls))
+
+F = sp.zeros(4, 4); F[1, 2] = B0; F[2, 1] = -B0
+
+# --- variation metrique generique ---
+Gs = sp.Matrix(4, 4, lambda i, j: sp.Symbol(f'G{i}{j}'))   # g^{mu nu} independants
+sqrtg_G = 1/sp.sqrt(-Gs.det())
+F2_G = sum(Gs[i, k]*Gs[j, l]*F[i, j]*F[k, l] for i in range(n) for j in range(n) for k in range(n) for l in range(n))
+bg = {Gs[i, j]: gi[i, j] for i in range(n) for j in range(n)}
+
+sqrt_g_bg = sp.simplify(sqrtg_G.subs(bg))
+def stress(Lag):
+    T = sp.zeros(4, 4)
+    for i in range(n):
+        for j in range(n):
+            T[i, j] = sp.simplify(-2/sqrt_g_bg*sp.diff(Lag, Gs[i, j]).subs(bg))
+    return T
+
+# (i) Maxwell avec I^2 = e^-2 (1 + 2 beta sigma), sigma traite comme exterieur (partie (a))
+I2 = (1 + 2*beta*sig)/e**2
+TM = stress(-sp.Rational(1, 4)*sqrtg_G*I2*F2_G)
+print("(i) T^M diag :", [logform(TM[i, i]) for i in range(4)], " trace :", trace(TM))
+
+# (ii) completion Euler-Heisenberg : Omega_F = -(1/4) ln(F2/M^4), decale de +sigma sous Weyl
+OmF = -sp.Rational(1, 4)*sp.log(F2_G/M**4)
+LagEH = -sp.Rational(1, 4)*sqrtg_G*F2_G/e**2 - beta/(2*e**2)*sqrtg_G*OmF*F2_G
+TEH = stress(LagEH)
+F2eta = 2*B0**2
+That_ref = sp.simplify(-(beta/(2*e**2))*F2eta/sqrt_g_bg)
+print("(ii) T^EH diag :", [logform(TEH[i, i]) for i in range(4)])
+print("     trace (variation metrique) :", trace(TEH), " ; reference -(beta/2e^2)F.F|eta/sqrt g :", That_ref,
+      " ; ecart :", sp.simplify(trace(TEH) - That_ref))
+print("     conservation :", divv(TEH))
+OmF_bg = sp.simplify(OmF.subs(bg))
+print("     Omega_F sur le fond :", logform(OmF_bg), " (= ln a + cte : facteur de Weyl a constante pres)")
+
+# --- Schouten-like et R ---
+def Rcomp(T):
+    trT = trace(T)
+    Lh = kap/2*(T - trT*g/3)
+    out = {}
+    for rho in range(n):
+        for nu in range(n):
+            for lam in range(nu+1, n):
+                v = logform(2/Om*(nab(Lh, nu, lam, rho) - nab(Lh, lam, nu, rho))/2)
+                if v != 0:
+                    out[(rho, nu, lam)] = v
+    return out
+
+# fermeture isotrope generale : diag(r0, r1, r1, r1), trace et conservation imposees, r0 libre resolu
+r0 = sp.Function('r0')(tau)
+A = sp.simplify(That_ref/Om**2)          # tr = Om^2 (-r0 + 3 r1) = That
+r1 = (r0 + A)/3
+XR = sp.diag(r0, r1, r1, r1)
+eq0 = sp.simplify(divv(TM + XR)[0])
+sol = sp.dsolve(sp.Eq(eq0, 0), r0)
+r0s = sol.rhs.subs(sp.Symbol('C1'), C)
+XRs = XR.subs(r0, r0s).doit().applyfunc(sp.simplify)
+totI = (TM + XRs).applyfunc(sp.simplify)
+print("\nC-iso independant : r0 =", sp.simplify(r0s), " ; conservation :", divv(totI), " ; trace-That :", sp.simplify(trace(totI) - That_ref))
+RI = Rcomp(totI)
+print("R (C-iso, coordonnee tau) :")
+for k, v in RI.items():
+    print("  ", k, v, "   coef de L :", sp.expand(sp.diff(v, Ls)), "  depend de C ?", v.has(C))
+
+print("\nR (completion Euler-Heisenberg, dependant de F) :")
+REH = Rcomp(TEH)
+for k, v in REH.items():
+    print("  ", k, v, "   coef de L :", sp.expand(sp.diff(v, Ls)))
+
+# Ecart EH - C-iso (C=0) : anisotrope ?
+d = (TEH - totI.subs(C, 0)).applyfunc(sp.simplify)
+print("\nT^EH - (T^M + X^R_iso, C=0) :", [logform(d[i, i]) for i in range(4)], " (diag(0,1,1,-2) * Pi ?)")
+
+# --- budget Pi : dependance exacte de R en Pi, solution generale ---
+Pi = sp.Function('Pi')(tau)
+XP = sp.diag(0, Pi, Pi, -2*Pi)
+print("\ndiv Pi :", divv(XP), " trace :", trace(XP))
+RP = Rcomp(XP)
+for k, v in RP.items():
+    print("   contribution de Pi a R", k, ":", sp.factor(v))

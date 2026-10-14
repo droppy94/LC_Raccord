@@ -1,0 +1,4 @@
+residu O(beta) jusqu'a s^2 : 0
+coef de beta ln s dans <X^M>_ii / s^2 (s->0), i=s,x,y,z : [-(-c + k*u0)*(c + k*u0)/(2*e**2), -(-c + k*u0)*(c + k*u0)/(2*e**2), -(c**2 + k**2*u0**2)/(2*e**2), (c**2 + k**2*u0**2)/(2*e**2)]
+<F^2>_eta a l'ordre 0, s->0 : (-c + k*u0)*(c + k*u0)
+EXIT 0

@@ -1,0 +1,9 @@
+densite construite ; termes : 3
+verification : EL ordre e^0 (doit etre 0) : 0
+sgn=1 : That_yy fond = 6/s**2 ; attendu 6*ghat_yy = 6/s**2
+   That_yy ordre e = 6*(A*cos(k*s) + B*sin(k*s) + k*s*(A*sin(k*s) - B*cos(k*s)))*cos(k*x)/s**2
+   That_yy ordre e - 6*delta ghat_yy = 0
+sgn=-1 : That_yy fond = -6/s**2 ; attendu 6*ghat_yy = 6/s**2
+   That_yy ordre e = -6*(A*cos(k*s) + B*sin(k*s) + k*s*(A*sin(k*s) - B*cos(k*s)))*cos(k*x)/s**2
+   That_yy ordre e - 6*delta ghat_yy = 12*(-A*k*s*sin(k*s) - A*cos(k*s) + B*k*s*cos(k*s) - B*sin(k*s))*cos(k*x)/s**2
+EXIT 0

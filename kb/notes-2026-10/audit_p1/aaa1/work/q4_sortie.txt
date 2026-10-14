@@ -1,0 +1,30 @@
+======================================================================
+Integrale radiale (f ne dependant que de la direction) : int_0^inf k e^{iku} dk
+  avec amortissement eps : (eps - I*u)**(-2)   -> -1/(u+i0)^2 quand eps -> 0
+
+Integrale angulaire pour |tau| > r (exterieur du cone reflechi), f = 1 :
+   -4*pi/((r - tau)*(r + tau))
+   -> singulier exactement sur tau^2 = r^2 ; w_3 isotrope = fonction de Wightman du vide au point image (-eta', x').
+
+Integrale angulaire pour f = P_2(c) = (3c^2-1)/2 (quadrupole axial autour de n = Dx/|Dx|) :
+   pi*(6*r*(r - tau)*(r + tau) + 6*tau*(r - tau)*(r + tau)*(-log(-r - tau) + log(r - tau)) + (r - tau)*(r**2 - 3*tau**2) + (r + tau)*(r**2 - 3*tau**2))/(r**3*(r - tau)*(r + tau))
+   singularites : poles 1/(tau^2 - r^2) et log((tau - r)/(tau + r)) -> support singulier = {tau^2 = r^2}.
+   Pour |tau| < r : continuation analytique via tau -> tau - i0 : le log acquiert une partie i pi,
+   la fonction reste lisse a l'interieur du cone ; seules les extremites c = +-1 (k^ parallele a Dx) produisent la singularite.
+
+Comportement de l'integrale f=P_2 pres de tau = r + d, d -> 0+ :
+   2*pi/(d*r) + 6*I*pi**2/r**2 + 11*pi/r**2 - 6*pi*log(2)/r**2 - 6*pi*log(-r)/r**2 + 6*pi*log(d)/r**2 + O(d)
+
+Loi de puissance alpha beta* = k^{-N} f(k^) : integrale radiale int_mu^inf k^{1-N} e^{iku} dk = (-iu)^{N-2} Gamma(2-N, -iu mu)
+  N = 3 : partie non analytique en u = 0 : 1/mu + I*u - EulerGamma*I*u - pi*u/2 - I*u*log(u) - I*u*log(mu) + O(u**2)
+  N = 4 : partie non analytique en u = 0 : (mu**2*(u**2*(2*log(mu) + 2*log(u) - 3 + 2*EulerGamma - I*pi) + O(u**3)) + 4*I*mu*u + 2)/(4*mu**2)
+  N = 5 : partie non analytique en u = 0 : (mu**3*(u**3*(6*I*log(mu) + 6*I*log(u) + 3*pi - 11*I + 6*EulerGamma*I) + O(u**4)) - 18*mu**2*u**2 + 18*I*mu*u + 12)/(36*mu**3)
+  -> integrale radiale : singularite de type u^{N-2} ln|u| en u = 0 (N entier).
+     L'integration angulaire (une primitive en c pres des extremites c = +-1) eleve l'ordre d'une unite :
+     en un point generique du cone reflechi, w_3 ~ (tau -+ r)^{N-1} ln|tau -+ r| :
+     N=3 : C^1 non C^2 ; N=4 : C^2 non C^3 ; N=5 : C^3 non C^4 (verifie ci-dessous pour f = 1, N = 3).
+     Au sommet du cone (Dx = 0, tau = 2 eta -> 0) pas de lissage angulaire : w_3 ~ tau^{N-2} ln|tau|, T ~ tau^{N-4}.
+  controle f=1, N=3, integrale angulaire de u ln u : (r*(2*tau + (r - 2*tau)*log(r - tau) - (r + 2*tau)*log(-r - tau)) - tau**2*log(-r - tau) + tau**2*log(r - tau))/(2*r)
+     -> termes (tau - r)^2 ln(tau - r) et (tau + r)^2 ln(tau + r) : C^1 non C^2 sur tau = +-r.
+     Pour tout N fini, w_3 n'est pas C^infini : singularite portee par le cone reflechi tau^2 = r^2,
+     et non par le cone de lumiere (eta - eta')^2 = r^2. Les deux ne coincident que si eta eta' = 0.

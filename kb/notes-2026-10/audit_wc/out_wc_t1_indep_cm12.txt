@@ -1,0 +1,6 @@
+c4=-1/2 comp yy: T_hat fond = 17/(2*s**2) ; (T_hat - 6 ghat) ordre e^0 = 5/(2*s**2) ; ordre e^1 = 5*(A*cos(k*s) + B*sin(k*s) + 2*k**2*s**2*(-A*k*s*sin(k*s) - A*cos(k*s) + B*k*s*cos(k*s) - B*sin(k*s)) + k*s*(A*sin(k*s) - B*cos(k*s)))*cos(k*x)/(2*s**2)
+c4=-1/2 comp zz: T_hat fond = 17/(2*s**2) ; (T_hat - 6 ghat) ordre e^0 = 5/(2*s**2) ; ordre e^1 = 5*(-A*cos(k*s) - B*sin(k*s) + 2*k**2*s**2*(A*k*s*sin(k*s) + A*cos(k*s) - B*k*s*cos(k*s) + B*sin(k*s)) + k*s*(-A*sin(k*s) + B*cos(k*s)))*cos(k*x)/(2*s**2)
+c4=-1/2 comp ss: T_hat fond = 3/(2*s**2) ; (T_hat - 6 ghat) ordre e^0 = 15/(2*s**2) ; ordre e^1 = 0
+c4=-1/2 comp xx: T_hat fond = 17/(2*s**2) ; (T_hat - 6 ghat) ordre e^0 = 5/(2*s**2) ; ordre e^1 = 0
+c4=-1/2 comp sx: T_hat fond = 0 ; (T_hat - 6 ghat) ordre e^0 = 0 ; ordre e^1 = 0
+EXIT 0

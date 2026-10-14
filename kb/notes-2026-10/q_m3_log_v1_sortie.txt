@@ -1,0 +1,36 @@
+controle conservation (4 composantes) : [0, 0, 0, 0]
+controle trace hat-T : A*tau**4
+
+b = beta*tau**2 - c0*k*tau + c1*k*tau**2*log(tau) + c2*k*tau**3 + c3*k*tau**4/2
+a = A*tau**2*log(tau) + alpha*tau**2 - beta*k*tau**3 + c0*k**2*tau**2*log(tau) - c1*k**2*tau**3*log(tau) + c1*k**2*tau**3 - c2*k**2*tau**4/2 - c3*k**2*tau**5/6
+d = A*tau**2*log(tau)/2 + A*tau**2/2 + alpha*tau**2/2 - beta*k*tau**3/2 + c0*k**2*tau**2*log(tau)/2 - c0/2 - c1*k**2*tau**3*log(tau)/2 + c1*k**2*tau**3/2 - c1*tau/2 - c2*k**2*tau**4/4 - c2*tau**2/2 - c3*k**2*tau**5/12 - c3*tau**3/2
+
+Second membre de (2.17), composantes R_{rho nu lam} (L = ln Omega) :
+  (0, 0, 1):
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polyutils.py", line 231, in _parallel_dict_from_expr_if_gens
+    monom[indices[base]] = exp
+          ~~~~~~~^^^^^^
+KeyError: log(tau)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/claude/n91w/q_m3_log.py", line 72, in <module>
+    low = sp.Poly(sp.expand(coef*t**10), t)   # pour lire les puissances negatives
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polytools.py", line 190, in __new__
+    return cls._from_expr(rep, opt)
+           ~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polytools.py", line 319, in _from_expr
+    rep, opt = _dict_from_expr(rep, opt)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polyutils.py", line 388, in _dict_from_expr
+    rep, gens = _dict_from_expr_if_gens(expr, opt)
+                ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polyutils.py", line 327, in _dict_from_expr_if_gens
+    (poly,), gens = _parallel_dict_from_expr_if_gens((expr,), opt)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polyutils.py", line 236, in _parallel_dict_from_expr_if_gens
+    raise PolynomialError("%s contains an element of "
+                          "the set of generators." % factor)
+sympy.polys.polyerrors.PolynomialError: log(tau) contains an element of the set of generators.

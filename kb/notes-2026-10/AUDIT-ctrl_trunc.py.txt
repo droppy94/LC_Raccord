@@ -1,0 +1,35 @@
+"""Test de troncature (s = -tau = Omega). Usage : python3 -I ctrl_trunc.py N PMAX
+(i) indice max j des C_j intervenant dans chaque coefficient s^m L^p de chaque composante ;
+(ii) conditions m<=1 (critere du script) et leur solution ;
+(iii) solution a tous les ordres controles (ordre m garde ssi tous ses C_j ont j<=N-1, i.e. un ordre de
+     marge : verifie a posteriori en comparant N et N+1)."""
+import sys, runpy, os
+MARGIN = os.environ.get("MARGIN","1") == "1"
+g_ = runpy.run_path('/home/claude/audit_b/ctrl_indep.py', run_name='lib')
+TR, Cc, A, al, be, N, PMAX = (g_[v] for v in ('TR','Cc','A','al','be','N','PMAX'))
+import sympy as sp
+def jmax(v):
+    js = [j for (j,p),S in Cc.items() if v.has(S)]
+    return max(js) if js else -1
+print("== (i) dependance : composante, s^m -> max j de C_j (toutes puissances L) ==")
+for key in [(0,0,1),(1,0,1)]:
+    dep = {}
+    for (m,p),v in TR[key].items():
+        dep[m] = max(dep.get(m,-1), jmax(v))
+    print(key, dict(sorted(dep.items())))
+unk = [A, al, be] + list(Cc.values())
+def solve(maxm):
+    eqs = set()
+    for key, tt in TR.items():
+        for (m,p),v in tt.items():
+            if (m < 0 or p > 0) and m <= maxm(key):
+                eqs.add(sp.expand(v))
+    return sp.linsolve(list(eqs), unk)
+print("== (ii) critere du script : m <= 1 ==")
+s2 = solve(lambda key: 1); print(s2)
+print("== (iii) ordres controles : (1,0,1)-type m <= N-3, (0,0,1)-type m <= N-2 (marge 1) ==")
+def mx(key):
+    return (N-3 if key in [(1,0,1),(2,0,2),(3,0,3)] else N-2) if MARGIN else (N-2 if key in [(1,0,1),(2,0,2),(3,0,3)] else N-1)
+s3 = solve(mx); print(s3)
+for sol in s3:
+    print("A =", sol[0])

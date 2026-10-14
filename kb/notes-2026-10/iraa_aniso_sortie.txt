@@ -1,0 +1,92 @@
+== aa-1 : structures tensorielles par mode (facteur 1/(2k(2pi)^3) omis) ==
+terme |beta|^2 (phase e^{ik(eta-eta')}) :
+⎡        2                  2                                  2               ↪
+⎢       k                  k ⋅sin(θ)⋅cos(φ)                   k ⋅sin(φ)⋅sin(θ) ↪
+⎢                                                                              ↪
+⎢                                                                              ↪
+⎢ 2                        2    2       2                  2           2       ↪
+⎢k ⋅sin(θ)⋅cos(φ)         k ⋅sin (θ)⋅cos (φ)              k ⋅sin(φ)⋅sin (θ)⋅co ↪
+⎢                                                                              ↪
+⎢                                                                              ↪
+⎢                                                                              ↪
+⎢ 2                     2           2                         2    2       2   ↪
+⎢k ⋅sin(φ)⋅sin(θ)      k ⋅sin(φ)⋅sin (θ)⋅cos(φ)              k ⋅sin (φ)⋅sin (θ ↪
+⎢                                                                              ↪
+⎢                                                                              ↪
+⎢                   2                                  2                       ↪
+⎢    2             k ⋅(-sin(φ - 2⋅θ) + sin(φ + 2⋅θ))  k ⋅(cos(φ - 2⋅θ) - cos(φ ↪
+⎢   k ⋅cos(θ)      ─────────────────────────────────  ──────────────────────── ↪
+⎣                                  4                                 4         ↪
+
+↪                        2                   ⎤
+↪                       k ⋅cos(θ)            ⎥
+↪                                            ⎥
+↪            2                               ⎥
+↪           k ⋅(-sin(φ - 2⋅θ) + sin(φ + 2⋅θ))⎥
+↪ s(φ)      ─────────────────────────────────⎥
+↪                           4                ⎥
+↪                                            ⎥
+↪            2                               ⎥
+↪           k ⋅(cos(φ - 2⋅θ) - cos(φ + 2⋅θ)) ⎥
+↪ )         ──────────────────────────────── ⎥
+↪                          4                 ⎥
+↪                                            ⎥
+↪                                            ⎥
+↪  + 2⋅θ))              2    2               ⎥
+↪ ────────             k ⋅cos (θ)            ⎥
+↪                                            ⎦
+terme alpha beta* (phase e^{-ik(eta+eta')}) :
+⎡0                        0                                             0      ↪
+⎢                                                                              ↪
+⎢                                                                              ↪
+⎢    2 ⎛     2       2         2      1⎞  -2⋅ⅈ⋅η⋅k       2  -2⋅ⅈ⋅η⋅k           ↪
+⎢0  k ⋅⎜- sin (φ)⋅sin (θ) + sin (θ) - ─⎟⋅ℯ              k ⋅ℯ        ⋅sin(φ)⋅si ↪
+⎢      ⎝                              3⎠                                       ↪
+⎢                                                                              ↪
+⎢                                                                              ↪
+⎢          2  -2⋅ⅈ⋅η⋅k           2                       2 ⎛   2       2       ↪
+⎢0        k ⋅ℯ        ⋅sin(φ)⋅sin (θ)⋅cos(φ)            k ⋅⎜sin (φ)⋅sin (θ) -  ↪
+⎢                                                          ⎝                   ↪
+⎢                                                                              ↪
+⎢     2                                 -2⋅ⅈ⋅η⋅k     2                         ↪
+⎢    k ⋅(-sin(φ - 2⋅θ) + sin(φ + 2⋅θ))⋅ℯ            k ⋅(cos(φ - 2⋅θ) - cos(φ + ↪
+⎢0   ───────────────────────────────────────────    ────────────────────────── ↪
+⎣                         4                                             4      ↪
+
+↪                                        0                     ⎤
+↪                                                              ⎥
+↪                    2                                 -2⋅ⅈ⋅η⋅k⎥
+↪  2                k ⋅(-sin(φ - 2⋅θ) + sin(φ + 2⋅θ))⋅ℯ        ⎥
+↪ n (θ)⋅cos(φ)      ───────────────────────────────────────────⎥
+↪                                        4                     ⎥
+↪                                                              ⎥
+↪                    2                                -2⋅ⅈ⋅η⋅k ⎥
+↪ 1⎞  -2⋅ⅈ⋅η⋅k      k ⋅(cos(φ - 2⋅θ) - cos(φ + 2⋅θ))⋅ℯ         ⎥
+↪ ─⎟⋅ℯ              ────────────────────────────────────────── ⎥
+↪ 3⎠                                    4                      ⎥
+↪                                                              ⎥
+↪         -2⋅ⅈ⋅η⋅k                                             ⎥
+↪  2⋅θ))⋅ℯ                   2 ⎛2      2   ⎞  -2⋅ⅈ⋅η⋅k         ⎥
+↪ ────────────────          k ⋅⎜─ - sin (θ)⎟⋅ℯ                 ⎥
+↪                              ⎝3          ⎠                   ⎦
+traces (doivent etre 0, xi = 1/6) : 0 0
+alpha beta* : T_ij = A k_i k_j + B delta_ij avec A = exp(-2*I*eta*k)  B = -k**2*exp(-2*I*eta*k)/3
+  trace spatiale A k^2 + 3B = 0  ; T_00 = 0  ; T_0i = [0, 0, 0]
+  partie sans trace = A (k_i k_j - k^2 delta_ij/3) ; moyenne angulaire isotrope => 0 (YA-2 retrouve) ; partie isotrope : A k^2/3 + B = 0
+|beta|^2 : A = 1  B = 0  T_00 = k**2  (independant de eta)
+
+== aa-2 : integrale radiale I(eta) = Int_0^inf dk k^{3-N} e^{-2 i k eta} (eta<0) ==
+  I(eta) = Gamma(4-N) (2 i eta)^{N-4}  pour N<4 (analytique) : module ~ |eta|^{N-4} ; N=3 : 1/(2 i eta) -> 1/eta ; N=4 : log ; N>=5 : coupure IR
+  controle numerique N=3 (coupure e^{-k/1000}) : eta * Int dk sin(2 k eta) e^{-k/1000} ->
+    eta = -0.1  eta*I = 2.3384721024258942573  (attendu -1/2 : I -> -1/(2 eta))
+    eta = -0.05  eta*I = 6.3043779949807403614  (attendu -1/2 : I -> -1/(2 eta))
+    eta = -0.02  eta*I = -0.46980592184146348868  (attendu -1/2 : I -> -1/(2 eta))
+  decroissance gaussienne : I(eta) = I*sqrt(pi)*L**7*eta**3*exp(-L**2*eta**2)*erfc(I*L*eta)/2 - L**6*eta**2/2 - 3*I*sqrt(pi)*L**5*eta*exp(-L**2*eta**2)*erfc(I*L*eta)/4 + L**4/2  -> entiere en eta (erf, exp)
+
+== aa-3 : alpha beta* = f(k^) (independant de k) : w_{ab*}(x,x') = Int d^3k/(2k(2pi)^3) f(k^) e^{-ik(eta+eta')} e^{ik.(x-x')} ==
+  = [operateur angulaire f(-i grad / |grad|) ] applique a G_M(x, R x'), R x' = (-eta', x') : support singulier sur (eta+eta')^2 = |x-x'|^2 (cone reflechi)
+  Un multiplicateur de Fourier homogene de degre 0 (f(k^)) est un operateur pseudo-differentiel d'ordre 0 : il preserve le front d'onde (singularite sur le cone reflechi conservee).
+  Hadamard ssi alpha beta* a decroissance rapide dans TOUTES les directions (critere de NOTE-146 v2 y-2 inchange).
+
+== aa-4 : T-hat = s^2 T_plat ; T_plat^tf ~ |eta|^{N-4} Q_ij => T-hat ~ s^{N-2} Q_ij ; pole dans (2.17) ssi N = 3 (ordre eps^0, independant de l'onde) ==
+  etat Hadamard (rapide) : T_plat^tf entier en eta => T-hat ~ s^2 : rien.

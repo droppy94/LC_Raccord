@@ -1,0 +1,18 @@
+"""Point 7 : substitue la solution imprimee par q_m3_log_v5.py dans ses propres R et liste les termes non lisses restants.
+Execute le script audite tel quel (runpy), sans le modifier."""
+import runpy, io, contextlib, sympy as sp
+buf = io.StringIO()
+with contextlib.redirect_stdout(buf):
+    G = runpy.run_path('/home/claude/audit_b/q_m3_log_v5.py', run_name='audit')
+res, t, L = G['res'], G['t'], G['L']
+A,c0,c1,c2,c3,e0,e1,e2,e3,f2,f3 = (G[v] for v in 'A c0 c1 c2 c3 e0 e1 e2 e3 f2 f3'.split())
+sub = {A: 3*e2, c0: 0, c1: 0, e0: 0, e1: 0, e3: 0, f2: 0, f3: 0}
+for key, R in res.items():
+    Rs = sp.expand(R.subs(sub))
+    P = sp.Poly(Rs, L)
+    rest = []
+    for (p,), cf in P.terms():
+        for (m,), v in sp.Poly(sp.expand(cf*t**10), t).terms():
+            if v != 0 and (m-10 < 0 or p > 0):
+                rest.append((p, m-10, sp.factor(v)))
+    print(key, "termes non lisses restants :", rest)

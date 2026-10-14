@@ -1,0 +1,25 @@
+=== Q1 : controle numerique (ODE du mode, source impulsionnelle) ===
+a ODE    = [0.00401171+0.15776382j 0.19676824-0.45356133j]
+a formule= [0.00401171+0.15776382j 0.19676824-0.45356133j]  |ecart| = 1.2096326505020663e-11
+b ODE    = [ 0.37063184-0.50193126j -0.16041549+1.04144566j]
+b formule= [ 0.37063184-0.50193126j -0.16041549+1.04144566j]  |ecart| = 2.7988753742152768e-11
+
+=== Q2 : Q_k exact (symbolique, plan transverse, k^ = e3) ===
+Q_k - [ -L(J+J+^dag + J-J-^dag)/2  - Re(J-^dag J+)/2 * P_perp ] = Matrix([[0, 0], [0, 0]])
+Partie diagonale pour une matrice de Stokes generique: [[-Q/4, -U/4], [-U/4, Q/4]]  (pas de I, pas de V)
+
+=== Q3 : dependance en t0 et moyenne de bande ===
+J-^* J+ = fp*exp(2*I*k*t0)*conjugate(fm)  (phase exp(2 i k t0))
+t0=   0.0  bande[2,4] : interf/diag =  5.000e-01
+t0=  -2.0  bande[2,4] : interf/diag = -6.377e-02
+t0=  -5.0  bande[2,4] : interf/diag = -4.895e-03
+t0= -10.0  bande[2,4] : interf/diag = -1.847e-02
+t0= -20.0  bande[2,4] : interf/diag =  6.802e-03
+t0= -40.0  bande[2,4] : interf/diag = -1.722e-03
+fenetre lisse (bande gaussienne centree 3, largeur 0.5) :
+t0=   0.0  interf/diag =  5.000e-01
+t0=  -2.0  interf/diag =  3.289e-01
+t0=  -5.0  interf/diag =  1.545e-02
+t0= -10.0  interf/diag = -1.009e-03
+t0= -20.0  interf/diag =  3.265e-09
+t0= -40.0  interf/diag = -6.339e-10

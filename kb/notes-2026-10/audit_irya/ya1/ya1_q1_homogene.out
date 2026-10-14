@@ -1,0 +1,70 @@
+=== YA1 Q1 : classe homogene ===
+[derive] integrand de w (par mode, facteur 1/(2k) omis), avec |alpha|^2 = 1 + |beta|^2 :
+    AB*Ph*exp(-I*eta*k)*exp(-I*etap*k) + ABc*Phinv*exp(I*eta*k)*exp(I*etap*k) + B2*Ph*exp(-I*eta*k)*exp(I*etap*k) + B2*Phinv*exp(I*eta*k)*exp(-I*etap*k)
+   -> termes |beta|^2 (dependent de eta-eta') et alpha beta^* e^{-ik(eta+eta')} Ph + c.c. (dependent de eta+eta')
+[derive] d_eta d_eta' e^{-ik(eta+eta')} = -k**2
+[derive] d_eta d_eta' e^{-ik(eta-eta')} = k**2
+   => la densite d'energie rho^w = (1/2)(d_eta d_eta' + sum_i d_i d_i') w|c ne contient PAS le terme alpha beta^* (champ sans masse),
+      la pression p^w = (1/2 d_eta d_eta' - 1/6 sum_i d_i d_i') w|c en contient -2/3 J(eta).
+
+[calcule] Classe (b) : J_N(eta) := int_1^inf k^{3-N} e^{-2 i k eta} dk = E_{N-3}(2 i eta) ; developpement en eta -> 0
+  N=3 : E_0(z) = -z**2/6 + z/2 - 1 + 1/z + O(z^3),  z = 2 i eta
+  N=4 : E_1(z) = -z**2/4 + z - log(z) - EulerGamma + O(z^3),  z = 2 i eta
+  N=5 : E_2(z) = -z**2/2 + z*(log(z) - 1 + EulerGamma - I*pi) + 1 + O(z^3),  z = 2 i eta
+  N=6 : E_3(z) = z**2*(-log(z)/2 - EulerGamma/2 + 3/4 + I*pi/2) - z + 1/2 + O(z^3),  z = 2 i eta
+  N=7 : E_4(z) = z**3*log(z)/6 + z**2/2 - z/2 + 1/3 + O(z^3),  z = 2 i eta
+  Lecture : N=3 -> 1/z ~ 1/eta ; N=4 -> -log z ; N=5 -> fini, derivee ~ log ; N=6 -> C^1, derivee seconde ~ log ; N=7 -> C^2 ...
+  Terme reel : Re[e^{i phi} E_0(2 i eta)] = Re[e^{i phi} e^{-2 i eta}/(2 i eta)] = sin(phi - 2 eta)/(2 eta)
+  [calcule] sympy : -sin(2*eta - phi)/(2*eta)
+
+[calcule] w(x,x) oscillant : int_1^inf k^{1-N} e^{-2 i k eta} dk = E_{N-1}(2 i eta)
+  N=1 : -z**2/6 + z/2 - 1 + 1/z + O(z^3)
+  N=2 : -z**2/4 + z - log(z) - EulerGamma + O(z^3)
+  N=3 : -z**2/2 + z*(log(z) - 1 + EulerGamma - I*pi) + 1 + O(z^3)
+  N=4 : z**2*(-log(z)/2 - EulerGamma/2 + 3/4 + I*pi/2) - z + 1/2 + O(z^3)
+  Lecture : w(x,x) ~ 1/eta pour N=1, log pour N=2, fini (C^0, terme eta log eta) pour N=3.
+
+[calcule] Verification numerique : J_N(eta) par quadrature oscillante vs forme fermee, phi = pi/2 (sin phi = 1)
+  N = 3
+    eta=    -0.1  J_closed=    -4.90033288921  J_quadosc=    -4.90033288921  diff=0.0   eta*J=0.49003329  (attendu -> sin(phi)/2 = 0.5)
+    eta=   -0.01  J_closed=    -49.9900003333  J_quadosc=    -49.9900003333  diff=0.0   eta*J=0.4999  (attendu -> sin(phi)/2 = 0.5)
+    eta=  -0.001  J_closed=          -499.999  J_quadosc=          -499.999  diff=0.0   eta*J=0.499999  (attendu -> sin(phi)/2 = 0.5)
+    eta= -0.0001  J_closed=        -4999.9999  J_quadosc=        -4999.9999  diff=8.08e-28   eta*J=0.49999999  (attendu -> sin(phi)/2 = 0.5)
+  N = 4
+    eta=    -0.1  J_closed=    -1.37124023827  J_quadosc=    -1.37124023827  diff=-1.97e-31   J/ln|eta|=0.59552207  (attendu -> -cos(phi) = 0)  J-(-ln(2|eta|)*cos phi + (pi/2)sgn... )
+    eta=   -0.01  J_closed=    -1.55079677123  J_quadosc=    -1.55079677123  diff=-1.97e-31   J/ln|eta|=0.33675124  (attendu -> -cos(phi) = 0)  J-(-ln(2|eta|)*cos phi + (pi/2)sgn... )
+    eta=  -0.001  J_closed=    -1.56879632724  J_quadosc=    -1.56879632724  diff=0.0   J/ln|eta|=0.22710653  (attendu -> -cos(phi) = 0)  J-(-ln(2|eta|)*cos phi + (pi/2)sgn... )
+    eta= -0.0001  J_closed=     -1.5705963268  J_quadosc=     -1.5705963268  diff=1.97e-31   J/ln|eta|=0.17052533  (attendu -> -cos(phi) = 0)  J-(-ln(2|eta|)*cos phi + (pi/2)sgn... )
+  N = 5
+    eta=    -0.1  J_closed=    -0.40711044993  J_quadosc=    -0.40711044993  diff=0.0
+    eta=   -0.01  J_closed=  -0.0866968134705  J_quadosc=  -0.0866968134705  diff=-2.28e-28
+    eta=  -0.001  J_closed=  -0.0132747855337  J_quadosc=  -0.0132747854892  diff=-4.45e-11
+    eta= -0.0001  J_closed= -0.00178799550597  J_quadosc= -0.00178552402008  diff=-2.47e-6
+  N = 6
+    eta=    -0.1  J_closed=   -0.169916518416
+    eta=   -0.01  J_closed=  -0.0196871740591
+    eta=  -0.001  J_closed= -0.00199685974068
+    eta= -0.0001  J_closed=-0.000199968585407
+  N = 4, phi = 0 (cos phi = 1) : J ~ -ln(2|eta|) - gamma
+    eta=    -0.1  Re E_1(2i eta)=1.042205596   -ln(2|eta|)-gamma=1.032222248
+    eta=   -0.01  Re E_1(2i eta)=3.334907339   -ln(2|eta|)-gamma=3.334807341
+    eta=  -0.001  Re E_1(2i eta)=5.637393434   -ln(2|eta|)-gamma=5.637392434
+
+[derive] Regularite en eta=0 (classe b) : d^m J_N / d eta^m = (-2i)^m int_1^inf k^{3-N+m} e^{-2ik eta} dk
+         fini et continu en 0 ssi 3-N+m < -1, i.e. m <= N-5 ; divergence logarithmique pour m = N-4 ; puissance |eta|^{N-4-m} pour m > N-4.
+         => J_N est C^{N-5} mais pas C^{N-4} : lisse (C^inf) pour AUCUN N fini.
+[calcule] Exemple N=6 : J''(eta) numerique (phi=0) vs ln :
+    eta=    -0.1  J''=-4.168822383   4*ln(2|eta|) = -6.43775165  (pente attendue : J''(eta/10)-J''(eta) -> 4 ln(1/10) = -9.2103404)
+    eta=   -0.01  J''=-13.33962936   4*ln(2|eta|) = -15.64809202  (pente attendue : J''(eta/10)-J''(eta) -> 4 ln(1/10) = -9.2103404)
+    eta=  -0.001  J''=-22.54957373   4*ln(2|eta|) = -24.85843239  (pente attendue : J''(eta/10)-J''(eta) -> 4 ln(1/10) = -9.2103404)
+
+[calcule] Classe (a) : alpha beta^* = e^{i phi} e^{-k/kc}. J(eta) = Re[e^{i phi} int_0^inf k^3 e^{-k(1/kc + 2 i eta)} dk]
+   int =  6*k_c**4/(2*I*eta*k_c + 1)**4  : fonction analytique (reelle-analytique) de eta sur tout R, poles en eta = +- i/(2 kc) seulement.
+   Gaussienne alpha beta^* = e^{i phi} e^{-k^2/kc^2} : int_0^inf k^3 e^{-k^2/kc^2 - 2 i k eta} dk est une fonction entiere de eta (transformee de Fourier d'une gaussienne tronquee, tous les moments finis).
+   [derive] Argument general : si int_0^inf k^{3+m} |alpha_k beta_k^*| dk < inf pour tout m, la derivation sous le signe somme est licite a tout ordre et J est C^inf sur R, y compris a travers eta = 0.
+
+[derive] RESUME Q1 :
+  * terme dependant de l'etat : w = w_{|beta|^2}(eta-eta', x-x') + w_{ab*}(eta+eta', x-x') ; w_{ab*} = int d^3k/((2pi)^3 2k) alpha beta^* e^{-ik(eta+eta') + ik.(x-x')} + c.c.
+  * (a) decroissance rapide : w(x,x) et T^w lisses en eta=0 (prolongement C^inf, voire analytique).
+  * (b) alpha beta^* ~ k^{-N} e^{i phi} : T^w_osc ~ Re[e^{i phi} Gamma(4-N) (2 i eta)^{N-4}] ; 1/eta  <=>  N = 3 (coefficient sin(phi)/(4 pi^2 eta) dans d_eta d_eta' w) ; N=4 : log ; N>=5 : fini mais seulement C^{N-5} ; lisse pour aucun N fini.
+  * w(x,x) : 1/eta pour N=1, log pour N=2, C^0 (terme eta ln|eta|) pour N=3.

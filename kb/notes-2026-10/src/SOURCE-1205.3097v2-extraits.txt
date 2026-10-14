@@ -1,0 +1,6 @@
+Froeb, Roura, Verdaguer, "One-loop gravitational wave spectrum in de Sitter spacetime", JCAP (2012), arXiv:1205.3097v2.
+Lu via alphaXiv, 2026-10-12. Extraits verbatim.
+[resume] "The two-point function for tensor metric perturbations around de Sitter spacetime including one-loop corrections from massless conformally coupled scalar fields is calculated exactly. ... the power spectrum is strictly speaking ill-defined when loop corrections are included."
+[p.17, eq. 3.19] 4 S_G^(2) = -(1 + (5 alpha - 2 beta) kappa^2 H^2) Int a^2 (d h)(d h) - 6 alpha kappa^2 H^2 Int a^2 h' h' + 3 alpha kappa^2 Int (box h)(box h) ln a d^4x.
+[p.17] "we can alternatively shift the last term in the gravitational action (3.19) into the kernels K+-, which amounts to replacing mu-bar with mu-bar a".
+[p.22, eq. 4.38] super-horizon : delta^2 -> (kappa^2 H^2/16 pi^3)[1 + 6 alpha kappa^2 H^2 (ln(mu/H) + gamma) - (5 alpha - 2 beta) kappa^2 H^2 + O(kappa^4)] : "a small constant shift of the scale-invariant power spectrum".

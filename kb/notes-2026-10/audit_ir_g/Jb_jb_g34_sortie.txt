@@ -1,0 +1,27 @@
+G3 amplitudes a tau=0 : |B| = a*k*cos(D*k)  |E| = a*k*sin(D*k)
+G3 Q moyen (spatial) : Q_zz = <B^2> = a**2*k**2*cos(D*k)**2/2  ; Q_yy = -<E^2> = -a**2*k**2*sin(D*k)**2/2
+   decomposition : (QB+QE)/2 = a**2*k**2/4  ; (QB-QE)/2 = a**2*k**2*cos(2*D*k)/4
+   Qtf = [[-2*C/3, 0, 0], [0, C/3 - S, 0], [0, 0, C/3 + S]]  ; part du terme cos 2kD dans Qtf = C (1/3 - k k) : True
+   n=0: <cos2kD> = 1/(x**2 + 1) ; = Re(1-ix)^-(n+1) : True ; equivalent grand x : 1 x^-2
+   n=1: <cos2kD> = -(x - 1)*(x + 1)/(x**2 + 1)**2 ; = Re(1-ix)^-(n+1) : True ; equivalent grand x : -1 x^-2
+   n=2: <cos2kD> = -(3*x**2 - 1)/(x**2 + 1)**3 ; = Re(1-ix)^-(n+1) : True ; equivalent grand x : -3 x^-4
+   n=3: <cos2kD> = (x**2 - 2*x - 1)*(x**2 + 2*x - 1)/(x**2 + 1)**4 ; = Re(1-ix)^-(n+1) : True ; equivalent grand x : 1 x^-4
+   n=4: <cos2kD> = (5*x**4 - 10*x**2 + 1)/(x**2 + 1)**5 ; = Re(1-ix)^-(n+1) : True ; equivalent grand x : 5 x^-6
+   n=5: <cos2kD> = -(x - 1)*(x + 1)*(x**2 - 4*x + 1)*(x**2 + 4*x + 1)/(x**2 + 1)**6 ; = Re(1-ix)^-(n+1) : True ; equivalent grand x : -1 x^-6
+
+G4 <eBeB - eEeE> - (4/5)(mm - m^2/3) = Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
+   <eBeB + eEeE> sans trace = Matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])  (attendu 0 si = (2/15)(mm - m^2/3))
+
+##### faisceau non polarise equilibre
+
+=== cas T11_faisceau_non_polarise_equilibre ===
+G1 (non moyenne, s^2) : accord -2(T_B - T_E) : True  ; pas de log aux ordres s^0,s^1 : True  ; log dans X_{s i} a l'ordre s^2 : [0, 0, 0]
+Poynting moyen <X_{s i}> : [-s**2*(2*beta*lambda + 2*beta + 1)/e**2, 0, 0]
+div X^M spatiale (doit etre 0 a l'ordre tronque) : [0, 0, 0]
+conservation totale (tronquee) : [0, 0, 0, 0]  ; r0 = C_r*s**2
+termes log singuliers (puissances negatives de s) a l'ordre beta : []
+Q = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+G2 tensoriel R_{i s j}|ln = (3 beta kappa/e^2) Qtf_ij, autres composantes sans log : True
+symboles dans les coefficients ln : set()  ; lambda ou C_r present : False
+
+EXIT 0

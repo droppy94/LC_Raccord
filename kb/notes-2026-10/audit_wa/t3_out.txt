@@ -1,0 +1,20 @@
+fond : G+Lambda g a l ordre 0 = True
+delta(G+Lg)_yy / (eps cos kx) = (k**2*s*u(s) + s*Derivative(u(s), (s, 2)) - 2*Derivative(u(s), s))/(2*s)
+  comp (0, 0) 0
+  comp (0, 1) 0
+  comp (1, 1) 0
+  comp (0, 2) 0
+  comp (2, 3) 0
+  comp (3, 3) 0
+u0 solution du vide : 0
+T^_yy[u0]/cos kx = 4*b*k**3*s*(A*sin(k*s) - B*cos(k*s))
+alpha(s) = 1/2
+F(s) = 64*pi*b*k**3*s*(A*sin(k*s) - B*cos(k*s))
+Wronskien = k**3*s**2
+nb solutions serie : 1
+u1 (serie) = 640*pi*A*b/3 + a5*s**5 + a6*s**6 + 144*a6/k**6 + a7*s**7 + s**4*(-32*pi*A*b*k**4/3 - 18*a6/k**2) + s**3*(256*pi*B*b*k**3/15 - 10*a5/k**2) + s**2*(320*pi*A*b*k**2/3 + 72*a6/k**4) + (32*pi*B*b*k**5*s**5/15 - 64*pi*B*b*k**3*s**3/3 + c7*s**7)*log(s)
+parametres libres (solutions homogenes absorbables dans A,B) : [a5, a6, a7, c7]
+residu ODE (doit etre 0 jusqu a s^3) : 0
+W_E (serie, ordre G^1) = A*k**4*s/2 + B*k**5*s**2/4 - B*k**3/2 + G*(176*pi*A*b*k**4*s/3 - 16*pi*B*b*k**5*s**2*log(s) - 8*pi*B*b*k**5*s**2/15 + 32*pi*B*b*k**3*log(s) + 16*pi*B*b*k**3/15 - 15*a5*s**2/2 + 15*a5/k**2 + 72*a6*s/k**2)
+W_E0 = A*k**4*s/2 + B*k**5*s**2/4 - B*k**3/2
+W_E1 = 16*pi*B*b*k**3/15 + 15*a5/k**2 + s**2*(-8*pi*B*b*k**5/15 - 15*a5/2) + s*(176*pi*A*b*k**4/3 + 72*a6/k**2) + (-16*pi*B*b*k**5*s**2 + 32*pi*B*b*k**3)*log(s)

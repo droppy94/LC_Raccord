@@ -1,0 +1,8 @@
+fond [C] : dS/dg_ss*2 = 0 (T^ss = -ce terme, car g_ss = -(1+eN)) ; T^yy = 0
+fond [E] : dS/dg_ss*2 = 0 (T^ss = -ce terme, car g_ss = -(1+eN)) ; T^yy = 0
+fond [R] : dS/dg_ss*2 = 0 (T^ss = -ce terme, car g_ss = -(1+eN)) ; T^yy = 8/s**4
+fond [D] : dS/dg_ss*2 = 6/s**4 (T^ss = -ce terme, car g_ss = -(1+eN)) ; T^yy = -2/s**4
+ordre eps [C] : T_yy^(1) = 4*k**3*(A*sin(k*s) - B*cos(k*s))*cos(k*x)/s
+ordre eps [E] : T_yy^(1) = -4*k**2*(A*(k*s*sin(k*s) + cos(k*s)) - B*(k*s*cos(k*s) - sin(k*s)))*cos(k*x)/s**2
+ordre eps [R] : T_yy^(1) = 8*(A*k*s*sin(k*s) + A*cos(k*s) - B*k*s*cos(k*s) + B*sin(k*s))*cos(k*x)/s**4
+ordre eps [D] : T_yy^(1) = 2*(2*A*k**3*s**3*sin(k*s) + 2*A*k**2*s**2*cos(k*s) - A*k*s*sin(k*s) - A*cos(k*s) - 2*B*k**3*s**3*cos(k*s) + 2*B*k**2*s**2*sin(k*s) + B*k*s*cos(k*s) - B*sin(k*s))*cos(k*x)/s**4
