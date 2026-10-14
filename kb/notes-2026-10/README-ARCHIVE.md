@@ -1,4 +1,4 @@
-# Archive du mount « deux bords », notes 89 à 167 (9 au 14 octobre 2026)
+# Archive du mount « deux bords », notes 89 à 170 (9 au 14 octobre 2026)
 
 Statut : **archive brute, [conv], hors CI.** Rien ici n'est « validé » au sens du CLAUDE.md du dépôt (pas de front-matter, pas d'entrée manifest, pas de source au registre du dépôt). Cette branche n'a pas vocation à être fusionnée dans `main` ; elle fixe un état daté du travail conduit en session, avec ses sceaux, pour qu'un relecteur extérieur puisse remonter chaque affirmation à sa pièce.
 
@@ -47,3 +47,6 @@ Libellé G-V3 en vigueur : `NOTE-BORD-EON-138-ACTE-G-V3-SIGNE-CONVENTION-v4.md` 
 
 ## Complément du 14 octobre 2026 (second commit)
 Ajout des notes **165** (gel CCC-T, scellé avant toute lecture), **166** (exécution : raccord par effet tunnel, verdicts T1-V2 ⊕ V3, T2-V2, T3-V1 ⊕ V3 conditionnel, relevé T-4) et **167** (acte d'entée), avec leurs sceaux, `src/SOURCE-CCC-T-extraits.txt`, `cct_coincidence.py` et sa sortie ; reprises v5 et v6 avec sceaux ; registre central mis à jour (167 émises, **premier numéro libre 168**). Le registre remplace celui du premier commit (état à 164). Même statut : [conv], hors CI.
+
+## Complément du 14 octobre 2026 (troisième commit)
+Ajout des notes **168** (gel d'audit CCC-T, deux consignes aveugles), **169** (concordance : AU-V2, AU-V1), **170** (acte de levée de la mention « non auditée »), de **NOTE-166 v2**, des rapports d'audit `audit_p4/ta1`, `audit_p4/ta2`, de la reprise v7 et du registre (170 émises, **premier numéro libre 171**).

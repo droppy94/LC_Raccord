@@ -1,0 +1,26 @@
+=== Données dérivées ===
+kappa = (8)*pi^1*G^1
+S_dS  = (1)*pi^1*G^-1*H^-2
+
+=== P1 : epsilon = 8 b kappa H^2 ===
+(i)  N_S=1: n= 1  b = (1/1920)*pi^-2   epsilon = (1/30)*pi^-1*G^1*H^2   epsilon*S_dS = 1/30
+(ii) N_F=1: n= 6  b = (1/320)*pi^-2   epsilon = (1/5)*pi^-1*G^1*H^2   epsilon*S_dS = 1/5
+(iii) N_V=1: n=12  b = (1/160)*pi^-2   epsilon = (2/5)*pi^-1*G^1*H^2   epsilon*S_dS = 2/5
+
+=== P2 : unités 8 pi G = 1 ===
+S_dS (8piG=1) = (8)*pi^2*H^-2   i.e. 8 pi^2 / H^2
+S_dS = 24 * pi^2 / Lambda   (pi exposant = 2)
+(12 pi^2/Lambda) / S_dS = 1/2
+
+=== P3 : ordres de grandeur ===
+H = 1.500e-42 GeV ; G = 6.719e-39 GeV^-2
+G H^2        = 1.512e-122
+1/S_dS       = 4.812e-123   (S_dS = 2.078e+122)
+epsilon(N_V=1) = 1.925e-123
+epsilon * S_dS (num.) = 0.400000
+
+=== P4 : contrôle numérique indépendant de epsilon*S_dS = n/30 ===
+2000 tirages aléatoires (N_S,N_F,N_V in 0..7, G,H log-uniformes) : IDENTITE VERIFIEE (ecart relatif < 1e-12)
+n= 1: eps*S (flottant) = 0.033333333333333   n/30 = 0.033333333333333
+n= 6: eps*S (flottant) = 0.200000000000000   n/30 = 0.200000000000000
+n=12: eps*S (flottant) = 0.400000000000000   n/30 = 0.400000000000000
