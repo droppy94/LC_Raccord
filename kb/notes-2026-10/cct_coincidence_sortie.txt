@@ -1,0 +1,7 @@
+espece       n=N_S+6N_F+12N_V   8 b kappa H^2 / (G H^2)      1/S_dS / (G H^2)    rapport epsilon*S_dS
+scalaire (N_S=1)     1              1/30 x GH^2/pi           GH^2/pi              1/30
+Dirac (N_F=1)        6               1/5 x GH^2/pi           GH^2/pi              1/5
+photon (N_V=1)      12               2/5 x GH^2/pi           GH^2/pi              2/5
+controle 8*b*kappa (n=1) = 0.010610329539459689  n/(30 pi) = 0.01061032953945969  ecart relatif 1.634938358441546e-16
+8piG=1 : S_dS = 236.8705056261446  24 pi^2 = 236.8705056261446  12 pi^2/Lambda / S_dS = 0.5
+G H^2 (sans dimension) ~ 1.5116904058048914e-122  ; 1/S_dS = G H^2/pi ~ 4.811860010168833e-123  ; epsilon photon = 2 G H^2/(5 pi) ~ 1.9247440040675332e-123
