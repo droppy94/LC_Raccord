@@ -1,0 +1,40 @@
+{
+  "_statut": "Metadonnees telles que publiees par l'operateur le 2026-10-14 (version 2). Remplace le brouillon du 2026-10-14 14:37, qui n'a pas ete utilise tel quel : titre et description reecrits en anglais pour un lecteur exterieur, type Working paper, roles de createur supprimes. Les champs ORCID et date affichee sont a confirmer depuis la page.",
+  "doi": "10.5281/zenodo.23373604",
+  "concept_doi": "10.5281/zenodo.22919750",
+  "upload_type": "publication",
+  "publication_type": "workingpaper",
+  "publication_date": "2026-10-14",
+  "title": "Obstructions to a smooth conformal crossover in Penrose's Conformal Cyclic Cosmology: electron mass at future infinity (RG-4) and an uncompensated anomaly pole for Hadamard gravitons (G-V3). Pre-registered working record, version 2",
+  "version": "2",
+  "creators": [
+    {"name": "OLIVIER, Thierry", "affiliation": "Chercheur indépendant", "orcid": "[tel que renseigne sur Zenodo par l'operateur ; a recopier ici]", "role": null}
+  ],
+  "description": "<p>Pre-registered working record of an independent research programme (LC-RACCORD) on the conformal matching between aeons in Penrose's Conformal Cyclic Cosmology. Nothing here is claimed as established; the purpose of the deposit is priority and external review.</p><p>Two results are put forward for scrutiny. (1) RG-4: on a regular conformal boundary at future infinity, the electron mass is an obstruction to the smooth crossover unless a mass-erasure mechanism absent from the Standard Model is assumed; the spin-1/2 derivation extends Friedrich's Theorem 3.1 (arXiv:1311.0700) and is the point most in need of an outside reader. (2) G-V3: on de Sitter, for conformal fields in any Hadamard state and a gravitational wave with non-zero electric Weyl data, the local Wess-Zumino term of the conformal-anomaly action produces in Friedrich's regularity equation a pole (8b&kappa;/&Omega;)W_E that nothing in the class \"integrable anomaly action + one-loop effective action in a Hadamard state\" compensates; the resummation &Omega;^(&minus;8b&kappa;H&sup2;) is a procedure, not a theorem.</p><p>Also included: a single condition (m_h&sup2; = 2H&sup2;) making the Higgs and all Yukawa masses regular at the boundary, at the cost of a sign change and 87 orders of magnitude in the Higgs mass parameter; the acyclic fallback, under which the electron is no obstruction at the Big Bang; a costed phase-0 HPC proposal for the 3D generic BKL spike-additivity test.</p><p>Version 1 (23 September 2026) is included unchanged. All pieces were produced in conversation with an AI assistant under a sealed pre-registration protocol (hypotheses, verdict space and anti-fit prediction fixed before any calculation), audited only by isolated AI auditors; no human third party has read them. Full working notes 89&ndash;164, seals, blind-audit prompts and reports, scripts and outputs: github.com/droppy94/LC_Raccord, commit bcce2d23. Two syntheses written for an outside reader (NOTE-163, NOTE-164) are in folder 05. Comments and refutations are welcome.</p><p>R&eacute;sum&eacute; en fran&ccedil;ais dans LISEZMOI.md.</p>",
+  "access_right": "open",
+  "license": "identique a la version 1 (cc-by-4.0 dans le brouillon ; a confirmer sur la page)",
+  "keywords": [
+    "conformal cyclic cosmology",
+    "conformal boundary",
+    "future null infinity",
+    "de Sitter",
+    "conformal anomaly",
+    "Hadamard states",
+    "Friedrich conformal field equations",
+    "BKL spikes",
+    "pre-registration",
+    "independent research"
+  ],
+  "language": "eng",
+  "related_identifiers": [
+    {"identifier": "10.5281/zenodo.22919751", "relation": "isNewVersionOf", "resource_type": "publication-workingpaper", "scheme": "doi"},
+    {"identifier": "https://github.com/droppy94/LC_Raccord/commit/bcce2d23155b59bbb0c2065c2211605d8fb044ad", "relation": "isSupplementedBy", "resource_type": "dataset", "scheme": "url"}
+  ],
+  "files_published": [
+    {"name": "LC-RACCORD-v2-2026-10-14.zip", "sha256_16": "47507739633caa67", "size_kb": 354, "files_in_zip": 71},
+    {"name": "LISEZMOI.md"},
+    {"name": "SHA256-DU-ZIP.txt"}
+  ],
+  "files_removed_before_publish": ["PROCEDURE-DEPOT-ZENODO-v2.md", "zenodo-metadonnees.json", "MANIFEST-SHA256.txt (doublon de celui du zip, si present)"],
+  "notes": "Produit avec l'assistance d'un modele d'IA (Claude, Anthropic). Anteriorite locale par sha256 (sceaux inclus) ; horodatage tiers : commit git bcce2d2 du 2026-10-14 pour les notes 89 a 164, Zenodo pour ce paquet. La CCC n'est pas refutee au sens etabli : refutation provisoire sous une regle du programme, en attente de lecture exterieure. Le dossier ROMEO contient des champs [NOM Prenom] et [adresse] laisses vides a dessein."
+}

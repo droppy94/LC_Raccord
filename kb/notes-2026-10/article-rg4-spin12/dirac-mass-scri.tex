@@ -1,0 +1,239 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{slashed}
+\usepackage{mathrsfs}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{assumption}{Assumption}
+
+\newcommand{\scri}{\mathscr{I}^{+}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\hg}{\hat g}
+\newcommand{\hpsi}{\hat\psi}
+\newcommand{\hphi}{\hat\varphi}
+\newcommand{\hT}{\hat T}
+
+\title{\textbf{No non-zero rest mass for a Dirac field across future conformal infinity:\\ a spin-$\tfrac12$ counterpart of Friedrich's scalar condition and its consequence for the conformal crossover of Conformal Cyclic Cosmology}}
+\author{Thierry Olivier\\ \small Independent researcher, Paris, France\\ \small \texttt{thierry.olivier71@gmail.com}}
+\date{14 October 2026 \quad (version 2, working paper)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In Penrose's Conformal Cyclic Cosmology the future conformal boundary $\scri$ of one aeon is identified with the initial singularity of the next, and the matter content is required to extend, after conformal rescaling, across that surface. Friedrich showed that the conformal field equations coupled to a massive scalar extend smoothly only if $m^{2}=2\lambda/3$, which on de Sitter space is the value at which the minimally coupled scalar coincides with the conformally coupled massless one. We examine the corresponding question for a Dirac field treated as a test field on an asymptotically de Sitter background. The conformally rescaled Dirac equation carries the mass as $m/\Omega$, and no local polynomial curvature coupling supplies an independent compensation. We prove that for every mode, every $m\neq0$ and every solution, the rescaled field keeps a constant norm but acquires a phase $\exp(\pm\ii\int m\,\dd t)$ that winds without bound as $\Omega\to0$: the rescaled classical field has no limit at $\scri$, and for a time-dependent mass a limit exists if and only if $\int^{\infty}m(t)\,\dd t<\infty$. We then state what survives at the next two levels: the smeared field operators have no limit in norm, independently of the state, and the normal-ordered rescaled stress tensor and its trace diverge as $m/\Omega$ in any state with non-zero particle number, which is a representation-free statement. For the electron, $m_{e}/H_{\infty}\simeq4\times10^{38}$. The conclusion for CCC is conditional and we state it as such: any formulation of the crossover that requires the rescaled Dirac field, or the rescaled stress tensor, to extend continuously to $\scri$ fails for a Dirac field of constant non-zero mass, and can succeed only if the physical mass vanishes at $\scri$ fast enough for $\int m\,\dd t$ to converge. The Standard Model, in which the electron is stable and its mass constant, does not provide this. The argument does not address the coupled Einstein--Dirac system, formulations of the crossover in other variables, or whether massive quanta are present near $\scri$.
+\end{abstract}
+
+\section{Introduction}
+
+Conformal Cyclic Cosmology (CCC) \cite{Penrose2010,Tod2013,MeissnerPenrose2025} proposes that the future conformal boundary $\scri$ of a universe with positive cosmological constant be identified, through a conformal rescaling, with the initial singularity of a subsequent universe (the next ``aeon''). The construction rests on two geometric facts: the metric of an asymptotically de Sitter spacetime, multiplied by a conformal factor $\Omega^{2}$ with $\Omega\to0$ at late times, extends regularly to a spacelike hypersurface $\scri$ at finite conformal distance; and an isotropic initial singularity, multiplied by a conformal factor $\Omega^{-2}$, likewise extends regularly to a spacelike hypersurface. CCC identifies the two surfaces and requires that the matter content, suitably rescaled, pass from one side to the other.
+
+This requirement has a well-known price. The rescaling is a Weyl transformation, and massless, conformally invariant fields are the only ones that behave well under it. Penrose therefore postulates that near $\scri$ all rest mass has faded, so that the matter content is effectively conformally invariant \cite{Penrose2010}. Whether this can be true for the Standard Model, in which the electron is stable and its mass is a constant of nature, is the question that this paper makes precise for the Dirac field.
+
+For a scalar field coupled to gravity the question was settled by Friedrich \cite{Friedrich2014}. Working with the conformal field equations coupled to a massive scalar, he proved that the coupled system extends smoothly across $\scri$ if and only if $m^{2}=2\lambda/3$, where $\lambda$ is the cosmological constant; otherwise terms proportional to $(m^{2}-2\lambda/3)\,\Omega^{-k}$, $k=1,2$, obstruct the extension. He also noted that no known process would justify a mass taking that value. We make two remarks on this result in Section~\ref{sec:scalar}: on de Sitter space $2\lambda/3=R/6$, so the admissible mass is exactly the one at which a minimally coupled scalar coincides with the conformally coupled massless scalar; and for a test scalar of generic mass the obstruction is to \emph{smoothness}, the rescaled field itself remaining bounded. We stress at the outset that Friedrich's theorem concerns a coupled Einstein--scalar system and ours a test field on a fixed background; the comparison is structural, not an equivalence.
+
+For a Dirac field there is no analogous condition. Once the equation is written in the conformal frame (Section~\ref{sec:dirac}) the massless Dirac operator is conformally covariant, the mass term becomes $m/\Omega$, and no local polynomial curvature coupling can trade a non-zero mass for a curvature term, because every local curvature scalar has even dimension while $m$ has dimension one. What replaces Friedrich's condition is a sharper obstruction. We prove (Proposition~\ref{prop:dirac}) that for every mode, every non-zero mass and every solution, the rescaled classical Dirac field keeps a constant norm but has no limit at $\scri$, its phase winding as $\exp(\pm\ii\int m\,\dd t)$; for a time-dependent mass a limit exists if and only if $\int^{\infty}m(t)\,\dd t$ converges. The obstruction for a spinor is thus already an obstruction to \emph{continuity}. Section~\ref{sec:levels} lifts the statement from the classical mode to the field algebra and to observables: the smeared field operators have no limit in norm, independently of the state, and the normal-ordered rescaled stress tensor and its trace diverge as $m/\Omega$ in any state with non-zero particle number. Section~\ref{sec:ccc} draws the conditional consequence for CCC and Section~\ref{sec:scope} lists what is not established.
+
+Most of the ingredients are standard: the conformal covariance of the massless Dirac operator, the exact de Sitter mode functions, the complex boundary weights of the massive de Sitter spinor. What we claim is the explicit statement that the spinor obstruction is to continuity rather than smoothness, that it holds mode by mode and state by state, that it cannot be removed by a local curvature coupling, that it transfers to the rescaled stress tensor, and the exact integrability condition for a fading mass. The paper is written to be checked, and we would welcome a counter-argument. Version~2 incorporates a critical reading received on 14 October 2026.
+
+\section{Setting and conventions}
+\label{sec:setting}
+
+Throughout, $g$ is the physical metric, of signature $(-,+,+,+)$, and $\hg=\Omega^{2}g$ the unphysical metric, with $\Omega>0$ in the physical region and $\Omega=0$ on $\scri$. This is Penrose's convention; in Friedrich \cite{Friedrich2014} the roles of hatted and unhatted metrics are interchanged. Dirac matrices satisfy $\{\gamma^{\mu},\gamma^{\nu}\}=-2\eta^{\mu\nu}$ in the flat frame, with $\beta=\gamma^{0}$ and $\alpha^{i}=\gamma^{0}\gamma^{i}$ Hermitian, as in the standard Dirac representation.
+
+We work on the expanding patch of de Sitter space with Hubble constant $H$, in spatially flat slicing,
+\begin{equation}
+g=-\dd t^{2}+a(t)^{2}\,\dd\mathbf{x}^{2},\qquad a=e^{Ht},\qquad
+\eta=\int\frac{\dd t}{a}=-\frac{1}{aH}\in(-\infty,0).
+\end{equation}
+In conformal time $g=a(\eta)^{2}\,(-\dd\eta^{2}+\dd\mathbf{x}^{2})$, so that the choice $\Omega=1/a=-H\eta$ gives a \emph{flat} unphysical metric $\hg=-\dd\eta^{2}+\dd\mathbf{x}^{2}$, and $\scri$ is the hypersurface $\eta=0$, reached at finite conformal time. The physical scalar curvature is $R=12H^{2}$ and $\lambda=3H^{2}$. Nothing below depends on the exact de Sitter form beyond the asymptotics $\Omega\sim-H\eta$, which hold for any asymptotically de Sitter FLRW background with $H\to H_{\infty}>0$.
+
+\begin{definition}[Continuous and smooth extension]
+A field $\Phi$ on the physical spacetime, with conformal weight $w$, extends \emph{continuously} (resp.\ \emph{smoothly}) to $\scri$ if the rescaled field $\hat\Phi=\Omega^{w}\Phi$ admits a continuous (resp.\ $C^{\infty}$) extension to $\{\Omega=0\}$ in the unphysical spacetime.
+\end{definition}
+
+\begin{assumption}[Crossover criterion]
+\label{ass:crossover}
+We take as the requirement of CCC that the rescaled matter fields, and the rescaled stress tensor $\hT_{ab}=\Omega^{-2}T_{ab}$ that sources the conformal field equations, extend continuously (and, for the equations of the next aeon to be posed, smoothly) to the crossover surface \cite{Tod2013,MeissnerPenrose2025}.
+\end{assumption}
+
+Everything in Section~\ref{sec:ccc} is conditional on Assumption~\ref{ass:crossover}. A formulation of the crossover in which the matter data are encoded in other variables would have to be examined separately; we return to this in Section~\ref{sec:scope}.
+
+\section{The scalar field: Friedrich's condition reread}
+\label{sec:scalar}
+
+Let $\varphi$ be a real scalar field with equation $(\Box-\xi R-m^{2})\varphi=0$. Under $\hg=\Omega^{2}g$ the conformally coupled operator transforms covariantly, $(\Box-\tfrac16 R)\varphi=\Omega^{3}(\hat\Box-\tfrac16\hat R)\hphi$ with $\hphi=\Omega^{-1}\varphi$, so that in the unphysical frame
+\begin{equation}
+\Big(\hat\Box-\tfrac16\hat R\Big)\hphi=\frac{m^{2}+(\xi-\tfrac16)R}{\Omega^{2}}\;\hphi .
+\label{eq:scalarhat}
+\end{equation}
+On de Sitter space, $R=12H^{2}$, and for $\xi=0$ the singular coefficient vanishes if and only if
+\begin{equation}
+m^{2}=2H^{2}=\frac{2\lambda}{3}=\frac{R}{6},
+\end{equation}
+which is Friedrich's value \cite{Friedrich2014}. The rereading is that the admissible mass is precisely the one for which $(\Box-m^{2})\varphi=0$ coincides on the background with $(\Box-\tfrac16R)\varphi=0$: the only massive test scalar that crosses $\scri$ smoothly is the one that, on the background, is indistinguishable from the conformally coupled massless scalar. The compensation is possible because $m^{2}$ and $R$ have the same dimension, so that a dimensionless coupling $\xi$ can trade one for the other.
+
+We insist on the difference of status. Friedrich's Theorem~3.1 is a statement about the coupled Einstein--scalar system written in conformal variables: the terms $(m^{2}-2\lambda/3)\Omega^{-k}$ appear in the coupled equations, and their absence is what allows a regular conformal evolution. Equation~\eqref{eq:scalarhat} is only the test-field shadow of that statement on a fixed de Sitter background. We use it as a structural comparison for the spinor, nothing more.
+
+The homogeneous test mode makes the nature of the test-field obstruction explicit. With $\chi=a\varphi=\hphi$ and $\xi=0$, \eqref{eq:scalarhat} at zero spatial momentum reads $\chi''+(m^{2}/H^{2}-2)\eta^{-2}\chi=0$, whose solutions are $\chi\propto|\eta|^{s}$ with $s=\tfrac12\pm\mu$, $\mu=\sqrt{\tfrac94-m^{2}/H^{2}}$. The exponents are the integers $0$ and $1$ only for $m^{2}=2H^{2}$. For $m^{2}<2H^{2}$ one branch diverges; for $2H^{2}<m^{2}\le\tfrac94H^{2}$ both branches tend to zero as non-integer powers; for $m^{2}>\tfrac94H^{2}$ both tend to zero as $|\eta|^{1/2}$ times an oscillating phase. In the regime $m\gg H$ the rescaled test scalar \emph{does} have a limit at $\scri$, namely zero; what fails is differentiability. This is the sense in which the scalar obstruction is one of smoothness, and the point of the comparison with the spinor.
+
+\section{The classical Dirac field}
+\label{sec:dirac}
+
+\subsection{Conformal frame}
+
+Let $\psi$ be a Dirac field of mass $m$, $(\ii\slashed{\nabla}-m)\psi=0$, on $(M,g)$. In four dimensions the massless Dirac operator is conformally covariant with weight $3/2$: under $\hg=\Omega^{2}g$,
+\begin{equation}
+\hat{\slashed\nabla}\,\hpsi=\Omega^{-5/2}\,\slashed\nabla\psi,\qquad \hpsi=\Omega^{-3/2}\psi,
+\end{equation}
+see e.g.\ \cite{BirrellDavies,ParkerToms}. Hence the massive equation becomes, in the unphysical frame,
+\begin{equation}
+\Big(\ii\hat{\slashed\nabla}-\frac{m}{\Omega}\Big)\hpsi=0 .
+\label{eq:dirachat}
+\end{equation}
+The mass appears as $m/\Omega$, a simple pole on $\scri$. The ratio of a mass to any frequency is conformally invariant, so a statement sometimes made informally, that masses become negligible near $\scri$ because everything is redshifted, is not available: in the unphysical frame the mass dominates every other scale as $\Omega\to0$.
+
+\subsection{Local curvature couplings give no independent compensation}
+\label{sec:nocoupling}
+
+For the scalar, the pole $m^{2}/\Omega^{2}$ could be cancelled by a dimensionless curvature coupling because $R$ has the dimension of $m^{2}$. For the spinor, consider the class of equations $(\ii\slashed\nabla-m-\mathcal{C}[g])\psi=0$ in which $\mathcal{C}[g]$ is a local Lorentz scalar built polynomially from the curvature of $g$ and its covariant derivatives, with constant coefficients. Every such scalar has dimension $(\text{length})^{-2n}$ with $n\ge1$, so it enters with a coefficient of dimension $(\text{length})^{2n-1}$: a new scale $\ell$. On a constant-curvature background every term of this class is a constant, and $\mathcal{C}[g]$ is a shift of the mass, $m\mapsto m_{\rm eff}=m+\mathcal{C}$; the pole in \eqref{eq:dirachat} becomes $m_{\rm eff}/\Omega$ and vanishes only if $m_{\rm eff}=0$. Within this class, therefore, there is no spinor analogue of the scalar situation in which the physical field is massive and nonetheless crosses $\scri$: regularity is equivalent to the vanishing of the physical effective mass on the background, and curvature couplings only relabel what ``the mass'' means.
+
+This is deliberately narrower than ``no coupling whatsoever''. It does not cover non-polynomial couplings, modifications of the Dirac dynamics itself, or a mass generated by a dynamical scalar field whose value varies in time. The last case is the physically relevant one for the Higgs mechanism, and it is handled by the time-dependent-mass statement of the next subsection rather than by this one.
+
+\subsection{The rescaled field has no limit at \texorpdfstring{$\scri$}{scri+}}
+
+On the de Sitter background, $\hg$ is flat and \eqref{eq:dirachat} reads, in Cartesian coordinates and with $a=1/\Omega$,
+\begin{equation}
+\ii\gamma^{\mu}\partial_{\mu}\hpsi=m(\eta)\,a(\eta)\,\hpsi,\qquad a(\eta)=-\frac{1}{H\eta},
+\label{eq:flatdirac}
+\end{equation}
+where we allow from now on a non-negative, locally integrable time-dependent mass $m(\eta)$, the constant case being the one of interest for the Standard Model. For a spatial Fourier mode $\hpsi=e^{\ii\mathbf{k}\cdot\mathbf{x}}u(\eta)$ this is the Schr\"odinger-type equation
+\begin{equation}
+\ii\,\partial_{\eta}u=\mathcal{H}(\eta)\,u,\qquad \mathcal{H}(\eta)=\boldsymbol\alpha\cdot\mathbf{k}+\beta\,m(\eta)\,a(\eta).
+\label{eq:hk}
+\end{equation}
+
+\begin{lemma}[Constant norm]
+\label{lem:norm}
+For every mode, $u^{\dagger}u$ is independent of $\eta$. No solution of \eqref{eq:flatdirac} tends to zero at $\scri$ and none diverges.
+\end{lemma}
+\begin{proof}
+$\mathcal{H}(\eta)$ is Hermitian for each $\eta$, so the evolution operator is unitary. This is the conservation of the Dirac current $\hat j^{0}=\hpsi^{\dagger}\hpsi$ in the flat unphysical frame; in the physical frame it is the statement that $a^{3}\psi^{\dagger}\psi$ is conserved for a homogeneous mode. The statement concerns the four-component mode function, not a quantum state.
+\end{proof}
+
+Define the accumulated phase
+\begin{equation}
+\theta(\eta)=\int_{\eta_{0}}^{\eta}m(\eta')\,a(\eta')\,\dd\eta'=\int_{t_{0}}^{t}m\,\dd t' ,
+\label{eq:theta}
+\end{equation}
+which for constant $m$ equals $(m/H)\ln\big(a(\eta)/a(\eta_{0})\big)=-(m/H)\ln\big(\Omega/\Omega_{0}\big)$.
+
+\begin{proposition}[Limit at $\scri$]
+\label{prop:dirac}
+For every $\mathbf{k}$ and every non-zero solution $u$ of \eqref{eq:hk} there is a non-zero constant spinor $\chi_{0}$ such that
+\begin{equation}
+u(\eta)=e^{-\ii\beta\theta(\eta)}\,\chi(\eta),\qquad \chi(\eta)\to\chi_{0}\ \text{as }\eta\to0^{-},\qquad \|\chi(\eta)-\chi_{0}\|\le k|\eta|\,\|\chi_{0}\|.
+\label{eq:structure}
+\end{equation}
+Consequently $\lim_{\eta\to0^{-}}u(\eta)$ exists if and only if $\lim_{\eta\to0^{-}}\theta(\eta)$ exists, that is, if and only if $\int^{\infty}m(t)\,\dd t<\infty$. For a constant mass $m\neq0$ the limit does not exist.
+\end{proposition}
+\begin{proof}
+For $\mathbf{k}=0$, \eqref{eq:hk} is diagonal in the eigenbasis of $\beta$, $\ii\partial_{\eta}u_{\pm}=\pm m a\,u_{\pm}$, whence $u_{\pm}(\eta)=e^{\mp\ii\theta(\eta)}u_{\pm}(\eta_{0})$, which is \eqref{eq:structure} with $\chi$ constant. In physical time this is $e^{\mp\ii\int m\,\dd t}$: the rescaling removes the decay of the amplitude but not the Compton oscillation, and $t\to\infty$ corresponds to $\eta\to0^{-}$.
+
+For $\mathbf{k}\neq0$, set $u=U_{0}\chi$ with $U_{0}(\eta)=e^{-\ii\beta\theta(\eta)}$, the exact $\mathbf{k}=0$ evolution. Then $\ii\partial_{\eta}\chi=V(\eta)\chi$ with $V=U_{0}^{\dagger}(\boldsymbol\alpha\cdot\mathbf{k})U_{0}$ Hermitian and $\|V(\eta)\|=k$ for all $\eta$ and all $m(\cdot)$. Hence $\|\partial_{\eta}\chi\|\le k\|\chi\|$ with $\|\chi\|$ constant, so $\chi$ is Lipschitz on $(\eta_{0},0)$, is Cauchy as $\eta\to0^{-}$, and converges to some $\chi_{0}$ with $\|\chi_{0}\|=\|u\|\neq0$ and the stated bound.
+
+If $\theta$ converges, so does $u$. If $\theta$ diverges, decompose $\chi_{0}=\chi_{0}^{+}+\chi_{0}^{-}$ along the eigenspaces of $\beta$; at least one component, say $\chi_{0}^{+}$, is non-zero, and the corresponding component of $u$ is $e^{-\ii\theta(\eta)}\chi^{+}(\eta)$ with $\chi^{+}\to\chi_{0}^{+}$. Since $\theta$ is continuous, non-decreasing and unbounded, along $\theta(\eta_{n})=2\pi n$ this component tends to $\chi_{0}^{+}$ and along $\theta(\eta'_{n})=2\pi n+\pi$ to $-\chi_{0}^{+}$; $u$ has no limit. Finally $\theta$ converges if and only if $\int^{\infty}m\,\dd t<\infty$ by \eqref{eq:theta}, and for constant $m\neq0$ it diverges logarithmically in $\Omega$.
+\end{proof}
+
+\begin{remark}[What the condition says]
+A mass that tends to zero is not enough: $m(t)\sim c/t$ gives $\theta\sim c\ln t\to\infty$ and no limit; a mass decaying faster than $1/t$ in physical time, equivalently faster than $1/\ln(1/\Omega)$ in the conformal factor, gives a limit. Any proposal in which fermion masses fade near $\scri$ must satisfy this integrability condition, not merely $m\to0$.
+\end{remark}
+
+\begin{remark}[Representation theory]
+The structure \eqref{eq:structure} says that for constant $m\ne0$ the Dirac field on de Sitter belongs to the principal series: in the language of boundary conformal weights, $\Delta=\tfrac32\pm\ii m/H$, complex for all real $m\neq0$, whereas the scalar has $\Delta=\tfrac32\pm\mu$, real for $m^{2}\le\tfrac94H^{2}$ and integer precisely at Friedrich's value. The complex weights of the massive de Sitter spinor are known \cite{AllenLutken}; the exact mode functions are Hankel functions of order $\tfrac12\mp\ii m/H$ and behave as $|\eta|^{\pm\ii m/H}$ at small argument. What we use is only the consequence for the existence of a limit.
+\end{remark}
+
+\subsection{Orders of magnitude}
+
+For the electron, $m_{e}\simeq5.11\times10^{5}\,\mathrm{eV}$, and for the asymptotic Hubble rate of our universe, $H_{\infty}=H_{0}\sqrt{\Omega_{\Lambda}}\simeq1.2\times10^{-33}\,\mathrm{eV}$ (with $H_{0}\simeq67\ \mathrm{km\,s^{-1}Mpc^{-1}}$, $\Omega_{\Lambda}\simeq0.69$), $m_{e}/H_{\infty}\simeq4\times10^{38}$. For a constant mass the phase of the rescaled electron field turns by about $4\times10^{38}$ radians each time $\Omega$ decreases by a factor $e$. For a fading mass the relevant quantity is $\int m\,\dd t$ over the remaining physical time, not the instantaneous ratio $m/H$.
+
+\section{From the classical mode to the field algebra and to observables}
+\label{sec:levels}
+
+Proposition~\ref{prop:dirac} concerns a four-component mode function. We now say what it implies for the quantum field, in three steps of increasing physical content, without changing the mathematical object silently.
+
+\paragraph{(a) Field operators.}
+Let $\hpsi(\eta,f)=\int\dd^{3}x\,f(\mathbf{x})^{\dagger}\hpsi(\eta,\mathbf{x})$ be the field smeared at fixed conformal time with $f\in\mathcal{S}(\mathbb{R}^{3})\otimes\mathbb{C}^{4}$. Because the Dirac equation is linear and \eqref{eq:structure} holds mode by mode with a $\mathbf{k}$-independent unitary matrix $U_{0}(\eta)$, we may write $\hpsi(\eta,\mathbf{x})=U_{0}(\eta)\hat\chi(\eta,\mathbf{x})$, where $\hat\chi$ is the field in the interaction picture with respect to the mass term. The $\eta$-evolution of $\hat\chi$ is generated by $V(\eta)$, a bounded operator on $L^{2}(\mathbb{R}^{3})\otimes\mathbb{C}^{4}$ with norm $k$ on each momentum shell, and the same Lipschitz bound as in the proof shows that for test functions of bounded momentum support, and then by density for all $f$, the propagator of $\hat\chi$ converges as $\eta\to0^{-}$. In the CAR algebra the smeared fields are bounded, $\|\hat\chi(\eta,g)\|=\|g\|_{L^{2}}$, so $\hat\chi(\eta,g)\to\hat\chi(0,g)$ in norm. Since $\hpsi(\eta,f)=\hat\chi(\eta,U_{0}(\eta)^{\dagger}f)$ and the smearing is antilinear, for $f$ with a single $\beta$-component $f=f_{\pm}$ one gets $\hpsi(\eta,f_{\pm})=e^{\pm\ii\theta(\eta)}\hat\chi(0,f_{\pm})+o(1)$ in norm. Hence, for constant $m\neq0$, the smeared rescaled field operator has no limit in norm as $\eta\to0^{-}$, for every non-zero $f$ and independently of any state. This is the operator-algebraic form of the no-limit statement.
+
+\paragraph{(b) Bilinears without derivatives.}
+A global phase on the field operator is not observable by itself. The bilinears $\hpsi^{\dagger}\hpsi$ and $\hpsi^{\dagger}\beta\hpsi$ are invariant under $U_{0}$ and converge; the spatial current $\hpsi^{\dagger}\boldsymbol\alpha\hpsi$, which mixes the two $\beta$-components, oscillates as $e^{\pm2\ii\theta}$ in every mode where both components are present, which is every mode with $\mathbf{k}\ne0$ (numerically, $|\chi_{0}^{-}|/|\chi_{0}^{+}|\approx0.22$ for $k/H=0.5$, $m/H=1$). So the rescaled current has no limit either, but undifferentiated scalar bilinears do.
+
+\paragraph{(c) Stress tensor and trace.}
+The physically decisive statement is on the rescaled stress tensor, which is a tensor and does not depend on how the spinor is represented. The trace of the physical stress tensor of a Dirac field is $T^{\mu}{}_{\mu}=m\bar\psi\psi$, and the energy density in the comoving frame is, for the mode functions above, $u^{\dagger}\mathcal{H}u$. With the weight that makes radiation finite at $\scri$, $\hT_{ab}=\Omega^{-2}T_{ab}$ and the rescaled trace is $\hT=\hg^{ab}\hT_{ab}=\Omega^{-4}T$, so that
+\begin{equation}
+\hT=\frac{m}{\Omega}\,\hat{\bar\psi}\hpsi,\qquad
+\hT_{00}=\hpsi^{\dagger}\mathcal{H}\hpsi=\frac{m}{\Omega}\,\hpsi^{\dagger}\beta\hpsi+\hpsi^{\dagger}(\boldsymbol\alpha\cdot\nabla/\ii)\hpsi .
+\label{eq:That}
+\end{equation}
+Let the quantum field be quantized with respect to any Hadamard state $\omega_{0}$ and let $:\;:$ denote normal ordering with respect to it, so that $\omega_{0}(:\hT:)=0$ and the renormalization of the vacuum part, which is a separate question, is set aside. For a one-particle state $|1_{f}\rangle=b^{\dagger}(f)|0\rangle$ built on the late-time positive-frequency modes, equivalently on the solutions whose physical energy at late times is the rest energy, the component $\chi^{+}$ dominates and
+\begin{equation}
+\langle 1_{f}|:\hT_{00}:|1_{f}\rangle(\eta)=\frac{m}{\Omega}\,\big(\rho_{+}(\eta)-\rho_{-}(\eta)\big)+O(k),\qquad \rho_{\pm}(\eta)=\int\dd^{3}x\,|\chi^{\pm}_{f}(\eta,\mathbf{x})|^{2}\to\rho_{\pm}(0),\ \ \rho_{+}(0)>\rho_{-}(0),
+\end{equation}
+and likewise $\langle:\hT:\rangle=(m/\Omega)\,\langle:\hat{\bar\psi}\hpsi:\rangle$ with a convergent second factor. Both diverge as $\Omega^{-1}$. This is nothing more than the rest energy $m$ of a particle rescaled by the weight $\Omega^{-1}$ that leaves the energy of radiation finite, but it is the form in which the obstruction enters the conformal field equations, whose source is $\hT_{ab}$. By linearity in the particle number the same divergence holds in any state with non-zero expected number of quanta of the massive field, whatever their distribution. The vacuum contribution is not covered by this statement.
+
+The three levels are therefore: no limit for the field operator (state-independent, but a phase); no limit for the rescaled current; divergence as $m/\Omega$ of the rescaled energy density and trace in any state containing quanta of the field (representation-free, and the one that matters for the crossover equations).
+
+\section{Consequence for Conformal Cyclic Cosmology}
+\label{sec:ccc}
+
+Under Assumption~\ref{ass:crossover}, combining Sections~\ref{sec:nocoupling}, \ref{sec:dirac} and \ref{sec:levels}:
+
+\begin{proposition}
+\label{prop:ccc}
+On an asymptotically de Sitter background with $H\to H_{\infty}>0$, a non-zero solution of the Dirac equation with constant mass $m\neq0$, rescaled with the standard conformal weight, has no pointwise limit at $\scri$; the smeared rescaled field operator has no limit in norm; and in any state with non-zero expected particle number the normal-ordered rescaled stress tensor and its trace diverge as $m/\Omega$. This obstructs every formulation of the CCC crossover that requires the rescaled Dirac field, or the rescaled stress tensor, to extend continuously to $\scri$. It can be lifted only if the physical mass of every such field vanishes at $\scri$ fast enough that $\int^{\infty}m(t)\,\dd t$ converges. It does not by itself exclude a crossover defined through other variables, nor the existence of solutions of a coupled theory with its own mass dynamics.
+\end{proposition}
+
+Penrose's postulate that rest mass fades near the crossover \cite{Penrose2010} is therefore not an optional simplification: without it, the crossover fails for Dirac fields at the level of continuity, before any question of smoothness or of the conformal field equations arises. The postulate is also quantitatively demanding: the fading must be integrable in physical time. In the Standard Model the electron is stable, its mass is a fixed parameter, and there is no late-time process that sends it to zero; Friedrich made the corresponding observation for the scalar \cite{Friedrich2014}. In that precise and conditional sense, CCC with Standard-Model matter does not possess the crossover it postulates. We do not conclude that CCC is refuted, because the postulate of mass fading is part of the theory as Penrose states it; we conclude that the theory requires a mechanism beyond the Standard Model at the crossover, and that this requirement is sharper for spinors than the scalar case suggests.
+
+Two kinds of escape remain open and we name them without endorsing either. The first is that no quantum of any massive Dirac field is present in the state near $\scri$. This is a statement about the late-time fate of matter (annihilation, capture by black holes that evaporate into massless radiation, conservation of charge), which the present paper does not examine; Penrose himself has discussed residual isolated electrons \cite{Penrose2010}. The second is a dynamics by which the masses of all Dirac fields vanish, integrably, in a cold and empty asymptotically de Sitter universe. Since fermion masses arise from the Higgs expectation value, this amounts to a late-time restoration of electroweak symmetry, which the minimal Standard Model does not contain; the quantitative conditions that such a dynamics would have to satisfy, including the behaviour of the Higgs field itself at $\scri$, are examined in the working record cited below and are not part of the present claims. Whether a conformally invariant extension of the Standard Model (e.g.\ \cite{MeissnerNicolai2007}) can provide such a dynamics is left open.
+
+\section{What is and is not established}
+\label{sec:scope}
+
+\begin{itemize}[leftmargin=1.5em]
+\item \emph{Established here}, for a test Dirac field on an asymptotically de Sitter background: Proposition~\ref{prop:dirac} (constant norm, limit at $\scri$ if and only if $\int m\,\dd t$ converges, hence no limit for constant $m\neq0$); the restricted no-compensation statement of Section~\ref{sec:nocoupling}; the three-level transfer of Section~\ref{sec:levels}; the rereading of Friedrich's value as the conformal-coupling point.
+\item \emph{Assumed}: $H\to H_{\infty}>0$, which makes $\scri$ spacelike and at finite conformal distance (for $H\to0$ the boundary is of a different type); the crossover criterion of Assumption~\ref{ass:crossover}; a Hadamard reference state for the normal ordering in Section~\ref{sec:levels}(c).
+\item \emph{Not established}: anything about the coupled Einstein--Dirac system in conformal variables, which is the level at which Friedrich's theorem is stated; whether the crossover can be formulated with variables other than the rescaled fields and stress tensor; whether quanta of massive fields are present near $\scri$; the vacuum contribution to the rescaled stress tensor; anything about the Big Bang side of the crossover; and any statement about the Higgs sector, which has been removed from this version.
+\item \emph{Known to the literature}: the conformal covariance of the massless Dirac operator, the exact de Sitter mode functions and the complex weights of the massive de Sitter spinor \cite{AllenLutken,BirrellDavies,ParkerToms}. We have not found a statement in the CCC literature that the spinor obstruction is to continuity rather than smoothness, that it holds state-independently at the level of the field algebra, or the integrability condition on a fading mass; a systematic search has not been done and we would be grateful to be told of one.
+\end{itemize}
+
+\section*{Numerical consistency check}
+A script, \texttt{dirac\_scri\_check.py} (Python 3.13, NumPy 2.5, SciPy 1.18), integrates \eqref{eq:hk} with constant $m$ from $\eta=-1$ to $\eta=-10^{-6}$ for $(m/H,k/H)=(1,0)$, $(1,0.5)$ and $(3,2)$. It confirms the conservation of the norm to $10^{-9}$, the phase $-(m/H)\ln a$ of the $\mathbf{k}=0$ solution to $10^{-10}$ modulo $2\pi$, the convergence of the interaction-picture spinor $\chi$ (variation below $k|\eta|$), and the winding of the phase by $(m/H)\ln10^{6}$ radians over the interval; it also prints the scalar exponents of Section~\ref{sec:scalar}. These are consistency checks of signs and conventions; the limit statement is proved in Proposition~\ref{prop:dirac}, not by the script.
+
+\section*{Provenance}
+This paper rewrites, in standard form and for an outside reader, a result obtained within an independent research programme on the conformal crossover of CCC, whose working records are deposited at Zenodo (DOI 10.5281/zenodo.23373604, version 2; concept DOI 10.5281/zenodo.22919750) and at \texttt{github.com/droppy94/LC\_Raccord}. The derivation of Section~\ref{sec:dirac} was first obtained in a working session of 23 September 2026 and is recorded there as S26-02, \S2.3. Version~1 (14 October 2026) added the interaction-picture proof for $\mathbf{k}\neq0$, the norm lemma and the no-compensation argument. Version~2 (same day) incorporates a critical reading: the test-field status is stated throughout, the classical, algebraic and observable levels are separated (Section~\ref{sec:levels}), the integrability condition for a fading mass is proved, the no-compensation claim is restricted to its class, the conclusion is made explicitly conditional, and the quantitative Higgs statement is withdrawn. The work was carried out with the assistance of an AI language model (Claude, Anthropic) under a pre-registration protocol; no human third party has reviewed it, which is the purpose of making it public. Comments and refutations are welcome.
+
+\begin{thebibliography}{9}
+\bibitem{Penrose2010} R.~Penrose, \emph{Cycles of Time: An Extraordinary New View of the Universe}, Bodley Head, London (2010).
+\bibitem{Tod2013} K.~P.~Tod, ``The equations of Conformal Cyclic Cosmology'', arXiv:1309.7248 [gr-qc] (2013).
+\bibitem{MeissnerPenrose2025} K.~A.~Meissner and R.~Penrose, ``Physics of Conformal Cyclic Cosmology'', arXiv:2503.24263 [gr-qc] (2025).
+\bibitem{Friedrich2014} H.~Friedrich, ``Smooth non-zero rest-mass evolution across time-like infinity'', arXiv:1311.0700 [gr-qc] (2013).
+\bibitem{AllenLutken} B.~Allen and C.~A.~L\"utken, ``Spinor two-point functions in maximally symmetric spaces'', Commun.\ Math.\ Phys.\ 106 (1986) 201--210.
+\bibitem{BirrellDavies} N.~D.~Birrell and P.~C.~W.~Davies, \emph{Quantum Fields in Curved Space}, Cambridge University Press (1982), ch.~3.
+\bibitem{ParkerToms} L.~Parker and D.~Toms, \emph{Quantum Field Theory in Curved Spacetime}, Cambridge University Press (2009).
+\bibitem{MeissnerNicolai2007} K.~A.~Meissner and H.~Nicolai, ``Conformal symmetry and the Standard Model'', Phys.\ Lett.\ B 648 (2007) 312, arXiv:hep-th/0612165.
+\end{thebibliography}
+
+\end{document}

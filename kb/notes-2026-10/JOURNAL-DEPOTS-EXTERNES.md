@@ -1,0 +1,21 @@
+---
+id: JOURNAL-DEPOTS-EXTERNES
+ouvert: 2026-09-23
+mis_a_jour: 2026-10-14 18:05 (heure de Paris)
+role: trace des depots publics horodates par un tiers (regle EX-2)
+---
+
+# Journal des depots externes
+
+| Date (Paris) | Depot | Contenu | Statut | Reference |
+|---|---|---|---|---|
+| 2026-09-23 16:27 | Zenodo | Seances S25 et S26 : gels, verdicts, scripts, sceaux, actes | **PUBLIE**, DOI communique par l'operateur a 16:35 ; version deposee : **v1** (sha256 56856fe9…), confirmee par l'operateur le 2026-09-23 16:48 ; l'acte RG-4 (present en v1.1) n'y figure PAS. Metadonnees corrigees le 2026-10-14 17:49 : role « Producer » retire du createur (auteur sans role), affiliation « Chercheur independant » conservee | **DOI 10.5281/zenodo.22919751** ; DOI de concept (toutes versions) **10.5281/zenodo.22919750** ; demande : https://zenodo.org/me/requests/c0ed53ce-c052-43e9-ad28-8c68326744e5 |
+| 2026-10-14 15:0x | GitHub droppy94/LC_Raccord, branche `archive/notes-2026-10` | Archive brute du mount, notes 89 a 164 : 173 notes (toutes versions), 70 sceaux, registre central (premier numero libre 165), 5 reprises, 30 prompts d'audit aveugle, rapports et dossiers d'audit, scripts et sorties, 9 extraits de sources, README-ARCHIVE.md (530 fichiers, 3,8 Mo) | **POUSSE** (option A, acte de l'operateur du 2026-10-14 : « execute l'option A ») ; statut [conv], hors CI, non destine a la fusion dans `main` ; `main` et historique intacts ; verification des sceaux au depot : 400 conformes, 24 pieces hors archive, 6 ecarts consignes dans le README | commit **bcce2d23155b59bbb0c2065c2211605d8fb044ad** sur `origin/main` 7558566 ; https://github.com/droppy94/LC_Raccord/tree/archive/notes-2026-10 |
+| 2026-10-14 17:59 | Zenodo, **version 2** du meme enregistrement | `LC-RACCORD-v2-2026-10-14.zip` (sha256 `47507739633caa67…`, 71 fichiers, 354 Ko) : contenu v1 inchange (`01-`), acte RG-4 + sceau (`02-`), seance S27 (`03-`), dossier ROMEO v5/v5.1 et modele de cout (`04-`), syntheses NOTE-163 et 164, acte 162, libelle 138 v4, reprise v4, registre, renvoi git (`05-`), `LISEZMOI.md`, `MANIFEST-SHA256.txt`. A la racine du depot, hors zip : `LISEZMOI.md`, `SHA256-DU-ZIP.txt` (fichiers de procedure et `zenodo-metadonnees.json` retires avant publication, sur consigne) | **PUBLIE**, DOI communique par l'operateur a 17:59. Metadonnees renseignees par l'operateur depuis son compte : type Publication / Working paper, titre et description en anglais (texte dans `ZENODO-v2-metadonnees-2026-10-14.json`, version publiee), auteur sans role, ORCID, affiliation « Chercheur independant », mots-cles, relation isNewVersionOf vers 22919751, isSupplementedBy vers le commit git bcce2d2, licence identique a la v1. **A verifier a la prochaine ouverture de la page** : date de publication affichee, liste de fichiers finale, md5 du zip | **DOI 10.5281/zenodo.23373604** ; https://doi.org/10.5281/zenodo.23373604 |
+
+Constat du 2026-10-14 : la branche `cadre/claude-md-5-4-bis` (commit e3cb17b, amendement 5.4 bis) etait deja sur GitHub ; le `RESTAURER-GIT.cmd` du depot local qui demandait son push est perime. Branche `front-pq` (e1889d2) presente a distance, absente du clone local.
+
+Constat du 2026-10-14, 17:44 : la v1 n'etait incluse dans aucune communaute Zenodo ; une demande d'inclusion dans une communaute a ete refusee par son curateur (communaute et motif non consignes : a completer par l'operateur si un motif a ete donne). Un refus de curateur n'est pas une lecture scientifique ; compteurs de la v1 a zero vue au 2026-10-14. Decision : pas de nouvelle demande de communaute pour la v2.
+
+A completer : date de publication affichee par Zenodo pour la v2 ; empreinte de l'archive git telle que deposee.
+Prochain depot prevu : aucun. Prochaine etape de lecture exterieure : article court au format standard sur la partie spin 1/2 de RG-4 (S26-02 §2.3, extension du theoreme 3.1 de Friedrich), puis question technique posee a un lecteur humain.

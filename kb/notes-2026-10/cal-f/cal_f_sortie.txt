@@ -1,0 +1,17 @@
+=== CAL-F checks (H = 1, physical dS metric eta^-2 (-deta^2 + dx^2)) ===
+
+(1) generic homogeneous fluid, non-zero components of S:
+    (1, 0, 1) -kappa*(eta*Derivative(rho(eta), eta) - 3*p(eta) - 3*rho(eta))/(6*eta**4)
+    (2, 0, 2) -kappa*(eta*Derivative(rho(eta), eta) - 3*p(eta) - 3*rho(eta))/(6*eta**4)
+    (3, 0, 3) -kappa*(eta*Derivative(rho(eta), eta) - 3*p(eta) - 3*rho(eta))/(6*eta**4)
+   after imposing conservation rho' = 3(rho+p)/eta : {(1, 0, 1): 0, (2, 0, 2): 0, (3, 0, 3): 0}
+
+(2) homogeneous scalar, arbitrary m, covariant derivative, on shell:
+    S = 0 identically
+
+(3) same scalar with PARTIAL derivatives only (the head-computation error), on shell, m^2 = 2:
+    (1, 0, 1) -2*kappa*phi0*phi1/(3*s) - kappa*phi1**2
+    (2, 0, 2) -2*kappa*phi0*phi1/(3*s) - kappa*phi1**2
+    (3, 0, 3) -2*kappa*phi0*phi1/(3*s) - kappa*phi1**2
+
+(4) homogeneous dust rho = m n0 Omega^3 : S = 0 identically

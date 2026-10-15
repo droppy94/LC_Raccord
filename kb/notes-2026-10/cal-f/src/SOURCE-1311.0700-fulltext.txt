@@ -1,0 +1,4194 @@
+arXiv:1311.0700v2 [gr-qc] 19 Feb 2014
+ 
+Smooth non-zero rest-mass evolution across
+time-like infinity
+Helmut Friedrich
+Max-Planck-Institut f¨ur Gravitationsphysik
+Am M¨uhlenberg 1
+14476 Golm, Germany
+September 24, 2018
+Abstract
+It is shown that solutions to Einstein’s field equations with positive
+cosmological constant can include non-zero rest-mass fields which co-
+exist with and travel unimpeded across a smooth conformal boundary.
+This is exemplified by the coupled Einstein-massive-scalar field equa-
+tions for which the mass m is related to the cosmological constant λ by
+the relation 3 m
+2 
+= 2 λ. Cauchy data for the conformal field equations
+can in this case be prescribed on the (compact, space-like) conformal
+boundary J 
++
+. Their developments backwards in time induce a set
+of standard Cauchy data on space-like slices for the Einstein-massive-
+scalar field equations which is open in the set of all Cauchy data for
+this system.
+1
+
+1 Introduction
+In his work on conformal cyclic cosmology [13] Roger Penrose conjectures the ocurrence of
+concentric circles in the CMB which reflect bursts of gravitational radiation resulting from
+encounters of supermassive black holes in an aeon preceding the big bang of our present
+one. A recent analysis [10] of the CMB based on WMAP data and an independent, even
+more recent, study of the CMB maps observed by the Planck collaboration [1] indeed
+seem to identify ring like structures in the CMB sky. While these findings indicate strong
+support of Penrose’s proposal, the theoretical reasoning which led to them still raises
+questions.
+The underlying picture is that of a smooth, time oriented conformal structure C of
+signature (−, +, +, +) on a 4-dimensional manifold M ∼ R × S with compact 3-manifold
+S, into which an infinite sequence of aeons, time oriented ‘physical’ solutions to Einstein’s
+field equations with cosmological constant λ > 0, are conformally embedded so that any
+two neighbouring aeons are separated by a crossover 3-surface X ∼ S which is space-like
+with respect to the conformal structure. The aeons start with a big bang that ‘touches’ the
+preceding crossover surface while their future end represents an exponentially expanding
+space-time for which the following crossover surface defines a smooth conformal boundary
+in the sense proposed by Roger Penrose in [12].
+Consider the Einstein equations with cosmological constant λ > 0 and vanishing en-
+ergy momentum tensor and denote by D
+S 
+the set of Cauchy data (i.e. solutions to the
+constraints) for these equations on 3-manifolds diffeomorphic to S. Not all the space-
+times developing from these data admit a smooth conformal boundary diffeomorphic to
+S. Notable examples are the Einstein-de Sitter solution, which includes black holes and
+admits only patches of a smooth conformal boundary [9], and the Nariai solution, which
+is geodesically complete but does not even admit a piece of a smooth conformal boundary
+[3]. Nevertheless, the class of solutions which do admit a smooth conformal boundary
+diffeomorphic to S is fairly rich. This is a consequence of a peculiar feature of Einstein’s
+field equations. In the vacuum case they admit representations in terms of the conformal
+fields, referred to as the conformal fields equations (see section 2), which induce under
+suitable gauge assumptions equations that are hyperbolic even where the conformal factor
+vanishes or becomes negative [5], [8].
+The conformal equations can be solved backwards in time with Cauchy data which are
+prescribed on the future conformal boundary J 
++ 
+∼ S. The freedom to prescribe data there
+is essentially the same as in the standard Cauchy problem, though, due to the fact that the
+conformal boundary is geometrically a very special hypersurface relative to the solution
+space-time, there are differences in the interpretation of the data [6]. Let A
+S 
+denote the
+Cauchy data pertaining to solutions obtained by such backward developments. It turns
+out that A
+S 
+is an open subset of D
+S 
+(if endowed with a natural Sobolev topology). This
+follows by the argument used in [7] to show the non-linear stability of de Sitter space. In
+fact, due to their hyperbolicity, the conformal field equations see in principle no difference
+between backward and forward evolution. The data on the conformal boundary which have
+been evolved backwards can thus also be evolved forwards into domains foliated by Cauchy
+hypersurfaces on which the conformal factor is negative. The resulting solutions to the
+conformal field equations then extend smoothly across the conformal boundary. Cauchy
+2
+
+stability for hyperbolic systems then implies that data in D
+S 
+which are sufficiently close
+to A
+S 
+also develop into domains where the conformal factor is negative and the field
+equations themselves then ensure that the set where the conformal factor vanishes defines
+a smooth conformal boundary for the vacuum space-times arising from the given data in
+D
+S 
+(which are thus seen to be in fact in A
+S 
+).
+The solution to the conformal field equation in the future of the conformal bound-
+ary again defines a solution to the Einstein equations we started with. This solution is
+also determined uniquely by the Cauchy data we prescribed in the past of the conformal
+boundary.
+These results generalize to matter fields whose energy momentum tensor is trace free
+and which obey conformally covariant field equations. This has been exemplified in detail
+in [8] by the Maxwell or the Yang-Mills equations but it holds true for other such equations.
+It follows that if a solution to these equations does admit a smooth conformal boundary
+in the future, this is true also for all solutions which are, in terms of Cauchy data on some
+given time slice, close to the given one. In all these cases gravitational radiation or other
+field excitations will travel unimpeded across the conformal boundary.
+There remains the question of what will happen to the prospective conformal boundary
+in the presence of fields with non-vanishing rest mass. In [13] it has been assumed that
+there will be some past neighbourhood of the crossover surface in which only zero rest
+mass fields will be present. While it is far from obvious how massive fields behave at the
+end of an unlimited spatial expansion, this certainly seems to be a strong requirement. At
+present no process is known which would allow one to justify it. It is the main purpose of
+the following analysis to show that this restriction may not be necessary.
+There is a second problem, which arises right at the crossover surfaces. The solution
+to the Einstein equations obtained in the future of a crossover surface X by extending the
+solution to the conformal field equations smoothly across X will start to contract and thus
+rather resemble a time reversed version of an exponentially expanding space-time instead
+of a big bang solution as required by the standard scenario. It is suggested therefore in
+[13] that in the immediate future of X each aeon space-time evolves instead according to
+the ‘isotropic cosmological singularity’ model studied by Paul Tod (cf. [15], which also
+gives references to earlier work in this direction). In this setting it is assumed that the
+space-time admits a conformal rescaling which blows up the space-time near the big bang
+so that the latter can be represented by a space-like hypersurface smoothly attached to
+the past end of the original space-time. The idea then is to identify this hypersurface and
+the fields obtained on it by the blow up procedure with the preceding crossover surface
+and the data induced on that by the smooth conformal extension from the previous aeon.
+There appears to be a basic difference, however, between the ‘blow down’ procedure
+underlying the construction of the conformal boundary considered above and the blow up
+procedure defining the isotropic cosmological singularity picture. The latter seems to admit
+no version of conformal field equations which induce hyperbolic evolution equations near
+the conformal boundary under fairly general assumptions. In fact, the freedom to prescribe
+initial data for the future evolution on the past boundary turns out to be rather restricted
+[15]. Evolving such restricted data into the future, performing a slight generic perturbation
+of the data induced on some Cauchy hypersurface, and then evolving backwards will, more
+likely than not, result in a space time which does not admit a conformal blow up leading
+3
+
+to a smooth setting.
+In general it is not clear to what extent data induced on X from the previous aeon
+can be evolved further in the new setting and if they can the extension procedure will not
+be stable. Moreover, it is not clear which mechanism should convert on X the evolution
+law carried across X with the conformal field equations into an evolution law consistent
+with the isotropic cosmological singularity setting. This problem will be addressed again
+in section 5.
+Required is an insight into the asymptotic behaviour at time-like infinity of fields with
+non-vanishing rest mass, coupled to Einstein’s equations
+ˆ
+R
+μν 
+− 
+1
+2 
+ˆ
+R ˆg
+μν 
++ λ ˆg
+μν 
+= κ 
+ˆ
+T
+μν 
+, (1.1)
+with cosmological constant λ > 0. The precise properties of the equations will depend
+there very much on the specific nature of the chosen matter field and each of them will
+need a special analysis. We shall concentrate here on the case of a non-linear scalar field
+φ which obeys an equation of the form
+ˆ
+∇
+μ 
+ˆ
+∇
+μ
+φ − (m
+2 
+φ + V 
+′
+(φ)) = 0, (1.2)
+with energy momentum tensor
+ˆ
+T
+μν 
+= 
+ˆ
+∇
+μ
+φ 
+ˆ
+∇
+ν 
+φ −
+( 
+1
+2 
+( 
+ˆ
+∇
+ρ
+φ 
+ˆ
+∇
+ρ
+φ + m
+2 
+φ
+2
+) + V (φ)
+)
+ˆg
+μν 
+, (1.3)
+and a potential V (φ) = μ φ
+3 
++ φ
+4 
+U (φ) with an arbitrary real coefficient μ and a smooth
+real-valued function U .
+The future stability of such systems has been studied under quite general assumptions
+by Hans Ringstr¨om [14]. His analysis will not be followed here. Employing a general
+wave gauge, he made a skillful choice of gauge source functions which allowed him to
+obtain estimates that conveniently control the long time behaviour of the fields, which is
+at the focus of his work. A sharp statement about the asymptotic behaviour of the fields,
+however, which is our main interest here, requires an optimal control (whatever that may
+mean in the end) on the fields as well as on the coordinates with respect to which the
+behaviour of the fields is expressed. It is not easy to see whether Rinstr¨om’s coordinates
+admit a precise description of the asymptotics of the gravitational and the matter fields.
+To see precisely what may go wrong at the prospective conformal boundary we study
+instead in section 2 the conformal field equations for general matter fields along the lines
+indicated in [8] and then specialize in section 3 the matter model to that of a non-linear
+massive scalar field. As expected, it turns out that the conformal equations for the scalar
+field as well as those for the geometric background fields are in general strongly singular;
+if the equations are written so that the principal parts are well behaved, independent of
+the sign of the conformal factor Ω, there occur in general in the lower order terms factors
+of the form Ω
+−k
+, k = 1, 2. These will blow up precisely at the set where the conformal
+factor Ω approaches zero, i.e. at the prospective location of the conformal boundary. One
+type of singularity is associated with the coefficient μ. Assuming that μ = 0, we get rid of
+it. The remaining singularities are related to the mass m. It turns out that the singular
+4
+
+terms occur in the scalar field equation as well as in the geometric background equations
+always in the form 
+(
+m
+2 
+− 
+2
+3 
+λ
+) 
+Ω
+−k
+, k = 1, 2. Somewhat unexpected, the complete system
+of conformal field equations will thus be regular if the single condition
+(∗) m
+2 
+= 
+2
+3 
+λ,
+is imposed. We note that it can be non-trivially satisfied for real m 6 = 0 only with the
+present sign of the cosmological constant. In the rest of the introduction we shall assume
+this condition to be satisfied.
+The construction of initial data for the system (1.1), (1.2), (1.3) has been studied under
+fairly general assumptions in [4]. From the discussion above it is clear, however, that not all
+of these data will develop into solutions that admit a smooth conformal boundary. To get
+an insight into the class of solutions which do admit such boundaries, we analyze in section
+4 the constraints induced by the conformal field equations on the set {Ω = 0}, assuming it
+to be given as a smooth compact 3-manifold in the conformally extended solution space-
+time. As observed already in the vacuum case ([6]), the Hamiltonian constraint drops out.
+This leads to a considerable simplification, the data can be prescribed freely up to solving
+a linear system.
+In a suitable gauge the conformal field equations for the coupled system induce again
+hyperbolic evolution equations that preserve the constraints and the gauge conditions.
+They can be used to determine forward and backward time developments of the data on
+{Ω = 0} which provide away from {Ω = 0} solutions to the system (1.1), (1.2), (1.3).
+Denote by A
+S 
+the Cauchy data induced on the Cauchy hypersurfaces of these solutions
+and by D
+S 
+all Cauchy data for the system (1.1), (1.2), (1.3). It follows then as before,
+that the set A
+S 
+is open in D
+S 
+. In fact, it follows with the observations mentioned above
+that the solutions, their asymptotic behaviour, as well as their smooth extensibility across
+the conformal boundary are not only stable under perturbations of the scalar field and the
+geometric background fields but the perturbations may also involve zero rest-mass fields.
+That there has to be observed a specific relation between the mass m and the cos-
+mological constant λ could give rise to worries if each of these quantities already had a
+specific meaning of its own independent of the other one. So far, however, the matter field
+and its mass have no specific interpretation and if they are given one, the relation to the
+cosmological may even acquire some predictive power (‘a relation between the cosmological
+constant and the dark matter’ ?). All this depends on the choice of the matter field and
+the role assigned to it in a space-time model. In this context it should be emphasized that
+the discussion in this article has been restricted to the scalar field only for the purpose of
+illustration, other fields could be considered as well.
+To get an idea of the order of magnitude of the mass considered here we use the value
+λ ≈ 1, 7 × 10
+−121 
+in Planck units given in [2] (ignoring the fact that the cosmological
+model underlying the derivation of this value is different from the one referred to in the
+beginning of this article). Replacing m in the equation above by 
+m c
+ℏ 
+and converting units
+we find the exceedingly small mass m ≈ 4 × 10
+−33 
+eV /c
+2
+. It is interesting to note that in
+a study concerned with the recent acceleration of the universe Leonard Parker and Alpan
+Raval were led to consider, by a completely different reasoning, masses of a similar order
+of magnitude [11].
+5
+
+This article focusses on the unexpected fact that the conformal equations can be
+regular at the conformal boundaries. This does not mean that cases of the Einstein-scalar
+field system for which condition (∗) is violated cannot be of interest. On the contrary, it
+would be most interesting to understand the significance of condition (∗) with respect to
+the asymptotic behavior of solutions in this set and to see whether the system (1.1), (1.2),
+(1.3) admits a range of masses for which the notion of crossover surface can be generalized
+and the conformal structure can be extended in a unique way. After all, it can be expected
+that transitions from exponentially expanding to big bang phases are accompanied with
+losses of smoothness and that the insistence on too strict smoothness requirements may
+obstruct a modeling of such transitions.
+In section 5 we discuss whether the evolution of massive field across the crossover
+surfaces may allow us to get some insight into the problem of this ‘phase transition’. To
+simplify matters, we set κ = 1 (or absorb it into the scalar field) and assume a scaling
+by a constant overall factor so that λ = 3 whence m = 
+√
+2. Then we consider spatially
+homogeneous solutions with a linear massive scalar field so that the physical fields are of
+the form
+ˆg = −dt
+2 
++ f 
+2 
+k, φ = φ(t) on R × S,
+where f = f (t) > 0 and k denotes a Riemannian metric with constant curvature R
+abcd
+[k] =
+2 ǫ k
+a[c 
+k
+d]b
+, ǫ = 1, 0, −1. In a convenient conformal and coordinate gauge the conformal
+metric then takes the form
+g = −dτ 
+2 
++ k,
+and the conformal field equations reduce to a regular system of ODE’s of second order for
+Ω and the rescaled matter field ψ = Ω
+−1 
+φ and a constraint which involves Ω, ψ and their
+derivatives of first order. We consider solutions determined by the backward development
+of data on {τ = 0} = {Ω = 0}. The constraint is satisfied there if Ω
+′
+(0) = −1 while the
+data ψ(0), ψ
+′
+(0) can be prescribed freely.
+The most interesting case ǫ = 1 is discussed in some detail. If ψ(0), ψ
+′
+(0) are chosen
+to vanish, the solution is given by Ω
+dS 
+= − sin τ , ψ
+dS 
+= 0. Its restriction to the intervall
+−π < τ < 0, is conformal to the de Sitter space-time. The stability properties of Ω
+dS 
+,
+ψ
+dS 
+then ensure that there exists a large set of smooth solutions Ω, ψ 6 ≡ 0 so that Ω(τ
+z 
+) =
+Ω(0) = 0 for some τ
+z 
+< 0 and Ω > 0 in the interval ]τ
+z 
+, 0[, in which it assumes its absolute
+maximum value Ω
+m 
+at a point τ
+m
+. The corresponding physical solutions can be thought
+of as arising from asymptotic data on the ‘crossover surface’ {τ = τ
+z 
+}, developing a ‘waist’
+of volume Ω
+−3
+m 
+V ol(S
+3
+) at τ
+m
+, and then expanding exponentially until they approach the
+next crossover surface at {τ = 0}. We denote the set of these solutions by B. All solutions
+in B are non-linearly stable under generic perturbations involving the scalar field, the
+geometric fields, and zero-rest mass fields.
+There is a solution not belonging to B which is of particular interest in our context.
+It is given by Ω
+∗ 
+= −τ , ψ
+∗ 
+= 
+√
+2. Its restriction to the domain where Ω > 0 defines a
+physical field that is given in terms of the coordinate t = − log(−τ ) by
+˜g = −dt
+2 
++ e
+2t 
+k, φ = 
+√
+2 e
+−t
+.
+As t → −∞ the matter field φ grows unboundedly while it decays and the metric shows a de
+Sitter-type expansion behaviour as t → ∞. If the solution Ω
+∗
+, ψ
+∗ 
+could be approximated on
+6
+
+any given interval of the form [z, 0], z < 0, by solutions in B there will exist solutions with
+an arbitrarily narrow waist. The restriction of such solutions to the range ]τ
+m
+, 0[ would,
+from the point of view of observational data, hardly be distinguishable from solutions
+which start with a big bang and then expand exponentially. No attempt is made in this
+article to decide about this question because it requires a detailed analysis of the solution
+space.
+2 The conformal field equations.
+We consider a 4-dimensional manifold M with smooth boundary J and interior 
+ˆ
+M =
+M \ J . Let ˆg and g denote Lorentz metrics on 
+ˆ
+M and M respectively which satisfy
+g
+μν 
+= Ω
+2 
+ˆg
+μν 
+on 
+ˆ
+M ,
+with a conformal factor Ω that is given by a smooth function on M such that
+Ω > 0 on 
+ˆ
+M , Ω = 0, dΩ 6 = 0 on J .
+In the following J will be thought of as being space-like with respect to g, though in the
+end this will be a consequence of the field equations (cf. (4.3)). It is assumed that ˆg
+satisfies Einstein’s field equations
+ˆ
+R
+μν 
+− 
+1
+2 
+ˆ
+R ˆg
+μν 
++ λ ˆg
+μν 
+= κ 
+ˆ
+T
+μν 
+(2.1)
+with cosmological constant λ > 0. The matter fields will be specified later.
+To formulate these equations in terms of the conformal metric g, the conformally
+transformed matter fields, and a number of fields derived from them, we note the contrac-
+tion
+− 
+ˆ
+R + 4 λ = κ 
+ˆ
+T . (2.2)
+and use the general conformal transformation relation
+R
+μν 
++ 
+2
+Ω 
+∇
+μ 
+∇
+ν 
+Ω +
+( 
+1
+Ω 
+∇
+ρ 
+∇
+ρ
+Ω − 
+3
+Ω
+2 
+∇
+ρ
+Ω ∇
+ρ
+Ω
+)
+g
+μν 
+= 
+ˆ
+R
+μν 
+, (2.3)
+and its trace
+R + 
+6
+Ω 
+∇
+ρ 
+∇
+ρ
+Ω − 
+12
+Ω
+2 
+∇
+ρ
+Ω ∇
+ρ
+Ω = 
+1
+Ω
+2 
+ˆ
+R, (2.4)
+where the covariant derivative operator ∇ and the index operations on the left hand sides
+refer to the metric g. With the definition
+s ≡ 
+1
+4 
+∇
+ρ 
+∇
+ρ
+Ω + 
+1
+24 
+Ω R, (2.5)
+equation (2.4) takes the form
+6 Ω s − 3 ∇
+ρ
+Ω ∇
+ρ
+Ω = 
+1
+4 
+ˆ
+R, (2.6)
+7
+
+and equation (2.3) can be rewritten
+∇
+μ 
+∇
+ν 
+Ω = − Ω L
+μν 
++ s g
+μν 
++ Ω 
+ˆ
+S
+μν 
+, (2.7)
+where
+L
+μν 
+= 
+1
+2
+(
+R
+μν 
+− 
+1
+6 
+R g
+μν
+)
+and 
+ˆ
+S
+μν 
+= 
+1
+2
+(
+ˆ
+R
+μν 
+− 
+1
+4 
+ˆ
+R ˆg
+μν
+)
+,
+denote the Schouten tensor of g and (half of) the trace-free part of the Ricci tensor of ˆg
+respectively. To derive a differential equation for s we observe that the general conformal
+transformation relations for covariant derivatives and derived tensor fields and the Bianchi
+identity imply
+g
+ρν 
+∇
+ρ 
+ˆ
+S
+νμ 
+= 
+1
+Ω
+2 
+ˆg
+ρν 
+ˆ
+∇
+ρ 
+ˆ
+S
+νμ 
++ 
+2
+Ω 
+∇
+ρ 
+Ω 
+ˆ
+S
+ρμ 
+= 
+1
+8 Ω
+2 
+ˆ
+∇
+μ 
+ˆ
+R + 
+2
+Ω 
+∇
+ρ 
+Ω 
+ˆ
+S
+ρμ
+.
+Applying a derivative to (2.7), commuting on the left hand side covariant derivatives, and
+performing a contraction then gives
+∇
+μ 
+s = − ∇
+ρ
+Ω L
+ρμ 
++ ∇
+ρ
+Ω 
+ˆ
+S
+ρν 
++ 
+1
+24 Ω 
+ˆ
+∇
+μ 
+ˆ
+R. (2.8)
+With the decomposition
+R
+μρνλ 
+= C
+μρνλ 
++ 2 
+{
+g
+μ[ν 
+L
+λ]ρ 
++ L
+μ[ν 
+g
+λ]ρ
+} 
+,
+of the curvature tensor into the conformal Weyl tensor and the Schouten tensor the once
+contracted Bianchi identity for the curvature tensor of g can be written
+∇
+μ
+C
+μ 
+ρνλ 
+= 2 ∇
+[ν 
+L
+λ]ρ
+, (2.9)
+and the analogue for ˆg reads
+ˆ
+∇
+μ 
+ˆ
+C
+μ 
+ρνλ 
+= 2 
+ˆ
+∇
+[ν 
+ˆ
+L
+λ]ρ
+. (2.10)
+With the conformal covariance relations
+C
+μ 
+ρνλ 
+= 
+ˆ
+C
+μ 
+ρνλ
+, ∇
+μ
+(Ω
+−1 
+C
+μ 
+ρνλ
+) = Ω
+−1 
+ˆ
+∇
+μ 
+ˆ
+C
+μ 
+ρνλ
+,
+and the definition
+W 
+μ 
+ρνλ 
+≡ Ω
+−1 
+C
+μ 
+ρνλ
+,
+equation (2.10) can be written
+∇
+μ 
+W 
+μ 
+ρνλ 
+= 2 Ω
+−1 
+ˆ
+[∇
+ν 
+ˆ
+L
+λ]ρ
+, (2.11)
+while (2.9) reads
+∇
+ν 
+L
+λρ 
+− ∇
+λ 
+L
+νρ 
+= ∇
+μ
+Ω W 
+μ 
+ρνλ 
++ 2 
+ˆ
+∇
+[ν 
+ˆ
+L
+λ]ρ
+. (2.12)
+Taking now into account the the field equations (2.1), we get the equations above in the
+form
+8
+
+6 Ω s − 3 ∇
+ρ
+Ω ∇
+ρ
+Ω − λ = − 
+κ
+4 
+ˆ
+T , (2.13)
+∇
+μ 
+∇
+ν 
+Ω + Ω L
+μν 
+− s g
+μν 
+= 
+κ
+2 
+Ω T 
+∗
+μν 
+, (2.14)
+∇
+μ 
+s + ∇
+ρ
+Ω L
+ρμ 
+= 
+κ
+2 
+∇
+ρ
+Ω T 
+∗
+ρμ 
+− 
+κ
+24 Ω 
+ˆ
+∇
+μ 
+ˆ
+T , (2.15)
+∇
+ν 
+L
+λρ 
+− ∇
+λ 
+L
+νρ 
+− ∇
+μ
+Ω W 
+μ 
+ρνλ 
+= 2 
+ˆ
+∇
+[ν 
+ˆ
+L
+λ]ρ
+, (2.16)
+∇
+μ 
+W 
+μ 
+ρνλ 
+= 2 Ω
+−1 
+ˆ
+∇
+[ν 
+ˆ
+L
+λ]ρ
+, (2.17)
+with
+T 
+∗
+ρμ 
+= 
+ˆ
+T
+ρμ 
+− 
+1
+4 
+ˆ
+T ˆg
+ρμ
+, 
+ˆ
+∇
+ρ 
+ˆ
+L
+μν 
+= 
+κ
+2 
+ˆ
+∇
+ρ
+(
+ˆ
+T
+μν 
+− 
+1
+3 
+ˆ
+T ˆg
+μν
+)
+.
+The first of these equations may be considered as a constraint which will be satisfied
+if the initial data are arranged accordingly: If (2.13) holds at a point p and (2.14), (2.15)
+are satisfied on a connected neighbourhood U of p, then (2.13) holds on U . In fact, a direct
+calculation using (2.14), (2.15) implies that
+∇
+μ
+(6 Ω s − 3 ∇
+ρ
+Ω ∇
+ρ
+Ω − λ + 
+κ
+4 
+ˆ
+T ) = 0.
+The equations above for the tensorial inknowns Ω, s, L
+μν 
+, W 
+μ 
+ρνλ
+, have to be combined
+with equations which determine the metric and the connection. One possibility to do this
+is to write the structural equations as equations for the unknowns e
+μ 
+k
+, Γ
+i 
+k 
+j 
+, where the
+first set of fields are the coefficients of a g-orthonormal frame field e
+k 
+= e
+μ 
+k 
+∂
+x
+μ 
+with
+respect to a coordinate system x
+μ 
+so that g(e
+i
+, e
+j 
+) = g
+μν 
+e
+μ 
+i 
+e
+ν 
+j 
+= η
+ij 
+and the second set
+of fields are the associated connection coefficients Γ
+i 
+k 
+j 
+defined by ∇
+i 
+e
+j 
+= Γ
+i 
+k 
+j 
+e
+k 
+with
+∇
+i 
+= ∇
+e
+i 
+, which satisfy Γ
+ijk 
+= −Γ
+ikj 
+where Γ
+ijk 
+= Γ
+i 
+l 
+k 
+η
+lj 
+. In terms of these unknowns
+the structural equations take the form of the torsion-free condition
+e
+μ 
+i, ν 
+e
+ν 
+j 
+− e
+μ 
+j, ν 
+e
+ν 
+i 
+= (Γ
+j 
+k 
+i 
+− Γ
+i 
+k 
+j 
+) e
+μ 
+k
+, (2.18)
+and the Ricci identity
+Γ
+l 
+i 
+j, μ 
+e
+μ 
+k 
+− Γ
+k 
+i 
+j, μ 
+e
+μ 
+l 
++ 2 Γ
+[k 
+i p 
+Γ
+l]pj 
+− 2 Γ
+[k 
+p 
+l] 
+Γ
+p 
+i 
+j 
+(2.19)
+= Ω W 
+i 
+jkl 
++ 2 {g
+i 
+[k 
+L
+l]j 
++ L
+i 
+[k 
+g
+l]j 
+}.
+If equations (2.13) to (2.17) are expressed in terms of the frame and combined with the
+strutural equations, they are equivalent to Einstein’s vacuum equations where Ω 6 = 0.
+The vacuum case is characterized by vanishing right hand sides of equations (2.13) to
+(2.17). If the resulting system is written with respect to a suitable choice of coordinates
+and frame field, and if the conformal factor is controlled by specifying the Ricci scalar
+as a function of the coordinates (which can locally be prescribed in an arbitrary way),
+9
+
+the combined system implies equations which are hyperbolic even where Ω changes sign.
+Moreover, they preserve the constraints and the gauge conditions. Dicussions of this fact,
+giving various versions of hyperbolic systems, can be found in [5], [6], [7]. The case of
+zero rest-mass fields for which the energy momentum tensor is trace free is similar and
+has been discussed in [8]. The details will not be reproduced here.
+In the following we will be interested in fields with non-vanishing rest-mass. The
+further analysis depends very much on the specific behaviour of the matter fields and the
+associated energy momentum tensor under conformal rescalings.
+3 The non-linear massive scalar field.
+In the following we consider a scalar field φ that satisfies an equation of the form
+ˆ
+∇
+μ 
+ˆ
+∇
+μ
+φ − (m
+2 
+φ + V 
+′
+(φ)) = 0, (3.1)
+with energy momentum tensor
+ˆ
+T
+μν 
+= 
+ˆ
+∇
+μ
+φ 
+ˆ
+∇
+ν 
+φ −
+( 
+1
+2 
+( 
+ˆ
+∇
+ρ
+φ 
+ˆ
+∇
+ρ
+φ + m
+2 
+φ
+2
+) + V (φ)
+)
+ˆg
+μν 
+, (3.2)
+and a potential of the form
+V (φ) = μ φ
+3 
++ φ
+4 
+U (φ), (3.3)
+where μ is a real coefficient and U a smooth real-valued function. This form is assumed
+because we wish to discuss the cosmological constant, the mass term, and the constant
+coefficient μ seperately and because V 
+′
+(0) = 0 ensures that the coupled Einstein scalar
+field equations admit solutions with φ = 0.
+In four dimensions holds for arbitrary smooth functions φ the transformation law
+(
+
+g 
+− 
+1
+6 
+R
+)
+[Ω
+−1 
+φ] = Ω
+−3
+(
+
+ˆg 
+− 
+1
+6 
+ˆ
+R
+)
+[φ]. (3.4)
+In terms of the new unknown
+ψ = Ω
+−1 
+φ,
+equation (3.1) takes then with (2.2) the form
+(
+
+g 
+− 
+1
+6 
+R
+)
+[ψ] = Ω
+−2
+(
+m
+2 
+− 
+2
+3 
+λ + 
+κ
+6 
+ˆ
+T
+)
+ψ + Ω
+−3 
+V 
+′
+(Ω ψ), (3.5)
+where
+Ω
+−3 
+V 
+′
+(Ω ψ) = 3 μ Ω
+−1 
+ψ
+2 
++ 4 ψ
+3 
+U (Ω ψ) + Ω ψ
+4 
+U 
+′
+(Ω ψ).
+To ensure the regularity of this term where Ω → 0 it will be assumed in the following that
+μ = 0.
+The trace of the energy momentum tensor (3.2) now reads
+ˆ
+T = −Ω
+2 
+{
+∇
+ρ
+(Ω ψ) ∇
+ρ
+(Ω ψ) + 2 m
+2 
+ψ
+2 
++ 4 Ω
+−2 
+V (Ω ψ)
+} 
+, (3.6)
+10
+
+so that
+T
+∗ 
+≡ Ω
+−2 
+ˆ
+T = −∇
+ρ
+(Ω ψ) ∇
+ρ
+(Ω ψ) − 2 m
+2 
+ψ
+2 
+− 4 Ω
+−2 
+V (Ω ψ), (3.7)
+is well behaved as Ω → 0. The relations (2.2) and (2.6) imply
+∇
+ρ
+Ω ∇
+ρ
+Ω = − 
+λ
+3 
++ 2 Ω s + 
+κ
+12 
+Ω
+2 
+T
+∗
+, (3.8)
+and thus
+T
+∗ 
+=
+( 
+λ
+3 
+− 2 m
+2
+)
+ψ
+2 
+− 2 Ω (s ψ
+2 
++ ψ ∇
+π 
+Ω ∇
+π 
+ψ) (3.9)
+−Ω
+2 
+( 
+κ
+12 
+ψ
+2 
+T
+∗ 
++ ∇
+π 
+ψ ∇
+π 
+ψ
+)
+− 4 Ω
+−2 
+V (Ω ψ).
+From this we get
+T
+∗ 
+=
+(
+1 + 
+κ
+12 
+ψ
+2 
+Ω
+2
+)
+−1 
+{( 
+λ
+3 
+− 2 m
+2
+)
+ψ
+2 
+− 2 Ω (s ψ
+2 
++ ψ ∇
+π 
+Ω ∇
+π 
+ψ) (3.10)
+− Ω
+2 
+∇
+π 
+ψ ∇
+π 
+ψ − 4 Ω
+−2 
+V (Ω ψ)
+}
+,
+which is a smooth function for all (real) values of the unkowns ψ, ∇
+μ
+ψ, Ω, and s. In the
+following calculations it will be convenient, however, to use the equation in the form (3.9).
+It follows
+
+g
+ψ − 
+1
+6 
+R ψ = Ω
+−2
+(
+m
+2 
+− 
+2
+3 
+λ
+)
+ψ + 
+κ
+6 
+T
+∗
+ψ + 4 ψ
+3 
+U (Ω ψ) + Ω ψ
+4 
+U 
+′
+(Ω ψ). (3.11)
+We note that if the background fields are given this is a semi-linear equation for ψ whose
+right hand side depends via T
+∗ 
+also on the derivative ∇
+μ
+ψ. Its most conspicuous feature,
+however, is the first term on the right hand side, which is singular where Ω → 0.
+We are in a position now to state our main result.
+Theorem 3.1 Consider the energy momentum tensor given by (3.2), a potential (3.3)
+with μ = 0, and the coupled system of equations (2.13), (2.14), (2.15), (2.16), (2.17),
+(2.18), (2.19), (3.11) for the unknowns
+e
+μ 
+k
+, Γ
+i 
+k 
+j 
+, Ω, s, L
+μν 
+, W 
+μ 
+ρνλ
+, ψ. (3.12)
+If and only if the single condition
+m
+2 
+= 
+2
+3 
+λ, (3.13)
+is satisfied this system is regular in the sense that on the right hand sides of the equations
+no terms of the form Ω
+−k
+, k > 0, occur and the right hand sides are in fact smooth
+function of the unknowns.
+11
+
+Remarks:
+We note that the condition above can be satisfied with real m only with the de Sitter-
+type sign of the cosmological constant.
+Because some of the equations involve derivatives of the energy momentum tensor they
+contain derivatives of ψ of second order. Applying a derivative to (3.11) and commuting
+operators one obtains a wave equation for ∇
+μ
+ψ and thus altogether a quasi-linear, overde-
+termined system of equations for the unknowns (3.12) and ∇
+μ
+ψ. After fixing a suitable
+gauge one can extract from the complete set of equations a hyperbolic evolution system
+which preserves the gauge conditions and the constraints. Since various versions of this
+procedure have been discussed at lenght in the references given above we shall not go into
+the details here.
+It should be noted that the compactness of the manifold S plays no role in this result.
+Proof of Theorem 3.1: It follows immediately that (3.13) renders equation (3.11) regu-
+lar. Equations (2.18), (2.19) are obviously regular. We discuss the nature of the singularity
+of the remaining equations. The trace free part of the energy momentum tensor takes the
+form
+T 
+∗
+μν 
+= ∇
+μ
+(Ωψ) ∇
+ν 
+(Ω ψ) − 
+1
+4 
+∇
+ρ
+(Ωψ) ∇
+ρ
+(Ωψ) g
+μν 
+, (3.14)
+= ψ
+2
+(∇
+μ
+Ω ∇
+ν 
+Ω − 
+1
+4 
+∇
+π 
+Ω ∇
+π 
+Ω g
+μν 
+)
++2 Ω ψ (∇
+(μ
+Ω ∇
+ν)
+ψ − 
+1
+4 
+∇
+π 
+Ω ∇
+π 
+ψ g
+μν 
+)
++Ω
+2 
+(∇
+μ
+ψ ∇
+ν 
+ψ − 
+1
+4 
+∇
+π 
+ψ ∇
+π 
+ψ g
+μν 
+),
+and is thus regular. It follows that equation (2.13), given now by (3.8) and equations
+(2.14), and (2.15) with 
+ˆ
+∇
+μ 
+ˆ
+T = ∇
+μ 
+(Ω
+2 
+T
+∗
+), are regular as Ω → 0. Critical are equations
+(2.16), (2.17). With the notation above we have
+ˆ
+L
+μν 
+= 
+κ
+2 
+T 
+∗
+μν 
+− 
+κ
+24 
+ˆ
+T ˆg
+μν 
++ 
+λ
+6 
+ˆg
+μν 
+.
+While the first two terms on the right hand side are regular since 
+ˆ
+T ˆg
+μν 
+= T
+∗ 
+g
+μν 
+, the last
+term is singular if it is expressed in terms of g
+μν 
+. However, this term is annihilated by the
+operator 
+ˆ
+∇
+ρ 
+and it follows
+ˆ
+∇
+ρ 
+ˆ
+L
+μν 
+= 
+κ
+2 
+ˆ
+∇
+ρ 
+T 
+∗
+μν 
+− 
+κ
+24 
+Ω
+−2 
+∇
+ρ
+(Ω
+2 
+T
+∗
+) g
+μν
+= 
+κ
+2 
+∇
+ρ 
+T 
+∗
+μν 
+− 
+κ
+24 
+∇
+ρ
+T
+∗ 
+g
+μν 
+− 
+κ
+12 
+Ω
+−1 
+T
+∗ 
+∇
+ρ
+Ω g
+μν
++ 
+κ
+2 
+Ω
+−1 
+(
+3 ∇
+(ρ 
+Ω T 
+∗
+μ)ν 
++ ∇
+[ρ
+Ω T 
+∗
+μ]ν 
++ ∇
+ν 
+Ω T 
+∗
+ρμ 
+− g
+ρμ 
+T 
+∗
+νδ
+∇
+δ
+Ω − g
+νρ 
+T 
+∗
+μδ
+∇
+δ 
+Ω
+)
+,
+whence
+ˆ
+∇
+[ρ 
+ˆ
+L
+μ]ν 
+= 
+κ
+2
+{
+∇
+[ρ 
+T 
+∗
+μ]ν 
+− 
+1
+12 
+∇
+[ρ
+T
+∗ 
+g
+μ]ν 
+(3.15)
+12
+
++Ω
+−1
+(
+∇
+[ρ
+Ω T 
+∗
+μ]ν 
++ ∇
+π 
+Ω T 
+∗
+π[ρ 
+g
+μ]ν 
+− 
+1
+6 
+T
+∗ 
+∇
+[ρ
+Ω g
+μ]ν
+)}
+.
+Direct calculations using (3.14), (2.14) and (3.8) give
+∇
+[ρ 
+T 
+∗
+μ]ν 
+=
+λ
+6 
+ψ ∇
+[ρ
+ψ g
+μ]ν 
+− ψ ∇
+[ρ
+Ω ∇
+μ]
+ψ ∇
+ν 
+Ω −
+( 
+3
+2 
+s ψ
+2 
++ 
+1
+2 
+ψ ∇
+π 
+Ω ∇
+π 
+ψ
+)
+∇
+[ρ
+Ω g
+μ]ν
++Ω
+{
+− 
+1
+2 
+∇
+π 
+ψ ∇
+π 
+ψ ∇
+[ρ
+Ω g
+μ]ν 
+−
+(
+2 s ψ + 
+1
+2 
+∇
+π 
+Ω ∇
+π 
+ψ
+)
+∇
+[ρ
+ψ g
+μ]ν
++ψ
+2
+(
+∇
+[ρ
+Ω L
+μ]ν 
++ 
+1
+2 
+∇
+π 
+Ω L
+π[ρ 
+g
+μ]ν
+)
+− ψ
+(
+∇
+[ρ
+Ω ∇
+μ]
+∇
+ν 
+ψ + 
+1
+2 
+∇
+π 
+Ω ∇
+π 
+∇
+[ρ
+ψ g
+μ]ν
+)
++∇
+[ρ
+Ω ∇
+μ]
+ψ ∇
+ν 
+ψ − 
+κ
+2 
+ψ
+2 
+∇
+[ρ
+Ω T 
+∗
+μ]ν 
+− 
+κ
+4 
+ψ
+2 
+∇
+π 
+Ω T 
+∗
+π[ρ 
+g
+μ]ν
+}
++Ω
+2
+{
+ψ ∇
+[ρ
+ψ L
+μ]ν 
+− ∇
+[ρ
+ψ ∇
+μ]
+∇
+ν 
+ψ − 
+1
+2 
+∇
+π 
+ψ ∇
+π 
+∇
+[ρ
+ψ g
+μ]ν
+− 
+κ
+24 
+ψ T
+∗ 
+∇
+[ρ
+ψ g
+μ]ν 
+− 
+κ
+2 
+ψ ∇
+[ρ
+ψ T 
+∗
+μ]ν
+}
+,
+− 
+1
+12 
+∇
+[ρ
+T
+∗ 
+g
+μ]ν 
+=
+( 
+m
+2
+3 
+− 
+λ
+18
+)
+ψ ∇
+[ρ
+ψ g
+μ] ν 
++ 
+1
+6 
+(s ψ
+2 
++ ψ ∇
+π 
+Ω ∇
+π 
+ψ)∇
+[ρ
+Ω g
+μ]ν
++Ω
+{( 
+1
+2 
+s ψ + 
+1
+6 
+∇
+π 
+Ω ∇
+π 
+ψ
+)
+∇
+[ρ
+ψ g
+μ]ν 
++ 
+1
+6 
+∇
+π 
+ψ ∇
+π 
+ψ ∇
+[ρ
+Ω g
+μ]ν
++ 
+1
+6 
+ψ ∇
+π 
+Ω ∇
+π 
+∇
+[ρ
+ψ g
+μ]ν 
+− 
+1
+6 
+ψ
+2 
+∇
+π 
+Ω L
+π[ρ 
+g
+μ]ν 
++ 
+κ
+12 
+ψ
+2 
+∇
+π 
+Ω T 
+∗
+π[ρ 
+g
+μ]ν
+}
++Ω
+2 
+{ 
+κ
+72 
+ψ T
+∗ 
+∇
+[ρ
+ψ g
+μ] ν 
++ 
+κ
+12 
+ψ ∇
+π 
+ψ T 
+∗
+π[ρ 
+g
+μ]ν
+− 
+1
+6 
+ψ ∇
+π 
+ψ L
+π[ρ 
+g
+μ]ν 
++ 
+1
+6 
+∇
+π 
+ψ ∇
+π 
+∇
+[ρ
+ψ g
+μ]ν
+}
+,
+− 
+1
+3
+{(
+2 Ω
+−3 
+V (Ω ψ) − Ω
+−2 
+ψ V 
+′
+(Ω ψ)
+) 
+∇
+[ρ
+Ω g
+μ]ν 
+− Ω
+−1 
+V 
+′
+(Ωψ) ∇
+[ρ
+ψ g
+μ]ν
+}
+∇
+[ρ 
+Ω T 
+∗
+μ]ν 
+= 
+λ
+12 
+ψ
+2 
+∇
+[ρ
+Ω g
+μ]ν
++Ω
+{
+− 
+1
+2 
+(s ψ
+2 
++ ψ ∇
+π 
+Ω ∇
+π 
+ψ) ∇
+[ρ
+Ω g
+μ]ν 
++ ψ ∇
+[ρ
+Ω ∇
+μ]
+ψ ∇
+ν 
+Ω
+}
++Ω
+2
+{
+∇
+[ρ
+Ω ∇
+μ]
+ψ ∇
+ν 
+ψ −
+( 
+1
+4 
+∇
+π 
+ψ ∇
+π 
+ψ + 
+κ
+48 
+ψ
+2 
+T
+∗
+)
+∇
+[ρ
+Ω g
+μ]ν
+}
+,
+13
+
+∇
+π 
+Ω T 
+∗
+π[ρ 
+g
+μ]ν 
+=
+− 
+λ
+4 
+ψ
+2 
+∇
+[ρ
+Ω g
+μ]ν 
++ Ω
+{( 
+3
+2 
+s ψ
+2 
++ 
+1
+2 
+ψ ∇
+π 
+Ω ∇
+π 
+ψ
+)
+∇
+[ρ
+Ω g
+μ]ν 
+− 
+λ
+3 
+ψ ∇
+[ρ
+ψ g
+μ]ν
+}
++Ω
+2
+{
+(
+2 s ψ + ∇
+π 
+Ω ∇
+π 
+ψ + 
+κ
+12 
+Ω ψ T
+∗
+)
+∇
+[ρ
+ψ g
+μ]ν 
++
+( 
+κ
+16 
+ψ
+2 
+T
+∗ 
+− 
+1
+4 
+∇
+π 
+ψ ∇
+π 
+ψ
+)
+∇
+[ρ
+Ω g
+μ]ν
+}
+,
+− 
+1
+6 
+T
+∗ 
+∇
+[ρ
+Ω g
+μ]ν 
+=
+( 
+m
+2
+3 
+− 
+λ
+18
+)
+ψ
+2 
+∇
+[ρ
+Ω g
+μ]ν 
++ Ω
+( 
+1
+3 
+s ψ
+2 
++ 
+1
+3 
+ψ ∇
+π 
+Ω ∇
+π 
+ψ
+)
+∇
+[ρ
+Ω g
+μ]ν
++Ω
+2
+( 
+1
+6 
+∇
+π 
+ψ ∇
+π 
+ψ + 
+κ
+72 
+ψ
+2 
+T
+∗
+)
+∇
+[ρ
+Ω g
+μ]ν 
++ 
+2
+3 
+Ω
+−2 
+V (Ω ψ) ∇
+[ρ
+Ω g
+μ]ν 
+,
+whence 
+1
+Ω
+(
+∇
+[ρ
+Ω T 
+∗
+μ]ν 
++ ∇
+π 
+Ω T 
+∗
+π[ρ 
+g
+μ]ν 
+− 
+1
+6 
+T
+∗ 
+∇
+[ρ
+Ω g
+μ]ν
+)
+=
+1
+3 Ω
+(
+m
+2 
+− 
+2λ
+3
+)
+ψ
+2 
+∇
+[ρ
+Ω g
+μ]ν
++
+( 
+4
+3 
+s ψ
+2 
++ 
+1
+3 
+ψ ∇
+π 
+Ω ∇
+π 
+ψ
+)
+∇
+[ρ
+Ω g
+μ]ν 
++ ψ ∇
+[ρ
+Ω ∇
+μ]
+ψ ∇
+ν 
+Ω − 
+λ
+3 
+ψ ∇
+[ρ
+ψ g
+μ]ν
++Ω
+{
+∇
+[ρ
+Ω ∇
+μ]
+ψ ∇
+ν 
+ψ +
+(
+2 s ψ + ∇
+π 
+Ω ∇
+π 
+ψ + 
+κ
+12 
+Ω ψ T
+∗
+)
+∇
+[ρ
+ψ g
+μ]ν
++
+( 
+κ
+18 
+ψ
+2 
+T
+∗ 
+− 
+1
+3 
+∇
+π 
+ψ ∇
+π 
+ψ
+)
+∇
+[ρ
+Ω g
+μ]ν
+}
++ 
+2
+3 
+Ω
+−3 
+V (Ω ψ) ∇
+[ρ
+Ω g
+μ]ν 
+,
+and thus finally
+ˆ
+∇
+[ρ 
+ˆ
+L
+μ]ν 
+= 
+κ
+2
+[ 
+1
+3
+(
+1 + 
+ψ
+Ω
+) (
+m
+2 
+− 
+2 λ
+3
+)
+ψ ∇
+[ρ
+ψ g
+μ] ν 
++ Ω K
+ρμν
+]
+, (3.16)
+with the field
+K
+ρμν 
+=
++
+( 
+κ
+18 
+ψ
+2 
+T
+∗ 
+− 
+2
+3 
+∇
+π 
+ψ ∇
+π 
+ψ
+)
+∇
+[ρ
+Ω g
+μ]ν 
++
+( 
+1
+2 
+s ψ + 
+2
+3 
+∇
+π 
+Ω ∇
+π 
+ψ + 
+κ
+12 
+Ω ψ T
+∗
+)
+∇
+[ρ
+ψ g
+μ]ν
+−ψ ∇
+[ρ
+Ω ∇
+μ]
+∇
+ν 
+ψ + ψ
+2 
+∇
+[ρ
+Ω L
+μ]ν 
++ 
+1
+3 
+ψ
+2 
+∇
+π 
+Ω L
+π[ρ 
+g
+μ]ν 
+− 
+1
+3 
+ψ ∇
+π 
+Ω ∇
+π 
+∇
+[ρ
+ψ g
+μ]ν
+− 
+κ
+2 
+ψ
+2 
+∇
+[ρ
+Ω T 
+∗
+μ]ν 
+− 
+κ
+6 
+ψ
+2 
+∇
+π 
+Ω T 
+∗
+π[ρ 
+g
+μ]ν 
++ 2 ∇
+[ρ
+Ω ∇
+μ]
+ψ ∇
+ν 
+ψ
++Ω
+{
+−∇
+[ρ
+ψ ∇
+μ]
+∇
+ν 
+ψ − 
+1
+3 
+∇
+π 
+ψ ∇
+π 
+∇
+[ρ
+ψ g
+μ]ν 
+− 
+κ
+36 
+ψ T
+∗ 
+∇
+[ρ
+ψ g
+μ]ν
+14
+
+− 
+κ
+2 
+ψ ∇
+[ρ
+ψ T 
+∗
+μ]ν 
++ 
+κ
+12 
+ψ ∇
+π 
+ψ T 
+∗
+π[ρ 
+g
+μ]ν 
++ ψ ∇
+[ρ
+ψ L
+μ]ν 
+− 
+1
+6 
+ψ ∇
+π 
+ψ L
+π[ρ 
+g
+μ]ν
+}
++ 
+1
+3 
+Ω
+−3 
+ψ V 
+′
+(Ω ψ) ∇
+[ρ
+Ω g
+μ]ν 
++ 
+1
+3 
+Ω
+−2 
+V 
+′
+(Ωψ) ∇
+[ρ
+ψ g
+μ]ν 
+,
+which is regular as Ω → 0. From this our assertion follows immediately. 
+4 The constraints on a hypersurface {Ω = 0}.
+In [6] it has been observed that the constraints induced by the conformal vacuum field
+equations with positive cosmological constant simplify on a hypersurface J = {Ω = 0}.
+Cauchy data for the conformal field equations on such a hypersurface are referred to as
+asymptotic initial data. In the following it will be shown that also in the case of the
+Einstein-scalar field system satisfying (∗) the construction of asymptotic initial data is
+considerably simpler than the construction of standard Cauchy data for the Einstein-scalar
+field system (cf. [4]).
+To derive and analyse the constraints, the compact manifold J will be thought of as
+being embedded as a Cauchy hypersurface into a smooth solution to the conformal field
+equations. It will be convenient to assume the solution metric g to be given in terms of
+Gauss coordinates based on J so that Ω > 0 in the past and Ω < 0 in the future of J
+close to it. Then
+g = −dτ 
+2 
++ h
+ab 
+dx
+a 
+dx
+b
+,
+with x
+0 
+≡ τ = 0 and ∂
+τ 
+Ω < 0 on J . The Christoffel symbols are given by
+Γ
+a 
+0 
+b
+[g] = 
+1
+2 
+h
+ab,0 
+= χ
+ab
+, Γ
+0 
+0 
+b
+[g] = 0, Γ
+a 
+0 
+0
+[g] = 0, Γ
+0 
+c 
+0
+[g] = 0,
+Γ
+a 
+c 
+0
+[g] = Γ
+0 
+c 
+a
+[g] = h
+ce 
+χ
+eb
+, Γ
+a 
+c 
+b
+[g] = Γ
+a 
+c 
+b
+[h].
+where χ
+ab 
+denotes the second fundamental form and h
+ab 
+the inverse of the metric h
+ab
+induced on {τ = const.}. With this notation we can state the following result.
+Proposition 4.1 Assume λ > 0. On a smooth, orientable, compact 3-manifold J let be
+given a smooth Riemannian metric h
+ab 
+with covariant derivative operator D
+a
+, and smooth
+scalar fields ψ
+0
+, ψ
+1 
+so that
+∫
+S
+X
+a 
+ρ
+a 
+dμ
+h 
+= 0 for any conformal vector field X admitted by h, (4.1)
+where
+ρ
+a 
+= 
+κ
+3 
+Σ (ψ
+0 
+D
+a
+ψ
+1 
+− 2 ψ
+1 
+D
+a
+ψ
+0
+) with Σ = −
+√ 
+λ
+3 
+.
+Furthermore let w
+ab 
+be a smooth, symmetric, trace free solution to the equation
+D
+a
+w
+ab 
+= ρ
+b
+. (4.2)
+15
+
+Initial data (i.e. solutions to the constraints) for the conformal Einstein-scalar field equa-
+tions with cosmological constant λ and mass m > 0 satisfying the condition (∗) are then
+derived in a suitable conformal gauge from these data on J as follows.
+− The fields ψ
+0
+, ψ
+1 
+constitute the Cauchy data ψ and ∇
+0
+ψ for the scalar field ψ on J .
+− The inner metric and the second fundamental form on J are given by
+h
+ab 
+and χ
+ab 
+= 0,
+− The conformal factor, its time derivative, and the function s are given by
+Ω = 0, ∇
+0
+Ω = Σ, s = 0.
+− The Schouten tensor of g is given by
+L
+ab
+[g] = L
+ab
+[h], L
+0a
+[g] = L
+a0
+[g] = 0, L
+00
+[g] = 
+1
+4 
+R[h] − 
+1
+6 
+R[g],
+where R[g] is to be considered as a smooth conformal gauge source function which can be
+given arbitrarily.
+− The rescaled conformal Weyl tensor W 
+μ 
+νλρ 
+is specified in terms of its electric part with
+respect to J , which is given by w
+ab
+, and its magnetic part which is given by
+w
+∗
+cd 
+= − 
+1
+Σ 
+D
+a 
+L
+bc
+[h] ǫ
+d 
+ab
+.
+Proof: Regularity of T
+∗ 
+and the relation 
+ˆ
+T = Ω
+2 
+T
+∗ 
+imply that
+ˆ
+T = 0, 
+ˆ
+∇
+μ 
+ˆ
+T = 0 on J .
+The restriction of (2.13) to J thus gives
+∇
+0
+Ω = Σ = −
+√ 
+λ
+3 
+. (4.3)
+The restriction of (2.14) with μ = a, ν = 0 is satisfied because of the values of the
+Christoffel symbols and because ∇
+0
+Ω is constant on J while it gives with μ = a, ν = b
+the relation
+0 = ∇
+a 
+∇
+b
+Ω − s g
+ab 
+= −χ
+ab 
+Σ − s h
+ab
+,
+which implies that the trace-free part of χ
+ab 
+vanishes and its trace is given by χ = −Σ
+−1 
+s.
+So far we did not make use of the conformal gauge freedom. It allows us to perform
+arbitrary rescalings with positive conformal factors θ and can be removed by prescribing
+the Ricci scalar R[g] as given function near J and by prescribing θ and its time derivative
+on J . Leaving the freedom to choose θ on J untouched, its time derivative can be chosen
+there to achieve
+χ = 0 whence s = 0 and χ
+ab 
+= 0 on J .
+Observing now that C
+μ 
+νρλ 
+= Ω W 
+μ 
+νρλ 
+= 0 on J the last relation implies with Gauss’
+equation that
+1
+2 
+R
+ab
+[g] − 
+1
+12 
+R[g] h
+ab 
+= L
+ab
+[g] = L
+ab
+[h] ≡ R
+ab
+[h] − 
+1
+4 
+R[h] h
+ab 
+on J ,
+16
+
+and thus by contraction
+R[g] + 2 R
+00
+[g] = R[h],
+whence
+L
+00
+[g] = 
+1
+2 
+R
+00
+[g] − 
+1
+12 
+R[g] g
+00 
+= 
+1
+4 
+R[h] − 
+1
+6 
+R[g].
+It holds
+T 
+∗
+μν 
+= ψ
+2
+(∇
+μ
+Ω ∇
+ν 
+Ω − 
+1
+4 
+∇
+π 
+Ω ∇
+π 
+Ω g
+μν 
+) on J .
+The constraint induced by (2.15) with μ = a reduces thus to
+L
+0a
+[g] = L
+a0
+[g] = 0.
+It follows that the initial data for L
+μν 
+[g] can be expressed completely in terms of L
+ab
+[h]
+and the gauge dependent quantity R[g] which can be prescribed arbitrarily near J .
+Because 
+ˆ
+∇
+[ν 
+ˆ
+L
+λ]ρ 
+= 0 on J by (3.13) and (3.16), the constraints induced by (2.16) are
+given by
+∇
+a 
+L
+bρ 
+− ∇
+b 
+L
+aρ 
+= Σ W
+ρ0ab
+.
+The relation with ρ = 0 is satisfied by the fields given above and implies no condition.
+The remaining relation can be written in the form
+D
+a 
+L
+bc
+[h] − D
+b 
+L
+ac
+[h] = Σ w
+∗
+cd 
+ǫ
+d 
+ab
+,
+where D
+a 
+denotes the h-covariant derivative operator and w
+∗
+ab 
+≡ − 
+1
+2 
+W
+a0cd 
+ǫ
+b 
+cd 
+the J -
+magnetic part of W 
+μ 
+νρλ
+. It is saying that the magnetic part of the rescaled conformal
+Weyl tensor is given on J by the Cotton tensor defined by h
+ab
+.
+One of the constraints implied by (2.17) is obtained by restricting
+∇
+μ 
+W 
+μ 
+0ab 
+= 2 Ω
+−1 
+ˆ
+∇
+[a 
+ˆ
+L
+b]0 
+= κ K
+ab0
+,
+to J . With the results above it follows that the restriction of K
+ab0 
+to J vanishes and the
+constraint reduces to
+D
+a 
+w
+∗
+ab 
+= 0.
+This is just the differential identity satisfied by the Cotton tensor and gives no new con-
+dition. The only remaining constraint is given by the restriction to J of
+∇
+μ 
+W 
+μ 
+0a0 
+= 2 Ω
+−1 
+ˆ
+∇
+[a 
+ˆ
+L
+0]0 
+= κ K
+a00
+,
+which can be written with the results above
+D
+b 
+w
+ba 
+= ρ
+a 
+with ρ
+a 
+= 
+κ
+3 
+Σ (ψ
+0 
+∇
+a
+∇
+0
+ψ − 2 ∇
+0
+ψ ∇
+a
+ψ).
+Because
+∇
+a
+∇
+0
+ψ = ∂
+a
+∇
+0
+ψ − χ
+a 
+c 
+D
+c
+ψ = ∂
+a
+∂
+0
+ψ,
+the field ρ
+a 
+can be expressed completely in terms of κ, Σ, and the data ψ
+0 
+and ∇
+0
+ψ for
+the scalar field on J . For any smooth vector field X
+a 
+on J holds
+∫
+S
+X
+a 
+ρ
+a 
+dμ
+h 
+=
+∫
+S
+X
+a 
+D
+b 
+w
+ab 
+dμ
+h 
+=
+∫
+S
+w
+ab 
+(D
+(b
+X
+a) 
+− 
+1
+3 
+D
+c
+X
+c 
+h
+ab
+) dμ
+h
+.
+17
+
+because w
+ab 
+is trace free. It follows that the data h, ψ, and ∇
+0
+ψ must be given such that
+(4.1) holds true. If this condition is satisfied the well known properties of the operator
+L
+h 
+= div ◦ L
+h
+, where the divergence of a covariant symmetric trace free tensor field w
+ab 
+is
+the 1-form (div w)
+b 
+= −D
+a
+w
+ab 
+and the conformal Killing operator L
+h 
+acts on a 1-form X
+a
+by (L
+h 
+X)
+ab 
+= D
+(b
+X
+a) 
+− 
+1
+3 
+D
+c
+X
+c 
+h
+ab
+, then imply that the equation L
+h 
+X = ρ is solvable
+and a solution to (4.2) is provided by the tensor (L
+h 
+X)
+ab 
+calculated from X.
+
+Remarks:
+All possible smooth asymptotic initial data for which Ω is decreasing near J are
+obtained by the procedure described above.
+The relation (4.3) (already observed in [12]) shows that the set {Ω = 0} is necessarily
+a space-like hypersurface.
+The initial data for the wave equation which needs to be derived for ∇
+μ
+ψ from (3.5)
+are given by ∇
+a
+ψ = ∂
+a
+ψ
+0
+, ∇
+0
+ψ = ψ
+1
+, ∇
+0
+∇
+a
+ψ = ∇
+a
+∇
+0
+ψ = ∂
+a
+ψ
+1
+, and the datum ∇
+0
+∇
+0
+ψ,
+which can be read off from (3.5), is found to be
+∇
+0
+∇
+0
+ψ = h
+ab 
+D
+a
+D
+b
+ψ
+0 
+− 
+1
+6 
+R[g] ψ
+0 
++
+( 
+κ λ
+6 
+− 4 U (0)
+)
+ψ
+3
+0 
+.
+Given an asymptotic initial data set as above and a space-time gauge in which the
+conformal field equations imply hyperbolic evolution equations, the latter allow us to
+determine a past Cauchy development of the data which provides, where Ω > 0, a unique
+maximal, globally hyperbolic, future asymptotically simple solution ˆg = Ω
+−2 
+g, φ = Ω ψ
+of the system (1.1), (1.2), (1.3) with (3.13).
+There exists, however, also a unique maximal, globally hyperbolic future Cauchy de-
+velopment of the data on which Ω < 0. The conformal field equations are left invariant
+by the transition under which Ω → −Ω, W 
+μ 
+νλρ 
+→ −W 
+μ 
+νλρ
+, ψ → −ψ while all other
+unknowns remain unchanged. The fields ˆg = Ω
+−2 
+g, φ = Ω ψ obtained from the future
+development thus define again a solution to (1.1), (1.2), (1.3) with (3.13), which now is
+asymptotically simple in the past.
+Because the metric h
+ab 
+is not subject to an analogue of the Hamiltonian constraint,
+neither the topology of J nor the conformal structure defined by h
+ab 
+is restricted in any
+way. It may appear then that the procedure offers too much freedom. This is not the case.
+As discussed in the proof, there remains the freedom to perform on J transitions of the
+form
+Ω → Ω
+∗ 
+= θ Ω, g → g
+∗ 
+= θ
+2 
+g,
+with positive conformal factors θ. The effect of these rescalings on the free data is
+h
+ab 
+→ h
+∗
+ab 
+= θ
+2 
+h
+ab
+, ψ
+0 
+→ ψ
+∗
+0 
+= θ
+−1 
+ψ
+0
+,
+ψ
+1 
+→ ψ
+∗
+1 
+= θ
+−2 
+ψ
+1
+, w
+ab 
+→ w
+∗
+ab 
+= θ
+−1 
+w
+ab
+.
+These rescalings change the conformal representation of the solution to the conformal field
+equations but leave the associated ‘physical solution’ unchanged.
+To assess the freedom to prescribe data one should observe that (4.2) leaves the free-
+dom to add to a given solution of the inhomogeneous equation an arbitrary solution of the
+18
+
+homogeneous equation D
+a 
+w
+ab 
+= 0. In spite of the condition χ
+ab 
+= 0 on J , which reflects
+the particular nature of the conformal boundary, the procedure described above thus ad-
+mits essentially the same freedom to prescribe data as the standard Cauchy problem for
+the system (1.1), (1.2), (1.3) with (3.13). This conclusion is supported by the following
+observation.
+Denote by S a smooth 3-manifold diffeomorphic to J , by D
+S 
+the set of smooth Cauchy
+data on S for the system (1.1), (1.2), (1.3) satisfying (∗), and by A
+S 
+the subset of the
+Cauchy data d
+S 
+∈ D
+S 
+for which the corresponding solution space-times develops so as to
+admit a smooth conformal boundary J 
++ 
+∼ S ∼ J in the future. S can be thought of
+as being embedded as a Cauchy hypersurface into this solution so that the data induced
+by the solution are isometric to the data d
+S 
+. The solution induces on J 
++ 
+an asymptotic
+initial data set d
+∗
+S 
+for the conformal field equations. The past development of the data
+d
+∗
+S 
+with the conformal field equations is conformal to the solution developed from d
+S 
+. It
+induces on S data d
+′
+S 
+for the conformal field equations. As discussed above, the future
+evolution of these data by the conformal field equations extends smoothly beyond J 
++ 
+into
+a domain which can be foliated by Cauchy hypersurfaces on which Ω < 0.
+With data 
+¯
+d
+S 
+on S which are obtained by a small (non-linear) perturbation of d
+S 
+we
+can associate data 
+¯
+d
+′
+S 
+for the conformal field equations which represent a small perturba-
+tion of d
+′
+S 
+so that in terms of suitable Sobolev topologies 
+¯
+d
+′
+S 
+→ d
+′
+S 
+as 
+¯
+d
+S 
+→ d
+S 
+and vice
+versa. Cauchy stability for the conformal field equation implies that data 
+¯
+d
+′
+S 
+which are
+close enough to d
+′
+S 
+will then also develop into a domain foliated by Cauchy hypersurfaces
+on which Ω
+′ 
+< 0 and the analogue of (4.3) for Ω
+′
+, which is a consequence of the field equa-
+tions where Ω
+′ 
+= 0, ensures that the set {Ω
+′ 
+= 0} is a smooth hypersurface diffeomorphic
+to S. Solutions arising from data close enough to d
+S 
+will thus be asymptotically simple in
+the future and belong to A
+S 
+. The set A
+S 
+is thus open in the set D
+S 
+if the latter is endowed
+with a suitable Sobolev topology. By the results of [8] this statement can be generalized
+to include perturbations involving fields with trace free energy momentum tensor which
+satisfy conformally covariant field equations.
+5 Spatially homogeneous solutions.
+In the following we study solutions to the equation considered in Theorem 3.1 for which
+the conformal factor Ω and the metric g are defined on R × S with S = S
+3
+, T
+3 
+or H
+3
+∗ 
+(a
+factor space of hyperbolic 3-space) and take the form
+Ω = Ω(τ ), g = −dτ 
+2 
++ l
+2 
+k,
+with a function l = l(τ ) and a 3-metric k = k
+ab 
+dx
+a 
+dx
+b 
+= k
+ǫ 
+of constant curvature
+R
+abcd
+[k] = 2 ǫ k
+a[c 
+k
+b]d
+, where ǫ = 1, 0, −1 respectively. We write also τ = x
+0 
+and assume
+for simplicity
+V = 0, κ = 1, λ = 3,
+and thus m
+2 
+= 2 to take care of (3.13). The non-vanishing Christoffel symbols and the
+second fundamental form χ
+ab 
+of the slices {τ = const.} are then given by
+χ
+ab 
+= Γ
+a 
+0 
+b
+[g] = l l
+′ 
+k
+ab
+, Γ
+0 
+a 
+c
+[g] = Γ
+c 
+a 
+0
+[g] = 
+1
+l 
+l
+′ 
+k
+a 
+c
+, Γ
+b 
+a 
+c
+[g] = Γ
+b 
+a 
+c
+[k],
+19
+
+where 
+′ 
+= 
+d
+dτ 
+. The Ricci scalar and the Ricci tensor are given by
+R[g] = 
+6
+l
+2 
+(ǫ + l l
+′′ 
++ (l
+′
+)
+2
+), R
+00
+[g] = −3 
+l
+′′
+l 
+, R
+a0
+[g] = R
+0a
+[g] = 0,
+R
+ab
+[g] = {2 ǫ + l l
+′′ 
++ 2 (l
+′
+)
+2
+} k
+ab
+,
+and the Schouten tensor by
+L
+00
+[g] = 
+1
+2 l
+2 
+(ǫ − 2 l l
+′′ 
++ (l
+′
+)
+2
+), L
+a0
+[g] = L
+0a
+[g] = 0, L
+ab
+[g] = 
+1
+2 
+(ǫ + (l
+′
+)
+2
+) k
+ab
+.
+Because the line element above is conformally flat it follows that W 
+μ 
+νλρ 
+= 0, which leads
+to a considerable simplification.
+It will be assumed in the following that the conformal time coordinate τ vanishes on
+a set {Ω = 0} and the metric g satisfies the conformal gauge condition R[g] = 6 ǫ. Fixing
+R still leaves some freedom to perform rescalings. This can be used to restrict the metric
+and the second fundamental form on {Ω = 0} so that l = 1 and l
+′ 
+= 0 there. With these
+requirements and the expression for the Ricci scalar above follows that
+l l
+′′ 
++ (l
+′
+)
+2 
++ ǫ (1 − l
+2
+) = 0, l(0) = 1, l
+′
+(0) = 0,
+which implies that l = 1. Where Ω > 0 the physical fields can then be given in the form
+ˆg = Ω
+−2 
+g = −dt
+2 
++ f 
+2 
+dω
+2
+, φ = Ω ψ, (5.1)
+with
+f (t) = 
+1
+Ω(τ (t)) 
+, 
+dt
+dτ 
+= 
+1
+Ω(τ ) 
+, (5.2)
+so that the information on the geometry is completely encoded in the conformal factor.
+Because g is conformally flat we have by (2.9) and (2.10) ∇
+[ν 
+L
+λ]ρ 
+= 0 and 
+ˆ
+∇
+[ν 
+ˆ
+L
+λ]ρ 
+= 0
+so that equations (2.16), (2.17) are trivially satisfied and we are left with the equations
+2 Ω s − ∇
+ρ
+Ω ∇
+ρ
+Ω = 1 − 
+1
+12 
+Ω
+2 
+T
+∗
+, (5.3)
+∇
+μ 
+∇
+ν 
+Ω = − Ω L
+μν 
++ s g
+μν 
++ 
+1
+2 
+Ω T 
+∗
+μν 
+, (5.4)
+∇
+μ 
+s = − ∇
+ρ
+Ω L
+ρμ 
++ 
+1
+2 
+∇
+ρ
+Ω T 
+∗
+ρμ 
+− 
+1
+12 
+∇
+μ
+Ω T
+∗ 
+− 
+1
+24 
+Ω ∇
+μ
+T
+∗
+, (5.5)
+
+g
+ψ − 
+1
+6 
+R ψ = 
+1
+6 
+T
+∗
+ψ, (5.6)
+where
+T 
+∗
+μν 
+= ∇
+μ
+(Ωψ) ∇
+ν 
+(Ω ψ) − 
+1
+4 
+∇
+ρ
+(Ωψ) ∇
+ρ
+(Ωψ) g
+μν 
+, (5.7)
+T
+∗ 
+= −∇
+ρ
+(Ω ψ) ∇
+ρ
+(Ω ψ) − 4 ψ
+2
+. (5.8)
+The assumed symmetry implies
+T
+∗ 
+= ((Ω ψ)
+′
+)
+2 
+− 4 ψ
+2
+, (5.9)
+20
+
+T 
+∗
+00 
+= 
+3
+4 
+((Ω ψ)
+′
+)
+2
+, T 
+∗
+a0 
+= T 
+∗
+0a 
+= 0, T 
+∗
+ab 
+= 
+1
+4 
+((Ωψ)
+′
+)
+2 
+k
+ab
+, (5.10)
+and the equations reduce to
+2 Ω s + (Ω
+′
+)
+2 
+= 1 − 
+1
+12 
+Ω
+2 
+T
+∗
+, (5.11)
+Ω
+′′ 
+= − 
+1
+2 
+ǫ Ω − s + 
+3
+8 
+Ω ((Ω ψ)
+′
+)
+2
+, (5.12)
+0 = − 
+1
+2 
+ǫ Ω + s + 
+1
+8 
+Ω ((Ωψ)
+′
+)
+2
+, (5.13)
+s
+′ 
+= 
+1
+2 
+ǫ Ω
+′ 
+− 
+3
+8 
+Ω
+′ 
+((Ω ψ)
+′
+)
+2 
+− 
+1
+12 
+Ω
+′ 
+T
+∗ 
+− 
+1
+24 
+Ω T 
+′
+∗
+, (5.14)
+− ψ
+′′ 
+− ǫ ψ = 
+1
+6 
+T
+∗
+ψ. (5.15)
+Obviously there is some redundancy in this system. Solving for the last term on the right
+hand side of (5.13) inserting the result in the last term on the right hand side of (5.12)
+gives s = 
+1
+4 
+(−Ω
+′′ 
++ ǫ Ω), which is just (2.5). Conversely, this expression for s implies with
+(5.12) the relation (5.13). Solving (5.13) instead for s and using this to replace s in (5.12)
+gives
+Ω
+′′ 
++
+(
+ǫ − 
+1
+2 
+((Ω ψ)
+′
+)
+2
+)
+Ω = 0. (5.16)
+Using (5.9) in (5.15) gives
+ψ
+′′ 
++
+(
+ǫ + 
+1
+6 
+((Ω ψ)
+′
+)
+2 
+− 
+2
+3 
+ψ
+2
+)
+ψ = 0. (5.17)
+Inserting s from (5.13) in (5.11) gives
+(Ω
+′
+)
+2 
+= 1 + Ω
+2
+( 
+1
+3 
+ψ
+2 
++ 
+1
+6 
+((Ω ψ)
+′
+)
+2 
+− ǫ
+)
+. (5.18)
+The first two equations above provide a closed evolution system for Ω and ψ while the
+third equation should be read as a constraint. It will be satisfied if it holds for one value
+of τ and the first two equations are satisfied (not an immediate calculation). It can be
+shown that (5.14) follows if the other equations are satisfied. By using (5.2), equations
+(5.16), (5.17), (5.18) can be derived where Ω 6 = 0 directly from the equations implied by
+(2.1), (3.1), (3.2) for the functions in (5.1).
+If data are prescribed on {Ω = 0} = {τ = 0} and if is assumed that Ω is positive short
+before that crossover surface, the constraint (5.18) shows that the equations above must
+be solved with initial conditions
+Ω(0) = 0, Ω
+′
+(0) = −1 and free data ψ(0), ψ
+′
+(0).
+The vacuum solutions, obtained by setting ψ(0) = 0, ψ
+′
+(0) = 0, satisfy ψ = 0 and Ω = Ω
+ǫ
+with
+Ω
+1 
+= − sin τ, −π < τ < 0, Ω
+0 
+= −τ, τ < 0, Ω
+−1 
+= − sinh τ, τ < 0.
+21
+
+Observing (5.2), the corresponding physical solutions ˆg
+ǫ 
+= Ω
+−2
+ǫ 
+g
+ǫ 
+are then given by the
+de Sitter solution
+ˆg
+1 
+= −dt
+2 
++ cosh
+2 
+t k
+1
+, t ∈ R,
+which expands in both time directions, and by
+ˆg
+0 
+= −dt
+2 
++ e
+2t 
+k
+0
+, t ∈ R, ˆg
+−1 
+= −dt
+2 
++ sinh
+2 
+t k
+−1
+, t > 0.
+When ψ 6 ≡ 0 it follows by (5.16) in the cases ǫ ≤ 0 that the functions Ω
+ǫ
+(τ ) grow even
+faster backwards in time and most likely diverge for a finite value τ
+∗ 
+< 0 of the parameter
+τ . The precise behaviour of the solutions near that point, or, in other words, the precise
+expansion behaviour of the associated physical solutions ˆg
+ǫ 
+= Ω
+−2 
+g
+ǫ
+, ǫ = 0, −1, at the big
+bang indicated by that point, depends on the initial data for ψ and requires a detailed
+analysis which cannot be given here.
+In the following we consider the case ǫ = 1 in somewhat more detail and drop the index
+ǫ everywhere. The structure of the system (5.16), (5.17), (5.18) implies that for data ψ and
+ψ
+′ 
+at τ = 0 which are sufficiently small the solutions Ω(τ ) will also be oscillatory and may
+stay close to the de Sitter solution for a long conformal time τ . It is an interesting problem
+to characterize the initial data ψ(0) and ψ
+′
+(0) for which the solutions to the system system
+(5.16), (5.17), (5.18) exist for all conformal times τ . That there do exist non-trivial data
+with this property other than oscillatory solutions is shown by the solution Ω
+∗
+, ψ
+∗ 
+to
+(5.16), (5.17), (5.18) which is given by
+Ω
+∗ 
+= −τ, ψ
+∗ 
+= 
+√
+2. (5.19)
+The physical fields corresponding to the restriction of this solution to the domain −∞ <
+τ < 0 are given in terms of the coordinate t = − log(−τ ) by
+˜g = −dt
+2 
++ e
+2t 
+dω
+2
+, φ = 
+√
+2 e
+−t
+,
+and are thus quite different from those in the de Sitter case. As t → −∞ the matter field
+diverges while it decays and the metric shows a de Sitter type expansion behaviour as
+t → ∞.
+Because Ω
+∗ 
+does not approach zero a second time but Ω
+∗ 
+→ ∞ as τ → −∞, it is not
+possible to obtain a global stability result by the argument used before, but the situation
+may be of considerable interest in our context. Consider the backward evolution of initial
+data of the form
+Ω(0) = 0, Ω(0) = −1, ψ(0) = 
+√
+2 − δ, ψ
+′
+(0) = −
+¯
+δ, 0 ≤ δ < 
+√
+2, 0 ≤ 
+¯
+δ.
+Numerical calculations with data so that 0 ≤ δ, 
+¯
+δ << 1 show that there exist solutions
+Ω which stay close to Ω
+∗ 
+for τ < 0 and |τ | small enough and which are monotonically
+increasing with Ω < −τ . After assuming a maximum value Ω
+m 
+at some τ
+m 
+< 0, the
+solutions are decreasing until they vanish at some point τ
+z 
+< τ
+m
+. The corresponding
+physical solutions on ]τ
+z 
+, 0[ can be thought of as arising from initial data on the ‘crossover
+surface’ {τ = τ
+z 
+}, of developing a ‘waist’ of volume Ω
+−3
+m 
+V ol(S
+3
+) at τ
+m
+, and approaching the
+next crossover surface at {τ = 0}. Again these solutions would have the stability property
+pointed out above. First calculations show that by suitable choices of the data the value
+22
+
+of |τ
+m
+|, the maximum value Ω
+m
+, and the value of |τ
+z 
+| can be made to increase. This raises
+an interesting question, which is related to the second type of problems addressed in the
+introduction:
+Do there exist solutions of this type which approximate for given z < 0 the solution Ω
+∗ 
+on
+the interval [z, 0] arbitraryly well ?
+A positive answer would show the existence of solutions which still have the stability prop-
+erty but whose waist would be arbitrarily narrow. The restriction of such solutions to the
+range ]τ
+m
+, 0[ would, from the point of view of observational data, hardly be distinguish-
+able from solutions which start with a big bang and then expand exponentially. Again,
+no attempt is made here to analyze this question.
+Acknowledgements: I would like to thank Piotr Bizon and David Garfinkle for discussions,
+and the Clay Mathematics Institute for financial support. This material is partly based
+upon work supported by the National Science Foundation under Grant No. 0932078 000,
+while the author was in residence at the Mathematical Sciences Research Institute in
+Berkeley, California, during the year 2013.
+References
+[1] D. An, K.A. Meissner, P. Nurowski. Structures in the Planck map of the CMB.
+arXiv:1307.5737 [astro-ph.CO] (2013)
+[2] J. D. Barrow, D. J. Shaw. The value of the cosmological constant. arXiv:1105.3105
+[3] F. Beyer. Non-genericity of the Nariai solutions: I. Asymptotics and spatially homo-
+geneous perturbations. Class. Quantum Grav. 26 (2009) 235015.
+[4] Y. Choquet-Bruhat, J. Isenberg, D. Pollack. The constraint equations for the Einstein-
+scalar field system on compact manifolds. Class. Quantum Grav. 24 (2007) 809 - 828.
+[5] H. Friedrich. The asymptotic characteristic initial value problem for Einstein’s vac-
+uum field equations as an initial value problem for a first-order quasilinear symmetric
+hyperbolic system. Proc. Roy. Soc. Lond. A 378 (1981) 401-421.
+[6] H. Friedrich. Existence and structure of past asymptotically simple solution of Ein-
+stein’s field equations with positive cosmological constant. J. Geom. Phys., (1986) 101
+- 117.
+[7] H. Friedrich. On the existence of n-geodesically complete or future complete solutions
+of Einstein’s field equations with smooth asymptotic structure. Commun. Math. Phys.
+107 (1986), 587 - 609.
+[8] H. Friedrich. On the global existence and the asymptotic behaviour of solutions to the
+Einstein-Maxwell-Yang-Mills equations. J. Differential Geometry 34 (1991) 275 - 345.
+[9] G. W. Gibbons, S. W. Hawking. Cosmological event horizons, thermodynamics, and
+particle creation. Phys. Rev. D 15 (1977) 2738 - 2751.
+23
+
+[10] V. G. Gurzadyan, R. Penrose. On CCC-predicted concentric low-variance circles in
+the CMB sky. Eur. Phys. J. Plus (2013) 128: 22
+[11] L. Parker, A. Raval. Vacuum effects of an ultralow mass particle account for the
+recent acceleration of the universe. Phys. Rev. D 60 (1999) 123502. Erratum. Phys.
+Rev. D 67 (2003) 029902(E).
+[12] R. Penrose. Zero rest-mass fields including gravitation: asymptotic behaviour. Proc.
+Roy. Soc. Lond. A 284 (1965) 159 - 203.
+[13] R. Penrose. Cycles of Time. Bodley Head, 2010.
+[14] H. Ringstr¨om. Future stability of the Einstein-non-linear scalar field system. Invent.
+math. 173 (2008) 123 - 208.
+[15] K. P. Tod. Isotropic cosmological singularities: other matter models. Class. Quantum
+Grav. 20 (2003) 521 - 534.
+24
