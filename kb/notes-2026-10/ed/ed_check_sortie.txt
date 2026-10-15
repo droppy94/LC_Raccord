@@ -1,0 +1,8 @@
+(A) spin connection coefficient c = 1/4 ; Dirac operator covariance residual = 0 : True
+(B) That[psi;ghat] - Omega^2 T[psihat;eta] = 0 off shell : True
+    That real (Hermitian combination) : True
+(C) Lag[psi;ghat] - Omega^4 psihatbar(i gamma.d - m/Omega)psihat = 0 : True
+(D) Lhat = Omega^2 Y : lowest power of Omega in 2 Omega^-1 nablahat_[nu Lhat_lambda] rho : 0 (>= 0 means formally regular)
+(E) scalar: m^2 phi^2 ghat with phi = Omega psi : m_s**2*psi_s**2 * eta  (order Omega^0)
+--- variante : terme lagrangien hors couche, Lhat d'ordre Omega^1 ---
+(D) Lhat = Omega^1 Y : lowest power of Omega in 2 Omega^-1 nablahat_[nu Lhat_lambda] rho : -1 (>= 0 means formally regular)
