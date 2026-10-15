@@ -1,0 +1,83 @@
+V1. KG derive de la metrique dS (conformal time), non tape a la main
+   R = 12
+   indicielle (doit etre alpha(alpha-3)+m2+12xi au signe pres): -eta**2*(alpha**2 - 3*alpha + m2 + 12*xi)
+
+V2. Poids conformes calcules symboliquement (Omega explicite)
+   Yukawa y H psibar psi (et h.c.)          poids Omega = 0
+   masse de jauge g^2 |H|^2 ghat^mn A A     poids Omega = 0
+   masse Higgs m^2 |H|^2                    poids Omega = -2
+   quartique lambda |H|^4                   poids Omega = 0
+   cubique mu H^3 (absent du SM)            poids Omega = -1
+   Weinberg (L H)(L H)/M                    poids Omega = 1
+
+V3. Identite conforme : (box_hat - Rhat/6)(Omega phir) = Omega^3 (box - R/6) phir ; terme singulier
+   (eq physique)/Omega  = (m2/s**2 - 2/s**2)*phir(s) + Derivative(phir(s), (s, 2))
+   -> terme singulier (m2 - 2)/s^2 * phir : nul ssi m2 + 12 xi = 2 (= Rhat/6)
+
+V4. Balayage dense du critere (c) (donnees generiques) sur M2 rationnels p/q, q<=40, -20<=M2<=20
+   M2 satisfaisant (c) : [2]
+   preuve : (a1-1)+(a2-1) = 1, entiers >= 0 -> {0,1} -> M2 = 1*2 = 2
+
+V5. Role de c1 = 0 (donnees fines) : on ne garde que s^alpha_max
+   M2=-10   alpha_max=5                  (a):True (b):True (c):True
+   M2=-4    alpha_max=4                  (a):True (b):True (c):True
+   M2=0     alpha_max=3                  (a):True (b):True (c):True
+   M2=5/4   alpha_max=5/2                (a):True (b):True (c):False
+   M2=2     alpha_max=2                  (a):True (b):True (c):True
+   M2=21/10 alpha_max=sqrt(15)/10 + 3/2  (a):True (b):True (c):False
+   M2=3     alpha_max=3/2 + sqrt(3)*I/2  (a):True (b):True (c):False
+   -> avec c1=0, (c) vaut pour M2 = -(n+1)(n-2), n entier>=1 : 2, 0, -4, -10, ...
+
+V6. Inhomogene k != 0, donnees fines c1=0 a M2=0 : h = sin(ks) - ks cos(ks) (sans log ?)
+   residu KG(M2=0) : 0
+   h/Omega serie : k**3*s**2/3 - k**5*s**4/30 + O(s**6)
+   M2=2 general : h = s*(c1 cos ks + c2 sin ks), residu : 0
+
+V7. Neutrinos (Weinberg) : coefficient m_nu/Omega ~ h^2/s ; seuils propres
+   M2=1/2   (a,b,c)_nu = (True, False, False)
+   M2=1     (a,b,c)_nu = (True, False, False)
+   M2=5/4   (a,b,c)_nu = (True, True, True)
+   M2=3/2   (a,b,c)_nu = (True, True, False)
+   M2=2     (a,b,c)_nu = (True, True, True)
+   M2=21/10 (a,b,c)_nu = (True, True, False)
+   M2=3     (a,b,c)_nu = (True, True, False)
+   -> (b)_nu ssi M2 >= 5/4 ; (c)_nu en M2 = 5/4 ET M2 = 2
+
+V8. W,Z : coefficient g^2|H_r|^2 ~ s^(2 alpha - 2) (poids 0, sans 1/Omega)
+   M2=1/2   exposant 1 - sqrt(7)        borne:False  integrable(ds):False  s*q integrable:True
+   M2=1     exposant 1 - sqrt(5)        borne:False  integrable(ds):False  s*q integrable:True
+   M2=5/4   exposant -1                 borne:False  integrable(ds):False  s*q integrable:True
+   M2=3/2   exposant 1 - sqrt(3)        borne:False  integrable(ds):True  s*q integrable:True
+   M2=2     exposant 0                  borne:True  integrable(ds):True  s*q integrable:True
+   M2=21/10 exposant 1 - sqrt(15)/5     borne:True  integrable(ds):True  s*q integrable:True
+
+V9. Dirac homogene numerique k != 0, zone 0<M2<2 : psi_r continu, (m/Omega) psibar psi diverge ?
+   M2=0.5
+      s=1e-03  psi_r=[-0.23822-0.90875j -0.0935 +0.32968j]  (m/Omega)*psibar psi = 2.251e+02
+      s=1e-05  psi_r=[0.58352-0.73623j 0.2067 +0.27339j]  (m/Omega)*psibar psi = 9.956e+03
+      s=1e-07  psi_r=[0.8285 -0.44286j 0.29849+0.16842j]  (m/Omega)*psibar psi = 4.404e+05
+      s=1e-09  psi_r=[0.89475-0.28628j 0.32395+0.11187j]  (m/Omega)*psibar psi = 1.948e+07
+   M2=1.5
+      s=1e-03  psi_r=[-0.50431+0.71728j -0.12415-0.46451j]  (m/Omega)*psibar psi = 6.739e+00
+      s=1e-05  psi_r=[-0.51809+0.70785j -0.1321 -0.46161j]  (m/Omega)*psibar psi = 3.645e+01
+      s=1e-07  psi_r=[-0.51881+0.70732j -0.13256-0.46147j]  (m/Omega)*psibar psi = 1.967e+02
+      s=1e-09  psi_r=[-0.51885+0.70729j -0.13259-0.46146j]  (m/Omega)*psibar psi = 1.061e+03
+   M2=1.99
+      s=1e-03  psi_r=[-0.11315+0.79978j  0.08282-0.58368j]  (m/Omega)*psibar psi = 3.267e-01
+      s=1e-05  psi_r=[-0.11458+0.79958j  0.08299-0.58366j]  (m/Omega)*psibar psi = 3.417e-01
+      s=1e-07  psi_r=[-0.1146 +0.79958j  0.08299-0.58366j]  (m/Omega)*psibar psi = 3.577e-01
+      s=1e-09  psi_r=[-0.1146 +0.79958j  0.08299-0.58366j]  (m/Omega)*psibar psi = 3.744e-01
+
+V10. Robustesse de classify() : is_integer peut renvoyer None
+    1/2 - sqrt(7)/2 is_integer -> False
+    1 is_integer -> True
+    1 is_integer -> True
+    classify(2.0) -> (1, 2, True, True, True, False)
+    classify(1.9999999) -> (3/2 - sqrt(25000010)/10000, sqrt(25000010)/10000 + 3/2, True, False, False, False)
+    classify(-4) -> (-1, 4, False, False, False, False)
+    classify(0.0) -> (0, 3, False, False, False, False)
+    classify(9/4) -> (3/2, 3/2, True, True, False, True)
+    classify(2.25) -> (3/2, 3/2, True, True, False, True)
+1.999999999999 (1, 2, True, True, True, False)
+2.0000000000001 (1, 2, True, True, True, False)
+1e-12 (3/2 - sqrt(2249999999999)/1000000, sqrt(2249999999999)/1000000 + 3/2, True, False, False, False)

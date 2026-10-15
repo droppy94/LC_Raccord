@@ -1,0 +1,22 @@
+(1) indicial equation: M2 + alpha**2 - 3*alpha =0  ->  alpha = [3/2 - sqrt(9 - 4*M2)/2, sqrt(9 - 4*M2)/2 + 3/2]
+
+(2) classification (M2 = m_h^2 + 12 xi, in units of H^2), generic data c1 != 0
+   M2      alpha_min          alpha_max          (a)    (b)    (c)
+   -1      3/2 - sqrt(13)/2   3/2 + sqrt(13)/2   False  False  False
+   0       0                  3                  False  False  False
+   1/2     3/2 - sqrt(7)/2    sqrt(7)/2 + 3/2    True   False  False
+   1       3/2 - sqrt(5)/2    sqrt(5)/2 + 3/2    True   False  False
+   3/2     3/2 - sqrt(3)/2    sqrt(3)/2 + 3/2    True   False  False
+   19/10   3/2 - sqrt(35)/10  sqrt(35)/10 + 3/2  True   False  False
+   2       1                  2                  True   True   True 
+   21/10   3/2 - sqrt(15)/10  sqrt(15)/10 + 3/2  True   True   False
+   9/4     3/2                3/2                True   True   False  (double root, log)
+   3       3/2 - sqrt(3)*I/2  3/2 + sqrt(3)*I/2  True   True   False
+   10      3/2 - sqrt(31)*I/2  3/2 + sqrt(31)*I/2  True   True   False
+   thresholds: (a) Re(3/2 - mu) > 0 <=> M2 > 0 ;  (b) Re(3/2 - mu) >= 1 <=> mu <= 1/2 or complex <=> M2 >= 2 ; (c) only M2 = 2 (alpha = 1, 2)
+   conformal coupling xi = 1/6, m_h = 0  ->  M2 = 2
+
+(3) Omega-weight of sqrt(-g) y H psibar psi : 0  (0 = conformally invariant)
+    Omega-weight of sqrt(-g) g^{mn} |H|^2 A_m A_n : 0
+    Omega-weight of sqrt(-g) m^2 |H|^2 : -2  (-> Omega^-2 m^2 |Hr|^2 : Friedrich's singular term, cancelled by R/6 at m^2 = 2 lambda/3)
+    rescaled Dirac mass coefficient: y Hr = y h / Omega = m_f / Omega
