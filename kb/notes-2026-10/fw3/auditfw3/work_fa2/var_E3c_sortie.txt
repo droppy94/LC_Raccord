@@ -1,0 +1,38 @@
+
+=== (c1) scalaire reel xi=0 + cubique mu phi^3 ===
+  options: xi=0, dds_mode=friedrich, reduction via n0, {'gauge': False, 'ym': False, 'real_scalar': True, 'cubic': True}
+  plus basse puissance de Omega dans That_ab : 0 ; dans Omega^-2 That : 0
+  plus basse puissance AVANT reduction (3.8) : -2  (doit etre >= -K pour que la reduction soit polynomiale)
+  plus basse puissance de Omega dans la source de (2.17) apres (2.14),(2.15),(3.8) : -2
+  nombre de composantes non nulles a l'ordre Omega^-2 : 12
+  nombre de composantes non nulles a l'ordre Omega^-1 : 12
+  Omega^-2 nul a m^2 = 2 lambda/3 : True
+  Omega^-1 nul a m^2 = 2 lambda/3 : False
+  exemple Omega^-1 a m^2 = 2 lambda/3 : kappa*mu*n1*p**3/2
+  mu present dans Omega^-1 : True ; mu present dans Omega^-2 : False
+
+=== (c2) Higgs complexe, jauge, YM, xi + cubique mu |H|^3 ===
+  options: xi=xi, dds_mode=friedrich, reduction via n0, {'gauge': True, 'ym': True, 'cubic': True}
+  plus basse puissance de Omega dans That_ab : 0 ; dans Omega^-2 That : 0
+  plus basse puissance AVANT reduction (3.8) : -2  (doit etre >= -K pour que la reduction soit polynomiale)
+  plus basse puissance de Omega dans la source de (2.17) apres (2.14),(2.15),(3.8) : -2
+  nombre de composantes non nulles a l'ordre Omega^-2 : 12
+  nombre de composantes non nulles a l'ordre Omega^-1 : 12
+  Omega^-2 nul a m^2 + 4 lambda xi = 2 lambda/3 : True
+  Omega^-1 nul a m^2 + 4 lambda xi = 2 lambda/3 : False
+  exemple Omega^-1 a la condition : sqrt(2)*kappa*mu*n1*(p**2 + q**2)**(3/2)/8
+  mu present dans Omega^-1 : True
+
+=== (c3) Higgs complexe, jauge, YM, xi + terme Majorana-like M Omega eta_ab B ===
+  options: xi=xi, dds_mode=friedrich, reduction via n0, {'gauge': True, 'ym': True, 'majorana_like': True}
+  plus basse puissance de Omega dans That_ab : 0 ; dans Omega^-2 That : 0
+  plus basse puissance AVANT reduction (3.8) : -2  (doit etre >= -K pour que la reduction soit polynomiale)
+  plus basse puissance de Omega dans la source de (2.17) apres (2.14),(2.15),(3.8) : -2
+  nombre de composantes non nulles a l'ordre Omega^-2 : 12
+  nombre de composantes non nulles a l'ordre Omega^-1 : 12
+  Omega^-2 nul a la condition : True
+  Omega^-1 nul a la condition : False
+  exemple Omega^-1 a la condition : -B*M*kappa*n1/2
+  M present dans Omega^-1 : True
+
+[temps total 252 s]

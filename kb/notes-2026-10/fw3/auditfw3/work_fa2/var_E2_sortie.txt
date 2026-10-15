@@ -1,0 +1,48 @@
+
+=== (i) C1 reproduction : scalaire reel, xi=0, sans jauge ===
+  options: xi=0, dds_mode=orig, reduction via n0, {'gauge': False, 'ym': False, 'real_scalar': True}
+  plus basse puissance de Omega dans That_ab : 0 ; dans Omega^-2 That : 0
+  plus basse puissance AVANT reduction (3.8) : -2  (doit etre >= -K pour que la reduction soit polynomiale)
+  plus basse puissance de Omega dans la source de (2.17) apres (2.14),(2.15),(3.8) : -2
+  nombre de composantes non nulles a l'ordre Omega^-2 : 12
+  nombre de composantes non nulles a l'ordre Omega^-1 : 12
+  Omega^-2 == (kappa/3)(m^2 - 2 lambda/3) p^2 n_[nu eta_lambda]rho : True
+  Omega^-1 nul a m^2 = 2 lambda/3 : True
+
+=== (ii-a) C2 reproduction, (2.15) facteur Omega (original) ===
+  options: xi=xi, dds_mode=orig, reduction via n0, {'gauge': True, 'ym': True}
+  plus basse puissance de Omega dans That_ab : 0 ; dans Omega^-2 That : 0
+  plus basse puissance AVANT reduction (3.8) : -2  (doit etre >= -K pour que la reduction soit polynomiale)
+  plus basse puissance de Omega dans la source de (2.17) apres (2.14),(2.15),(3.8) : -2
+  nombre de composantes non nulles a l'ordre Omega^-2 : 12
+  nombre de composantes non nulles a l'ordre Omega^-1 : 12
+  (ii-a) Omega^-2 == (kappa/3)(m^2 + 4 lambda xi - 2 lambda/3) (p**2 + q**2) n_[nu eta_lambda]rho : True
+  (ii-a) a m^2 + 4 lambda xi = 2 lambda/3 : Omega^-2 nul : True ; Omega^-1 nul : True ; aucun Omega^-3 ou moins : True
+  (ii-a) symboles dans les coefficients singuliers : ['dp_0', 'dp_1', 'dp_2', 'dp_3', 'dq_0', 'dq_1', 'dq_2', 'dq_3', 'kappa', 'lambda', 'm', 'n0', 'n1', 'n2', 'n3', 'p', 'q', 'xi']
+
+=== (ii-b) C2, (2.15) facteur Omega^-1 (Friedrich) ===
+  options: xi=xi, dds_mode=friedrich, reduction via n0, {'gauge': True, 'ym': True}
+  plus basse puissance de Omega dans That_ab : 0 ; dans Omega^-2 That : 0
+  plus basse puissance AVANT reduction (3.8) : -2  (doit etre >= -K pour que la reduction soit polynomiale)
+  plus basse puissance de Omega dans la source de (2.17) apres (2.14),(2.15),(3.8) : -2
+  nombre de composantes non nulles a l'ordre Omega^-2 : 12
+  nombre de composantes non nulles a l'ordre Omega^-1 : 12
+  (ii-b) Omega^-2 == (kappa/3)(m^2 + 4 lambda xi - 2 lambda/3) (p**2 + q**2) n_[nu eta_lambda]rho : True
+  (ii-b) a m^2 + 4 lambda xi = 2 lambda/3 : Omega^-2 nul : True ; Omega^-1 nul : True ; aucun Omega^-3 ou moins : True
+  (ii-b) symboles dans les coefficients singuliers : ['dp_0', 'dp_1', 'dp_2', 'dp_3', 'dq_0', 'dq_1', 'dq_2', 'dq_3', 'kappa', 'lambda', 'm', 'n0', 'n1', 'n2', 'n3', 'p', 'q', 'xi']
+  coefficients Omega^-3, Omega^-2, Omega^-1 identiques entre (ii-a) et (ii-b) : True
+  difference a l'ordre Omega^0 (3 premieres composantes) : [False, False, False]
+
+=== (iii) C2, reduction (3.8) via n1^2 ===
+  options: xi=xi, dds_mode=friedrich, reduction via n1, {'gauge': True, 'ym': True}
+  plus basse puissance de Omega dans That_ab : 0 ; dans Omega^-2 That : 0
+  plus basse puissance AVANT reduction (3.8) : -2  (doit etre >= -K pour que la reduction soit polynomiale)
+  plus basse puissance de Omega dans la source de (2.17) apres (2.14),(2.15),(3.8) : -2
+  nombre de composantes non nulles a l'ordre Omega^-2 : 12
+  nombre de composantes non nulles a l'ordre Omega^-1 : 12
+  (iii) Omega^-2 == (kappa/3)(m^2 + 4 lambda xi - 2 lambda/3) (p**2 + q**2) n_[nu eta_lambda]rho : True
+  (iii) a m^2 + 4 lambda xi = 2 lambda/3 : Omega^-2 nul : True ; Omega^-1 nul : True ; aucun Omega^-3 ou moins : True
+  (iii) symboles dans les coefficients singuliers : ['dp_0', 'dp_1', 'dp_2', 'dp_3', 'dq_0', 'dq_1', 'dq_2', 'dq_3', 'kappa', 'lambda', 'm', 'n0', 'n1', 'n2', 'n3', 'p', 'q', 'xi']
+  (v) S_ab, dS, Str, s, L dans les coefficients singuliers : False
+
+[temps total 219 s]

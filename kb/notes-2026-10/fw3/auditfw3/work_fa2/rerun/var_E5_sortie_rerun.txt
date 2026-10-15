@@ -1,0 +1,11 @@
+Rhat a l'ordre dominant : 4*lambda  ; Rhat_ab : -lambda/Omega**2 , lambda/Omega**2
+Ghat_ab + lambda ghat_ab = 0 a l'ordre Omega^-2 et Omega^-1 : True
+(ghat box - nabla nabla) f a l'ordre 0 : composante (0,0) = -6*f_r*n0**2 ; (0,1) = -6*f_r*n0*n1  (attendu -6 n_a n_b f_r)
+Omega^-2 That a l'ordre 0 (Str^(0)) = -(p**2 + q**2)*(6*lambda*xi - lambda + 6*m**2)/3
+Coefficient Omega^-2 de (2.17) == (kappa/3)(m^2 + 4 lambda xi - 2 lambda/3)(p^2 + q^2) n_[nu eta_lambda]rho : True
+Composante (rho,nu,lambda) = (0,0,1) : kappa*n1*(p**2 + q**2)*(12*lambda*xi - 2*lambda + 3*m**2)/18
+  part en xi : 2*kappa*lambda*n1*(p**2 + q**2)/3  ; attendu (4/3) kappa lambda xi (p^2+q^2) n_[0 eta_1]0 = (2/3) kappa lambda xi (p^2+q^2) n_1 ... signe selon eta_00 = -1
+
+real	0m0.881s
+user	0m0.818s
+sys	0m0.032s

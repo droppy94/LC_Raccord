@@ -1,0 +1,10 @@
+Q1 : sqrt(-ghat) ghat^{ma} ghat^{nb} = sqrt(-g) g^{ma} g^{nb} (poids Om^0) : verifie
+Connexion de spin : signe fixe par le postulat de la tetrade, sign = 1
+Q5 : gammahat^mu Dhat_mu (Om^{3/2} psi_r) = Om^{5/2} gamma^mu D_mu psi_r : verifie
+Q5 : equation de Dirac rescalee = Om^{5/2} [ (i gamma.D - y H_r) psi_r ] : coefficient de masse y H_r (regulier)
+Q5 : avec masse constante m : coefficient de masse rescale = m/Om (singulier)
+Q5 : Lag_D (Yukawa) = Om^4 Lag_D^r  =>  ghat_ab Lag_D = Om^2 eta_ab Lag_D^r (ordre Om^2)
+Q5 : avec masse constante : ghat_ab (-m psibar psi) = -m Om eta_ab psibar_r psi_r (ordre Om^1)
+Q1 : J^n_Dirac = Om^4 j_r^n : verifie
+Q3/Q5 : T^D_ab (partie cinetique symetrisee, avec jauge) = Om^2 T^D_ab[psi_r] exactement : verifie
+       (les termes en dOm issus de la connexion de spin et du poids 3/2 se compensent)

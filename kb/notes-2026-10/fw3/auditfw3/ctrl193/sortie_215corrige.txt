@@ -1,0 +1,37 @@
+(A) Yang-Mills: sqrt(-ghat) ghat^{ma} ghat^{nb} / (sqrt(-g) g^{ma} g^{nb}) = 1 (1 means conformal invariance of the YM equation in 4D; YM equation rescaled: nabla_mu F^{mu nu} = j_r^nu with J^nu = Omega^4 j_r^nu)
+    Higgs current J_a (lower) lowest Omega power: 2 ; J_a / Omega^2 free of n_a (dOmega): True -> J^nu = ghat^{nu a} J_a = Omega^4 j_r^nu
+    Dirac current: psibar gammahat_a psi = Omega^{3/2} Omega^{-1} Omega^{3/2} psibar_r gamma_a psi_r = Omega^2 j_r,a -> J^nu = Omega^4 j_r^nu (weights, see (D))
+
+(B) Higgs equation: conformal covariance of boxhat_D - Rhat/6 with gauge field, off shell
+    Omega^-3 (boxhat_D - Rhat/6)[Omega H_r] - box_D[H_r] = 0 (R = 0 for flat g): True
+    coefficient structure: Omega^-3 (m^2 + (xi-1/6) Rhat) H = -Str*kappa*p*xi/(p + I*q) + Str*kappa*p/(6*p + 6*I*q) - I*Str*kappa*q*xi/(p + I*q) + I*Str*kappa*q/(6*p + 6*I*q) + (4*lambda*p*xi/(p + I*q) - 2*lambda*p/(3*p + 3*I*q) + 4*I*lambda*q*xi/(p + I*q) - 2*I*lambda*q/(3*p + 3*I*q) + m**2*p/(p + I*q) + I*m**2*q/(p + I*q))/Omega**2
+    -> singular part Omega^-2 (m^2 + 4 lambda xi - 2 lambda/3) H_r ; regular part -(xi-1/6) kappa Str H_r
+    quartic: Omega^-3 2 lambda_h |H|^2 H =  lambda_h*p**2 + lambda_h*q**2 * H_r (order 0) ; Yukawa: Omega^-3 y psibar psi = y psibar_r psi_r (order 0)
+
+=== (C1) calibration: real scalar, xi = 0, no gauge (Friedrich th. 3.1) ===
+  lowest power of Omega in That_ab (lower indices): 0  (>= 0 regular)
+  lowest power of Omega in Omega^-2 That (trace, Friedrich's T*): 0  (>= 0 regular)
+  lowest power of Omega in (2.17) source after substitutions (2.14),(2.15),(3.8): -2
+  Omega^-2 coefficient == (kappa/3)(m^2 - 2 lambda/3) p^2 n_[nu eta_lambda]rho : True
+  Omega^-2 coefficient vanishes at m^2 = 2 lambda/3 : True
+  Omega^-1 coefficient vanishes at m^2 = 2 lambda/3 : True
+  Omega^-1 coefficient non-zero for generic m (example component): [dp_1*kappa*p*(-2*lambda + 3*m**2)/18]
+  Omega^-3 terms: 0
+
+=== (C2) full: complex Higgs doublet component, gauge field, Yang-Mills, non-minimal xi ===
+  lowest power of Omega in That_ab (lower indices): 0  (>= 0 regular)
+  lowest power of Omega in Omega^-2 That (trace, Friedrich's T*): 0  (>= 0 regular)
+  lowest power of Omega in (2.17) source after substitutions (2.14),(2.15),(3.8): -2
+  Omega^-2 coefficient == (kappa/3)(m^2 + 4 lambda xi - 2 lambda/3) 2|H_r|^2 n_[nu eta_lambda]rho : True
+  at m^2 + 4 lambda xi = 2 lambda/3 : Omega^-2 coefficient vanishes : True ; Omega^-1 coefficient vanishes : True
+  Omega^-3 terms: 0
+  symbols in the singular coefficients: ['dp_0', 'dp_1', 'dp_2', 'dp_3', 'dq_0', 'dq_1', 'dq_2', 'dq_3', 'kappa', 'lambda', 'm', 'n0', 'n1', 'n2', 'n3', 'p', 'q', 'xi']
+  gauge potential A, dA or lambda_h present in singular coefficients: False
+  calibration 2 (xi = 1/6, m = 0): all singular coefficients vanish : True
+  generic (xi, m): Omega^-2 coefficient non-zero (example): kappa*n1*(p**2 + q**2)*(12*lambda*xi - 2*lambda + 3*m**2)/18
+
+(D) Dirac sector (+,-,-,-), jets, gauge field A (weight 0), Yukawa mass y H = y Omega H_r
+    (i gammahat.Dhat - y Omega h_r) psi - Omega^{5/2} (i gamma.D - y h_r) psi_r = 0 off shell: True -> rescaled Dirac coefficient y h_r, regular
+    kinetic tensor with gauge field: That[psi; ghat, A] - Omega^2 T[psi_r; eta, A] = 0 off shell: True
+    Lagrangian: Lag[psi; ghat, A, yH] - Omega^4 psibar_r (i gamma.D - y h_r) psi_r = 0 off shell: True -> ghat Lag = Omega^2 (...) eta : order Omega^2 in Lhat, (2.17) regular (ED part D, power 2 -> lowest 0); with constant mass instead (y h_r -> m/Omega) the mass term of ghat Lag is order Omega^1 (ED-3)
+    constant-mass control: Omega^-2 * Omega^4 * (m/Omega) psibar_r psi_r = order 1 (Omega^1)

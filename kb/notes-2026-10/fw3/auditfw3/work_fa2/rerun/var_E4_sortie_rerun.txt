@@ -1,0 +1,19 @@
+
+w = 1 : puissances de Omega presentes : [-2, 0]
+   coefficient Omega^-2 : -sqrt(2)*(p + I*q)*(12*lambda*xi - 2*lambda + 3*m**2)/6
+
+w = 2 : puissances de Omega presentes : [-2, -1, 0]
+   coefficient Omega^-2 : -sqrt(2)*(p + I*q)*(12*lambda*xi - 2*lambda + 3*m**2)/6
+   coefficient Omega^-1 : sqrt(2)*(I*A0*e*n0*p - A0*e*n0*q - I*A1*e*n1*p + A1*e*n1*q - I*A2*e*n2*p + A2*e*n2*q - I*A3*e*n3*p + A3*e*n3*q - dp_0*n0 + dp_1*n1 + dp_2*n2 + dp_3*n3 - I*dq_0*n0 + I*dq_1*n1 + I*dq_2*n2 + I*dq_3*n3 + 2*p*s + 2*I*q*s)
+
+w = 0 : puissances de Omega presentes : [-2, -1, 0]
+   coefficient Omega^-2 : -sqrt(2)*(p + I*q)*(4*lambda*xi + m**2)/2
+   coefficient Omega^-1 : -sqrt(2)*I*(A0*e*n0*p + I*A0*e*n0*q - A1*e*n1*p - I*A1*e*n1*q - A2*e*n2*p - I*A2*e*n2*q - A3*e*n3*p - I*A3*e*n3*q + I*dp_0*n0 - I*dp_1*n1 - I*dp_2*n2 - I*dp_3*n3 - dq_0*n0 + dq_1*n1 + dq_2*n2 + dq_3*n3)
+
+w = 1/2 : puissances de Omega presentes : [-2, -1, 0]
+   coefficient Omega^-2 : -sqrt(2)*(p + I*q)*(48*lambda*xi - 5*lambda + 12*m**2)/24
+   coefficient Omega^-1 : -sqrt(2)*(2*I*A0*e*n0*p - 2*A0*e*n0*q - 2*I*A1*e*n1*p + 2*A1*e*n1*q - 2*I*A2*e*n2*p + 2*A2*e*n2*q - 2*I*A3*e*n3*p + 2*A3*e*n3*q - 2*dp_0*n0 + 2*dp_1*n1 + 2*dp_2*n2 + 2*dp_3*n3 - 2*I*dq_0*n0 + 2*I*dq_1*n1 + 2*I*dq_2*n2 + 2*I*dq_3*n3 + p*s + I*q*s)/4
+
+real	10m0.017s
+user	9m48.580s
+sys	0m0.611s

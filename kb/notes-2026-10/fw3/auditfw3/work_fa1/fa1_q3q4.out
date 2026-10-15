@@ -1,0 +1,81 @@
+Christoffel de ghat : forme -Om^-1(delta dOm + delta dOm - eta dOm) verifiee
+Formules de Friedrich pour Rhat_ab et Rhat : verifiees
+Q1 : J^n_Higgs = Om^4 j_r^n, sans terme en dOm : verifie
+Q2 : (boxhat_D - Rhat/6)(Om H_r) = Om^3 box_D H_r (g plat) : verifie
+T_ab et trace construits  (t = 2 s)
+T_ab est un polynome (puissances >= 0) en Om dans les variables rescalees
+Trace That : plus basse puissance de Om = 2
+composante rho=0 nu=0 la=1: plus basse puissance Om^-2; coeff Om^-2 - K3 = 0
+composante rho=0 nu=0 la=2: plus basse puissance Om^-2; coeff Om^-2 - K3 = 0
+composante rho=0 nu=0 la=3: plus basse puissance Om^-2; coeff Om^-2 - K3 = 0
+composante rho=0 nu=1 la=2: plus basse puissance Om^0; coeff Om^-2 - K3 = 0
+composante rho=0 nu=1 la=3: plus basse puissance Om^0; coeff Om^-2 - K3 = 0
+composante rho=0 nu=2 la=3: plus basse puissance Om^0; coeff Om^-2 - K3 = 0
+composante rho=1 nu=0 la=1: plus basse puissance Om^-2; coeff Om^-2 - K3 = 0
+composante rho=1 nu=0 la=2: plus basse puissance Om^0; coeff Om^-2 - K3 = 0
+composante rho=1 nu=0 la=3: plus basse puissance Om^0; coeff Om^-2 - K3 = 0
+composante rho=1 nu=1 la=2: plus basse puissance Om^-2; coeff Om^-2 - K3 = 0
+composante rho=1 nu=1 la=3: plus basse puissance Om^-2; coeff Om^-2 - K3 = 0
+composante rho=1 nu=2 la=3: plus basse puissance Om^0; coeff Om^-2 - K3 = 0
+composante rho=2 nu=0 la=1: plus basse puissance Om^0; coeff Om^-2 - K3 = 0
+composante rho=2 nu=0 la=2: plus basse puissance Om^-2; coeff Om^-2 - K3 = 0
+composante rho=2 nu=0 la=3: plus basse puissance Om^0; coeff Om^-2 - K3 = 0
+composante rho=2 nu=1 la=2: plus basse puissance Om^-2; coeff Om^-2 - K3 = 0
+composante rho=2 nu=1 la=3: plus basse puissance Om^0; coeff Om^-2 - K3 = 0
+composante rho=2 nu=2 la=3: plus basse puissance Om^-2; coeff Om^-2 - K3 = 0
+composante rho=3 nu=0 la=1: plus basse puissance Om^0; coeff Om^-2 - K3 = 0
+composante rho=3 nu=0 la=2: plus basse puissance Om^0; coeff Om^-2 - K3 = 0
+composante rho=3 nu=0 la=3: plus basse puissance Om^-2; coeff Om^-2 - K3 = 0
+composante rho=3 nu=1 la=2: plus basse puissance Om^0; coeff Om^-2 - K3 = 0
+composante rho=3 nu=1 la=3: plus basse puissance Om^-2; coeff Om^-2 - K3 = 0
+composante rho=3 nu=2 la=3: plus basse puissance Om^-2; coeff Om^-2 - K3 = 0
+temps : 46 s
+coeff Om^-2 (0, 0, 1) : Om_1*kappa*(p1**2 + p2**2)*(12*lambda*xi - 2*lambda + 3*m2)/18
+coeff Om^-2 (1, 0, 1) : Om_0*kappa*(p1**2 + p2**2)*(12*lambda*xi - 2*lambda + 3*m2)/18
+coeff Om^-2 (2, 0, 1) : 0
+coeff Om^-2 (1, 1, 2) : -Om_2*kappa*(p1**2 + p2**2)*(12*lambda*xi - 2*lambda + 3*m2)/18
+coeff Om^-2 (3, 2, 3) : Om_2*kappa*(p1**2 + p2**2)*(12*lambda*xi - 2*lambda + 3*m2)/18
+
+=== Q4 : coefficient de Om^-1 ===
+(0, 0, 1)  valeur du coeff Om^-1 sous la condition = 0
+(0, 0, 2)  valeur du coeff Om^-1 sous la condition = 0
+(0, 0, 3)  valeur du coeff Om^-1 sous la condition = 0
+(0, 1, 2)  valeur du coeff Om^-1 sous la condition = 0
+(0, 1, 3)  valeur du coeff Om^-1 sous la condition = 0
+(0, 2, 3)  valeur du coeff Om^-1 sous la condition = 0
+(1, 0, 1)  valeur du coeff Om^-1 sous la condition = 0
+(1, 0, 2)  valeur du coeff Om^-1 sous la condition = 0
+(1, 0, 3)  valeur du coeff Om^-1 sous la condition = 0
+(1, 1, 2)  valeur du coeff Om^-1 sous la condition = 0
+(1, 1, 3)  valeur du coeff Om^-1 sous la condition = 0
+(1, 2, 3)  valeur du coeff Om^-1 sous la condition = 0
+(2, 0, 1)  valeur du coeff Om^-1 sous la condition = 0
+(2, 0, 2)  valeur du coeff Om^-1 sous la condition = 0
+(2, 0, 3)  valeur du coeff Om^-1 sous la condition = 0
+(2, 1, 2)  valeur du coeff Om^-1 sous la condition = 0
+(2, 1, 3)  valeur du coeff Om^-1 sous la condition = 0
+(2, 2, 3)  valeur du coeff Om^-1 sous la condition = 0
+(3, 0, 1)  valeur du coeff Om^-1 sous la condition = 0
+(3, 0, 2)  valeur du coeff Om^-1 sous la condition = 0
+(3, 0, 3)  valeur du coeff Om^-1 sous la condition = 0
+(3, 1, 2)  valeur du coeff Om^-1 sous la condition = 0
+(3, 1, 3)  valeur du coeff Om^-1 sous la condition = 0
+(3, 2, 3)  valeur du coeff Om^-1 sous la condition = 0
+coeff Om^-1 (0, 0, 1) : kappa*(p1*p1_1 + p2*p2_1)*(12*lambda*xi - 2*lambda + 3*m2)/18
+coeff Om^-1 (1, 0, 1) : kappa*(p1*p1_0 + p2*p2_0)*(12*lambda*xi - 2*lambda + 3*m2)/18
+coeff Om^-1 (2, 0, 1) : 0
+coeff Om^-1 (1, 1, 2) : -kappa*(p1*p1_2 + p2*p2_2)*(12*lambda*xi - 2*lambda + 3*m2)/18
+Le coefficient de Om^-1 s annule identiquement sous la condition : True
+
+=== Variante : elimination de boxhat_D H par l equation de Higgs ===
+(0, 0, 1) plus basse puissance -2 ; coeff Om^-2 / K3 = 1 - 4*xi ; coeff Om^-1 sous la condition = 0
+(1, 0, 1) plus basse puissance -2 ; coeff Om^-2 / K3 = 1 - 4*xi ; coeff Om^-1 sous la condition = 0
+(2, 1, 2) plus basse puissance -2 ; coeff Om^-2 / K3 = 1 - 4*xi ; coeff Om^-1 sous la condition = 0
+temps total : 63 s
+
+=== Robustesse : (2.14) avec le terme (kappa/2) Om T*_ab et (3.8) avec (kappa/12) That ===
+(0, 0, 1) plus basse puissance -2 ; coeff Om^-2 inchange : True ; coeff Om^-1 inchange : True
+(1, 0, 1) plus basse puissance -2 ; coeff Om^-2 inchange : True ; coeff Om^-1 inchange : True
+(2, 1, 2) plus basse puissance -2 ; coeff Om^-2 inchange : True ; coeff Om^-1 inchange : True
+(3, 1, 3) plus basse puissance -2 ; coeff Om^-2 inchange : True ; coeff Om^-1 inchange : True
+temps total : 97 s

@@ -17,6 +17,7 @@ role: trace des depots publics horodates par un tiers (regle EX-2)
 | 2026-10-15 17:4x (Paris) | GitHub, `archive/notes-2026-10` | Journal des depots a jour (commits d7bd863 et e629f5d) | **POUSSE** | commit **89a63c8** |
 | 2026-10-15 18:06 (Paris) | GitHub, `archive/notes-2026-10` | Chantier ED 180-184 (gel, execution, audit DB-1/DB-2, acte), article v2.3, S26-02 v4 ; registre a 185 libre | **POUSSE** | commit **d6da031d3fde7a1a6d138be01d947c777f72e4a4** |
 | 2026-10-15 18:5x (Paris) | GitHub, `archive/notes-2026-10` | Chantier HX 185-189 (gel, execution, audit HA-1/HA-2, concordance, acte G-M1), S27-02 v2, relecture ChatGPT du 14 oct. (verbatim), reprise v9.1, registre a 190 libre, journal | **POUSSE** | commit : voir `git log` de la branche (le hash d'un commit ne peut figurer dans le fichier qu'il contient) |
+| 2026-10-15 19:4x (Paris) | GitHub, `archive/notes-2026-10` | Chantier FW3 190-194 (gel, execution, audit FA-1/FA-2 avec reprise de FA-2 apres quota, concordance AU-V2, acte G-FW3 et G-M2), NOTE-191 v2, S27-02 v3, reprise v10, registre a 195 libre, journal | **POUSSE** | commit : voir `git log` de la branche |
 
 Constat du 2026-10-14 : la branche `cadre/claude-md-5-4-bis` (commit e3cb17b, amendement 5.4 bis) etait deja sur GitHub ; le `RESTAURER-GIT.cmd` du depot local qui demandait son push est perime. Branche `front-pq` (e1889d2) presente a distance, absente du clone local.
 

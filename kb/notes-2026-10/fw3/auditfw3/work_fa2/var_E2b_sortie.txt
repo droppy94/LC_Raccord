@@ -1,0 +1,14 @@
+  S_ab : plus basse puissance de Omega dans d That_ab / d S_ab : 99 ; dans d(Omega^-2 That)/d S_ab : 99
+  Str : plus basse puissance de Omega dans d That_ab / d Str : 99 ; dans d(Omega^-2 That)/d Str : 99
+  s : plus basse puissance de Omega dans d That_ab / d s : 99 ; dans d(Omega^-2 That)/d s : 99
+  L_ab : plus basse puissance de Omega dans d That_ab / d L_ab : 99 ; dans d(Omega^-2 That)/d L_ab : 99
+
+real	0m2.474s
+user	0m1.607s
+sys	0m0.044s
+
+-- complement : derivees de dd Omega absentes de That (annulation exacte des termes en dd Omega dans xi(Ghat f + ghat boxhat f - nablahat nablahat f)) ;
+   on reduit d'abord That modulo (3.8), puis on mesure l'ordre auquel s, Str entrent :
+  s : plus basse puissance de Omega dans d That_ab/d s (apres (3.8)) : 1 ; dans d(Omega^-2 That)/d s : 1
+  Str : plus basse puissance de Omega dans d That_ab/d Str (apres (3.8)) : 2 ; dans d(Omega^-2 That)/d Str : 2
+  S_ab, L_ab presents dans That reduit : False

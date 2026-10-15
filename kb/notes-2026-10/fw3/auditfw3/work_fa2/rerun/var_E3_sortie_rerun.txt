@@ -1,0 +1,32 @@
+
+=== (a) C2 + Omega^2 Y_ab generique, une composante ===
+  options: xi=xi, dds_mode=friedrich, reduction via n0, {'gauge': True, 'ym': True, 'add_Y': True}
+  plus basse puissance de Omega dans That_ab : 0 ; dans Omega^-2 That : 0
+  plus basse puissance AVANT reduction (3.8) : -2  (doit etre >= -K pour que la reduction soit polynomiale)
+  plus basse puissance de Omega dans la source de (2.17) apres (2.14),(2.15),(3.8) : -2
+  nombre de composantes non nulles a l'ordre Omega^-2 : 12
+  nombre de composantes non nulles a l'ordre Omega^-1 : 12
+  (a) Omega^-2 == (kappa/3)(m^2 + 4 lambda xi - 2 lambda/3) (p**2 + q**2) n_[nu eta_lambda]rho : True
+  (a) a m^2 + 4 lambda xi = 2 lambda/3 : Omega^-2 nul : True ; Omega^-1 nul : True ; aucun Omega^-3 ou moins : True
+  (a) symboles dans les coefficients singuliers : ['dp_0', 'dp_1', 'dp_2', 'dp_3', 'dq_0', 'dq_1', 'dq_2', 'dq_3', 'kappa', 'lambda', 'm', 'n0', 'n1', 'n2', 'n3', 'p', 'q', 'xi']
+[47 s]
+
+=== (b) C2 + Omega^2 Y_ab + deux composantes complexes (K-6) ===
+  options: xi=xi, dds_mode=friedrich, reduction via n0, {'gauge': True, 'ym': True, 'add_Y': True, 'n_comp': 2}
+  plus basse puissance de Omega dans That_ab : 0 ; dans Omega^-2 That : 0
+  plus basse puissance AVANT reduction (3.8) : -2  (doit etre >= -K pour que la reduction soit polynomiale)
+  plus basse puissance de Omega dans la source de (2.17) apres (2.14),(2.15),(3.8) : -2
+  nombre de composantes non nulles a l'ordre Omega^-2 : 12
+  nombre de composantes non nulles a l'ordre Omega^-1 : 12
+  (b) Omega^-2 == (kappa/3)(m^2 + 4 lambda xi - 2 lambda/3) (p**2 + p2**2 + q**2 + q2**2) n_[nu eta_lambda]rho : True
+  (b) a m^2 + 4 lambda xi = 2 lambda/3 : Omega^-2 nul : True ; Omega^-1 nul : True ; aucun Omega^-3 ou moins : True
+  (b) symboles dans les coefficients singuliers : ['dp2_0', 'dp2_1', 'dp2_2', 'dp2_3', 'dp_0', 'dp_1', 'dp_2', 'dp_3', 'dq2_0', 'dq2_1', 'dq2_2', 'dq2_3', 'dq_0', 'dq_1', 'dq_2', 'dq_3', 'kappa', 'lambda', 'm', 'n0', 'n1', 'n2', 'n3', 'p', 'p2', 'q', 'q2', 'xi']
+  exemple de coefficient Omega^-2 : kappa*n1*(12*lambda*xi - 2*lambda + 3*m**2)*(p**2 + p2**2 + q**2 + q2**2)/18
+  exemple de coefficient Omega^-1 : kappa*(12*lambda*xi - 2*lambda + 3*m**2)*(dp2_1*p2 + dp_1*p + dq2_1*q2 + dq_1*q)/18
+  K-6 satisfait : True
+
+[temps total 141 s]
+
+real	2m21.757s
+user	2m9.840s
+sys	0m0.160s
