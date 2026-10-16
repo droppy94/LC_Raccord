@@ -1,0 +1,58 @@
+=== C1 : conservation complete, superposition de deux modes ===
+  eta= -3.000  residus relatifs (nu=0..3) signe physique : [1.5e-10 9.3e-11 1.6e-10 7.2e-11]   signe du script : [0.8 1.4 0.2 2.4]
+  eta= -0.500  residus relatifs (nu=0..3) signe physique : [9.4e-11 5.5e-11 2.5e-11 8.0e-11]   signe du script : [0.2 0.1 0.1 0.2]
+  eta= -0.050  residus relatifs (nu=0..3) signe physique : [4.0e-11 2.3e-12 2.3e-12 2.8e-12]   signe du script : [0. 0. 0. 0.]
+  eta= -0.005  residus relatifs (nu=0..3) signe physique : [1.4e-11 3.4e-12 3.8e-12 1.3e-12]   signe du script : [2.6e-05 2.0e-05 1.3e-05 2.8e-05]
+  mode unique (signe du script), test trace/nu=0 seul : [1.4e-10 1.2e-10 3.9e-13 1.3e-10]
+
+=== C2 : particule pure a la limite = solution de Frobenius u_+ = Omega^{i m/H} (serie entiere) ===
+  Omega       |tau_ab|/Omega^2   tau00           (tau00-m)/Omega    |chi_-|/Omega   phase(chi_-) 
+     1e-01   0.98632436       +0.70472542    +0.047254        0.580443      -2.6027
+     1e-02   0.98840722       +0.70004730    +0.004730        0.581230      +0.4562
+     1e-03   0.98842820       +0.70000047    +0.000473        0.581238      -2.7674
+     1e-04   0.98842718       +0.70000000    +0.000047        0.581238      +0.2921
+     1e-05   0.98843948       +0.70000000    +0.000005        0.581244      -2.9315
+     1e-06   0.98831764       +0.70000000    +0.000002        0.581183      +0.1281
+     1e-07   0.98951613       +0.70000000    +0.000014        0.581802      -3.0958
+     1e-08   0.97781121       +0.70000000    +0.000085        0.575505      -0.0343
+  J/Omega numerique (Omega=1e-6) : [0.567501 0.405385 0.756668]  prediction Frobenius 2Re(chi0+^dag sigma C) : [0.567568 0.405405 0.756757]
+
+=== C3 : membre de droite COMPLET de (3.7) (terme derivee + S/Omega), un mode ===
+  generique       terme derivee : max|.| = 0.4002, etendue (max-min) sur Omega in [1e-8,1e-3] = 0.5118 ;  S/Omega etendue = 5.95e-01
+  particule pure  terme derivee : max|.| = 0.4000, etendue (max-min) sur Omega in [1e-8,1e-3] = 0.0021 ;  S/Omega etendue = 4.73e-04
+
+=== C4 : paquet d'ondes (deux modes) ; termes croises de tau en x fixe ===
+  deux particules pures            tau00 etendue (Omega<1e-5) = 5.00e-11 ; |tau_0a|/Omega max = 1.789 ; |tau_ab|/Omega etendue = 1.256e-05 ; max = 0.013
+  particule + antiparticule pures  tau00 etendue (Omega<1e-5) = 6.51e-06 ; |tau_0a|/Omega max = 1.159 ; |tau_ab|/Omega etendue = 1.074e+00 ; max = 1.085
+
+=== C5 : sensibilite (generique ; etendue de |tau_ab|/Omega et de S/Omega sur Omega in [1e-8,1e-2]) ===
+  m/H=0.05 |k|= 1.00 rtol=1e-09 : |tau_ab|/Om in [0.496,0.569] ; tau00 final +0.0332 ; |tau_0a|/Om max 0.800 ; periode de l'oscillation = 27.3 decades
+  m/H=0.05 |k|= 1.00 rtol=1e-12 : |tau_ab|/Om in [0.496,0.569] ; tau00 final +0.0332 ; |tau_0a|/Om max 0.800 ; periode de l'oscillation = 27.3 decades
+  m/H=0.05 |k|= 0.10 rtol=1e-09 : |tau_ab|/Om in [0.040,0.067] ; tau00 final +0.0321 ; |tau_0a|/Om max 0.080 ; periode de l'oscillation = 27.3 decades
+  m/H=0.05 |k|= 0.10 rtol=1e-12 : |tau_ab|/Om in [0.040,0.067] ; tau00 final +0.0321 ; |tau_0a|/Om max 0.080 ; periode de l'oscillation = 27.3 decades
+  m/H=0.05 |k|=10.00 rtol=1e-09 : |tau_ab|/Om in [5.444,6.766] ; tau00 final -0.0217 ; |tau_0a|/Om max 8.000 ; periode de l'oscillation = 27.3 decades
+  m/H=0.05 |k|=10.00 rtol=1e-12 : |tau_ab|/Om in [5.444,6.766] ; tau00 final -0.0217 ; |tau_0a|/Om max 8.000 ; periode de l'oscillation = 27.3 decades
+  m/H=0.30 |k|= 1.00 rtol=1e-09 : |tau_ab|/Om in [0.287,0.445] ; tau00 final +0.2445 ; |tau_0a|/Om max 0.800 ; periode de l'oscillation = 4.5 decades
+  m/H=0.30 |k|= 1.00 rtol=1e-12 : |tau_ab|/Om in [0.287,0.445] ; tau00 final +0.2445 ; |tau_0a|/Om max 0.800 ; periode de l'oscillation = 4.5 decades
+  m/H=0.30 |k|= 0.10 rtol=1e-09 : |tau_ab|/Om in [0.010,0.038] ; tau00 final +0.2543 ; |tau_0a|/Om max 0.080 ; periode de l'oscillation = 4.5 decades
+  m/H=0.30 |k|= 0.10 rtol=1e-12 : |tau_ab|/Om in [0.010,0.038] ; tau00 final +0.2543 ; |tau_0a|/Om max 0.080 ; periode de l'oscillation = 4.5 decades
+  m/H=0.30 |k|=10.00 rtol=1e-09 : |tau_ab|/Om in [6.803,9.035] ; tau00 final +0.0201 ; |tau_0a|/Om max 8.000 ; periode de l'oscillation = 4.5 decades
+  m/H=0.30 |k|=10.00 rtol=1e-12 : |tau_ab|/Om in [6.803,9.035] ; tau00 final +0.0201 ; |tau_0a|/Om max 8.000 ; periode de l'oscillation = 4.5 decades
+  m/H=0.70 |k|= 1.00 rtol=1e-09 : |tau_ab|/Om in [0.493,0.582] ; tau00 final +0.4822 ; |tau_0a|/Om max 0.800 ; periode de l'oscillation = 1.9 decades
+  m/H=0.70 |k|= 1.00 rtol=1e-12 : |tau_ab|/Om in [0.493,0.582] ; tau00 final +0.4822 ; |tau_0a|/Om max 0.800 ; periode de l'oscillation = 1.9 decades
+  m/H=0.70 |k|= 0.10 rtol=1e-09 : |tau_ab|/Om in [0.046,0.061] ; tau00 final +0.4923 ; |tau_0a|/Om max 0.080 ; periode de l'oscillation = 1.9 decades
+  m/H=0.70 |k|= 0.10 rtol=1e-12 : |tau_ab|/Om in [0.046,0.061] ; tau00 final +0.4923 ; |tau_0a|/Om max 0.080 ; periode de l'oscillation = 1.9 decades
+  m/H=0.70 |k|=10.00 rtol=1e-09 : |tau_ab|/Om in [6.255,7.695] ; tau00 final +0.3141 ; |tau_0a|/Om max 8.000 ; periode de l'oscillation = 1.9 decades
+  m/H=0.70 |k|=10.00 rtol=1e-12 : |tau_ab|/Om in [6.255,7.695] ; tau00 final +0.3141 ; |tau_0a|/Om max 8.000 ; periode de l'oscillation = 1.9 decades
+  m/H=2.00 |k|= 1.00 rtol=1e-09 : |tau_ab|/Om in [0.572,0.685] ; tau00 final +1.1628 ; |tau_0a|/Om max 0.800 ; periode de l'oscillation = 0.7 decades
+  m/H=2.00 |k|= 1.00 rtol=1e-12 : |tau_ab|/Om in [0.572,0.685] ; tau00 final +1.1628 ; |tau_0a|/Om max 0.800 ; periode de l'oscillation = 0.7 decades
+  m/H=2.00 |k|= 0.10 rtol=1e-09 : |tau_ab|/Om in [0.067,0.086] ; tau00 final +0.6742 ; |tau_0a|/Om max 0.080 ; periode de l'oscillation = 0.7 decades
+  m/H=2.00 |k|= 0.10 rtol=1e-12 : |tau_ab|/Om in [0.067,0.086] ; tau00 final +0.6742 ; |tau_0a|/Om max 0.080 ; periode de l'oscillation = 0.7 decades
+  m/H=2.00 |k|=10.00 rtol=1e-09 : |tau_ab|/Om in [5.762,6.810] ; tau00 final +1.1562 ; |tau_0a|/Om max 8.000 ; periode de l'oscillation = 0.7 decades
+  m/H=2.00 |k|=10.00 rtol=1e-12 : |tau_ab|/Om in [5.762,6.810] ; tau00 final +1.1562 ; |tau_0a|/Om max 8.000 ; periode de l'oscillation = 0.7 decades
+  m/H=5.00 |k|= 1.00 rtol=1e-09 : |tau_ab|/Om in [0.589,0.742] ; tau00 final +2.7155 ; |tau_0a|/Om max 0.800 ; periode de l'oscillation = 0.3 decades
+  m/H=5.00 |k|= 1.00 rtol=1e-12 : |tau_ab|/Om in [0.589,0.742] ; tau00 final +2.7155 ; |tau_0a|/Om max 0.800 ; periode de l'oscillation = 0.3 decades
+  m/H=5.00 |k|= 0.10 rtol=1e-09 : |tau_ab|/Om in [0.069,0.090] ; tau00 final +0.7690 ; |tau_0a|/Om max 0.080 ; periode de l'oscillation = 0.3 decades
+  m/H=5.00 |k|= 0.10 rtol=1e-12 : |tau_ab|/Om in [0.069,0.090] ; tau00 final +0.7690 ; |tau_0a|/Om max 0.080 ; periode de l'oscillation = 0.3 decades
+  m/H=5.00 |k|=10.00 rtol=1e-09 : |tau_ab|/Om in [5.755,6.742] ; tau00 final +2.9026 ; |tau_0a|/Om max 8.000 ; periode de l'oscillation = 0.3 decades
+  m/H=5.00 |k|=10.00 rtol=1e-12 : |tau_ab|/Om in [5.755,6.742] ; tau00 final +2.9026 ; |tau_0a|/Om max 8.000 ; periode de l'oscillation = 0.3 decades

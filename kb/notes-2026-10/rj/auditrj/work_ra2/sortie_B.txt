@@ -1,0 +1,6 @@
+connexion de spin : nabla gamma = 0 echoue sur 0 composantes sur 16
+T-hat_{mu nu}[a^-3/2 u] - a^-2 T^flat[u] : composantes non nulles : 0 sur 10 (hors couche, u arbitraire)
+T00 - (k.J + M B) = 0
+T0i + k_i N (signe physique attendu T_0i = -k_i N) : [0, 0, 0]
+T0i - k_i N (signe du script) : [False, False, False]
+Tij - (k_i J_j + k_j J_i)/2 : [0, 0, 0, 0, 0, 0]

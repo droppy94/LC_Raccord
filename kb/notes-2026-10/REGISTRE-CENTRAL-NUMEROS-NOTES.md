@@ -243,7 +243,12 @@ Serie attribuee : I pour 01-47 et 50 (acte de scission) ; E pour 48, 49, 51-54 s
 | 203 | 2026-10-16T15:02:11Z | I | Chantier D (audit LB) | Gel d'audit froid de NOTE-202 avant lancement (AL-1 lecture aveugle des sources cles, AL-2 lecture adverse) | emis (3eae1e78da1647e4) | `NOTE-BORD-EON-203-ARMEMENT-AUDIT-LB.md` (D:\temporaire\LB) |
 | 204 | 2026-10-16T15:02:11Z | I | Chantier D (audit LB) | Concordance de l'audit LB : AU-V3 partiel (Bachelot, Ibison, Friedrich poussiere ; lecture de S3 corrigee) ; entee de v1 suspendue | emis (9d92e75cb3873daa) | `NOTE-BORD-EON-204-AUDIT-LB-CONCORDANCE.md` (D:\temporaire\LB) |
 | 205 | 2026-10-16T15:02:11Z | I | Chantier D (chantier LB) | Acte d'entee LB : NOTE-202 v2 entee apres AU-V3 partiel leve par l'operateur ; precedent (xvi) ; chantier RJ ouvert avant la v2.5 | emis (acte, [conv], 540fd58c18ed3d22) | `NOTE-BORD-EON-205-ACTE-LB.md` (D:\temporaire\LB) |
-| 206 | — | — | — | libre | — | — |
+| 206 | 2026-10-16T15:17:31Z | I | Chantier D (chantier RJ) | Armement et gel R-7 : regularisation par jauge (modele Friedrich 2016, poussiere) des poles en 1/Omega du systeme Einstein-Dirac ; decision operateur 2026-10-16 (« avant la v2.5 ») | emis (gel, 44f184af4568e3ed) | `NOTE-BORD-EON-206-ARMEMENT-RJ.md` (D:\temporaire\RJ) |
+| 207 | 2026-10-16T15:17:31Z | I | Chantier D (chantier RJ) | Execution RJ sous le gel de NOTE-206 ; RJ-V2 (premier etage) ; v2 apres audit (classe a un seul exposant de Fuchs reguliere) | emis (v1 91b938e4dc6e5db2 ; v2 3172b4ceeeba36dd) | `NOTE-BORD-EON-207-RJ-EXECUTION.md` (D:\temporaire\RJ) |
+| 208 | 2026-10-16T15:28:30Z | I | Chantier D (audit RJ) | Gel d'audit froid de NOTE-207 avant lancement | emis (1619fc386f4598ee) | `NOTE-BORD-EON-208-ARMEMENT-AUDIT-RJ.md` (D:\temporaire\RJ) |
+| 209 | 2026-10-16T15:28:30Z | I | Chantier D (audit RJ) | Concordance de l'audit RJ : AU-V3 partiel (classe pure : sources analytiques, erreur de la v1) ; RJ-V2 renforce | emis (1d412bf3b62e7a5c) | `NOTE-BORD-EON-209-AUDIT-RJ-CONCORDANCE.md` (D:\temporaire\RJ) |
+| 210 | 2026-10-16T15:28:30Z | I | Chantier D (chantier RJ) | Acte d'entee RJ : NOTE-207 v2 entee apres AU-V3 partiel leve par l'operateur ; precedent (xvi bis) ; v2.5 avant le second etage | emis (acte, [conv], 5a4ce940557cb010) | `NOTE-BORD-EON-210-ACTE-RJ.md` (D:\temporaire\RJ) |
+| 211 | — | — | — | libre | — | — |
 
 ## 4. Pieces hors de cet espace de noms (non couvertes, pour memoire)
 Seances de conversation S1 a S25 (grade [conv], sans numero NOTE) ; pieces LC-WORK-*, LC-D-*, CONSTAT-*, REPRISE-* ; series LR et CORDES. Si l'operateur le souhaite, un second tableau pourra couvrir les numeros de seance S<n>, qui n'ont pas de registre non plus.

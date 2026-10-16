@@ -1,0 +1,54 @@
+=== P0 : identite (sympy exact) ===
+composantes (j,k<l) testees : 24 ; residus non nuls : 0
+
+=== P1 : noyau de S pour n = -nu e0 ===
+solution generale de S = 0 : [{t01: 0, t02: 0, t03: 0, t11: 0, t12: 0, t13: 0, t22: 0, t23: 0, t33: 0}]
+rang de l'application tau -> S : 9 sur 10 composantes ; noyau de dimension 1
+
+=== P2 : Dirac test sur de Sitter ===
+conservation (residu relatif max) : 7.248061773481088e-09
+
+-- (a) solution generique (melange particule/antiparticule) --
+generique
+  Omega= 1.00e-01  max|S/Omega|=0.40000  tau00=-0.03637  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.732894
+  Omega= 1.34e-02  max|S/Omega|=0.40000  tau00=-0.03761  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.694894
+  Omega= 1.79e-03  max|S/Omega|=0.40000  tau00=-0.03622  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.594658
+  Omega= 2.40e-04  max|S/Omega|=0.40000  tau00=-0.03654  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.464860
+  Omega= 3.21e-05  max|S/Omega|=0.40000  tau00=-0.03648  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.353388
+  Omega= 4.30e-06  max|S/Omega|=0.40000  tau00=-0.03649  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.343325
+  Omega= 5.76e-07  max|S/Omega|=0.40000  tau00=-0.03649  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.444858
+  Omega= 7.71e-08  max|S/Omega|=0.40000  tau00=-0.03649  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.576218
+  Omega= 1.03e-08  max|S/Omega|=0.40000  tau00=-0.03649  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.681941
+  derniere decade (Omega<1e-5) : max - min de S/Omega par composante (max) = 0.759479255191793
+
+-- (b) particule pure a la limite : chi = (1,0,0,0) impose en eta = -1e-8 (integration a rebours) --
+particule pure
+  Omega= 1.00e-01  max|S/Omega|=0.40000  tau00=+0.70473  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.098632
+  Omega= 1.34e-02  max|S/Omega|=0.40000  tau00=+0.70008  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.013234
+  Omega= 1.79e-03  max|S/Omega|=0.40000  tau00=+0.70000  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.001772
+  Omega= 2.40e-04  max|S/Omega|=0.40000  tau00=+0.70000  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.000237
+  Omega= 3.21e-05  max|S/Omega|=0.40000  tau00=+0.70000  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.000032
+  Omega= 4.30e-06  max|S/Omega|=0.40000  tau00=+0.70000  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.000004
+  Omega= 5.76e-07  max|S/Omega|=0.40000  tau00=+0.70000  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.000001
+  Omega= 7.71e-08  max|S/Omega|=0.40000  tau00=+0.70000  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.000000
+  Omega= 1.03e-08  max|S/Omega|=0.40000  tau00=+0.70000  |tau_0a|/Om=1.00000  |tau_ab|/Om=0.000000
+  derniere decade (Omega<1e-5) : max - min de S/Omega par composante (max) = 4.716097848578013e-06
+
+-- (c) k = 0 (homogene) --
+k=0
+  Omega= 1.00e-01  max|S/Omega|=0.00000  tau00=+0.28382  |tau_0a|/Om=0.00000  |tau_ab|/Om=0.000000
+  Omega= 1.34e-02  max|S/Omega|=0.00000  tau00=+0.28382  |tau_0a|/Om=0.00000  |tau_ab|/Om=0.000000
+  Omega= 1.79e-03  max|S/Omega|=0.00000  tau00=+0.28382  |tau_0a|/Om=0.00000  |tau_ab|/Om=0.000000
+  Omega= 2.40e-04  max|S/Omega|=0.00000  tau00=+0.28382  |tau_0a|/Om=0.00000  |tau_ab|/Om=0.000000
+  Omega= 3.21e-05  max|S/Omega|=0.00000  tau00=+0.28382  |tau_0a|/Om=0.00000  |tau_ab|/Om=0.000000
+  Omega= 4.30e-06  max|S/Omega|=0.00000  tau00=+0.28382  |tau_0a|/Om=0.00000  |tau_ab|/Om=0.000000
+  Omega= 5.76e-07  max|S/Omega|=0.00000  tau00=+0.28382  |tau_0a|/Om=0.00000  |tau_ab|/Om=0.000000
+  Omega= 7.71e-08  max|S/Omega|=0.00000  tau00=+0.28382  |tau_0a|/Om=0.00000  |tau_ab|/Om=0.000000
+  Omega= 1.03e-08  max|S/Omega|=0.00000  tau00=+0.28382  |tau_0a|/Om=0.00000  |tau_ab|/Om=0.000000
+  derniere decade (Omega<1e-5) : max - min de S/Omega par composante (max) = 2.7607153184513766e-09
+
+=== P3 : equation pour chi = U0^dagger u ===
+  Omega=1e-02  element (0,3) du coefficient (alpha_1 conjugue) = 0.9866+0.1633j  (module 1.000)
+  Omega=1e-04  element (0,3) du coefficient (alpha_1 conjugue) = 0.9467+0.3223j  (module 1.000)
+  Omega=1e-06  element (0,3) du coefficient (alpha_1 conjugue) = 0.8813+0.4725j  (module 1.000)
+  identite U0^dag alpha_1 U0 = alpha_1 exp(2 i beta theta) : True

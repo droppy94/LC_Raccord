@@ -1,0 +1,3 @@
+A1 (Omega, T-hat fonctions arbitraires, g = eta) : composantes testees 24, residus non nuls : 0
+A2 (g courbe non diagonale, 3 points rationnels exacts, 72 tests) : residus non nuls : 0
+A3 : S(rho U U, n) - rho Z_Friedrich, U et n quelconques : residus non nuls : 0

@@ -1,0 +1,69 @@
+Composantes de A_{klj} (n = -H d eta), k<l :
+  A_[01]0 = -H*tau01/2
+  A_[01]1 = -H*tau11/2 + H*tau22/2 + H*tau33/2
+  A_[01]2 = -H*tau12
+  A_[01]3 = -H*tau13
+  A_[02]0 = -H*tau02/2
+  A_[02]1 = -H*tau12
+  A_[02]2 = H*tau11/2 - H*tau22/2 + H*tau33/2
+  A_[02]3 = -H*tau23
+  A_[03]0 = -H*tau03/2
+  A_[03]1 = -H*tau13
+  A_[03]2 = -H*tau23
+  A_[03]3 = H*tau11/2 + H*tau22/2 - H*tau33/2
+  A_[12]1 = -H*tau02/2
+  A_[12]2 = H*tau01/2
+  A_[13]1 = -H*tau03/2
+  A_[13]3 = H*tau01/2
+  A_[23]2 = -H*tau03/2
+  A_[23]3 = H*tau02/2
+
+Parametres : H=1.0, m=1.3, mu=m/H=1.3, k=[ 0.7 -0.4  0.5], c attendu = 2 mu = 2.6
+
+=== (a) solution generique (chi(Omega=1) aleatoire) ===
+  Omega in [1e-08,1e-07] : max|Sing| = 1.5785e+00 (residu fit polyn. en Omega 6.52e-01) ; max|tau_ab/Omega| = 1.822e+00 (residu 7.77e-01) ; tau_0a/Omega = [-2.76320686  1.57897535 -1.97371918] ; tau00 in [-1.178054,-1.178054] ; max|d tau00/d eta| = 1.509e+00 (residu 6.47e-01) ; max|d tau_ab/d eta| = 5.076e+00 (residu 1.82e+00)
+  Omega in [1e-06,1e-05] : max|Sing| = 1.5785e+00 (residu fit polyn. en Omega 4.99e-01) ; max|tau_ab/Omega| = 1.822e+00 (residu 7.58e-01) ; tau_0a/Omega = [-2.76320686  1.57897535 -1.97371918] ; tau00 in [-1.178055,-1.178049] ; max|d tau00/d eta| = 1.509e+00 (residu 6.37e-01) ; max|d tau_ab/d eta| = 5.076e+00 (residu 2.20e+00)
+  Omega in [1e-04,1e-03] : max|Sing| = 1.5784e+00 (residu fit polyn. en Omega 4.60e-01) ; max|tau_ab/Omega| = 1.822e+00 (residu 6.07e-01) ; tau_0a/Omega = [-2.76320686  1.57897535 -1.97371918] ; tau00 in [-1.178235,-1.177516] ; max|d tau00/d eta| = 1.509e+00 (residu 6.40e-01) ; max|d tau_ab/d eta| = 5.077e+00 (residu 2.16e+00)
+  Omega in [1e-02,1e-01] : max|Sing| = 1.5814e+00 (residu fit polyn. en Omega 6.56e-01) ; max|tau_ab/Omega| = 1.829e+00 (residu 6.77e-01) ; tau_0a/Omega = [-2.76320686  1.57897535 -1.97371918] ; tau00 in [-1.201395,-1.139541] ; max|d tau00/d eta| = 1.522e+00 (residu 4.29e-01) ; max|d tau_ab/d eta| = 5.085e+00 (residu 2.13e+00)
+  frequence dominante de Sing en ln Omega (Omega <= 1e-4) : c = 2.6040
+  chi0 approx (Omega=1e-8) : |P+ chi0| = 1.233134832488536  |P- chi0| = 1.5578243969207985
+
+=== (b) chi0 dans l'espace propre beta = +1 ===
+  Omega in [1e-08,1e-07] : max|Sing| = 5.2645e-01 (residu fit polyn. en Omega 1.75e-13) ; max|tau_ab/Omega| = 5.157e-08 (residu 2.30e-13) ; tau_0a/Omega = [-1.05289751  0.60165572 -0.75206965] ; tau00 in [1.955381,1.955381] ; max|d tau00/d eta| = 9.060e-08 (residu 4.19e-13) ; max|d tau_ab/d eta| = 1.031e-07 (residu 5.53e-13)
+  Omega in [1e-06,1e-05] : max|Sing| = 5.2645e-01 (residu fit polyn. en Omega 1.71e-13) ; max|tau_ab/Omega| = 5.163e-06 (residu 1.99e-13) ; tau_0a/Omega = [-1.05289751  0.60165572 -0.75206965] ; tau00 in [1.955381,1.955381] ; max|d tau00/d eta| = 9.070e-06 (residu 3.34e-13) ; max|d tau_ab/d eta| = 1.033e-05 (residu 6.60e-13)
+  Omega in [1e-04,1e-03] : max|Sing| = 5.2645e-01 (residu fit polyn. en Omega 1.64e-13) ; max|tau_ab/Omega| = 5.162e-04 (residu 1.74e-13) ; tau_0a/Omega = [-1.05289751  0.60165572 -0.75206965] ; tau00 in [1.955381,1.955382] ; max|d tau00/d eta| = 9.068e-04 (residu 1.42e-13) ; max|d tau_ab/d eta| = 1.032e-03 (residu 6.52e-13)
+  Omega in [1e-02,1e-01] : max|Sing| = 5.2645e-01 (residu fit polyn. en Omega 2.55e-10) ; max|tau_ab/Omega| = 5.154e-02 (residu 2.36e-10) ; tau_0a/Omega = [-1.05289751  0.60165572 -0.75206965] ; tau00 in [1.955426,1.959909] ; max|d tau00/d eta| = 9.056e-02 (residu 2.97e-10) ; max|d tau_ab/d eta| = 1.030e-01 (residu 1.42e-09)
+  Sing compatible avec une serie entiere en Omega sur Omega <= 1e-4 (residu 4.2e-13) : pas d'oscillation
+  ecart Sing(1e-6) - limite predite (contribution tau_0a seule) : 3.700586856203443e-07
+    Omega=9.99e-07 : max|(Sing - lim)/Omega| = 0.370314
+    Omega=1.00e-05 : max|(Sing - lim)/Omega| = 0.370314
+    Omega=1.00e-04 : max|(Sing - lim)/Omega| = 0.370314
+    Omega=1.00e-03 : max|(Sing - lim)/Omega| = 0.370314
+
+=== (b') chi0 dans l'espace propre beta = -1 ===
+  Omega in [1e-08,1e-07] : max|Sing| = 2.4351e+00 (residu fit polyn. en Omega 7.57e-13) ; max|tau_ab/Omega| = 2.418e-07 (residu 1.08e-12) ; tau_0a/Omega = [-4.8702923   2.78302417 -3.47878021] ; tau00 in [-9.044829,-9.044829] ; max|d tau00/d eta| = 4.191e-07 (residu 1.97e-12) ; max|d tau_ab/d eta| = 4.836e-07 (residu 2.44e-12)
+  Omega in [1e-06,1e-05] : max|Sing| = 2.4351e+00 (residu fit polyn. en Omega 5.46e-13) ; max|tau_ab/Omega| = 2.421e-05 (residu 9.43e-13) ; tau_0a/Omega = [-4.8702923   2.78302417 -3.47878021] ; tau00 in [-9.044829,-9.044829] ; max|d tau00/d eta| = 4.196e-05 (residu 1.54e-12) ; max|d tau_ab/d eta| = 4.841e-05 (residu 3.08e-12)
+  Omega in [1e-04,1e-03] : max|Sing| = 2.4351e+00 (residu fit polyn. en Omega 3.34e-13) ; max|tau_ab/Omega| = 2.420e-03 (residu 4.88e-13) ; tau_0a/Omega = [-4.8702923   2.78302417 -3.47878021] ; tau00 in [-9.044831,-9.044829] ; max|d tau00/d eta| = 4.195e-03 (residu 6.44e-13) ; max|d tau_ab/d eta| = 4.840e-03 (residu 3.03e-12)
+  Omega in [1e-02,1e-01] : max|Sing| = 2.4351e+00 (residu fit polyn. en Omega 5.84e-10) ; max|tau_ab/Omega| = 2.417e-01 (residu 9.71e-10) ; tau_0a/Omega = [-4.8702923   2.78302417 -3.47878021] ; tau00 in [-9.065773,-9.045038] ; max|d tau00/d eta| = 4.189e-01 (residu 1.37e-09) ; max|d tau_ab/d eta| = 4.827e-01 (residu 5.82e-09)
+  Sing compatible avec une serie entiere en Omega sur Omega <= 1e-4 (residu 1.9e-12) : pas d'oscillation
+
+=== (c) k = 0 ===
+  Omega in [1e-08,1e-07] : max|Sing| = 0.0000e+00 (residu fit polyn. en Omega 0.00e+00) ; max|tau_ab/Omega| = 0.000e+00 (residu 0.00e+00) ; tau_0a/Omega = [-0. -0. -0.] ; tau00 in [-1.805389,-1.805389] ; max|d tau00/d eta| = 0.000e+00 (residu 0.00e+00) ; max|d tau_ab/d eta| = 0.000e+00 (residu 0.00e+00)
+  Omega in [1e-06,1e-05] : max|Sing| = 0.0000e+00 (residu fit polyn. en Omega 0.00e+00) ; max|tau_ab/Omega| = 0.000e+00 (residu 0.00e+00) ; tau_0a/Omega = [-0. -0. -0.] ; tau00 in [-1.805389,-1.805389] ; max|d tau00/d eta| = 0.000e+00 (residu 0.00e+00) ; max|d tau_ab/d eta| = 0.000e+00 (residu 0.00e+00)
+  Omega in [1e-04,1e-03] : max|Sing| = 0.0000e+00 (residu fit polyn. en Omega 0.00e+00) ; max|tau_ab/Omega| = 0.000e+00 (residu 0.00e+00) ; tau_0a/Omega = [-0. -0. -0.] ; tau00 in [-1.805389,-1.805389] ; max|d tau00/d eta| = 0.000e+00 (residu 0.00e+00) ; max|d tau_ab/d eta| = 0.000e+00 (residu 0.00e+00)
+  Omega in [1e-02,1e-01] : max|Sing| = 0.0000e+00 (residu fit polyn. en Omega 0.00e+00) ; max|tau_ab/Omega| = 0.000e+00 (residu 0.00e+00) ; tau_0a/Omega = [-0. -0. -0.] ; tau00 in [-1.805389,-1.805389] ; max|d tau00/d eta| = 0.000e+00 (residu 0.00e+00) ; max|d tau_ab/d eta| = 0.000e+00 (residu 0.00e+00)
+  Sing compatible avec une serie entiere en Omega sur Omega <= 1e-4 (residu 0.0e+00) : pas d'oscillation
+  max|A| sur toute la trajectoire k=0 : 0.0
+
+=== (d) controle m = 0, solution generique ===
+  Omega in [1e-08,1e-07] : max|Sing| = 1.5458e+00 (residu fit polyn. en Omega 3.09e-14) ; max|tau_ab/Omega| = 1.863e+00 (residu 3.17e-14) ; tau_0a/Omega = [-2.76320686  1.57897535 -1.97371918] ; tau00 in [0.000000,0.000000] ; max|d tau00/d eta| = 6.341e-01 (residu 9.99e-16) ; max|d tau_ab/d eta| = 1.863e+00 (residu 3.15e-14)
+  Omega in [1e-06,1e-05] : max|Sing| = 1.5458e+00 (residu fit polyn. en Omega 6.57e-14) ; max|tau_ab/Omega| = 1.863e+00 (residu 6.63e-14) ; tau_0a/Omega = [-2.76320686  1.57897535 -1.97371918] ; tau00 in [0.000001,0.000006] ; max|d tau00/d eta| = 6.341e-01 (residu 1.67e-15) ; max|d tau_ab/d eta| = 1.863e+00 (residu 6.67e-14)
+  Omega in [1e-04,1e-03] : max|Sing| = 1.5456e+00 (residu fit polyn. en Omega 1.11e-13) ; max|tau_ab/Omega| = 1.863e+00 (residu 1.10e-13) ; tau_0a/Omega = [-2.76320686  1.57897535 -1.97371918] ; tau00 in [0.000063,0.000634] ; max|d tau00/d eta| = 6.341e-01 (residu 5.88e-15) ; max|d tau_ab/d eta| = 1.862e+00 (residu 1.10e-13)
+  Omega in [1e-02,1e-01] : max|Sing| = 1.5273e+00 (residu fit polyn. en Omega 9.79e-09) ; max|tau_ab/Omega| = 1.844e+00 (residu 9.79e-09) ; tau_0a/Omega = [-2.76320686  1.57897535 -1.97371918] ; tau00 in [0.006346,0.063405] ; max|d tau00/d eta| = 6.341e-01 (residu 1.68e-13) ; max|d tau_ab/d eta| = 1.826e+00 (residu 5.88e-08)
+  Sing compatible avec une serie entiere en Omega sur Omega <= 1e-4 (residu 9.5e-14) : pas d'oscillation
+
+Q5 : element (1,3) du coefficient C(Omega) = (alpha.k) Omega^{2 i mu beta} :
+   Omega=1e-02 : C[0,2] = 0.414654-0.279396j
+   Omega=1e-04 : C[0,2] = 0.187752-0.463410j
+   Omega=1e-06 : C[0,2] = -0.103246-0.489224j
+   Omega=1e-08 : C[0,2] = -0.358997-0.348025j
