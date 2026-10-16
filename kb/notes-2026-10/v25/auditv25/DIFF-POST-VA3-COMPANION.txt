@@ -1,0 +1,56 @@
+diff --git a/auditv25/COMPANION-vu-VA3.tex b/companion-formal-regularity.tex
+index d2ed0cf..3f7fdd7 100644
+--- a/auditv25/COMPANION-vu-VA3.tex
++++ b/companion-formal-regularity.tex
+@@ -21,7 +21,7 @@
+\maketitle
+
+\begin{abstract}
+This note collects the computations behind Remark~2 of the companion paper. We use Friedrich's conformal field equations \cite{Friedrich2015} and his notion of formal regularity, and treat in turn: the coupled Einstein--Dirac system (the geometric equations are formally regular in kinetic form; the singularity is confined to the matter equation); the Higgs sector with Yukawa and gauge-boson masses (the fermion mass coefficient is regular exactly when the rescaled Higgs is, and the $W,Z$ masses are regular when it is); the coupled Einstein--Yang--Mills--Higgs--Dirac system (formally regular if and only if $m_{h}^{2}+4\lambda\xi=\tfrac23\lambda$); and a test Dirac field with the dust weight of Friedrich's treatment of pressure-free matter \cite{Friedrich2017} (no pole in the source of the rescaled Weyl tensor; a power series for single-exponent solutions, {+zero for $\mathbf{k}=0$,+} bounded without limit [-otherwise).-]{+for solutions with both exponents and $\mathbf{k}\neq0$).+} All statements were obtained with symbolic or numerical scripts and audited by two isolated AI agents [-each;-]{+each (the corrected script of the dust-weight section was not re-audited);+} none has been read by a human. They concern formal regularity, not existence or stability.
+\end{abstract}
+
+\section{Conventions}
+@@ -30,7 +30,7 @@ In this note we follow Friedrich \cite{Friedrich2015,Friedrich2017}: the physica
+\nabla_{\mu}W^{\mu}{}_{\rho\nu\lambda}=2\,\Omega^{-1}\,\hat\nabla_{[\nu}\hat L_{\lambda]\rho},\qquad \hat L_{ab}=\tfrac{\kappa}{2}\big(\hat T_{ab}-\tfrac13\hat T\hat g_{ab}\big)+\tfrac{\lambda}{6}\hat g_{ab}.
+\label{eq:weyl}
+\end{equation}
+Formal regularity (Friedrich's Theorem~3.1): the right-hand sides, written as functions of the rescaled unknowns and of their derivatives treated as independent variables (jets at a point), {+depend smoothly on $\Omega$ up to $\Omega=0$, as in Definition~1(c) of the paper; in particular they+} contain no negative powers of [-$\Omega$-]{+$\Omega$, no $\ln\Omega$+} and no[-$\ln\Omega$; we also count as irregular a-] factor $\exp(\ii c\ln\Omega)$, $c\neq0$, multiplying a non-zero coefficient. The second and third derivatives of $\Omega$ are eliminated with (2.14) and its derivative, $\nabla s$ with (2.15) (whose matter term carries the factor $\Omega^{-1}$), and $|\dd\Omega|^{2}$ with $|\dd\Omega|^{2}=-\lambda/3+2\Omega s+\tfrac{\kappa}{12}\hat T$ \cite[(3.8)]{Friedrich2015}. Calibration: with these rules, the scalar case reproduces exactly the coefficient $\tfrac{\kappa}{3}(m^{2}-\tfrac23\lambda)$ of Friedrich's Theorem~3.1, in both directions, and the conformally coupled massless scalar gives no singular coefficient.
+
+\section{Einstein--Dirac}
+\label{sec:ed}
+@@ -84,14 +84,14 @@ Checked exactly (sympy) with a flat conformal metric and generic polynomial $\Om
+\begin{equation}
+\tau_{00}=mB+\Omega\,\mathbf{k}\cdot\mathbf{J},\qquad \tau_{0a}=-\Omega k_{a}N,\qquad \tau_{ab}=\tfrac{\Omega}{2}(k_{a}J_{b}+k_{b}J_{a}).
+\end{equation}
+The spin-connection terms cancel in the symmetric part (derived independently by the two [-auditors);-]{+auditors of this computation, RA-1 and RA-2);+} the mass cancels pointwise from $\tau_{0a}$ and $\tau_{ab}$ ($\psi^{\dagger}\{\alpha_{i},\beta\}\psi=0$), so these are $O(\Omega)$ for every solution, wave packets included. With the Fuchsian form $u=\Omega^{\ii m/H}P_{+}+\Omega^{-\ii m/H}P_{-}$ ($P_{\pm}$ entire):
+
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+solution & $\tau$ & source of \eqref{eq:weyl}\\
+\midrule
+both [-exponents present-]{+exponents, $\mathbf{k}\neq0$+} & bounded; factor $\Omega^{\mp2\ii m/H}$ & no pole; bounded, no limit\\
+single exponent (incl.\ packets of one type) & power series in $\Omega$ & power series in $\Omega$\\
+$\mathbf{k}=0$ & $\tau=mB\,e_{0}e_{0}$, constant & $0$\\
+$m=0$ & power series & power series\\
+@@ -99,19 +99,20 @@ $m=0$ & power series & power series\\
+\end{tabular}
+\end{center}
+
+The density limit $mB\to m(\|\chi_{0}^{+}\|^{2}-\|\chi_{0}^{-}\|^{2})$ has no fixed sign, unlike Friedrich's $\hat\rho\ge0$. The other conformal field equations, (3.3)--(3.6) of [-\cite{Friedrich2017},-]{+\cite{Friedrich2017} ((3.7) being the Weyl equation treated above),+} have no negative power of $\Omega$ in this weight (established by an auditor). The Dirac equation itself keeps a regular singular point (pole $m/\Omega$ for $u$, bounded phase coefficient $\boldsymbol\alpha\cdot\mathbf{k}\,e^{2\ii\beta(m/H)\ln\Omega}$ for $\chi=e^{-\ii\beta(m/H)\ln\Omega}u$); no transformation $u=V\chi$ with $V$ smooth, or independent of $\mathbf{k}$, makes its coefficients smooth. The current of a generic solution is not asymptotically at rest ($J/N$ of order one and oscillating), so the transposition of Friedrich's flow-adapted gauge is not straightforward; it has not been attempted. Scripts \texttt{rj\_check.py}, \texttt{rj\_check\_v2.py} (sign of $\tau_{0a}$ corrected, single-exponent class tested); audit: the first version described single-exponent solutions as only continuous; both auditors showed they are analytic. Limits: test field on exact de Sitter space (first stage); the coupled system in the dust weight, which could reintroduce poles and affect the single-exponent class, FLRW backgrounds tending to de Sitter, and inhomogeneous data are not treated.
+
+\section{Scripts and audit status}
+[-\begin{center}\small-]{+\begin{center}\footnotesize+}
+\begin{tabular}{lll}
+\toprule
+computation & script (sha256, 16 [-hex digits)-]{+hex)+} & audit\\
+\midrule
+calibration [-on Friedrich's scalar-]{+(Friedrich scalar)+} & \texttt{cal\_f.py} (\texttt{47fb1d46aae577d4}) & two[-isolated-] AI auditors\\
+Einstein--Dirac & \texttt{ed\_check.py} (\texttt{216d24c436cca21d}) & AU-V2\\
+Higgs, Yukawa, $W,Z$ & \texttt{hx\_check.py} (\texttt{715b23948563b3b2}) & AU-V2\\
+Einstein--Yang--Mills--Higgs--Dirac & \texttt{fw3\_check.py} (\texttt{cab4bf099d588968}) & AU-V2\\
+dust weight (test field) & \texttt{rj\_check\_v2.py} (\texttt{bda4f1c2ba1533fc}) & AU-V3 [-partial;-]{+partial;\\+}
+{+ & &+} v2 corrected, not re-audited\\
+\bottomrule
+\end{tabular}
+\end{center}

@@ -248,7 +248,12 @@ Serie attribuee : I pour 01-47 et 50 (acte de scission) ; E pour 48, 49, 51-54 s
 | 208 | 2026-10-16T15:28:30Z | I | Chantier D (audit RJ) | Gel d'audit froid de NOTE-207 avant lancement | emis (1619fc386f4598ee) | `NOTE-BORD-EON-208-ARMEMENT-AUDIT-RJ.md` (D:\temporaire\RJ) |
 | 209 | 2026-10-16T15:28:30Z | I | Chantier D (audit RJ) | Concordance de l'audit RJ : AU-V3 partiel (classe pure : sources analytiques, erreur de la v1) ; RJ-V2 renforce | emis (1d412bf3b62e7a5c) | `NOTE-BORD-EON-209-AUDIT-RJ-CONCORDANCE.md` (D:\temporaire\RJ) |
 | 210 | 2026-10-16T15:28:30Z | I | Chantier D (chantier RJ) | Acte d'entee RJ : NOTE-207 v2 entee apres AU-V3 partiel leve par l'operateur ; precedent (xvi bis) ; v2.5 avant le second etage | emis (acte, [conv], 5a4ce940557cb010) | `NOTE-BORD-EON-210-ACTE-RJ.md` (D:\temporaire\RJ) |
-| 211 | — | — | — | libre | — | — |
+| 211 | 2026-10-16T15:48:49Z | I | Chantier D (article v2.5) | Armement et gel : liste figee des changements R1 a R4, LB, RJ ; decision operateur 2026-10-16 17:47 Paris | emise 2026-10-16 | `NOTE-BORD-EON-211-ARMEMENT-V25.md` (D:\temporaire\V25) |
+| 212 | 2026-10-16T15:48:49Z | I | Chantier D (article v2.5) | Redaction : article v2.5 et note compagnon (R3) | emise 2026-10-16 | `NOTE-BORD-EON-212-V25-REDACTION.md` (D:\temporaire\V25) |
+| 213 | 2026-10-16T15:48:49Z | I | Chantier D (audit v2.5) | Gel d'audit froid de l'article v2.5 et de la note compagnon | emise 2026-10-16 | `NOTE-BORD-EON-213-ARMEMENT-AUDIT-V25.md` (D:\temporaire\V25) |
+| 214 | 2026-10-16T15:48:49Z | I | Chantier D (audit v2.5) | Concordance de l'audit v2.5 | emise 2026-10-16 | `NOTE-BORD-EON-214-AUDIT-V25-CONCORDANCE.md` (D:\temporaire\V25) |
+| 215 | 2026-10-16T15:48:49Z | I | Chantier D (article v2.5) | Acte d'entee v2.5 | emise 2026-10-16 | `NOTE-BORD-EON-215-ACTE-V25.md` (D:\temporaire\V25) |
+| 216 | — | — | — | libre | — | — |
 
 ## 4. Pieces hors de cet espace de noms (non couvertes, pour memoire)
 Seances de conversation S1 a S25 (grade [conv], sans numero NOTE) ; pieces LC-WORK-*, LC-D-*, CONSTAT-*, REPRISE-* ; series LR et CORDES. Si l'operateur le souhaite, un second tableau pourra couvrir les numeros de seance S<n>, qui n'ont pas de registre non plus.

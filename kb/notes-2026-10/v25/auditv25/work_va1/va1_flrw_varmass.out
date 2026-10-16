@@ -1,0 +1,24 @@
+=== V2/V3 : FLRW a = t^p (hypotheses du par.2 satisfaites, H -> 0) ; solution a coefficient c = 0 ===
+p=1.5: a|eta| final = 6000.0 ; max|rho_hat| sur t in [100,3000] = 0.904 ; max|Omega rho_hat| fin = 5.5e-06
+      generique : coefficient c = +0.912439 ; rho_hat - c/Omega sur la fin : [-0.195, -0.080]
+p=2.0: a|eta| final = 3000.0 ; max|rho_hat| sur t in [100,3000] = 0.904 ; max|Omega rho_hat| fin = 1.0e-07
+      generique : coefficient c = +0.897432 ; rho_hat - c/Omega sur la fin : [-0.257, -0.077]
+p=3.0: a|eta| final = 1500.0 ; max|rho_hat| sur t in [100,3000] = 0.904 ; max|Omega rho_hat| fin = 3.4e-11
+      generique : coefficient c = +0.867568 ; rho_hat - c/Omega sur la fin : [-0.882, +1.454]
+
+=== V7 : Proposition 4, exemples d'ordre strict (de Sitter, H=1, Omega = e^{-t}) ===
+m=3 Omega^{1/2}           : |u(t=22)-u(t=19)| = 3.49e-04 ; increment de theta sur [19,22] = 3.49e-04 ; m a(22) = 1.796e+05 ; (champ convergent, m a ~ Omega^{-1/2})
+m=3 Omega                 : |u(t=22)-u(t=19)| = 1.92e-08 ; increment de theta sur [19,22] = 1.60e-08 ; m a(22) = 3.000e+00 ; (champ convergent, m a = 3)
+m=3 Omega(1+Omega^{1/2})  : |u(t=22)-u(t=19)| = 1.92e-08 ; increment de theta sur [19,22] = 1.60e-08 ; m a(22) = 3.000e+00 ; (m a borne, non lisse)
+m=1/(1+t)                 : |u(t=22)-u(t=19)| = 1.40e-01 ; increment de theta sur [19,22] = 1.40e-01 ; m a(22) = 1.559e+08 ; (phase divergente en log)
+Pour m = 1/(1+t) : theta(t) = ln(1+t) -> infini (log) ; le champ ne converge pas mais tres lentement.
+
+=== V7 : contre-exemple FLRW a = t^{1.5} pour m ~ Omega^{1/2} ===
+int_1^1e+02 m dt avec m = a^(-1/2) = t^(-0.75) : 8.65 (diverge comme t^0.25)
+int_1^1e+04 m dt avec m = a^(-1/2) = t^(-0.75) : 36.00 (diverge comme t^0.25)
+int_1^1e+06 m dt avec m = a^(-1/2) = t^(-0.75) : 122.49 (diverge comme t^0.25)
+
+=== V9 : ordres de grandeur ===
+H0=67.4, Omega_L=0.685: H_inf = 1.190e-33 eV ; m_e/H_inf = 4.294e+38 ; log10 poids antiparticule ~ -2 pi r / ln 10 = -1.172e+39 (exposant naturel -2.70e+39)
+H0=70.0, Omega_L=0.7: H_inf = 1.249e-33 eV ; m_e/H_inf = 4.090e+38 ; log10 poids antiparticule ~ -2 pi r / ln 10 = -1.116e+39 (exposant naturel -2.57e+39)
+H0=73.0, Omega_L=0.69: H_inf = 1.293e-33 eV ; m_e/H_inf = 3.951e+38 ; log10 poids antiparticule ~ -2 pi r / ln 10 = -1.078e+39 (exposant naturel -2.48e+39)

@@ -1,0 +1,4 @@
+SCEAU consigne de re-audit VA-3, pose avant lancement : 2026-10-16T16:12:13Z
+91c4015b8184abe1e23164a18a2421630361af24c14234deb39540d2f8cbc30e  auditv25/PROMPT-REAUDIT-VA3.md
+6caa5ab5db49e75c7126f6b66372d114c6dbf74088336429efc39f5efecebe6c  dirac-mass-scri-v2.5.tex
+76250e99127c2ed27c0a3b0574a1390b82b1f7cf2db736993b7ecce4266ebcfb  companion-formal-regularity.tex

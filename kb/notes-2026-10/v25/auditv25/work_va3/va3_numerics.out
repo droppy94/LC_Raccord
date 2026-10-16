@@ -1,0 +1,11 @@
+[P3] coefficient nul (||chi0+||=||chi0-||), de Sitter, H=1
+  m=1 k=0.5: sup|rho_hat| = 0.4416, borne m k/H + k = 1.0000, norme in [0.999999999999,1.000000000004]
+  m=3 k=2: sup|rho_hat| = 0.4884, borne m k/H + k = 8.0000, norme in [1.000000000000,1.000000000016]
+  m=0.3 k=1.0: sup|rho_hat| = 0.9912, borne m k/H + k = 1.3000, norme in [0.999999999995,1.000000000001]
+[P3] coefficient non nul : Omega*rho_hat -> m(|c+|^2-|c-|^2), et rho_hat - c/Omega borne
+  m=1 k=0.5: Omega*rho a Omega=1.0e-09 : 0.60000000 (attendu 0.6); sup|rho - c/Omega| = 0.3528
+  m=3 k=2: Omega*rho a Omega=1.0e-09 : 1.80000000 (attendu 1.7999999999999998); sup|rho - c/Omega| = 0.4747
+[QV] identite 1 - 2/(e^{2 pi x}+1) = tanh(pi x) : 1.1102230246251565e-16
+    int k |f|^2 d^3k (exemple exp(-k)) = 75.39822368615503
+[P4] m = 3 Omega^{1/2} = 3 e^{-t/2}: int m dt = 6.0  ; m a = 3 e^{t/2} non borne
+[P4] LambdaCDM : |m_eff| = m rho_m/(4 rho_L) ~ Omega^3 :  int_0^inf e^{-3t} dt fini, m a ~ Omega^2 -> 0, mu = Omega^2 lisse

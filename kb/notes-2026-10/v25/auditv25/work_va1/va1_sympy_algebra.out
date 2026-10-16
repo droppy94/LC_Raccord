@@ -1,0 +1,23 @@
+Clifford {g,g}=-2eta : True
+alpha hermitiens : True
+{alpha_i,beta}=0 : True
+g5^2 = True  g5 hermitien : True  anticommute : True
+Equation (3) [i d_eta u = H u] equivalente a (i Dslash - m a)u=0 : True
+T_etaeta / (u^dag H u) = -1
+T_eta1 - (signe)*k_1|u|^2 = 2*k1*(p0**2 + p1**2 + p2**2 + p3**2 + q0**2 + q1**2 + q2**2 + q3**2)   (ne contient pas ma : True )
+T_eta2 - (signe)*k_2|u|^2 = 2*k2*(p0**2 + p1**2 + p2**2 + p3**2 + q0**2 + q1**2 + q2**2 + q3**2)   (ne contient pas ma : True )
+T_eta3 - (signe)*k_3|u|^2 = 2*k3*(p0**2 + p1**2 + p2**2 + p3**2 + q0**2 + q1**2 + q2**2 + q3**2)   (ne contient pas ma : True )
+T_11 - (-signe/2)(k_i u^dag a_j u + k_j u^dag a_i u) = 4*k1*(-p0*p3 - p1*p2 - q0*q3 - q1*q2)  contient ma : False
+T_12 - (-signe/2)(k_i u^dag a_j u + k_j u^dag a_i u) = -2*k1*p0*q3 + 2*k1*p1*q2 - 2*k1*p2*q1 + 2*k1*p3*q0 - 2*k2*p0*p3 - 2*k2*p1*p2 - 2*k2*q0*q3 - 2*k2*q1*q2  contient ma : False
+T_13 - (-signe/2)(k_i u^dag a_j u + k_j u^dag a_i u) = -2*k1*p0*p2 + 2*k1*p1*p3 - 2*k1*q0*q2 + 2*k1*q1*q3 - 2*k3*p0*p3 - 2*k3*p1*p2 - 2*k3*q0*q3 - 2*k3*q1*q2  contient ma : False
+T_22 - (-signe/2)(k_i u^dag a_j u + k_j u^dag a_i u) = 4*k2*(-p0*q3 + p1*q2 - p2*q1 + p3*q0)  contient ma : False
+T_23 - (-signe/2)(k_i u^dag a_j u + k_j u^dag a_i u) = -2*k2*p0*p2 + 2*k2*p1*p3 - 2*k2*q0*q2 + 2*k2*q1*q3 - 2*k3*p0*q3 + 2*k3*p1*q2 - 2*k3*p2*q1 + 2*k3*p3*q0  contient ma : False
+T_33 - (-signe/2)(k_i u^dag a_j u + k_j u^dag a_i u) = 4*k3*(-p0*p2 + p1*p3 - q0*q2 + q1*q3)  contient ma : False
+trace eta^{mn}T_mn + signe*ma*psibar psi = 0
+det = (-P0**2*Z1**2 + P0**2*Z2**2 + P1**2*Z1**2 - P1**2*Z2**2 + P2**2*Z1**2 - P2**2*Z2**2 + P3**2*Z1**2 - P3**2*Z2**2 + m**2 + m5**2)**2
+det = [(Z1^2-Z2^2)(p0^2-p^2) - (m^2+m5^2)]^2 : True
+ => m_eff^2 = (m^2+m5^2)/(Z1^2-Z2^2)  (et non m^2+m5^2 quand Z1^2-Z2^2 != 1)
+Masse effective apres inversion : A = (Z1*m - I*Z2*m5)/(Z1**2 - Z2**2)  ; B = (I*Z1*m5 - Z2*m)/(Z1**2 - Z2**2)
+  Im(A) = -Z2*m5/(Z1**2 - Z2**2)  Re(B) = -Z2*m/(Z1**2 - Z2**2)  -> non hermitienne si Z2*m5 != 0 ou Z2*m != 0
+sigma^{ab} sigma_{ab} = Matrix([[12, 0, 0, 0], [0, 12, 0, 0], [0, 0, 12, 0], [0, 0, 0, 12]])
+sigma^{ab} R_{abcd} sigma^{cd} (de Sitter) = Matrix([[24*H**2, 0, 0, 0], [0, 24*H**2, 0, 0], [0, 0, 24*H**2, 0], [0, 0, 0, 24*H**2]])  -> multiple de l'identite : terme de masse constant

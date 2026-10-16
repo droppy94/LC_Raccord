@@ -1,0 +1,51 @@
+=== v2 consistency checks (H = 1) ===
+
+[gauge] m = 1.0, k = 0.5
+  eta       |gen g'|  gen g' (gauge-fixed)          pur f' (gauge-fixed)          |pur g'|
+    -1e+00  0.00000   +0.00000+0.00000j            +0.974883+0.049045j          2.17e-01
+    -1e-02  0.21941   +0.21145+0.05854j            +0.999998+0.000005j          2.24e-03
+    -1e-04  0.21723   -0.21691-0.01177j            +1.000000+0.000000j          2.24e-05
+    -1e-06  0.21725   +0.21447-0.03466j            +1.000000+0.000000j          2.26e-07
+    -1e-07  0.21725   -0.05741-0.20953j            +1.000000+0.000000j          2.27e-08
+    -1e-08  0.21725   -0.20218+0.07950j            +1.000000+0.000000j          0.00e+00
+  -> generic: g' keeps modulus ~ |chi_-| and rotates (no limit in any gauge);
+     pure particle: f' converges, g' -> 0 (limit exists in the singular gauge).
+
+[gauge] m = 3.0, k = 2.0
+  eta       |gen g'|  gen g' (gauge-fixed)          pur f' (gauge-fixed)          |pur g'|
+    -1e+00  0.00000   +0.00000+0.00000j            +0.910232+0.294649j          2.91e-01
+    -1e-02  0.29410   +0.28757-0.06165j            +0.999995+0.000032j          3.29e-03
+    -1e-04  0.29094   -0.19087+0.21957j            +1.000000+0.000000j          3.29e-05
+    -1e-06  0.29096   +0.02103-0.29020j            +1.000000-0.000000j          3.31e-07
+    -1e-07  0.29096   +0.28197-0.07179j            +1.000000-0.000000j          3.20e-08
+    -1e-08  0.29096   +0.15725+0.24481j            +1.000000+0.000000j          0.00e+00
+  -> generic: g' keeps modulus ~ |chi_-| and rotates (no limit in any gauge);
+     pure particle: f' converges, g' -> 0 (limit exists in the singular gauge).
+
+[energy] m = 1.0, k = 0.5: Omega * rho_hat
+    -1e+00  Omega*rho_hat = +1.000000   (m(|f|^2-|g|^2) = +1.000000)
+    -1e-02  Omega*rho_hat = +0.905752   (m(|f|^2-|g|^2) = +0.903720)
+    -1e-04  Omega*rho_hat = +0.905603   (m(|f|^2-|g|^2) = +0.905624)
+    -1e-06  Omega*rho_hat = +0.905606   (m(|f|^2-|g|^2) = +0.905606)
+    -1e-07  Omega*rho_hat = +0.905606   (m(|f|^2-|g|^2) = +0.905606)
+    -1e-08  Omega*rho_hat = +0.905606   (m(|f|^2-|g|^2) = +0.905606)
+
+[variable mass] m(t) = 3.0 Omega^0.5, k = 2.0
+    -1e+00  f = +1.000000+0.000000j  rho_hat = +3.0000e+00
+    -1e-02  f = +0.861006+0.415422j  rho_hat = +2.4226e+01  |u - u_prev| = 5.27e-01
+    -1e-04  f = +0.955490-0.082116j  rho_hat = +2.5074e+02  |u - u_prev| = 5.34e-01
+    -1e-06  f = +0.949663-0.133511j  rho_hat = +2.5171e+03  |u - u_prev| = 5.40e-02
+    -1e-07  f = +0.949107-0.137406j  rho_hat = +7.9619e+03  |u - u_prev| = 4.10e-03
+    -1e-08  f = +0.948928-0.138637j  rho_hat = +2.5180e+04  |u - u_prev| = 1.30e-03
+  total phase integral int m dt = m0/eps = 6.000 (finite)
+
+[variable mass] m(t) = 3.0 Omega^1.0, k = 2.0
+    -1e+00  f = +1.000000+0.000000j  rho_hat = +3.0000e+00
+    -1e-02  f = -0.909838+0.345271j  rho_hat = +3.0000e+00  |u - u_prev| = 1.95e+00
+    -1e-04  f = -0.894449+0.372067j  rho_hat = +3.0000e+00  |u - u_prev| = 3.57e-02
+    -1e-06  f = -0.894290+0.372333j  rho_hat = +3.0000e+00  |u - u_prev| = 3.57e-04
+    -1e-07  f = -0.894288+0.372335j  rho_hat = +3.0000e+00  |u - u_prev| = 3.24e-06
+    -1e-08  f = -0.894288+0.372336j  rho_hat = +3.0000e+00  |u - u_prev| = 3.24e-07
+  total phase integral int m dt = m0/eps = 3.000 (finite)
+
+Electron: m_e/H_inf = 4.26e+38

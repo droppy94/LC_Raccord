@@ -1,0 +1,124 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+
+\newcommand{\scri}{\mathscr{I}^{+}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ii}{\mathrm{i}}
+
+\title{\textbf{Formal regularity of the conformal field equations\\ with Dirac, Higgs and gauge matter: computations}}
+\author{Thierry Olivier\\ \small Independent researcher, Paris, France\\ \small \texttt{thierry.olivier71@gmail.com}}
+\date{16 October 2026 \quad (companion note to ``A massive Dirac field at future conformal infinity'', v2.5)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note collects the computations behind Remark~2 of the companion paper. We use Friedrich's conformal field equations \cite{Friedrich2015} and his notion of formal regularity, and treat in turn: the coupled Einstein--Dirac system (the geometric equations are formally regular in kinetic form; the singularity is confined to the matter equation); the Higgs sector with Yukawa and gauge-boson masses (the fermion and $W,Z$ mass coefficients are regular exactly when the rescaled Higgs is); the coupled Einstein--Yang--Mills--Higgs--Dirac system (formally regular if and only if $m_{h}^{2}+4\lambda\xi=\tfrac23\lambda$); and a test Dirac field with the dust weight of Friedrich's treatment of pressure-free matter \cite{Friedrich2017} (no pole in the source of the rescaled Weyl tensor; a power series for single-exponent solutions, bounded without limit otherwise). All statements were obtained with symbolic or numerical scripts and audited by two isolated AI agents each; none has been read by a human. They concern formal regularity, not existence or stability.
+\end{abstract}
+
+\section{Conventions}
+In this note we follow Friedrich \cite{Friedrich2015,Friedrich2017}: the physical metric is $\hat g$, the conformal metric $g=\Omega^{2}\hat g$, signature $(-,+,+,+)$, cosmological constant $\lambda>0$, $\kappa$ the gravitational coupling (the companion paper puts the hat on the unphysical side). The unknowns of the conformal field equations are $\Omega$, $s=\tfrac14\Box\Omega+\tfrac1{24}\Omega R[g]$, the Schouten tensor $L_{\mu\nu}$ of $g$, the rescaled Weyl tensor $W=\Omega^{-1}C[g]$ and the frame and connection, with the equations (2.13)--(2.17) of \cite{Friedrich2015}. The equation for $W$ reads
+\begin{equation}
+\nabla_{\mu}W^{\mu}{}_{\rho\nu\lambda}=2\,\Omega^{-1}\,\hat\nabla_{[\nu}\hat L_{\lambda]\rho},\qquad \hat L_{ab}=\tfrac{\kappa}{2}\big(\hat T_{ab}-\tfrac13\hat T\hat g_{ab}\big)+\tfrac{\lambda}{6}\hat g_{ab}.
+\label{eq:weyl}
+\end{equation}
+Formal regularity (Friedrich's Theorem~3.1): the right-hand sides, written as functions of the rescaled unknowns and of their derivatives treated as independent variables (jets at a point), contain no negative powers of $\Omega$ and no $\ln\Omega$; we also count as irregular a factor $\exp(\ii c\ln\Omega)$, $c\neq0$, multiplying a non-zero coefficient. The second and third derivatives of $\Omega$ are eliminated with (2.14) and its derivative, $\nabla s$ with (2.15) (whose matter term carries the factor $\Omega^{-1}$), and $|\dd\Omega|^{2}$ with $|\dd\Omega|^{2}=-\lambda/3+2\Omega s+\tfrac{\kappa}{12}\hat T$ \cite[(3.8)]{Friedrich2015}. Calibration: with these rules, the scalar case reproduces exactly the coefficient $\tfrac{\kappa}{3}(m^{2}-\tfrac23\lambda)$ of Friedrich's Theorem~3.1, in both directions, and the conformally coupled massless scalar gives no singular coefficient.
+
+\section{Einstein--Dirac}
+\label{sec:ed}
+With $\psi=\Omega^{3/2}\psi_{r}$ and the symmetrised kinetic tensor $T_{\mu\nu}=\tfrac{\ii}{4}\big(\bar\psi\gamma_{(\mu}\nabla_{\nu)}\psi-\nabla_{(\nu}\bar\psi\gamma_{\mu)}\psi\big)$, which contains no mass, one has, identically off shell and algebraically in $\psi_{r}$ and its first derivatives,
+\begin{equation}
+\hat T_{\mu\nu}[\psi;\hat g]=\Omega^{2}\,T_{\mu\nu}[\psi_{r};g].
+\end{equation}
+Hence $\hat T=\Omega^{4}\Theta_{\rm tr}$, the trace-free part is $\Omega^{2}(\cdots)$, $\hat L=\Omega^{2}Y+\tfrac{\lambda}{6}\hat g$, and the lowest power of $\Omega$ in the right-hand side of \eqref{eq:weyl} is $0$ for generic smooth $Y$. The geometric equations are formally regular for every mass. The mass enters only through the matter equation, $(\ii\gamma\cdot\partial-m/\Omega)\psi_{r}=0$ on a flat conformal background, i.e.\ through the coefficient $m/\Omega$ and, for the derivatives of $\psi_{r}$ among the unknowns, through its derivatives. With the stress tensor written as ``kinetic $-\hat g\,\mathcal{L}$'', the Lagrangian term $\mathcal{L}=\Omega^{4}\bar\psi_{r}(\ii\gamma\cdot\partial-m/\Omega)\psi_{r}$ gives terms of order $\Omega^{-1}$ proportional to $m$; they vanish modulo the Dirac equation. Conclusion: for the unknown $\psi_{r}$, the coupled system is formally regular if and only if $m=\Omega\mu$ with $\mu$ smooth; on solutions the singularity appears as the oscillation $\Omega^{\pm\ii m/H}$. Script \texttt{ed\_check.py}; audit: concordance AU-V2 (the connection check of the script was circular and was replaced by an independent determination of the spin connection by the blind auditor).
+
+\section{Higgs, Yukawa and gauge-boson masses}
+\label{sec:hx}
+With $H=\Omega H_{r}$, $\psi=\Omega^{3/2}\psi_{r}$ and $A$ of weight $0$, the terms
+\[\sqrt{-\hat g}\,y\,\bar\psi_{L}H\psi_{R}+\text{h.c.}\quad\text{and}\quad\sqrt{-\hat g}\,\hat g^{mn}|H|^{2}A_{m}A_{n}\]
+have weight $0$: Yukawa and gauge-boson mass terms are conformally invariant. The rescaled Dirac equation carries the coefficient $y H_{r}=m_{f}/\Omega$, and the rescaled $W,Z$ mass is $g|H_{r}|$. By contrast $\sqrt{-\hat g}\,m_{h}^{2}|H|^{2}$ has weight $-2$: it is the term $\Omega^{-2}m_{h}^{2}|H_{r}|^{2}$, compensated by the curvature term exactly at Friedrich's condition. For a homogeneous Higgs near the symmetric point on de Sitter space ($\lambda=3H^{2}$), with $M_{2}=(m_{h}^{2}+12\xi H^{2})/H^{2}$, the indicial equation is $\alpha(\alpha-3)+M_{2}=0$ and, for generic data,
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+$M_{2}$ & Dirac field continuous & energy density bounded & coefficient smooth\\
+\midrule
+$M_{2}\le0$ & no & no & no\\
+$0<M_{2}<2$ & yes & no & no\\
+$M_{2}=2$ & yes & yes & yes\\
+$2<M_{2}$ & yes & yes & no\\
+\bottomrule
+\end{tabular}
+\end{center}
+($M_{2}=9/4$ gives a logarithm, $M_{2}>9/4$ an oscillation $\Omega^{1/2\mp\ii\nu}$.) The three columns are conditions (a), (b), (c) of Proposition~4 of the paper. $M_{2}=2$ is sufficient, and necessary for generic data; non-generic data with a vanishing leading coefficient have other exponents. Script \texttt{hx\_check.py}; audit AU-V2 (the ``if and only if'' was restricted to generic data; the $W,Z$ statement to sufficiency; the symmetric-point hypothesis made explicit).
+
+\section{Einstein--Yang--Mills--Higgs--Dirac}
+\label{sec:fw3}
+Unknowns $A_{\mu}$, $H_{r}=\Omega^{-1}H$ (complex doublet, potential $m_{h}^{2}|H|^{2}+\lambda_{h}|H|^{4}$, coupling $\xi\hat R|H|^{2}$), $\psi_{r}$ with Yukawa mass. Results:
+\begin{itemize}[leftmargin=1.5em]
+\item Yang--Mills is conformally invariant in four dimensions; the Higgs and Dirac currents are of order $\Omega^{2}$ and regular.
+\item Rescaled Higgs equation: $\Box_{D}H_{r}=\Omega^{-2}\big(m_{h}^{2}+4\lambda\xi-\tfrac23\lambda\big)H_{r}-(\xi-\tfrac16)\kappa\,\Omega^{-2}\hat T\,H_{r}+2\lambda_{h}|H_{r}|^{2}H_{r}+(\text{Yukawa})$, with $\Omega^{-2}\hat T$ regular. A conformal weight $w\neq1$ for the scalar produces an additional $\Omega^{-1}$ term; a non-polynomial invariant such as $|H|^{3}$ would also produce one.
+\item Source of \eqref{eq:weyl}: lowest power $\Omega^{-2}$ with coefficient exactly $\tfrac{\kappa}{3}\big(m_{h}^{2}+4\lambda\xi-\tfrac23\lambda\big)\sum_{i}\phi_{i}^{2}\,\nabla_{[\nu}\Omega\,g_{\lambda]\rho}$, and an $\Omega^{-1}$ coefficient $\tfrac{\kappa}{6}\big(m_{h}^{2}+4\lambda\xi-\tfrac23\lambda\big)\nabla_{[\nu}(\sum_{i}\phi_{i}^{2})g_{\lambda]\rho}$ ($H_{r}=(\phi_{1}+\ii\phi_{2})/\sqrt2$ per complex component); both vanish together; no $\Omega^{-3}$. Neither $A$, nor $\dd A$, nor $\lambda_{h}$, nor the Yukawa coupling appears in a singular coefficient. The $\xi$ contribution comes as $-\tfrac23$ from $\hat G f$ and $+2$ from the improvement term.
+\item With the Yukawa mass, the Lagrangian term of the Dirac stress tensor is of order $\Omega^{2}$ in $\hat L$, so the representation dependence of Section~\ref{sec:ed} disappears.
+\end{itemize}
+Conclusion: formally regular if and only if $m_{h}^{2}+4\lambda\xi=\tfrac23\lambda$ (for $\xi=0$, Friedrich's condition). Script \texttt{fw3\_check.py}; audit AU-V2: the blind auditor rederived the condition and the $\Omega^{-1}$ coefficient; the adversarial auditor found a transcription error in the script (factor $\Omega$ instead of $\Omega^{-1}$ in (2.15)), whose correction leaves the output unchanged byte for byte. The non-abelian case is covered by weight counting only.
+
+\section{Test Dirac field with the dust weight}
+\label{sec:rj}
+\textbf{Identity.} For any symmetric $\hat T$, set $\tau_{jk}=\Omega^{-3}\hat T(\hat e_{j},\hat e_{k})$ in a $\hat g$-orthonormal frame $\hat e_{j}=\Omega e_{j}$ (Friedrich's weight for dust, $\rho=\Omega^{-3}\hat\rho$), $\tau'=\tau-\tfrac13(\mathrm{tr}\,\tau)g$, $n=\dd\Omega$. Then, with $\kappa=1$,
+\begin{gather}
+2\Omega^{-1}\hat\nabla_{[k}\hat L_{l]j}=\tfrac12\big(\nabla_{k}\tau'_{lj}-\nabla_{l}\tau'_{kj}\big)+\Omega^{-1}S_{jkl},\\
+S_{jkl}=\tfrac12\big[2(n_{k}\tau'_{lj}-n_{l}\tau'_{kj})-g_{kj}n^{m}\tau'_{lm}+g_{lj}n^{m}\tau'_{km}\big].
+\end{gather}
+Checked exactly (sympy) for polynomial and for arbitrary $\Omega$ and $\hat T$, and for a curved conformal metric. For dust, $S(\rho UU,n)=\rho Z$ with Friedrich's $Z_{jkl}$ of \cite[(3.20)]{Friedrich2017}. For timelike $n$, $S=0$ if and only if $\tau=\rho\,\nu\nu$ with $\nu$ the unit normal along $n$ (rank 9 on the 10 components): only dust at rest along $\dd\Omega$ escapes the $\Omega^{-1}$ term.
+
+\textbf{Dirac.} On de Sitter space ($\Omega=-H\eta$), for a mode $\psi=a^{-3/2}u\,e^{\ii\mathbf{k}\cdot\mathbf{x}}$ with $B=u^{\dagger}\beta u$, $N=u^{\dagger}u$, $J_{i}=u^{\dagger}\alpha_{i}u$:
+\begin{equation}
+\tau_{00}=mB+\Omega\,\mathbf{k}\cdot\mathbf{J},\qquad \tau_{0a}=-\Omega k_{a}N,\qquad \tau_{ab}=\tfrac{\Omega}{2}(k_{a}J_{b}+k_{b}J_{a}).
+\end{equation}
+The spin-connection terms cancel in the symmetric part; the mass cancels pointwise from $\tau_{0a}$ and $\tau_{ab}$ ($\psi^{\dagger}\{\alpha_{i},\beta\}\psi=0$), so these are $O(\Omega)$ for every solution, wave packets included. With the Fuchsian form $u=\Omega^{\ii m/H}P_{+}+\Omega^{-\ii m/H}P_{-}$ ($P_{\pm}$ entire):
+
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+solution & $\tau$ & source of \eqref{eq:weyl}\\
+\midrule
+both exponents present & bounded; factor $\Omega^{\mp2\ii m/H}$ & no pole; bounded, no limit\\
+single exponent (incl.\ packets of one type) & power series in $\Omega$ & power series in $\Omega$\\
+$\mathbf{k}=0$ & $\tau=mB\,e_{0}e_{0}$, constant & $0$\\
+$m=0$ & power series & power series\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The density limit $mB\to m(\|\chi_{0}^{+}\|^{2}-\|\chi_{0}^{-}\|^{2})$ has no fixed sign, unlike Friedrich's $\hat\rho\ge0$. The other equations (2.13)--(2.16) have no negative power of $\Omega$ in this weight. The Dirac equation itself keeps a regular singular point (pole $m/\Omega$ for $u$, bounded phase coefficient $\boldsymbol\alpha\cdot\mathbf{k}\,e^{2\ii\beta(m/H)\ln\Omega}$ for $\chi=e^{-\ii\beta(m/H)\ln\Omega}u$); no transformation $u=V\chi$ with $V$ smooth, or independent of $\mathbf{k}$, makes its coefficients smooth. The current of a generic solution is not asymptotically at rest ($J/N$ of order one and oscillating), so Friedrich's flow-adapted gauge does not transpose to it. Scripts \texttt{rj\_check.py}, \texttt{rj\_check\_v2.py} (sign of $\tau_{0a}$ corrected, single-exponent class tested); audit: the first version described single-exponent solutions as only continuous; both auditors showed they are analytic. Limits: test field on exact de Sitter space; the coupled system in the dust weight, FLRW backgrounds tending to de Sitter, and inhomogeneous data are not treated.
+
+\section{Scripts and audit status}
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+computation & script (sha256, 16 hex digits) & audit\\
+\midrule
+calibration on Friedrich's scalar & \texttt{cal\_f.py} (\texttt{47fb1d46aae577d4}) & two isolated AI auditors\\
+Einstein--Dirac & \texttt{ed\_check.py} (\texttt{216d24c436cca21d}) & AU-V2\\
+Higgs, Yukawa, $W,Z$ & \texttt{hx\_check.py} (\texttt{715b23948563b3b2}) & AU-V2\\
+Einstein--Yang--Mills--Higgs--Dirac & \texttt{fw3\_check.py} (\texttt{cab4bf099d588968}) & AU-V2\\
+dust weight (test field) & \texttt{rj\_check\_v2.py} (\texttt{bda4f1c2ba1533fc}) & AU-V3 partial, fixed\\
+\bottomrule
+\end{tabular}
+\end{center}
+All scripts, outputs, audit reports and concordance notes are archived in the programme repository (\url{https://github.com/droppy94/LC_Raccord}, branch \texttt{archive/notes-2026-10}). ``Audit'' means two isolated AI agents (one blind derivation, one adversarial reading) and a written concordance; it is not a human review.
+
+\begin{thebibliography}{9}
+\bibitem{Friedrich2015} H.~Friedrich, ``Smooth non-zero rest-mass evolution across time-like infinity'', Ann.\ Henri Poincar\'e 16 (2015) 2215, arXiv:1311.0700.
+\bibitem{Friedrich2017} H.~Friedrich, ``Sharp asymptotics for Einstein-$\lambda$-dust flows'', Commun.\ Math.\ Phys.\ 350 (2017) 803, arXiv:1601.04506.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,11 @@
+Clifford {g,g}=-2eta : True
+alpha hermitiens : True
+{alpha_i,beta}=0 : True
+g5^2 = True  g5 hermitien : True  anticommute : True
+Equation (3) [i d_eta u = H u] equivalente a (i Dslash - m a)u=0 : True
+T_11 = -1*(1/2)(k_i u^dag alpha_j u + k_j u^dag alpha_i u)
+T_12 = -1*(1/2)(k_i u^dag alpha_j u + k_j u^dag alpha_i u)
+T_13 = -1*(1/2)(k_i u^dag alpha_j u + k_j u^dag alpha_i u)
+T_22 = -1*(1/2)(k_i u^dag alpha_j u + k_j u^dag alpha_i u)
+T_23 = -1*(1/2)(k_i u^dag alpha_j u + k_j u^dag alpha_i u)
+T_33 = -1*(1/2)(k_i u^dag alpha_j u + k_j u^dag alpha_i u)

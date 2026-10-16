@@ -1,0 +1,18 @@
+[0] Clifford {g,g}=-2eta OK ; g5^2=1 ; alpha hermitiens: True
+[1a] det = [(Z1^2-Z2^2)(p0^2-p^2)-(m^2+m5^2)]^2 : True
+[1b] normalisation T : {cL: 1/(Z1 - Z2), cR: 1/(Z1*s + Z2*s)}
+     masse apres normalisation : M_R = (m + I*m5)/(s*(Z1 + Z2)) ; M_L = s*(m - I*m5)/(Z1 - Z2)
+     |M_L|=|M_R| (masse hermitienne a rotation chirale pres) pour s = [-sqrt(Z1 - Z2)*(1/(Z1**2 + 2*Z1*Z2 + Z2**2))**(1/4), sqrt(Z1 - Z2)*(1/(Z1**2 + 2*Z1*Z2 + Z2**2))**(1/4), -I*sqrt(Z1 - Z2)*(1/(Z1**2 + 2*Z1*Z2 + Z2**2))**(1/4), I*sqrt(Z1 - Z2)*(1/(Z1**2 + 2*Z1*Z2 + Z2**2))**(1/4)]
+     s^2 = (Z1-Z2)/(Z1+Z2) ?  [(-Z1 + Z2 + (Z1 - Z2)*(Z1 + Z2)*sqrt(1/(Z1**2 + 2*Z1*Z2 + Z2**2)))/(Z1 + Z2), (-Z1 + Z2 + (Z1 - Z2)*(Z1 + Z2)*sqrt(1/(Z1**2 + 2*Z1*Z2 + Z2**2)))/(Z1 + Z2), (-Z1 + Z2 - (Z1 - Z2)*(Z1 + Z2)*sqrt(1/(Z1**2 + 2*Z1*Z2 + Z2**2)))/(Z1 + Z2), (-Z1 + Z2 - (Z1 - Z2)*(Z1 + Z2)*sqrt(1/(Z1**2 + 2*Z1*Z2 + Z2**2)))/(Z1 + Z2)]
+     |M|^2 = (m**2 + m5**2)/(Z1**2 - Z2**2)
+[1c] courant original = (Z1-Z2) x courant standard de phi : True (convention P_L=(1-g5)/2)
+[2] sigma^ab sigma_ab = 12 x 1 ; sigma^ab R_abcd sigma^cd = 24*H**2 x 1 ; diagonal: True
+    sigma^ab (1/4)R_abcd g^c g^d = -6*I*H**2 x 1 ; diag: True
+    meme chose avec g5 : sigma^ab R sigma^cd g5 commute : True
+[3] Omega^{-i mu beta} alpha_j Omega^{i mu beta} = alpha_j Omega^{2 i mu beta} : True
+    d/dOmega Omega^{i mu beta} = (i mu beta/Omega) Omega^{i mu beta} : True
+    forme de Fuchs (i/H)(alpha.k + beta m/Omega) == annoncee : True
+    chi0+^dag beta chi0- = 0
+[4] A_Omega = -m/(H*Omega*e)  (attendu -m/(e H Omega))
+[5] m_eff (LambdaCDM) = -2*pi*G*m*rho_m/Lambda  ; rho_Lambda = Lambda/(8 pi G) => -m*rho_m/(4*rho_L)
+    sur de Sitter (rho_m=0): m_eff = 0
