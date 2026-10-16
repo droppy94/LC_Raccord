@@ -1,0 +1,52 @@
+NH = 7 ; mu symbolique : True ; ordres fiables n <= 5
+==== secteur q=k1-k2 q = (2, -1, -1)
+   j=-2  h_00 coefficient de Omega^{0-2i mu} = 0
+   j=-2  h_00 coefficient de Omega^{1-2i mu} = 0
+   j=-2  h_00 coefficient de Omega^{2-2i mu} = 0
+   j=-2  h_00 coefficient de Omega^{3-2i mu} = 0
+   j=-2  h_00 coefficient de Omega^{4-2i mu} = (2/3 + 11*I/6)/(2*mu + I)
+   j=-2  ordre minimal non nul (avec parametres libres) : {(0, 0): 4, (1, 1): 4, (1, 2): 4, (1, 3): 4, (2, 2): 4, (2, 3): 4} ; libres : []
+   j=+0  h_00 coefficient de Omega^{0+0i mu} = 0
+   j=+0  h_00 coefficient de Omega^{1+0i mu} = 0
+   j=+0  h_00 coefficient de Omega^{2+0i mu} = 5*c_6_12 + 5*c_6_13 - 4*c_6_23
+   j=+0  h_00 coefficient de Omega^{3+0i mu} = 2*mu/3
+   j=+0  h_00 coefficient de Omega^{4+0i mu} = -5*c_6_12 - 5*c_6_13 + 4*c_6_23
+   j=+0  ordre minimal non nul (avec parametres libres) : {(1, 1): 0, (1, 2): 0, (1, 3): 0, (2, 2): 0, (2, 3): 0, (0, 0): 2} ; libres : ['c_0_13', 'c_0_23', 'c_6_12', 'c_6_13', 'c_6_23', 'c_7_13', 'c_7_23']
+   j=+2  h_00 coefficient de Omega^{0+2i mu} = 0
+   j=+2  h_00 coefficient de Omega^{1+2i mu} = 0
+   j=+2  h_00 coefficient de Omega^{2+2i mu} = 0
+   j=+2  h_00 coefficient de Omega^{3+2i mu} = 0
+   j=+2  h_00 coefficient de Omega^{4+2i mu} = (2/3 - 11*I/6)/(2*mu - I)
+   j=+2  ordre minimal non nul (avec parametres libres) : {(0, 0): 4, (1, 1): 4, (1, 2): 4, (1, 3): 4, (2, 2): 4, (2, 3): 4} ; libres : []
+   facteurs de denominateurs dependant de mu : {mu - 2*I, 2*mu + I, 4*mu**2 + 9, 2*mu - I, mu + 2*I, 4*mu**2 + 1}
+       mu - 2*I  -> racines en mu : []  (reelles positives : [] )
+       2*mu + I  -> racines en mu : []  (reelles positives : [] )
+       4*mu**2 + 9  -> racines en mu : []  (reelles positives : [] )
+       2*mu - I  -> racines en mu : []  (reelles positives : [] )
+       mu + 2*I  -> racines en mu : []  (reelles positives : [] )
+       4*mu**2 + 1  -> racines en mu : []  (reelles positives : [] )
+==== secteur homogene q = (0, 0, 0)
+   j=-2  h_00 coefficient de Omega^{0-2i mu} = 0
+   j=-2  h_00 coefficient de Omega^{1-2i mu} = 0
+   j=-2  h_00 coefficient de Omega^{2-2i mu} = 0
+   j=-2  h_00 coefficient de Omega^{3-2i mu} = 0
+   j=-2  h_00 coefficient de Omega^{4-2i mu} = (22/3 + 2*I)/(2*mu + I)
+   j=-2  ordre minimal non nul (avec parametres libres) : {(0, 0): 4, (1, 1): 4, (1, 2): 4, (1, 3): 4, (2, 2): 4, (2, 3): 4} ; libres : []
+   j=+0  h_00 coefficient de Omega^{0+0i mu} = 0
+   j=+0  h_00 coefficient de Omega^{1+0i mu} = 0
+   j=+0  h_00 coefficient de Omega^{2+0i mu} = 0
+   j=+0  h_00 coefficient de Omega^{3+0i mu} = 4*mu/3
+   j=+0  h_00 coefficient de Omega^{4+0i mu} = 0
+   j=+0  ordre minimal non nul (avec parametres libres) : {(1, 1): 0, (1, 2): 0, (1, 3): 0, (2, 2): 0, (2, 3): 0, (0, 0): 3} ; libres : ['c_0_11', 'c_0_12', 'c_0_13', 'c_0_22', 'c_0_23', 'c_3_11', 'c_3_12', 'c_3_13', 'c_3_22', 'c_3_23']
+   j=+2  h_00 coefficient de Omega^{0+2i mu} = 0
+   j=+2  h_00 coefficient de Omega^{1+2i mu} = 0
+   j=+2  h_00 coefficient de Omega^{2+2i mu} = 0
+   j=+2  h_00 coefficient de Omega^{3+2i mu} = 0
+   j=+2  h_00 coefficient de Omega^{4+2i mu} = (22/3 - 2*I)/(2*mu - I)
+   j=+2  ordre minimal non nul (avec parametres libres) : {(0, 0): 4, (1, 1): 4, (1, 2): 4, (1, 3): 4, (2, 2): 4, (2, 3): 4} ; libres : []
+   facteurs de denominateurs dependant de mu : {mu - 2*I, 2*mu + I, 2*mu - I, mu + 2*I, 4*mu**2 + 1}
+       mu - 2*I  -> racines en mu : []  (reelles positives : [] )
+       2*mu + I  -> racines en mu : []  (reelles positives : [] )
+       2*mu - I  -> racines en mu : []  (reelles positives : [] )
+       mu + 2*I  -> racines en mu : []  (reelles positives : [] )
+       4*mu**2 + 1  -> racines en mu : []  (reelles positives : [] )

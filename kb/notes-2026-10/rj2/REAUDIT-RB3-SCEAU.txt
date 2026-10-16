@@ -1,0 +1,5 @@
+SCEAU consigne de re-audit RB-3, pose avant lancement : 2026-10-16T20:46:04Z
+305afbe1918a680768a1e903d587c37bd99ef6a23ebd561824767dba8d5416ad  PROMPT-REAUDIT-RB3.md
+2190a379c8394d7a5525dfc5db5c6b2e4ff1daed35ce354d85ebf09eb8ff9ed8  NOTE-BORD-EON-217-RJ2-EXECUTION-v2.md
+13fdc57c21d608d1ce36c76d62e87ff0ce53c247fa04c7ab4946b675ec5e35b7  ../rj2_test_v2.py
+d20f83ee40dfa30b7782b78eebf85d1c8044257a3b3eb168a442451794ac2a6b  ../rj2_ops.py

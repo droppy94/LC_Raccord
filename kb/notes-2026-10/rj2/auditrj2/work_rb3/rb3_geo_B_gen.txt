@@ -1,0 +1,99 @@
+mu = 13/10, cas = generique, NU = 9, NG = 6, parametres libres = 0, jauge = B, vecteurs = gen
+ordre eps : 4 modes, equation de Dirac verifiee jusqu'a l'ordre 8
+bilineaires : 9 secteurs (70 s)
+controle RJ : tau_00(q=0) = mu B + Omega k.J : True
+impulsion totale : T_c,0a(q=0) = ['0', '0', '0']
+secteur q=(-2, -4, 0) : j=[0]
+   j = 0 : ok ; parametres libres : 13, dont atteignant un coefficient d'ordre <= NG : 7
+   H11 : nmin = 3 ; termes : O^(3+0i mu)
+   H12 : nmin = 3 ; termes : O^(3+0i mu)
+   H13 : nmin = 3 ; termes : O^(3+0i mu)
+   H22 : nmin = 3 ; termes : O^(3+0i mu)
+   H23 : nmin = 3 ; termes : O^(3+0i mu)
+   ordre minimal des termes oscillants : aucun
+secteur q=(-1, -3, -3) : j=[-2, 0, 2]
+   j = -2 : ok ; parametres libres : 6, dont atteignant un coefficient d'ordre <= NG : 0
+   j = 0 : ok ; parametres libres : 13, dont atteignant un coefficient d'ordre <= NG : 7
+   j = 2 : ok ; parametres libres : 6, dont atteignant un coefficient d'ordre <= NG : 0
+   Phi : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H11 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H12 : nmin = 3 ; termes : O^(3+0i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H13 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H22 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H23 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H33 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   ordre minimal des termes oscillants : [('Phi', 4), ('H11', 4), ('H12', 4), ('H13', 4), ('H22', 4), ('H23', 4), ('H33', 4)]
+secteur q=(-1, -1, 3) : j=[-2, 0, 2]
+   j = -2 : ok ; parametres libres : 6, dont atteignant un coefficient d'ordre <= NG : 0
+   j = 0 : ok ; parametres libres : 13, dont atteignant un coefficient d'ordre <= NG : 7
+   j = 2 : ok ; parametres libres : 6, dont atteignant un coefficient d'ordre <= NG : 0
+   Phi : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H11 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H12 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H13 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H22 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H23 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H33 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   ordre minimal des termes oscillants : [('Phi', 4), ('H11', 4), ('H12', 4), ('H13', 4), ('H22', 4), ('H23', 4), ('H33', 4)]
+secteur q=(0, -2, -6) : j=[0]
+   j = 0 : ok ; parametres libres : 13, dont atteignant un coefficient d'ordre <= NG : 7
+   H12 : nmin = 3 ; termes : O^(3+0i mu)
+   H13 : nmin = 3 ; termes : O^(3+0i mu)
+   H22 : nmin = 3 ; termes : O^(3+0i mu)
+   H23 : nmin = 3 ; termes : O^(3+0i mu)
+   H33 : nmin = 3 ; termes : O^(3+0i mu)
+   ordre minimal des termes oscillants : aucun
+secteur q=(0, 0, 0) : j=[-2, 0, 2]
+   j = -2 : ok ; parametres libres : 6, dont atteignant un coefficient d'ordre <= NG : 0
+   j = 0 : ok ; parametres libres : 16, dont atteignant un coefficient d'ordre <= NG : 10
+   j = 2 : ok ; parametres libres : 6, dont atteignant un coefficient d'ordre <= NG : 0
+   Phi : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H11 : nmin = 4 ; termes : O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H12 : nmin = 4 ; termes : O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H13 : nmin = 4 ; termes : O^(4-2i mu), O^(4+2i mu), O^(6-2i mu), O^(6+2i mu)
+   H22 : nmin = 4 ; termes : O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H23 : nmin = 4 ; termes : O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H33 : nmin = 4 ; termes : O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   ordre minimal des termes oscillants : [('Phi', 4), ('H11', 4), ('H12', 4), ('H13', 4), ('H22', 4), ('H23', 4), ('H33', 4)]
+secteur q=(0, 2, 6) : j=[0]
+   j = 0 : ok ; parametres libres : 13, dont atteignant un coefficient d'ordre <= NG : 7
+   H12 : nmin = 3 ; termes : O^(3+0i mu)
+   H13 : nmin = 3 ; termes : O^(3+0i mu)
+   H22 : nmin = 3 ; termes : O^(3+0i mu)
+   H23 : nmin = 3 ; termes : O^(3+0i mu)
+   H33 : nmin = 3 ; termes : O^(3+0i mu)
+   ordre minimal des termes oscillants : aucun
+secteur q=(1, 1, -3) : j=[-2, 0, 2]
+   j = -2 : ok ; parametres libres : 6, dont atteignant un coefficient d'ordre <= NG : 0
+   j = 0 : ok ; parametres libres : 13, dont atteignant un coefficient d'ordre <= NG : 7
+   j = 2 : ok ; parametres libres : 6, dont atteignant un coefficient d'ordre <= NG : 0
+   Phi : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H11 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H12 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H13 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H22 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H23 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H33 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   ordre minimal des termes oscillants : [('Phi', 4), ('H11', 4), ('H12', 4), ('H13', 4), ('H22', 4), ('H23', 4), ('H33', 4)]
+secteur q=(1, 3, 3) : j=[-2, 0, 2]
+   j = -2 : ok ; parametres libres : 6, dont atteignant un coefficient d'ordre <= NG : 0
+   j = 0 : ok ; parametres libres : 13, dont atteignant un coefficient d'ordre <= NG : 7
+   j = 2 : ok ; parametres libres : 6, dont atteignant un coefficient d'ordre <= NG : 0
+   Phi : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H11 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H12 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H13 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H22 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H23 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   H33 : nmin = 3 ; termes : O^(3+0i mu), O^(4-2i mu), O^(4+2i mu), O^(5+0i mu), O^(6-2i mu), O^(6+2i mu)
+   ordre minimal des termes oscillants : [('Phi', 4), ('H11', 4), ('H12', 4), ('H13', 4), ('H22', 4), ('H23', 4), ('H33', 4)]
+secteur q=(2, 4, 0) : j=[0]
+   j = 0 : ok ; parametres libres : 13, dont atteignant un coefficient d'ordre <= NG : 7
+   H11 : nmin = 3 ; termes : O^(3+0i mu)
+   H12 : nmin = 3 ; termes : O^(3+0i mu)
+   H13 : nmin = 3 ; termes : O^(3+0i mu)
+   H22 : nmin = 3 ; termes : O^(3+0i mu)
+   H23 : nmin = 3 ; termes : O^(3+0i mu)
+   ordre minimal des termes oscillants : aucun
+geometrie : fin (100 s)
+sauvegarde ok

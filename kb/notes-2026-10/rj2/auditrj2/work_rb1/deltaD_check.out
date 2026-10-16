@@ -1,0 +1,2 @@
+(a) cas conforme : deltaD = formule analytique : True
+(b) h explicite non conforme : deltaD = d/deps Dslash|_0 (calcul exact) : True

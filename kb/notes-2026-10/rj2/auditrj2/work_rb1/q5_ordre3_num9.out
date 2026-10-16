@@ -1,0 +1,31 @@
+S = Omega^{s_h+s_psi-1} [A + Omega B] : True
+A(s_h, s_psi) (coefficient pouvant resonner) =
+    I*(2*C0*H00*s_psi + C0*H11*s_h + C0*H22*s_h + C0*H33*s_h + C2*H03*s_h + 2*C2*H03*s_psi + C3*H01*s_h + 2*C3*H01*s_psi - I*C3*H02*s_h - 2*I*C3*H02*s_psi)/4
+    I*(2*C1*H00*s_psi + C1*H11*s_h + C1*H22*s_h + C1*H33*s_h + C2*H01*s_h + 2*C2*H01*s_psi + I*C2*H02*s_h + 2*I*C2*H02*s_psi - C3*H03*s_h - 2*C3*H03*s_psi)/4
+    -I*(C0*H03*s_h + 2*C0*H03*s_psi + C1*H01*s_h + 2*C1*H01*s_psi - I*C1*H02*s_h - 2*I*C1*H02*s_psi + 2*C2*H00*s_psi + C2*H11*s_h + C2*H22*s_h + C2*H33*s_h)/4
+    -I*(C0*H01*s_h + 2*C0*H01*s_psi + I*C0*H02*s_h + 2*I*C0*H02*s_psi - C1*H03*s_h - 2*C1*H03*s_psi + 2*C3*H00*s_psi + C3*H11*s_h + C3*H22*s_h + C3*H33*s_h)/4
+A a s_h = 0 ne depend que de H00, H0i : True
+
+=== Coefficients d'ordre Omega^0 de h dans la solution calculee ( q5_res_9_13o10.pkl )
+  secteur q=k1-k2 j = -2 : h^(0) = {} (h_0i = 0 par jauge)
+     resonance Omega^{-1-1i mu} : projection = [0, 0, 0, 0]
+  secteur q=k1-k2 j = 0 : h^(0) = {(1, 1): -2*c_0_23 - 200*c_8_12/9 - 200*c_8_13/9 + 64*c_8_23/9, (2, 2): c_0_13 + 3*c_0_23/2 - 20*c_8_12/9 + 100*c_8_13/9 + 52*c_8_23/9, (1, 2): -c_0_13 - c_0_23 + 40*c_8_12/3 + 40*c_8_13/3 - 56*c_8_23/3, (1, 3): c_0_13, (2, 3): c_0_23} (h_0i = 0 par jauge)
+     resonance Omega^{-1+1i mu} : projection = [0, 0, 0, 0]
+     resonance Omega^{-1-1i mu} : projection = [0, 0, 0, 0]
+  secteur q=k1-k2 j = 2 : h^(0) = {} (h_0i = 0 par jauge)
+     resonance Omega^{-1+1i mu} : projection = [0, 0, 0, 0]
+  secteur homogene j = -2 : h^(0) = {} (h_0i = 0 par jauge)
+     resonance Omega^{-1-1i mu} : projection = [0, 0, 0, 0]
+  secteur homogene j = 0 : h^(0) = {(1, 1): c_0_11, (2, 2): c_0_22, (1, 2): c_0_12, (1, 3): c_0_13, (2, 3): c_0_23} (h_0i = 0 par jauge)
+     resonance Omega^{-1+1i mu} : projection = [0, 0, 0, 0]
+     resonance Omega^{-1-1i mu} : projection = [0, 0, 0, 0]
+  secteur homogene j = 2 : h^(0) = {} (h_0i = 0 par jauge)
+     resonance Omega^{-1+1i mu} : projection = [0, 0, 0, 0]
+
+=== Contre-tests (sensibilite du critere)
+  lapse h_00 = L Omega^0 (j=0), psi ~ Omega^{i mu} P+ C : P+ S_{-1+i mu} = [-13*C0*L/20, -13*C1*L/20, 0, 0]
+  h_11 = -h_22 = W Omega^{0+2i mu}, psi ~ Omega^{-i mu} P- C : P+ S_{-1+i mu} = [0, 0, 0, 0]
+  h_00 = L2 Omega^{0+2i mu}, psi ~ Omega^{-i mu} P- C : P+ S_{-1+i mu} = [0, 0, 0, 0]
+  h_ij = W delta_ij Omega^{0+2i mu} (trace), psi ~ Omega^{-i mu} P- C : P+ S_{-1+i mu} = [0, 0, 0, 0]
+  decalage h_01 = V Omega^{0+2i mu} (hors de notre jauge), psi ~ Omega^{-i mu} P- C : P+ S_{-1+i mu} = [0, 0, 0, 0]
+  decalage h_01 = V0 Omega^0 (j=0), psi ~ Omega^{i mu} P+ C : P+ S_{-1+i mu} = [0, 0, 0, 0]

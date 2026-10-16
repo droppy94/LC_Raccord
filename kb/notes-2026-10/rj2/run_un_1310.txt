@@ -1,0 +1,101 @@
+mu = 13/10, cas = unexposant, NU = 9, NG = 6, parametres libres = 0
+ordre eps : 4 modes, equation de Dirac verifiee jusqu'a l'ordre 8
+bilineaires : 9 secteurs (81 s)
+controle RJ : tau_00(q=0) = mu B + Omega k.J : True
+impulsion totale : T_c,0a(q=0) = ['0', '0', '0']
+secteur q=(-2, 0, -2) : j=[0]
+   j = 0 : ok ; parametres libres : 14, dont atteignant un coefficient d'ordre <= NG : 4
+   S2  : nmin = 2 ; termes : O^(2+0i mu)
+   ordre minimal des termes oscillants : aucun
+secteur q=(-2, 0, 0) : j=[0]
+   j = 0 : ok ; parametres libres : 14, dont atteignant un coefficient d'ordre <= NG : 4
+   S2  : nmin = 2 ; termes : O^(2+0i mu)
+   S3  : nmin = 2 ; termes : O^(2+0i mu), O^(4+0i mu), O^(6+0i mu)
+   H23 : nmin = 3 ; termes : O^(3+0i mu), O^(5+0i mu)
+   ordre minimal des termes oscillants : aucun
+secteur q=(-2, 0, 2) : j=[0]
+   j = 0 : ok ; parametres libres : 14, dont atteignant un coefficient d'ordre <= NG : 4
+   S1  : nmin = 2 ; termes : O^(2+0i mu)
+   S2  : nmin = 2 ; termes : O^(2+0i mu)
+   S3  : nmin = 2 ; termes : O^(2+0i mu)
+   ordre minimal des termes oscillants : aucun
+secteur q=(0, 0, -2) : j=[0]
+   j = 0 : ok ; parametres libres : 14, dont atteignant un coefficient d'ordre <= NG : 4
+   Phi : nmin = 1 ; termes : O^(1+0i mu), O^(3+0i mu), O^(5+0i mu)
+   Psi : nmin = 1 ; termes : O^(1+0i mu), O^(3+0i mu), O^(5+0i mu)
+   H11 : nmin = 3 ; termes : O^(3+0i mu), O^(5+0i mu)
+   H12 : nmin = 3 ; termes : O^(3+0i mu), O^(5+0i mu)
+   H22 : nmin = 3 ; termes : O^(3+0i mu), O^(5+0i mu)
+   ordre minimal des termes oscillants : aucun
+secteur q=(0, 0, 0) : j=[0]
+   j = 0 : ok ; parametres libres : 16, dont atteignant un coefficient d'ordre <= NG : 10
+   Phi : nmin = 3 ; termes : O^(3+0i mu), O^(5+0i mu)
+   H11 : nmin = 5 ; termes : O^(5+0i mu)
+   H13 : nmin = 5 ; termes : O^(5+0i mu)
+   H22 : nmin = 5 ; termes : O^(5+0i mu)
+   H33 : nmin = 5 ; termes : O^(5+0i mu)
+   ordre minimal des termes oscillants : aucun
+secteur q=(0, 0, 2) : j=[0]
+   j = 0 : ok ; parametres libres : 14, dont atteignant un coefficient d'ordre <= NG : 4
+   Phi : nmin = 1 ; termes : O^(1+0i mu), O^(3+0i mu), O^(5+0i mu)
+   Psi : nmin = 1 ; termes : O^(1+0i mu), O^(3+0i mu), O^(5+0i mu)
+   H11 : nmin = 3 ; termes : O^(3+0i mu), O^(5+0i mu)
+   H12 : nmin = 3 ; termes : O^(3+0i mu), O^(5+0i mu)
+   H22 : nmin = 3 ; termes : O^(3+0i mu), O^(5+0i mu)
+   ordre minimal des termes oscillants : aucun
+secteur q=(2, 0, -2) : j=[0]
+   j = 0 : ok ; parametres libres : 14, dont atteignant un coefficient d'ordre <= NG : 4
+   S1  : nmin = 2 ; termes : O^(2+0i mu)
+   S2  : nmin = 2 ; termes : O^(2+0i mu)
+   S3  : nmin = 2 ; termes : O^(2+0i mu)
+   ordre minimal des termes oscillants : aucun
+secteur q=(2, 0, 0) : j=[0]
+   j = 0 : ok ; parametres libres : 14, dont atteignant un coefficient d'ordre <= NG : 4
+   S2  : nmin = 2 ; termes : O^(2+0i mu)
+   S3  : nmin = 2 ; termes : O^(2+0i mu), O^(4+0i mu), O^(6+0i mu)
+   H23 : nmin = 3 ; termes : O^(3+0i mu), O^(5+0i mu)
+   ordre minimal des termes oscillants : aucun
+secteur q=(2, 0, 2) : j=[0]
+   j = 0 : ok ; parametres libres : 14, dont atteignant un coefficient d'ordre <= NG : 4
+   S2  : nmin = 2 ; termes : O^(2+0i mu)
+   ordre minimal des termes oscillants : aucun
+geometrie : fin (155 s)
+operateur de Dirac perturbe derive (158 s)
+q=(-2, 0, -2) mode +k1 -> k'=(-1, 0, -1) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(-2, 0, -2) mode -k1 -> k'=(-3, 0, -3) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(-2, 0, -2) mode +k2 -> k'=(-1, 0, -3) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(-2, 0, -2) mode -k2 -> k'=(-3, 0, -1) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(-2, 0, 0) mode +k1 -> k'=(-1, 0, 1) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(-2, 0, 0) mode -k1 -> k'=(-3, 0, -1) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(-2, 0, 0) mode +k2 -> k'=(-1, 0, -1) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(-2, 0, 0) mode -k2 -> k'=(-3, 0, 1) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(-2, 0, 2) mode +k1 -> k'=(-1, 0, 3) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(-2, 0, 2) mode -k1 -> k'=(-3, 0, 1) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(-2, 0, 2) mode +k2 -> k'=(-1, 0, 1) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(-2, 0, 2) mode -k2 -> k'=(-3, 0, 3) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(0, 0, -2) mode +k1 -> k'=(1, 0, -1) : F commence a Omega^0 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(0, 0, -2) mode -k1 -> k'=(-1, 0, -3) : F commence a Omega^0 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(0, 0, -2) mode +k2 -> k'=(1, 0, -3) : F commence a Omega^0 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(0, 0, -2) mode -k2 -> k'=(-1, 0, -1) : F commence a Omega^0 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(0, 0, 0) mode +k1 -> k'=(1, 0, 1) : F commence a Omega^2 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(0, 0, 0) mode -k1 -> k'=(-1, 0, -1) : F commence a Omega^2 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(0, 0, 0) mode +k2 -> k'=(1, 0, -1) : F commence a Omega^2 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(0, 0, 0) mode -k2 -> k'=(-1, 0, 1) : F commence a Omega^2 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(0, 0, 2) mode +k1 -> k'=(1, 0, 3) : F commence a Omega^0 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(0, 0, 2) mode -k1 -> k'=(-1, 0, 1) : F commence a Omega^0 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(0, 0, 2) mode +k2 -> k'=(1, 0, 1) : F commence a Omega^0 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(0, 0, 2) mode -k2 -> k'=(-1, 0, 3) : F commence a Omega^0 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(2, 0, -2) mode +k1 -> k'=(3, 0, -1) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(2, 0, -2) mode -k1 -> k'=(1, 0, -3) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(2, 0, -2) mode +k2 -> k'=(3, 0, -3) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(2, 0, -2) mode -k2 -> k'=(1, 0, -1) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(2, 0, 0) mode +k1 -> k'=(3, 0, 1) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(2, 0, 0) mode -k1 -> k'=(1, 0, -1) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(2, 0, 0) mode +k2 -> k'=(3, 0, -1) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(2, 0, 0) mode -k2 -> k'=(1, 0, 1) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(2, 0, 2) mode +k1 -> k'=(3, 0, 3) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(2, 0, 2) mode -k1 -> k'=(1, 0, 1) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(2, 0, 2) mode +k2 -> k'=(3, 0, 1) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+q=(2, 0, 2) mode -k2 -> k'=(1, 0, 3) : F commence a Omega^1 (+i j mu) ; resonances : aucune ; puissances < -1 : aucune ; N_F=5
+BILAN eps^3 : 36 couples (secteur, mode) ; resonances : 0 ; puissances < -1 : 0 ; nmin global = 0
+fin (227 s)

@@ -1,0 +1,3 @@
+(1) covariance conforme, phi et chi generiques : True
+(2) diffeomorphisme, xi et chi generiques : True
+(3) dirac_lin = d/deps dirac_op, h de degre 1 : True

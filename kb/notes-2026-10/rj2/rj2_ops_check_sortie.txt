@@ -1,0 +1,4 @@
+fond de Sitter (H=1, Lambda=3) : E_b = 0 : True
+jauge : delta E[L_xi g_b] = 0 (10 comp.) : True
+Dirac : covariance conforme au premier ordre : True
+diffeomorphisme : signe -1 , (cK, c2) = (-1/4, 0) , identite exacte (toutes composantes, tous monomes) : True

@@ -1,0 +1,6 @@
+[g_c plat, Omega(t,x,y,z) quelconque] (a) Dslash_phys(Om^{3/2} psi_c) - Om^{5/2} Dslash_c psi_c = 0 : True
+[g_c plat, Omega(t,x,y,z) quelconque] (b) T_{mu nu} - Om^2 T^c_{mu nu} = 0 (coordonnees) : True
+[g_c plat, Omega(t,x,y,z) quelconque] (c) tau_jk - Om T_c(e^c_j,e^c_k) = 0 : True
+[g_c diagonale non plate, Omega(t,x,y)] (a) Dslash_phys(Om^{3/2} psi_c) - Om^{5/2} Dslash_c psi_c = 0 : True
+[g_c diagonale non plate, Omega(t,x,y)] (b) T_{mu nu} - Om^2 T^c_{mu nu} = 0 (coordonnees) : True
+[g_c diagonale non plate, Omega(t,x,y)] (c) tau_jk - Om T_c(e^c_j,e^c_k) = 0 : True

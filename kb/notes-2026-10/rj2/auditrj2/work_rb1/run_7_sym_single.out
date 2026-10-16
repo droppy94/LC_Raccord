@@ -1,0 +1,13 @@
+CLASSE A UN SEUL EXPOSANT (Omega^{+i mu} seulement)
+mode (1, 1, 0) : residu de Dirac nul jusqu'a l'ordre 3 : True
+mode (-1, -1, 0) : residu de Dirac nul jusqu'a l'ordre 3 : True
+mode (-1, 2, 1) : residu de Dirac nul jusqu'a l'ordre 3 : True
+mode (1, -2, -1) : residu de Dirac nul jusqu'a l'ordre 3 : True
+=== secteur q=k1-k2 q = (2, -1, -1) ; termes source (n,j) : [(1, 0), (2, 0), (3, 0), (4, 0), (5, 0)]  t=26s
+   conservation exacte nabla^mu T_mu nu = 0 a tous les ordres < Omega^5 : True []
+q=k1-k2 j = 0 : systeme compatible (aucun log jusqu'a Omega^7) ; parametres libres : [c_0_13, c_0_23, c_6_12, c_6_13, c_6_23, c_7_13, c_7_23]
+   t=28s
+=== secteur homogene q = (0, 0, 0) ; termes source (n,j) : [(1, 0), (2, 0), (3, 0), (4, 0), (5, 0)]  t=47s
+   conservation exacte nabla^mu T_mu nu = 0 a tous les ordres < Omega^5 : True []
+homogene j = 0 : systeme compatible (aucun log jusqu'a Omega^7) ; parametres libres : [c_0_11, c_0_12, c_0_13, c_0_22, c_0_23, c_3_11, c_3_12, c_3_13, c_3_22, c_3_23]
+   t=47s

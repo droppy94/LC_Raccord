@@ -1,0 +1,4 @@
+(i) nabla_mu gamma^nu = 0 impose c = [{c: -1/4}]
+    verif. equation de Dirac : Matrix([[0, 0, 0, 0]])
+(ii) T_00 / (psi^dag psi) = sqrt(m**2 + p**2)  (attendu +E>0)
+(iii) trace T / (psibar psi) = -m  (attendu -m)

@@ -1,0 +1,8 @@
+grad^(1)/(Omega^s e^{iqx}) = -H00  (attendu -H00)
+Omega s^(1) / (Omega^s e^{iqx}) = -H00*s/8 + H11*s**2/24 - H11*s/6 + H22*s**2/24 - H22*s/6 + H33*s**2/24 - H33*s/6 + Omega**2*(-H00*q1**2/24 - H00*q2**2/24 - H00*q3**2/24 + H11*q2**2/24 + H11*q3**2/24 - H12*q1*q2/12 - H13*q1*q3/12 + H22*q1**2/24 + H22*q3**2/24 - H23*q2*q3/12 + H33*q1**2/24 + H33*q2**2/24) + Omega*(I*H01*q1*s/12 - I*H01*q1/4 + I*H02*q2*s/12 - I*H02*q2/4 + I*H03*q3*s/12 - I*H03*q3/4)
+secteur q=k1-k2 j = -2 : (3.3) verifiee ordre par ordre jusqu'a Omega^5 : True 
+secteur q=k1-k2 j = 0 : (3.3) verifiee ordre par ordre jusqu'a Omega^5 : True 
+secteur q=k1-k2 j = 2 : (3.3) verifiee ordre par ordre jusqu'a Omega^5 : True 
+secteur homogene j = -2 : (3.3) verifiee ordre par ordre jusqu'a Omega^5 : True 
+secteur homogene j = 0 : (3.3) verifiee ordre par ordre jusqu'a Omega^5 : True 
+secteur homogene j = 2 : (3.3) verifiee ordre par ordre jusqu'a Omega^5 : True 

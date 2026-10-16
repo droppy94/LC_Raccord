@@ -1,0 +1,16 @@
+mode (1, 1, 0) : residu de Dirac nul jusqu'a l'ordre 5 : True
+mode (-1, -1, 0) : residu de Dirac nul jusqu'a l'ordre 5 : True
+mode (-1, 2, 1) : residu de Dirac nul jusqu'a l'ordre 5 : True
+mode (1, -2, -1) : residu de Dirac nul jusqu'a l'ordre 5 : True
+=== secteur q=k1-k2 q = (2, -1, -1) ; termes source (n,j) : [(1, -2), (1, 0), (1, 2), (2, -2), (2, 0), (2, 2), (3, -2), (3, 0), (3, 2), (4, -2), (4, 0), (4, 2), (5, -2), (5, 0), (5, 2), (6, -2), (6, 0), (6, 2), (7, -2), (7, 0), (7, 2)]  t=201s
+   conservation exacte nabla^mu T_mu nu = 0 a tous les ordres < Omega^7 : True []
+q=k1-k2 j = -2 : systeme compatible (aucun log jusqu'a Omega^9) ; parametres libres : []
+q=k1-k2 j = 0 : systeme compatible (aucun log jusqu'a Omega^9) ; parametres libres : [c_0_13, c_0_23, c_8_12, c_8_13, c_8_23, c_9_13, c_9_23]
+q=k1-k2 j = 2 : systeme compatible (aucun log jusqu'a Omega^9) ; parametres libres : []
+   t=206s
+=== secteur homogene q = (0, 0, 0) ; termes source (n,j) : [(1, -2), (1, 0), (1, 2), (2, -2), (2, 0), (2, 2), (3, -2), (3, 0), (3, 2), (4, -2), (4, 0), (4, 2), (5, -2), (5, 0), (5, 2), (6, -2), (6, 0), (6, 2), (7, -2), (7, 0), (7, 2)]  t=365s
+   conservation exacte nabla^mu T_mu nu = 0 a tous les ordres < Omega^7 : True []
+homogene j = -2 : systeme compatible (aucun log jusqu'a Omega^9) ; parametres libres : []
+homogene j = 0 : systeme compatible (aucun log jusqu'a Omega^9) ; parametres libres : [c_0_11, c_0_12, c_0_13, c_0_22, c_0_23, c_3_11, c_3_12, c_3_13, c_3_22, c_3_23]
+homogene j = 2 : systeme compatible (aucun log jusqu'a Omega^9) ; parametres libres : []
+   t=367s

@@ -1,0 +1,110 @@
+==== secteur q=k1-k2 q = (2, -1, -1)
+  h_00  Omega^{0-2i mu} : 0
+  h_00  Omega^{1-2i mu} : 0
+  h_00  Omega^{2-2i mu} : 0
+  h_00  Omega^{3-2i mu} : 0
+  h_00  Omega^{4-2i mu} : (2/3 + 11*I/6)/(2*mu + I)
+  h_00  Omega^{5-2i mu} : 0
+  h_11  Omega^{0-2i mu} : 0
+  h_11  Omega^{1-2i mu} : 0
+  h_11  Omega^{2-2i mu} : 0
+  h_11  Omega^{3-2i mu} : 0
+  h_11  Omega^{4-2i mu} : (11/6 - 2*I/3)/((mu + 2*I)*(2*mu + I))
+  h_11  Omega^{5-2i mu} : 0
+  h_12  Omega^{0-2i mu} : 0
+  h_12  Omega^{1-2i mu} : 0
+  h_12  Omega^{2-2i mu} : 0
+  h_12  Omega^{3-2i mu} : 0
+  h_12  Omega^{4-2i mu} : (-6 - 3*I/2)/((mu + 2*I)*(2*mu + I))
+  h_12  Omega^{5-2i mu} : 0
+  h_00  Omega^{0+0i mu} : 0
+  h_00  Omega^{1+0i mu} : 0
+  h_00  Omega^{2+0i mu} : 0
+  h_00  Omega^{3+0i mu} : 2*mu/3
+  h_00  Omega^{4+0i mu} : 0
+  h_00  Omega^{5+0i mu} : -4*mu*(4*mu**2 - 5)/(9*(4*mu**2 + 1))
+  h_11  Omega^{0+0i mu} : 0
+  h_11  Omega^{1+0i mu} : 0
+  h_11  Omega^{2+0i mu} : 0
+  h_11  Omega^{3+0i mu} : -2*(592*mu**5 - 3600*mu**4 + 4840*mu**3 - 4896*mu**2 + 30213*mu + 5049)/(405*(4*mu**2 + 1)*(4*mu**2 + 9))
+  h_11  Omega^{4+0i mu} : 0
+  h_11  Omega^{5+0i mu} : 4*(176*mu**5 + 1400*mu**3 + 2052*mu**2 + 13419*mu + 3537)/(675*(4*mu**2 + 1)*(4*mu**2 + 9))
+  h_12  Omega^{0+0i mu} : 0
+  h_12  Omega^{1+0i mu} : 0
+  h_12  Omega^{2+0i mu} : 0
+  h_12  Omega^{3+0i mu} : (3232*mu**5 + 360*mu**4 + 3700*mu**3 - 9126*mu**2 - 78417*mu - 39366)/(405*(4*mu**2 + 1)*(4*mu**2 + 9))
+  h_12  Omega^{4+0i mu} : 0
+  h_12  Omega^{5+0i mu} : -2*(1376*mu**5 + 5300*mu**3 - 7848*mu**2 - 30231*mu - 26163)/(675*(4*mu**2 + 1)*(4*mu**2 + 9))
+  h_00  Omega^{0+2i mu} : 0
+  h_00  Omega^{1+2i mu} : 0
+  h_00  Omega^{2+2i mu} : 0
+  h_00  Omega^{3+2i mu} : 0
+  h_00  Omega^{4+2i mu} : (2/3 - 11*I/6)/(2*mu - I)
+  h_00  Omega^{5+2i mu} : 0
+  h_11  Omega^{0+2i mu} : 0
+  h_11  Omega^{1+2i mu} : 0
+  h_11  Omega^{2+2i mu} : 0
+  h_11  Omega^{3+2i mu} : 0
+  h_11  Omega^{4+2i mu} : (11/6 + 2*I/3)/((mu - 2*I)*(2*mu - I))
+  h_11  Omega^{5+2i mu} : 0
+  h_12  Omega^{0+2i mu} : 0
+  h_12  Omega^{1+2i mu} : 0
+  h_12  Omega^{2+2i mu} : 0
+  h_12  Omega^{3+2i mu} : 0
+  h_12  Omega^{4+2i mu} : (-6 + 3*I/2)/((mu - 2*I)*(2*mu - I))
+  h_12  Omega^{5+2i mu} : 0
+==== secteur homogene q = (0, 0, 0)
+  h_00  Omega^{0-2i mu} : 0
+  h_00  Omega^{1-2i mu} : 0
+  h_00  Omega^{2-2i mu} : 0
+  h_00  Omega^{3-2i mu} : 0
+  h_00  Omega^{4-2i mu} : (22/3 + 2*I)/(2*mu + I)
+  h_00  Omega^{5-2i mu} : 0
+  h_11  Omega^{0-2i mu} : 0
+  h_11  Omega^{1-2i mu} : 0
+  h_11  Omega^{2-2i mu} : 0
+  h_11  Omega^{3-2i mu} : 0
+  h_11  Omega^{4-2i mu} : (4 + 14*I/3)/((mu + 2*I)*(2*mu + I))
+  h_11  Omega^{5-2i mu} : 0
+  h_12  Omega^{0-2i mu} : 0
+  h_12  Omega^{1-2i mu} : 0
+  h_12  Omega^{2-2i mu} : 0
+  h_12  Omega^{3-2i mu} : 0
+  h_12  Omega^{4-2i mu} : (-2 - 3*I)/((mu + 2*I)*(2*mu + I))
+  h_12  Omega^{5-2i mu} : 0
+  h_00  Omega^{0+0i mu} : 0
+  h_00  Omega^{1+0i mu} : 0
+  h_00  Omega^{2+0i mu} : 0
+  h_00  Omega^{3+0i mu} : 4*mu/3
+  h_00  Omega^{4+0i mu} : 0
+  h_00  Omega^{5+0i mu} : 64*mu/(3*(4*mu**2 + 1))
+  h_11  Omega^{0+0i mu} : 0
+  h_11  Omega^{1+0i mu} : 0
+  h_11  Omega^{2+0i mu} : 0
+  h_11  Omega^{3+0i mu} : 0
+  h_11  Omega^{4+0i mu} : 0
+  h_11  Omega^{5+0i mu} : -4*(20*mu - 33)/(15*(4*mu**2 + 1))
+  h_12  Omega^{0+0i mu} : 0
+  h_12  Omega^{1+0i mu} : 0
+  h_12  Omega^{2+0i mu} : 0
+  h_12  Omega^{3+0i mu} : 0
+  h_12  Omega^{4+0i mu} : 0
+  h_12  Omega^{5+0i mu} : -2*(28*mu + 3)/(5*(4*mu**2 + 1))
+  h_00  Omega^{0+2i mu} : 0
+  h_00  Omega^{1+2i mu} : 0
+  h_00  Omega^{2+2i mu} : 0
+  h_00  Omega^{3+2i mu} : 0
+  h_00  Omega^{4+2i mu} : (22/3 - 2*I)/(2*mu - I)
+  h_00  Omega^{5+2i mu} : 0
+  h_11  Omega^{0+2i mu} : 0
+  h_11  Omega^{1+2i mu} : 0
+  h_11  Omega^{2+2i mu} : 0
+  h_11  Omega^{3+2i mu} : 0
+  h_11  Omega^{4+2i mu} : (4 - 14*I/3)/((mu - 2*I)*(2*mu - I))
+  h_11  Omega^{5+2i mu} : 0
+  h_12  Omega^{0+2i mu} : 0
+  h_12  Omega^{1+2i mu} : 0
+  h_12  Omega^{2+2i mu} : 0
+  h_12  Omega^{3+2i mu} : 0
+  h_12  Omega^{4+2i mu} : (-2 + 3*I)/((mu - 2*I)*(2*mu - I))
+  h_12  Omega^{5+2i mu} : 0

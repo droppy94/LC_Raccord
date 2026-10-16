@@ -1,0 +1,32 @@
+secteur (-1, -3, -3)
+   L_00 : osc min long = 0 ; B = 4 | L_0i long : 1 | L_ij long : 2
+      libres : ['x0_7', 'x0_8', 'x1_7', 'x1_8', 'x2_7', 'x2_8', 'x3_7', 'x3_8']
+   j=+2 : xi existe ; xi^eta premier ordre non nul = Omega^3 ; sigma = xi^eta/Omega commence a Omega^2 ; parametres libres : 8
+   j=+2 : Delta L = -dd sigma (ordres <= 2) : True
+      libres : ['x0_7', 'x0_8', 'x1_7', 'x1_8', 'x2_7', 'x2_8', 'x3_7', 'x3_8']
+   j=-2 : xi existe ; xi^eta premier ordre non nul = Omega^3 ; sigma = xi^eta/Omega commence a Omega^2 ; parametres libres : 8
+   j=-2 : Delta L = -dd sigma (ordres <= 2) : True
+secteur (-1, -1, 3)
+   L_00 : osc min long = 0 ; B = 4 | L_0i long : 1 | L_ij long : 2
+      libres : ['x0_7', 'x0_8', 'x1_7', 'x1_8', 'x2_7', 'x2_8', 'x3_7', 'x3_8']
+   j=+2 : xi existe ; xi^eta premier ordre non nul = Omega^3 ; sigma = xi^eta/Omega commence a Omega^2 ; parametres libres : 8
+   j=+2 : Delta L = -dd sigma (ordres <= 2) : True
+      libres : ['x0_7', 'x0_8', 'x1_7', 'x1_8', 'x2_7', 'x2_8', 'x3_7', 'x3_8']
+   j=-2 : xi existe ; xi^eta premier ordre non nul = Omega^3 ; sigma = xi^eta/Omega commence a Omega^2 ; parametres libres : 8
+   j=-2 : Delta L = -dd sigma (ordres <= 2) : True
+secteur (1, 1, -3)
+   L_00 : osc min long = 0 ; B = 4 | L_0i long : 1 | L_ij long : 2
+      libres : ['x0_7', 'x0_8', 'x1_7', 'x1_8', 'x2_7', 'x2_8', 'x3_7', 'x3_8']
+   j=+2 : xi existe ; xi^eta premier ordre non nul = Omega^3 ; sigma = xi^eta/Omega commence a Omega^2 ; parametres libres : 8
+   j=+2 : Delta L = -dd sigma (ordres <= 2) : True
+      libres : ['x0_7', 'x0_8', 'x1_7', 'x1_8', 'x2_7', 'x2_8', 'x3_7', 'x3_8']
+   j=-2 : xi existe ; xi^eta premier ordre non nul = Omega^3 ; sigma = xi^eta/Omega commence a Omega^2 ; parametres libres : 8
+   j=-2 : Delta L = -dd sigma (ordres <= 2) : True
+secteur (1, 3, 3)
+   L_00 : osc min long = 0 ; B = 4 | L_0i long : 1 | L_ij long : 2
+      libres : ['x0_7', 'x0_8', 'x1_7', 'x1_8', 'x2_7', 'x2_8', 'x3_7', 'x3_8']
+   j=+2 : xi existe ; xi^eta premier ordre non nul = Omega^3 ; sigma = xi^eta/Omega commence a Omega^2 ; parametres libres : 8
+   j=+2 : Delta L = -dd sigma (ordres <= 2) : True
+      libres : ['x0_7', 'x0_8', 'x1_7', 'x1_8', 'x2_7', 'x2_8', 'x3_7', 'x3_8']
+   j=-2 : xi existe ; xi^eta premier ordre non nul = Omega^3 ; sigma = xi^eta/Omega commence a Omega^2 ; parametres libres : 8
+   j=-2 : Delta L = -dd sigma (ordres <= 2) : True

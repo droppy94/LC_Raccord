@@ -1,0 +1,5 @@
+(1) E*Ed (code) - Id a l'ordre eps : Matrix([[0, h01, h02, h03], [-h01, 0, 0, 0], [-h02, 0, 0, 0], [-h03, 0, 0, 0]])
+    E*Ed (corrige) - Id a l'ordre eps : True
+(2) donnees du script : [0]
+    donnees aleatoires 1 : [0]
+    donnees aleatoires 2 : [0]

@@ -1,0 +1,4 @@
+jh=-2 jpsi=+1 -> Omega^{-1-1i mu} : projection resonante = [0, 0, 0, 0]  | composantes de h impliquees : []
+jh=+0 jpsi=+1 -> Omega^{-1+1i mu} : projection resonante = [-C0*H00*mu/2, -C1*H00*mu/2, 0, 0]  | composantes de h impliquees : ['H00']
+jh=+0 jpsi=-1 -> Omega^{-1-1i mu} : projection resonante = [0, 0, -C2*H00*mu/2, -C3*H00*mu/2]  | composantes de h impliquees : ['H00']
+jh=+2 jpsi=-1 -> Omega^{-1+1i mu} : projection resonante = [0, 0, 0, 0]  | composantes de h impliquees : []

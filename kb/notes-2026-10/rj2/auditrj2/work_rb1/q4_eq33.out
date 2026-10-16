@@ -1,0 +1,2 @@
+Rhat = Omega^2 R + 6 Omega box Omega - 12 |dOmega|^2 : True
+6 Omega s - 3|dOmega|^2 - lambda - (Rhat/4 - lambda) = 0 : True   => avec Rhat = 4 lambda - That : 6 Omega s - 3|dOmega|^2 - lambda = -That/4  [(3.3) verifiee]

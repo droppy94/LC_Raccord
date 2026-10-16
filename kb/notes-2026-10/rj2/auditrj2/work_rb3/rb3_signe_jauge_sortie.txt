@@ -1,0 +1,2 @@
+a^-2 L_xi(a^2 eta) - L_xi eta - 2 (xi^eta/Omega) eta = 0 : True
+a^-2 L_xi(a^2 eta) - L_xi eta + 2 (xi^eta/Omega) eta = 0 : None

@@ -1,0 +1,13 @@
+Clifford {g^a,g^b} = -2 eta^{ab} : ok
+T_00 avec sgn=+1 : -m  -> sgn retenu = -1
+nslash^2 + (n.n) Id = 0 : True
+i nslash K = m Id : True
+nbar(nslash) = nslash : True
+Lemme (b) : T_sing_ab = (m/Omega) (psibar psi) n_a n_b / |n|^2, 10 composantes : True
+|n| = r : nslash^2 = r^2 Id : True
+P+ P- = 0 : True ; bar(P+) = P+ : True
+Lemme (c) : (P+ psi)bar (P- phi) = 0
+valeurs propres de K : Matrix([[-I*m/n0, I*m/n0]]) (n = n0 e^0 ; mu = m/|n|)
+Noyau : S(rho nu nu, n) = 0 pour n generique : True
+coefficient de spin c = -1/4  (nabla gamma = 0)
+Lemme (a) : Omega^{-3} T_phys(e,e) = Omega T_c(e_c,e_c), Omega(x) quelconque, 10 composantes : True

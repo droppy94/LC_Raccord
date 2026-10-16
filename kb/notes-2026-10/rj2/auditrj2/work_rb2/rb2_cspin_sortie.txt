@@ -1,0 +1,4 @@
+CSPIN=-1/4 : diffeo (signe, cK, c2) ajustables : [(1, [{c2: 0, cK: -1/4}])] ; covariance conforme : True
+CSPIN=1/4 : diffeo (signe, cK, c2) ajustables : aucun ; covariance conforme : None
+CSPIN=-1/2 : diffeo (signe, cK, c2) ajustables : aucun ; covariance conforme : None
+CSPIN=0 : diffeo (signe, cK, c2) ajustables : aucun ; covariance conforme : None

@@ -1,0 +1,38 @@
+==== secteur q=k1-k2 q = (2, -1, -1)
+  h_00  Omega^{0+0i mu} : 0
+  h_00  Omega^{1+0i mu} : 0
+  h_00  Omega^{2+0i mu} : 0
+  h_00  Omega^{3+0i mu} : 4*mu/3
+  h_00  Omega^{4+0i mu} : 0
+  h_00  Omega^{5+0i mu} : -8*(4*mu**3 - 3*mu**2 - 5*mu - 3)/(9*(4*mu**2 + 1))
+  h_11  Omega^{0+0i mu} : 0
+  h_11  Omega^{1+0i mu} : 0
+  h_11  Omega^{2+0i mu} : 0
+  h_11  Omega^{3+0i mu} : -4*(592*mu**5 - 2424*mu**4 + 2680*mu**3 - 2478*mu**2 + 8073*mu + 756)/(405*(4*mu**2 + 1)*(4*mu**2 + 9))
+  h_11  Omega^{4+0i mu} : 0
+  h_11  Omega^{5+0i mu} : 8*(176*mu**5 - 132*mu**4 + 320*mu**3 + 1191*mu**2 + 2349*mu + 378)/(675*(4*mu**2 + 1)*(4*mu**2 + 9))
+  h_12  Omega^{0+0i mu} : 0
+  h_12  Omega^{1+0i mu} : 0
+  h_12  Omega^{2+0i mu} : 0
+  h_12  Omega^{3+0i mu} : 2*(3232*mu**5 + 2976*mu**4 + 5320*mu**3 - 6708*mu**2 - 16452*mu + 3051)/(405*(4*mu**2 + 1)*(4*mu**2 + 9))
+  h_12  Omega^{4+0i mu} : 0
+  h_12  Omega^{5+0i mu} : -4*(1376*mu**5 - 1032*mu**4 + 3680*mu**3 - 8034*mu**2 - 4716*mu + 3753)/(675*(4*mu**2 + 1)*(4*mu**2 + 9))
+==== secteur homogene q = (0, 0, 0)
+  h_00  Omega^{0+0i mu} : 0
+  h_00  Omega^{1+0i mu} : 0
+  h_00  Omega^{2+0i mu} : 0
+  h_00  Omega^{3+0i mu} : 22*mu/3
+  h_00  Omega^{4+0i mu} : 0
+  h_00  Omega^{5+0i mu} : 184*mu/(3*(4*mu**2 + 1))
+  h_11  Omega^{0+0i mu} : 0
+  h_11  Omega^{1+0i mu} : 0
+  h_11  Omega^{2+0i mu} : 0
+  h_11  Omega^{3+0i mu} : 0
+  h_11  Omega^{4+0i mu} : 0
+  h_11  Omega^{5+0i mu} : -4*(26*mu - 27)/(15*(4*mu**2 + 1))
+  h_12  Omega^{0+0i mu} : 0
+  h_12  Omega^{1+0i mu} : 0
+  h_12  Omega^{2+0i mu} : 0
+  h_12  Omega^{3+0i mu} : 0
+  h_12  Omega^{4+0i mu} : 0
+  h_12  Omega^{5+0i mu} : -8*(7*mu + 1)/(5*(4*mu**2 + 1))

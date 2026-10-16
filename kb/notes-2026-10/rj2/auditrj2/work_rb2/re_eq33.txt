@@ -1,0 +1,2 @@
+residu (3.3) sur FLRW Lambda+poussiere : 0
+de Sitter (C=0) : |grad Omega|^2 = -lambda/3  (attendu -lambda/3)

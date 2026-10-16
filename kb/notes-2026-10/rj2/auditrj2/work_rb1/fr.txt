@@ -1,0 +1,553 @@
+arXiv:1601.04506v1 [gr-qc] 18 Jan 2016 Sharp asymptotics for Einstein-λ-dust flows Helmut Friedrich Max-Planck-Institut f¨ur Gravitationsphysik Am M¨uhlenberg 1 14476 Golm, Germany October 11, 
+2018 Abstract We consider the Einstein-dust equations with positive cosmologi- cal constant λ on manifolds with time slices diffeomorphic to an ori- entable, compact 3-manifold S. It is shown that 
+the set of standard Cauchy data for the Einstein-λ-dust equations on S contains an open (in terms of suitable Sobolev norms) subset of data that develop into solutions which admit at future 
+time-like infinity a space-like confor- mal boundary J + that is C ∞ if the data are of class C ∞ and of correspondingly lower smoothness otherwise. As a particular case fol- lows a strong 
+stability result for FLRW solutions. The solutions can conveniently be characterized in terms of their asymptotic end data induced on J + , only a linear equation must be solved to construct such 
+data. In the case where the energy density ˆρ is everywhere pos- itive such data can be constructed without solving any differential equation at all. 1 1 Introduction It has been known for a while 
+that among the solutions to Einstein’s vacuum field equa- tions ˆ R μν = λ ˆg μν with positive cosmological constant λ on manifolds with space-sections diffeomorphic to an orientable, 
+compact 3-manifold S there is an open (in terms of Sobolev norms on Cauchy data) subset of solutions which are future asymptotically simple in the sense of Penrose [17], i.e. the solutions admit the 
+construction of a conformal boundary J + at their infinite time-like future which is C ∞ if the solutions are C ∞ and is of cor- respondingly lower smoothness otherwise (see [11] for more details 
+and references). This property generalises to the Einstein-λ equations coupled to conformally covariant matter field equations with trace free energy momentum tensor. In [6] this has been discussed 
+in detail for the Maxwell and the Yang-Mills equations, where a procedure has been laid out which applies, possibly which some modifications in specific cases, to other such field equations (see [16] 
+for a recent example). Matter fields with energy momentum tensors which are not trace free were generally expected to lead to difficulties in the construction of reasonably smooth conformal bound- 
+aries. (The emphasis here is on results about the evolution problem, we are not talking about geometric studies near conformal boundaries which postulate properties of energy momentum tensors 
+convenient for their analysis). It has recently been observed, however, that this need not be the true [10]. In the case of the Einstein-Klein-Gordon equations the conformal field equations with 
+suitably transformed matter field imply evolutions system which are hyperbolic, irrespec- tive of the sign of the conformal factor, if the mass and the cosmological constants are related by the 
+equation m 2 = 2 3 λ. If this condition is imposed a fairly direct calculation shows that the equation for the rescaled scalar field becomes regular where the confor- mal factor goes to zero. 
+However, that the conformal equations for the geometric fields become regular in this limit is far from immediate and, as in the case discussed in the following, came as a surprise after various 
+attempts to cast the singular equations into a form which would allow one to draw conclusions about the precise asymptotic behaviour of the solutions in the presence of singularities. Leaving aside 
+the questions about the significance of this particular result, the present article is concerned with the analysis of another matter model with non-vanishing trace of the energy momentum tensor. We 
+study in detail the future asymptotic behaviour of solutions to the Einstein-λ-dust equations. In a recent article Hadˇzi´c and Speck have shown that the FLRW solutions to the Einstein-λ-dust 
+equations with underlying manifolds of the form R × T 3 are future stable, i.e. slightly perturbed FLRW data on T 3 develop into solutions to the Einstein-λ-dust equations whose causal geodesics 
+are future complete [13]. The authors use the method proposed in [3] to control the evolution of a general wave gauge in terms of its gauge source functions. As emphasized in [3], it is clear that 
+(under fairly weak smoothness assumptions) any coordinate system can in principle be controlled in terms of its gauge source functions and suitable initial data. But finding gauge source functions 
+which are useful in a specific problem is quite a delicate matter. The authors manage to identify gauge source functions which allow them to derive estimates that give control on the long time 
+evolution of their solutions (see [19] for another such case). 2 It is, however, quite a different question whether the gauge so established lends itself to analyzing the asymptotic behaviour of 
+solutions in detail and to deciding, for instance, whether the differentiable as well as the conformal structure of the solutions admit si- multaneously extensions of some smoothness to (future) 
+time-like infinity as required by asymptotic simplicity. FLRW solutions are known to be future asymptotically simple (see section 6.2). This may be expected to be is just an artifact of the high 
+symmetry requirements which imply local conformal flatness and hypersurface orthogonality of the flow field. The present study grew out of attempts to understand what may go wrong under more general 
+assumptions and what kind of obstruction to the asymptotic smoothness of the conformal structure may possibly arise from the presence of a non-vanishing energy density ˆρ. In the article [8] have 
+been derived hyperbolic evolution equations from the Einstein- dust equation in a geometric gauge based of the flow field. The following analysis may be seen as a conformal version of this 
+discussion. After presenting the Einstein-λ-dust equations in section 2, we derive in section 3 the conformal field equations and suitably transformed matter field equations. It turns out that two 
+equations of the system are singular in the sense that there occur factors of the form Ω −1 on the right hand side, where Ω is the conformal factor which is positive on the physical solution 
+space-time and relates the physical metric ˆg μν there to the conformal metric g μν by g μν = Ω 2 ˆg μν . Since things are to be arranged such that Ω → 0 at future time-like infinity, 
+where we want to understand the precise nature of the solutions, there arise problems. One of the singularities, namely the one in the transformed (geodesic) flow field equation, was to be expected. 
+Much more serious is a singularity in the equation for the rescaled conformal Weyl tensor W μ νλρ = Ω −1 C μ νλρ [g], which plays a central role in the system. The singularities carry, 
+however, interesting geometric information. They imply that the (so far formally defined) set {Ω = 0} can only define a smooth conformal boundary of the solution space-time if the flow lines 
+approach this set orthogonally. Thus, if one wants to approach the problem in terms of estimates, one has to aim for sufficient control to be able to define simultaneously a conformal boundary at 
+time-like infinity, if admitted by the solution at all, and correspondingly control the behaviour of the flow lines. In the present article we try to exploit the conformal properties of the system in 
+the most direct way. In section 4 it is shown that due to the specific form of the energy momentum tensor for dust the geodesics tangent to the flow field can be identified after a parameter 
+transformation with curves underlying certain conformal geodesics. Since conformal geodesics are invariants of the conformal structure, this opens the possibility to define a gauge which extends 
+regular across the conformal boundary J + = {Ω = 0} if the latter can indeed be attached in a smooth way to the solution manifold (on which Ω > 0, of course). It turns out that this gauge implies a 
+certain regularising relation which proves useful in three different contexts. Its first important merit is to render the conformal field equations regular. In section 5 it is shown that the 
+conformal field equations imply a hyperbolic reduced system of evolution equations which can make sense up to and beyond the conformal boundary at time-like infinity (if it exists). This system is 
+not obtained immediately. The regularizing relation leads to a system which is hyperbolic where Ω > 0 but becomes singular where Ω → 0. A further regularization is performed to obtain a system 
+which is 3 hyperbolic independent of the sign of the conformal factor. In section 7 is derived a subsidiary system which implies that solutions to the hyper- bolic evolution system for data that 
+satisfy the constraints on a given Cauchy hypersurface (with respect to the metric provided by the evolution system) will satisfy in fact the com- plete system of conformal field equations. This 
+closes the hyperbolic reduction argument. To obtain complete information on the class of future asymptotically simple solutions to the Einstein-λ-dust solutions we characterize in Lemma 6.1 the 
+possible asymptotic end data which may be prescribed on the conformal boundary J + = {Ω = 0} (assumed to be 3-dimensional, orientable, compact) of a solution that admits the construction of such a 
+boundary with sufficient smoothness. As observed already in [4] in the vacuum case, the constraints reduce on J + to a linear system of equations. Remarkably, there is a case where the problem of 
+solving the constraints simplifies even further. In the case where the density ˆρ is positive everywhere certain fields can be prescribed completely freely on J + and the rest follows by algebra 
+and taking derivatives. There is no need to solve any differential equation at all (but see the remarks following Lemma 6.1). The reduced system of evolution equations is used in section 8 to derive 
+our main results. Being based on hyperbolic equations, a completely detailed statement of the results should give information about Sobolev norms. Since we only use properties of symmetric hyperbolic 
+systems which can be found in the literature at various places and because we are mainly interested in solutions of class C ∞ , we refrain from listing Sobolev indices. We would consider these only 
+be of interest if the weakest possible smoothness assumptions were needed in the context of some concrete problems. Theorem 1.1 Let S be a smooth, orientable, compact 3-manifold, assume λ > 0, and 
+denote by A λ,S the set of standard Cauchy data on S to the Einstein-λ-dust equations with energy density ˆρ ≥ 0. Then (i) There is an open (with respect to suitable Sobolev norms) subset B 
+λ,S of data in A λ,S which develop into solutions that admit the construction of conformal boundaries in their infinite time-like future which are of class C ∞ if the data are of class C ∞ and 
+of corre- spondingly lower differentiability if the data are of lower differentiability. (ii) The solutions which develop from data in B λ,S are completely parametrized by the asymptotic end data on 
+S (specified in Lemma 6.1) which correspond to the data induced on the future conformal boundaries J + of the solutions. The case of the Nariai solution, an explicit, geodesically complete solution 
+to the Einstein-λ-dust equations with ˆρ = 0 that admits not even a patch of a smooth conformal boundary (see [11]), shows that our reduced evolution system is by itself not sufficient to ensure 
+the existence of a smooth conformal boundary. Some extra information on the Cauchy data is required. Because the FLRW solutions do admit a smooth conformal future boundary one could consider data 
+close to FLRW data. Following instead the arguments introduced in [5] and [6], a much larger class of suitable reference solutions (which includes the FLRW solutions) will be constructed in section 8 
+by solving a backward Cauchy problem for the reduced equations with asymptotic end data that are given on a 3-manifold S which in the end 4 will represent the future conformal boundary J + = {Ω = 0} 
+of the physical space-time defined on the set {Ω > 0}. In a second step we consider the ‘physical’ standard Cauchy data that are induced by one of these solutions on a ‘physical’ Cauchy 
+hypersurface. It is shown that under sufficiently small perturbations of these data the resulting solutions are strongly stable in the sense that the smooth extensibility of their conformal 
+structures at future time-like infinity is preserved. This makes use of the fact that a future asymptotically simple solution admits a conformal representation that extends as a smooth solution to 
+the conformal Einstein-λ-dust equations beyond the conformal boundary into a domain where Ω < 0. The strong stability result follows then as a consequence of the well known Cauchy stability 
+property of hyperbolic equations and the fact that the equation themselves ensure that the set of points where Ω = 0 defines a smooth space-like hypersurface. Though they lead to the same sets of 
+solutions in the end, it is of interest to distinguish the two different ways of looking at the solutions. In the construction of the reference solu- tions some features of asymptotic simplicity are 
+built in from the start by using asymptotic end data. In the stability result, however, asymptotic simplicity for the perturbed solution is deduced as a consequence of the conformal properties of the 
+equations and the reference solution. In contrast to the approach of [13], which concentrates on deriving suitable estimates, the emphasis is put in this article on the analysis of the field 
+equations and the explicit use of their conformal properties. While the conformal equations may lead to serious dif- ficulties when the conformal structure of the solutions is intrinsically not well 
+behaved at time-like infinity, they give results which are sharp and complete if the conformal struc- ture extends smoothly and only the standard energy estimates for symmetric hyperbolic systems are 
+needed. Moreover, the information obtained on the equations is in that case of considerable practical interest. The reduced evolution system provides the possibility to calculate numerically - on a 
+finite grid - future complete solutions to Einstein’s field equations, including the details of their asymptotic behaviour. In the Einstein-λ case this has been successfully demonstrated by the 
+work of Beyer (see [2] and the references given there). Besides the one analysed in [10] this is the second example that illustrates that even in cases in which the energy momentum tensor is not 
+trace free the conformal field equations with λ > 0 and suitably rescaled matter fields can imply hyperbolic evolution equations that are well defined up to and beyond the future time-like infinity 
+of the physical solutions. The two cases are quite different but the results suggest that the analysis of the asymptotic conformal structure in the presence of matter fields can be more useful than 
+expected. The possibility to extend solutions to the conformal field equations into a domain in which Ω < 0, where they define another solution to the original equations (see section 8), has been 
+used here only as a technical device in the stability argument leading to Theorem 1.1. Whether it is of any significance in the context of Penrose’s proposal of conformal cyclic cosmologies [18] is 
+a question not discussed here. 5 2 The Einstein-λ-dust system The Einstein-Euler system with cosmological constant λ consists of the Einstein equations ˆ R μν − 1 2 ˆ R ˆg μν + λ ˆg μν 
+= κ ˆ T μν , (2.1) for a Lorentz metric ˆg μν on a four-dimensional manifold ˆ M with an energy momentum tensor of a simple ideal fluid ˆ T μν = (ˆρ + ˆp) ˆ U μ ˆ U ν + ˆp ˆg μν 
+. (2.2) Here ˆ U μ is the future directed time-like flow vector field, normalized so that ˆ U μ ˆ U μ = −1, and ˆρ and ˆp denote the total energy density and the pressure as measured by an 
+observer moving with the fluid. The equations require the relation ˆ ∇ μ ˆ T μν = 0, which is equivalent to the system consisting of the equations (ˆρ + ˆp) ˆ U μ ˆ ∇ μ ˆ U ν + { ˆ 
+U ν ˆ U μ ˆ ∇ μ + ˆ ∇ ν } ˆp = 0, (2.3) ˆ U μ ˆ ∇ μ ˆρ + (ˆρ + ˆp) ˆ ∇ μ ˆ U μ = 0. (2.4) These equations must be implemented by an equation of state. In the following we 
+set κ = 1, assume λ > 0, and consider solutions on manifolds diffeomorphic to ˆ M = R × S where S is a compact (without boundary), orientable 3- manifold which specifies the topology of the time 
+slices. We will be interested in the case where ˆp = 0 throughout, referred to as pressure free matter or, shortly, as dust. It is supposed that ˆρ does not vanish identically and satisfies ˆρ 
+≥ 0 on ˆ M . (2.5) Equation (2.3) reduces then to ˆρ ˆ U μ ˆ ∇ μ ˆ U ν = 0. This will be satisfied without condition on ˆ U μ on sets where ˆρ = 0 and implies that the flow is 
+geodesic where ˆρ 6 = 0. We require ˆ U μ to be geodesic everywhere. The system to be considered consists then of (2.1), ˆ T μν = ˆρ ˆ U μ ˆ U ν , (2.6) ˆ U μ ˆ ∇ μ ˆ U ν = 0, ˆ 
+U μ ˆ U μ = −1, (2.7) ˆ ∇ μ (ˆρ ˆ U μ ) = 0. (2.8) Let ˆ S be a hypersurface in ˆ M which is space-like for ˆg μν and denote by ˆn μ the future directed normal of ˆ S normalized 
+by ˆn μ ˆn μ = −1. Let coordinates x μ be given near ˆ S so that ˆ S = {x 0 = 0} and the x α , α, β = 1, 2, 3, are local coordinates on ˆ S. Denote by ˆ h αβ , ˆκ αβ the first and 
+the second fundamental form induced on ˆ S by ˆg μν and by ˆ h μ ν = ˆg μ ν + ˆn μ ˆn ν the orthogonal projector onto the tangent spaces of ˆ S. Equations (2.7), (2.8) are evolution 
+equations for ˆ U μ and ˆρ. Equation (2.1) induces with (2.6) on ˆ S the constraints 0 = R[ ˆ h] − ˆκ αβ ˆκ αβ + (ˆκ α α ) 2 − 2 λ − 2 ˆn μ ˆn ν ˆ T μν , 6 0 = ˆ D β 
+ˆκ α β − ˆ D α ˆκ β β − ˆn μ ˆ h α ν ˆ T μν . Setting a = −ˆn μ ˆ U μ > 0, ˆu μ = ˆ h μ ν ˆ U ν , so that ˆ U μ = a ˆn μ + ˆu μ with − 1 = −a 2 + ˆu β 
+ˆu β where ˆu β ˆu β = ˆ h βγ ˆu β ˆu γ , the constraints take the form 0 = R[ ˆ h] − ˆκ αβ ˆκ αβ + (ˆκ α α ) 2 − 2 λ − 2 ˆρ (1 + ˆu α ˆu α ), (2.9) 0 = ˆ D β 
+ˆκ α β − ˆ D α ˆκ β β + ˆρ √ 1 + ˆu β ˆu β ˆu α . (2.10) It has been shown in [8] how to derive from equations (2.1), (2.6), (2.7), (2.8) a symmetric hyperbolic evolution system 
+of equations for all unknowns in a gauge based on the flow vector field ˆ U . Given λ > 0 and a sufficiently smooth initial data set ( ˆ S, ˆ h αβ , ˆκ αβ , ˆu α , ˆρ), (2.11) 
+satisfying (2.9), (2.10) with ˆ h αβ a Riemannian metric and ˆρ ≥ 0, the evolution system can be used to construct a globally hyperbolic solution ( ˆ M , ˆg μν , ˆ U μ , ˆρ) to the 
+Einstein- dust equations with cosmological constant λ into which the initial data set is isometrically embedded so that ˆ S represents after an identification a space-like Cauchy hypersurface for ( 
+ˆ M , ˆg μν ). The manifold ˆ M will then be ruled by the geodesics tangent to ˆ U μ . The ODE’s ˆ U μ ˆ ∇ μ ˆρ + ˆρ ˆ ∇ μ ˆ U μ = 0, along the geodesics tangent to ˆ U μ 
+ensure that ˆρ > 0 or = 0 along a given geodesic, depending on whether this relation is satisfied at the point where the geodesic intersects ˆ S. Thus ˆρ ≥ 0 will hold on ˆ M . For smooth 
+initial data the evolution system given in [8] provides a smooth solution in coordinates x 0 = t, x a so that < dx a , ˆ U > = 0, < dt, ˆ U > = 1, whence ˆ U = ∂ t . The initial hypersurfac is 
+given by ˆ S = {t = t ∗ } for some fixed value t ∗ , the metric is of the form ˆg = −(a dt) 2 + h αβ (ˆu α dt + dx α ) (ˆu β dt + dx β ) on ˆ M , (2.12) the future directed ˆg-unit 
+normal to ˆ S is given by ˆn μ = 1 a (δ μ − ˆu μ ) with shift vector field ˆu μ so that ˆu 0 = 0, (2.13) and the lapse function a satisfies −1 = ˆg( ˆ U , ˆ U ) = −a 2 + h αβ ˆu 
+α ˆuβ. If ˆ U is hypersurface orthogonal we can assume that a = 1, ˆu α = 0 and the coordinates define a Gauss system. This will not necessarily be assumed in this article. The questions to be 
+analyzed in the following asks whether there exist a reasonably large set of data for which the solutions can be extended to become future complete, so that t takes values in [t ∗ , ∞[, and 
+whether these solutions allow us to give a sharp and detailed description of the asymptotic behaviour of the conformal structure in the expanding direction, where t → ∞. 7 3 The metric conformal 
+field equations Let Ω denote a positive conformal factor on ˆ M and g μν = Ω 2 ˆg μν the rescaled metric. We shall in the following consider the tensor fields Ω, s = 1 4 ∇ μ ∇ μ Ω + 1 
+24 Ω R[g], L μν = 1 2 ( R μν [g] − 1 6 R[g] g μν ) , (3.1) W μ ηνλ = Ω −1 C μ ηνλ [g], (3.2) where ∇ μ denotes the Levi-Civita connection of g and the last two fields denote 
+the Schouten and the rescaled conformal Weyl tensor of g μν respectively. Moreover, we shall consider the conformal matter fields U μ = Ω ˆ U μ , ρ = Ω −3 ˆρ. The vector fields U μ = g 
+μν U ν and ˆ U μ = ˆg μν ˆ U ν are then related by U μ = Ω −1 ˆ U μ so that g(U, U ) = ˆg( ˆ U , ˆ U ) = −1. The tensor fields above satisfy the system of conformal field 
+equations (see [6], [10]) 6 Ω s − 3 ∇ η Ω ∇ η Ω − λ = − 1 4 ˆ T , (3.3) ∇ μ ∇ ν Ω + Ω L μν − s g μν = 1 2 Ω T ∗ μν , (3.4) ∇ μ s + ∇ η Ω L ημ = 1 2 ∇ η 
+Ω T ∗ ημ − 1 24 Ω ∇ μ ˆ T , (3.5) ∇ ν L λη − ∇ λ L νη − ∇ μ Ω W μ ηνλ = 2 ˆ ∇ [ν ˆ L λ]η , (3.6) ∇ μ W μ ηνλ = 2 Ω −1 ˆ ∇ [ν ˆ L λ]η . (3.7) 
+The right hand sides are determined by the trace ˆ T = ˆg ημ ˆ T ημ = − ˆρ = −Ω 3 ρ, (3.8) and the trace free part T ∗ ημ = ˆρ ( ˆ U η ˆ U μ + 1 4 ˆg ημ ) = Ω ρ ( U η U 
+μ + 1 4 g ημ ) , (3.9) of the energy momentum tensor (2.6) and the physical Schouten tensor ˆ L μν , which takes with our energy momentum tensor, the field equations, and the rescaled fields 
+the form ˆ L μν = 1 6 (ˆρ + λ) ˆg μν + 1 2 ˆρ ˆ U μ ˆ U ν = 1 6 λ ˆg μν + Ω ρ ( 1 2 U μ U ν + 1 6 g μν ) . (3.10) 8 Taking into account the transformation law of the 
+connection coefficients under con- formal rescaling this gives 2 ˆ ∇ [ν ˆ L λ]η = ˆ ∇ [ν ˆρ ˆ U λ] ˆ U η + 1 3 ˆ ∇ [ν ˆρ ˆg λ]η + ˆρ ( ˆ ∇ [ν ˆ U λ] ˆ U η + ˆ U 
+[λ ˆ ∇ ν| ˆ U η ) = Ω ( ρ (∇ [ν U λ] U η + U [λ ∇ ν] U η ) + ∇ [ν ρ U λ] U η + 1 3 ∇ [ν ρ g λ]η ) +ρ ( ∇ [ν Ω g λ]η + 2 ∇ [ν Ω U λ] U η + U [ν g λ]η g 
+πδ ∇ π Ω U δ ) . Finally, the geodesic equation (2.7) translates into ∇ U U μ = 1 Ω (−g(U, U ) g μ ρ + U μ U ρ ) ∇ ρ Ω. (3.11) while equation (2.8) for the density ˆρ gives ∇ 
+U ρ + ρ ∇ μ U μ = 0. (3.12) We express the equations in terms of a frame field e k = e μ k ∂ x μ , k = 0, 1, 2, 3, which has a time-like vector field given by e 0 = U, and which is 
+orthonormal, so that g jk ≡ g(e j , e k ) = η jk = diag(−1, 1, 1, 1). The space-like frame fields are given by the e a , where a, b, c = 1, 2, 3 denote spatial indices to which the summation 
+convention applies. The metric is given by g = η jk σ j σ k , where σ j denotes the field of 1-forms dual to e k so that their coefficients in the coordinates x μ satisfy σ j μ e μ k = δ j k 
+. The connection coefficients, defined by ∇ j e k ≡ ∇ e j e k = Γ j l k e l , satisfy Γ jlk = −Γ jkl with Γ jlk = Γ j i k g li , because ∇ i g jk = 0. The covariant derivative of a 
+tensor field X μ ν , given in the frame by X i j , takes the form ∇ k X i j = X i j ,μ e μ k + Γ k i l X l j − Γ k i l X i j . For the covariant version of U , i.e. U j = − δ 0 j , 
+equation (3.11) implies the form ∇ k U l = Γ k 0 l = δ 0 k Ω −1 (∇ l Ω + U l ∇ 0 Ω) + δ a k δ b l χ ab . (3.13) If U is hypersurface orthogonal and if ˆ S were chosen to be 
+orthogonal to U so that the vector fields e a define an orthonormal frame on ˆ S, the field χ ab would represent the second fundamental form induced by g on the slice ˆ S whence χ ab = χ (ab) . 
+In general hypersurface orthogonality will not be assumed here. We shall write g ab χ ab = χ a a . The metric coefficients and the connection coefficients satisfy the first structural equa- tions e 
+μ i, ν e ν j − e μ j, ν e ν i = (Γ j k i − Γ i k j ) e μ k , (3.14) 9 which ensures the connection to be torsion free, and the second structural equations Γ l i j, μ e μ k − Γ k i 
+j, μ e μ l + 2 Γ [k i p Γ l]pj − 2 Γ [k p l] Γ p i j (3.15) = Ω W i jkl + 2 {g i [k L l]j + L i [k g l]j }, which relates the coefficients (and thus the metric g μν ) to the unknowns in 
+the conformal field equations. The conformal field equations read now 6 Ω s − 3 ∇ i Ω ∇ i Ω − λ = 1 4 Ω 3 ρ, (3.16) ∇ j ∇ k Ω + Ω L jk − s g jk = 1 2 Ω 2 ρ ( U j U k + 1 4 g 
+jk ) , (3.17) ∇ k s + ∇ i Ω L ik = 1 2 Ω ρ ∇ i Ω ( U i U k + 1 4 g ik ) + 1 8 Ω ρ ∇ k Ω + 1 24 Ω 2 ∇ k ρ, (3.18) ∇ k L lj − ∇ l L kj − ∇ i Ω W i jkl (3.19) = Ω ( ρ 
+(∇ [k U l] U j + U [l ∇ k] U j ) + ∇ [k ρ U l] U j + 1 3 ∇ [k ρ g l]j ) +ρ ( ∇ [k Ω g l]j + 2 ∇ [k Ω U l] U j + U [k g l]j g pq ∇ p Ω U q ) , ∇ i W i jkl = (3.20) ρ (∇ [k U 
+l] U j + U [l ∇ k] U j ) + ∇ [k ρ U l] U j + 1 3 ∇ [k ρ g l]j + 1 Ω ρ Z jkl with Z jkl = ∇ [k Ω g l]j + 2 ∇ [k Ω U l] U j + U [k g l]j g pq ∇ p Ω U q . The matter equations are 
+given by ∇ U U k = 1 Ω (g k i + U k U i ) ∇ i Ω, (3.21) ∇ U ρ + ρ χ a a = 0. (3.22) Equations (3.14) to (3.22) establish a system of differential equations for the unknowns e μ k , Γ i j 
+k , Ω, s, L jk , W i jkl , U k , ρ, (3.23) which is (apart from subtleties which may arise in cases of low differentiability) equivalent to the system (2.1), (2.6), (2.7), (2.8) in domains where Ω 
+> 0. If the system is to be used to solve Cauchy problems with data given on a space- like hypersurface ˆ S, one has to restrict the available gauge freedom. We shall follow the procedure of [6] and 
+[10], where the conformal freedom is removed be considering the Ricci 10 scalar R = R[g] in a suitable neighborhood of ˆ S as a prescribed function of the space-time coordinates and by prescribing 
+suitable initial data for Ω and ∇ i Ω on ˆ S. The coordinates τ = x 0 and x a are chosen near ˆ S so that τ = τ ∗ on ˆ S and < U, dx a > = 0, < U, dτ > = 1, whence U μ = e μ 0 = δ μ 
+0 near ˆ S. Apart from a parameter transformation t = t(τ ) these coordinates coincide with the ones considered in (2.12). Precise conditions on the vector fields e a orthogonal to U will be stated 
+later. Our main interest is the question whether there exist solutions to the system above on the domain where Ω > 0 which admit a meaningful (i.e. sufficiently smooth) limit to a boundary where Ω 
+→ 0. In that case we write {Ω = 0} = J + , and refer to this set as the future conformal boundary of the solution. By equation (3.16) the limit of ∇ i Ω will then define a time-like normal to 
+the set J + so that the latter will define a space-like hypersurface. It represents (future) time-like and null infinity for the ‘physical’ space-time on which Ω > 0. There arises an obvious 
+problem with the differential system above. The right hand sides of equations (3.20) and(3.21) are formally singular where Ω → 0. This problem will be analyzed in the next section. Here we just 
+point out its geometric nature. If the fields entering equation (3.21) have limits as Ω → 0 the term in brackets on the right hand side of (3.21) defines a projection operator with kernel 
+generated by the unit vector U . The right hand side of (3.21) can only admit a limit as Ω → 0 if the gradient of Ω is in the kernel of that operator and thus proportional to U , whence The 
+solutions can only admit a reasonably smooth conformal boundary J + if the geodesics generated by ˆ U approach J + orthogonally. Remarkably, the singularity of equation (3.20) is of a similar 
+geometric nature. If we want to keep the freedom to have non-vanishing conformal densities ρ on J + , the right hand side of (3.20) can only assume a limit if Z jkl → 0 at J + . Since this implies 
+that U j Z jkl = −∇ [k Ω U l] → 0, which implies in turn that Z jkl → 0, the conclusion above follows again. 4 The regularizing relation A conformal geodesic in a given space-time ( ˆ M , 
+ˆg) is a curve x μ (σ) together with a 1-form field b ν (σ) which satisfy the system of conformal geodesic equations ˆ ∇ V V μ + S(b) λ μ ρ V λ V ρ = 0, ˆ ∇ V b ν − 1 2 b μ S(b) 
+λ μ ν V λ − ˆ L λν V λ = 0, where S(b) λ μ ρ = δ λ μ b ρ + δ ρ μ b λ − ˆg λρ ˆg μν b ν and V μ (σ) = dx μ dσ denotes the tangent vector of the curve. Sometimes it 
+will be convenient to write these equations in the form ˆ ∇ V V + 2 < b, V > V − ˆg(V, V ) b = 0, (4.1) 11 ˆ ∇ V b − < b, V > b + 1 2 ˆg(b, b) V − ˆ L(V, . ) = 0, (4.2) where the index 
+position should be clear from the above. For a conformal geodesic the initial data at a given point consist of its tangent vector and its 1-form at that point. On a given space-time there exist thus 
+more conformal geodesics than metric geodesics. Moreover, there exists in general no particular relation between conformal and metric geodesics. The problem of interest here is, however, very special 
+in this respect. Lemma 4.1 Let ( ˆ M , ˆg) be a solution to the Einstein-dust system (2.1), (2.6), (2.7), (2.8). Then the geodesics tangential to the vector field ˆ U coincide after a 
+reparameterization with the curves underlying certain conformal geodesics. Proof: Suppose ¯x μ (t) is a ˆg-geodesic with d¯x μ dt = ˆ U μ (¯x(t)) and (x μ (σ), b ν (σ)) a conformal 
+geodesics with V μ (σ) = dx μ dσ . Then there exists a parameter transformation t = t(σ) so that dt dσ > 0 and x μ (σ) = ¯x μ (t(σ)) if and only if V μ (σ) = ω(σ) −1 ˆ U μ 
+(¯x(t(σ))) with ω −1 = dt dσ > 0, ˆg(V, V ) = −ω −2 . (4.3) For x μ (σ) to be up to a reparametrization a geodesic we need to have a relation b μ = α V μ , (4.4) with some function 
+α = α(σ) so that (4.1) reads ˆ ∇ V V μ + α ˆg(V, V ) V μ = 0. (4.5) It follows then that 2 ω −3 ˆ ∇ V ω = ˆ ∇ V (ˆg(V, V )) = −2 α ω −4 , whence α = −ω ˆ ∇ V ω. 
+(4.6) Basic for our result is that relations (3.10) and (4.3) give along x μ (σ) V ν ˆ L νμ = 1 6 (λ − 2 ˆρ) V μ , with ˆρ = ˆρ(¯x μ (t(σ))). Inserting this and (4.4) into (4.2) 
+and observing (4.5), (4.6) gives the equation ω d 2 ω d σ 2 − 1 2 ( d ω dσ ) 2 + 1 6 (λ − 2 ˆρ(¯x μ (t(σ)))) = 0, which provides with the relation dt dσ = 1 ω , (4.7) a system of 
+ODE’s for ω = ω(σ) and t = t(σ) along x μ (σ) = ¯x μ (t(σ))). Prescribing arbitrary initial data t| σ ∗ = t ∗ , ω| σ ∗ , and dω d σ | σ ∗ with ω ∗ > 0 at the point x μ 
+(σ ∗ ) = ¯x μ (t ∗ )) it can be solved. A straight forward calculation then shows that V μ (σ) = 1 ω ˆ U μ (¯x(t(σ)), b ν (σ) = − dω dσ ˆ U μ (¯x(t(σ)), 12 do indeed satisfy 
+equations (4.1) and (4.2).  It will later be important to note that the freedom to prescribe the initial data for ω gives the freedom to prescribe α arbitrarily at a given point. Conformal 
+geodesics are of interest in the present context because the curves un- derlying conformal geodesics are conformal invariants of a given conformal structure: If g μν = Ω 2 ˆg μν , where Ω is a 
+conformal factor as considered above and x μ (σ), b λ (σ) satisfy the conformal geodesic equations with respect to ˆg μν , then x μ (σ), f ν (σ) with f ν (σ) = b ν (σ) − Ω −1 ∇ 
+ν Ω| x(σ) , (4.8) satisfy the conformal geodesics equations ∇ V V + 2 < f, V > V − g(V, V ) f = 0, (4.9) ∇ V f − < f, V > f + 1 2 g(f, f ) V − L(V, . ) = 0, (4.10) with respect to g μν 
+, where ∇ and L denote the Levi-Civita connection and the Schouten tensor of g μν (for this and further properties of conformal geodesics we refer to [7], [9]). If g(V, V ) = −θ −2 with θ > 
+0 at a given point, equation (4.9) gives ∇ V θ = θ < V, f >, which shows that θ will stay positive and x μ (σ) will be time-like as long as V and f remain sufficiently smooth. Equations (4.9), 
+(4.10) do not see the relation g μν = Ω 2 ˆg μν . Thus, if ( ˆ M , ˆg) admits a smooth conformal boundary J + , one can arrange time-like conformal geodesics to extend smoothly to J + with 
+finite and non-vanishing tangent vector. In the following we shall assume V to be a conformal geodesic vector field which is related, as in (4.3), to the ˆg-geodesic vector field ˆ U by V μ = ω 
+−1 ˆ U μ . (4.11) With the notation above we have then θ V μ = U μ = Ω −1 ˆ U μ , and thus θ = ω Ω , ∇ U θ = θ < U, f > . (4.12) Since θ stays smooth and positive if U crosses the 
+conformal boundary this has the re- markable consequence, used already in [7], that ω goes to zero precisely where Ω does. In terms of U equation (4.9) takes the form ∇ U U + < U, f > U − g(U, 
+U ) f = 0. (4.13) Replacing in (4.10) the field V by U = θ V renders that equation in the form ∇ U f − < U, f > f + 1 2 g(f, f )U − L(U, . ) = 0. (4.14) 13 This version of the conformal 
+geodesic equations will be assumed from now on. The only effect of the transition is a reparametrization of x μ (σ) → x μ (τ ), f ν (σ) → f ν (τ ) where σ is replaced by a function σ(τ 
+) so that dτ dσ = 1 θ(x(σ)) . (4.15) In the following the parameter τ will be used. With (4.12) and the relations obtained in the proof of Lemma 4.1 we get f μ = b μ − Ω −1 ∇ μ Ω = 
+−ω ∇ V ω ˆg μν V ν − Ω −1 ∇ μ Ω = −(θ Ω) θ −1 ∇ U (θ Ω) Ω −2 g μν θ −1 U ν − Ω −1 ∇ μ Ω = −(θ −1 ∇ U θ + Ω −1 ∇ U Ω) U μ − Ω −1 ∇ 
+μ Ω, = −(< U, f > +Ω −1 ∇ U Ω) U μ − Ω −1 ∇ μ Ω, and thus the regularising relation ∇ μ Ω = −(∇ U Ω + Ω < U, f >)U μ − Ω f μ . (4.16) This relation will play a 
+critical role. It will be used later to obtain a hyperbolic system of evolution equations which extends in a regular way to the set {Ω = 0} and it will be used to set up a subsidiary system to show 
+that constraints and gauge conditions are preserved by the evolution system. Here it is used to remove the singularities in equations (3.20) and (3.21). In fact, replacing in Z jkl the term ∇ k Ω 
+by the right hand side of (4.16), we get (3.20) in the form ∇ i W i jkl = ∇ [k ρ U l] U j + 1 3 ∇ [k ρ g l]j (4.17) +ρ (∇ [k U l] U j + U [l ∇ k] U j − f [k g l]j − 2 f [k U l] U j 
+− U [k g l]j U i f i ). Using (4.16) to replace ∇ k Ω on the right hand side of (3.21), the equation takes the form ∇ 0 U k + f k + U k U i f i = 0, (4.18) which is just (4.13) again. Equation 
+(3.13) is then replaced by the formally regular version ∇ k U l = Γ k 0 l = (−δ 0 k f b + δ a k χ ab ) δ b l . (4.19) Finally we note that given sufficient asymptotic smoothness and an 
+arrangement such that Ω(x(τ )) → 0 for some finite value of τ , the relation dt dτ = 1 Ω(x(τ )) , (4.20) which follows from (4.7), (4.12), (4.15) implies with (3.3) that t → ∞ as Ω(x(τ 
+)) → 0. 14 5 The hyperbolic reduced equations To extract from our equations a hyperbolic system we need to complete the gauge con- ditions for the g-orthonormal frame field e k satisfying e 0 = U . 
+The reduction procedure of the Einstein-dust system in [8] employs a frame that is ˆg-parallely transported in the direction of ˆ U . Since the field U is not geodesic with respect to g this cannot 
+be done here. We use instead a frame whose vector fields X satisfy the Fermi transport law 0 = F U X ≡ ∇ U X − g(X, ∇ U U ) U + g(X, U ) ∇ U U, which has the properties: F U U = 0 and if F 
+U X = 0, F U Y = 0 then ∇ U (g(X, Y )) = 0. On a given space-like hypersurface transverse to the flow line of U we thus choose smooth fields e k with e 0 = U such that g jk = g(e j , e k ) = η jk 
+and extend the e a away from the hypersurface by the requirement that F U e a = 0. The smooth orthonormal frame field so obtained is then closely related to the frame considered in [8]. In fact, if 
+ˆe k is a ˆg-orthonormal frame such that ˆe 0 = ˆ U and ˆ ∇ ˆ U ˆe k = 0, then e k = Ω −1 ˆe k is a g μν = Ω 2 ˆg μν - orthonormal frame with e 0 = U and F U e a = 0. As a 
+consequence of relation F U e k = 0 the connection coefficients satisfy Γ 0 a b = 0. (5.1) The transport equation for the flow field U is given by (4.13). The coefficients U μ = e μ 0 = δ μ 0 
+have been fixed by our choice of coordinates, however, and equation (4.18) reduces to the relation Γ 0 a 0 = −f a = −g ab f b resp. Γ 0 0 a = −f a , (5.2) between the connection coefficients 
+and the acceleration of U . The remaining not neces- sarily vanishing connection coefficients are then given by Γ a b c and Γ a 0 b = ∇ a U b = g(∇ e a e 0 , e b ) ≡ χ ab resp. Γ a b 0 = χ 
+a b = χ ac g cb . (5.3) In the case in which U resp. ˆ U is hypersurface orthogonal, the field χ ab is symmetric and represents the second fundamental form while the Γ a b c are the connection 
+coefficients of the intrinsic connection induced on the hypersurfaces orthogonal to U in the frame e a . We shall now derive the reduced equations for the remaining frame and connection coefficients. 
+With our gauge conditions and the connection coefficients above the first structural equations (3.14) induce the evolution equations e μ a, 0 = −f a δ μ 0 − χ a b e μ b , (5.4) for the 
+fields e μ a . The second structural equations (3.15) induce the evolution equations Γ c a b, 0 = f a χ cb − χ c a f b − χ c d Γ d a b + Ω W a b0c − g a c L 0b + L a 0 g cb , (5.5) χ 
+ab, 0 + D a f b = f a f b − χ a c χ cb − Ω W 0b0a + L ab − L 00 g ab , (5.6) for Γ c a b and χ ab , where we set D a f b = f b ,μ e μ a − Γ a c b f c . 15 No equation is implied for 
+Γ 0 0 a = −f a by (3.15). Such an equation is provided, however, by (4.14), which takes in our gauge the explicit form f 0, 0 = − 1 2 f j f j + L 00 , (5.7) f a, 0 = L 0a . (5.8) At this stage 
+arises a problem. We are aiming for a system that is symmetric hyper- bolic. The principal part of the coupled system χ ab, 0 + D a f b = . . . , f a, 0 = . . . , does not satisfy the required 
+symmetry condition. One might think of proceeding as follows. The structural equations (3.15) imply after a contraction an analogue of Codacci’s equation, which takes with the convention D c χ ab 
+≡ χ ab ,μ e μ c − Γ c d a χ db − Γ c d b χ ad the form D a χ ab − D b (χ a a ) = . . . , (where the index position in the first term has to be respected because χ ab is not 
+necessarily symmetric). By adding a suitable multiple of this equation to the second of the equations above one could hope to obtain a symmetric system. A careful analysis shows, however, that this 
+does not work. We skip the details. Help is again provided by (4.16). By this relation the field N k = ∇ k Ω + (∇ U Ω + Ω < U, f >) U k + Ω f k , vanishes in our gauge. While N 0 = N k U k = 
+0 identically, the equation N a = 0 with N a = Ω f a + ∇ a Ω, has non-trivial content. The relation ∇ j N k = ∇ j ∇ k Ω + ∇ j (∇ U Ω + Ω < U, f >) U k +(∇ U Ω + Ω < U, f >) ∇ j 
+U k + ∇ j Ω f k + Ω ∇ j f k , implies in our gauge ∇ a N b − N a f b = ∇ a ∇ b Ω + (∇ U Ω + Ω < U, f >) χ ab − Ω f a f b + Ω ∇ a f b = ∇ a ∇ b Ω + (∇ U Ω + Ω < U, f 
+>) χ ab − Ω f a f b + Ω (D a f b − χ ab f 0 ). = ∇ a ∇ b Ω + ∇ U Ω χ ab − Ω f a f b + Ω D a f b , which gives with (3.17) ∇ a N b − N a f b = ∇ U Ω χ ab + s g ab + Ω (D 
+a f b − f a f b − L ab + 1 8 Ω ρ g ab ). (5.9) Solving the equation ∇ a f b − N a f b = 0 for D a f b and using the resulting expression to replace that term in the evolution equation for 
+χ ab , gives the latter in the form χ ab, 0 − Ω −1 (∇ U Ω χ ab + s g ab ) = −χ a c χ cb − Ω W 0a0b − L 00 g ab . (5.10) 16 With the reduced equations obtained so far and the ones 
+that follow below this gives again a symmetric hyperbolic system where Ω 6 = 0. Let us assume that the solution admits a smooth conformal boundary J + = {Ω = 0}. To obtain a system which extends in 
+a regular fashion to J + we recall that this would require that e 0 = U approaches J + orthogonally. With (3.16) this would imply that ∇ U Ω → −ν < 0 as Ω → 0, where ν ≡ √ − λ 3 , 
+and thus ∇ U Ω < 0 also in a neighborhood of J + . In the discussion of the conformal constraints on J + in the next section we shall see that the conformal gauge can be chosen such that s and χ 
+ab vanish at J + . If data on a ‘physical’ initial hypersurface are evolved in the direction of J + it is, however, difficult to decide how the conformal gauge must be chosen such that these 
+fields will vanish at J + . This suggests to introduce regularizing unknowns which are derived from fields which go to zero at J + in any conformal gauge. Such unknowns are suggested by the equation 
+∇ a f b − N a f b = 0. In fact, the fields ζ ab ≡ χ ab − 1 3 g ab χ c c Ω , ξ ≡ ∇ U Ω χ c c + 3 s Ω , (5.11) satisfy for Ω 6 = 0 and ∇ U Ω 6 = 0 by (5.9) ζ ab = −(∇ U Ω) 
+−1 ( D a f b − f a f b − L ab − 1 3 (D c f c − f c f c − L c c ) g ab ) , (5.12) and ξ = −D a f a + f a f a + L a a − 3 8 Ω ρ, (5.13) and can thus be expected to extend smoothly to 
+J + . The original unknown will be recovered from the new ones by χ ab = Ω ζ ab + 1 3 (∇ U Ω) −1 (Ω ξ − 3 s) g ab , (5.14) which will certainly be well defined on neighbourhoods of J + 
+where ∇ U Ω 6 = 0. This will suffice for our purpose because we can use equation (5.10) where Ω 6 = 0. The equations we have obtained so far imply equations for the unknowns (5.11) that are 
+regular where ∇ U Ω 6 = 0. Indeed, a direct calculation gives with (5.10) the equation ζ ab ,0 = −Ω (ζ a c ζ cb − 1 3 ζ cd ζ dc g ab ) − 2 3 (∇ U Ω) −1 (Ω ξ − 3 s) ζ ab − W 
+0a0b . (5.15) From (3.17) follows Ω ,00 − Γ 0 a 0 ∇ a Ω = ∇ 0 ∇ 0 Ω = −Ω L 00 − s + 3 8 Ω 2 ρ, and thus with 0 = N a = Ω f a + ∇ a Ω Ω ,00 = Ω f a f a − Ω L 00 − s + 3 8 
+Ω 2 ρ. 17 Equation (3.18) gives with (3.22) and N a = 0 s ,0 = ∇ U Ω L 00 + Ω f a L a0 − 1 4 ρ Ω ∇ U Ω − 1 24 ρ Ω 2 χ. With these two equations relation (5.10) implies ξ ,0 = (∇ 
+U Ω) −1 (Ω ξ − 3 s) ( − 1 3 ξ + f a f a − L 00 + 1 4 ρ Ω ) (5.16) −∇ U Ω Ω ζ cd ζ dc + 3 f a L a0 − 3 4 ρ ∇ U Ω. This completes the evolution system for the metric and the 
+connection coefficients. To deal with equations of first order we introduce Σ k = ∇ k Ω, as an unknown and use (3.17) to get the evolution equations ∇ 0 Ω = Σ 0 , (5.17) ∇ 0 Σ k = − Ω L 
+0k + s g 0k + 1 2 Ω 2 ρ ( U 0 U k + 1 4 g 0k ) . (5.18) From (3.18) we get ∇ 0 s = −∇ i Ω L i0 = 1 2 Ω ρ ∇ i Ω ( U i U 0 + 1 4 g i0 ) + 1 8 Ω ρ ∇ 0 Ω + 1 24 Ω 2 ∇ 0 ρ. (5.19) 
+As mentioned above, the Ricci scalar R = R[g] of g μν will play the role of a conformal gauge source function and thus be prescribed as an explicit function of the coordinates near the initial 
+hypersurface. Because of the relation − L 00 + g ab L ab = L j j = 1 6 R, (5.20) it suffices to derive an evolution system for the components L 0a , L ab , a, b = 1, 2, 3, of the Schouten tensor. 
+To simplify the equations we set K jkl = ∇ i Ω W i jkl (5.21) +Ω ( ρ (∇ [k U l] U j + U [l ∇ k] U j ) + ∇ [k ρ U l] U j + 1 3 ∇ [k ρ g l]j ) +ρ (∇ [k Ω g l]j + 2 ∇ [k Ω U l] U j 
++ U [k g l]j g pq ∇ p Ω U q ), so that (3.19) takes the form ∇ k L lj − ∇ l L kj = K jkl . 18 It implies by contraction ∇ 0 L l0 − g bc ∇ b L lc = 1 6 ∇ l R + K j jl . These 
+equations are used to define the evolution system ∇ 0 L 0a − h bc ∇ b L ac = 1 6 ∇ a R + K j ja , a = 1, 2, 3, (5.22) ∇ 0 L aa − ∇ a L 0a = K a0a , a = 1, 2, 3, (5.23) 2 ∇ 0 L ab − 
+∇ a L 0b − ∇ b L 0a = K a0b + K b0a , a, b = 1, 2, 3, a 6 = b. (5.24) for the set of unknowns L 01 , L 02 , L 03 , L 11 , L 12 , L 13 , L 22 , L 23 , L 33 . For given right hand sides the 
+system will then be symmetric hyperbolic on a neighborhood of an initial hypersurface on which e μ 0 = δ μ 0 and on which e 0 a is sufficiently small. Moreover, we find with our gauge conditions K 
+j ja = − 1 2 ρ (Ω f a + ∇ a Ω), K a0b = ∇ i Ω W i a0b + 1 2 Ω ( ρ χ ba + 1 3 ∇ U ρ g ab ) , and thus the important fact that on the right hand sides of the evolution system above only 
+that derivative of ρ occurs which can be removed by using the equation (3.22), i.e. ∇ U ρ + ρ χ a a = 0. (5.25) This equation is assumed, of course, to be part of the reduced system. The 
+following extraction of an evolution system for the rescaled conformal Weyl ten- sor from equation (4.17) is close to the procedure to obtain evolution equations for the conformal Weyl tensor 
+discussed in [8], [12], to which we refer for more details. Let h j k = g j k + U j U k , l j k = g j k + 2 U j U k , denote the projection operator which maps the tangent spaces onto their subspaces 
+U ⊥ orthogonal to U and the reflection operator which maps U onto − U and induces the identity on U ⊥ and consider the totally antisymmetric tensor densities ǫ ijkl = ǫ [ijkl] with ǫ 0123 = 
+1 and ǫ jkl = U i ǫ ijkl . Further, define the U -electric part w jl and the U -magnetic part w ∗ jl of W i jkl by setting w jl = W ipkq U i h p j U k h q l , w ∗ jl = 1 2 W ipmn ǫ mn kq U i h 
+p j U k h q l , so that these symmetric trace free fields are given in our gauge essentially by their ‘spatial’ components w ab and w ∗ ab . 19 It will be convenient to write equation (4.17) in 
+the form F jkl = 0 with F jkl = ∇ i W i jkl − ∇ [k ρ U l] U j − 1 3 ∇ [k ρ g l]j (5.26) −ρ (∇ [k U l] U j + U [l ∇ k] U j − f [k g l]j − 2 f [k U l] U j − U [k g l]j U i f i 
+). Inserting the representation W ijkl = 2 (l i[k w l]j − l j[k w l]i − U [k w ∗ l]p ǫ p ij − U [i w ∗ j]p ǫ p kl ), of the rescaled conformal Weyl tensor into the equations 0 = P ij ≡ 
+−F pkq h p (i U k h q j) + 1 3 h ij h kl F pmq h p k U m h q l , (5.27) 0 = Q ij ≡ − 1 2 F mpq h m (i ǫ j) pq , (5.28) the latter take the explicit form w ab, 0 + D c w ∗ d(b ǫ a) cd = χ 
+(a c w b)c + 2 χ c (a w b)c − 2 χ c c w ab (5.29) −h ab χ cd w cd − 2 a c w d(b ǫ b) cd − 1 6 ρ (3 χ (ab) − h ab χ c c ), w ∗ ab, 0 − D c w d(b ǫ a) cd = χ c (a w ∗ b)c − 
+χ c c w ∗ ab (5.30) +2 a c w d(a ǫ b) cd + χ cd w ef ǫ (i ce ǫ j) df , where we set, as before, D a w bc = w bc, μ e μ a − Γ a d b w dc − Γ a d c w bd , etc. (The slight differences 
+with the analogues equations in [8], [12] result from the use of the relation L U w ij = w ij, 0 + 2 χ (i k w k)j for w ab and w ∗ ab .) For given right hand side equations (5.29) and (5.30) 
+represent a symmetric hyperbolic system for w ab and w ∗ ab if it is ignored that these fields are trace free. Their trace-freeness will be taken care of by the construction of the initial data and 
+then be preserved by the equations. Again it is important that no derivatives of the field ρ occur on the right hand sides. If on the right hand sides the field ∇ k Ω is replaced by Σ k , ∇ 0 
+ρ is removed by using (5.25), χ ab is replaced by (5.14), and L 00 is removed where it occurs (also in expressions like ∇ a L 0b = L 0b, μ e μ a − Γ a k 0 L kb − Γ a k b L 0k ) by using 
+(5.20), then equations (5.4), (5.5), (5.7), (5.8), (5.15), (5.16), (5.17), (5.18), (5.19), (5.22), (5.23), (5.24), (5.25), (5.29), (5.30) represent, irrespectively of the sign of Ω, for suitably 
+chosen initial data a quasi- linear symmetric hyperbolic evolution system for the unknowns e μ a , Γ c a b , f k , ζ ab , ξ, Ω, Σ k , s, L 0a , L ab , ρ, w ab , w ∗ ab , where ∇ 0 Ω 6 = 
+0. Where Ω 6 = 0 such an evolution system can be obtained by replacing ζ ab and ξ by χ ab and using directly equation (5.10). The characteristics of the systems so obtained are time-like or null 
+with respect to the solution metric, i.e. the metric g μν that satisfies g μν e μ j e ν k = η jk . 20 6 Asymptotic end data In section 8 we shall discuss the natural question how initial data 
+for the reduced field equations are derived from solutions to the constraints (2.9, (2.10) induced by the Einstein- λ-dust system on ‘physical’ initial hypersurfaces. The nature of the argument 
+employed in 8 suggests, however, to consider first asymptotic data. For solutions to Einstein’s field equations with a positive cosmological constant which admit a smooth conformal boundary J + it 
+has been observed in the vacuum case [4], in the case of matter models involving conformally covariant matter models with ˆg μν ˆ T μν = 0 [6], and also in the case of a matter model with ˆg 
+μν ˆ T μν 6 = 0 [10] that the problem of providing initial data simplifies considerably if solutions to the constraints are constructed on that boundary. There is no need any longer to consider 
+non-linear elliptic equations. Assuming that the solutions admit a smooth conformal boundary J + = {Ω = 0}, it will be shown in this section that the constraints induced on J + by the conformal 
+equations in the Einstein-dust case with a positive cosmological constant lead to the same simplification. Moreover, in the particular case where ρ > 0 on J + they simplify even further. The 
+solutions to the conformal Einstein-dust constraints can then in principle be constructed without solving any differential equation at all. To construct the asymptotic end data on a 3-manifold which 
+will later acquire the status of a smooth conformal boundary, let S be a smooth, orientable, compact (though the latter is not really needed in the following discussion) 3-manifold. Assume that it 
+represents a smooth conformal boundary J + of an Einstein dust solution with cosmological constant λ > 0. The conformal constraints induced on it must then be considered with an induced metric which 
+is Riemannian and a conformal factor Ω which vanishes on S. As seen earlier, the future directed conformal flow field U must be orthogonal to S. The conformal field equations will be considered in a 
+frame e k , k = 0, 1, 2, 3, on S so that e 0 = U and the e a , a = 1, 2, 3, represent a frame on S for the induced metric h ab = g ab = g(e a , e b ) = diag(1, 1, 1), on S. The connection 
+coefficients defined by g in the frame e k are given again by ∇ k e j = Γ k l j e l . As before h j k = g j k + U j U k denotes the orthogonal projector onto S. By assumption we have Ω > 0 in the 
+past and < 0 in the future of S and thus e 0 (Ω) < 0 on S. Because e 0 is orthogonal to S the field χ ab = Γ a 0 b = g(∇ e a e 0 , e b ), represents the second fundamental form induced on S and 
+is thus symmetric, while the Γ a b c define the connection coefficients on S in the frame e a of the Levi-Civita connection D defined by the intrinsic metric h ab . The electric part w jl = W ipkq U 
+i U k h p j h q l of the rescaled conformal Weyl tensor is then represented by w ab = W 0a0b and w ∗ ab = 1 2 W 0acd ǫ b cd represents its magnetic part w ∗ jl = 1 2 W ipmn ǫ mn kq U i U k h p 
+j h q l , where ǫ ijkl and ǫ jkl are defined as before. With these assumptions equation (3.16) reduces to the condition ∇ 0 Ω = −ν, ∇ 0 Ω = ν on S, where ν = √ λ/3 > 0. (6.1) 21 
+Equation (3.17) reduces on S to ∇ i ∇ j Ω = s g ij . The only non-trivial condition implied by this relation is a restriction on the second fundamental form ν χ ab = s h ab on S. (6.2) 
+Equation (3.18) implies the constraint ∇ a s + ν L 0a = 0 on S. (6.3) Under the conformal gauge transformation g → ¯g = θ 2 g, Ω → ¯ Ω = θ Ω with smooth θ > 0 the function s transforms 
+as s → ¯s = θ s + g ρδ ∇ ρ Ω ∇ ν θ. This shows that for given θ > 0 on S the derivative ∇ μ θ can be determined on S such that ¯s coincides on S with any prescribed function. The 
+function s could be carried along as a free function in the following equations but for simplicity the choice that s = 0, χ ab = 0, ∇ i ∇ j Ω = 0, L 0a = L a0 = 0 on S, (6.4) will be assumed, 
+which still leaves the freedom to rescale the metric on S. It should be observed, however, that the gauge above may not be satisfied if a solution is evolved into S from the domain where Ω > 0. In 
+that case the more general relations like (6.2) and (6.3) must be considered. Because the conformal Weyl tensor Ω W i jkl vanishes on S, the curvature tensor of g is determined there by its Schouten 
+tensor L jk . Because the second fundamental form vanishes on S, the orthogonal projection of the curvature tensor of g onto S coincides by Gauss’ theorem with the curvature tensor of h, i.e. R 
+abcd [g] = R abcd [h]. It follows that the decomposition of R abcd [g] in terms g ab = h ab and the components L ab [g] of its Schouten tensor is formally identically with the decomposition of of R 
+abcd [h] in terms h ab and its Schouten tensor l ab [h] = R ab [h] − 1 4 R[h] h ab . This implies that L ab [g] = l ab [h], which can be calculated from h ab . The component L 00 then follows from 
+1 6 R[g] = L j j as L 00 = − 1 6 R[g] + h ab L ab , once the conformal gauge source function R[g] has been prescribed. Equation (3.19) induces the constraint ∇ a L bc − ∇ b L ac = −ν W 0 
+cab on S. Because the second fundamental form on S vanishes, it can be written in the form w ∗ ab = 1 ν ǫ a cd D c l db . (6.5) The equation says that the magnetic part of the rescaled conformal 
+Weyl tensor is given on S up to a factor by the (dualized) Cotton tensor of h. Equation (3.19) induces the further constraint ∇ a L b0 − ∇ b L a0 = 0 on S. This is satisfied as a consequence of 
+(6.4). With F jkl given by (5.26), the constraints induced on S by equation (4.17) are given by (see [8], [12]) 0 = P k ≡ F jpl U j h p k U l , 0 = Q k ≡ − 1 2 F jpq U j ǫ k pq . (6.6) 22 They 
+can be written more explicitly in the form D a w ac = 1 3 D c ρ − ρ f c , (6.7) which is a genuine constraint, and D a w ∗ ab = 0, (6.8) which is, consistent with (6.5), the differential 
+identity satisfied by the Cotton tensor and imposes thus no additional restriction. The 1-form f a characterizes the deviation of U from hypersurface orthogonality (see the datum ˆu α in (2.11) and 
+the following discussion of hypersurface orthogonal flows) and can be prescribed freely on S. The value of f 0 only affects the gauge. It can be prescribed freely and we assume that f 0 = 0 on S. The 
+initial data for ζ ab and ξ which follow from (5.12) and (5.13) are then given on S by ζ ab = ν −1 ( D a f b − f a f b − L ab − 1 3 (D c f c − f c f c − L c c ) g ab ) , (6.9) and ξ 
+= −D a f a + f a f a + L a a . (6.10) The observations above can be summarized in terms of local coordinates x α , α = 1, 2, 3, on S as follows. Lemma 6.1 Any smooth initial data set for the 
+reduced equations is determined on the set S = {Ω = 0} uniquely by a Riemannian metric h αβ , the density ρ ≥ 0, the acceleration f α and a symmetric, h-trace free tensor field w αβ , which 
+are arbitrary up to the relation D α w αβ = 1 3 D β ρ − ρ f β on S, (6.11) where D denotes the Levi-Civita operator defined by h αβ . As in the cases mentioned in the beginning there is no 
+need to solve an analogue of the Hamiltonian constraint. The Riemannian space (S, h αβ ) is not subject to any further restriction. The situation even simplifies for the class of data with ρ > 0 
+on S. In that case h αβ , ρ > 0, and w αβ can be prescribed completely freely and f β is then determined by reading (6.11) as its defining equation. It should be pointed out, however, that if f 
+α is required to satisfy some extra conditions, as in the hypersurface orthogonal case discussed below, equation (6.11) must be read as a differential equation. The situation can then be discussed 
+by the well known splitting techniques used in the discussion of the standard constraints [1]. The gauge requirement s| {Ω=0} = 0 leaves the conformal gauge freedom Ω → Ω ′ = θ Ω, g μν → 
+g ′ μν = θ 2 g μν , 23 with smooth functions θ > 0 that are arbitrary on S. If n μ denotes the future directed unit normal to S the conformal gauge transformation above implies associated 
+transformations h αβ → h ′ αβ = θ 2 g αβ , n μ → n ′μ = θ −1 n μ , U μ → U ′μ = θ −1 U μ , ρ → ρ ′ = θ −3 ρ, and, by the transformation law for the 1-forms 
+associated with conformal geodesics, f α → f ′ α = f α − θ −1 D α θ. (6.12) If n is extended as unit vector field into ˆ M , the relation g αμ W μ νβρ n ν n ρ = Ω −1 g αμ 
+C μ νβρ n ν n ρ makes sense and suggests on S for w αβ the transformation law w αβ → w ′ αβ = θ −1 w αβ . It follows then h ′αβ D ′ α w ′ ργ = θ −3 h αβ D α w 
+ργ , whence D ′α w ′ αβ − 1 3 D ′ β ρ ′ + ρ ′ f ′ β = θ −3 (D α w α β − 1 3 D β ρ + ρ f β ), so that the constraints are preserved. 6.1 Hypersurface orthogonal 
+flows Obviously, the vector field ˆ U μ is hypersurface orthogonal where Ω 6 = 0 if and only if this is true for U μ = Ω −1 ˆ U μ . Formally this follows from the relation ˆ U [ρ ˆ ∇ μ 
+ˆ U ν] = Ω −2 U [ρ ∇ μ U ν] . In our gauge the hypersurface orthogonality condition ˆ U [ρ ˆ ∇ μ ˆ U ν] = 0 is equivalent to 0 = ∇ [a U b] = χ [ab] . (6.13) From (5.6) we get 
+with σ ab = χ (ab) along the flow lines of U μ the ODE χ [ab], 0 + D [a f b] = σ a c χ [cb] − σ b c χ [ca] . It follows that D [a f b] = 0 if U μ is hypersurface orthogonal. If the 
+solution admited a smooth conformal extension, so that χ [ab] = 0 on J + , we could conclude from the equation above that χ [ab] = 0 if we knew that D [a f b] = 0. With the gauge condition ∇ a N 
+b − N a f b = 0 equation (5.9) gives, however, only the relation 0 = Ω , 0 χ [ab] + Ω D [a f b] . But this combines with the equation above to give ( Ω −1 χ [ab] ) ,0 = σ a c ( Ω −1 χ 
+[cb] ) − σ b c ( Ω −1 χ [ca] ) . It follows that χ [ab] = 0 along a given integral curve of U μ if it vanishes at a point of it where Ω 6 = 0. On the other hand, the relation above shows 
+that Ω −1 χ [ab] assumes the limit (∇ 0 Ω) −1 D [a f b] on J + , which vanishes where the integral curves of U μ meet J + if and only if D [a f b] = 0 there. Observing the discussion of the 
+conformal gauge freedom in the construction of data on the conformal boundary, in particular (6.12), we conclude: 24 Lemma 6.2 Let be given a solution to the Einstein-dust system (2.1), (2.6), (2.7), 
+(2.8) that admits a smooth conformal boundary J + . Then the field U μ is hypersurface orthog- onal if and only if the initial data for the conformal field equations induced on J + in the gauge 
+above are such that D [a f b] = 0 on J + . If this condition is satisfied and the field f a can be given on J + as the differential of a function f , then the conformal gauge can be chosen so that f 
+a = 0 on J + . 6.2 FLRW-type solutions In the following we discuss the FLRW solutions along the lines of the previous sections. The FLRW-type solutions to (2.1), (2.6), (2.7), (2.8) on ˆ M = R × S 
+with S = S 3 , T 3 or H 3 ∗ (a suitable factor space of hyperbolic 3-space) are of the form ˆg = −dt 2 + a 2 k, ˆ U = ∂ t , ˆρ = ˆρ(t) ≥ 0, with a function a = a(t) > 0 and a 3-metric 
+of constant curvature which is given in local coordinates x α , α, β, . . . = 1, 2, 3, on S by k = k αβ dx α dx β , so that R αβγδ [k] = 2 ǫ k α[γ k β]δ where ǫ = 1, 0 or −1. 
+Rescaling the fields with a conformal factor Ω = Ω(t) ˆg → g = Ω 2 ˆg, ˆ U → U = Ω −1 ˆ U , ˆρ → ρ = Ω −3 ˆρ, and introducing a coordinate x 0 = τ (t) so that < U, dτ > = 1, 
+the conformal version of the metric above takes the form g = −dτ 2 + l 2 k, U = ∂ τ , ρ = ρ(τ ), with some function l = l(τ ) > 0. The non-vanishing Christoffel symbols and the second 
+fundamental form χ αβ of the slices {τ = const.} are then given by χ αβ = Γ α 0 β [g] = l l ′ k αβ , Γ 0 α γ [g] = Γ γ α 0 [g] = 1 l l ′ k α γ , Γ β α γ [g] = Γ β α γ 
+[k], where ′ = d dτ . The Ricci scalar and the Schouten tensor are given by R[g] = 6 l 2 (ǫ + l l ′′ + (l ′ ) 2 ), L 00 [g] = 1 2 l 2 (ǫ − 2 l l ′′ + (l ′ ) 2 ), L α0 [g] = L 0α 
+[g] = 0, L αβ [g] = 1 2 (ǫ + (l ′ ) 2 ) k αβ . Choosing the conformal gauge function as R[g] = 6 ǫ on ˆ M , the function l must satisfy l l ′′ + (l ′ ) 2 + ǫ (1 − l 2 ) = 0. Using 
+the remaining conformal gauge freedom to achieve l = 1, l ′ = 0 on a slice {τ = const.}, it follows that l = 1. The only non-vanishing Christoffel symboly are then given by Γ β α γ [g] = Γ β 
+α γ [k] and L 00 = ǫ 2 , L α0 = L 0α = 0, L αβ = ǫ 2 k αβ . 25 Where Ω > 0 the physical field is then given by ˆg = Ω −2 g = −dt 2 + a 2 dω 2 , (6.14) a(t) = 1 Ω(τ (t)) , dt dτ = 
+1 Ω(τ ) . (6.15) The high symmetry assumptions leads to a simplification of the conformal field equa- tions. There do not occur singularities any longer in the equations. In fact, because U is 
+g-geodesic and hypersurface orthogonal and Ω = Ω(τ ), the singularity in (3.11) is gone. Because the line element g is locally conformally flat it follows that W μ νρκ = 0 and thus ˆ ∇ [ν 
+ˆ L λ]ρ = 0 by (3.7). Moreover, it follows by (3.6) that ∇ [ν L λ]ρ = 0. It will be assumed in the following that the conformal time coordinate τ vanishes on a set {Ω = 0} and that ∇ U Ω 
+= Ω ′ < 0 there. Equations (3.3) and (3.8) then imply Ω ′ (0) = −ν = − √ λ/3 < 0. Equation (3.12) reduces because of ∇ μ U μ = χ c c = 0 to ρ ′ = 0, so that ρ = ρ ∗ = const. 
+> 0, equations (3.4) and (3.9) imply s = ǫ 2 Ω − 1 8 ρ ∗ Ω 2 , Ω ′′ + ǫ Ω − 1 2 ρ ∗ Ω 2 = 0 and equations (3.5), (3.8), (3.9) give s ′ = ǫ 2 Ω ′ − 1 4 ρ ∗ Ω Ω ′ , 
+which is satisfied by the function s given above. The equations for s are redundant under the given assumptions. So we are left with the initial value problems Ω ′′ + ǫ Ω − 1 2 ρ ∗ Ω 2 = 
+0, Ω(0) = 0, Ω ′ (0) = −ν, which clearly have a smooth solutions near {τ = 0} = J + . Where Ω ′ 6 = 0 (thus in particular near J + .) the ODE is equivalent to (3 Ω ′2 + 3 ǫ Ω 2 − ρ 
+∗ Ω 3 ) ′ = 0, which implies with the boundary conditions 3 Ω ′2 + 3 ǫ Ω 2 − ρ ∗ Ω 3 = λ. (6.16) The decreasing solutions to this equation cover all the expanding ends of the 
+FRW-type solutions. With (6.15) the usual (physical) equations (see [14]) for a(t) are implied by (6.16). 7 The subsidiary system To show that solutions to the reduced equations for data which 
+satisfy the constraints do indeed satisfy the complete set of conformal field equations, it has to be shown that the zero quantities N j and T i j k , ∆ i jkl , A, B j , C jl , D j , H jkl , F jkl 
+, (7.1) vanish as a consequence of the reduced equations and the given initial data. Here 26 N j ≡ Ω f j + U k Σ k U j + Σ j + Ω U k f k U j , T i k j e k ≡ −[e i , e j ] + (Γ i l j − Γ 
+j l i ) e l , ∆ i jkl ≡ R i jkl − Ω W i jkl − 2 {g i [k L l]j + L i [k g l]j }, (7.2) with R i jkl = Γ l i j, μ e μ k − Γ k i j, μ e μ l + 2 Γ [k i p Γ l]pj − 2 Γ [k p l] Γ p i 
+j , A ≡ 6 Ω s − 3 Σ i Σ i − λ − 1 4 Ω 3 ρ, B k ≡ ∇ k Ω − Σ k C jk ≡ ∇ j Σ k + Ω L jk − s g jk − 1 2 Ω 2 ρ ( U j U k + 1 4 g jk ) , D k ≡ ∇ k s + Σ i L ik − 1 
+2 Ω ρ Σ i ( U i U k + 1 4 g ik ) − 1 8 Ω ρ Σ k − 1 24 Ω 2 ∇ k ρ, H jkl ≡ ∇ k L lj − ∇ l L kj − K jkl , F jkl ≡ ∇ i W i jkl − M jkl , where M jkl = ∇ [k ρ U l] U j + 1 
+3 ∇ [k ρ g l]j (7.3) +ρ (∇ [k U l] U j + U [l ∇ k] U j − f [k g l]j − 2 f [k U l] U j − U [k g l]j U i f i ), K jkl = Σ i W i jkl + Ω M jkl . (7.4) Some of these quantities vanish 
+trivially because of symmetries, gauge conditions, or the reduced equations. The latter comprise equations (4.13), (4.14), (5.25) and U i T i k j = 0, U k ∆ i jkl = 0, U j B j = 0, U j C jl = 0, U 
+j D j = 0, (7.5) H j ja = 0, H a0b + H b0a = 0, a, b = 1, 2, 3, P ij = 0, Q ij = 0, (7.6) The zero quantities not in this list correspond to constraints or gauge conditions. Con- cerning the second 
+of equations (7.5) we refer to the remarks below. In the following we shall use the covariant derivative operator ∇ j defined by the connection coefficients Γ i j k that satisfy the gauge 
+conditions and the reduced equations. This operator is metric in the sense that ∇ i g jk = 0 but, as seen from the first of conditions (7.5), it is not known a priori whether the connection is 
+torsion free. In the following 27 arguments will be needed the commutators of covariant derivatives, which are for a function φ and a vector field X i in the case of a general metric connection of 
+the form (∇ i ∇ j − ∇ j ∇ i ) φ = −T i l j ∇ l φ (∇ i ∇ j − ∇ j ∇ i ) X k = R k lij X l − T i l j ∇ l X j . To avoid carrying along various non-illuminating terms 
+involving components of the torsion tensor we shall refer to such terms in an equation often in the form . . . + P (T ), where the dots indicate the equation of interest and P (T ) is a generic 
+symbol for a polynomial in the components of the torsion tensor that satisfies P (0) = 0. The equation above will then take the form (∇ i ∇ j − ∇ j ∇ i ) X k = R k lij X l + P (T ). The 
+other zero quantities in the list (7.1) will be kept explicitly in an equation if needed to indicate how the calculations goes, otherwise the equations will be written in the form . . . + P (Z), 
+where the dots indicate the members of interest and P (Z) is a polynomial in the components of the zero quantities (that may occasionally absorb a P (T )) with smooth coefficients that satisfies P 
+(0) = 0. The regular system has been obtained from the original version of the conformal field equations by using the gauge requirements N j = 0 and ∇ a N b = 0. It needs to be shown that they are 
+preserved by the reduced equations to establish that the original version of the conformal field equations is satisfied. They are needed in particular to show that the equations for ζ ab and ξ 
+imply the equations U i ∆ 0 aib = 0, U i ∆ a 0ib = 0. The zero quantity N j plays a particular role because its vanishing follows directly from the reduced equations and the initial conditions. 
+If N k = 0 on a hypersurface transverse to the flow lines of U k (which will, for instance, be the case if data are prescribed on {Ω = 0}), this relation is preserved along the flow lines of U as a 
+consequence of the reduced equations. In fact, equations (4.13) and (4.14) imply ∇ U N i = U k U l C kl U i + U k C ki + U k B k (f i + U l f l U i ) − U i f k N k , which reduces with (7.5) to 
+the linear homogeneous ODE ∇ U N i = −U i f k N k , (7.7) along the flow lines of U . From this the assertion follows. Since the solution to the reduced equations is ruled by the flow lines it 
+follows also that ∇ i N j = 0 on the solution. It can thus be assumed that N j = 0, ∇ a N b = 0 so that we have indeed U i ∆ 0 aib = 0 and the equivalent equation U i ∆ a 0ib = 0 as written 
+in (7.5). The subsequent discussion follows to some extent the derivation of subsidiary systems in earlier work on the conformal field equations. It will be convenient to use for the covariant 
+derivative of a given tensor field X ij k the notation ∇ l X ij k = e l (X ij k ) + (ΓX) lij k , 28 so that X ij k → (ΓX) lij k denotes a purely algebraic linear operator which does not involve 
+derivatives. The connection defined by the Γ i j k and the associated torsion and curvature tensor satisfy the first Bianchi identity ∑ (jkl) ∇ j T k i l = ∑ (jkl) (R i jkl + T j m k T l i m 
+), where ∑ (jkl) denotes the sum over the cyclic permutation of the indices jkl. Setting here j = 0, observing that the symmetries of C i jkl = Ω W i jkl and L kl imply ∑ (jkl) R i jkl = ∑ 
+(jkl) ∆ i jkl and taking into account the reduced equations, we get from this the equation ∇ 0 T k i l = −(ΓT ) l0 i k + (ΓT ) k0 i l + 3 ∑ (0kl) (∆ i 0kl + T 0 m k T l i m ) = P (Z). 
+(7.8) To obtain an equation of the desired type for ∆ i jkl we show that the right hand side of the identity ∇ j ∆ i mkl + ∇ l ∆ i mjk + ∇ k ∆ i mlj = 1 2 ǫ njkl ǫ npqr ∇ p ∆ i 
+mqr . can be written as a linear expression in the zero quantities. We write (7.2) in the form R i jkl = ∆ i jkl + Ω W i jkl + G i jkl + E i jkl , with G i jkl = L g i [k g l]j , L = L i i , E i 
+jkl = 2 {g i [k L ∗ l]j + L ∗i [k g l]j }, L ∗ lj = L lj − 1 4 L g lj , and use the second Bianchi identity ∑ (jkl) ∇ j R i mkl = − ∑ (jkl) R i mpj T k p l , (7.9) to obtain ǫ njkl 
+∇ j ∆ imkl = −ǫ njkl (∇ j Ω W imkl + Ω ∇ j W imkl +∇ j G imkl + ∇ j E imkl + R impj T k p l ) . The well known facts that the left and right duals of W ijkl and G ijkl coincide 
+respectively while the left dual of E ijkl differs from its right dual by a sign then imply with the reduced equations ǫ n jkl ∇ j ∆ imkl = ǫ im kl ( ∇ j Ω W j nkl + Ω ∇ j W j nkl +∇ j 
+G j nkl − ∇ j E j nkl ) − ǫ n jkl R impj T k p l = ǫ im kl ( ∇ j Ω W j nkl + Ω (F nkl + M nkl ) 2 ∇ [k L g l]n − 2 ∇ [k L l]n − 2 ∇ j L j [k g l]n ) − ǫ n jkl R impj T k p l 
+29 = ǫ im kl ( ∇ j Ω W j nkl + Ω (F nkl + M nkl ) −H nkl − Σ i W i nkl − Ω M nkl − 2 H j j[k g l]n ) − ǫ n jkl R impj T k p l . In the last step it has been used that K j jl = 0. 
+This follows because the tensor W i jkl has vanishing contractions and because equations (4.13) and (5.25), which are satisfied as members of the reduced system, imply that M j jl = 0. Using again 
+the reduced equations we finally get ∇ 0 ∆ i mkl = −(Γ∆) l i m0k + (Γ∆) k i m0l (7.10) − 1 2 ǫ n 0kl { ǫ i m kl (B p W p nkl + Ω F nkl − H nkl − 2 H p pk g ln ) − ǫ n jkl R i 
+mp0 T k p l } = P (Z). A direct calculation gives for the quantity A = 6 Ω s − 3 Σ i Σ i − λ − 1 4 Ω 3 ρ, (7.11) the relation ∇ j A = 6 Ω D j − 6 Σ i C ji + (6 s − 3 4 Ω 2 ρ) B 
+j . On the initial slice, where the zero quantities on the right hand side vanish by the con- struction of the initial data, this relation reduces to ∇ j A = 0. This implies that A = 0 on that 
+slice if it holds at one point of it. In the case of ‘physical’ data (i. e. Ω = 1) the condition A = 0 reduces to 0 = 4 ˆ A = ˆ R − 4 λ − ˆρ, which will be satisfied by the construc- 
+tion of the physical data. Using the freedom to prescribe Ω and its time derivative on the initial slice the condition A = 0 can also be achieved in the transition to conformal data. We recall that 
+the relation A = 0 served to determine the value of Σ j in our discussion of the conformal data on {Ω = 0}. With the reduced equations the relation above implies that ∇ U A = 0. We can thus 
+assume that A = 0 on the solution manifold. A straightforward but lengthy calculation shows that the fields Z B jk = ∇ [j B k] , Z C jkl = ∇ [j C k]l , Z D jk = ∇ [j D k] , can be expressed as 
+linear (homogeneous) functions of the zero quantities with smooth coefficients. Taking into account the reduced equation U j B j = 0, U j C jl = 0, U j D j = 0 one gets U j ∇ j B k = 2 U j Z B jk + 
+U j ∇ k B j = 2 U j Z B jk + ∇ k (U j B j ) − (∇ k U j ) B j = P (Z). Similar calculations give U j ∇ j B k = P (Z), U j ∇ j C kl = P (Z), U j ∇ j D k = P (Z). (7.12) The remaining 
+subsidiary equations are obtained by analyzing the expressions ∇ [l H i jk] ∇ j F jkl , 30 from two different points of view. As a preparation we observe the algebraic relations M jkl = −M jkl 
+, M [jkl] = 0, M j jl = 0. (7.13) The first of them follow immediately from the definition while, as pointed out above, the last one follows as a consequence of the reduced equations (4.13) and 
+(5.25). These relations imply F jkl = −F jkl , F [jkl] = 0, F j jl = 0, (7.14) and also K j jl = 0. (7.15) Moreover, a straightforward though fairly lengthy calculation which makes repeatedly use 
+of the reduced equations, shows that ∇ j M jkl = P (Z), (7.16) and ∇ l K l jk = ∇ l Σ i W il jk + Σ i ∇ l W il jk + ∇ l Ω M l jk + Ω ∇ l M l jk = C li W il jk + B l M l jk − Σ l F 
+l jk + Ω ∇ l M l jk = P (Z). From this follows the relation ∇ [l H l jk] = ∆ l p[lj L k] p − ∇ [l K l jk] + P (T ) = P (Z). (7.17) Similar calculations, which use that the left and right 
+duals of the conformal Weyl tensor coincide, gives ǫ qljk ∇ l H p jk = ǫ qljk (∇ l ∇ j L k p − ∇ l (Σ n W np jk + Ω M p jk )) = ǫ qljk (∆ p nlj L k n + W p nlj C k n − B l M p jk ) 
++ ǫ npik Σ n F q jk + 1 2 ρ Ω 2 ǫ qljk W p njk U n U l − 2 Σ l M (q jk ǫ p)ljk − Ω ∇ l M p jk ǫ pljk . From equations (7.13), (7.16) follows that ǫ pqmn ∇ l M p jk ǫ qljk = P (Z). 
+Solving the equation N l = 0 for Σ l and inserting this into the equation above, we thus finally get ǫ qljk ∇ l H p jk = 1 2 ρ Ω 2 ǫ qljk W p njk U n U l −2 Σ l M (q jk ǫ p)ljk − Ω ∇ 
+l M (p jk ǫ q)ljk + P (Z). ǫ qljk ∇ l H p jk = 1 2 ρ Ω 2 ǫ qljk W p njk U n U l + 2 ∇ U Ω U l M (q jk ǫ p)ljk +Ω {2 (f l + < U, f > U l ) M (q jk ǫ p)ljk − ∇ l M (p jk ǫ q)ljk } + P 
+(Z). 31 A direct calculation shows now that ǫ 0ljk ∇ l H 0 jk = P (Z), ǫ aljk ∇ l H b jk = P (Z), a, b = 1, 2, 3. (7.18) After solving the 9 reduced equations for the components L 0a , L ab , 
+they resume their original form if 1/6 R is replaced again by L j j . To show that they imply for suitably given initial data the full set H jkl = 0, it needs to be shown that H abc = 0, H 0ab = 0, a 
+6 = b. In fact, the equation 0 = H j ja = −H 00a + g cd H cad implies then that H 00a = 0 and with the identities H jkl = −H jlk and ǫ ijkl H jkl = 0, i.e. ǫ abc H abc = 0 and H 0ab + H b0a + H 
+ab0 = 0, a 6 = b, and the reduced equation H a0b + H b0a = 0 it follows then that 0 = H 0ab = −H b0a + H a0b = 2 H a0b a 6 = b, which exhaust the remaining cases. We derive now the equations for 
+the zero quantities above. The reduced equation H j ja = 0 implies that ∇ k H l la = (Γ H) k i la = P (Z). Observing this in equations (7.17) we an equation of the form ∇ 0 H 0ab − g cd ∇ c 
+H dab = P (Z). (7.19) On the other hand we have by (7.18) ∇ 0 H dab + ∇ b H d0a − ∇ a H d0b = 3 ∇ [0 H |d|ab] = P (Z) and ∇ d H 0ab + ∇ b H 0da + ∇ a H 0bd = 3 ∇ [d H |0|ab] = P (Z) 
+(where indices with a modulus sign are exempt from the anti-symmetrization). Observing the relations H a0b = −H b0a and 2 H c0d = H 0cd implied be the reduced equations, one gets from this an 
+equation of the form 2 ∇ 0 H dab − ∇ d H 0ab = P (Z). (7.20) Equations (7.19), (7.20) constitute a system of equations for the unknowns H 0ab and H abc which is, for given right hand sides, 
+symmetric hyperbolic. The properties (7.14) imply in particular the relation F a 0a = F i 0i = 0. The field P ij and Q kl introduced in (5.27 and (5.28) are thus completely represented by P ab = −F 
+(a|0|b) , Q ab = − 1 2 F (a cd ǫ b)cd . To discuss the remaining content of the field F jkl we recall the definitions P a = F 0a0 , Q b = − 1 2 F 0cd ǫ b cd , 32 given in the discussion of the 
+constraints. These fields exhaust the information in F 0a0 and F 0bc . Because F a0b is trace free it remains to control its anti-symmetric part. The relation F [jkl] = 0 gives −Q c ǫ c ab = 1 2 F 
+0de ǫ c de ǫ c ab = F 0ab = F a0b − F b0a , whence F a0b = −P ab − 1 2 ǫ abc Q c . Because F abc ǫ abc = 0, the field F acd ǫ b cd is trace free. Contracting its anti-symmetric part 
+suitably twice with epsilons and using that gives F j jl = 0 gives F [a cd ǫ b]cd = −F d dc ǫ cab = −F 00c ǫ c ab = P c ǫ c ab , and thus F abc = 1 2 Q ad ǫ bc d − h a[b P c] . Observing 
+now the reduced equations P ab = 0 and Q ab = 0, the remaining content of F jkl is then described by the formula F jkl = 3 U j P [k U l] − g j[k P l] + Q i (U j ǫ i kl − ǫ i j[k U l] ). 
+Inserting this into ∇ j F jkl and projecting suitably gives his (∇ U P l ) h l i + 1 2 ǫ i kj ∇ k Q j = ∇ j F jkl U k h l i + P (Z), (∇ U Q l ) h l i − 1 2 ǫ i kj ∇ k P j = 1 2 ∇ j 
+F jkl ǫ i kl + P (Z). Working then out ∇ j F jkl explicitly and observing (7.16) one finally gets equations of the form P a, 0 + 1 2 ǫ a bc D b Q c = P (Z), (7.21) Q a, 0 − 1 2 ǫ a bc D b P c 
+= P (Z). (7.22) For given right hand sides this is a symmetric hyperbolic system for the fields P a and Q a . We have seen above that solutions to the reduced equations for suitably arranged initial 
+data satisfy N j = 0 and A = 0. Equations (7.8), (7.10), (7.12), (7.19), (7.20), (7.21), (7.22) constitute a system of differential equations for those of the remaining components of the zero 
+quantities (7.1) which do not vanish already because of gauge conditions or the reduced equation. The system is symmetric hyperbolic and has characteristics which are time-like or null with respect 
+to the metric g μν that is supplied by the reduced system. It follows that a solution to the reduced system for data that satisfy the conformal con- straints on the initial slice satisfies on the 
+domain of dependence of the initial slice the gauge conditions and the complete set of conformal Einstein-λ-dust equations. 33 8 Existence and strong future stability In this section the properties 
+of the conformal field equations derived above and standard results about quasi-linear symmetric hyperbolic systems will be used to draw conclusions on the global structure of solutions to the 
+Einstein-λ-dust equations. Since we are mainly interested in C ∞ solutions and not in the weakest possible smoothness assumptions on the data we refrain from specifying Sobolev norms. We refer to 
+[6] for details of the patching arguments in the context of Cauchy stability and for some relevant PDE reference. 8.1 Existence of asymptotically simple solutions To construct solutions to the 
+Einstein-dust equations with positive cosmological constant λ that admit a smooth conformal boundary in their infinite future we consider Cauchy problems for the reduced field equations on R × S 
+where data are prescribed on the sub- manifold {0} × S. We identify the latter diffeomorphically with the manifold S underlying a given asymptotic end data set as considered in section 6. The 
+conformal time variable τ in the reduced field equations will correspond to the factor R above and it will be assumed that τ = 0 on S. The conformal gauge source function represented by the Ricci 
+scalar R[g] of the conformal metric g to be constructed will be required to vanish and it is assumed that the condition R[g] = 0 is also underlying the construction of the given asymptotic end data. 
+A fixed gauge source function will in general only work well for some limited time. For our purpose this will suffice, however, because it will be arranged that a finite interval of the conformal 
+time τ will cover an interval of physical time of infinite extent. Since S is compact and may have complicated topology, we use the fact that the hyperbolicity of the reduced equation allows us to 
+obtain a solution on a neighborhood of S ∼ {0} × S in R × S by patching together local solutions. Compactness implies that S can be covered by a finite number of open subsets V A , A = 1, 2, . . 
+. , k, of S which carry smooth local coordinates x α , α = 1, 2, 3, and a smooth frame field e a , a = 1, 2, 3, that satisfies h ab ≡ h(e a , e b ) = δ ab , where h denotes the 3-metric on S 
+supplied by the asymptotic end data. It can be assumed that their exist shrinkings V ′ A with compact closure V ′ A in V A so that the V ′ A still define an open covering and the boundary of V 
+′ A in V A is smooth. Standard results on symmetric hyperbolic systems then imply the existence of smooth solutions to the reduced field equations on open neighbourhoods D A of V ′ A in R × S 
+which imply on V ′ A the data induced on V ′ A by the asymptotic end data on S in the gauge chosen on V A . It can be assumed that the solution extends smoothly to the closure of D A in R × S 
+with det(e μ k ) 6 = 0 so that D A acquires a boundary which consists of (i) smooth hypersurfaces H ± A in the future/past of D A which are null with respect to the solution metric g and approach V 
+′ A \ V ′ A in their past/future, (ii) the intersection of D A with hypersurfaces {τ = τ ± } in R × S defined by some constants τ − < 0 < τ + (which can be chosen to be the same for all V 
+′ A ), and (iii) the three 2-dimensional edges diffeomorphic to V ′ A \ V ′ A where these hypersurfaces approach each other. It can be assumed that the solution on D A is globally hyperbolic 
+with respect to metric g. The subsidiary system then implies that the full set of conformal Einstein-λ-dust equations is satisfied on D A . If p ∈ V ′ A ∩ V ′ B , there exists an open 
+neighborhood V p ⊂ V ′ A ∩ V ′ B of p so that solutions are given in the domain of dependence D A,p of V p in D A as well as in the domain of 34 dependence D B,p of V p in D B . On V p these 
+two solutions can be related to each other because the coordinate and frame transformations which relate the data induced on V p by the data on V ′ A and the data on V ′ B respectively are known 
+explicitly. Because the gauge inherent in the reduced equations is evolved by invariant propagation laws along the invariantly defined flow lines of the flow field U , the coordinate and frame 
+transformations extend, independent of τ , and allow us to relate the solution on D A,p isometrically to the solution on D B,p . By extending the argument it follows that the solution induced on the 
+domain of dependence of V ′ A ∩ V ′ B in D A can be identified isometrically with the solution induced on the domain of dependence of V ′ A ∩ V ′ B in D B . By patching together the local 
+solutions, we obtain a smooth, globally hyperbolic so- lution to the conformal Einstein-λ-dust equations on a subset of the form M = [τ ∗ , τ ∗∗ ]× S of R × S with constants τ ∗ < 0 < 
+τ ∗∗ so that the conformal factor obtained on M satisfies Ω > 0 on ˆ M = [τ ∗ , 0[×S while Ω < 0 on ˇ M =]0, τ ∗∗ ] × S. The hypersurfaces S σ = {τ = σ = const.} with τ ∗ ≤ 
+σ ≤ τ ∗∗ can be required to be space-like. In fact, with the co-normal to {τ = const.} given by n μ = −a τ ,μ the future directed normal is given by n μ = −a g μ0 √ |a 2 g 00 | = 
+− η jk e μ j e 0 k √ |η jk e 0 j e 0 k | = δ μ 0 − η ab e μ a e 0 b √ 1 − η ab e 0 a e 0 b , and the condition n μ n μ = −1 implies the expression a = 1 √ 1 − η ab e 0 a e 
+0 b . (8.1) Moreover, n μ = a (δ μ 0 − η ab e μ a e 0 b ) = 1 a (U μ − u α δ μ α ) with u α = a 2 η ab e α a e 0 b . (8.2) We thus require that e 0 a e 0 b η ab ≤ const. < 1 on M, 
+(8.3) which can be achieved with suitable choices of τ ∗ and τ ∗∗ because e 0 a = 0 on S 0 . The hypersurfaces S σ will then be Cauchy hypersurfaces for (M, g μν ). To simplify things, so 
+that we only need to consider the regularized reduced equations involving the unknowns ζ ab and ξ, it will also be assumed that Ω ,τ < 0 on M , which makes sense because Ω ,τ = −ν on S 0 . 
+The metric g μν , the conformal factor Ω, the flow field U and the density function ρ are then such that the ‘physical’ fields ˆg μν = Ω −2 g μν , ˆ U μ = Ω −1 U μ , ˆρ = Ω 3 
+ρ (8.4) define a solution to the Einstein-λ-dust equations on the manifold ˆ M with ˆρ ≥ 0 on ˆ M . Extending smoothly to S τ ∗ , this solution admits an extension into the past of S τ 
+∗ but we are not interested here in controlling something like a maximal globally hyperbolic 35 solution. What is important for us is that the set J + ≡ S 0 = {Ω = 0} defines for the solution ( 
+ˆ M , ˆg μν ) a smooth conformal boundary at future time-like infinity. Equations (3.14) to (3.22) are invariant under the transformation which implies the map Ω → −Ω, ∇ k Ω → −∇ k 
+Ω, s → −s, W i jkl → −W i jkl , ρ → −ρ, ∇ k ρ → −∇ k ρ, but leaves the fields e μ k , Γ i j k , L jk , and U k unchanged. It follows that after performing this transition 
+on M and restricting to ˇ M gives us another solution to the Einstein-λ-dust equations on the manifold ˇ M . It follows, however, that then ˆρ ≤ 0 on ˇ M . For this solution the set {Ω = 0} 
+defines a smooth conformal boundary in the infinite past. In this article we shall not be interested in this solution any further. Two facts have been used above to obtain solutions whose conformal 
+structures extend smoothly across future time-like infinity so as to define there smooth conformal bound- aries: (i) The Einstein-λ-dust equations admit conformal representations which imply with 
+suitable gauge conditions systems of evolution equations that are hyperbolic irrespective of the sign of the conformal factor Ω, (ii) some requirements needed to ensure the existence of smooth 
+conformal extensions are put in by hand by starting from asymptotic end data. The case of the Nariai solution, an explicit, geodesically complete solution to the Einstein-λ-dust equations with ˆρ 
+= 0, shows that that the property (i) is by itself not sufficient to ensure the existence of a smooth conformal boundary (see [11]). This raises the question whether the use of asymptotic end data 
+may result in the construction of a very restricted class of solutions. The following argument, introduced in the vacuum case in [5] and used in the presence of conformally invariant matter fields in 
+[6], shows that the existence of smooth asymptotic conformal structures is in fact a fairly general feature of solutions to the Einstein-λ-dust equations. The smooth extensibility of the conformal 
+structure across future time-like infinity will be derived as a consequence of the property (i) of the Einstein-λ-dust equations and the existence of a given reference solution that admits a smooth 
+asymptotic structure. 8.2 Strong future stability of the solutions Let ∆ = (e μ k , Γ i j k , ζ ab , ξ, f k , Ω, ∇ i Ω, s, L jk , W i jkl , U k , ρ), (8.5) be one of the solutions 
+constructed above. The associated physical fields ˆg μν = Ω −2 g μν , ˆ U μ = Ω U μ , ˆρ = Ω 3 ρ then induce on the Cauchy hypersurface S ′ ≡ S τ ∗ with local coordinates x α 
+, α = 1, 2, 3, standard Cauchy data ˆ δ = ( ˆ h αβ , ˆκ αβ , ˆu α , ˆρ), i.e. a solution to the constraints (2.9) and (2.10), where ˆu α denotes the orthogonal projection of ˆ U μ 
+onto S ′ . As a first step towards showing that the asymptotic simplicity of the solution above is preserved under sufficiently small perturbations of the data ˆ δ, any given standard Cauchy data 
+set on S ′ needs to be transformed into a suitable Cauchy data set for the conformal field equations. This involves several transformations and a suitable handling of the gauge freedom which will 
+be discussed now by showing how the restriction of ∆ to S ′ is obtained from ˆ δ. 36 Conformal data δ = (h αβ , κ αβ , u α , ρ) on S ′ are obtained from the standard data ˆ δ by 
+using the functions Ω > 0 and ∇ U Ω < 0 on S ′ to define h αβ = Ω 2 ˆ h αβ , u α = Ω −1 ˆu α , ρ = Ω −3 ˆρ, and, using the transformation law of second fundamental forms under 
+conformal rescalings, κ αβ = Ω (ˆκ αβ + ˆ h αβ ∇ n Ω). Here n denotes the future directed unit normal to S ′ with respect to g, which is related to the flow vector field U and its 
+projection u onto S ′ (that represents the shift vector field on S ′ , see the ADM representation of g below) by the relation n = 1 a (U − u) with a = √ 1 + h αβ u α u β , where the 
+expression for the positive lapse function a is obtained from −1 = g(U, U ) = a 2 g(n, n) + g(u, u) = −a 2 + h αβ u α u β . It follows that ∇ n Ω = 1 a (∇ U Ω − Ω ,α u α ), can be 
+calculated from the data given above. When starting from arbitrarily given standard Cauchy data ˆ δ the functions Ω > 0 and ∇ U Ω < 0 are not given but represent part of the conformal gauge 
+freedom. Suitable choices will be discussed later. As a second step it will be convenient to derive all the unknowns entering the conformal field equations in a g-orthonormal frame c k on S ′ which 
+is adapted to S ′ in the sense that c 0 = n. This frame, which is not needed in the final process, is introduced because it simplifies various discussions. In a third step all the data will be 
+expressed on S ′ in terms of the g-orthonormal frame e k satisfying e 0 = U . To remove the gauge freedom in the transition c k → e k , we prescribe a specific field of Lorentz transformations K 
+i j on S ′ which map the g-orthonormal frame field e k with e 0 = U onto a smooth g-orthonormal frame c j = K i j e i field with c 0 = n by setting K i j = ( K 0 0 , K 0 b K a 0 , K a b ) = ( 
+−g(c 0 , e 0 ) , g(c 0 , e b ) η ad g(c 0 , e d ), δ a b + 1 1−g(c 0 ,e 0 ) η ad g(c 0 , e d ) g(c 0 , e b ) ) . (8.6) In terms of the frame coefficients e μ k given by the solution ∆ this 
+reads K i j = ( a , −a e 0 b −a η ac e 0 c , δ a b + a 2 1+a η ac e 0 c e 0 b ) . It follows that indeed K i 0 e i = K 0 0 e 0 + K a 0 e a = −g(c 0 , e 0 ) e 0 + η ad g(c 0 , e d ) e a = 
+g(c 0 , e i ) η ij e j = c 0 . 37 In the following considerations (8.1) and (8.2) will be useful. A direct calculation verifies that η ij K i k K j l = η kl . The coefficients of the frame c k are 
+given in the coordinates x μ by c μ k = ( c 0 0 , 0 c α 0 , c α b ) = ( 1 a , 0 − 1 a u α , e α b + 1 1+a u α e 0 b ) , and the coefficients of the 1-forms μ k that satisfy c μ k μ k ν = 
+δ μ ν are so that μ k ν = ( μ 0 0 , 0 μ a 0 , μ a β ) , with μ 0 0 = a, u α = (e α b + 1 1 + a u α e 0 b ) μ b 0 , c α b μ b β = (e α b + 1 1 + a u α e 0 b ) μ b β = δ α β , 
+whence μ a α (e α b + 1 1 + a u α e 0 b ) = δ a b , μ a α u α = μ a 0 . The comparison of g = η jk μ j μ k = −a 2 dτ 2 + η ab μ a α μ b β (u α dτ + dx α ) (u β dτ + dx β ), 
+with the ADM representation g = −(a dτ ) 2 + h αβ (u α dτ + dx α ) (u β dτ + dx β ) gives then h αβ = η ab μ a α μ b β , a = √ 1 + u α u β h αβ . With the frame c j defined 
+above we set M i j = ( −g(e 0 , c 0 ) , g(e 0 , c b ) η ad g(e 0 , c d ), δ a b + 1 1−g(e 0 ,c 0 ) η ad g(e 0 , c d ) g(e 0 , c b ) ) . (8.7) In terms of the frame coefficients c μ k this can 
+be written M i j = ( M 0 0 , M 0 b M a 0 , M a b ) = ( a , u α c α b η ac u α c α c , δ a b + 1 1+a η ac u α c α c u β c β b ) = ( a , a e 0 b a η ac e 0 c , δ a b + a 2 1+a η ac e 0 c 
+e 0 b ) . A direct calculation shows that M i j K j k = δ i k and e k = M j k c j . Because the fields c a , a = 1, 2, 3 are tangential to S ′ we can set h ′ ab = h αβ c α a c β b = η ab , 
+κ ′ ab = κ αβ c α a c β b 38 where here and in the following a prime is used to indicate when a tensor field is given in terms of the frame c k . Directional derivatives with respect to c k 
+will also indicated by a prime, so that ∇ ′ k = ∇ c k etc. When the data for the conformal field equations are to be constructed by starting from standard Cauchy data, the frame e k is not 
+available. Instead, the frame c k has to be chosen first and e k will then be obtained by applying M i k . The field c 0 is uniquely determined as the future directed unit normal to S ′ but the 
+frame c a tangent to S ′ is only determined up to rotations. In the stability argument given below this freedom will have to be removed in a specific way. Connection coefficients with respect to 
+the frame c k satisfying the relation ∇ c i c k = γ i j k c j with respect to the Levi-Civita connection ∇ given by g can only be defined if the frame is defined near S ′ . It will be 
+convenient to extend the frame by the requirement ∇ c 0 c k = 0 and to define coordinates υ = x 0 ′ and x α ′ near S ′ so that x μ ′ = x μ on S ′ and < c 0 , dυ > = 1 and < c 0 , x 
+α ′ > = 0. The coordinates x μ ′ are then Gauss coordinates based on S ′ and the coefficients c μ ′ k satisfy c μ ′ 0 = δ μ ′ 0 and c 0 ′ a = 0 so that c 0 = ∂ υ . The 
+coordinates x μ and x μ ′ satisfy ∂x 0 ∂x 0 ′ = < n, dτ >= 1 a < U − u, dτ > = 1 a , ∂x 0 ∂x α ′ = 0, ∂x α ∂x 0 ′ = 1 a < U − u, dx α > = − 1 a u α , ∂x α ∂x α 
+′ = δ α α ′ on S ′ , so that the relation e μ ′ k = M j k c μ ′ j can be used to determine on S ′ e μ k = ∂x μ ∂x μ ′ c μ ′ l M l k . The connection coefficients with 
+respect to c k can now be defined. They satisfy γ 0 j k = 0, γ a 0 b = κ ′ ab = κ ′ ba , γ a c 0 = κ ′ ab h ′bc , γ a d b c d = D c a c b on S ′ , where D denotes the Levi-Civita 
+connection of the metric h on S ′ . The connection coefficients in the frame c k are related to the connection coefficients in the frame e k by Γ i j k = K j n ( M n k, μ ′ e μ ′ i + γ l n 
+p M l i M p k ) = K j n ( M n k, 0 ′ e 0 ′ i + M n k, α ′ e α ′ i + γ l n p M l i M p k ) . Apart from M n k, 0 ′ , which can only be determined by taking into account the evolution 
+equations for the frame e k , all the other terms in the expression above can be calculated from the data available so far. The relation e μ ′ k = M j k c μ ′ j implies e μ ′ k, 0 ′ = M j 
+k, 0 ′ c μ ′ j + M j k c μ ′ j, 0 ′ . The first structural equation with respect to the frame c k gives c μ ′ j, 0 ′ = δ μ ′ α ′ δ a j c α ′ a, 0 ′ = −δ μ ′ α ′ 
+δ a j γ a b 0 c α ′ b = −δ μ ′ α ′ δ a j κ ′ ac h ′bc c α ′ b on S ′ . 39 The field e 0 = U = U ′k c k , given on S ′ by U = a c 0 + u ′a c a with u ′a = μ a α ′ 
+u α ′ , must thus satisfy by (4.13) 0 = U ′k , μ ′ c μ ′ l U ′l + U ′l U ′j γ l k j + < U, f > U ′k + f ′k = a U ′k , 0 ′ + U ′k , α ′ u α ′ + U ′l U ′j γ l k j 
++ < U, f > U ′k + f ′k on S ′ . The fields e a = e ′k a c k must satisfy F U e a = 0, which implies with (4.13) 0 = a e ′k c, 0 ′ + e ′k c, α ′ u α ′ + U ′i e ′j c γ i k j + 
+f ′ l e ′l c U ′k − U ′ l e ′l c f ′k on S ′ . These relations determine c μ ′ j, 0 ′ , e μ ′ k, 0 ′ whence M j k, 0 ′ and Γ i j k uniquely from the given data on S ′ 
+once f ′ k is given there. Our gauge requires that the tensorial field N ′ k = ∇ ′ k Ω + (∇ U Ω + Ω < U, f >) U ′ k + Ω f ′ k , vanishes on S ′ . The condition that its orthogonal 
+projection N ′ a into S ′ vanishes gives f ′ a = − 1 Ω {∇ ′ a Ω + (∇ U Ω + Ω < U, f >) u ′ a } on S ′ . If this is satisfied it follows with U k = U ′ i M i k , N k = N ′ i 
+M i k 0 = U k N k = U ′k N ′ k = a n ′k N ′ k , and thus together N ′ k = 0. The relation f ′ 0 = n ′k f ′ k = 1 a (< U, f > −u ′a f ′ a ), shows that f ′ k is determined from 
+the data given on S ′ only up to f 0 = < U, f >. This is consistent with the fact remarked on earlier that the quantity f 0 is pure gauge and can be chosen arbitrarily. With a suitable choice of f 
+0 (made in a specific way later) we can the set f k = f ′ j M j k . The Einstein equations and the conformal rescaling of the density imply R[ˆg] = 4 λ + Ω 3 ρ. With this the conformal 
+transformation law of the Ricci scalar gives ∇ μ ∇ μ Ω + 1 6 R[g] Ω = 2 Ω ∇ μ Ω ∇ μ Ω + 1 6 Ω R[ˆg] = 2 Ω ∇ μ Ω ∇ μ Ω + 1 6 Ω (4 λ + Ω 3 ρ). With the gauge condition 
+R]g| = 0 we thus set 4 s = ∇ ′ k ∇ ′k Ω = 2 Ω ∇ ′ i Ω ∇ ′i Ω + 1 6 Ω (4 λ + Ω 3 ρ). The second equation determines ∂ 2 υ Ω = c 0 (c 0 Ω) in terms of known data because 
+∇ ′ k ∇ ′k Ω = −∇ ′ 0 ∇ ′ 0 Ω + η ab ∇ ′ a ∇ ′ b Ω = −c 0 (c 0 Ω) + η ab (D ′ a D ′ b Ω − κ ′ ab ∇ n Ω) on S ′ . 40 Thus s and ∇ ′ j ∇ ′ k Ω 
+are determined on S ′ from known data and the scalar equation (3.16) is satisfied there. Given s and χ ab = Γ a 0 b , the fields ζ ab and ξ are then defined on S ′ by (5.11). The conformal 
+transformation law of the Schouten tensor, the field equations, and the conformal rescalings of the flow vector field and the density give L μν = ˆL μν − 1 Ω ∇ μ ∇ ν Ω + 1 2 Ω 2 ∇ 
+ρ Ω ∇ ρ Ω g μν = 1 6 λ Ω −2 g μν + Ω ρ ( 1 2 U μ U ν + 1 6 g μν ) − 1 Ω ∇ μ ∇ ν Ω + 1 2 Ω 2 ∇ ρ Ω ∇ ρ Ω g μν , and we set L ′ ij = 1 6 λ Ω −2 g ′ ij + 
+Ω ρ ( 1 2 U ′ i U ′ j + 1 6 g ′ ij ) − 1 Ω ∇ ′ i ∇ ′ j Ω + 1 2 Ω 2 ∇ ′ l Ω ∇ ′l Ω g ′ ij on S ′ . By the way ∇ ′ 0 ∇ ′ 0 Ω has been determined above it 
+follows that g ′ik L ′ ik = 1 6 R[g] = 0. The appropriate data on S ′ for the reduced field equations are then given by L jk = L ′ il M i j M l k . To determine the rescaled conformal Wey 
+tensor we observe that the Gauss and the Codazzi equation with respect to S ′ read in terms of the frame c k R ′ abcd [g] = R ′ abcd [h] + κ ′ ac κ ′ bd − κ ′ ad κ ′ bc , n ′k R 
+′ kabc [g] = D ′ c κ ′ ba − D ′ c κ ′ da , where the fields on the right hand sides can be determined from the data available so far. With L ′ jk as given above, the general relation 
+R ′ ijkl [g] = 2 {g ′ i[k L ′ l]j + L ′ i[k g ′ l]j } + C ′ ijkl , then allows us to calculate the components C ′ abcd [g] and n ′k C ′ kabc [g] of the conformal Weyl tensor. The 
+conformal Weyl tensor admits the decomposition C ′ ijkl = 2 ( k ′ i[k e ′ l]j − k ′ j[k e ′ l]i + n ′ [k m ′ l]m ǫ ′m ij + n ′ [i m ′ j]m ǫ ′m kl ) . where h ′ jk = g ′ 
+jk + n ′ j n ′ k and k ′ jk = g ′ jk + 2 n ′ j n ′ k and e ′ ik = h ′ i m h ′ k n C ′ mjnl n ′j n ′l and m ′ ik = h ′ i m h ′ k n C ′∗ mjnl n j n l with C ′∗ 
+ijkl = 1 2 C ′ ijmn ǫ ′mn kl denote the electric and magnetic part of the conformal Weyl tensor with respect to n in the frame c k respectively. It holds e ′ ij = e ′ ji , e ′ ij n ′j = 
+0, e ′ i i = 0 and similar relations hold for m ′ ij . It follows that C ′ abcd = 2 (h ′ a[c e ′ d]b + e ′ a[c h ′ d]b ) whence e ′ bd = h ′ac C ′ abcd , and n ′k C ′ kbcd = 2 
+(n ′ [i m ′ j]m ǫ ′m kl ) whence m ′ ab = − 1 2 n ′k C ′ kbcd ǫ ′ b cd . 41 The tensors C ′ ijkl and W ′ ijkl = Ω −1 C ′ ijkl whence W ijkl = W ′ mnpq M m i M n j M p k M 
+q l can thus be determined from the given data and thus also U -electric and -magnetic parts w ij and w ∗ kl of W ijkl which enter the reduced conformal field equations. The conformal field 
+equations and their unknowns are derived from the Einstein equa- tions by conformal rescalings, the use of various differential identities, and the use of the frame formalism. This leaves a 
+coordinate, frame, and conformal gauge freedom which is controlled by suitable initial data and propagation laws for the coordinates, the frame field, and the conformal factor (controlled here 
+implicitly by the requirement R[g] = 0). Following this procedure it follows from the discussion above how to derive from a given smooth solution ˆ δ = ( ˆ h αβ , ˆκ αβ , ˆu α , ˆρ) to 
+the constraints (2.9) and (2.10) and given smooth gauge dependent fields Ω > 0, ∇ U Ω < 0, f 0 = < U, f >, and a smooth h-orthonormal field c a on S ′ , (8.8) the unknowns ∆ ′ S ′ on S 
+′ of the conformal field equations in the frame c k and also the unknowns ∆ S ′ = (e μ k , Γ i j k , ζ ab , ξ, f k , Ω, ∇ j Ω, s, L jk , W i jkl , U k , ρ), (8.9) in the frame e k on S 
+′ . Written in terms of the frame c k and the frame coefficients c μ ′ k as defined above, the conformal field equations allow us to derive from the data ∆ ′ S ′ a formal expansion type 
+solution in terms of the coordinate υ so that the complete set of conformal field equations is satisfied at all orders. The constraints are satisfied because of differential identities and the fact 
+that the data ˆ δ satisfy the ‘physical’ constraints. A similar formal expansion is obtained in terms of the coordinate τ if the equations and the data are expressed in terms of the frame e k 
+. In this case the expansion coefficients are seen, however, to be the coefficients of a Taylor expansion of an actual smooth solution to the conformal field equations because the equations comprise 
+the hyperbolic system of reduced conformal field equations. The life time of the solution in the given gauge depends, of course, on the data (8.9) and in particular on the choice of the free fields 
+in (8.8). Suppose ∆ ⋆ (τ ) = (e ⋆ μ k , Γ ⋆ i j k , ζ ⋆ ab , ξ ⋆ , f ⋆ k , Ω ⋆ , ∇ j Ω ⋆ , s ⋆ , L ⋆ jk , W ⋆i jkl , U ⋆k , ρ ⋆ ), (8.10) is one of the solutions 
+to the conformal field equations considered in the previous sub- section. It exists and is smooth for τ ∗ ≤ τ ≤ τ ∗∗ with Ω ⋆ → 0 as τ → 0 so that S 0 represents the conformal 
+boundary at future time-like infinity for the physical solution associated with ∆ ⋆ (τ ). Denote by ∆ ⋆ S ′ = ∆ ⋆ (τ ∗ ) the data for the reduced equations on S ′ and by ˆ δ ⋆ 
+= ( ˆ h ⋆ αβ , ˆκ ⋆ αβ , ˆu ⋆α , ˆρ ⋆ ) the physical data induced by this solution on S ′ . Let ˆ δ = (S ′ , ˆ h αβ , ˆκ αβ , ˆu α , ˆρ) denote a smooth solution 
+to the constraints (2.9) and (2.10), ∆ S ′ the corresponding initial data on S ′ for the reduced conformal field equations as con- sidered in (8.8), and ∆(τ ), where τ ∈ [τ ∗ , τ ∗ 
++ τ ∗ [ with some τ ∗ > 0, the solution to the conformal field equations determined by these data. To compare the life times of the solutions ∆ ⋆ (τ ) and ∆(τ ) the corresponding gauge 
+conditions must be comparable. It will be assumed that the data ∆ S ′ have been con- 42 structed such that Ω = Ω ⋆ , ∇ U Ω = ∇ U Ω ⋆ , f 0 = f ⋆ 0 on S ′ . Let h ⋆ αβ = Ω 
+⋆2 ˆ h ⋆ αβ , and h αβ = Ω 2 ˆ h αβ = Ω ⋆2 ˆ h αβ denote the metric induced on S ′ by the solution ∆ ⋆ (τ ) and ∆(τ ) respectively. As discussed above, the frame e ⋆ k 
+given by the data ∆ ⋆ S ′ can be used to define a field of Lorentz transformation K ⋆j l on S ′ so that the relation c ⋆ k = K ⋆j k e ⋆ j defines a frame field on S ′ for which c 
+⋆ 0 is normal to S ′ . The fields c ⋆ a , a = 1, 2, 3, then define an h ⋆ -orthonormal frame field on S ′ . It will be assumed in the following that the h-orthonormal field c a has been 
+chosen so that c a = c ⋆ c α c a with a 3 × 3 matrix α c a that satisfies α 1 1 > 0, α 2 2 > 0, α 3 3 > 0, and α c a = 0 if a < c. The frame c a so defined is smooth and fixed uniquely so 
+that α c a → δ a c precisely if c a → c ⋆ a . The point of these choices is that the space-time conditions R[g ⋆ ] = 0 and R[g] = 0 combine with these gauge conditions on S ′ to ensure 
+that || ˆ δ − ˆ δ ⋆ || → 0 if and only if |||∆ S ′ − ∆ ⋆ S ′ ||| → 0, where the norms are meant to indicate Sobolev norms on S ′ which are chosen corresponding to the 
+differentiability order of the fields involved. We can invoke now the Cauchy stability property which holds for hyperbolic equations to conclude that for data ˆ δ sufficiently close to ˆ δ ⋆ 
+or, equivalently, for data ∆ S ′ sufficiently close to ∆ ⋆ S ′ the solution ∆(τ ) of the conformal field equations that develops from the data ∆ S ′ also exists in the interval τ 
+∗ ≤ τ ≤ τ ∗∗ and the conformal factor Ω supplied by ∆(τ ) is negative on S τ ∗∗ [15]. This conclusion may require repeated patchings (see [6]). There exists then a map S ∋ q 
+→ τ (q) ∈]τ ∗ , τ ∗∗ [ so that Ω(τ (q), q) = 0 for q ∈ S and Ω(τ, q) > 0 if τ ∗ ≤ τ < τ (q). Equation (3.16) then implies that on the subset J + = {(τ (q), q), q ∈ S} of 
+R × S the gradient ∇ i Ω is time-like for the metric g supplied by ∆(τ ). It follows that J + defines a smooth space-like hypersurface which represents a conformal boundary in the infinite 
+future of the set ˆ M = {(τ, q) ∈ R × S | τ ∗ ≤ τ < τ (q)} on which the fields ˆg μν = Ω −2 g μν , ˆ U μ = Ω −1 U μ , ˆρ ′ = Ω 3 ρ define a smooth solution to the 
+Einstein-λ-dust equations. The smooth asymptotic end data induced by its conformal extension ∆(τ ) on J + ∼ S belongs then to the class of conformal end data considered in section 6. Combining 
+the results of the last two subsection we obtain Theorem 1.1. Acknowledgements: I would like to thank the relativity group at Cordoba in Argentina, where this work was begun, for hospitality and 
+discussions. References [1] R. Bartnik, J. Isenberg. The constraint equations. In: P. T. Chru´sciel, H. Friedrich (eds.): The Einstein equations and the large scale behaviour of gravitational 
+fields. Birkh¨auser, Basel, 2004. [2] F. Beyer. Investigations of solutions of Einstein’s field equations close to lambda-Taub- NUT. Class. Quantum Gravity 25 (2008) 235005. [3] H. Friedrich. On 
+the hyperbolicity of Einstein’s and other gauge field equations. Com- mun. Math. Phys. 100 (1985) 525 - 543. 43 [4] H. Friedrich. Existence and structure of past asymptotically simple solution of 
+Ein- stein’s field equations with positive cosmological constant. J. Geom. Phys. 3 (1986) 101 - 117. [5] H. Friedrich. On the existence of n-geodesically complete or future complete solutions of 
+Einstein’s field equations with smooth asymptotic structure. Commun. Math. Phys. 107 (1986), 587 - 609. [6] H. Friedrich. On the global existence and the asymptotic behaviour of solutions to the 
+Einstein-Maxwell-Yang-Mills equations. J. Differential Geometry 34 (1991) 275 - 345. [7] H. Friedrich. Einstein equations and conformal structure: existence of anti-de Sitter- type space-times. J. 
+Geom. Phys. 17 (1995) 125–184. [8] Friedrich, H. (1998) Evolution equations for gravitating ideal fluid bodies in general relativity. Phys. Rev. D 57, 2317–2322. [9] H. Friedrich. Conformal 
+geodesics on vacuum space-times. Commun. Math. Phys. 235 (2003) 513 - 543. [10] H. Friedrich. Smooth non-zero rest-mass evolution across time-like infinity. Ann. Henri Poincar´e 16 (2015) 2215 - 
+2238. [11] H. Friedrich. Geometric asymptotics and beyond. In: L.Bieri, S.-T. Yau (eds), Surveys in Differential Geometry, Vol.20. International Press, Boston, 2015. arXiv:1411.3854 [12] H. 
+Friedrich, A. Rendall. The Cauchy Problem for the Einstein Equations. In: B. Schmidt (ed.): Einstein’s Field Equations and Their Physical Implications. Springer, Lecture Notes in Physics, Berlin 
+2000. [13] M. Hadˇzi´c, J. Speck. The global future stability of the FLRW solutions to the Dust–Einstein system with a positive cosmological constant. J. Hyperbolic Differential Equations 12 
+(2015) 87. [14] S. Hawking, G. Ellis. The large scale structure of space-time. Cambridge University Press, 1973. [15] T. Kato. The Cauchy problem for quasi-linear symmetric hyperbolic systems. Arch. 
+Ration. Mech. Anal., 58 (1975) 181 - 205. [16] C. L¨ubbe, J. A. Valiente Kroon. A conformal approach to the analysis of the non- linear stability of radiation cosmologies. Ann. Phys. 328 (2013) 1. 
+[17] R. Penrose. Zero rest-mass fields including gravitation: asymptotic behaviour. Proc. Roy. Soc. Lond. A 284 (1965) 159 - 203. [18] R. Penrose. Cycles of Time. Vintage, London, 2011. [19] H. 
+Ringstr¨om. Future stability of the Einstein-non-linear scalar field system. Invent. math. 173 (2008) 123 - 208. 44

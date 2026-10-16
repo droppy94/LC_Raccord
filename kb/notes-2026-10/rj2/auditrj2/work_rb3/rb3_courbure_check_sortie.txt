@@ -1,0 +1,10 @@
+Riemann lineaire : schema du script = derivation directe : True []
+h = 2 sigma eta : C = 0 : True
+                  L_ab = -d_a d_b sigma : True
+                  R = -6 box sigma : True
+h generique : Weyl sans trace : True
+              symetries de C (antisym ab, cd ; paires) : True
+              Bianchi cyclique : True
+jauge longitudinale : R = 2q^2 Phi - 4 q^2 Psi - 6 Psi'' : True
+                      L_00 = Psi'' - (q^2/3)(Phi+Psi) : True
+                      L_11 = q**2*(Phi(t) - 2*Psi(t))/3 ; L_22 = q**2*(-Phi(t) - Psi(t))/6

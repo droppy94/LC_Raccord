@@ -1,0 +1,9 @@
+(1) det(i s gamma^0 + m) = (-I*m + s)**2*(I*m + s)**2
+    racines en s : [-I*m, I*m]  => pour s = N + i j mu (N entier >= 0, j entier) : singulier ssi N = 0 et j = +-1 (m = mu)
+    a s = +i mu : i s g0 + m = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2*mu, 0, 0, 0, 0, 2*mu]  ; image = P- , noyau = P+  => condition de resonance : P+ S != 0
+(2) operateur indiciel metrique (composantes 00, 11, 22, 12, 13, 23) : det = 3*s**5*(s - 3)**5/32
+    composantes 0i : partie Omega^{s-2} = [0, 0, 0] (contraintes : apparaissent a l'ordre suivant)
+(3) delta h_00 = -2*Derivative(xi0(t, x, y, z), t) + 2*xi0(t, x, y, z)/t  ; delta h_11 = 2*Derivative(xi1(t, x, y, z), x) - 2*xi0(t, x, y, z)/t
+     xi^0 = c(x) (translation de scri) : delta h_00 = 2*c(x, y, z)/t
+     xi^0 = t f(x) : delta h_00 = 0
+     xi^0 = (-t)^{1+sigma} f(x) : delta h_00 = 2*sigma*(-t)**sigma*f(x, y, z)

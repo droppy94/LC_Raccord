@@ -1,0 +1,14 @@
+nslash^2 = -(n.n) Id : True
+i nslash K - m = 0 : True
+K^2 = m**2/(-n0**2 + n1**2 + n2**2 + n3**2) * Id ; K^2 diagonal scalaire : True
+  => valeurs propres de K : +/- sqrt(m^2/(n.n)) = +/- i m / sqrt(-n.n)
+Kbar = gamma^0 K^dag gamma^0 = -K : True
+Omega * T_c|_{1/Omega} = (m/(-n.n)) psibar psi n_a n_b  (identite exacte) : True
+  verification n.n=-1 : coefficient = m psibar psi ; trace(-m psibar psi) coherente avec T^ = -m psibar psi
+P+ P- = 0, P+ + P- = 1 : True True
+K P+ = (i m/N)... : K P+ - (-i m/N) P+ = 0 : True ; K P- - (+i m/N) P- = 0 : True
+adjoints de Dirac : bar(P+) = P+ : False
+croise psibar_+ psi_- = psibar Pbar_+ P_- psi = 0 identiquement : False
+termes croises de psibar gamma^c psi (P+ gamma^c P-) non nuls pour c=0..3 : [True, True, True, True]
+de Sitter (n_a = d_a Omega = (-1,0,0,0)) : K = True (K = i m gamma^0)
+   P+ (valeur propre -i m) = True  ; donc Omega^{+i mu} <-> gamma^0=+1 : True

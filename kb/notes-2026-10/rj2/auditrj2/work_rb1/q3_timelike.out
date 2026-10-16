@@ -1,0 +1,8 @@
+signe n0 = 1 : bar(P+)=P+ : True ; bar(P+) P- = 0 (croise psibar psi nul) : True ; bar(P-) P+ = 0 : True
+   P+ gamma^c P- non nuls (croises de psibar gamma^c psi) : [True, True, True, True]
+   repere ou n est le temps : psibar psi sur P+ = a0**2 + a1**2 + b0**2 + b1**2
+   repere ou n est le temps : psibar psi sur P- = -a2**2 - a3**2 - b2**2 - b3**2
+signe n0 = -1 : bar(P+)=P+ : True ; bar(P+) P- = 0 (croise psibar psi nul) : True ; bar(P-) P+ = 0 : True
+   P+ gamma^c P- non nuls (croises de psibar gamma^c psi) : [True, True, True, True]
+   repere ou n est le temps : psibar psi sur P+ = -a2**2 - a3**2 - b2**2 - b3**2
+   repere ou n est le temps : psibar psi sur P- = a0**2 + a1**2 + b0**2 + b1**2

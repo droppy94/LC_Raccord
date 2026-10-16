@@ -1,0 +1,3 @@
+v2 : premier ordre de E*Ed - Id nul : True ; Ed*E : True
+v1 : premier ordre de E*Ed - Id : [[0, h01, h02, h03], [-h01, 0, 0, 0], [-h02, 0, 0, 0], [-h03, 0, 0, 0]]
+v2 : Ed^T eta Ed = eta + eps h : True
