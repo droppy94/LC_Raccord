@@ -1,0 +1,11 @@
+Journal AL-2 (requetes E4 et verifications)
+Verif sources : answer_pdf_queries sur 1902.09144, 0904.0612, 2610.00410, hep-th/0109199, 1009.5179, gr-qc/9906076, 1711.04011, 1311.0700, 1309.7248, 2212.06914, 2503.24263, 2107.06521, 2108.11630, 2108.11955, 1804.02842, 1809.00670
+E4-Q1 discover: CCC massive particles rest mass crossover Dirac fermion -> 2608.27014, 2102.11823, 2507.06634 (+ connus)
+E4-Q2 discover: massive Dirac de Sitter future conformal boundary asymptotics conformal scattering -> 1105.3767 (Ibison), 2609.34073, 1912.09885
+E4-Q3 discover: Friedrich conformal field equations Einstein-Dirac Lambda>0 -> rien de Dirac massif
+E4-Q4 discover: time-dependent mass Dirac de Sitter Higgs vev CCC rest mass decay -> 2003.03356 (Bachelot), gr-qc/0602011
+E4-Q5 web: Bachelot Dirac CCC massive fermions crossover -> 2003.03356 (scalaire seulement)
+E4-Q6 web: massive Dirac asymptotically de Sitter conformal infinity -> hep-th/0404135 (Loran), 1312.7209
+E4-Q7 web: Penrose CCC electrons rest mass fade Higgs -> 1603.06997 (Szabados), 2102.02701 (Tod)
+E4-Q8 discover: Nurowski Poincare-Einstein, Meissner-Nurowski -> 2202.10864 (Tod), 2510.09957 (Quiros), 2201.10875
+Lus : 1105.3767, 2608.27014, 2003.03356, 1603.06997, 2102.02701, hep-th/0404135, 1312.2059, 2202.10864, 2510.09957
