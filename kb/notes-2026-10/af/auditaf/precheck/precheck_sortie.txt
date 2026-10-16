@@ -1,0 +1,9 @@
+(1) Gammahat^a_bc = -(delta^a_b n_c + delta^a_c n_b - eta_bc n^a)/Omega : True
+(2) Rhat_ab = 2 Omega^-1 dd Omega + (Omega^-1 box Omega - 3 Omega^-2 |dOmega|^2) eta : True
+    Rhat = Omega^2 (6 Omega^-1 box Omega - 12 Omega^-2 |dOmega|^2) : True
+(3) de Sitter Omega = -sqrt(lambda/3) t : Rhat_ab - Rhat ghat/2 + lambda ghat = 0 (That = 0) : True ; Rhat = 4*lambda  ; |dOmega|^2 = -lambda/3 (= -lambda/3 : scri du genre espace)
+    -Rhat + 4 lambda = kappa That (trace) : True
+(4a) (2.14) dd Omega = s eta - Omega L + (kappa/2) Omega T*  (L = 0) : identite : True
+(4b) (3.8) |dOmega|^2 = -lambda/3 + 2 Omega s + (kappa/12) That (trace physique = Omega^2 Str) : identite : True
+(4c) (2.15) d_c s = (kappa/2) n^b T*_bc - (kappa/24) Omega^(-1) d_c That (L = 0) : identite : True
+(4c) (2.15) d_c s = (kappa/2) n^b T*_bc - (kappa/24) Omega^(1) d_c That (L = 0) : identite : False

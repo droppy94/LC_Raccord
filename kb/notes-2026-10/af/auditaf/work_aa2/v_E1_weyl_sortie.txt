@@ -1,0 +1,7 @@
+(0) generic Weyl tensor from (E, B): traceless: True ; cyclic identity: True
+dim espace de Weyl (256 - rang des contraintes): 10
+rang de l'application (E,B) -> W : 10
+antisymetrie et symetrie de paires : True
+trace sur (1,4) nulle : True
+T symetrique : True
+T sans trace (eta) hors couche : True

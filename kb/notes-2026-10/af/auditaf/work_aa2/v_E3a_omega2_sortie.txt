@@ -1,0 +1,19 @@
+(0) generic Weyl tensor from (E, B): traceless: True ; cyclic identity: True
+
+(AF-1) c-part of Wess-Zumino
+  identity  d^c d^d (Omega W_acbd) = n^d D_bda + n^c D_acb + Omega d^c D_acb + (d^c d^d Omega) W_acbd  (off shell): True
+  and (d^c d^d Omega) W_acbd = s eta^cd W_acbd = 0 (traceless) at first order: the ln Omega part of T is sigma x Lin(D, dD)
+  eta-trace of That (off shell): 0
+  lowest power of Omega in That_ab: 3
+  Omega^1 coefficient of That (no log) == -c0 b E^n_ab, E^n_ab = n^c n^d W_acbd : False
+  log terms of That: present only through divergence jets (checked below)
+  computing (2.17) source ... 
+  lowest power of Omega in (2.17) source: 1 ; terms of order Omega^-2 or below: []
+  pole coefficient fitted to alpha kappa c0 b (n_nu E^n_lambda rho - n_lambda E^n_nu rho): []
+  symbols in the pole coefficient: []
+  number of log terms in (2.17) source: 0
+
+=== variante E3(a), mode omega2 : sigma = Om_f**2 ===
+  (puissance, log) presents dans le second membre de (2.17) : [(1, 0), (2, 0), (3, 0)]
+  pole (Omega^-1) present : False ; log present : False
+  (puissance, log) presents dans That : [(3, 0)]

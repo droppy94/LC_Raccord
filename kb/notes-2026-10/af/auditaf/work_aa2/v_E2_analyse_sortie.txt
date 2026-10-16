@@ -1,0 +1,41 @@
+(0) generic Weyl tensor from (E, B): traceless: True ; cyclic identity: True
+
+(AF-1) c-part of Wess-Zumino
+  identity  d^c d^d (Omega W_acbd) = n^d D_bda + n^c D_acb + Omega d^c D_acb + (d^c d^d Omega) W_acbd  (off shell): True
+  and (d^c d^d Omega) W_acbd = s eta^cd W_acbd = 0 (traceless) at first order: the ln Omega part of T is sigma x Lin(D, dD)
+  eta-trace of That (off shell): 0
+  lowest power of Omega in That_ab: 1
+  Omega^1 coefficient of That (no log) == -c0 b E^n_ab, E^n_ab = n^c n^d W_acbd : True
+  log terms of That: present only through divergence jets (checked below)
+  computing (2.17) source ... 
+  lowest power of Omega in (2.17) source: -1 ; terms of order Omega^-2 or below: []
+  pole coefficient fitted to alpha kappa c0 b (n_nu E^n_lambda rho - n_lambda E^n_nu rho): [{alpha: -1}]
+  fit exact on all 24 components: True
+  symbols in the pole coefficient: ['B11', 'B12', 'B13', 'B22', 'B23', 'E11', 'E12', 'E13', 'E22', 'E23', 'b', 'c0', 'kappa', 'lambda', 'n0', 'n1', 'n2', 'n3']
+  number of log terms in (2.17) source: 72
+  divergence constraints solved: orders 1, 2, 3 of W jets: 16 58 136 variables eliminated
+  all log Omega terms of the (2.17) source vanish when div W = 0 (and its first derivatives): True
+  (power, log power) of the log terms before reduction: [(0, 1), (1, 1), (2, 1)]
+  example log coefficient contains divergence jets only (non-zero off shell): True
+  pole coefficient independent of the divergence jets: True
+
+=== analyse AA-2 ===
+  jets d'ordre 0 de W apparaissent aux (puissance, log) : [(-1, 0), (0, 0)]
+  jets d'ordre 1 de W apparaissent aux (puissance, log) : [(0, 0), (0, 1), (1, 0), (1, 1)]
+  jets d'ordre 2 de W apparaissent aux (puissance, log) : [(1, 0), (1, 1)]
+  jets d'ordre 3 de W apparaissent aux (puissance, log) : [(2, 1)]
+  pole dans le repere de n (c0 symbolique), composantes non nulles :
+    R (1, 0, 1) : -E11*b*c0*kappa /Omega
+    R (1, 0, 2) : -E12*b*c0*kappa /Omega
+    R (1, 0, 3) : -E13*b*c0*kappa /Omega
+    R (2, 0, 1) : -E12*b*c0*kappa /Omega
+    R (2, 0, 2) : -E22*b*c0*kappa /Omega
+    R (2, 0, 3) : -E23*b*c0*kappa /Omega
+    R (3, 0, 1) : -E13*b*c0*kappa /Omega
+    R (3, 0, 2) : -E23*b*c0*kappa /Omega
+    R (3, 0, 3) : b*c0*kappa*(E11 + E22) /Omega
+    LHS (2.17) (1,0,1) : Derivative(B12(x0, x1, x2, x3), x3) - Derivative(B13(x0, x1, x2, x3), x2) - Derivative(E11(x0, x1, x2, x3), x0)
+    LHS (2.17) (2,0,2) : -Derivative(B12(x0, x1, x2, x3), x3) + Derivative(B23(x0, x1, x2, x3), x1) - Derivative(E22(x0, x1, x2, x3), x0)
+    LHS (2.17) (1,0,2) : Derivative(B22(x0, x1, x2, x3), x3) - Derivative(B23(x0, x1, x2, x3), x2) - Derivative(E12(x0, x1, x2, x3), x0)
+  coefficients log non nuls hors couche : 72 ; nuls sur couche : True
+  ordre maximal de jets de W dans les coefficients log : 3

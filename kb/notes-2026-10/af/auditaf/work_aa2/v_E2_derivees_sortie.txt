@@ -1,0 +1,25 @@
+(0) generic Weyl tensor from (E, B): traceless: True ; cyclic identity: True
+
+(AF-1) c-part of Wess-Zumino
+  identity  d^c d^d (Omega W_acbd) = n^d D_bda + n^c D_acb + Omega d^c D_acb + (d^c d^d Omega) W_acbd  (off shell): True
+  and (d^c d^d Omega) W_acbd = s eta^cd W_acbd = 0 (traceless) at first order: the ln Omega part of T is sigma x Lin(D, dD)
+  eta-trace of That (off shell): 0
+  lowest power of Omega in That_ab: 1
+  Omega^1 coefficient of That (no log) == -c0 b E^n_ab, E^n_ab = n^c n^d W_acbd : True
+  log terms of That: present only through divergence jets (checked below)
+  computing (2.17) source ... 
+  lowest power of Omega in (2.17) source: -1 ; terms of order Omega^-2 or below: []
+  pole coefficient fitted to alpha kappa c0 b (n_nu E^n_lambda rho - n_lambda E^n_nu rho): [{alpha: -1}]
+  fit exact on all 24 components: True
+  symbols in the pole coefficient: ['B11', 'B12', 'B13', 'B22', 'B23', 'E11', 'E12', 'E13', 'E22', 'E23', 'b', 'c0', 'kappa', 'lambda', 'n0', 'n1', 'n2', 'n3']
+  number of log terms in (2.17) source: 72
+  divergence constraints solved: orders 1, 2, 3 of W jets: 16 58 136 variables eliminated
+  all log Omega terms of the (2.17) source vanish when div W = 0 (and its first derivatives): True
+  (power, log power) of the log terms before reduction: [(0, 1), (1, 1), (2, 1)]
+  example log coefficient contains divergence jets only (non-zero off shell): True
+  pole coefficient independent of the divergence jets: True
+
+=== analyse AA-2 (derivees residuelles) ===
+  termes contenant des jets de W (ordre>=1) apres reduction, par ((puissance,log), ordre) : {((0, 0), 1): 452, ((1, 0), 1): 30}
+  exemple a Omega^0 : ((0, 0, 1), b*c0*dE12_2*kappa*n2**2/2)
+  R(1,0,1) a Omega^0, repere n=(1,0,0,0), apres reduction : -b*c0*dE11_0*kappa/2

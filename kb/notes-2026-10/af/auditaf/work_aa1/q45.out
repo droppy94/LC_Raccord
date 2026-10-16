@@ -1,0 +1,31 @@
+=== Q4.1 : equation de Maxwell ===
+ EL[0] / d^a(f F_a0) = -1
+   d^a F_a0 - (-4 e^2 beta n^a F_a0/Omega) = O(beta^2) : True | avec signe + (K-4) : False
+ EL[1] / d^a(f F_a1) = 1
+   d^a F_a1 - (-4 e^2 beta n^a F_a1/Omega) = O(beta^2) : True | avec signe + (K-4) : False
+ EL[2] / d^a(f F_a2) = 1
+   d^a F_a2 - (-4 e^2 beta n^a F_a2/Omega) = O(beta^2) : True | avec signe + (K-4) : False
+ EL[3] / d^a(f F_a3) = 1
+   d^a F_a3 - (-4 e^2 beta n^a F_a3/Omega) = O(beta^2) : True | avec signe + (K-4) : False
+
+=== Q4.2 : termes ln Omega de R ===
+ (degre en ln Omega, puissance de Omega) presents dans R : [(0, 0), (0, 1), (1, 0), (1, 1)]
+ coef Omega^0 ln Omega = kappa beta [6(n_nu M_lam rho - n_lam M_nu rho) + 2(eta_lam rho n^c M_c nu - eta_nu rho n^c M_c lam)] : True
+
+=== Q4.3 : condition algebrique, n_a = (1,0,0,0) ===
+ M sans trace : True | M_00 = (B1**2 + B2**2 + B3**2 + E1**2 + E2**2 + E3**2)/2
+ rangs (equations, {(EE+BB)_tf, ExB}, union) : (8, 8, 8) -> egalite des espaces si les trois sont egaux
+ M_0i = [-B2*E3 + B3*E2, B1*E3 - B3*E1, -B1*E2 + B2*E1]  ; (E x B) = [-B2*E3 + B3*E2, B1*E3 - B3*E1, -B1*E2 + B2*E1]
+ det(E E^T + B B^T) = 0  (rang <= 2) ; trace = B1**2 + B2**2 + B3**2 + E1**2 + E2**2 + E3**2
+ EE^T+BB^T = mu I avec det = 0  =>  mu^3 = 0  =>  mu = 0  =>  |E|^2+|B|^2 = 3 mu = 0
+ exemple complexe E=(1,i,0), B=0 : (EE)_tf = [1, I, 0, I, -1, 0, 0, 0, 0]  ExB = [0, 0, 0]
+
+=== Q5 (b) : F_12 = B0 ===
+  n_a = (1,0,0,0) (indice bas) : coef ln Omega de R_101, R_202, R_303 = [-B0**2*betatilde*kappa/e2, -B0**2*betatilde*kappa/e2, 2*B0**2*betatilde*kappa/e2]
+  n^a = (1,0,0,0) (indice haut, donc n_0 = -1) : coef ln Omega de R_101, R_202, R_303 = [B0**2*betatilde*kappa/e2, B0**2*betatilde*kappa/e2, -2*B0**2*betatilde*kappa/e2]
+   (M dans eta pour ce F : [B0**2/2, B0**2/2, B0**2/2, -B0**2/2] )
+
+=== Q5 (a) : W purement electrique, E_yy = -E_zz = e ===
+ solution unique pour W(0) : True
+  n_a = (1,0,0,0) : residu du pole de R_y0y (coef de 1/Omega) = 8*b*e*kappa
+  n^a = (1,0,0,0) : residu du pole de R_y0y (coef de 1/Omega) = -8*b*e*kappa

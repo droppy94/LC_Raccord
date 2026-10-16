@@ -1,0 +1,12 @@
+(0) generic Weyl tensor from (E, B): traceless: True ; cyclic identity: True
+=== E5 : completion isotrope / (eta, n) ===
+  ln Omega coeff (1, 0, 2) : -6*beta_**kappa*(Bx*By + Ex*Ey)
+  ln Omega coeff (2, 0, 3) : -6*beta_**kappa*(By*Bz + Ey*Ez)
+  ln Omega coeff (1, 0, 1) : -beta_**kappa*(4*Bx**2*a3 - Bx**2*a4 + 12*Bx**2 + 16*Bx*Ex*a5 + 4*By**2*a3 - By**2*a4 - 6*By**2 + 16*By*Ey*a5 + 4*Bz**2*a3 - Bz**2*a4 - 6*Bz**2 + 16*Bz*Ez*a5 - 4*Ex**2*a3 + Ex**2*a4 + 12*Ex**2 - 4*Ey**2*a3 + Ey**2*a4 - 6*Ey**2 - 4*Ez**2*a3 + Ez**2*a4 - 6*Ez**2)/3
+  ln Omega coeff (2, 0, 2) : -beta_**kappa*(4*Bx**2*a3 - Bx**2*a4 - 6*Bx**2 + 16*Bx*Ex*a5 + 4*By**2*a3 - By**2*a4 + 12*By**2 + 16*By*Ey*a5 + 4*Bz**2*a3 - Bz**2*a4 - 6*Bz**2 + 16*Bz*Ez*a5 - 4*Ex**2*a3 + Ex**2*a4 - 6*Ex**2 - 4*Ey**2*a3 + Ey**2*a4 + 12*Ey**2 - 4*Ez**2*a3 + Ez**2*a4 - 6*Ez**2)/3
+  ln Omega coeff (0, 0, 1) : -4*beta_**kappa*(By*Ez - Bz*Ey)
+  ln Omega coeff (1, 1, 2) : 2*beta_**kappa*(Bx*Ez - Bz*Ex)
+  ln Omega coeff (2, 1, 2) : 2*beta_**kappa*(By*Ez - Bz*Ey)
+  composantes hors diagonale (i,0,j), i != j, independantes de a1..a5 : True
+  differences diagonales R(1,0,1)-R(2,0,2), R(2,0,2)-R(3,0,3) : -6*beta_**kappa*(Bx**2 - By**2 + Ex**2 - Ey**2) ; -6*beta_**kappa*(By**2 - Bz**2 + Ey**2 - Ez**2)
+  => (E_iE_j + B_iB_j)_tf = 0 reste impose quelle que soit la completion de cette forme ; pour E, B reels : E = B = 0

@@ -1,0 +1,13 @@
+(0) generic Weyl tensor from (E, B): traceless: True ; cyclic identity: True
+=== E4 (i) poids p ===
+  pole total pour W_p, composante (1, 0, 1) : -E11*(3*b*c0*kappa*p**2 - b*c0*kappa - 2*p + 2)/2
+  pole total pour W_p, composante (1, 0, 2) : -E12*(3*b*c0*kappa*p**2 - b*c0*kappa - 2*p + 2)/2
+  pole total pour W_p, composante (1, 2, 3) : B11*(p - 1)
+  pole total pour W_p, composante (2, 1, 3) : -B22*(p - 1)
+  pole total pour W_p, composante (0, 1, 2) : 0
+  p annulant le pole pour E, B generiques (b != 0) : []
+  idem si W purement electrique relativement a n (B = 0) : [{p: -sqrt(3*b**2*c0**2*kappa**2 - 6*b*c0*kappa + 1)/(3*b*c0*kappa) + 1/(3*b*c0*kappa)}, {p: sqrt(3*b**2*c0**2*kappa**2 - 6*b*c0*kappa + 1)/(3*b*c0*kappa) + 1/(3*b*c0*kappa)}]
+  idem avec b = 0 (controle : seul p = 1 est regulier) : [{p: 1}]
+=== E4 (ii) W' = W + ln(Omega) X ===
+  X de Weyl tel que n.X/Omega annule le pole : [{xb11: 0, xb12: 0, xb13: 0, xb22: 0, xb23: 0, xe11: -E11*b*c0*kappa, xe12: -E12*b*c0*kappa, xe13: -E13*b*c0*kappa, xe22: -E22*b*c0*kappa, xe23: -E23*b*c0*kappa}]
+  composantes non nulles de d.X_el sur div W = 0 (coefficient du ln Omega induit) : 18 / 24 ; exemple : -dE11_0

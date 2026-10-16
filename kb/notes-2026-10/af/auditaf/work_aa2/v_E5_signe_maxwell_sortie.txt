@@ -1,0 +1,2 @@
+script == +4 e2 beta n^a F_ab / Omega : False
+script == -4 e2 beta n^a F_ab / Omega : True

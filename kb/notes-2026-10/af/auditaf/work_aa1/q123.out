@@ -1,0 +1,23 @@
+rang base de Weyl : 10 | symetries/trace verifiees : True
+T symetrique : True
+trace eta^{ab} T_ab = 0 : True
+
+=== Q1 ===
+puissances presentes dans T : seulement Om^-1, Om^0, ln Om, Om ln Om : True
+T = c0 b [ -E^n/Om - (lnOm+1)(n^d D_bda + n^c D_acb) - Om lnOm d^c D_acb ] : True
+coef de Om^1 (sans log) dans That = -c0 b E^n : True
+partie ln Om de T ne contient que des jets de D (verif en Q3)
+
+=== Q2 ===
+plus basse puissance de Om dans R : -1
+coef Om^-1 de R = -kappa c0 b (n_nu E_lam rho - n_lam E_nu rho) : True
+le coefficient depend de derivees de W : False
+le coefficient depend de lambda ou s : False
+
+=== Q3 ===
+R contient ln^2 : False
+contraintes d^k D = 0 pour k in [0] : 48 equations, 16 jets elimines ; composantes de R avec ln Om restant : 48
+contraintes d^k D = 0 pour k in [0, 1] : 240 equations, 74 jets elimines ; composantes de R avec ln Om restant : 48
+contraintes d^k D = 0 pour k in [0, 1, 2] : 720 equations, 210 jets elimines ; composantes de R avec ln Om restant : 0
+forme fermee de la partie ln Om de R en fonction de D=J (Y_ab = n^d J_bda + n^c J_acb + Om d^c J_acb) : True
+temps 289.4s

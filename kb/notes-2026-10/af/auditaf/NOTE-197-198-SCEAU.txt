@@ -1,0 +1,11 @@
+SCEAU NOTE-197 (execution AF), scripts v1 et v2 et sorties, NOTE-198 (gel d'audit), consignes AA-1/AA-2, precheck : 2026-10-16T14:10:12Z (pose AVANT lancement des auditeurs)
+ca9658e19e3205d1dbf9709ebd1ed139d21331e59fb71945d40af84e1a1fe86f  NOTE-BORD-EON-197-AF-EXECUTION.md
+9c184b32e92444736886dd8229cf1581874566fa9f0282f6aac7e5eb14ed4e4c  af_check.py
+8e89a137f2b58432241208bdd47dad64fc6ca83a749cfd83d4719db0bfc4aceb  af_check_sortie.txt
+8b78caeb4d3ea51eb718364e027de7d5aea51f57ae5c61686f3de737343d252b  af_check_v1_defectueux.py
+2f84ba9c0fe2f190e5cf22faeda40643fbbe9fd540b0f0eb1827c43789f67c27  af_check_v1_sortie.txt
+7475004fa15d519ef2986763ea71c52a6573028e2becce4586b84ac5ae74d535  auditaf/NOTE-BORD-EON-198-ARMEMENT-AUDIT-AF.md
+eeebb85d66977cc6e323340dcf659023a0ec2a0ab5a211b127651220ce7f18c9  auditaf/PROMPT-AVEUGLE-AA1.md
+188c7875252675d244627c5de3b15523547b7de3a788b83de858bc6331f49145  auditaf/PROMPT-AVEUGLE-AA2.md
+d2e8ea97c4d6e27bf50fb0435b0f5197227b9d54a674b75cdc4287a54bf9d147  auditaf/precheck/var_E1_conventions.py
+b8edeaa0dd32fa969632bb45ecffeff6a1c40c58abd2076787f7aa0398e11902  auditaf/precheck/precheck_sortie.txt

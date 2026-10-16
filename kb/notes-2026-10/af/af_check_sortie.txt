@@ -1,0 +1,55 @@
+(0) generic Weyl tensor from (E, B): traceless: True ; cyclic identity: True
+
+(AF-1) c-part of Wess-Zumino
+  identity  d^c d^d (Omega W_acbd) = n^d D_bda + n^c D_acb + Omega d^c D_acb + (d^c d^d Omega) W_acbd  (off shell): True
+  and (d^c d^d Omega) W_acbd = s eta^cd W_acbd = 0 (traceless) at first order: the ln Omega part of T is sigma x Lin(D, dD)
+  eta-trace of That (off shell): 0
+  lowest power of Omega in That_ab: 1
+  Omega^1 coefficient of That (no log) == -c0 b E^n_ab, E^n_ab = n^c n^d W_acbd : True
+  log terms of That: present only through divergence jets (checked below)
+  computing (2.17) source ... 
+  lowest power of Omega in (2.17) source: -1 ; terms of order Omega^-2 or below: []
+  pole coefficient fitted to alpha kappa c0 b (n_nu E^n_lambda rho - n_lambda E^n_nu rho): [{alpha: -1}]
+  fit exact on all 24 components: True
+  symbols in the pole coefficient: ['B11', 'B12', 'B13', 'B22', 'B23', 'E11', 'E12', 'E13', 'E22', 'E23', 'b', 'c0', 'kappa', 'lambda', 'n0', 'n1', 'n2', 'n3']
+  number of log terms in (2.17) source: 72
+  divergence constraints solved: orders 1, 2, 3 of W jets: 16 58 136 variables eliminated
+  all log Omega terms of the (2.17) source vanish when div W = 0 (and its first derivatives): True
+  (power, log power) of the log terms before reduction: [(0, 1), (1, 1), (2, 1)]
+  example log coefficient contains divergence jets only (non-zero off shell): True
+  pole coefficient independent of the divergence jets: True
+
+(AF-3 i) calibration: formal pole of R_{y s y} on n = (1,0,0,0), E_yy = e, c0 = -8 : 8*b*e*kappa /Omega
+   with e = W_E,yy|scri = -B k^3 cos kx / 2 (irr_c_ctrl, NOTE-125): -4*Bk3cos*b*kappa  ; NOTE-125: R_ysy|pole = -4 b kappa B k^3 cos kx / s  ->  match: True
+
+(AF-2) sigma F^2 term (running Maxwell coupling), coupling 1/e2_eff = 1/e2 - 4 beta_* sigma
+  rescaled Maxwell equation d^a F_ab = RHS, RHS to first order in beta_*: [4*beta_**e2*(F01*n1 + F02*n2 + F03*n3)/Omega, 4*beta_**e2*(F01*n0 + F12*n2 + F13*n3)/Omega, 4*beta_**e2*(F02*n0 - F12*n1 + F23*n3)/Omega, 4*beta_**e2*(F03*n0 - F13*n1 - F23*n2)/Omega]
+  eta-trace of M: 0
+  lowest power of Omega in (2.17) source: 0
+  log terms other than Omega^0 ln Omega: [(1, 1)]
+  symbols in the Omega^0 ln Omega coefficient: ['F01', 'F02', 'F03', 'F12', 'F13', 'F23', 'beta_*', 'kappa', 'n0', 'n1', 'n2', 'n3']
+  Omega^0 ln Omega coefficient fitted to kappa beta_* [gam (n_nu M_lambda rho - n_lambda M_nu rho) + gam2 (eta_lambda rho (n.M)_nu - eta_nu rho (n.M)_lambda)]: [{gam: 6, gam2: 2}]
+   (ii) ln Omega coefficient of R_(1, 0, 1): -B0**2*beta_tilde*kappa/e2  (NOTE-98, with 1/e^2 = 1/e2: -kappa beta~ B0^2/e^2 on (1,0,1),(2,0,2), +2 x on (3,0,3))
+   (ii) ln Omega coefficient of R_(2, 0, 2): -B0**2*beta_tilde*kappa/e2  (NOTE-98, with 1/e^2 = 1/e2: -kappa beta~ B0^2/e^2 on (1,0,1),(2,0,2), +2 x on (3,0,3))
+   (ii) ln Omega coefficient of R_(3, 0, 3): 2*B0**2*beta_tilde*kappa/e2  (NOTE-98, with 1/e^2 = 1/e2: -kappa beta~ B0^2/e^2 on (1,0,1),(2,0,2), +2 x on (3,0,3))
+   (iii) distinct non-zero ln Omega coefficients in the frame of n, in terms of E_i, B_i:
+       -2*beta_**kappa*(2*Bx**2 - By**2 - Bz**2 + 2*Ex**2 - Ey**2 - Ez**2)
+       -2*beta_**kappa*(Bx*Ey - By*Ex)
+       -2*beta_**kappa*(Bx*Ez - Bz*Ex)
+       -4*beta_**kappa*(Bx*Ey - By*Ex)
+       -4*beta_**kappa*(By*Ez - Bz*Ey)
+       -6*beta_**kappa*(Bx*By + Ex*Ey)
+       -6*beta_**kappa*(Bx*Bz + Ex*Ez)
+       -6*beta_**kappa*(By*Bz + Ey*Ez)
+       2*beta_**kappa*(Bx**2 + By**2 - 2*Bz**2 + Ex**2 + Ey**2 - 2*Ez**2)
+       2*beta_**kappa*(Bx**2 - 2*By**2 + Bz**2 + Ex**2 - 2*Ey**2 + Ez**2)
+       2*beta_**kappa*(Bx*Ez - Bz*Ex)
+       2*beta_**kappa*(By*Ez - Bz*Ey)
+       4*beta_**kappa*(Bx*Ez - Bz*Ex)
+   compare: spatial traceless part of (E_iE_j + B_iB_j) (Maxwell stress) and of (B_iB_j - E_iE_j) (NOTE-113 criterion):
+      (EE+BB)_tf diagonal: [2*Bx**2/3 - By**2/3 - Bz**2/3 + 2*Ex**2/3 - Ey**2/3 - Ez**2/3, -Bx**2/3 + 2*By**2/3 - Bz**2/3 - Ex**2/3 + 2*Ey**2/3 - Ez**2/3, -Bx**2/3 - By**2/3 + 2*Bz**2/3 - Ex**2/3 - Ey**2/3 + 2*Ez**2/3]  off-diagonal 12: Bx*By + Ex*Ey
+      Poynting (E x B): [-By*Ez + Bz*Ey, Bx*Ez - Bz*Ex, -Bx*Ey + By*Ex]
+   all ln Omega coefficients vanish  <=>  solutions for (E, B): [{Bx: -I*Ex, Ey: I*By, Ez: I*Bz}, {Bx: I*Ex, Ey: -I*By, Ez: -I*Bz}, {Bx: 0, By: -I*Ey, Ex: 0, Ez: I*Bz}, {Bx: 0, By: I*Ey, Ex: 0, Ez: -I*Bz}, {Bx: -I*Ex, Bz: 0, Ey: I*By, Ez: 0}, {Bx: I*Ex, Bz: 0, Ey: -I*By, Ez: 0}, {Bx: 0, By: 0, Bz: -I*Ez, Ex: 0, Ey: 0}, {Bx: 0, By: 0, Bz: I*Ez, Ex: 0, Ey: 0}, {Bx: 0, By: -I*Ey, Bz: 0, Ex: 0, Ez: 0}, {Bx: 0, By: I*Ey, Bz: 0, Ex: 0, Ez: 0}]
+   argument: S = EE^T + BB^T is positive semidefinite of rank <= 2 ; S_tf = 0 forces S proportional to the identity (rank 3) unless S = 0 ; hence E = B = 0
+
+EXIT 0

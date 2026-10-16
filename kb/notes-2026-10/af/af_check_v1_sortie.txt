@@ -1,0 +1,54 @@
+(0) generic Weyl tensor from (E, B): traceless: False ; cyclic identity: True
+
+(AF-1) c-part of Wess-Zumino
+  identity  d^c d^d (Omega W_acbd) = n^d D_bda + n^c D_acb + Omega d^c D_acb + (d^c d^d Omega) W_acbd  (off shell): True
+  and (d^c d^d Omega) W_acbd = s eta^cd W_acbd = 0 (traceless) at first order: the ln Omega part of T is sigma x Lin(D, dD)
+  eta-trace of That (off shell): 2*Omega*b*c0*(LOG*Omega**2*Derivative(E11(x0, x1, x2, x3), (x1, 2)) - LOG*Omega**2*Derivative(E11(x0, x1, x2, x3), (x3, 2)) + LOG*Omega**2*Derivative(E22(x0, x1, x2, x3), (x2, 2)) - LOG*Omega**2*Derivative(E22(x0, x1, x2, x3), (x3, 2)) + 2*LOG*Omega**2*Derivative(E12(x0, x1, x2, x3), x1, x2) + 2*LOG*Omega**2*Derivative(E13(x0, x1, x2, x3), x1, x3) + 2*LOG*Omega**2*Derivative(E23(x0, x1, x2, x3), x2, x3) + 2*LOG*Omega*n1*Derivative(E11(x0, x1, x2, x3), x1) + 2*LOG*Omega*n1*Derivative(E12(x0, x1, x2, x3), x2) + 2*LOG*Omega*n1*Derivative(E13(x0, x1, x2, x3), x3) + 2*LOG*Omega*n2*Derivative(E12(x0, x1, x2, x3), x1) + 2*LOG*Omega*n2*Derivative(E22(x0, x1, x2, x3), x2) + 2*LOG*Omega*n2*Derivative(E23(x0, x1, x2, x3), x3) - 2*LOG*Omega*n3*Derivative(E11(x0, x1, x2, x3), x3) + 2*LOG*Omega*n3*Derivative(E13(x0, x1, x2, x3), x1) - 2*LOG*Omega*n3*Derivative(E22(x0, x1, x2, x3), x3) + 2*LOG*Omega*n3*Derivative(E23(x0, x1, x2, x3), x2) + 2*Omega*n1*Derivative(E11(x0, x1, x2, x3), x1) + 2*Omega*n1*Derivative(E12(x0, x1, x2, x3), x2) + 2*Omega*n1*Derivative(E13(x0, x1, x2, x3), x3) + 2*Omega*n2*Derivative(E12(x0, x1, x2, x3), x1) + 2*Omega*n2*Derivative(E22(x0, x1, x2, x3), x2) + 2*Omega*n2*Derivative(E23(x0, x1, x2, x3), x3) - 2*Omega*n3*Derivative(E11(x0, x1, x2, x3), x3) + 2*Omega*n3*Derivative(E13(x0, x1, x2, x3), x1) - 2*Omega*n3*Derivative(E22(x0, x1, x2, x3), x3) + 2*Omega*n3*Derivative(E23(x0, x1, x2, x3), x2) + n1**2*E11(x0, x1, x2, x3) + 2*n1*n2*E12(x0, x1, x2, x3) + 2*n1*n3*E13(x0, x1, x2, x3) + n2**2*E22(x0, x1, x2, x3) + 2*n2*n3*E23(x0, x1, x2, x3) - n3**2*E11(x0, x1, x2, x3) - n3**2*E22(x0, x1, x2, x3))
+  lowest power of Omega in That_ab: 1
+  Omega^1 coefficient of That (no log) == -c0 b E^n_ab, E^n_ab = n^c n^d W_acbd : False
+  log terms of That: present only through divergence jets (checked below)
+  computing (2.17) source ... 
+  lowest power of Omega in (2.17) source: -1 ; terms of order Omega^-2 or below: []
+  pole coefficient fitted to alpha kappa c0 b (n_nu E^n_lambda rho - n_lambda E^n_nu rho): []
+  symbols in the pole coefficient: ['B11', 'B12', 'B13', 'B22', 'B23', 'E11', 'E12', 'E13', 'E22', 'E23', 'b', 'c0', 'kappa', 'lambda', 'n0', 'n1', 'n2', 'n3']
+  number of log terms in (2.17) source: 72
+  all log Omega terms of the (2.17) source vanish when div W = 0 (and its first derivatives): False
+  pole coefficient independent of the divergence jets: True
+
+(AF-3 i) calibration: formal pole of R_{y s y} on n = (1,0,0,0), E_yy = e, c0 = -8 : 8*E22*b*kappa /Omega
+   with e = W_E,yy|scri = -B k^3 cos kx / 2 (irr_c_ctrl, NOTE-125): 8*E22*b*kappa  ; NOTE-125: R_ysy|pole = -4 b kappa B k^3 cos kx / s  ->  match: False
+
+(AF-2) sigma F^2 term (running Maxwell coupling), coupling 1/e2_eff = 1/e2 - 4 beta_* sigma
+  rescaled Maxwell equation d^a F_ab = RHS, RHS to first order in beta_*: [4*beta_**e2*(n1*F01(x0, x1, x2, x3) + n2*F02(x0, x1, x2, x3) + n3*F03(x0, x1, x2, x3))/Omega, 4*beta_**e2*(n0*F01(x0, x1, x2, x3) + n2*F12(x0, x1, x2, x3) + n3*F13(x0, x1, x2, x3))/Omega, 4*beta_**e2*(n0*F02(x0, x1, x2, x3) - n1*F12(x0, x1, x2, x3) + n3*F23(x0, x1, x2, x3))/Omega, 4*beta_**e2*(n0*F03(x0, x1, x2, x3) - n1*F13(x0, x1, x2, x3) - n2*F23(x0, x1, x2, x3))/Omega]
+  eta-trace of M: 0
+  lowest power of Omega in (2.17) source: 0
+  log terms other than Omega^0 ln Omega: [(1, 1)]
+  symbols in the Omega^0 ln Omega coefficient: ['beta_*', 'kappa', 'n0', 'n1', 'n2', 'n3', 'x0', 'x1', 'x2', 'x3']
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polyutils.py", line 231, in _parallel_dict_from_expr_if_gens
+    monom[indices[base]] = exp
+          ~~~~~~~^^^^^^
+KeyError: F01(x0, x1, x2, x3)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/claude/AF/af_check.py", line 263, in <module>
+    eqs_coeffs += sp.Poly(q, *sorted(q.free_symbols - {sp.Symbol('gam'), sp.Symbol('gam2')}, key=str)).coeffs()
+                  ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polytools.py", line 190, in __new__
+    return cls._from_expr(rep, opt)
+           ~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polytools.py", line 319, in _from_expr
+    rep, opt = _dict_from_expr(rep, opt)
+               ~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polyutils.py", line 388, in _dict_from_expr
+    rep, gens = _dict_from_expr_if_gens(expr, opt)
+                ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polyutils.py", line 327, in _dict_from_expr_if_gens
+    (poly,), gens = _parallel_dict_from_expr_if_gens((expr,), opt)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/sympy/polys/polyutils.py", line 236, in _parallel_dict_from_expr_if_gens
+    raise PolynomialError("%s contains an element of "
+                          "the set of generators." % factor)
+sympy.polys.polyerrors.PolynomialError: F01(x0, x1, x2, x3)**2 contains an element of the set of generators.

@@ -1,0 +1,35 @@
+(0) generic Weyl tensor from (E, B): traceless: True ; cyclic identity: True
+
+(AF-1) c-part of Wess-Zumino
+  identity  d^c d^d (Omega W_acbd) = n^d D_bda + n^c D_acb + Omega d^c D_acb + (d^c d^d Omega) W_acbd  (off shell): True
+  and (d^c d^d Omega) W_acbd = s eta^cd W_acbd = 0 (traceless) at first order: the ln Omega part of T is sigma x Lin(D, dD)
+  eta-trace of That (off shell): 0
+  lowest power of Omega in That_ab: 1
+  Omega^1 coefficient of That (no log) == -c0 b E^n_ab, E^n_ab = n^c n^d W_acbd : True
+  log terms of That: present only through divergence jets (checked below)
+  computing (2.17) source ... 
+  lowest power of Omega in (2.17) source: -1 ; terms of order Omega^-2 or below: []
+  pole coefficient fitted to alpha kappa c0 b (n_nu E^n_lambda rho - n_lambda E^n_nu rho): [{alpha: -1}]
+  fit exact on all 24 components: True
+  symbols in the pole coefficient: ['B11', 'B12', 'B13', 'B22', 'B23', 'E11', 'E12', 'E13', 'E22', 'E23', 'b', 'c0', 'kappa', 'lambda', 'n0', 'n1', 'n2', 'n3']
+  number of log terms in (2.17) source: 72
+  divergence constraints solved: orders 1, 2, 3 of W jets: 16 58 136 variables eliminated
+  all log Omega terms of the (2.17) source vanish when div W = 0 (and its first derivatives): True
+  (power, log power) of the log terms before reduction: [(0, 1), (1, 1), (2, 1)]
+  example log coefficient contains divergence jets only (non-zero off shell): True
+  pole coefficient independent of the divergence jets: True
+
+=== test explicite AA-2 ===
+  point (1/3, -1/2, 1/4, 2/5) composante (1, 0, 1) : direct = 203.073696441 ; formel = 203.073696441 ; egal : True
+  point (1/3, -1/2, 1/4, 2/5) composante (2, 0, 3) : direct = -41.3905418266 ; formel = -41.3905418266 ; egal : True
+  point (1/3, -1/2, 1/4, 2/5) composante (0, 1, 2) : direct = 45.5245192055 ; formel = 45.5245192055 ; egal : True
+  point (1/3, -1/2, 1/4, 2/5) composante (3, 1, 2) : direct = -109.195335950 ; formel = -109.195335950 ; egal : True
+  point (1/3, -1/2, 1/4, 2/5) composante (1, 2, 3) : direct = -39.6921943549 ; formel = -39.6921943549 ; egal : True
+  point (1/3, -1/2, 1/4, 2/5) composante (0, 0, 3) : direct = -306.175752104 ; formel = -306.175752104 ; egal : True
+  point (-1/7, 1/3, 0, 1/2) composante (1, 0, 1) : direct = 59.6108305548 ; formel = 59.6108305548 ; egal : True
+  point (-1/7, 1/3, 0, 1/2) composante (2, 0, 3) : direct = -70.4520532798 ; formel = -70.4520532798 ; egal : True
+  point (-1/7, 1/3, 0, 1/2) composante (0, 1, 2) : direct = 128.216508390 ; formel = 128.216508390 ; egal : True
+  point (-1/7, 1/3, 0, 1/2) composante (3, 1, 2) : direct = 7.40712665772 ; formel = 7.40712665772 ; egal : True
+  point (-1/7, 1/3, 0, 1/2) composante (1, 2, 3) : direct = -83.4992604965 ; formel = -83.4992604965 ; egal : True
+  point (-1/7, 1/3, 0, 1/2) composante (0, 0, 3) : direct = -74.8178938547 ; formel = -74.8178938547 ; egal : True
+  procedure formelle exacte sur Omega quadratique explicite (s != 0) : True

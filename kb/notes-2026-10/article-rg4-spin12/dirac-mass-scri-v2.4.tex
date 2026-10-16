@@ -1,0 +1,240 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{slashed}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newcommand{\scri}{\mathscr{I}^{+}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\hg}{\hat g}
+\newcommand{\hpsi}{\hat\psi}
+\newcommand{\hphi}{\hat\varphi}
+
+\title{\textbf{A massive Dirac field at future conformal infinity:\\ phase obstruction, gauge, and the rescaled energy density}}
+\author{Thierry Olivier\\ \small Independent researcher, Paris, France\\ \small \texttt{thierry.olivier71@gmail.com}}
+\date{16 October 2026 \quad (version 2.4, working paper)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In Penrose's Conformal Cyclic Cosmology (CCC) the future conformal boundary $\scri$ of one aeon is identified with the initial singularity of the next, and the rescaled matter fields are required to extend regularly across it. We study a test Dirac field of mass $m$ on de Sitter space (and spatially flat FLRW backgrounds tending to it), rescaled with the standard conformal weight $3/2$. We prove three statements. (i) Every non-zero mode keeps a constant norm and acquires a phase $\exp(\pm\ii(m/H)\ln\Omega)$ that winds without bound, so that the rescaled field has no limit at $\scri$. (ii) This is partly a gauge statement: for solutions that are, at late times, purely particle (or purely antiparticle), the winding is a common phase which a $U(1)$ gauge transformation removes, at the price of a Maxwell potential with a non-integrable pole at $\scri$; for generic solutions the relative phase between particle and antiparticle components is gauge invariant and no gauge gives a limit. Equivalently, there is no gauge in which both the rescaled Dirac field and the potential extend continuously. (iii) The gauge-invariant content is the rescaled energy density, which has a simple pole $m/\Omega$ times the particle density; for a one-particle state this holds for the expectation value relative to the vacuum, without renormalisation ambiguity. For a mass that varies in time, the obstruction (i) disappears if and only if $\int^\infty m\,\dd t<\infty$, and the pole (iii) if and only if the physical mass decays at least as fast as $1/a$. In the formal sense of Friedrich's theorem for the scalar, transposed to the matter equation, the rescaled Dirac equation is singular for every constant non-zero mass: unlike the scalar, the spinor has no special mass. We state these results as conditions on any matching rule for CCC that requires regularity of the rescaled Dirac field or of its stress tensor; we do not claim that they exclude every conceivable matching.
+\end{abstract}
+
+\section{Introduction}
+
+Conformal Cyclic Cosmology \cite{Penrose2010,Tod2013,MeissnerPenrose2025} identifies the future conformal boundary $\scri$ of an asymptotically de Sitter universe with the initial singularity of a subsequent one. The construction requires the matter content, conformally rescaled, to pass from one aeon to the next. Massless conformally invariant fields behave well under the rescaling; massive fields do not, and Penrose postulates that rest mass fades or becomes negligible near $\scri$ \cite{Penrose2010}. This paper asks what, precisely, a massive Dirac field does at $\scri$, and what would have to happen to its mass for the field to be regular there.
+
+For a scalar field, the relevant reference is Friedrich \cite{Friedrich2014}, who studied the Einstein--massive-scalar system in conformal form and found singular terms proportional to $(m^{2}-2\lambda/3)$; the coupled system admits a smooth conformal extension when $m^{2}=2\lambda/3$. That is a theorem about a coupled gravitational system. What we do here is different and more modest: we treat the Dirac field as a test field on a fixed background, and we ask about the behaviour of its solutions. The scalar test field is discussed in Section~\ref{sec:scalar} only as a structural comparison.
+
+Our results are as follows. Proposition~\ref{prop:dirac} (Section~\ref{sec:modes}) shows that every non-zero mode of the rescaled field has constant norm and no limit at $\scri$, for every $m\neq0$. Proposition~\ref{prop:gauge} (Section~\ref{sec:gauge}) shows that part of this statement depends on the gauge: when the field is coupled to electromagnetism, the common phase of a late-time particle solution can be removed by a gauge transformation that is regular in the physical frame but singular in the conformal frame. Proposition~\ref{prop:energy} (Section~\ref{sec:energy}) gives the gauge-invariant obstruction: a simple pole of the rescaled energy density. Lemma~\ref{lem:coupling} (Section~\ref{sec:coupling}) shows that, on exact de Sitter space, any local coupling of the Dirac field to the geometry, within a stated class, only redefines a constant mass. Proposition~\ref{prop:varmass} (Section~\ref{sec:varmass}) gives the conditions on a time-dependent mass under which the obstructions disappear. Section~\ref{sec:ccc} states what this implies for CCC, conditionally on the matching criterion, and Section~\ref{sec:scope} lists what is not established.
+
+\section{Setting and conventions}
+\label{sec:setting}
+
+The physical metric $g$ has signature $(-,+,+,+)$; the unphysical metric is $\hg=\Omega^{2}g$, with $\Omega>0$ in the physical region and $\Omega=0$ on $\scri$ (the convention of Penrose; in \cite{Friedrich2014} the hats are on the other side). On the expanding patch of de Sitter space with Hubble rate $H$,
+\begin{equation}
+g=-\dd t^{2}+a(t)^{2}\dd\mathbf{x}^{2},\quad a=e^{Ht},\quad \eta=-\frac{1}{aH}\in(-\infty,0),\quad g=a(\eta)^{2}(-\dd\eta^{2}+\dd\mathbf{x}^{2}).
+\end{equation}
+With $\Omega=1/a=-H\eta$ the unphysical metric is flat, $\scri$ is the hypersurface $\eta=0$, and $\ln\Omega=-Ht$. The proofs are written on exact de Sitter space. They extend to spatially flat FLRW backgrounds with $H\to H_{\infty}>0$, with the phase $(m/H)\ln\Omega$ replaced by $-\int m\,\dd t$ (Section~\ref{sec:varmass}); we do not treat inhomogeneous or anisotropic asymptotically de Sitter backgrounds. Lemma~\ref{lem:coupling} uses exact de Sitter space.
+
+\begin{definition}[Regular extension]
+A field $\Phi$ of conformal weight $w$ (so that $\hat\Phi=\Omega^{-w}\Phi$; $w=1$ for a scalar, $w=3/2$ for a spinor) extends \emph{continuously} (resp.\ \emph{smoothly}) to $\scri$ if $\hat\Phi$ admits a continuous (resp.\ $C^{\infty}$) extension to $\Omega=0$ in the unphysical spacetime. For a field charged under a gauge group, the statement is understood as: there exists a gauge in which $\hat\Phi$ and the gauge potential both extend.
+\end{definition}
+
+\section{The scalar test field: a structural comparison}
+\label{sec:scalar}
+
+For a test scalar with $(\Box-\xi R-m^{2})\varphi=0$, the conformal covariance of $\Box-\tfrac16R$ gives, with $\hphi=\Omega^{-1}\varphi$,
+\begin{equation}
+\Big(\hat\Box-\tfrac16\hat R\Big)\hphi=\frac{m^{2}+(\xi-\tfrac16)R}{\Omega^{2}}\;\hphi .
+\label{eq:scalarhat}
+\end{equation}
+On de Sitter space ($R=12H^{2}=4\lambda$) and for $\xi=0$, the singular coefficient vanishes if and only if $m^{2}=2H^{2}=2\lambda/3=R/6$, i.e.\ exactly when the minimally coupled massive operator coincides with the conformally coupled massless one. This is the same numerical condition as Friedrich's \cite{Friedrich2014}, but obtained here for a test field; Friedrich's result concerns the coupled Einstein--scalar system and is a stronger and different statement. We use the test-field version only to illustrate two points. First, the scalar singularity can be cancelled by a dimensionless curvature coupling because $m^{2}$ and $R$ have the same dimension. Second, for $m^{2}>\tfrac94H^{2}$ the homogeneous solutions of \eqref{eq:scalarhat} behave as $|\eta|^{1/2\pm\ii\sqrt{m^{2}/H^{2}-9/4}}$: the rescaled scalar tends to zero, and what fails is differentiability. The spinor behaves differently, as we now show.
+
+\section{The Dirac field}
+\label{sec:dirac}
+
+\subsection{Conformal frame and modes}
+\label{sec:modes}
+
+We use $\{\gamma^{a},\gamma^{b}\}=-2g^{ab}$, the convention for which $(\ii\slashed\nabla-m)\psi=0$ describes a particle of mass $m$ in signature $(-,+,+,+)$. The massless Dirac operator is conformally covariant with weight $3/2$ \cite{BirrellDavies,ParkerToms}: under $\hg=\Omega^{2}g$, $\hat{\slashed\nabla}\hpsi=\Omega^{-5/2}\slashed\nabla\psi$ with $\hpsi=\Omega^{-3/2}\psi$. The massive equation $(\ii\slashed\nabla-m)\psi=0$ becomes
+\begin{equation}
+\Big(\ii\hat{\slashed\nabla}-\frac{m}{\Omega}\Big)\hpsi=0 .
+\label{eq:dirachat}
+\end{equation}
+On the de Sitter patch, $\hg$ is flat and, for a Fourier mode $\hpsi=e^{\ii\mathbf{k}\cdot\mathbf{x}}u(\eta)$,
+\begin{equation}
+\ii\,\partial_{\eta}u=\mathcal{H}(\eta)\,u,\qquad \mathcal{H}(\eta)=\boldsymbol\alpha\cdot\mathbf{k}+\beta\,m\,a(\eta),\qquad a=-\frac{1}{H\eta},
+\label{eq:hk}
+\end{equation}
+with $\beta=\gamma^{0}$, $\boldsymbol\alpha=\gamma^{0}\boldsymbol\gamma$ Hermitian.
+
+\begin{lemma}[Constant norm]
+\label{lem:norm}
+For every solution of \eqref{eq:hk}, $u^{\dagger}u$ is independent of $\eta$.
+\end{lemma}
+\begin{proof}
+$\mathcal{H}(\eta)$ is Hermitian, so the evolution is unitary.
+\end{proof}
+
+This is a statement about the components of a classical mode, not about a quantum state or a stress tensor; those are treated in Section~\ref{sec:energy}.
+
+\begin{proposition}[Structure at $\scri$]
+\label{prop:dirac}
+Let $m\neq0$, $k=|\mathbf{k}|$. Every non-zero solution of \eqref{eq:hk} can be written
+\begin{equation}
+u(\eta)=\exp\!\Big(\ii\,\beta\,\frac{m}{H}\ln\Omega\Big)\,\chi(\eta),\qquad \|\chi(\eta)-\chi_{0}\|\le k|\eta|\,\|\chi_{0}\|,
+\label{eq:structure}
+\end{equation}
+for a non-zero constant spinor $\chi_{0}$. In particular $u$ has no limit as $\eta\to0^{-}$.
+\end{proposition}
+\begin{proof}
+Set $U_{0}(\eta)=\exp(\ii\beta\frac{m}{H}\ln\Omega)$, the exact evolution for $\mathbf{k}=0$ (since $\int m a\,\dd\eta=-(m/H)\ln\Omega+\text{const}$), and $u=U_{0}\chi$. Then $\ii\partial_{\eta}\chi=V(\eta)\chi$ with $V=U_{0}^{\dagger}(\boldsymbol\alpha\cdot\mathbf{k})U_{0}$ Hermitian and $\|V\|=k$. Hence $\|\chi(\eta')-\chi(\eta)\|\le k|\eta'-\eta|\,\|\chi\|$; since $\int_{\eta}^{0}\|V\|=k|\eta|<\infty$, $\chi$ converges to some $\chi_{0}$ with $\|\chi_{0}\|=\|u\|\neq0$. Decompose $\chi_{0}=\chi_{0}^{+}+\chi_{0}^{-}$ along the eigenspaces of $\beta$ and take a non-zero component, say $\chi_{0}^{+}$. The corresponding component of $u$ is $e^{\ii(m/H)\ln\Omega}\chi^{+}(\eta)$ with $\chi^{+}\to\chi_{0}^{+}$; along $(m/H)\ln\Omega=-2\pi n$ it tends to $\chi_{0}^{+}$, along $(m/H)\ln\Omega=-2\pi n-\pi$ to $-\chi_{0}^{+}$.
+\end{proof}
+
+In physical time the phase is $e^{\mp\ii mt}$: the rescaling removes the decay of the amplitude but not the Compton oscillation, and $t\to\infty$ is reached at finite $\eta$. The boundary weights $\Delta=\tfrac32\pm\ii m/H$, complex for all real $m\neq0$, express the same fact; the exact modes are Hankel functions of order $\tfrac12\mp\ii m/H$.
+
+\subsection{Gauge dependence}
+\label{sec:gauge}
+
+The phase in \eqref{eq:structure} acts with opposite signs on the two eigenspaces of $\beta$. At late times, the physical momentum $k/a$ tends to zero and a positive-energy (particle) solution at rest is an eigenvector of $\beta$ with eigenvalue $+1$; a negative-energy (antiparticle) solution has eigenvalue $-1$. For a particle solution, then, the winding is a common phase of all components, and a common phase of a charged field is a gauge degree of freedom.
+
+Couple $\psi$ minimally to electromagnetism, $\partial\to D=\partial-\ii eA$. Under a gauge transformation $\hpsi\to e^{-\ii\lambda}\hpsi$, $A\to A-e^{-1}\dd\lambda$, with $\lambda$ a real function of $\eta$ (the conclusions extend to $\lambda(\eta,\mathbf{x})$, since the argument only uses the behaviour as $\eta\to0$ at fixed $\mathbf{x}$).
+
+\begin{proposition}[Gauge]
+\label{prop:gauge}
+Let $u$ be a non-zero solution of \eqref{eq:hk}, with limit spinor $\chi_{0}$ as in Proposition~\ref{prop:dirac}.
+\begin{enumerate}[label=(\alph*)]
+\item If $\lambda'$ is integrable near $\eta=0$ (so that the gauge-transformed potential is integrable up to $\scri$), $e^{-\ii\lambda}u$ has no limit.
+\item If $\chi_{0}$ has non-zero components in both eigenspaces of $\beta$, $e^{-\ii\lambda}u$ has no limit for any $\lambda$.
+\item If $\chi_{0}$ lies in one eigenspace of $\beta$, say $\beta=+1$, then for $\lambda=(m/H)\ln\Omega$ the field $e^{-\ii\lambda}u$ converges to $\chi_{0}$. Starting from $A=0$, the transformed potential is $-e^{-1}\dd\lambda=-(m/eH)\,\dd\Omega/\Omega$, which has a non-integrable pole at $\scri$.
+\end{enumerate}
+In every case, there is no gauge in which both $\hpsi$ and $A$ extend continuously to $\scri$.
+\end{proposition}
+\begin{proof}
+(a) $e^{-\ii\lambda}$ converges, so $e^{-\ii\lambda}u$ converges if and only if $u$ does, which Proposition~\ref{prop:dirac} excludes. (b) A common phase does not change the relative phase $e^{2\ii(m/H)\ln\Omega}$ between the $\beta=\pm1$ components, whose moduli tend to $\|\chi_{0}^{\pm}\|\neq0$. (c) $e^{-\ii\lambda}u=(\chi^{+}(\eta),e^{-2\ii\lambda}\chi^{-}(\eta))$ with $\chi^{+}\to\chi_{0}$ and $\|\chi^{-}(\eta)\|\le k|\eta|\,\|\chi_{0}\|\to0$. The last sentence follows from (a)--(c).
+\end{proof}
+
+The gauge function of (c) is $\lambda=(m/H)\ln\Omega=-mt$. In the physical frame the transformation $\psi\to e^{\ii mt}\psi$, $A_{t}\to A_{t}+m/e$, is the usual removal of the rest-energy phase and is perfectly regular. In the conformal frame the one-form $A$ is unchanged (weight zero) but its component along $\eta$ is $A_{\eta}=a\,A_{t}$, which diverges like $1/\Omega$. The obstruction is therefore not to the existence of \emph{some} representation in which the rescaled field converges, but to a representation in which the field and its connection are both regular at $\scri$. The covariant derivative makes this explicit: from \eqref{eq:dirachat}, $\ii\gamma^{\mu}D_{\mu}\hpsi=(m/\Omega)\hpsi$ in every gauge, so $D\hpsi$ diverges like $m/\Omega$ whenever $\hpsi\neq0$.
+
+\subsection{The gauge-invariant obstruction: rescaled energy density}
+\label{sec:energy}
+
+Let $\hat\rho=\Omega^{-4}T_{tt}$, the energy density measured in the unphysical frame (equivalently $\hat T_{\eta\eta}$ with $\hat T_{ab}=\Omega^{-2}T_{ab}$). For a mode of \eqref{eq:hk}, using $\psi=\Omega^{3/2}u\,e^{\ii\mathbf{k}\cdot\mathbf{x}}$ and the field equation, the symmetrised Dirac stress tensor gives
+\begin{equation}
+\hat\rho=u^{\dagger}(\boldsymbol\alpha\cdot\mathbf{k})\,u+\frac{m}{\Omega}\,u^{\dagger}\beta u .
+\label{eq:rho}
+\end{equation}
+(The derivative of $\Omega^{3/2}$ contributes a purely imaginary term to $\psi^{\dagger}\ii\partial_{t}\psi$ and drops out of the real part.) This quantity is gauge invariant when $\partial$ is replaced by $D$.
+
+\begin{proposition}[Energy density]
+\label{prop:energy}
+For every non-zero solution, $\Omega\,\hat\rho\to m\,\big(\|\chi_{0}^{+}\|^{2}-\|\chi_{0}^{-}\|^{2}\big)$ as $\eta\to0^{-}$. For a late-time particle solution ($\chi_{0}^{-}=0$), $\hat\rho\sim m\|\chi_{0}\|^{2}/\Omega$: the rescaled energy density has a simple pole at $\scri$.
+\end{proposition}
+\begin{proof}
+The first term of \eqref{eq:rho} is bounded by $k\|u\|^{2}$. In the second, $u^{\dagger}\beta u=\chi^{\dagger}\beta\chi\to\|\chi_{0}^{+}\|^{2}-\|\chi_{0}^{-}\|^{2}$, because $U_{0}$ commutes with $\beta$.
+\end{proof}
+
+This is the expected physical picture: a gas of massive particles at rest has $\rho\propto m\,a^{-3}$, hence $\Omega^{-4}\rho\propto m/\Omega$. In the quantum theory, let $\omega$ be a quasi-free state and $\omega_{f}$ the one-particle state obtained by applying a creation operator smeared with a mode $f$. The difference $\omega_{f}(T_{ab})-\omega(T_{ab})$ is the classical stress tensor of $f$, with no renormalisation ambiguity, since the renormalisation subtraction is the same in both states. Only this difference escapes renormalisation; the vacuum term itself depends on the renormalisation prescription. For the Bunch--Davies state, a positive-frequency mode is not exactly particle-like at late times: its limit spinor has an antiparticle weight $\|\chi_{0}^{-}\|^{2}/\|\chi_{0}\|^{2}=1/(e^{2\pi m/H}+1)$ (an independent audit found this numerically to five digits; it is the standard fermionic pair-creation factor). Proposition~\ref{prop:energy} then gives $\Omega\,(\omega_{f}-\omega)(\hat\rho)\to m\tanh(\pi m/H)\,\|f\|^{2}>0$: a $1/\Omega$ pole of the rescaled energy density for a single electron, independently of the gauge. This is the precise sense in which ``one electron suffices''; Proposition~\ref{prop:dirac} alone, being gauge dependent for such states, would not justify it.
+
+\subsection{Local geometric couplings on de Sitter space}
+\label{sec:coupling}
+
+\begin{lemma}
+\label{lem:coupling}
+On exact de Sitter space, consider any modification of the Dirac equation that derives from a real, $U(1)$-invariant action quadratic in $\psi$ (so that it is linear in $\psi$, involves no charge conjugation, and has Hermitian coefficients), whose extra terms are built locally from the metric (curvature, its covariant derivatives, and any functions of these) and are of at most first order in derivatives of $\psi$, and whose kinetic term $(Z_{1}+Z_{2}\gamma_{5})\gamma^{a}\nabla_{a}$ satisfies $Z_{1}^{2}>Z_{2}^{2}$. Then the modified equation is equivalent to a Dirac equation with constant, possibly chiral, mass $m_{\rm eff}$ (and a constant normalisation of the kinetic term), and Propositions~\ref{prop:dirac}--\ref{prop:energy} hold with $|m_{\rm eff}|$ in place of $m$.
+\end{lemma}
+\begin{proof}
+De Sitter space is maximally symmetric: every scalar built locally from the metric is a constant, $R_{abcd}=H^{2}(g_{ac}g_{bd}-g_{ad}g_{bc})$, and every covariant derivative of the curvature vanishes. Terms without derivatives of $\psi$ therefore reduce to constant multiples of $\psi$, $\gamma_{5}\psi$ (contractions of $\sigma^{ab}$ with the curvature reduce to these), i.e.\ to a constant mass $m+\ii m_{5}\gamma_{5}$, equivalent by a chiral rotation to a real mass $\sqrt{m^{2}+m_{5}^{2}}$. Terms with one derivative of $\psi$ contract it with tensors built from $g_{ab}$ and $\epsilon_{abcd}$ with constant coefficients, and so turn the kinetic operator into $(Z_{1}+Z_{2}\gamma_{5})\gamma^{a}\nabla_{a}$ with constants $Z_{1},Z_{2}$; for $Z_{1}^{2}>Z_{2}^{2}$, multiplying by its inverse gives again a Dirac equation with a constant chiral mass. The restrictions are necessary: an independent audit exhibited counter-examples outside them (a tachyonic effective mass for $Z_{2}^{2}>Z_{1}^{2}$, a nilpotent mass for non-Hermitian coefficients, a massless sector for a Majorana-type term).
+\end{proof}
+
+The lemma covers the couplings that a dimensional argument suggests, including those with new length scales (e.g.\ $\ell R\bar\psi\psi$), and shows that they cannot remove the obstruction while keeping a non-zero effective mass. They can remove it by tuning: $\ell=m/(12H^{2})$ in $(m-\ell R)\bar\psi\psi$ gives $m_{\rm eff}=0$ on de Sitter space (and, on $\Lambda$CDM, an effective mass decaying like $a^{-3}$). This is a fine-tuning of a new scale against $H_{\infty}$, not a mechanism, but it is not excluded by the lemma. It does not cover couplings to dynamical fields (a Higgs field, for instance), which make the mass a function of time; that case is treated next. It does not cover higher-derivative modifications of the dynamics either.
+
+\subsection{Time-dependent mass}
+\label{sec:varmass}
+
+If the mass depends on time (through a coupling to a dynamical scalar, for instance), \eqref{eq:hk} holds with $m\,a(\eta)$ replaced by $m(\eta)\,a(\eta)$, and the accumulated phase is $\theta=\int m\,a\,\dd\eta=\int m(t)\,\dd t$.
+
+\begin{proposition}[Variable mass]
+\label{prop:varmass}
+Let $m(t)$ be continuous and non-negative.
+\begin{enumerate}[label=(\alph*)]
+\item Every solution of \eqref{eq:hk} with $m=m(\eta)$ converges at $\scri$ if $\int^{\infty}m(t)\,\dd t<\infty$; if the integral diverges, no non-zero solution converges, and Proposition~\ref{prop:gauge} holds as stated.
+\item The rescaled energy density of a late-time particle solution is bounded at $\scri$ if and only if $m(t)\,a(t)$ is bounded, i.e.\ if and only if the physical mass decays at least as fast as $1/a$.
+\item The coefficient $m/\Omega$ of \eqref{eq:dirachat} extends smoothly to $\scri$ if and only if $m=\Omega\,\mu$ with $\mu$ smooth up to $\Omega=0$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(a) The proof of Proposition~\ref{prop:dirac} applies verbatim with $U_{0}=\exp(-\ii\beta\theta(\eta))$; $U_{0}$ converges if and only if $\theta$ does. (b) As in Proposition~\ref{prop:energy}, with $m/\Omega$ replaced by $m(t)a(t)$. (c) Immediate.
+\end{proof}
+
+The three conditions are strictly ordered: (c) implies (b), which implies (a), and the converses fail. For instance, $m\propto\Omega^{1/2}$ (i.e.\ $m\propto e^{-Ht/2}$) gives a convergent field but a rescaled energy density diverging like $\Omega^{-1/2}$, and $m\propto\Omega(1+\Omega^{1/2})$ gives a bounded energy density but a coefficient that is not smooth at $\Omega=0$. When $m\,a\to0$ the distinction between particle and antiparticle solutions loses its physical meaning, and (b) should be read for $m\,a$ bounded away from zero. In particular, a mass that tends to zero is not enough for any of them: $m\propto1/t$ gives a logarithmically divergent phase. What CCC would need from a ``fading'' of rest mass is therefore quantitative: decay at least as fast as $1/a$, i.e.\ at the rate at which physical momenta redshift, if the rescaled stress tensor is to stay bounded.
+
+\begin{remark}[Formal regularity in Friedrich's sense]
+\label{rem:friedrich}
+Friedrich's Theorem~3.1 \cite{Friedrich2014} is a statement about formal regularity: the right-hand sides of the coupled conformal system, as functions of the rescaled unknowns, contain no negative powers of $\Omega$ and are smooth functions of the unknowns. Transposed to the matter equation alone, the rescaled Dirac equation~\eqref{eq:dirachat} carries the coefficient $m/\Omega$, singular for every constant $m\neq0$. Where the singular coefficient $(m^{2}-\tfrac23\lambda)\Omega^{-2}$ of the rescaled scalar equation vanishes at a special mass, the spinor has none, and no local coupling of the class of Lemma~\ref{lem:coupling} provides one without setting $m_{\rm eff}=0$. Since the homogeneous solutions behave as $\Omega^{\pm\ii m/H}$, which are not smooth at $\Omega=0$, no smooth redefinition of the unknowns removes the coefficient; a $U(1)$ phase produces a term proportional to $\gamma^{\mu}$, not a mass term. Proposition~\ref{prop:varmass}(c) is the corresponding condition for a variable mass. For the coupled Einstein--Dirac system, the kinetic symmetrised Dirac tensor satisfies $\hat T_{\mu\nu}[\psi;\hat g]=\Omega^{2}\,T_{\mu\nu}[\hat\psi;g]$ identically off shell (it contains no mass), so that, with the stress tensor in kinetic form and the derivatives of $\hat\psi$ among the unknowns, the right-hand sides of Friedrich's geometric equations (2.13)--(2.17) are formally regular for every mass; the mass enters only through the matter equation. Writing the stress tensor with the Lagrangian term instead produces terms of order $\Omega^{-1}$ proportional to $m$, which vanish modulo the Dirac equation: the singular content is the same modulo the matter equation, not as a formal identity of right-hand sides. Unlike the scalar, whose stress tensor contains terms of order $\Omega^{0}$ that combine into $(m^{2}-\tfrac23\lambda)$, the spinor has no term that a special mass could cancel. For the unknown $\hat\psi=\Omega^{-3/2}\psi$, the coupled system is therefore formally regular if and only if $m=\Omega\mu$ with $\mu$ smooth; on solutions, the singularity appears as the non-smooth oscillation $\Omega^{\mp\ii m/H}$ rather than as a negative power. A Yukawa mass $m=y\,\hat\Phi$ satisfies this condition when $\hat\Phi=\Omega\Phi_{r}$ is a weight-one scalar that is conformally coupled, or minimally coupled with $m_{\Phi}^{2}=\tfrac23\lambda$, i.e.\ precisely when the Higgs itself satisfies Friedrich's condition. With a Yukawa mass the structure changes: the mass coefficient $m/\Omega=y\,\Phi_{r}$ is regular, the Lagrangian term of the Dirac stress tensor is $\Omega^{4}\bar{\hat\psi}(\ii\gamma\cdot D-y\Phi_{r})\hat\psi$, of order $\Omega^{2}$ in $\hat T_{\mu\nu}$, so that both forms of the stress tensor are formally regular, and the singular mass content moves entirely to the scalar sector. For the full classical system (Einstein, Yang--Mills, a complex scalar doublet with polynomial potential $m_{h}^{2}|H|^{2}+\lambda_{h}|H|^{4}$ and non-minimal coupling $\xi\hat R|H|^{2}$, Dirac fields with Yukawa masses), written in Friedrich's conventions with the unknowns $A_{\mu}$, $H_{r}=\Omega^{-1}H$ and $\hat\psi$, the right-hand sides are formally regular if and only if $m_{h}^{2}+4\lambda\xi=\tfrac23\lambda$. The same combination appears in the rescaled scalar equation, as the coefficient of $\Omega^{-2}$, and in Friedrich's equation (2.17), whose terms of order $\Omega^{-2}$ and $\Omega^{-1}$ are $\tfrac{\kappa}{3}\bigl(m_{h}^{2}+4\lambda\xi-\tfrac23\lambda\bigr)\sum_{i}\phi_{i}^{2}\,\nabla_{[\nu}\Omega\,g_{\lambda]\rho}\,\Omega^{-2}$ and $\tfrac{\kappa}{6}\bigl(m_{h}^{2}+4\lambda\xi-\tfrac23\lambda\bigr)\nabla_{[\nu}\bigl(\sum_{i}\phi_{i}^{2}\bigr)g_{\lambda]\rho}\,\Omega^{-1}$, with $H_{r}=(\phi_{1}+\ii\phi_{2})/\sqrt2$ for each complex component ($\kappa$ is the gravitational coupling); they vanish together. Gauge fields, the quartic and the Yukawa couplings do not enter any singular coefficient; the non-abelian case is covered by weight counting only. For $\xi=0$ this reduces to Friedrich's condition for the Higgs. These statements were checked symbolically and confirmed by two isolated AI auditors; they are not a substitute for a human reading.
+\end{remark}
+
+\subsection{Orders of magnitude}
+
+For the electron, $m_{e}\simeq5.11\times10^{5}\,\mathrm{eV}$, and for the asymptotic Hubble rate $H_{\infty}=H_{0}\sqrt{\Omega_{\Lambda}}\simeq1.2\times10^{-33}\,\mathrm{eV}$, $m_{e}/H_{\infty}\simeq4\times10^{38}$. With constant mass, the phase in \eqref{eq:structure} turns by that many radians each time $\Omega$ decreases by a factor $e$, and, in units $H_{\infty}=1$, the residue of the pole of Proposition~\ref{prop:energy} is $m_{e}/H_{\infty}$ times the late-time particle density. For a variable mass, the relevant quantities are those of Proposition~\ref{prop:varmass}, not the instantaneous ratio $m/H$.
+
+\section{Consequence for Conformal Cyclic Cosmology}
+\label{sec:ccc}
+
+We formulate the consequence conditionally on the matching criterion, since the CCC literature does not, to our knowledge, state the regularity required of a massive spinor at the crossover in a form we could test directly; Tod \cite{Tod2013} and Meissner--Penrose \cite{MeissnerPenrose2025} assume smooth conformal extension of the geometry and of the (conformally invariant) matter.
+
+\begin{proposition}
+\label{prop:ccc}
+Assume a spatially flat late-time geometry with $H\to H_{\infty}>0$ and a Dirac field.
+\begin{enumerate}[label=(\alph*)]
+\item If the matching requires the rescaled Dirac field and the Maxwell potential to extend continuously in some gauge for every solution (a classical statement), it fails unless $\int^{\infty}m\,\dd t<\infty$.
+\item If the matching requires the rescaled stress tensor of the matter to be bounded at $\scri$, and the state contains at least one Dirac particle in the sense of Section~\ref{sec:energy}, it fails unless the physical mass of the field decays at least as fast as $1/a$. (Whether the conformal field equations with matter require exactly this boundedness is not established here.)
+\item With a constant non-zero effective mass $m_{\rm eff}$, as for the electron in the Standard Model, both requirements fail. Within the class of Lemma~\ref{lem:coupling}, a local coupling to the geometry can change this only by setting $m_{\rm eff}=0$, i.e.\ by tuning a new scale against $H_{\infty}$.
+\end{enumerate}
+\end{proposition}
+
+This makes Penrose's postulate of fading mass a necessary condition, under either criterion, and gives it a quantitative form. It does not establish that every conceivable matching rule fails: a rule formulated on other variables, or one that does not require the rescaled stress tensor of massive matter to be bounded, is not addressed. In the Standard Model, fermion masses are proportional to the Higgs vacuum expectation value; a mechanism of the required kind would have to drive it to zero at least as fast as $1/a$ in a cold, empty, asymptotically de Sitter universe. We do not construct or exclude such a mechanism, and we do not discuss here the separate question of the regularity of the Higgs field itself at $\scri$.
+
+The alternative in which no massive fermion remains near $\scri$ requires that all of them be absorbed into black holes that evaporate, or annihilate; Penrose has noted that isolated electrons generically remain \cite{Penrose2010}, and we do not attempt to settle this.
+
+\section{What is and is not established}
+\label{sec:scope}
+
+\begin{itemize}[leftmargin=1.5em]
+\item \emph{Established here}, for a test Dirac field on an asymptotically de Sitter background: Lemma~\ref{lem:norm} and Propositions~\ref{prop:dirac}--\ref{prop:energy} and \ref{prop:varmass}; Lemma~\ref{lem:coupling} on exact de Sitter space for the stated class of couplings.
+\item \emph{Quantum theory}: only one-particle excitations of a quasi-free state are covered, through the difference of expectation values (Section~\ref{sec:energy}). How much particle--antiparticle coherence (the gauge-invariant content of Proposition~\ref{prop:gauge}(b)) a realistic cosmological state carries is not estimated.
+\item \emph{Not established}: the existence and hyperbolicity of solutions of the coupled Einstein--Yang--Mills--Higgs--Dirac system (Remark~\ref{rem:friedrich} concerns formal regularity of the equations only); the non-abelian case beyond weight counting; a mechanism that would bring the Higgs to the symmetric point with $m_{h}^{2}+4\lambda\xi=\tfrac23\lambda$; quantum effects (running couplings, trace anomalies, $\Lambda_{\rm QCD}$); bare Majorana masses, which remain singular; the presence of Dirac quanta near $\scri$; anything about the Big Bang side of the crossover.
+\item \emph{Novelty}: the conformal covariance of the massless Dirac operator, the de Sitter mode functions and the complex boundary weights of massive fermions are known. We have not found the statements of Propositions~\ref{prop:gauge} and \ref{prop:varmass} in the CCC literature, but a systematic bibliographic search remains to be done and we make no priority claim.
+\end{itemize}
+
+\section*{Verification}
+Two scripts accompany the paper (Python, SciPy). \texttt{dirac\_scri\_check.py} integrates \eqref{eq:hk} for constant mass and confirms the conservation of the norm, the phase of the $\mathbf{k}=0$ solution and the convergence of $\chi$. \texttt{dirac\_scri\_check\_v2.py} checks Proposition~\ref{prop:gauge} (a generic solution keeps a rotating component of fixed modulus after the gauge transformation of (c), whereas a solution with $\chi=(1,0)$ imposed at $\eta=-10^{-8}$, hence $\chi_{0}$ in the $\beta=+1$ eigenspace up to $O(10^{-8})$, converges), Proposition~\ref{prop:energy} (the convergence of $\Omega\hat\rho$ to a constant; the comparison printed alongside is taken at the same $\eta$ and is only a consistency check of formula~\eqref{eq:rho}), and Proposition~\ref{prop:varmass} for $m\propto\Omega^{1/2}$ (field convergent, $\hat\rho\propto\Omega^{-1/2}$) and $m\propto\Omega$ (field convergent, $\hat\rho$ constant). These are consistency checks of the analytic statements, not substitutes for the proofs.
+
+\section*{Provenance and changes from version 1}
+This paper rewrites for an outside reader a result obtained within an independent research programme on the conformal crossover of CCC (Zenodo DOI 10.5281/zenodo.23373604; \texttt{github.com/droppy94/LC\_Raccord}); the mode computation was first recorded there on 23 September 2026. Version 2 follows a critical reading of version 1, itself produced with an AI system and not a human peer review. Version 2.4 adds to Remark~\ref{rem:friedrich} the case of a Yukawa mass and the condition for the coupled Einstein--Yang--Mills--Higgs--Dirac system, checked symbolically and confirmed by two isolated AI auditors. Version 2.3 completes Remark~\ref{rem:friedrich} with the coupled Einstein--Dirac system. Version 2.2 added Remark~\ref{rem:friedrich}, after a calibration of the criterion on Friedrich's scalar case, audited by two isolated AI auditors. Version 2.1 incorporates the corrections of a blind audit by two isolated AI auditors (one independent derivation, one adversarial reading), which confirmed Propositions 1 to 4 and found the class of Lemma~\ref{lem:coupling} too wide and Proposition~\ref{prop:ccc}(c) false as stated in version 2; both are corrected here, together with two gauge signs, the Clifford convention, the definition of conformal weight and the one-particle quantum argument. Changes: the comparison with Friedrich is presented as structural (test field versus coupled system); the gauge dependence of the mode statement is made explicit (Proposition~\ref{prop:gauge}), which removes the claim of version 1 that a single electron makes the rescaled field discontinuous in every description; the gauge-invariant obstruction is stated on the energy density, including its one-particle quantum version (Proposition~\ref{prop:energy}); the argument on curvature couplings is replaced by a lemma with a stated class (Lemma~\ref{lem:coupling}); the variable-mass conditions are derived (Proposition~\ref{prop:varmass}), which corrects an incorrect sentence of version 1 requiring the mass to stay below $H_{\infty}$; the conclusion on CCC is stated conditionally; the comparison with the Higgs mass parameter is removed. The work was carried out with the assistance of an AI language model (Claude, Anthropic). No human third party has reviewed it.
+
+\begin{thebibliography}{9}
+\bibitem{Penrose2010} R.~Penrose, \emph{Cycles of Time: An Extraordinary New View of the Universe}, Bodley Head, London (2010).
+\bibitem{Tod2013} K.~P.~Tod, ``The equations of Conformal Cyclic Cosmology'', arXiv:1309.7248 [gr-qc] (2013).
+\bibitem{MeissnerPenrose2025} K.~A.~Meissner and R.~Penrose, ``Physics of Conformal Cyclic Cosmology'', arXiv:2503.24263 [gr-qc] (2025).
+\bibitem{Friedrich2014} H.~Friedrich, ``Smooth non-zero rest-mass evolution across time-like infinity'', arXiv:1311.0700 [gr-qc] (2013).
+\bibitem{BirrellDavies} N.~D.~Birrell and P.~C.~W.~Davies, \emph{Quantum Fields in Curved Space}, Cambridge University Press (1982).
+\bibitem{ParkerToms} L.~Parker and D.~Toms, \emph{Quantum Field Theory in Curved Spacetime}, Cambridge University Press (2009).
+\end{thebibliography}
+
+\end{document}

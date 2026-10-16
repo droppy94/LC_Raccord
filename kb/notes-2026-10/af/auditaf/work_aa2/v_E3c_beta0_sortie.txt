@@ -1,0 +1,11 @@
+(0) generic Weyl tensor from (E, B): traceless: True ; cyclic identity: True
+=== variante E3(c), mode beta0 : coup = 1/e2 ===
+
+(AF-2) sigma F^2 term (running Maxwell coupling), coupling 1/e2_eff = 1/e2 - 4 beta_* sigma
+  rescaled Maxwell equation d^a F_ab = RHS, RHS to first order in beta_*: [0, 0, 0, 0]
+  eta-trace of M: 0
+  lowest power of Omega in (2.17) source: 0
+  log terms other than Omega^0 ln Omega: []
+  symbols in the Omega^0 ln Omega coefficient: []
+  (puissance, log) dans le second membre de (2.17) : [(0, 0), (1, 0)]
+  pole dans Maxwell : False ; log dans (2.17) : False

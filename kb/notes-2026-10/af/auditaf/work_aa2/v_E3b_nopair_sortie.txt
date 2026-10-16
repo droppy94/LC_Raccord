@@ -1,0 +1,6 @@
+(0) generic Weyl tensor from (E, B): traceless: True ; cyclic identity: True
+=== variante E3(b), mode nopair === symetrie de paires : False ; sans trace : False
+  contraintes resolues : 24 90
+  composantes de la partie ln de T non nulles sur D = dD = 0 : 16 / 16
+  residu == -LOG c0 b [ s eta^cd W_acbd + n^d (d^c W_acbd - D_bda) ] sur toutes les composantes : True
+  exemple : (0, 0) -b*c0*(EG0101*s + EG0202*s + EG0303*s + dEG0102_1*n2 - dEG0102_2*n1 + dEG0103_1*n3 - dEG0103_3*n1 + dEG0201_2*n1 + dEG0202_2*n2 + dEG0203_2*n3 + dEG0301_3*n1 + dEG0302_3*n2 + dEG0303_3*n3)
