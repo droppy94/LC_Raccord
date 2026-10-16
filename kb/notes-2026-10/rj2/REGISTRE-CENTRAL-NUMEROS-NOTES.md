@@ -253,11 +253,11 @@ Serie attribuee : I pour 01-47 et 50 (acte de scission) ; E pour 48, 49, 51-54 s
 | 213 | 2026-10-16T15:48:49Z | I | Chantier D (audit v2.5) | Gel d'audit froid de l'article v2.5 et de la note compagnon | emise 2026-10-16 | `NOTE-BORD-EON-213-ARMEMENT-AUDIT-V25.md` (D:\temporaire\V25) |
 | 214 | 2026-10-16T15:48:49Z | I | Chantier D (audit v2.5) | Concordance de l'audit v2.5 | emise 2026-10-16 | `NOTE-BORD-EON-214-AUDIT-V25-CONCORDANCE.md` (D:\temporaire\V25) |
 | 215 | 2026-10-16T15:48:49Z | I | Chantier D (article v2.5) | Acte d'entee v2.5 | emise 2026-10-16 | `NOTE-BORD-EON-215-ACTE-V25.md` (D:\temporaire\V25) |
-| 216 | 2026-10-16T16:37:05Z | I | Chantier D (chantier RJ, second etage) | Armement et gel R-7 : systeme Einstein-Dirac couple dans le poids poussiere, cloture fuchsienne et resonances ; decision operateur 2026-10-16 18:29 Paris | reserve | `NOTE-BORD-EON-216-ARMEMENT-RJ2.md` (D:\temporaire\RJ2) |
-| 217 | 2026-10-16T16:37:05Z | I | Chantier D (chantier RJ, second etage) | Execution RJ2 sous le gel de NOTE-216 | reserve | `NOTE-BORD-EON-217-RJ2-EXECUTION.md` (D:\temporaire\RJ2) |
-| 218 | 2026-10-16T16:37:05Z | I | Chantier D (audit RJ2) | Gel d'audit froid de NOTE-217 | reserve | `NOTE-BORD-EON-218-ARMEMENT-AUDIT-RJ2.md` (D:\temporaire\RJ2) |
-| 219 | 2026-10-16T16:37:05Z | I | Chantier D (audit RJ2) | Concordance de l'audit RJ2 | reserve | `NOTE-BORD-EON-219-AUDIT-RJ2-CONCORDANCE.md` (D:\temporaire\RJ2) |
-| 220 | 2026-10-16T16:37:05Z | I | Chantier D (chantier RJ, second etage) | Acte d'entee RJ2 | reserve | `NOTE-BORD-EON-220-ACTE-RJ2.md` (D:\temporaire\RJ2) |
+| 216 | 2026-10-16T16:37:05Z | I | Chantier D (chantier RJ, second etage) | Armement et gel R-7 : systeme Einstein-Dirac couple dans le poids poussiere, cloture fuchsienne et resonances ; decision operateur 2026-10-16 18:29 Paris | emis (gel, 4127534b32e0ae79) | `NOTE-BORD-EON-216-ARMEMENT-RJ2.md` (D:\temporaire\RJ2) |
+| 217 | 2026-10-16T16:37:05Z | I | Chantier D (chantier RJ, second etage) | Execution RJ2 sous le gel de NOTE-216 | emis (v1 9fdf5d619104418d ; v2 78ec0038d3d770fb) | `NOTE-BORD-EON-217-RJ2-EXECUTION.md` (D:\temporaire\RJ2) |
+| 218 | 2026-10-16T16:37:05Z | I | Chantier D (audit RJ2) | Gel d'audit froid de NOTE-217 | emis (gel d'audit) | `NOTE-BORD-EON-218-ARMEMENT-AUDIT-RJ2.md` (D:\temporaire\RJ2) |
+| 219 | 2026-10-16T16:37:05Z | I | Chantier D (audit RJ2) | Concordance de l'audit RJ2 | emis (be5b60fa19b47d70, AU-V3, re-audit RB-3) | `NOTE-BORD-EON-219-AUDIT-RJ2-CONCORDANCE.md` (D:\temporaire\RJ2) |
+| 220 | 2026-10-16T16:37:05Z | I | Chantier D (chantier RJ, second etage) | Acte d'entee RJ2 | emis (acte, [conv]) | `NOTE-BORD-EON-220-ACTE-RJ2.md` (D:\temporaire\RJ2) |
 | 221 | - | - | - | libre | - | - |
 
 ## 4. Pieces hors de cet espace de noms (non couvertes, pour memoire)
